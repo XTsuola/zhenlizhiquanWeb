@@ -67,6 +67,11 @@ const routeList: any = [
     component: () => import("@/views/skin/skinList.vue")
   },
   {
+    path: "/skinDiyList",
+    name: "skinDiyList",
+    component: () => import("@/views/skin/skinDiyList.vue")
+  },
+  {
     path: "/chongwuStar",
     name: "chongwuStar",
     component: () => import("@/views/chongwu/star.vue")

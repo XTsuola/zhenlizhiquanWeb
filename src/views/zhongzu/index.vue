@@ -100,9 +100,7 @@ function getList() {
     if (formState.quality) {
         allData = allData.filter((item: any) => item.quality == formState.quality);
     }
-    console.log(formState.cost, "888")
     if (formState.cost != undefined && formState.cost !== "") {
-        console.log(formState.cost, "999")
         allData = allData.filter((item: any) => item.cost == formState.cost);
     }
     for (let i = 0; i < allData.length; i++) {

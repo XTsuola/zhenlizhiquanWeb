@@ -562,3 +562,461 @@ const tabList2 = ["成长", "增益", "减益", "过牌", "吹风", "解卡", "�
 export function allValuesInArray(arr1: string[], arr2: string[]) {
   return arr1.every(value => arr2.includes(value));
 }
+
+export const skinSelect = [
+    {
+        "cardId": 82,
+        "name": "曙光·安娜贝尔",
+        "zhenyin": 1,
+        "cost": 3,
+        "img": "/huaguangchunying_annabeier"
+    },
+    {
+        "cardId": 83,
+        "name": "圣枪·卡洛琳",
+        "zhenyin": 1,
+        "cost": 4,
+        "img": "/baihuachangqiang_kaluolin"
+    },
+    {
+        "cardId": 84,
+        "name": "明日之音·露娜",
+        "zhenyin": 1,
+        "cost": 4,
+        "img": "/mingrixiang_luna"
+    },
+    {
+        "cardId": 85,
+        "name": "帝国军魂·莱哈特",
+        "zhenyin": 1,
+        "cost": 5,
+        "img": "/yonghengzhiwang_laihate"
+    },
+    {
+        "cardId": 86,
+        "name": "正阳大主教·伊恩",
+        "zhenyin": 1,
+        "cost": 6,
+        "img": "/baipao_yien"
+    },
+    {
+        "cardId": 87,
+        "name": "司莫斯阵地",
+        "zhenyin": 1,
+        "cost": 6,
+        "img": "/simosideguanghuizhendi"
+    },
+    {
+        "cardId": 88,
+        "name": "炫目天使·蕾娜",
+        "zhenyin": 1,
+        "cost": 7,
+        "img": "/shenpantianshi_leina"
+    },
+    {
+        "cardId": 89,
+        "name": "钢铁统帅·雷蒙德",
+        "zhenyin": 1,
+        "cost": 8,
+        "img": "/wusheng_yunchang"
+    },
+    {
+        "cardId": 90,
+        "name": "司莫斯的光明要塞",
+        "zhenyin": 1,
+        "cost": 9,
+        "img": "/simosideyidongchengbao"
+    },
+    {
+        "cardId": 174,
+        "name": "No.8雷鸣·泰拉德",
+        "zhenyin": 2,
+        "cost": 1,
+        "img": "/shengseng_fahai"
+    },
+    {
+        "cardId": 175,
+        "name": "No.4希尔伯特",
+        "zhenyin": 2,
+        "cost": 2,
+        "img": "/zhangyuboshi_xierbote"
+    },
+    {
+        "cardId": 176,
+        "name": "分裂实验-流浆",
+        "zhenyin": 2,
+        "cost": 2,
+        "img": "/yinghuashiyan_liujiang"
+    },
+    {
+        "cardId": 177,
+        "name": "No.5咒刃·布雷克",
+        "zhenyin": 2,
+        "cost": 3,
+        "img": "/guiren_buleike"
+    },
+    {
+        "cardId": 178,
+        "name": "鬼童-7号",
+        "zhenyin": 2,
+        "cost": 4,
+        "img": "/liuxing_7hao"
+    },
+    {
+        "cardId": 179,
+        "name": "No.2时光·米拉",
+        "zhenyin": 2,
+        "cost": 5,
+        "img": "/yuezhishen_mila"
+    },
+    {
+        "cardId": 180,
+        "name": "No.9迪宁",
+        "zhenyin": 2,
+        "cost": 6,
+        "img": "/huabanshaonian_dining"
+    },
+    {
+        "cardId": 181,
+        "name": "No.6沃凡瑞拉",
+        "zhenyin": 2,
+        "cost": 7,
+        "img": "/huoshewunv_wofanruila"
+    },
+    {
+        "cardId": 182,
+        "name": "No.3伊斯多维尔",
+        "zhenyin": 2,
+        "cost": 9,
+        "img": "/yinmigongjue_yisiduoweier"
+    },
+    {
+        "cardId": 269,
+        "name": "流岚刃·琳",
+        "zhenyin": 3,
+        "cost": 3,
+        "img": "/huofenghuang_lin"
+    },
+    {
+        "cardId": 270,
+        "name": "灵龟神丹",
+        "zhenyin": 3,
+        "cost": 3,
+        "img": "/lingguishendan_gen"
+    },
+    {
+        "cardId": 271,
+        "name": "神机玄女·轩",
+        "zhenyin": 3,
+        "cost": 4,
+        "img": "/jiutianxuannv_xuan"
+    },
+    {
+        "cardId": 272,
+        "name": "悟能禅杖",
+        "zhenyin": 3,
+        "cost": 4,
+        "img": "/tianpengshenchui"
+    },
+    {
+        "cardId": 273,
+        "name": "雪域春光·凛",
+        "zhenyin": 3,
+        "cost": 4,
+        "img": "/douzi_lin"
+    },
+    {
+        "cardId": 274,
+        "name": "三熊阵",
+        "zhenyin": 3,
+        "cost": 4,
+        "img": "/zanmensanxiong"
+    },
+    {
+        "cardId": 275,
+        "name": "逍遥居士·铭/神龙传人",
+        "zhenyin": 3,
+        "cost": 5,
+        "img": "/taxuexing_ming"
+    },
+    {
+        "cardId": 276,
+        "name": "长生不老树",
+        "zhenyin": 3,
+        "cost": 5,
+        "img": "/xuyuanshenshu"
+    },
+    {
+        "cardId": 278,
+        "name": "豪情禅师·悟能",
+        "zhenyin": 3,
+        "cost": 6,
+        "img": "/tianpengyuanshuai_wuneng"
+    },
+    {
+        "cardId": 279,
+        "name": "逸云剑·任大师",
+        "zhenyin": 3,
+        "cost": 7,
+        "img": "/yuxuzhenjun_rendashi"
+    },
+    {
+        "cardId": 365,
+        "name": "花剑绅士·翔",
+        "zhenyin": 4,
+        "cost": 2,
+        "img": "/mengmianxiake_xiang"
+    },
+    {
+        "cardId": 364,
+        "name": "蕾拉密卷",
+        "zhenyin": 4,
+        "cost": 2,
+        "img": "/xiaohongmaomijuan"
+    },
+    {
+        "cardId": 366,
+        "name": "海燕·鲍莉",
+        "zhenyin": 4,
+        "cost": 3,
+        "img": "/shatanpaidui_baoli"
+    },
+    {
+        "cardId": 367,
+        "name": "欢乐歌唱的戴维",
+        "zhenyin": 4,
+        "cost": 3,
+        "img": "/heizhenzhudaiweichuanzhang"
+    },
+    {
+        "cardId": 368,
+        "name": "戴维的惊天计谋",
+        "zhenyin": 4,
+        "cost": 3,
+        "img": "/daiweidexieyuejihua"
+    },
+    {
+        "cardId": 369,
+        "name": "魔卡幻术师·梅基",
+        "zhenyin": 4,
+        "cost": 4,
+        "img": "/baibianmopai_meiji"
+    },
+    {
+        "cardId": 370,
+        "name": "赤影·艾希尔",
+        "zhenyin": 4,
+        "cost": 4,
+        "img": "/yinghua_aixier"
+    },
+    {
+        "cardId": 371,
+        "name": "钢之咆哮·布瑞恩",
+        "zhenyin": 4,
+        "cost": 5,
+        "img": "/tianleijianglin_buruien"
+    },
+    {
+        "cardId": 372,
+        "name": "烈火·蕾拉",
+        "zhenyin": 4,
+        "cost": 5,
+        "img": "/xiaohongmao_leila"
+    },
+    {
+        "cardId": 373,
+        "name": "黑金三代目·梅森",
+        "zhenyin": 4,
+        "cost": 7,
+        "img": "/heidaoshengtu_meisen"
+    },
+    {
+        "cardId": 453,
+        "name": "痛苦之心",
+        "zhenyin": 5,
+        "cost": 2,
+        "img": "/meihuozhixin"
+    },
+    {
+        "cardId": 454,
+        "name": "血影",
+        "zhenyin": 5,
+        "cost": 3,
+        "img": "/yanmo_xueying"
+    },
+    {
+        "cardId": 455,
+        "name": "巴克&巴罗",
+        "zhenyin": 5,
+        "cost": 4,
+        "img": "/shanggumanwang"
+    },
+    {
+        "cardId": 456,
+        "name": "熔岩进击",
+        "zhenyin": 5,
+        "cost": 4,
+        "img": "/rongyanbaofa"
+    },
+    {
+        "cardId": 457,
+        "name": "怨魂饕餮兽",
+        "zhenyin": 5,
+        "cost": 5,
+        "img": "/rongjintaotieshou"
+    },
+    {
+        "cardId": 458,
+        "name": "血翼·莉莉丝",
+        "zhenyin": 5,
+        "cost": 6,
+        "img": "/meihuozhiyi_lilisi"
+    },
+    {
+        "cardId": 459,
+        "name": "熔炉梦魇",
+        "zhenyin": 5,
+        "cost": 7,
+        "img": "/xukongmengyan"
+    },
+    {
+        "cardId": 460,
+        "name": "烬喉炼狱魔",
+        "zhenyin": 5,
+        "cost": 8,
+        "img": "/baqidashe"
+    },
+    {
+        "cardId": 461,
+        "name": "猩红领主·巴拉克",
+        "zhenyin": 5,
+        "cost": 9,
+        "img": "/heiantaitan_balake"
+    },
+    {
+        "cardId": 537,
+        "name": "鸵鸟王·霍利",
+        "zhenyin": 6,
+        "cost": 3,
+        "img": "/kongquewang_huoli"
+    },
+    {
+        "cardId": 538,
+        "name": "旷野游侠·大羽",
+        "zhenyin": 6,
+        "cost": 3,
+        "img": "/jinglingwangzi_dayu"
+    },
+    {
+        "cardId": 539,
+        "name": "比尔&比利",
+        "zhenyin": 6,
+        "cost": 4,
+        "img": "/shuangtoufashi"
+    },
+    {
+        "cardId": 540,
+        "name": "血饮烈斧·凯",
+        "zhenyin": 6,
+        "cost": 5,
+        "img": "/rexueyaogun_kai"
+    },
+    {
+        "cardId": 541,
+        "name": "热血战歌！",
+        "zhenyin": 6,
+        "cost": 5,
+        "img": "/wuweizhange"
+    },
+    {
+        "cardId": 542,
+        "name": "蛮古撼地兽",
+        "zhenyin": 6,
+        "cost": 6,
+        "img": "/tunhaishayuwang"
+    },
+    {
+        "cardId": 543,
+        "name": "原野大祭师·鲁玛",
+        "zhenyin": 6,
+        "cost": 7,
+        "img": "/baixiangzhange_luma"
+    },
+    {
+        "cardId": 544,
+        "name": "荒原暴君·血眼",
+        "zhenyin": 6,
+        "cost": 8,
+        "img": "/axiuluo_xueyan"
+    },
+    {
+        "cardId": 545,
+        "name": "炎阳巨龙",
+        "zhenyin": 6,
+        "cost": 9,
+        "img": "/heiyanmolong"
+    },
+    {
+        "cardId": 627,
+        "name": "寒风血刃",
+        "zhenyin": 7,
+        "cost": 3,
+        "img": "/wutouqishibingren"
+    },
+    {
+        "cardId": 628,
+        "name": "荒芜冰巫·野",
+        "zhenyin": 7,
+        "cost": 3,
+        "img": "/shehunwuyao_ye"
+    },
+    {
+        "cardId": 629,
+        "name": "不息之灵",
+        "zhenyin": 7,
+        "cost": 4,
+        "img": "/buxihanling"
+    },
+    {
+        "cardId": 630,
+        "name": "冰野荒芜计划",
+        "zhenyin": 7,
+        "cost": 4,
+        "img": "/bingyeyinmixingdong"
+    },
+    {
+        "cardId": 631,
+        "name": "寒风魔将·塞古斯",
+        "zhenyin": 7,
+        "cost": 5,
+        "img": "/wutouqishi_saigusi"
+    },
+    {
+        "cardId": 632,
+        "name": "永夜女王",
+        "zhenyin": 7,
+        "cost": 5,
+        "img": "/huiyenvwang"
+    },
+    {
+        "cardId": 633,
+        "name": "王座巫妖",
+        "zhenyin": 7,
+        "cost": 6,
+        "img": "/bingxuenvhuang"
+    },
+    {
+        "cardId": 634,
+        "name": "冬神化身",
+        "zhenyin": 7,
+        "cost": 7,
+        "img": "/bingxuenvwang_dongshenhuashen"
+    },
+    {
+        "cardId": 635,
+        "name": "冰山·亚特拉斯",
+        "zhenyin": 7,
+        "cost": 8,
+        "img": "/hunshan_yatelasi"
+    }
+];

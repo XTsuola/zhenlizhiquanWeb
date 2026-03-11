@@ -55,8 +55,11 @@
             <div class="box simangdiguo white" @click="goYiji()">
                 遗迹奖励
             </div>
-            <div class="box yinmizhe white" @click="goTools()">
+            <!-- <div class="box yinmizhe white" @click="goTools()">
                 计算工具
+            </div> -->
+            <div class="box yinmizhe white" @click="goSkinDiyList()">
+                皮肤工坊
             </div>
             <div class="box chanyigu white" @click="goResource()">
                 资源查询
@@ -187,6 +190,11 @@ function goShardList() {
 function goSkinList() {
     createLog("查询皮肤");
     router.push("/skinList");
+}
+
+function goSkinDiyList() {
+    createLog("查询皮肤");
+    router.push("/skinDiyList");
 }
 
 function goPaixu() {

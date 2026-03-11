@@ -135,6 +135,10 @@ const skillSign = [{
     value: "隐形",
     color: "#800080"
 }, {
+    label: "禁疗",
+    value: "禁疗",
+    color: "#c01b10"
+}, {
     label: "禁止攻击",
     value: "禁止攻击",
     color: "#808080"
