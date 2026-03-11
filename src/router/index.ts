@@ -69,7 +69,12 @@ const routeList: any = [
   {
     path: "/skinDiyList",
     name: "skinDiyList",
-    component: () => import("@/views/skin/skinDiyList.vue")
+    component: () => import("@/views/diy/skinDiyList.vue")
+  },
+  {
+    path: "/cardDiyList",
+    name: "cardDiyList",
+    component: () => import("@/views/diy/cardDiyList.vue")
   },
   {
     path: "/chongwuStar",
@@ -155,6 +160,11 @@ const routeList: any = [
     path: "/cardsAdmin",
     name: "cardsAdmin",
     component: () => import("@/views/admin/frequencyAdmin.vue")
+  },
+  {
+    path: "/skinDiyAdmin",
+    name: "skinDiyAdmin",
+    component: () => import("@/views/admin/skinDiyAdmin.vue")
   },
   {
     path: "/passwordAdmin",

@@ -33,7 +33,8 @@
         </div>
     </div>
     <div class="card">
-        <MyTabel :columnsData="columns" :dataSource="data" @detail="showModal" :loading="tableLoading"></MyTabel>
+        <MyTabel :columnsData="columns" :dataSource="data" @detail="showModal" @edit="showModal"
+            :loading="tableLoading"></MyTabel>
     </div>
     <a-modal v-model:open="visible" destroyOnClose :title="title" :maskClosable="false">
         <a-form ref="skinDiyAddRef" style="width: 100%;" :model="addData" name="basic" :label-col="{ span: 4 }"
@@ -67,6 +68,10 @@
                 <a-textarea v-model:value="addData.remark" placeholder="请输入" style="height: 60px;"
                     :readonly="title == '皮肤详情'"></a-textarea>
             </a-form-item>
+            <a-form-item v-if="title == '修改皮肤'" label="管理员密码" name="password"
+                :rules="[{ required: true, message: '请输入管理员密码!' }]">
+                <a-input v-model:value="addData.password" placeholder="请输入" />
+            </a-form-item>
         </a-form>
         <template #footer>
             <a-button key="back" @click="visible = false">关闭</a-button>
@@ -79,7 +84,7 @@
 import { ref, reactive, onMounted } from "vue";
 import { message } from "ant-design-vue";
 import { costList, skinSelect } from "@/utils/func";
-import { getSkinDiyList, skinDiyAdd, SkinDiyAddType } from "@/api/skin";
+import { getSkinDiyList, skinDiyAdd, skinDiyUpdate, type SkinDiyAddType } from "@/api/skin";
 import router from "@/router";
 import MyTabel from "@/components/table.vue";
 
@@ -116,18 +121,6 @@ const formState = reactive({
     zhenyin: undefined,
     cost: undefined
 });
-const detailData = reactive({
-    name: "",
-    zhenyin: "",
-    skill: "",
-    img: "",
-    shuxing: "",
-    origin: "",
-    effect: "",
-    cost: null,
-    remark: "",
-    together: []
-});
 const visible = ref(false);
 const skinDiyAddRef = ref<any>();
 const title = ref("新增皮肤");
@@ -155,19 +148,21 @@ let originalColumns = [
     {
         title: "操作",
         key: "action",
-        list: ["detail"],
+        list: ["detail", "edit"],
         width: 50
     },
 ];
 const columns = ref<any>();
 columns.value = originalColumns;
 const addData = reactive<SkinDiyAddType>({
+    id: undefined,
     cardId: undefined,
     name: "",
     skill: "",
     effect: "",
     reason: "",
-    remark: ""
+    remark: "",
+    password: ""
 });
 
 function getList() {
@@ -206,12 +201,24 @@ function goBack() {
 
 function showModal(type: number, record?: any) {
     visible.value = true;
+    addData.id = undefined;
+    addData.password = "";
     if (type == 1) {
         title.value = "新增皮肤"
         addData.cardId = undefined;
         addData.name = addData.skill = addData.effect = addData.reason = addData.remark = "";
+    } else if (type == 2) {
+        title.value = "修改皮肤"
+        addData.id = record.id;
+        addData.cardId = record.cardId;
+        addData.name = record.name;
+        addData.skill = record.skill;
+        addData.effect = record.effect;
+        addData.reason = record.reason;
+        addData.remark = record.remark;
     } else if (type == 3) {
         title.value = "皮肤详情"
+        addData.id = record.id;
         addData.cardId = record.cardId;
         addData.name = record.name;
         addData.skill = record.skill;
@@ -236,20 +243,40 @@ async function handleOk() {
     loading.value = true;
     try {
         await skinDiyAddRef.value?.validate();
-        const params: SkinDiyAddType = {
-            cardId: addData.cardId,
-            name: addData.name,
-            skill: addData.skill,
-            effect: addData.effect,
-            reason: addData.reason,
-            remark: addData.remark
-        };
-        const res = await skinDiyAdd(params);
-        if (res.data.code == 200) {
-            message.success("新增成功");
-            visible.value = false;
-            getOriginalData();
+        if (title.value == "新增密码") {
+            const params: SkinDiyAddType = {
+                cardId: addData.cardId,
+                name: addData.name,
+                skill: addData.skill,
+                effect: addData.effect,
+                reason: addData.reason,
+                remark: addData.remark
+            };
+            const res = await skinDiyAdd(params);
+            if (res.data.code == 200) {
+                message.success("新增成功");
+                visible.value = false;
+                getOriginalData();
+            }
+        } else {
+            const params: SkinDiyAddType = {
+                id: addData.id,
+                cardId: addData.cardId,
+                name: addData.name,
+                skill: addData.skill,
+                effect: addData.effect,
+                reason: addData.reason,
+                remark: addData.remark,
+                password: addData.password
+            };
+            const res = await skinDiyUpdate(params);
+            if (res.data.code == 200) {
+                message.success("修改成功");
+                visible.value = false;
+                getOriginalData();
+            }
         }
+
     } catch (_) { }
     loading.value = false;
 }

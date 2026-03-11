@@ -55,11 +55,8 @@
             <div class="box simangdiguo white" @click="goYiji()">
                 遗迹奖励
             </div>
-            <!-- <div class="box yinmizhe white" @click="goTools()">
+            <div class="box dongshenshitu white" @click="goTools()">
                 计算工具
-            </div> -->
-            <div class="box yinmizhe white" @click="goSkinDiyList()">
-                皮肤工坊
             </div>
             <div class="box chanyigu white" @click="goResource()">
                 资源查询
@@ -91,8 +88,11 @@
             <div class="box bg_grey white" @click="goNote()">
                 留言建议
             </div>
-            <div class="box2 dongshenshitu white" @click="goMsgDetail()">
-                今日查询数：{{ count }}
+            <div class="box yinmizhe white" @click="goCardDiyList()">
+                卡牌工坊
+            </div>
+            <div class="box yinmizhe white" @click="goSkinDiyList()">
+                皮肤工坊
             </div>
         </div>
     </div>
@@ -197,6 +197,11 @@ function goSkinDiyList() {
     router.push("/skinDiyList");
 }
 
+function goCardDiyList() {
+    createLog("查询卡牌");
+    router.push("/cardDiyList");
+}
+
 function goPaixu() {
     createLog("查询评级");
     router.push("/cardGrade");
@@ -221,10 +226,6 @@ function goNote() {
     router.push("/note");
 }
 
-function goMsgDetail() {
-    router.push("/msgDetail");
-}
-
 async function createLog(name: string) {
     await logAdd(name);
 }
@@ -240,8 +241,6 @@ async function getTodayCount() {
         count.value = list.length;
     }
 }
-
-
 
 onMounted(() => {
     getTodayCount();

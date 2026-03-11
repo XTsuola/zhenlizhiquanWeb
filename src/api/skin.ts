@@ -23,16 +23,34 @@ export function getSkinDiyList() {
 }
 
 export interface SkinDiyAddType {
+    id?: number
     cardId: number | undefined
     name: string
     skill: string
     effect: string
     reason: string
     remark: string
+    password?: string
 }
 export function skinDiyAdd(data: SkinDiyAddType) {
     return request({
         url: "/skinDiy/add",
+        method: "post",
+        data: data
+    });
+}
+
+export function skinDiyUpdateTemp(data: SkinDiyAddType) {
+    return request({
+        url: "/skinDiy/updateTemp",
+        method: "post",
+        data: data
+    });
+}
+
+export function skinDiyUpdate(data: SkinDiyAddType) {
+    return request({
+        url: "/skinDiy/update",
         method: "post",
         data: data
     });

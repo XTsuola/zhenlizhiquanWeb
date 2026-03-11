@@ -39,7 +39,7 @@ const columns = ref<any>([
         width: 100,
     },
     {
-        title: "名称",
+        title: "密码",
         dataIndex: "password",
         key: "password",
         width: 200
