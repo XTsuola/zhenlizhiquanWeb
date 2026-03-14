@@ -205,6 +205,11 @@ const routeList: any = [
     path: "/shenqiTools",
     name: "shenqiTools",
     component: () => import("@/views/tools/heroZuanshi.vue")
+  },
+  {
+    path: "/deepseek",
+    name: "deepseek",
+    component: () => import("@/views/ai/deepseek.vue")
   }
 ];
 

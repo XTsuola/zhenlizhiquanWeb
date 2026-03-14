@@ -40,13 +40,10 @@
         <a-modal v-model:open="visible" destroyOnClose :title="title" :maskClosable="false">
             <a-form ref="skinDiyAddRef" style="width: 100%;" :model="addData" name="basic" :label-col="{ span: 4 }"
                 autocomplete="off">
+
                 <a-form-item label="原始皮肤" name="cardId"
                     :rules="[{ required: title != '皮肤详情' ? true : false, message: '请选择原始皮肤!' }]">
-                    <a-select v-model:value="addData.cardId" placeholder="请选择" :disabled="title == '皮肤详情'">
-                        <a-select-option v-for="item in skinSelect" :key="item.cardId" :value="item.cardId">{{
-                            item.name
-                            }}</a-select-option>
-                    </a-select>
+                    <a-cascader v-model:value="addData.cardId" :options="piciList" placeholder="请选择" />
                 </a-form-item>
                 <a-form-item label="皮肤名称" name="name"
                     :rules="[{ required: title != '皮肤详情' ? true : false, message: '请输入皮肤名称!' }]">
@@ -86,10 +83,13 @@
 import { ref, reactive, onMounted } from "vue";
 import { message } from "ant-design-vue";
 import { costList, skinSelect } from "@/utils/func";
-import { getSkinDiyList, skinDiyAdd, skinDiyUpdateTemp, type SkinDiyAddType } from "@/api/skin";
+import { getSkinDiyList, skinDiyAdd, skinDiyUpdateTemp, type SkinDiyAddType } from "@/api/diy";
 import router from "@/router";
 import MyTabel from "@/components/table.vue";
 
+const pici = ref<any>(undefined);
+
+const piciList = ref<any>([]);
 const loading = ref(false);
 const tableLoading = ref(false);
 const originalData = ref([]);
@@ -169,12 +169,6 @@ const addData = reactive<SkinDiyAddType>({
 
 function getList() {
     let allData: any = JSON.parse(JSON.stringify(originalData.value));
-    for (let i = 0; i < allData.length; i++) {
-        const obj: any = skinSelect.find((e: any) => e.cardId == allData[i].cardId);
-        allData[i].img = import.meta.env.VITE_APP_BASE_URL + "skinImg" + obj.img + ".png";
-        allData[i].zhenyin = obj.zhenyin;
-        allData[i].cost = obj.cost;
-    }
     if (formState.name) {
         allData = allData.filter((item: any) => item.name.includes(formState.name));
     }
@@ -206,11 +200,11 @@ function showModal(type: number, record?: any) {
     addData.id = undefined;
     addData.password = "";
     if (type == 1) {
-        title.value = "新增皮肤"
-        addData.cardId = undefined;
+        title.value = "新增皮肤";
+        addData.cardId = pici.value = undefined;
         addData.name = addData.skill = addData.effect = addData.reason = addData.remark = "";
     } else if (type == 2) {
-        title.value = "修改皮肤"
+        title.value = "修改皮肤";
         addData.id = record.id;
         addData.cardId = record.cardId;
         addData.name = record.name;
@@ -219,7 +213,7 @@ function showModal(type: number, record?: any) {
         addData.reason = record.reason;
         addData.remark = record.remark;
     } else if (type == 3) {
-        title.value = "皮肤详情"
+        title.value = "皮肤详情";
         addData.id = record.id;
         addData.cardId = record.cardId;
         addData.name = record.name;
@@ -235,6 +229,13 @@ async function getOriginalData() {
     const res = await getSkinDiyList();
     if (res.status == 200) {
         const data = res.data.data.reverse();
+        for (let i = 0; i < data.length; i++) {
+            data[i].cardId = JSON.parse(data[i].cardId);
+            const obj: any = skinSelect.find((e: any) => e.cardId == data[i].cardId[1]);
+            data[i].img = import.meta.env.VITE_APP_BASE_URL + "skinImg" + obj.img + ".png";
+            data[i].zhenyin = obj.zhenyin;
+            data[i].cost = obj.cost;
+        }
         originalData.value = data;
     }
     tableLoading.value = false;
@@ -245,9 +246,9 @@ async function handleOk() {
     loading.value = true;
     try {
         await skinDiyAddRef.value?.validate();
-        if (title.value == "新增密码") {
+        if (title.value == "新增皮肤") {
             const params: SkinDiyAddType = {
-                cardId: addData.cardId,
+                cardId: JSON.stringify(addData.cardId),
                 name: addData.name,
                 skill: addData.skill,
                 effect: addData.effect,
@@ -263,7 +264,7 @@ async function handleOk() {
         } else {
             const params: SkinDiyAddType = {
                 id: addData.id,
-                cardId: addData.cardId,
+                cardId: JSON.stringify(addData.cardId),
                 name: addData.name,
                 skill: addData.skill,
                 effect: addData.effect,
@@ -283,7 +284,56 @@ async function handleOk() {
     loading.value = false;
 }
 
+function getPiciList() {
+    const list: any = [{
+        value: 3,
+        label: "批次3",
+        children: []
+    }, {
+        value: 4,
+        label: "批次4",
+        children: []
+    }, {
+        value: 5,
+        label: "批次5",
+        children: []
+    }, {
+        value: 6,
+        label: "批次6",
+        children: []
+    }, {
+        value: 7,
+        label: "批次7",
+        children: []
+    }, {
+        value: 8,
+        label: "批次8",
+        children: []
+    }, {
+        value: 9,
+        label: "批次9",
+        children: []
+    }, {
+        value: 1,
+        label: "批次1",
+        children: []
+    }, {
+        value: 2,
+        label: "批次2",
+        children: []
+    }];
+    for (let i = 0; i < skinSelect.length; i++) {
+        const index = list.findIndex((e: any) => e.value == skinSelect[i].pici);
+        list[index].children.push({
+            value: skinSelect[i].cardId,
+            label: skinSelect[i].name
+        })
+    }
+    piciList.value = list;
+}
+
 onMounted(() => {
+    getPiciList();
     getOriginalData();
 })
 

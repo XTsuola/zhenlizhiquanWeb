@@ -84,7 +84,7 @@
 import { ref, reactive, onMounted } from "vue";
 import { message } from "ant-design-vue";
 import { costList, skinSelect } from "@/utils/func";
-import { getSkinDiyList, skinDiyAdd, skinDiyUpdate, type SkinDiyAddType } from "@/api/skin";
+import { getSkinDiyList, skinDiyAdd, skinDiyUpdate, type SkinDiyAddType } from "@/api/diy";
 import router from "@/router";
 import MyTabel from "@/components/table.vue";
 

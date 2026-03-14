@@ -5,18 +5,25 @@
                 <a-select v-model:value="formState.zhenyin" style="width: 100%;" placeholder="请选择种族">
                     <a-select-option v-for="item in zhenyinList" :key="item.value" :value="item.value">{{
                         item.label
-                        }}</a-select-option>
+                    }}</a-select-option>
                 </a-select>
             </div>
             <div class="search_select">
                 <a-select v-model:value="formState.cost" style="width: 100%;" placeholder="请选择费用">
                     <a-select-option v-for="item in costList" :key="item.value" :value="item.value">{{
                         item.label
-                        }}</a-select-option>
+                    }}</a-select-option>
                 </a-select>
             </div>
         </div>
         <div class="search">
+            <div class="search_select">
+                <a-select v-model:value="formState.quality" style="width: 100%;" placeholder="请选择品质">
+                    <a-select-option v-for="item in cardQualityList" :key="item.value" :value="item.value">{{
+                        item.label
+                    }}</a-select-option>
+                </a-select>
+            </div>
             <div class="search_input">
                 <a-input v-model:value="formState.name" placeholder="请输入名称" />
             </div>
@@ -29,7 +36,7 @@
                     <a-button @click="goBack">返回</a-button>
                 </div>
                 <div>
-                    <a-button style="margin-right: 8px;" type="primary" @click="showModal(1)">新增皮肤</a-button>
+                    <a-button style="margin-right: 8px;" type="primary" @click="showModal(1)">新增卡牌</a-button>
                 </div>
             </div>
         </div>
@@ -40,43 +47,65 @@
         <a-modal v-model:open="visible" destroyOnClose :title="title" :maskClosable="false">
             <a-form ref="skinDiyAddRef" style="width: 100%;" :model="addData" name="basic" :label-col="{ span: 4 }"
                 autocomplete="off">
-                <a-form-item label="原始皮肤" name="cardId"
-                    :rules="[{ required: title != '皮肤详情' ? true : false, message: '请选择原始皮肤!' }]">
-                    <a-select v-model:value="addData.cardId" placeholder="请选择" :disabled="title == '皮肤详情'">
-                        <a-select-option v-for="item in skinSelect" :key="item.cardId" :value="item.cardId">{{
-                            item.name
-                            }}</a-select-option>
+                <a-form-item label="卡牌种族" name="zhenyin"
+                    :rules="[{ required: title != '卡牌详情' ? true : false, message: '请选择种族!' }]">
+                    <a-select v-model:value="addData.zhenyin" placeholder="请选择" :disabled="title == '卡牌详情'">
+                        <a-select-option v-for="item in zhenyinList" :key="item.value" :value="item.value">{{
+                            item.label
+                        }}</a-select-option>
                     </a-select>
                 </a-form-item>
-                <a-form-item label="皮肤名称" name="name"
-                    :rules="[{ required: title != '皮肤详情' ? true : false, message: '请输入皮肤名称!' }]">
-                    <a-input v-model:value="addData.name" placeholder="请输入" :readonly="title == '皮肤详情'" />
+                <a-form-item label="卡牌名称" name="name"
+                    :rules="[{ required: title != '卡牌详情' ? true : false, message: '请输入名称!' }]">
+                    <a-input v-model:value="addData.name" placeholder="请输入" :readonly="title == '卡牌详情'" />
                 </a-form-item>
-                <a-form-item label="技能名称">
-                    <a-input v-model:value="addData.skill" placeholder="请输入" :readonly="title == '皮肤详情'" />
+                <a-form-item label="卡牌品质" name="quality"
+                    :rules="[{ required: title != '卡牌详情' ? true : false, message: '请选择费用!' }]">
+                    <a-select v-model:value="addData.quality" placeholder="请选择" :disabled="title == '卡牌详情'">
+                        <a-select-option v-for="item in cardQualityList" :key="item.value" :value="item.value">{{
+                            item.label
+                        }}</a-select-option>
+                    </a-select>
                 </a-form-item>
-                <a-form-item label="皮肤效果" name="effect"
-                    :rules="[{ required: title != '皮肤详情' ? true : false, message: '请输入皮肤效果!' }]">
+                <a-form-item label="卡牌费用" name="cost"
+                    :rules="[{ required: title != '卡牌详情' ? true : false, message: '请选择费用!' }]">
+                    <a-select v-model:value="addData.cost" placeholder="请选择" :disabled="title == '卡牌详情'">
+                        <a-select-option v-for="item in costList" :key="item.value" :value="item.value">{{
+                            item.label
+                        }}</a-select-option>
+                    </a-select>
+                </a-form-item>
+                <a-form-item label="卡牌攻击" name="att"
+                    :rules="[{ required: title != '卡牌详情' ? true : false, message: '请输入攻击!' }]">
+                    <a-input-number style="width: 100%;" v-model:value="addData.att" placeholder="请输入" :precision="0"
+                        :min="0" :readonly="title == '卡牌详情'" />
+                </a-form-item>
+                <a-form-item label="卡牌生命" name="life"
+                    :rules="[{ required: title != '卡牌详情' ? true : false, message: '请输入生命!' }]">
+                    <a-input-number style="width: 100%;" v-model:value="addData.life" placeholder="请输入" :precision="0"
+                        :min="0" :readonly="title == '卡牌详情'" />
+                </a-form-item>
+                <a-form-item label="卡牌效果" name="effect"
+                    :rules="[{ required: title != '卡牌详情' ? true : false, message: '请输入皮肤效果!' }]">
                     <a-textarea v-model:value="addData.effect" placeholder="请输入" style="height: 100px;"
-                        :readonly="title == '皮肤详情'"></a-textarea>
+                        :readonly="title == '卡牌详情'"></a-textarea>
                 </a-form-item>
-                <a-form-item label="设计理由" name="reason"
-                    :rules="[{ required: title != '皮肤详情' ? true : false, message: '请输入设计理由!' }]">
-                    <a-textarea v-model:value="addData.reason" placeholder="请输入" style="height: 100px;"
-                        :readonly="title == '皮肤详情'"></a-textarea>
+                <a-form-item label="设计理由">
+                    <a-textarea v-model:value="addData.info" placeholder="请输入" style="height: 100px;"
+                        :readonly="title == '卡牌详情'"></a-textarea>
                 </a-form-item>
                 <a-form-item label="其他备注">
                     <a-textarea v-model:value="addData.remark" placeholder="请输入" style="height: 60px;"
-                        :readonly="title == '皮肤详情'"></a-textarea>
+                        :readonly="title == '卡牌详情'"></a-textarea>
                 </a-form-item>
-                <a-form-item v-if="title == '修改皮肤'" label="临时密码" name="password"
+                <a-form-item v-if="title == '修改卡牌'" label="临时密码" name="password"
                     :rules="[{ required: true, message: '请输入临时密码!' }]">
                     <a-input v-model:value="addData.password" placeholder="请输入" />
                 </a-form-item>
             </a-form>
             <template #footer>
                 <a-button key="back" @click="visible = false">关闭</a-button>
-                <a-button v-if="title != '皮肤详情'" key="submit" type="primary" :loading="loading" @click="handleOk">保存
+                <a-button v-if="title != '卡牌详情'" key="submit" type="primary" :loading="loading" @click="handleOk">保存
                 </a-button>
             </template>
         </a-modal>
@@ -85,8 +114,8 @@
 <script lang="ts" setup>
 import { ref, reactive, onMounted } from "vue";
 import { message } from "ant-design-vue";
-import { costList, skinSelect } from "@/utils/func";
-import { getSkinDiyList, skinDiyAdd, skinDiyUpdateTemp, type SkinDiyAddType } from "@/api/skin";
+import { costList, cardQualityList } from "@/utils/func";
+import { getCardDiyList, cardDiyAdd, cardDiyUpdateTemp, type CardDiyAddType } from "@/api/diy";
 import router from "@/router";
 import MyTabel from "@/components/table.vue";
 
@@ -121,20 +150,21 @@ const zhenyinList = [{
 const formState = reactive({
     name: "",
     zhenyin: undefined,
-    cost: undefined
+    cost: undefined,
+    quality: undefined
 });
 const visible = ref(false);
 const skinDiyAddRef = ref<any>();
-const title = ref("新增皮肤");
+const title = ref("新增卡牌");
 const data = ref<any>([]);
 let originalColumns = [
-    {
+    /* {
         title: "头像",
         dataIndex: "headImg",
         key: "headImg",
         width: 50,
         scopedSlots: { customRender: "pic" }
-    },
+    }, */
     {
         title: "名称",
         dataIndex: "name",
@@ -156,25 +186,22 @@ let originalColumns = [
 ];
 const columns = ref<any>();
 columns.value = originalColumns;
-const addData = reactive<SkinDiyAddType>({
+const addData = reactive<CardDiyAddType>({
     id: undefined,
-    cardId: undefined,
+    zhenyin: undefined,
     name: "",
-    skill: "",
+    cost: undefined,
+    quality: undefined,
+    att: undefined,
+    life: undefined,
     effect: "",
-    reason: "",
+    info: "",
     remark: "",
     password: ""
 });
 
 function getList() {
     let allData: any = JSON.parse(JSON.stringify(originalData.value));
-    for (let i = 0; i < allData.length; i++) {
-        const obj: any = skinSelect.find((e: any) => e.cardId == allData[i].cardId);
-        allData[i].img = import.meta.env.VITE_APP_BASE_URL + "skinImg" + obj.img + ".png";
-        allData[i].zhenyin = obj.zhenyin;
-        allData[i].cost = obj.cost;
-    }
     if (formState.name) {
         allData = allData.filter((item: any) => item.name.includes(formState.name));
     }
@@ -184,6 +211,14 @@ function getList() {
     if (formState.zhenyin != undefined && formState.zhenyin != "") {
         allData = allData.filter((item: any) => item.zhenyin == formState.zhenyin);
     }
+    if (formState.quality != undefined && formState.quality != "") {
+        allData = allData.filter((item: any) => item.quality == formState.quality);
+    }
+    /* for (let i = 0; i < allData.length; i++) {
+        const obj: any = skinSelect.find((e: any) => e.cardId == allData[i].cardId);
+        allData[i].zhenyin = obj.zhenyin;
+        allData[i].cost = obj.cost;
+    } */
     data.value = allData;
 }
 
@@ -193,7 +228,7 @@ function search() {
 
 function reset() {
     formState.name = "";
-    formState.zhenyin = formState.cost = undefined;
+    formState.zhenyin = formState.cost = formState.quality = undefined;
     getList();
 }
 
@@ -206,33 +241,39 @@ function showModal(type: number, record?: any) {
     addData.id = undefined;
     addData.password = "";
     if (type == 1) {
-        title.value = "新增皮肤"
-        addData.cardId = undefined;
-        addData.name = addData.skill = addData.effect = addData.reason = addData.remark = "";
+        title.value = "新增卡牌";
+        addData.zhenyin = addData.cost = addData.quality = addData.att = addData.life = undefined;
+        addData.name = addData.effect = addData.info = addData.remark = "";
     } else if (type == 2) {
-        title.value = "修改皮肤"
+        title.value = "修改卡牌";
         addData.id = record.id;
-        addData.cardId = record.cardId;
+        addData.zhenyin = record.zhenyin;
         addData.name = record.name;
-        addData.skill = record.skill;
+        addData.cost = record.cost;
+        addData.quality = record.quality;
+        addData.att = record.att;
+        addData.life = record.life;
         addData.effect = record.effect;
-        addData.reason = record.reason;
+        addData.info = record.info;
         addData.remark = record.remark;
     } else if (type == 3) {
-        title.value = "皮肤详情"
+        title.value = "卡牌详情";
         addData.id = record.id;
-        addData.cardId = record.cardId;
+        addData.zhenyin = record.zhenyin;
         addData.name = record.name;
-        addData.skill = record.skill;
+        addData.cost = record.cost;
+        addData.quality = record.quality;
+        addData.att = record.att;
+        addData.life = record.life;
         addData.effect = record.effect;
-        addData.reason = record.reason;
+        addData.info = record.info;
         addData.remark = record.remark;
     }
 }
 
 async function getOriginalData() {
     tableLoading.value = true;
-    const res = await getSkinDiyList();
+    const res = await getCardDiyList();
     if (res.status == 200) {
         const data = res.data.data.reverse();
         originalData.value = data;
@@ -245,33 +286,39 @@ async function handleOk() {
     loading.value = true;
     try {
         await skinDiyAddRef.value?.validate();
-        if (title.value == "新增密码") {
-            const params: SkinDiyAddType = {
-                cardId: addData.cardId,
+        if (title.value == "新增卡牌") {
+            const params: CardDiyAddType = {
+                zhenyin: addData.zhenyin,
                 name: addData.name,
-                skill: addData.skill,
+                cost: addData.cost,
+                quality: addData.quality,
+                att: addData.att,
+                life: addData.life,
                 effect: addData.effect,
-                reason: addData.reason,
+                info: addData.info,
                 remark: addData.remark
             };
-            const res = await skinDiyAdd(params);
+            const res = await cardDiyAdd(params);
             if (res.data.code == 200) {
                 message.success("新增成功");
                 visible.value = false;
                 getOriginalData();
             }
         } else {
-            const params: SkinDiyAddType = {
+            const params: CardDiyAddType = {
                 id: addData.id,
-                cardId: addData.cardId,
+                zhenyin: addData.zhenyin,
                 name: addData.name,
-                skill: addData.skill,
+                cost: addData.cost,
+                quality: addData.quality,
+                att: addData.att,
+                life: addData.life,
                 effect: addData.effect,
-                reason: addData.reason,
+                info: addData.info,
                 remark: addData.remark,
                 password: addData.password
             };
-            const res = await skinDiyUpdateTemp(params);
+            const res = await cardDiyUpdateTemp(params);
             if (res.data.code == 200) {
                 message.success("修改成功");
                 visible.value = false;

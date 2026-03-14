@@ -1,98 +1,20 @@
 <template>
     <div class="home">
         <div class="home_top">
-            <div class="zhongzu simangdiguo">
-                <div><img class="img" src="@/assets/fengmian/simangdiguo.jpg" /></div>
-                <div>四芒帝国</div>
-                <div class="center" @click="goCard(1)">部下</div>
-                <div class="center" @click="goShenqi(1)">神器</div>
-                <div class="center" @click="goChongwu(1)">近卫</div>
-            </div>
-            <div class="zhongzu yinmizhe">
-                <div><img class="img" src="@/assets/fengmian/yinmizhe.jpg" /></div>
-                <div>隐秘者</div>
-                <div class="center" @click="goCard(2)">部下</div>
-                <div class="center" @click="goShenqi(2)">神器</div>
-                <div class="center" @click="goChongwu(2)">近卫</div>
-            </div>
-            <div class="zhongzu chanyigu">
-                <div><img class="img" src="@/assets/fengmian/chanyigu.jpg" /></div>
-                <div>禅意谷</div>
-                <div class="center" @click="goCard(3)">部下</div>
-                <div class="center" @click="goShenqi(3)">神器</div>
-                <div class="center" @click="goChongwu(3)">近卫</div>
-            </div>
-            <div class="zhongzu tiantanggang">
-                <div><img class="img" src="@/assets/fengmian/tiantanggang.jpg" /></div>
-                <div>天堂港</div>
-                <div class="center" @click="goCard(4)">部下</div>
-                <div class="center" @click="goShenqi(4)">神器</div>
-                <div class="center" @click="goChongwu(4)">近卫</div>
-            </div>
-            <div class="zhongzu lianyushenyuan">
-                <div><img class="img" src="@/assets/fengmian/lianyushenyuan.jpg" /></div>
-                <div>炼狱深渊</div>
-                <div class="center" @click="goCard(5)">部下</div>
-                <div class="center" @click="goShenqi(5)">神器</div>
-                <div class="center" @click="goChongwu(5)">近卫</div>
-            </div>
-            <div class="zhongzu manshikuangye">
-                <div><img class="img" src="@/assets/fengmian/manshikuangye.jpg" /></div>
-                <div>蛮石旷野</div>
-                <div class="center" @click="goCard(6)">部下</div>
-                <div class="center" @click="goShenqi(6)">神器</div>
-                <div class="center" @click="goChongwu(6)">近卫</div>
-            </div>
-            <div class="zhongzu dongshenshitu">
-                <div><img class="img" src="@/assets/fengmian/dongshenshitu.jpg" /></div>
-                <div>冬神使徒</div>
-                <div class="center" @click="goCard(7)">部下</div>
-                <div class="center" @click="goShenqi(7)">神器</div>
-                <div class="center" @click="goChongwu(7)">近卫</div>
+            <div v-for="item in zhenyinNameList" class="zhongzu" :class="item.name_en">
+                <div class="relative">
+                    <img class="tubiao" :src="item.tubiao" />
+                    <img class="img" :src="item.touxiang" />
+                </div>
+                <div class="center" @click="goCard(item.id)">部下</div>
+                <div class="center" @click="goShenqi(item.id)">神器</div>
+                <div class="center" @click="goChongwu(item.id)">近卫</div>
             </div>
         </div>
         <div class="home_bottom">
-            <div class="box simangdiguo white" @click="goYiji()">
-                遗迹奖励
-            </div>
-            <div class="box dongshenshitu white" @click="goTools()">
-                计算工具
-            </div>
-            <div class="box chanyigu white" @click="goResource()">
-                资源查询
-            </div>
-            <div class="box tiantanggang white" @click="uploadCard()">
-                卡组分享
-            </div>
-            <div class="box lianyushenyuan white" @click="goHeroList()">
-                英雄统计
-            </div>
-            <div class="box chongwu_bg white" @click="goChongwuSkillList()">
-                近卫技能
-            </div>
-            <div class="box bg_cyan white" @click="goShardList()">
-                英雄碎片
-            </div>
-            <div class="box manshikuangye white" @click="goSkinList()">
-                皮肤满星
-            </div>
-            <div class="box bg_black white" @click="goPaixu()">
-                卡牌评级
-            </div>
-            <div class="box bg_blue white" @click="goTagList()">
-                卡牌标签
-            </div>
-            <div class="box bg_pink white" @click="goShijiesai()">
-                比赛统计
-            </div>
-            <div class="box bg_grey white" @click="goNote()">
-                留言建议
-            </div>
-            <div class="box yinmizhe white" @click="goCardDiyList()">
-                卡牌工坊
-            </div>
-            <div class="box yinmizhe white" @click="goSkinDiyList()">
-                皮肤工坊
+            <div v-for="item in whereList" class="box white" :style="{ 'backgroundColor': item.bgColor }"
+                @click="goWhere(item)">
+                {{ item.name }}
             </div>
         </div>
     </div>
@@ -104,34 +26,124 @@ import { logList, logAdd } from '@/api/log';
 import router from '@/router';
 
 const count = ref(0);
-const zhenyinNameList = [{
+const zhenyinNameList: any = [{
     id: 1,
     name_cn: "帝国",
-    name_en: "simangdiguo"
+    name_en: "simangdiguo",
+    touxiang: new URL("@/assets/fengmian/simangdiguo.jpg", import.meta.url),
+    tubiao: new URL("@/assets/zhongzu/simangdiguo.png", import.meta.url)
 }, {
     id: 2,
     name_cn: "隐秘",
-    name_en: "yinmizhe"
+    name_en: "yinmizhe",
+    touxiang: new URL("@/assets/fengmian/yinmizhe.jpg", import.meta.url),
+    tubiao: new URL("@/assets/zhongzu/yinmizhe.png", import.meta.url)
 }, {
     id: 3,
     name_cn: "禅意",
-    name_en: "chanyigu"
+    name_en: "chanyigu",
+    touxiang: new URL("@/assets/fengmian/chanyigu.jpg", import.meta.url),
+    tubiao: new URL("@/assets/zhongzu/chanyigu.png", import.meta.url)
 }, {
     id: 4,
     name_cn: "海港",
-    name_en: "tiantanggang"
+    name_en: "tiantanggang",
+    touxiang: new URL("@/assets/fengmian/tiantanggang.jpg", import.meta.url),
+    tubiao: new URL("@/assets/zhongzu/tiantanggang.png", import.meta.url)
 }, {
     id: 5,
     name_cn: "炼狱",
-    name_en: "lianyushenyuan"
+    name_en: "lianyushenyuan",
+    touxiang: new URL("@/assets/fengmian/lianyushenyuan.jpg", import.meta.url),
+    tubiao: new URL("@/assets/zhongzu/lianyushenyuan.png", import.meta.url)
 }, {
     id: 6,
     name_cn: "蛮石",
-    name_en: "manshikuangye"
+    name_en: "manshikuangye",
+    touxiang: new URL("@/assets/fengmian/manshikuangye.jpg", import.meta.url),
+    tubiao: new URL("@/assets/zhongzu/manshikuangye.png", import.meta.url)
 }, {
     id: 7,
     name_cn: "冬神",
-    name_en: "dongshenshitu"
+    name_en: "dongshenshitu",
+    touxiang: new URL("@/assets/fengmian/dongshenshitu.jpg", import.meta.url),
+    tubiao: new URL("@/assets/zhongzu/dongshenshitu.png", import.meta.url)
+}];
+const whereList: any = [{
+    name: "遗迹奖励",
+    url: "/yiji",
+    bgColor: "#ffa500",
+    log: "查询遗迹"
+}, {
+    name: "计算工具",
+    url: "/shenqiTools",
+    bgColor: "#03a1c9",
+    log: "查询计算"
+}, {
+    name: "资源查询",
+    url: "/resource",
+    bgColor: "#008000",
+    log: "查询资源"
+}, {
+    name: "卡组分享",
+    url: "/cardsUpload",
+    bgColor: "#0e5d92",
+    log: "分享卡组"
+}, {
+    name: "英雄统计",
+    url: "/heroList",
+    bgColor: "#c01b10",
+    log: "查询英雄"
+}, {
+    name: "近卫技能",
+    url: "/chongwuSkillList",
+    bgColor: "#9bc505",
+    log: "查询近卫"
+}, {
+    name: "英雄碎片",
+    url: "/shardList",
+    bgColor: "#15a0a0",
+    log: "查询碎片"
+}, {
+    name: "皮肤查询",
+    url: "/skinList",
+    bgColor: "#804400",
+    log: "查询皮肤"
+}, {
+    name: "卡牌评级",
+    url: "/cardGrade",
+    bgColor: "#000000",
+    log: "查询评级"
+}, {
+    name: "卡牌标签",
+    url: "/cardTag",
+    bgColor: "#2727db",
+    log: "查询标签"
+}, {
+    name: "比赛统计",
+    url: "/gameMenu",
+    bgColor: "#e08d9b",
+    log: "查询比赛"
+}, {
+    name: "AI交流",
+    url: "/deepseek",
+    bgColor: "#808080",
+    log: "查询AI"
+}, {
+    name: "卡牌工坊",
+    url: "/cardDiyList",
+    bgColor: "#800080",
+    log: "查询卡牌"
+}, {
+    name: "皮肤许愿",
+    url: "/skinDiyList",
+    bgColor: "#800080",
+    log: "查询皮肤"
+}, {
+    name: "留言建议",
+    url: "/note",
+    bgColor: "#808080",
+    log: "查询留言"
 }];
 
 function goCard(id: number) {
@@ -157,79 +169,14 @@ function goChongwu(id: number) {
     router.push("/chongwu");
 }
 
-function goYiji() {
-    createLog("查询遗迹");
-    router.push("/yiji");
-}
-
-function goTools() {
-    createLog("查询计算");
-    router.push("/shenqiTools");
-}
-
-function goResource() {
-    createLog("查询资源");
-    router.push("/resource");
-}
-
-function goHeroList() {
-    createLog("查询英雄");
-    router.push("/heroList");
-}
-
-function goChongwuSkillList() {
-    createLog("查询近卫");
-    router.push("/chongwuSkillList");
-}
-
-function goShardList() {
-    createLog("查询碎片");
-    router.push("/shardList");
-}
-
-function goSkinList() {
-    createLog("查询皮肤");
-    router.push("/skinList");
-}
-
-function goSkinDiyList() {
-    createLog("查询皮肤");
-    router.push("/skinDiyList");
-}
-
-function goCardDiyList() {
-    createLog("查询卡牌");
-    router.push("/cardDiyList");
-}
-
-function goPaixu() {
-    createLog("查询评级");
-    router.push("/cardGrade");
-}
-
-function goShijiesai() {
-    createLog("查询比赛");
-    router.push("/gameMenu");
-}
-
-function goTagList() {
-    createLog("查询标签");
-    router.push("/cardTag");
-}
-
-function uploadCard() {
-    router.push("/cardsUpload");
-}
-
-function goNote() {
-    createLog("查询留言");
-    router.push("/note");
+function goWhere(obj: any) {
+    createLog(obj.log);
+    router.push(obj.url);
 }
 
 async function createLog(name: string) {
     await logAdd(name);
 }
-
 
 async function getTodayCount() {
     const res = await logList();
@@ -264,10 +211,20 @@ onMounted(() => {
             padding: 0 20px;
             margin-bottom: 10px;
 
-            img {
+            .img {
                 height: 4em;
                 border-radius: 50%;
                 border: 1px solid #ffffff;
+            }
+
+            .tubiao {
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                border-radius: 50%;
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                left: -5px;
+                top: -5px;
             }
         }
 
@@ -309,16 +266,20 @@ onMounted(() => {
         }
     }
 
+    .relative {
+        position: relative;
+    }
+
     .simangdiguo {
-        background-color: orange;
+        background-color: #ffa500;
     }
 
     .chanyigu {
-        background-color: green;
+        background-color: #008000;
     }
 
     .yinmizhe {
-        background-color: purple;
+        background-color: #800080;
     }
 
     .manshikuangye {
@@ -337,32 +298,8 @@ onMounted(() => {
         background-color: #c01b10;
     }
 
-    .chongwu_bg {
-        background-color: #9bc505;
-    }
-
     .white {
         color: white;
-    }
-
-    .bg_black {
-        background-color: black;
-    }
-
-    .bg_pink {
-        background-color: rgb(224, 141, 155);
-    }
-
-    .bg_blue {
-        background-color: rgb(39, 39, 219);
-    }
-
-    .bg_grey {
-        background-color: grey;
-    }
-
-    .bg_cyan {
-        background-color: #15a0a0;
     }
 }
 </style>

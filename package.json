@@ -8,8 +8,10 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "@types/crypto-js": "^4.2.2",
     "ant-design-vue": "^4.0.0-rc.6",
     "axios": "^1.11.0",
+    "crypto-js": "^4.2.0",
     "echarts": "^6.0.0",
     "less": "^4.4.0",
     "unplugin-vue-components": "^0.17.21",
