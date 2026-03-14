@@ -6,11 +6,3 @@ export function getSkinList() {
         method: "get"
     });
 }
-
-export function skinTogether(params: any) {
-    return request({
-        url: "/skin/together",
-        method: "post",
-        data: params
-    });
-}

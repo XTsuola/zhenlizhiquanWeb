@@ -52,6 +52,7 @@ export interface CardDiyAddType {
     id?: number
     zhenyin: number | undefined
     name: string
+    cardType: number | undefined
     cost: number | undefined
     quality: number | undefined
     att: number | undefined

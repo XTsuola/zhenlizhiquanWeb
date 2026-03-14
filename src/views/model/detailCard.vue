@@ -122,6 +122,8 @@ import { init } from "echarts";
 import { qualityList, zhenyinList } from "@/utils/func";
 import skinData from "@/data/skinData/skinData";
 
+console.log(skinData, "ppp")
+
 declare var window: any;
 const prop = defineProps<{
     detailData: any

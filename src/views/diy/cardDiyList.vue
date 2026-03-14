@@ -5,14 +5,14 @@
                 <a-select v-model:value="formState.zhenyin" style="width: 100%;" placeholder="请选择种族">
                     <a-select-option v-for="item in zhenyinList" :key="item.value" :value="item.value">{{
                         item.label
-                    }}</a-select-option>
+                        }}</a-select-option>
                 </a-select>
             </div>
             <div class="search_select">
                 <a-select v-model:value="formState.cost" style="width: 100%;" placeholder="请选择费用">
                     <a-select-option v-for="item in costList" :key="item.value" :value="item.value">{{
                         item.label
-                    }}</a-select-option>
+                        }}</a-select-option>
                 </a-select>
             </div>
         </div>
@@ -21,7 +21,7 @@
                 <a-select v-model:value="formState.quality" style="width: 100%;" placeholder="请选择品质">
                     <a-select-option v-for="item in cardQualityList" :key="item.value" :value="item.value">{{
                         item.label
-                    }}</a-select-option>
+                        }}</a-select-option>
                 </a-select>
             </div>
             <div class="search_input">
@@ -52,19 +52,27 @@
                     <a-select v-model:value="addData.zhenyin" placeholder="请选择" :disabled="title == '卡牌详情'">
                         <a-select-option v-for="item in zhenyinList" :key="item.value" :value="item.value">{{
                             item.label
-                        }}</a-select-option>
+                            }}</a-select-option>
                     </a-select>
                 </a-form-item>
                 <a-form-item label="卡牌名称" name="name"
                     :rules="[{ required: title != '卡牌详情' ? true : false, message: '请输入名称!' }]">
                     <a-input v-model:value="addData.name" placeholder="请输入" :readonly="title == '卡牌详情'" />
                 </a-form-item>
+                <a-form-item label="卡牌类型" name="cardType"
+                    :rules="[{ required: title != '卡牌详情' ? true : false, message: '请选择类型!' }]">
+                    <a-select v-model:value="addData.cardType" placeholder="请选择" :disabled="title == '卡牌详情'">
+                        <a-select-option v-for="item in cardTypeList" :key="item.value" :value="item.value">{{
+                            item.label
+                            }}</a-select-option>
+                    </a-select>
+                </a-form-item>
                 <a-form-item label="卡牌品质" name="quality"
                     :rules="[{ required: title != '卡牌详情' ? true : false, message: '请选择费用!' }]">
                     <a-select v-model:value="addData.quality" placeholder="请选择" :disabled="title == '卡牌详情'">
                         <a-select-option v-for="item in cardQualityList" :key="item.value" :value="item.value">{{
                             item.label
-                        }}</a-select-option>
+                            }}</a-select-option>
                     </a-select>
                 </a-form-item>
                 <a-form-item label="卡牌费用" name="cost"
@@ -72,7 +80,7 @@
                     <a-select v-model:value="addData.cost" placeholder="请选择" :disabled="title == '卡牌详情'">
                         <a-select-option v-for="item in costList" :key="item.value" :value="item.value">{{
                             item.label
-                        }}</a-select-option>
+                            }}</a-select-option>
                     </a-select>
                 </a-form-item>
                 <a-form-item label="卡牌攻击" name="att"
@@ -147,6 +155,16 @@ const zhenyinList = [{
     label: "冬神",
     value: 7
 }];
+const cardTypeList = [{
+    label: "部下",
+    value: 1
+}, {
+    label: "法术",
+    value: 2
+}, {
+    label: "传记",
+    value: 3
+}];
 const formState = reactive({
     name: "",
     zhenyin: undefined,
@@ -172,9 +190,10 @@ let originalColumns = [
         width: 160
     },
     {
-        title: "效果",
-        dataIndex: "effect",
-        key: "effect",
+        title: "种族",
+        dataIndex: "zhenyin",
+        key: "zhenyin",
+        customRender: (opt: any) => zhenyinList[opt.value].label,
         width: 160
     },
     {
@@ -190,6 +209,7 @@ const addData = reactive<CardDiyAddType>({
     id: undefined,
     zhenyin: undefined,
     name: "",
+    cardType: undefined,
     cost: undefined,
     quality: undefined,
     att: undefined,
@@ -242,13 +262,14 @@ function showModal(type: number, record?: any) {
     addData.password = "";
     if (type == 1) {
         title.value = "新增卡牌";
-        addData.zhenyin = addData.cost = addData.quality = addData.att = addData.life = undefined;
+        addData.zhenyin = addData.cardType = addData.cost = addData.quality = addData.att = addData.life = undefined;
         addData.name = addData.effect = addData.info = addData.remark = "";
     } else if (type == 2) {
         title.value = "修改卡牌";
         addData.id = record.id;
         addData.zhenyin = record.zhenyin;
         addData.name = record.name;
+        addData.cardType = record.cardType;
         addData.cost = record.cost;
         addData.quality = record.quality;
         addData.att = record.att;
@@ -261,6 +282,7 @@ function showModal(type: number, record?: any) {
         addData.id = record.id;
         addData.zhenyin = record.zhenyin;
         addData.name = record.name;
+        addData.cardType = record.cardType;
         addData.cost = record.cost;
         addData.quality = record.quality;
         addData.att = record.att;
@@ -290,6 +312,7 @@ async function handleOk() {
             const params: CardDiyAddType = {
                 zhenyin: addData.zhenyin,
                 name: addData.name,
+                cardType: addData.cardType,
                 cost: addData.cost,
                 quality: addData.quality,
                 att: addData.att,
@@ -309,6 +332,7 @@ async function handleOk() {
                 id: addData.id,
                 zhenyin: addData.zhenyin,
                 name: addData.name,
+                cardType: addData.cardType,
                 cost: addData.cost,
                 quality: addData.quality,
                 att: addData.att,
