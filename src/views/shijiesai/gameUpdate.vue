@@ -5,12 +5,12 @@
                 @change="getZhanqu">
                 <a-select-option v-for="item in nowZhanquList" :key="item.value" :value="item.value">{{
                     item.label
-                }}</a-select-option>
+                    }}</a-select-option>
             </a-select>
             <a-select v-model:value="changci" style="min-width:160px" placeholder="请选择场次" @change="getInfo">
                 <a-select-option v-for="item in changciList" :key="item.value" :value="item.value">{{
                     item.label
-                }}</a-select-option>
+                    }}</a-select-option>
             </a-select>
         </div>
         <DetailPlayer>
@@ -20,14 +20,14 @@
                     @change="(value: number) => getXuanshou(value, 1)">
                     <a-select-option v-for="item in xuanshouSelect" :key="item.value" :value="item.value">{{
                         item.label
-                        }}</a-select-option>
+                    }}</a-select-option>
                 </a-select>
             </template>
             <template v-slot:left_kedu>
                 <a-select style="width: 100%;" :disabled="disabledFlag" v-model:value="aInfo.kedu" placeholder="请选择氪度">
                     <a-select-option v-for="item in keduList" :key="item.value" :value="item.value">{{
                         item.label
-                    }}</a-select-option>
+                        }}</a-select-option>
                 </a-select>
             </template>
             <template v-slot:left_hero>
@@ -35,7 +35,7 @@
                     placeholder="请选择英雄顺位">
                     <a-select-option v-for="item in heroSelect" :key="item.value" :value="item.value">{{
                         item.label
-                        }}</a-select-option>
+                    }}</a-select-option>
                 </a-select>
             </template>
             <template v-slot:right_name>
@@ -44,14 +44,14 @@
                     @change="(value: number) => getXuanshou(value, 2)">
                     <a-select-option v-for="item in xuanshouSelect" :key="item.value" :value="item.value">{{
                         item.label
-                    }}</a-select-option>
+                        }}</a-select-option>
                 </a-select>
             </template>
             <template v-slot:right_kedu>
                 <a-select style="width: 100%;" :disabled="disabledFlag" v-model:value="bInfo.kedu" placeholder="请选择氪度">
                     <a-select-option v-for="item in keduList" :key="item.value" :value="item.value">{{
                         item.label
-                        }}</a-select-option>
+                    }}</a-select-option>
                 </a-select>
             </template>
             <template v-slot:right_hero>
@@ -59,7 +59,7 @@
                     placeholder="请选择英雄顺位">
                     <a-select-option v-for="item in heroSelect" :key="item.value" :value="item.value">{{
                         item.label
-                    }}</a-select-option>
+                        }}</a-select-option>
                 </a-select>
             </template>
         </DetailPlayer>
@@ -184,9 +184,7 @@ function resetShengfu() {
 }
 
 function getDetaiInfo(value: number, index: number): any {
-    if (value == undefined || index == undefined) {
-        return false
-    }
+    if (value == undefined || index == undefined) return false;
     let str = "", color = "", i = index % 4;
     let left = heroSelect.value.find((e: any) => e.value == aInfo.hero[i])?.label;
     let right = heroSelect.value.find((e: any) => e.value == bInfo.hero[i])?.label;
@@ -262,9 +260,7 @@ async function getSelect() {
 }
 
 function getZhanqu() {
-    if (changci.value) {
-        getInfo(changci.value)
-    }
+    if (changci.value) getInfo(changci.value);
 }
 
 function getInfo(type: number) {
@@ -289,11 +285,8 @@ function getInfo(type: number) {
     } else {
         disabledFlag.value = false;
     }
-    aInfo.name = undefined;
-    aInfo.kedu = undefined;
+    aInfo.name = aInfo.kedu = bInfo.name = bInfo.kedu = undefined;
     aInfo.hero = [];
-    bInfo.name = undefined;
-    bInfo.kedu = undefined;
     bInfo.hero = [];
     resetShengfu();
 }
@@ -313,7 +306,6 @@ function getXuanshou(e: any, type: number) {
 onMounted(() => {
     getSelect();
     getHeroData();
-
 })
 
 </script>

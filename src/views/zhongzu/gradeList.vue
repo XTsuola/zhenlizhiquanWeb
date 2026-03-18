@@ -72,7 +72,7 @@
 import { ref, reactive, onMounted } from "vue";
 import { message } from "ant-design-vue";
 import { cardZhenyinList, costList, cardQualityList } from "@/utils/func";
-import { getAllCardList, updateCardGrade, UpdateCardGradeType } from "@/api/card";
+import { getAllCardList, updateCardGrade, type UpdateCardGradeType } from "@/api/card";
 import router from "@/router";
 import MyTabel from "@/components/table.vue";
 import Detail from "../model/detailCard.vue";
@@ -113,12 +113,12 @@ const showText = ref("显示排序");
 const detailData = reactive({
     id: 0,
     zhenyin: "",
-    name: '',
-    quality: '',
+    name: "",
+    quality: "",
     cost: null,
     type: null,
-    img: '',
-    grade: '',
+    img: "",
+    grade: "",
     data: []
 });
 const editData = reactive({

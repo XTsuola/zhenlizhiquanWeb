@@ -60,12 +60,12 @@ const formState = reactive({
 const detailData = reactive({
     id: "",
     zhenyin: "",
-    name: '',
-    quality: '',
+    name: "",
+    quality: "",
     cost: null,
     type: null,
-    img: '',
-    grade: '',
+    img: "",
+    grade: "",
     data: []
 });
 const visible = ref(false);

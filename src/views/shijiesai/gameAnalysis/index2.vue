@@ -7,11 +7,11 @@
     </div>
 </template>
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted } from "vue";
 import { heroTable } from "@/data/heroData/index";
-import { shijiesaiInfoList, ShijiesaiInfoListType } from '@/api/shijiesai';
+import { shijiesaiInfoList, ShijiesaiInfoListType } from "@/api/shijiesai";
 import MyTabel from "@/components/table.vue";
-import router from '@/router';
+import router from "@/router";
 
 const gameType = sessionStorage.getItem("gameType");
 const data = ref<any>([]);
@@ -146,14 +146,14 @@ async function getList() {
         const data0 = await getList0();
         let data2 = [];
         for (let i = 0; i < data1.length; i++) {
-            const obj = data0.find((e: any) => e.id == data1[i].id)
+            const obj = data0.find((e: any) => e.id == data1[i].id);
             data2.push({
                 id: data1[i].id,
                 name: data1[i].name,
                 now: [data1[i].count, data1[i].sheng + data1[i].bai != 0 ? (data1[i].sheng / (data1[i].sheng + data1[i].bai)) * 100 : 0],
                 last: [obj.count, obj.sheng + obj.bai != 0 ? (obj.sheng / (obj.sheng + obj.bai)) * 100 : 0],
                 sort: data1[i].count - obj.count
-            })
+            });
         }
         data2.sort((a, b) => b.sort - a.sort);
         data.value = data2;

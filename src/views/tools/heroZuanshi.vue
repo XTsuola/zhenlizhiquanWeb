@@ -64,8 +64,7 @@ const qualityList = [
     }
 ];
 const count = ref(0);
-const list = [100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 120, 180, 360, 450, 500, 550, 650, 700, 750, 800, 600, 600, 800, 1200, 1500, 1500, 1800, 1800, 2000, 2000, 1000, 1000, 1500, 1500, 1800, 1800, 2400, 2400, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500]
-
+const list = [100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 120, 180, 360, 450, 500, 550, 650, 700, 750, 800, 600, 600, 800, 1200, 1500, 1500, 1800, 1800, 2000, 2000, 1000, 1000, 1500, 1500, 1800, 1800, 2400, 2400, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500];
 const show = ref(false);
 const calculate = reactive<any>({
     level: 31,
@@ -129,7 +128,7 @@ function calculateAdd() {
         return false;
     }
     show.value = true;
-    // result.zuanshi = 0;
+    result.zuanshi = 0;
     count.value++;
     let index = calculate.level - 31;
     for (let i = 0; i <= index; i++) {
@@ -162,46 +161,6 @@ function calculateAdd() {
         result.zuanshi += 6000;
     }
 }
-
-/*
-
-function zuanshi(a,b)
-{
-    zuanshi = 0;
-    let index = b - 31;
-    for (let i = 0; i <= index; i++) {
-        zuanshi += list[i];
-    }
-    if (a == 4) {
-        if (b > 40) {
-            zuanshi += 4000;
-        }
-    } else if (a == 3) {
-        zuanshi += 2010
-        if (b > 40) {
-            zuanshi += 2500;
-        }
-    } else if (a == 2) {
-        zuanshi += 2860
-        if (b > 40) {
-            zuanshi += 2000;
-        }
-    } else if (a == 1) {
-        zuanshi += 3630
-        if (b > 40) {
-            zuanshi += 2000;
-        }
-    }
-    if (b > 50) {
-        zuanshi += 4000;
-    }
-    if (b > 60) {
-        zuanshi += 6000;
-    }
-    return zuanshi
-}
-
-*/
 
 function reset() {
     show.value = false;

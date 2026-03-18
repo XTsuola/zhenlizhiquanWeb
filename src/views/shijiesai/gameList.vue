@@ -36,6 +36,8 @@ import router from "@/router";
 import MyTabel from "@/components/table.vue";
 import Detail from "../model/detaiHero.vue";
 
+declare var window: any;
+
 const gameType = sessionStorage.getItem("gameType");
 const tableLoading = ref(false);
 const loading = ref(false);
@@ -43,12 +45,12 @@ const currentPage = ref<number>(1);
 const pageSize = ref<number>(200);
 const total = ref<number>(0);
 const detailData = reactive({
-    name: '',
-    quality: '',
-    zhu: '',
-    fu: '',
-    skillName: '',
-    img: '',
+    name: "",
+    quality: "",
+    zhu: "",
+    fu: "",
+    skillName: "",
+    img: "",
     data: []
 });
 const visible = ref(false);
@@ -102,7 +104,7 @@ async function getList() {
                 zhanqu: zhanquList.find((v: any) => v.value == zhanquNo)?.label,
                 changci: changciList.find((v: any) => v.value == changciNo)?.label
             }
-        })
+        });
     }
     tableLoading.value = false;
 }
@@ -114,8 +116,6 @@ function goBack() {
 function add() {
     window.open("#/gameAdd", '_blank');
 }
-
-declare var window: any;
 
 function showModal(type: number, record: any) {
     sessionStorage.setItem("changciInfo", JSON.stringify(record));

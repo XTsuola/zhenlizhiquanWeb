@@ -28,7 +28,7 @@
     </div>
 </template>
 <script lang="ts" setup>
-import { onMounted, ref } from "vue";
+import { ref, onMounted } from "vue";
 import { message } from "ant-design-vue";
 import router from "@/router";
 

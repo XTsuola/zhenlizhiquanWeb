@@ -89,7 +89,6 @@ const detailData = reactive({
     remark: ""
 });
 const visible = ref(false);
-const visible2 = ref(false);
 const data = ref<any>([]);
 let originalColumns = [
     {
@@ -114,7 +113,6 @@ let originalColumns = [
 ];
 const columns = ref<any>();
 columns.value = originalColumns;
-const addData = ref<any>([]);
 
 function getList() {
     let allData: any = JSON.parse(JSON.stringify(originalData.value));

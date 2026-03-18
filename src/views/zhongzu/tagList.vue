@@ -4,14 +4,14 @@
             <a-select v-model:value="formState.zhenyin" style="width: 100%;" placeholder="请选择种族">
                 <a-select-option v-for="item in cardZhenyinList" :key="item.value" :value="item.value">{{
                     item.label
-                }}</a-select-option>
+                    }}</a-select-option>
             </a-select>
         </div>
         <div class="search_select">
             <a-select v-model:value="formState.cost" style="width: 100%;" placeholder="请选择费用">
                 <a-select-option v-for="item in costList" :key="item.value" :value="item.value">{{
                     item.label
-                }}</a-select-option>
+                    }}</a-select-option>
             </a-select>
         </div>
     </div>
@@ -20,7 +20,7 @@
             <a-select v-model:value="formState.quality" style="width: 100%;" placeholder="请选择品质">
                 <a-select-option v-for="item in cardQualityList" :key="item.value" :value="item.value">{{
                     item.label
-                }}</a-select-option>
+                    }}</a-select-option>
             </a-select>
         </div>
         <div class="search_input">
@@ -33,7 +33,7 @@
                 placeholder="请选择标签">
                 <a-select-option v-for="item in tabList" :key="item.value" :value="item.value">{{
                     item.label
-                }}</a-select-option>
+                    }}</a-select-option>
             </a-select>
         </div>
     </div>
@@ -109,7 +109,7 @@
 import { ref, reactive, onMounted } from "vue";
 import { message } from "ant-design-vue";
 import { cardZhenyinList, costList, cardQualityList, tabList, allValuesInArray } from "@/utils/func";
-import { getAllCardList, updateCardTag, UpdateCardTagType } from "@/api/card";
+import { getAllCardList, updateCardTag, type UpdateCardTagType } from "@/api/card";
 import router from "@/router";
 import MyTabel from "@/components/table.vue";
 import Detail from "../model/detailCard.vue";
@@ -121,12 +121,12 @@ const showText = ref("显示详情");
 const detailData = reactive({
     id: 0,
     zhenyin: "",
-    name: '',
-    quality: '',
+    name: "",
+    quality: "",
     cost: null,
     type: null,
-    img: '',
-    grade: '',
+    img: "",
+    grade: "",
     data: []
 });
 const editData = reactive({
@@ -169,23 +169,8 @@ if (isAdmin) {
     });
 }
 
-/* function getGradeName(grade: number) {
-    return gradeList.find(e => e.value == grade)?.label;
-}
-
-function getGradeColor(grade: number) {
-    return gradeList.find(e => e.value == grade)?.color;
-} */
-
 function getList() {
-
     let allData: any = JSON.parse(JSON.stringify(originalData.value));
-    const p = allData.map((e: any) => {
-        return {
-            id: e.id,
-            tag: e.tag
-        }
-    })
     if (formState.name) {
         allData = allData.filter((item: any) => item.name.includes(formState.name));
     }

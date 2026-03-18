@@ -7,11 +7,11 @@
     </div>
 </template>
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted } from "vue";
 import { heroTable } from "@/data/heroData/index";
-import { shijiesaiInfoList, ShijiesaiInfoListType } from '@/api/shijiesai';
+import { shijiesaiInfoList, ShijiesaiInfoListType } from "@/api/shijiesai";
 import MyTabel from "@/components/table.vue";
-import router from '@/router';
+import router from "@/router";
 
 const gameType = sessionStorage.getItem("gameType");
 const data = ref<any>([]);
