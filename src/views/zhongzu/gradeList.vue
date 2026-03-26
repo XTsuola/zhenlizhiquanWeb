@@ -4,14 +4,14 @@
             <a-select v-model:value="formState.zhenyin" style="width: 100%;" placeholder="请选择种族">
                 <a-select-option v-for="item in cardZhenyinList" :key="item.value" :value="item.value">{{
                     item.label
-                }}</a-select-option>
+                    }}</a-select-option>
             </a-select>
         </div>
         <div class="search_select">
             <a-select v-model:value="formState.cost" style="width: 100%;" placeholder="请选择费用">
                 <a-select-option v-for="item in costList" :key="item.value" :value="item.value">{{
                     item.label
-                }}</a-select-option>
+                    }}</a-select-option>
             </a-select>
         </div>
     </div>
@@ -20,7 +20,7 @@
             <a-select v-model:value="formState.quality" style="width: 100%;" placeholder="请选择品质">
                 <a-select-option v-for="item in cardQualityList" :key="item.value" :value="item.value">{{
                     item.label
-                }}</a-select-option>
+                    }}</a-select-option>
             </a-select>
         </div>
         <div class="search_input">
@@ -51,10 +51,16 @@
         <div style="margin-bottom: 10px;">
             <span>选择评级：</span>
             <a-radio-group v-model:value="editData.grade">
+                <a-radio class="myRadio" :value="7">
+                    <div class="tagBg">
+                        {{ getGradeName(7) }}
+                    </div>
+                </a-radio>
                 <a-radio v-for="i in 7" class="myRadio" :value="7 - i">
                     <a-tag :color="getGradeColor(7 - i)">{{ getGradeName(7 - i) }}</a-tag>
                 </a-radio>
             </a-radio-group>
+
         </div>
         <template #footer>
             <a-button style="margin-right: 10px;" key="back" @click="cancel">关闭</a-button>
@@ -79,7 +85,11 @@ import Detail from "../model/detailCard.vue";
 
 const tableLoading = ref(false);
 const gradeList = [{
-    label: "SS真神",
+    label: "SSS真神",
+    value: 7,
+    color: "#000000"
+}, {
+    label: "SS神话",
     value: 6,
     color: "#000000"
 }, {
@@ -352,5 +362,40 @@ onMounted(() => {
     line-height: '30px';
     width: 100%;
     margin: 10px 0;
+}
+
+.tagBg {
+    margin: 0;
+    width: 60px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    border-radius: 4px;
+    background: linear-gradient(45deg,
+            #111,
+            #AA8B3B,
+            #FFD700,
+            #FF6B35,
+            #E6B325,
+            #C8A951,
+            #111);
+    background-size: 600% 600%;
+    animation: colorGold 10s ease infinite;
+}
+
+@keyframes colorGold {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 </style>

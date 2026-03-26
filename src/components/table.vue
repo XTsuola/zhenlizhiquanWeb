@@ -15,14 +15,17 @@
                     </a-badge>
                 </span>
                 <span v-if="column.key === 'grade'">
-                    <a-tag :color="getGradeColor(record.grade)">{{ getGradeName(record.grade) }}</a-tag>
+                    <div v-if="getGradeName(record.grade) == 'SSS真神'" class="tagBg">
+                        {{ getGradeName(record.grade) }}
+                    </div>
+                    <a-tag v-else :color="getGradeColor(record.grade)">{{ getGradeName(record.grade) }}</a-tag>
                 </span>
                 <span v-if="column.key === 'tag'">
                     <a-tag v-for="e in record.tag" style="margin-bottom: 5px;">{{ getTagName(e) }}</a-tag>
                 </span>
                 <span v-if="column.key === 'skillSign'">
                     <a-tag v-for="item in record.skillSign" :color="item.color">{{ item.name
-                    }}</a-tag>
+                        }}</a-tag>
                 </span>
                 <span v-if="column.key === 'now'">
                     <div>人次：</div>
@@ -165,7 +168,11 @@ function rowClassName(record: any) {
     }
 }
 const gradeList = [{
-    label: "SS真神",
+    label: "SSS真神",
+    value: 7,
+    color: "#000000"
+}, {
+    label: "SS神话",
     value: 6,
     color: "#000000"
 }, {
@@ -233,6 +240,41 @@ function getTagName(tag: any) {
 .pagination {
     text-align: right;
     margin-top: 20px;
+}
+
+.tagBg {
+    margin: 0;
+    width: 60px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    border-radius: 4px;
+    background: linear-gradient(45deg,
+            #111,
+            #AA8B3B,
+            #FFD700,
+            #FF6B35,
+            #E6B325,
+            #C8A951,
+            #111);
+    background-size: 600% 600%;
+    animation: colorGold 10s ease infinite;
+}
+
+@keyframes colorGold {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 :deep(.orange) {
