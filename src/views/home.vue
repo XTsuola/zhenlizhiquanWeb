@@ -76,7 +76,7 @@ const whereList: any = [{
     log: "查询遗迹"
 }, {
     name: "计算工具",
-    url: "/shenqiTools",
+    url: "/menuTools",
     bgColor: "#03a1c9",
     log: "查询计算"
 }, {

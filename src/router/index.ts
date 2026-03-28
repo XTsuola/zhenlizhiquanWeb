@@ -202,9 +202,19 @@ const routeList: any = [
     component: () => import("@/views/qingshu/index.vue")
   },
   {
+    path: "/menuTools",
+    name: "menuTools",
+    component: () => import("@/views/tools/menu.vue")
+  },
+  {
+    path: "/heroZuanshiTools",
+    name: "heroZuanshiTools",
+    component: () => import("@/views/tools/heroZuanshi.vue")
+  },
+  {
     path: "/shenqiTools",
     name: "shenqiTools",
-    component: () => import("@/views/tools/cardsLevel.vue")
+    component: () => import("@/views/tools/shenqi.vue")
   },
   {
     path: "/deepseek",
