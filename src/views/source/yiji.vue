@@ -1,9 +1,11 @@
 <template>
     <div class="yiji">
         <div class="center">
-            <h2>80-85层遗迹：</h2>
+            <h2>86-90层遗迹：</h2>
             <a-button style="margin-right: 10px;" @click="goBack">返回</a-button>
         </div>
+        <img src="@/assets/yiji/90.jpg" @click="handleImageClick" />
+        <h2>80-85层遗迹：</h2>
         <img src="@/assets/yiji/85.jpg" @click="handleImageClick" />
         <h2>60-80层遗迹：</h2>
         <img src="@/assets/yiji/80.jpg" @click="handleImageClick" />

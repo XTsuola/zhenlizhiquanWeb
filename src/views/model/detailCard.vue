@@ -96,7 +96,10 @@
                     卡牌评级
                 </a-col>
                 <a-col class="aCol" :span="18">
-                    <a-tag :color="getGradeColor(prop.detailData.grade)">{{ getGradeName(prop.detailData.grade)
+                    <div v-if="getGradeName(prop.detailData.grade) == 'SSS真神'" class="tagBg">
+                        {{ getGradeName(prop.detailData.grade) }}
+                    </div>
+                    <a-tag v-else :color="getGradeColor(prop.detailData.grade)">{{ getGradeName(prop.detailData.grade)
                     }}</a-tag>
                     <a-button v-if="showLine > 0" size="small" style="margin-left:auto;" @click="showisHero">{{
                         showLine > 1
@@ -131,7 +134,11 @@ const prop = defineProps<{
 const nowlevel = ref(21);
 if (prop.level) nowlevel.value = prop.level - 1;
 const gradeList = [{
-    label: "SS真神",
+    label: "SSS真神",
+    value: 7,
+    color: "#000000"
+}, {
+    label: "SS神话",
     value: 6,
     color: "#000000"
 }, {
@@ -236,6 +243,41 @@ onBeforeUnmount(() => {
     padding: 5px;
     display: flex;
     align-items: center;
+}
+
+.tagBg {
+    margin: 0;
+    width: 60px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    border-radius: 4px;
+    background: linear-gradient(45deg,
+            #111,
+            #AA8B3B,
+            #FFD700,
+            #FF6B35,
+            #E6B325,
+            #C8A951,
+            #111);
+    background-size: 600% 600%;
+    animation: colorGold 10s ease infinite;
+}
+
+@keyframes colorGold {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .border_right {
