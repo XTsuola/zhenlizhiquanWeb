@@ -8,6 +8,9 @@
             <div class="box simangdiguo white" @click="goUrl(2)">
                 神器计算
             </div>
+            <div class="box dongshenshitu white" @click="goUrl(3)">
+                钻石收入
+            </div>
         </div>
     </div>
 </template>
@@ -19,6 +22,8 @@ function goUrl(type: number) {
         router.push("/heroZuanshiTools");
     } else if (type == 2) {
         router.push("/shenqiTools");
+    } else if (type == 3) {
+        router.push("/zuanshishouruTools");
     }
 }
 

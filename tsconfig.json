@@ -7,25 +7,26 @@
   ],
   "compilerOptions": {
     "module": "esnext",
-    "target": "ES2022",
+    "target": "ESNext",
     "lib": [
-      "es2022"
+      "ESNext",
+      "DOM"
     ],
-    "ignoreDeprecations": "5.0",
     "strict": true,
-    "baseUrl": ".",
-    "jsx": "preserve",
+    "moduleResolution": "bundler",
+    "isolatedModules": true,
     "paths": {
       "@/*": [
-        "src/*"
+        "./src/*"
       ]
     },
+    "jsx": "preserve",
     "verbatimModuleSyntax": false,
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true
   },
   "references": [
     {

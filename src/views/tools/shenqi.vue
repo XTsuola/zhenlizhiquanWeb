@@ -20,7 +20,11 @@
         </div>
         <div class="box_item">
             <span>是否使用异界币兑换：</span>
-            <a-switch v-model:checked="calculate.flag" checked-children="是" un-checked-children="否" />
+            <a-switch v-model:checked="calculate.yijieFlag" checked-children="是" un-checked-children="否" />
+        </div>
+        <div class="box_item">
+            <span>是否周冲1000获得宝箱：</span>
+            <a-switch v-model:checked="calculate.zhouchongFlag" checked-children="是" un-checked-children="否" />
         </div>
         <div class="box_item">
             <span style="font-size: 12px;">（注1：每日大概获得免费20把钥匙约等于20橙色碎片）</span>
@@ -32,7 +36,7 @@
             <span style="font-size: 12px;">（注3：参考一折购买大概每日买5，八折购买大概每日20）</span>
         </div>
         <div class="box_item">
-            <span style="font-size: 12px;">（注4：异界兑换的碎片换算成每天10个加入每天算法之中）</span>
+            <span style="font-size: 12px;">（注4：异界或者周冲的碎片换算成每天10个加入每天算法之中）</span>
         </div>
         <div>
             <a-button style="width: 70px;margin-right: 12px;" type="primary" @click="calculateOk">计算</a-button>
@@ -65,7 +69,8 @@ const calculate = reactive<any>({
     need: 100,
     num: 0,
     c: 20,
-    flag: false,
+    yijieFlag: false,
+    zhouchongFlag: false
 });
 const result = reactive<any>({
     day: 0,
@@ -80,7 +85,8 @@ function calculateOk() {
     }
     show.value = true;
     let oneWeek = (calculate.c + calculate.num) * 7;
-    if (calculate.flag) oneWeek += 70;
+    if (calculate.yijieFlag) oneWeek += 70;
+    if (calculate.zhouchongFlag) oneWeek += 70;
     let week = calculate.need / oneWeek;
     result.day = Math.ceil(week * 7);
     result.bi = calculate.flag ? Math.ceil(week) * 1200 : 0;
@@ -94,7 +100,7 @@ function calculateOk() {
 }
 
 function reset() {
-    show.value = calculate.false = false;
+    show.value = calculate.yijieFlag = calculate.zhouchongFlag = false;
     calculate.need = 100;
     result.day = result.zuanshi = calculate.num = 0;
 }

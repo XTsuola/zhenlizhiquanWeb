@@ -3,7 +3,8 @@ import request from "../utils/request";
 export function getCardList(zhenyin: number) {
     return request({
         url: "/card/list?zhenyin=" + zhenyin,
-        method: "get"
+        method: "get",
+        timeout: 0
     });
 }
 
