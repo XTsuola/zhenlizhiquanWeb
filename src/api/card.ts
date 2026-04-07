@@ -11,7 +11,8 @@ export function getCardList(zhenyin: number) {
 export function getAllCardList() {
     return request({
         url: "/cardAll/list",
-        method: "get"
+        method: "get",
+        timeout: 0
     });
 }
 

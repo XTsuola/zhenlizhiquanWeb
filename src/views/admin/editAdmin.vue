@@ -23,6 +23,9 @@
                 <div class="box tiantanggang white" @click="goAdmin(4)">
                     查询消息
                 </div>
+                <div class="box yinmizhe white" @click="goAdmin(5)">
+                    问题管理
+                </div>
             </div>
         </div>
     </div>
@@ -63,6 +66,8 @@ function goAdmin(type: number) {
         router.push("/passwordAdmin");
     } else if (type == 4) {
         router.push("/logList");
+    }else if (type == 5) {
+        router.push("/questionAdmin");
     }
 }
 

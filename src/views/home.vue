@@ -140,6 +140,11 @@ const whereList: any = [{
     bgColor: "#800080",
     log: "查询皮肤"
 }, {
+    name: "每日一题",
+    url: "/question",
+    bgColor: "#03a1c9",
+    log: "查询答题"
+}, {
     name: "留言建议",
     url: "/note",
     bgColor: "#808080",

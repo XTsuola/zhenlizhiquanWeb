@@ -222,6 +222,16 @@ const routeList: any = [
     component: () => import("@/views/tools/zuanshishouru.vue")
   },
   {
+    path: "/question",
+    name: "question",
+    component: () => import("@/views/question/index.vue")
+  },
+  {
+    path: "/questionAdmin",
+    name: "questionAdmin",
+    component: () => import("@/views/admin/questionAdmin.vue")
+  },
+  {
     path: "/deepseek",
     name: "deepseek",
     component: () => import("@/views/ai/deepseek.vue")

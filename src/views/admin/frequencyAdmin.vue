@@ -1,5 +1,5 @@
 <template>
-    <div class="cardDetail">
+    <div class="frequencyAdmin">
         <div class="header">
             <div class="title">
                 <div style="font-weight: bold; margin-bottom: 8px;">管理卡组</div>
@@ -314,7 +314,7 @@ onMounted(() => {
 
 </script>
 <style lang="less" scoped>
-.cardDetail {
+.frequencyAdmin {
     .header {
         padding: 10px;
 

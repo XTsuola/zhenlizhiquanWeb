@@ -13,6 +13,14 @@ export function formatDate(date: any, type?: string) {
   }
 }
 
+export function formatDate2(date: any) {
+  const newDate = new Date(date);
+  const year = newDate.getFullYear();
+  const month = (newDate.getMonth() + 1) > 9 ? (newDate.getMonth() + 1) : "0" + (newDate.getMonth() + 1);
+  const day = newDate.getDate() > 9 ? newDate.getDate() : "0" + newDate.getDate();
+  return year + "-" + month + "-" + day;
+}
+
 export function getNowDate() {
   const newDate = new Date();
   const year = newDate.getFullYear();

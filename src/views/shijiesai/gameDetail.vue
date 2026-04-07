@@ -150,7 +150,7 @@ function getDetaiInfo(value: number, index: number) {
 }
 
 function goBack() {
-    router.push("/gameList");
+    window.close();
 }
 
 onMounted(() => {
