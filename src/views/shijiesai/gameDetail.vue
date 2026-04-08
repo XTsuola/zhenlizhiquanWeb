@@ -4,12 +4,12 @@
             <a-select v-model:value="zhanqu" style="min-width:160px;margin-right: 20px;" placeholder="请选择战区" disabled>
                 <a-select-option v-for="item in nowZhanquList" :key="item.value" :value="item.value">{{
                     item.label
-                    }}</a-select-option>
+                }}</a-select-option>
             </a-select>
             <a-select v-model:value="changci" style="min-width:160px" placeholder="请选择场次" disabled>
                 <a-select-option v-for="item in changciList" :key="item.value" :value="item.value">{{
                     item.label
-                    }}</a-select-option>
+                }}</a-select-option>
             </a-select>
         </div>
         <DetailPlayer>
@@ -20,7 +20,7 @@
                 <a-select style="width: 100%;" v-model:value="aInfo.kedu" placeholder="请选择氪度" disabled>
                     <a-select-option v-for="item in keduList" :key="item.value" :value="item.value">{{
                         item.label
-                        }}</a-select-option>
+                    }}</a-select-option>
                 </a-select>
             </template>
             <template v-slot:left_hero>
@@ -28,7 +28,7 @@
                     disabled>
                     <a-select-option v-for="item in heroSelect" :key="item.value" :value="item.value">{{
                         item.label
-                    }}</a-select-option>
+                        }}</a-select-option>
                 </a-select>
             </template>
             <template v-slot:right_name>
@@ -38,7 +38,7 @@
                 <a-select style="width: 100%;" v-model:value="bInfo.kedu" placeholder="请选择氪度" disabled>
                     <a-select-option v-for="item in keduList" :key="item.value" :value="item.value">{{
                         item.label
-                    }}</a-select-option>
+                        }}</a-select-option>
                 </a-select>
             </template>
             <template v-slot:right_hero>
@@ -46,7 +46,7 @@
                     disabled>
                     <a-select-option v-for="item in heroSelect" :key="item.value" :value="item.value">{{
                         item.label
-                    }}</a-select-option>
+                        }}</a-select-option>
                 </a-select>
             </template>
         </DetailPlayer>
@@ -72,8 +72,12 @@ import { XuanshouInfoType } from "@/api/shijiesai";
 import router from "@/router";
 import DetailPlayer from "../model/detailPalyer.vue";
 
+
 const nowZhanquList = ref<any>([]);
 const gameType = sessionStorage.getItem("gameType");
+if (gameType == "10") {
+    zhanquList.splice(8, zhanquList.length);
+}
 if (parseInt(gameType as string) > 7) {
     nowZhanquList.value = zhanquList.map((e: any) => {
         return {
@@ -150,7 +154,7 @@ function getDetaiInfo(value: number, index: number) {
 }
 
 function goBack() {
-    window.close();
+    router.push("/gameList");
 }
 
 onMounted(() => {

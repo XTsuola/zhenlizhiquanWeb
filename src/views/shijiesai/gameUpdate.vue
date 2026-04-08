@@ -101,6 +101,9 @@ import DetailPlayer from "../model/detailPalyer.vue";
 
 const nowZhanquList = ref<any>([]);
 const gameType = sessionStorage.getItem("gameType");
+if (gameType == "10") {
+    zhanquList.splice(8, zhanquList.length);
+}
 if (parseInt(gameType as string) > 7) {
     nowZhanquList.value = zhanquList.map((e: any) => {
         return {

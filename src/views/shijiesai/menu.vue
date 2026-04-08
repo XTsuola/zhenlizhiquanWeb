@@ -12,6 +12,9 @@
         <div class="gameMenu_btn">
             <a-button type="primary" @click="goList(9)">第九届世界赛</a-button>
         </div>
+        <div class="gameMenu_btn">
+            <a-button type="primary" @click="goList(10)">第十届世界赛</a-button>
+        </div>
     </div>
 </template>
 <script lang="ts" setup>
