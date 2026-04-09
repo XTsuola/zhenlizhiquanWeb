@@ -69,9 +69,7 @@ const columns = ref<any>([
         dataIndex: "count1",
         key: "count1",
         width: 100,
-        customRender: (opt: any) => {
-            return ((opt.value / 480) * 100).toFixed(2) + "%"
-        }
+        customRender: (opt: any) => getShengLv(opt.value)
     },
     {
         title: "副",
@@ -84,13 +82,19 @@ const columns = ref<any>([
         dataIndex: "count2",
         key: "count2",
         width: 100,
-        customRender: (opt: any) => {
-            return ((opt.value / 480) * 100).toFixed(2) + "%"
-        }
+        customRender: (opt: any) => getShengLv(opt.value)
     }
 ]);
 const title = ref();
 title.value = gameType;
+
+function getShengLv(value: number) {
+    if(gameType == "10") {
+        return ((value / 256) * 100).toFixed(2) + "%"
+    } else {
+        return ((value / 480) * 100).toFixed(2) + "%"
+    }
+}
 
 async function getList() {
     const params: ShijiesaiInfoListType = {
