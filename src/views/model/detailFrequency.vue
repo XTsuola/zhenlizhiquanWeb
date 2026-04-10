@@ -138,9 +138,16 @@
             </div>
         </div>
         <a-modal v-model:open="visible" destroyOnClose :title="title" :maskClosable="false">
-            <img v-for="img in lajiCards" style="width: 40px;height: 40px;margin-right: 2px;" :src="img" />
+            <img v-for="obj in lajiCards" style="width: 40px;height: 40px;margin-right: 2px;" :src="obj.img"
+                @click="showDetail(obj)" />
             <template #footer>
                 <a-button key="back" @click="visible = false">关闭</a-button>
+            </template>
+        </a-modal>
+        <a-modal v-model:open="visible2" destroyOnClose title="详细信息" :maskClosable="false">
+            <Detail :detailData="detailData"></Detail>
+            <template #footer>
+                <a-button key="back" @click="visible2 = false">关闭</a-button>
             </template>
         </a-modal>
     </div>
@@ -151,6 +158,7 @@ import { ref, reactive, onMounted } from "vue";
 import { blueObj, purpleObj, goldObj } from "@/data/z_otherData/cailiao";
 import { gradeData } from "@/data/z_otherData/gradeData";
 import { heroTable } from "@/data/heroData/index";
+import Detail from "../model/detailCard.vue";
 
 export interface HeroType {
     id: number
@@ -204,27 +212,27 @@ for (let i = 0; i < cardList.length; i++) {
     else if (qulaity == 2) blueList.push(cardLevel[i]);
     if (grade >= 6) {
         ss.value++;
-        ssImgList.value.push(obj.img);
+        ssImgList.value.push(obj);
     } else if (grade == 5) {
         s.value++;
-        sImgList.value.push(obj.img);
+        sImgList.value.push(obj);
     } else if (grade == 4) {
         aa.value++;
-        aaImgList.value.push(obj.img);
+        aaImgList.value.push(obj);
     } else if (grade == 3) {
         a.value++;
-        aImgList.value.push(obj.img);
+        aImgList.value.push(obj);
     } else if (grade == 2) {
         b.value++;
-        bImgList.value.push(obj.img);
+        bImgList.value.push(obj);
     }
     else if (grade == 1) {
         c.value++;
-        cImgList.value.push(obj.img);
+        cImgList.value.push(obj);
     }
     else if (grade == 0) {
         d.value++;
-        dImgList.value.push(obj.img);
+        dImgList.value.push(obj);
     }
 }
 const nowImg: any = heroTable.find((e: any) => e.id == ceshiData.hero.id)?.img;
@@ -254,6 +262,7 @@ const blueCard = ref(0);
 const purpleCard = ref(0);
 const orangeCard = ref(0);
 const allCard = ref(0);
+const visible2 = ref(false);
 
 async function getList() {
     let blueLevel = 0, purpleLevel = 0, goldLevel = 0;
@@ -306,26 +315,135 @@ function showCards(type: number) {
     visible.value = true;
     if (type >= 6) {
         title.value = "SS级神卡展示";
-        lajiCards.value = ssImgList.value.map((e: string) => import.meta.env.VITE_APP_BASE_URL + "cardImg" + e);
+        lajiCards.value = ssImgList.value.map((e: any) => {
+            return {
+                img: import.meta.env.VITE_APP_BASE_URL + "cardImg" + e.img,
+                id: e.id,
+                zhenyin: e.zhenyin,
+                name: e.name,
+                quality: e.quality,
+                cost: e.cost,
+                type: e.type,
+                grade: e.grade,
+                data: e.data
+            }
+        });
     } else if (type == 5) {
         title.value = "S级强卡展示";
-        lajiCards.value = sImgList.value.map((e: string) => import.meta.env.VITE_APP_BASE_URL + "cardImg" + e);
+        lajiCards.value = sImgList.value.map((e: any) => {
+            return {
+                img: import.meta.env.VITE_APP_BASE_URL + "cardImg" + e.img,
+                id: e.id,
+                zhenyin: e.zhenyin,
+                name: e.name,
+                quality: e.quality,
+                cost: e.cost,
+                type: e.type,
+                grade: e.grade,
+                data: e.data
+            }
+        });
     } else if (type == 4) {
         title.value = "A+级卡牌展示";
-        lajiCards.value = aaImgList.value.map((e: string) => import.meta.env.VITE_APP_BASE_URL + "cardImg" + e);
+        lajiCards.value = aaImgList.value.map((e: any) => {
+            return {
+                img: import.meta.env.VITE_APP_BASE_URL + "cardImg" + e.img,
+                id: e.id,
+                zhenyin: e.zhenyin,
+                name: e.name,
+                quality: e.quality,
+                cost: e.cost,
+                type: e.type,
+                grade: e.grade,
+                data: e.data
+            }
+        });
     } else if (type == 3) {
         title.value = "A级卡牌展示";
-        lajiCards.value = aImgList.value.map((e: string) => import.meta.env.VITE_APP_BASE_URL + "cardImg" + e);
+        lajiCards.value = aImgList.value.map((e: any) => {
+            return {
+                img: import.meta.env.VITE_APP_BASE_URL + "cardImg" + e.img,
+                id: e.id,
+                zhenyin: e.zhenyin,
+                name: e.name,
+                quality: e.quality,
+                cost: e.cost,
+                type: e.type,
+                grade: e.grade,
+                data: e.data
+            }
+        });
     } else if (type == 2) {
         title.value = "B级弱卡展示";
-        lajiCards.value = bImgList.value.map((e: string) => import.meta.env.VITE_APP_BASE_URL + "cardImg" + e);
+        lajiCards.value = bImgList.value.map((e: any) => {
+            return {
+                img: import.meta.env.VITE_APP_BASE_URL + "cardImg" + e.img,
+                id: e.id,
+                zhenyin: e.zhenyin,
+                name: e.name,
+                quality: e.quality,
+                cost: e.cost,
+                type: e.type,
+                grade: e.grade,
+                data: e.data
+            }
+        });
     } else if (type == 1) {
         title.value = "C级弱卡展示";
-        lajiCards.value = cImgList.value.map((e: string) => import.meta.env.VITE_APP_BASE_URL + "cardImg" + e);
+        lajiCards.value = cImgList.value.map((e: any) => {
+            return {
+                img: import.meta.env.VITE_APP_BASE_URL + "cardImg" + e.img,
+                id: e.id,
+                zhenyin: e.zhenyin,
+                name: e.name,
+                quality: e.quality,
+                cost: e.cost,
+                type: e.type,
+                grade: e.grade,
+                data: e.data
+            }
+        });
     } else {
         title.value = "D级弱卡展示";
-        lajiCards.value = dImgList.value.map((e: string) => import.meta.env.VITE_APP_BASE_URL + "cardImg" + e);
+        lajiCards.value = dImgList.value.map((e: any) => {
+            return {
+                img: import.meta.env.VITE_APP_BASE_URL + "cardImg" + e.img,
+                id: e.id,
+                zhenyin: e.zhenyin,
+                name: e.name,
+                quality: e.quality,
+                cost: e.cost,
+                type: e.type,
+                grade: e.grade,
+                data: e.data
+            }
+        });
     }
+}
+
+const detailData = reactive({
+    id: "",
+    zhenyin: "",
+    name: "",
+    quality: "",
+    cost: null,
+    type: null,
+    img: "",
+    grade: "",
+    data: []
+});
+
+function showDetail(e: any) {
+    visible2.value = true;
+    detailData.id = e.id;
+    detailData.zhenyin = e.zhenyin;
+    detailData.name = e.name;
+    detailData.quality = e.quality;
+    detailData.cost = e.cost;
+    detailData.type = e.type;
+    detailData.img = e.img;
+    detailData.grade = e.grade;
+    detailData.data = e.data;
 }
 
 onMounted(() => {
