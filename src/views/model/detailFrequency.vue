@@ -17,34 +17,34 @@
             <div class="card_body">
                 <div class="flex_left">
                     <div style="width: 30%">蓝卡等级：</div><span style="width: 70%;">{{ blueCard.toFixed(2)
-                    }} 级</span>
-                </div>
-                <div class="flex_left">
-                    <div style="width: 30%">紫卡等级：</div><span style="width: 70%;">{{ purpleCard.toFixed(2)
-                    }} 级</span>
-                </div>
-                <div class="flex_left">
-                    <div style="width: 30%">橙卡等级：</div><span style="width: 70%;">{{ orangeCard.toFixed(2)
                         }} 级</span>
                 </div>
                 <div class="flex_left">
-                    <div style="width: 30%">平均等级：</div><span style="width: 70%;">{{ allCard.toFixed(2)
+                    <div style="width: 30%">紫卡等级：</div><span style="width: 70%;">{{ purpleCard.toFixed(2)
+                        }} 级</span>
+                </div>
+                <div class="flex_left">
+                    <div style="width: 30%">橙卡等级：</div><span style="width: 70%;">{{ orangeCard.toFixed(2)
                     }} 级</span>
+                </div>
+                <div class="flex_left">
+                    <div style="width: 30%">平均等级：</div><span style="width: 70%;">{{ allCard.toFixed(2)
+                        }} 级</span>
                 </div>
                 <div class="flex_left">
                     <div style="width: 30%">蓝卡占比：</div><span style="width: 70%;">{{ ((blueList.length / 30) *
                         100).toFixed(2)
-                        }}%（{{ blueList.length }}张）</span>
+                    }}%（{{ blueList.length }}张）</span>
                 </div>
                 <div class="flex_left">
                     <div style="width: 30%">紫卡占比：</div><span style="width: 70%;">{{ ((purpleList.length / 30) *
                         100).toFixed(2)
-                        }}%（{{ purpleList.length }}张）</span>
+                    }}%（{{ purpleList.length }}张）</span>
                 </div>
                 <div class="flex_left">
                     <div style="width: 30%">橙卡占比：</div><span style="width: 70%;">{{ ((goldList.length / 30) *
                         100).toFixed(2)
-                        }}%（{{ goldList.length }}张）</span>
+                    }}%（{{ goldList.length }}张）</span>
                 </div>
             </div>
         </div>
@@ -99,42 +99,46 @@
             <div class="card_body">
                 <div class="flex_left">
                     <div style="width: 30%;">SS级：</div><span style="width: 70px;">{{ ((ss / 30) * 100).toFixed(2)
-                        }}%</span><span>（{{ ss }}张）</span>
+                    }}%</span><span>（{{ ss }}张）<a-button v-if="ss > 0" size="small"
+                            @click="showCards(6)">查看</a-button></span>
                 </div>
                 <div class="flex_left">
                     <div style="width: 30%;">S级：</div><span style="width: 70px;">{{ ((s / 30) * 100).toFixed(2)
-                        }}%</span><span>（{{ s }}张）</span>
+                    }}%</span><span>（{{ s }}张）<a-button v-if="s > 0" size="small"
+                            @click="showCards(5)">查看</a-button></span>
                 </div>
                 <div class="flex_left">
                     <div style="width: 30%;">A+级：</div><span style="width: 70px;">{{ ((aa / 30) * 100).toFixed(2)
-                        }}%</span><span>（{{ aa }}张）</span>
+                    }}%</span><span>（{{ aa }}张）<a-button v-if="aa > 0" size="small"
+                            @click="showCards(4)">查看</a-button></span>
                 </div>
                 <div class="flex_left">
                     <div style="width: 30%;">A级：</div><span style="width: 70px;">{{ ((a / 30) * 100).toFixed(2)
-                        }}%</span><span>（{{ a }}张）</span>
+                    }}%</span><span>（{{ a }}张）<a-button v-if="a > 0" size="small"
+                            @click="showCards(3)">查看</a-button></span>
                 </div>
                 <div class="flex_left">
                     <div style="width: 30%;">B级：</div><span style="width: 70px;">{{ ((b / 30) *
                         100).toFixed(2)
-                        }}%</span><span>（{{ b }}张）<a-button v-if="b > 0" size="small"
+                    }}%</span><span>（{{ b }}张）<a-button v-if="b > 0" size="small"
                             @click="showCards(2)">查看</a-button></span>
                 </div>
                 <div class="flex_left">
                     <div style="width: 30%;">C级：</div><span style="width: 70px;">{{ ((c / 30) *
                         100).toFixed(2)
-                        }}%</span><span>（{{ c }}张）<a-button v-if="c > 0" size="small"
+                    }}%</span><span>（{{ c }}张）<a-button v-if="c > 0" size="small"
                             @click="showCards(1)">查弱</a-button></span>
                 </div>
                 <div class="flex_left">
                     <div style="width: 30%;">D级：</div><span style="width: 70px;">{{ ((d / 30) *
                         100).toFixed(2)
-                        }}%</span><span>（{{ d }}张）<a-button v-if="d > 0" size="small"
+                    }}%</span><span>（{{ d }}张）<a-button v-if="d > 0" size="small"
                             @click="showCards(0)">查弱</a-button></span>
                 </div>
             </div>
         </div>
         <a-modal v-model:open="visible" destroyOnClose :title="title" :maskClosable="false">
-            <img v-for="img in lajiCards" style="width: 40px;height: 40px;" :src="img" />
+            <img v-for="img in lajiCards" style="width: 40px;height: 40px;margin-right: 2px;" :src="img" />
             <template #footer>
                 <a-button key="back" @click="visible = false">关闭</a-button>
             </template>
@@ -184,6 +188,10 @@ const cardLevel: number[] = ceshiData.cardLevel;
 const blueList: number[] = [];
 const purpleList: number[] = [];
 const goldList: number[] = [];
+const ssImgList = ref<string[]>([]);
+const sImgList = ref<string[]>([]);
+const aaImgList = ref<string[]>([]);
+const aImgList = ref<string[]>([]);
 const bImgList = ref<string[]>([]);
 const cImgList = ref<string[]>([]);
 const dImgList = ref<string[]>([]);
@@ -194,14 +202,18 @@ for (let i = 0; i < cardList.length; i++) {
     if (qulaity == 4) goldList.push(cardLevel[i]);
     else if (qulaity == 3) purpleList.push(cardLevel[i]);
     else if (qulaity == 2) blueList.push(cardLevel[i]);
-    if (grade == 6) {
+    if (grade >= 6) {
         ss.value++;
+        ssImgList.value.push(obj.img);
     } else if (grade == 5) {
         s.value++;
+        sImgList.value.push(obj.img);
     } else if (grade == 4) {
         aa.value++;
+        aaImgList.value.push(obj.img);
     } else if (grade == 3) {
         a.value++;
+        aImgList.value.push(obj.img);
     } else if (grade == 2) {
         b.value++;
         bImgList.value.push(obj.img);
@@ -292,7 +304,19 @@ const visible = ref(false);
 const title = ref("弱卡展示");
 function showCards(type: number) {
     visible.value = true;
-    if (type == 2) {
+    if (type >= 6) {
+        title.value = "SS级神卡展示";
+        lajiCards.value = ssImgList.value.map((e: string) => import.meta.env.VITE_APP_BASE_URL + "cardImg" + e);
+    } else if (type == 5) {
+        title.value = "S级强卡展示";
+        lajiCards.value = sImgList.value.map((e: string) => import.meta.env.VITE_APP_BASE_URL + "cardImg" + e);
+    } else if (type == 4) {
+        title.value = "A+级卡牌展示";
+        lajiCards.value = aaImgList.value.map((e: string) => import.meta.env.VITE_APP_BASE_URL + "cardImg" + e);
+    } else if (type == 3) {
+        title.value = "A级卡牌展示";
+        lajiCards.value = aImgList.value.map((e: string) => import.meta.env.VITE_APP_BASE_URL + "cardImg" + e);
+    } else if (type == 2) {
         title.value = "B级弱卡展示";
         lajiCards.value = bImgList.value.map((e: string) => import.meta.env.VITE_APP_BASE_URL + "cardImg" + e);
     } else if (type == 1) {
