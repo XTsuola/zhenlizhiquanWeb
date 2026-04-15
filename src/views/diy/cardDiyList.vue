@@ -164,6 +164,9 @@ const cardTypeList = [{
 }, {
     label: "传记",
     value: 3
+}, {
+    label: "符文",
+    value: 4
 }];
 const formState = reactive({
     name: "",
