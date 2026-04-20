@@ -31,3 +31,28 @@ export function questionDetail() {
         method: "get",
     })
 };
+
+// 获取每日问题列表
+export function getAnswerList(questionId: number | undefined) {
+    return request({
+        url: "/answer/list/" + questionId + "/",
+        method: "get"
+    })
+};
+
+// 添加答案
+export interface AnswerAddType {
+    id?: number
+    questionId: number | undefined
+    name: string
+    time: string
+    content: string
+};
+
+export function answerAdd(data: AnswerAddType) {
+    return request({
+        url: "/answer/add",
+        method: "post",
+        data: data
+    })
+};

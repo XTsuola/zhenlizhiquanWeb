@@ -12,11 +12,16 @@
             </div>
         </div>
         <div style="display: flex;justify-content: space-between;">
-            <a-button :disabled="!questionObj.id" style="margin-bottom: 8px;margin-left: 5px;" type="primary"
-                @click="showModal">立刻答题</a-button>
+            <span>
+                <a-button :disabled="!questionObj.id" style="margin-bottom: 8px;margin-left: 5px;" type="primary"
+                    @click="showModal">立刻答题</a-button>
+                <a-button :disabled="!questionObj.id" style="margin-bottom: 8px;margin-left: 8px;"
+                    @click="answerFlag = !answerFlag">{{ !answerFlag
+                        ? "查看答案" : "关闭答案" }}</a-button>
+            </span>
             <a-button @click="goBack" style="margin-right: 5px;">返回</a-button>
         </div>
-        <div class="content">
+        <div v-if="answerFlag" class="content">
             <div class="left_div" v-for="item in list">
                 <div class="left_title">
                     <span class="title_title">【 {{ item.name }} / {{ item.time }} 】</span>
@@ -42,7 +47,7 @@
             </template>
         </a-modal>
         <a-modal v-model:open="visible2" title="删除提示" centered>
-            <div>确认删除留言吗？</div>
+            <div>确认删除回答吗？</div>
             <template #footer>
                 <a-button key="back" @click="visible2 = false">取消</a-button>
                 <a-button key="submit" type="primary" :loading="loading" @click="deleteOk()">确认</a-button>
@@ -54,9 +59,9 @@
 import { ref, reactive, onMounted, onUnmounted } from 'vue';
 import { message } from 'ant-design-vue';
 import { formatDate, formatDate2 } from '@/utils/func';
-import { getNoteList, noteAdd, noteDelete, type NoteAddType } from '@/api/note';
+import { noteDelete } from '@/api/note';
+import { answerAdd, getAnswerList, questionDetail, type AnswerAddType } from '@/api/question';
 import router from '@/router';
-import { questionDetail } from '@/api/question';
 
 const isAdmin = sessionStorage.getItem("isAdmin");
 const nowId = ref("");
@@ -64,8 +69,8 @@ const visible = ref(false);
 const visible2 = ref(false);
 const loading = ref(false);
 const list = ref<any>([]);
-const addData = reactive<NoteAddType>({
-    title: "",
+const addData = reactive<AnswerAddType>({
+    questionId: undefined,
     name: "",
     content: "",
     time: ""
@@ -76,11 +81,12 @@ const questionObj = reactive({
     id: undefined,
     info: "",
     time: ""
-})
+});
+const answerFlag = ref(false);
 
 function showModal() {
     visible.value = true;
-    addData.name = addData.content = "";
+    addData.name = addData.content = addData.time = "";
 }
 
 async function addAnswer() {
@@ -88,25 +94,27 @@ async function addAnswer() {
     if (!addData.name) {
         msg = "请填写昵称！";
     } else if (!addData.content) {
-        msg = "请填写答案！";
+        msg = "请填写回答！";
     }
     if (msg) {
         message.error(msg);
         return false;
     }
     addData.time = formatDate(new Date());
-    const res = await noteAdd(addData);
+    addData.questionId = questionObj.id;
+    const res = await answerAdd(addData);
     if (res.data.code == 200) {
         getList();
         addData.name = addData.content = addData.time = "";
+        answerFlag.value = true;
     }
     visible.value = false;
 }
 
 async function getList() {
-    const res = await getNoteList()
+    const res = await getAnswerList(questionObj.id)
     if (res.data.code == 200) {
-        list.value = [];
+        list.value = res.data.data;
     }
 }
 
@@ -136,6 +144,7 @@ async function getQuestion() {
         questionObj.info = res.data.data.info;
         questionObj.time = formatDate2(res.data.data.time);
     }
+    getList();
 }
 
 function goBack() {
@@ -148,7 +157,6 @@ timer.value = setInterval(() => {
 
 onMounted(() => {
     getQuestion();
-    getList();
 })
 
 onUnmounted(() => {
