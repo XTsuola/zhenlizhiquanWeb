@@ -5,14 +5,14 @@
                 <a-select v-model:value="formState.quality" style="width: 100%;" placeholder="请选择品质">
                     <a-select-option v-for="item in shenqiQualityList" :key="item.value" :value="item.value">{{
                         item.label
-                        }}</a-select-option>
+                    }}</a-select-option>
                 </a-select>
             </div>
             <div class="search_select">
                 <a-select v-model:value="formState.type" style="width: 100%;" placeholder="请选择类型">
                     <a-select-option v-for="item in typeList" :key="item.value" :value="item.value">{{
                         item.label
-                        }}</a-select-option>
+                    }}</a-select-option>
                 </a-select>
             </div>
         </div>
@@ -58,6 +58,7 @@ const detailData = reactive({
     quality: "",
     type: "",
     img: "",
+    bonus: "",
     data: []
 });
 const visible = ref(false);
@@ -118,6 +119,7 @@ function showModal(_: number, record: any) {
     detailData.quality = record.quality;
     detailData.type = record.type;
     detailData.img = record.img;
+    detailData.bonus = record.bonus;
     detailData.data = record.data;
 }
 

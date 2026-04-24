@@ -44,6 +44,22 @@
             </a-row>
             <a-row type="flex" style="border-bottom: 1px solid #ccc;">
                 <a-col class="aCol" :span="6" style="border-right: 1px solid #ccc;">
+                    被动加成
+                </a-col>
+                <a-col class="aCol" :span="18">
+                    {{ prop.detailData.bonus }}
+                </a-col>
+            </a-row>
+            <a-row type="flex" style="border-bottom: 1px solid #ccc;">
+                <a-col class="aCol" :span="6" style="border-right: 1px solid #ccc;">
+                    战力加成
+                </a-col>
+                <a-col class="aCol" :span="18">
+                    {{ getZhanli(prop.detailData.quality) }}
+                </a-col>
+            </a-row>
+            <a-row type="flex" style="border-bottom: 1px solid #ccc;">
+                <a-col class="aCol" :span="6" style="border-right: 1px solid #ccc;">
                     神器类型
                 </a-col>
                 <a-col class="aCol" :span="18">
@@ -64,12 +80,29 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import { qualityList, zhenyinList } from "@/utils/func";
+import { blueList, purpleList, goldList } from "@/data/shenqiData/zhanli";
 
 const prop = defineProps<{
     detailData: any
 }>();
 
 const nowlevel = ref(12);
+
+function getZhanli(quality: number) {
+    let zhanli = 0;
+    if (quality == 1) {
+        zhanli = blueList[nowlevel.value].value;
+    } else if (quality == 2) {
+        zhanli = purpleList[nowlevel.value].value;
+    } else if (quality == 3) {
+        zhanli = goldList[nowlevel.value].value;
+    }
+    if (zhanli > 10000) {
+        return (zhanli / 10000) + "万";
+    } else {
+        return zhanli;
+    }
+}
 
 </script>
 <style lang="less" scoped>

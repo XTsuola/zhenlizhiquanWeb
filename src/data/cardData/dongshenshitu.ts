@@ -2482,7 +2482,7 @@
   {
     name: "传记·荒芜之师",
     quality: "紫",
-    cost: 5,
+    cost: 4,
     type: 3,
     img: "/dongshenshitu/zhuanji_huangwuzhishi.jpg",
     data: [
