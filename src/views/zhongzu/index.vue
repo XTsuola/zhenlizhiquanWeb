@@ -4,14 +4,14 @@
             <a-select v-model:value="formState.quality" style="width: 100%;" placeholder="请选择品质">
                 <a-select-option v-for="item in cardQualityList" :key="item.value" :value="item.value">{{
                     item.label
-                    }}</a-select-option>
+                }}</a-select-option>
             </a-select>
         </div>
         <div class="search_select">
             <a-select v-model:value="formState.cost" style="width: 100%;" placeholder="请选择费用">
                 <a-select-option v-for="item in costList" :key="item.value" :value="item.value">{{
                     item.label
-                    }}</a-select-option>
+                }}</a-select-option>
             </a-select>
         </div>
     </div>
@@ -145,12 +145,7 @@ async function getOriginalData() {
     const zhenyin = parseInt(sessionStorage.getItem("zhenyin") as string);
     const res = await getCardList(zhenyin);
     if (res.status == 200) {
-        const isAdmin = sessionStorage.getItem("isAdmin");
-        if (isAdmin) {
-            originalData.value = res.data.data;
-        } else {
-            originalData.value = res.data.data.filter((e: any) => e.type != 4);
-        }
+        originalData.value = res.data.data;
     }
     tableLoading.value = false;
     getList();

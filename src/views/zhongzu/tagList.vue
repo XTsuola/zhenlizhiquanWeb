@@ -287,12 +287,7 @@ async function getOriginalData() {
     tableLoading.value = true;
     const res = await getAllCardList();
     if (res.status == 200) {
-        const isAdmin = sessionStorage.getItem("isAdmin");
-        if (isAdmin) {
-            originalData.value = res.data.data;
-        } else {
-            originalData.value = res.data.data.filter((e: any) => e.type != 4);
-        }
+        originalData.value = res.data.data;
     }
     tableLoading.value = false;
     getList();
