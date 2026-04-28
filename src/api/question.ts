@@ -32,10 +32,18 @@ export function questionDetail() {
     })
 };
 
-// 获取每日问题列表
+// 获取每日问题+答案列表
 export function getAnswerList(questionId: number | undefined) {
     return request({
         url: "/answer/list/" + questionId + "/",
+        method: "get"
+    })
+};
+
+// 管理员获取所有答案列表
+export function getAnswerAllList() {
+    return request({
+        url: "/answer/allList",
         method: "get"
     })
 };

@@ -26,6 +26,9 @@
                 <div class="box yinmizhe white" @click="goAdmin(5)">
                     问题管理
                 </div>
+                <div class="box yinmizhe white" @click="goAdmin(6)">
+                    答案管理
+                </div>
             </div>
         </div>
     </div>
@@ -66,8 +69,10 @@ function goAdmin(type: number) {
         router.push("/passwordAdmin");
     } else if (type == 4) {
         router.push("/logList");
-    }else if (type == 5) {
+    } else if (type == 5) {
         router.push("/questionAdmin");
+    } else if (type == 6) {
+        router.push("/answerAdmin");
     }
 }
 
