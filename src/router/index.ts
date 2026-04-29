@@ -237,10 +237,15 @@ const routeList: any = [
     component: () => import("@/views/admin/answerAdmin.vue")
   },
   {
+    path: "/member",
+    name: "member",
+    component: () => import("@/views/member/index.vue")
+  }
+  /* {
     path: "/deepseek",
     name: "deepseek",
     component: () => import("@/views/ai/deepseek.vue")
-  }
+  } */
 ];
 
 const router = createRouter({

@@ -3,6 +3,9 @@
         <a-table :columns="prop.columnsData" :data-source="prop.dataSource" :pagination="false"
             :row-class-name="rowClass ? rowClassName : ''" :loading="loading" bordered>
             <template #bodyCell="{ column, index, record }">
+                <span v-if="column.key === 'index'">
+                    {{ index + 1 }}
+                </span>
                 <span v-if="column.key === 'headImg'" slot="pic">
                     <img style="width: 50px;height: 50px;" :src="record.img" />
                 </span>
@@ -20,12 +23,19 @@
                     </div>
                     <a-tag v-else :color="getGradeColor(record.grade)">{{ getGradeName(record.grade) }}</a-tag>
                 </span>
+                <span v-if="column.key === 'score'">
+                    <div v-if="record.grade >= 95" class="tagBg">
+                        {{ getScoreGradeName(record.score, record.title) }}
+                    </div>
+                    <a-tag v-else :color="getScoreGradeColor(record.score)">{{ getScoreGradeName(record.score,
+                        record.title) }}</a-tag>
+                </span>
                 <span v-if="column.key === 'tag'">
                     <a-tag v-for="e in record.tag" style="margin-bottom: 5px;">{{ getTagName(e) }}</a-tag>
                 </span>
                 <span v-if="column.key === 'skillSign'">
                     <a-tag v-for="item in record.skillSign" :color="item.color">{{ item.name
-                        }}</a-tag>
+                    }}</a-tag>
                 </span>
                 <span v-if="column.key === 'now'">
                     <div>人次：</div>
@@ -201,6 +211,43 @@ const gradeList = [{
     color: "#87d068"
 }];
 
+const scoreGradeList = [{
+    label: "神话",
+    value: 95,
+    level: "SSS",
+    color: "#000000"
+}, {
+    label: "传说",
+    value: 90,
+    level: "SS",
+    color: "#000000"
+}, {
+    label: "话痨",
+    value: 85,
+    level: "S",
+    color: "#ff0000"
+}, {
+    label: "活跃",
+    value: 80,
+    level: "A",
+    color: "#ff6633"
+}, {
+    label: "吐槽",
+    value: 70,
+    level: "B",
+    color: "#8e488e"
+}, {
+    label: "冒泡",
+    value: 60,
+    level: "C",
+    color: "#2db7f5"
+}, {
+    label: "潜水",
+    value: 0,
+    level: "D",
+    color: "#87d068"
+}];
+
 function getGradeName(grade: string) {
     if (grade != "") {
         let nowGrade = JSON.parse(grade);
@@ -217,6 +264,16 @@ function getGradeColor(grade: string) {
     } else {
         return "#cccccc";
     }
+}
+
+function getScoreGradeName(score: number, title?: string) {
+    const index = scoreGradeList.findIndex((e: any) => score >= e.value)
+    return scoreGradeList[index].level + (title ? title : scoreGradeList[index].label);
+}
+
+function getScoreGradeColor(score: number) {
+    const index = scoreGradeList.findIndex((e: any) => score >= e.value)
+    return scoreGradeList[index].color;
 }
 
 function getTagName(tag: any) {

@@ -35,7 +35,7 @@ export function questionDetail() {
 // 获取每日问题+答案列表
 export function getAnswerList(questionId: number | undefined) {
     return request({
-        url: "/answer/list/" + questionId + "/",
+        url: "/answer/list?questionId=" + questionId,
         method: "get"
     })
 };

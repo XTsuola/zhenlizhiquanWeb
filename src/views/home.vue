@@ -125,10 +125,10 @@ const whereList: any = [{
     bgColor: "#e08d9b",
     log: "查询比赛"
 }, {
-    name: "AI交流",
-    url: "/deepseek",
+    name: "名人堂",
+    url: "/member",
     bgColor: "#808080",
-    log: "查询AI"
+    log: "名人查询"
 }, {
     name: "卡牌工坊",
     url: "/cardDiyList",
