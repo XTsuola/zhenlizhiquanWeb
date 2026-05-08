@@ -37637,4 +37637,24604 @@
             }
         ]
     },
+    {
+        "id": 307,
+        "name": "凶恶幼犬",
+        "zhenyin": 4,
+        "quality": 1,
+        "cost": 1,
+        "type": 1,
+        "img": "/tiantanggang/xiongeyouquan.jpg",
+        "grade": "[1]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 1,
+                "life": 1,
+                "effect": "对英雄伤害+1"
+            },
+            {
+                "attack": 1,
+                "life": 1,
+                "effect": "对英雄伤害+2"
+            },
+            {
+                "attack": 1,
+                "life": 2,
+                "effect": "对英雄伤害+2"
+            },
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "对英雄伤害+2"
+            },
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "对英雄伤害+3"
+            },
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "对英雄伤害+4"
+            },
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "对英雄伤害+5"
+            },
+            {
+                "attack": 2,
+                "life": 3,
+                "effect": "对英雄伤害+5"
+            },
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "对英雄伤害+5"
+            },
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "对英雄伤害+6"
+            },
+            {
+                "attack": 4,
+                "life": 4,
+                "effect": "对英雄伤害+6"
+            },
+            {
+                "attack": 5,
+                "life": 4,
+                "effect": "对英雄伤害+7"
+            },
+            {
+                "attack": 6,
+                "life": 5,
+                "effect": "对英雄伤害+7"
+            },
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "对英雄伤害+8"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "对英雄伤害+8"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "对英雄伤害+8"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "对英雄伤害+8"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "对英雄伤害+8"
+            },
+            {
+                "attack": 11,
+                "life": 11,
+                "effect": "对英雄伤害+9"
+            },
+            {
+                "attack": 12,
+                "life": 12,
+                "effect": "对英雄伤害+10"
+            },
+            {
+                "attack": 13,
+                "life": 13,
+                "effect": "对英雄伤害+11"
+            },
+            {
+                "attack": 14,
+                "life": 14,
+                "effect": "对英雄伤害+12"
+            }
+        ]
+    },
+    {
+        "id": 308,
+        "name": "蕾拉火弹",
+        "zhenyin": 4,
+        "quality": 1,
+        "cost": 1,
+        "type": 2,
+        "img": "/tiantanggang/leilahuodan.jpg",
+        "grade": "[1]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对敌方横排，投射1点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对敌方横排，投射2点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对敌方横排，投射3点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对敌方横排，投射4点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对敌方横排，投射5点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对敌方横排，投射6点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对敌方横排，投射7点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对敌方横排，投射8点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对敌方横排，投射9点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对敌方横排，投射10点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对敌方横排，投射11点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对敌方横排，投射12点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对敌方横排，投射13点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对敌方横排，投射14点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对敌方横排，投射16点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对敌方横排，投射18点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对敌方横排，投射20点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对敌方横排，投射22点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对敌方横排，投射24点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对敌方横排，投射26点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对敌方横排，投射28点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对敌方横排，投射30点伤害"
+            }
+        ]
+    },
+    {
+        "id": 309,
+        "name": "田野农夫",
+        "zhenyin": 4,
+        "quality": 1,
+        "cost": 2,
+        "type": 1,
+        "img": "/tiantanggang/tianyenongfu.jpg",
+        "grade": "[1]",
+        "tag": "[2,19]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 2,
+                "effect": "/"
+            },
+            {
+                "attack": 1,
+                "life": 3,
+                "effect": "/"
+            },
+            {
+                "attack": 1,
+                "life": 4,
+                "effect": "/"
+            },
+            {
+                "attack": 1,
+                "life": 5,
+                "effect": "/"
+            },
+            {
+                "attack": 1,
+                "life": 6,
+                "effect": "/"
+            },
+            {
+                "attack": 1,
+                "life": 7,
+                "effect": "/"
+            },
+            {
+                "attack": 2,
+                "life": 7,
+                "effect": "/"
+            },
+            {
+                "attack": 2,
+                "life": 9,
+                "effect": "/"
+            },
+            {
+                "attack": 2,
+                "life": 11,
+                "effect": "/"
+            },
+            {
+                "attack": 3,
+                "life": 11,
+                "effect": "/"
+            },
+            {
+                "attack": 3,
+                "life": 13,
+                "effect": "死亡:英雄生命+3"
+            },
+            {
+                "attack": 4,
+                "life": 15,
+                "effect": "死亡:英雄生命+4"
+            },
+            {
+                "attack": 4,
+                "life": 18,
+                "effect": "死亡:英雄生命+4"
+            },
+            {
+                "attack": 5,
+                "life": 20,
+                "effect": "死亡:英雄生命+5"
+            },
+            {
+                "attack": 6,
+                "life": 22,
+                "effect": "死亡:英雄生命+6"
+            },
+            {
+                "attack": 7,
+                "life": 24,
+                "effect": "死亡:英雄生命+7"
+            },
+            {
+                "attack": 7,
+                "life": 28,
+                "effect": "死亡:英雄生命+8"
+            },
+            {
+                "attack": 8,
+                "life": 30,
+                "effect": "死亡:英雄生命+9"
+            },
+            {
+                "attack": 8,
+                "life": 33,
+                "effect": "死亡:英雄生命+10"
+            },
+            {
+                "attack": 9,
+                "life": 35,
+                "effect": "死亡:英雄生命+10"
+            },
+            {
+                "attack": 9,
+                "life": 37,
+                "effect": "死亡:英雄生命+12"
+            },
+            {
+                "attack": 10,
+                "life": 38,
+                "effect": "死亡:英雄生命+12"
+            }
+        ]
+    },
+    {
+        "id": 310,
+        "name": "水手",
+        "zhenyin": 4,
+        "quality": 1,
+        "cost": 2,
+        "type": 1,
+        "img": "/tiantanggang/shuishou.jpg",
+        "grade": "[0]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "/"
+            },
+            {
+                "attack": 2,
+                "life": 3,
+                "effect": "/"
+            },
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "/"
+            },
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "/"
+            },
+            {
+                "attack": 4,
+                "life": 4,
+                "effect": "/"
+            },
+            {
+                "attack": 4,
+                "life": 5,
+                "effect": "/"
+            },
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "/"
+            },
+            {
+                "attack": 5,
+                "life": 6,
+                "effect": "/"
+            },
+            {
+                "attack": 6,
+                "life": 7,
+                "effect": "/"
+            },
+            {
+                "attack": 7,
+                "life": 8,
+                "effect": "/"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "/"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "/"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "/"
+            },
+            {
+                "attack": 11,
+                "life": 11,
+                "effect": "/"
+            },
+            {
+                "attack": 12,
+                "life": 12,
+                "effect": "/"
+            },
+            {
+                "attack": 13,
+                "life": 13,
+                "effect": "/"
+            },
+            {
+                "attack": 14,
+                "life": 14,
+                "effect": "/"
+            },
+            {
+                "attack": 15,
+                "life": 15,
+                "effect": "/"
+            },
+            {
+                "attack": 16,
+                "life": 17,
+                "effect": "/"
+            },
+            {
+                "attack": 18,
+                "life": 18,
+                "effect": "/"
+            },
+            {
+                "attack": 20,
+                "life": 20,
+                "effect": "/"
+            },
+            {
+                "attack": 22,
+                "life": 22,
+                "effect": "/"
+            }
+        ]
+    },
+    {
+        "id": 311,
+        "name": "排箭攻击",
+        "zhenyin": 4,
+        "quality": 1,
+        "cost": 2,
+        "type": 2,
+        "img": "/tiantanggang/paijiangongji.jpg",
+        "grade": "[0]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成2点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成3点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成4点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成5点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成6点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成7点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成8点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成9点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成10点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成11点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成12点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成13点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成14点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成15点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成16点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成17点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成18点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成19点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成20点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成21点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成22点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成23点伤害"
+            }
+        ]
+    },
+    {
+        "id": 312,
+        "name": "亲切的大妈",
+        "zhenyin": 4,
+        "quality": 1,
+        "cost": 3,
+        "type": 1,
+        "img": "/tiantanggang/qinqiededama.jpg",
+        "grade": "[0]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 1,
+                "life": 2,
+                "effect": "登场:另一友军+1/+1"
+            },
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "登场:另一友军+1/+1"
+            },
+            {
+                "attack": 2,
+                "life": 3,
+                "effect": "登场:另一友军+1/+2"
+            },
+            {
+                "attack": 2,
+                "life": 4,
+                "effect": "登场:另一友军+1/+2"
+            },
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "登场:另一友军+1/+2"
+            },
+            {
+                "attack": 3,
+                "life": 5,
+                "effect": "登场:另一友军+2/+2"
+            },
+            {
+                "attack": 4,
+                "life": 5,
+                "effect": "登场:另一友军+2/+2"
+            },
+            {
+                "attack": 4,
+                "life": 5,
+                "effect": "登场:另一友军+3/+3"
+            },
+            {
+                "attack": 4,
+                "life": 7,
+                "effect": "登场:另一友军+3/+3"
+            },
+            {
+                "attack": 5,
+                "life": 7,
+                "effect": "登场:另一友军+4/+4"
+            },
+            {
+                "attack": 5,
+                "life": 9,
+                "effect": "登场:另一友军+5/+5"
+            },
+            {
+                "attack": 6,
+                "life": 10,
+                "effect": "登场:另一友军+6/+6"
+            },
+            {
+                "attack": 7,
+                "life": 12,
+                "effect": "登场:另一友军+6/+6"
+            },
+            {
+                "attack": 8,
+                "life": 12,
+                "effect": "登场:另一友军+7/+7"
+            },
+            {
+                "attack": 9,
+                "life": 14,
+                "effect": "登场:另一友军+7/+7"
+            },
+            {
+                "attack": 10,
+                "life": 15,
+                "effect": "登场:另一友军+8/+8"
+            },
+            {
+                "attack": 11,
+                "life": 17,
+                "effect": "登场:另一友军+8/+8"
+            },
+            {
+                "attack": 12,
+                "life": 19,
+                "effect": "登场:另一友军+9/+9"
+            },
+            {
+                "attack": 13,
+                "life": 21,
+                "effect": "登场:另一友军+10/+10"
+            },
+            {
+                "attack": 14,
+                "life": 23,
+                "effect": "登场:另一友军+11/+11"
+            },
+            {
+                "attack": 15,
+                "life": 26,
+                "effect": "登场:另一友军+12/+12"
+            },
+            {
+                "attack": 16,
+                "life": 29,
+                "effect": "登场:另一友军+13/+13"
+            }
+        ]
+    },
+    {
+        "id": 313,
+        "name": "强壮工头",
+        "zhenyin": 4,
+        "quality": 1,
+        "cost": 4,
+        "type": 1,
+        "img": "/tiantanggang/qiangzhuanggongtou.jpg",
+        "grade": "[0]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "/"
+            },
+            {
+                "attack": 3,
+                "life": 5,
+                "effect": "/"
+            },
+            {
+                "attack": 4,
+                "life": 5,
+                "effect": "/"
+            },
+            {
+                "attack": 4,
+                "life": 7,
+                "effect": "/"
+            },
+            {
+                "attack": 4,
+                "life": 9,
+                "effect": "/"
+            },
+            {
+                "attack": 5,
+                "life": 10,
+                "effect": "/"
+            },
+            {
+                "attack": 6,
+                "life": 11,
+                "effect": "/"
+            },
+            {
+                "attack": 7,
+                "life": 12,
+                "effect": "/"
+            },
+            {
+                "attack": 7,
+                "life": 14,
+                "effect": "/"
+            },
+            {
+                "attack": 8,
+                "life": 16,
+                "effect": "/"
+            },
+            {
+                "attack": 9,
+                "life": 18,
+                "effect": "/"
+            },
+            {
+                "attack": 10,
+                "life": 20,
+                "effect": "/"
+            },
+            {
+                "attack": 11,
+                "life": 22,
+                "effect": "/"
+            },
+            {
+                "attack": 12,
+                "life": 24,
+                "effect": "/"
+            },
+            {
+                "attack": 13,
+                "life": 26,
+                "effect": "/"
+            },
+            {
+                "attack": 14,
+                "life": 30,
+                "effect": "/"
+            },
+            {
+                "attack": 16,
+                "life": 32,
+                "effect": "/"
+            },
+            {
+                "attack": 18,
+                "life": 35,
+                "effect": "/"
+            },
+            {
+                "attack": 20,
+                "life": 38,
+                "effect": "/"
+            },
+            {
+                "attack": 22,
+                "life": 42,
+                "effect": "/"
+            },
+            {
+                "attack": 24,
+                "life": 46,
+                "effect": "/"
+            },
+            {
+                "attack": 26,
+                "life": 50,
+                "effect": "/"
+            }
+        ]
+    },
+    {
+        "id": 314,
+        "name": "走私的珍奇兽",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 1,
+        "type": 1,
+        "img": "/tiantanggang/zousidezhenqishou.jpg",
+        "grade": "[2]",
+        "tag": "[2,19]",
+        "data": [
+            {
+                "attack": 4,
+                "life": 5,
+                "effect": "场上有敌军，则无法攻击"
+            },
+            {
+                "attack": 5,
+                "life": 6,
+                "effect": "场上有敌军，则无法攻击"
+            },
+            {
+                "attack": 6,
+                "life": 7,
+                "effect": "场上有敌军，则无法攻击"
+            },
+            {
+                "attack": 7,
+                "life": 9,
+                "effect": "场上有敌军，则无法攻击"
+            },
+            {
+                "attack": 8,
+                "life": 10,
+                "effect": "场上有敌军，则无法攻击"
+            },
+            {
+                "attack": 9,
+                "life": 11,
+                "effect": "场上有敌军，则无法攻击"
+            },
+            {
+                "attack": 11,
+                "life": 13,
+                "effect": "场上有敌军，则无法攻击、死亡:英雄生命+5"
+            },
+            {
+                "attack": 12,
+                "life": 15,
+                "effect": "场上有敌军，则无法攻击、死亡:英雄生命+5"
+            },
+            {
+                "attack": 13,
+                "life": 18,
+                "effect": "场上有敌军，则无法攻击、死亡:英雄生命+5"
+            },
+            {
+                "attack": 15,
+                "life": 20,
+                "effect": "场上有敌军，则无法攻击、死亡:英雄生命+10"
+            },
+            {
+                "attack": 16,
+                "life": 24,
+                "effect": "场上有敌军，则无法攻击、死亡:英雄生命+10"
+            },
+            {
+                "attack": 18,
+                "life": 28,
+                "effect": "场上有敌军，则无法攻击、死亡:英雄生命+12"
+            },
+            {
+                "attack": 20,
+                "life": 30,
+                "effect": "场上有敌军，则无法攻击、死亡:英雄生命+13"
+            },
+            {
+                "attack": 22,
+                "life": 35,
+                "effect": "场上有敌军，则无法攻击、死亡:英雄生命+14"
+            },
+            {
+                "attack": 24,
+                "life": 40,
+                "effect": "场上有敌军，则无法攻击、死亡:英雄生命+15"
+            },
+            {
+                "attack": 25,
+                "life": 45,
+                "effect": "场上有敌军，则无法攻击、死亡:英雄生命+16"
+            },
+            {
+                "attack": 27,
+                "life": 50,
+                "effect": "场上有敌军，则无法攻击、死亡:英雄生命+17"
+            },
+            {
+                "attack": 30,
+                "life": 55,
+                "effect": "场上有敌军，则无法攻击、死亡:英雄生命+18"
+            },
+            {
+                "attack": 33,
+                "life": 60,
+                "effect": "场上有敌军，则无法攻击、死亡:英雄生命+19"
+            },
+            {
+                "attack": 36,
+                "life": 66,
+                "effect": "场上有敌军，则无法攻击、死亡:英雄生命+20"
+            },
+            {
+                "attack": 39,
+                "life": 72,
+                "effect": "场上有敌军，则无法攻击、死亡:英雄生命+21"
+            },
+            {
+                "attack": 42,
+                "life": 78,
+                "effect": "场上有敌军，则无法攻击、死亡:英雄生命+22"
+            }
+        ]
+    },
+    {
+        "id": 315,
+        "name": "邪月小魔女",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 1,
+        "type": 1,
+        "img": "/tiantanggang/xieyuexiaomonv.jpg",
+        "grade": "[1]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 1,
+                "life": 1,
+                "effect": "攻击前:本回合每使用过一个法术，则随机敌军攻击-1，若是传记，则自身攻击+1"
+            },
+            {
+                "attack": 2,
+                "life": 1,
+                "effect": "攻击前:本回合每使用过一个法术，则随机敌军攻击-1，若是传记，则自身攻击+1"
+            },
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "攻击前:本回合每使用过一个法术，则随机敌军攻击-1，若是传记，则自身攻击+2"
+            },
+            {
+                "attack": 3,
+                "life": 2,
+                "effect": "攻击前:本回合每使用过一个法术，则随机敌军-1/-1，若是传记，则自身攻击+2"
+            },
+            {
+                "attack": 4,
+                "life": 2,
+                "effect": "攻击前:本回合每使用过一个法术，则随机敌军-1/-1，若是传记，则自身攻击+2"
+            },
+            {
+                "attack": 5,
+                "life": 3,
+                "effect": "攻击前:本回合每使用过一个法术，则随机敌军-2/-2，若是传记，则自身攻击+2"
+            },
+            {
+                "attack": 6,
+                "life": 3,
+                "effect": "攻击前:本回合每使用过一个法术，则随机敌军-2/-2，若是传记，则自身攻击+3"
+            },
+            {
+                "attack": 7,
+                "life": 3,
+                "effect": "攻击前:本回合每使用过一个法术，则随机敌军-2/-2，若是传记，则自身攻击+4"
+            },
+            {
+                "attack": 8,
+                "life": 4,
+                "effect": "攻击前:本回合每使用过一个法术，则随机敌军-3/-3，若是传记，则自身攻击+4"
+            },
+            {
+                "attack": 9,
+                "life": 5,
+                "effect": "攻击前:本回合每使用过一个法术，则随机敌军-3/-3，若是传记，则自身攻击+5"
+            },
+            {
+                "attack": 10,
+                "life": 5,
+                "effect": "攻击前:本回合每使用过一个法术，则随机敌军-4/-4，若是传记，则自身攻击+5"
+            },
+            {
+                "attack": 11,
+                "life": 6,
+                "effect": "攻击前:本回合每使用过一个法术，则随机敌军-4/-4，若是传记，则自身攻击+6"
+            },
+            {
+                "attack": 12,
+                "life": 7,
+                "effect": "攻击前:本回合每使用过一个法术，则随机敌军-5/-5，若是传记，则自身攻击+6"
+            },
+            {
+                "attack": 13,
+                "life": 8,
+                "effect": "攻击前:本回合每使用过一个法术，则随机敌军-5/-5，若是传记，则自身攻击+7"
+            },
+            {
+                "attack": 14,
+                "life": 9,
+                "effect": "攻击前:本回合每使用过一个法术，则随机敌军-5/-5，若是传记，则自身攻击+7"
+            },
+            {
+                "attack": 15,
+                "life": 10,
+                "effect": "攻击前:本回合每使用过一个法术，则随机敌军-6/-6，若是传记，则自身攻击+8"
+            },
+            {
+                "attack": 16,
+                "life": 11,
+                "effect": "攻击前:本回合每使用过一个法术，则随机敌军-6/-6，若是传记，则自身攻击+9"
+            },
+            {
+                "attack": 17,
+                "life": 12,
+                "effect": "攻击前:本回合每使用过一个法术，则随机敌军-7/-7，若是传记，则自身攻击+9"
+            },
+            {
+                "attack": 19,
+                "life": 13,
+                "effect": "攻击前:本回合每使用过一个法术，则随机敌军-7/-7，若是传记，则自身攻击+10"
+            },
+            {
+                "attack": 21,
+                "life": 15,
+                "effect": "攻击前:本回合每使用过一个法术，则随机敌军-8/-8，若是传记，则自身攻击+10"
+            },
+            {
+                "attack": 23,
+                "life": 16,
+                "effect": "攻击前:本回合每使用过一个法术，则随机敌军-8/-8，若是传记，则自身攻击+11"
+            },
+            {
+                "attack": 26,
+                "life": 17,
+                "effect": "攻击前:本回合每使用过一个法术，则随机敌军-9/-9，若是传记，则自身攻击+11"
+            }
+        ]
+    },
+    {
+        "id": 316,
+        "name": "心灵黑洞",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 1,
+        "type": 2,
+        "img": "/tiantanggang/xinlingheidong.jpg",
+        "grade": "[5]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到3点伤害，英雄受到伤害等同目标费用"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到5点伤害，英雄受到伤害等同目标费用"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到7点伤害，英雄受到伤害等同目标费用"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到10点伤害，英雄受到伤害等同目标费用"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到13点伤害，英雄受到伤害等同目标费用"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到17点伤害，英雄受到伤害等同目标费用"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到22点伤害，英雄受到伤害等同目标费用"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到30点伤害，英雄受到伤害等同目标费用*2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到36点伤害，英雄受到伤害等同目标费用*2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到42点伤害，英雄受到伤害等同目标费用*2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到49点伤害，英雄受到伤害等同目标费用*3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到60点伤害，英雄受到伤害等同目标费用*3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到66点伤害，英雄受到伤害等同目标费用*3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到72点伤害，英雄受到伤害等同目标费用*3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到80点伤害，英雄受到伤害等同目标费用*3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到86点伤害，英雄受到伤害等同目标费用*3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到92点伤害，英雄受到伤害等同目标费用*3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到100点伤害，英雄受到伤害等同目标费用*3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到107点伤害，英雄受到伤害等同目标费用*3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到120点伤害，英雄受到伤害等同目标费用*4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到127点伤害，英雄受到伤害等同目标费用*4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到135点伤害，英雄受到伤害等同目标费用*4"
+            }
+        ]
+    },
+    {
+        "id": 317,
+        "name": "暗潮涌动",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 1,
+        "type": 2,
+        "img": "/tiantanggang/anchaoyongdong.jpg",
+        "grade": "[2]",
+        "tag": "[2]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄3点生命"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄4点生命"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄5点生命"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄6点生命"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄7点生命"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄8点生命"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄9点生命"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄11点生命"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄13点生命"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄15点生命"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄17点生命"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄19点生命"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄21点生命"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄23点生命"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄25点生命"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄27点生命"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄29点生命"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄31点生命"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄33点生命"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄35点生命"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄37点生命"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄39点生命"
+            }
+        ]
+    },
+    {
+        "id": 318,
+        "name": "先发制人",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 1,
+        "type": 2,
+        "img": "/tiantanggang/xianfazhiren.jpg",
+        "grade": "[2]",
+        "tag": "[5,6,25]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标友军+1/+1，若它具有先攻，则获得【践踏】，抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标友军+2/+1，若它具有先攻，则获得【践踏】，抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标友军+2/+2，若它具有先攻，则获得【践踏】，抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标友军+3/+2，若它具有先攻，则获得【践踏】，抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标友军+3/+3，若它具有先攻，则获得【践踏】，抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标友军+4/+3，若它具有先攻，则获得【践踏】，抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标友军+4/+4，若它具有先攻，则获得【践踏】，抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标友军+5/+4，若它具有先攻，则获得【践踏】，抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标友军+5/+5，若它具有先攻，则获得【践踏】，抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标友军+6/+5，若它具有先攻，则获得【践踏】，抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标友军+7/+5，若它具有先攻，则获得【践踏】，抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标友军+8/+5，若它具有先攻，则获得【践踏】，抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标友军+9/+5，若它具有先攻，则获得【践踏】，抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标友军+10/+6，若它具有先攻，则获得【践踏】，抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标友军+11/+7，若它具有先攻，则获得【践踏】，抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标友军+12/+8，若它具有先攻，则获得【践踏】，抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标友军+13/+9，若它具有先攻，则获得【践踏】，抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标友军+14/+10，若它具有先攻，则获得【践踏】，抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标友军+15/+11，若它具有先攻，则获得【践踏】，抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标友军+16/+12，若它具有先攻，则获得【践踏】，抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标友军+17/+14，若它具有先攻，则获得【践踏】，抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标友军+18/+16，若它具有先攻，则获得【践踏】，抽一张牌"
+            }
+        ]
+    },
+    {
+        "id": 319,
+        "name": "愤怒农夫",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 2,
+        "type": 1,
+        "img": "/tiantanggang/fennunongfu.jpg",
+        "grade": "[1]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 1,
+                "life": 2,
+                "effect": "回合结束:自身攻击+1"
+            },
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "回合结束:自身攻击+1"
+            },
+            {
+                "attack": 2,
+                "life": 4,
+                "effect": "回合结束:自身攻击+1"
+            },
+            {
+                "attack": 2,
+                "life": 4,
+                "effect": "回合结束:自身攻击+2"
+            },
+            {
+                "attack": 3,
+                "life": 5,
+                "effect": "回合结束:自身攻击+2"
+            },
+            {
+                "attack": 4,
+                "life": 7,
+                "effect": "回合结束:自身攻击+2"
+            },
+            {
+                "attack": 5,
+                "life": 9,
+                "effect": "回合结束:自身+2/+1"
+            },
+            {
+                "attack": 6,
+                "life": 11,
+                "effect": "回合结束:自身+2/+1"
+            },
+            {
+                "attack": 7,
+                "life": 13,
+                "effect": "回合结束:自身+2/+2"
+            },
+            {
+                "attack": 8,
+                "life": 15,
+                "effect": "回合结束:自身+2/+2"
+            },
+            {
+                "attack": 9,
+                "life": 17,
+                "effect": "回合结束:自身+2/+3"
+            },
+            {
+                "attack": 10,
+                "life": 19,
+                "effect": "回合结束:自身+2/+3"
+            },
+            {
+                "attack": 11,
+                "life": 21,
+                "effect": "回合结束:自身+2/+3"
+            },
+            {
+                "attack": 12,
+                "life": 23,
+                "effect": "回合结束:自身+3/+3"
+            },
+            {
+                "attack": 13,
+                "life": 25,
+                "effect": "回合结束:自身+3/+3"
+            },
+            {
+                "attack": 15,
+                "life": 27,
+                "effect": "回合结束:自身+4/+3"
+            },
+            {
+                "attack": 17,
+                "life": 29,
+                "effect": "回合结束:自身+4/+3"
+            },
+            {
+                "attack": 19,
+                "life": 31,
+                "effect": "回合结束:自身+4/+4"
+            },
+            {
+                "attack": 21,
+                "life": 33,
+                "effect": "回合结束:自身+4/+4"
+            },
+            {
+                "attack": 23,
+                "life": 36,
+                "effect": "回合结束:自身+4/+5"
+            },
+            {
+                "attack": 25,
+                "life": 39,
+                "effect": "回合结束:自身+4/+5"
+            },
+            {
+                "attack": 27,
+                "life": 42,
+                "effect": "回合结束:自身+5/+5"
+            }
+        ]
+    },
+    {
+        "id": 320,
+        "name": "狡诈学徒",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 2,
+        "type": 1,
+        "img": "/tiantanggang/jiaozhaxuetu.jpg",
+        "grade": "[4]",
+        "tag": "[3,26]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 1,
+                "effect": "登场:吹回对面首位新进场敌军"
+            },
+            {
+                "attack": 2,
+                "life": 1,
+                "effect": "登场:吹回对面首位新进场敌军"
+            },
+            {
+                "attack": 3,
+                "life": 1,
+                "effect": "登场:吹回对面首位新进场敌军"
+            },
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "【洞察1】、登场:吹回对面首位新进场敌军"
+            },
+            {
+                "attack": 4,
+                "life": 3,
+                "effect": "【洞察1】、登场:吹回对面首位新进场敌军"
+            },
+            {
+                "attack": 5,
+                "life": 3,
+                "effect": "【洞察1】、登场:吹回对面首位新进场敌军"
+            },
+            {
+                "attack": 6,
+                "life": 4,
+                "effect": "【洞察1】、登场:吹回对面首位新进场敌军"
+            },
+            {
+                "attack": 7,
+                "life": 5,
+                "effect": "【洞察1】、登场:吹回对面首位新进场敌军"
+            },
+            {
+                "attack": 8,
+                "life": 6,
+                "effect": "【洞察1】、登场:吹回对面首位新进场敌军"
+            },
+            {
+                "attack": 9,
+                "life": 7,
+                "effect": "【洞察1】、登场:吹回对面首位新进场敌军"
+            },
+            {
+                "attack": 10,
+                "life": 7,
+                "effect": "【洞察1】、登场:吹回对面首位新进场敌军、洞察时自身攻击+1"
+            },
+            {
+                "attack": 12,
+                "life": 8,
+                "effect": "【洞察1】、登场:吹回对面首位新进场敌军、洞察时自身攻击+1"
+            },
+            {
+                "attack": 13,
+                "life": 8,
+                "effect": "【洞察1】、登场:吹回对面首位新进场敌军、洞察时自身攻击+2"
+            },
+            {
+                "attack": 14,
+                "life": 10,
+                "effect": "【洞察1】、登场:吹回对面首位新进场敌军、洞察时自身攻击+2"
+            },
+            {
+                "attack": 15,
+                "life": 11,
+                "effect": "【洞察1】、登场:吹回对面首位新进场敌军、洞察时自身攻击+3"
+            },
+            {
+                "attack": 16,
+                "life": 13,
+                "effect": "【洞察1】、登场:吹回对面首位新进场敌军、洞察时自身攻击+3"
+            },
+            {
+                "attack": 18,
+                "life": 14,
+                "effect": "【洞察1】、登场:吹回对面首位新进场敌军、洞察时自身攻击+3"
+            },
+            {
+                "attack": 19,
+                "life": 15,
+                "effect": "【洞察1】、登场:吹回对面首位新进场敌军、洞察时自身攻击+4"
+            },
+            {
+                "attack": 21,
+                "life": 17,
+                "effect": "【洞察1】、登场:吹回对面首位新进场敌军、洞察时自身攻击+4"
+            },
+            {
+                "attack": 23,
+                "life": 18,
+                "effect": "【洞察1】、登场:吹回对面首位新进场敌军、洞察时自身攻击+5"
+            },
+            {
+                "attack": 25,
+                "life": 19,
+                "effect": "【洞察1】、登场:吹回对面首位新进场敌军、洞察时自身攻击+5"
+            },
+            {
+                "attack": 27,
+                "life": 20,
+                "effect": "【洞察1】、登场:吹回对面首位新进场敌军、洞察时自身攻击+6"
+            }
+        ]
+    },
+    {
+        "id": 321,
+        "name": "外来隐修者",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 2,
+        "type": 1,
+        "img": "/tiantanggang/wailaiyinxiuzhe.jpg",
+        "grade": "[1]",
+        "tag": "[4,19,25]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 5,
+                "effect": "受到传承时:抓一张牌"
+            },
+            {
+                "attack": 2,
+                "life": 5,
+                "effect": "受到传承时:抓一张牌"
+            },
+            {
+                "attack": 2,
+                "life": 7,
+                "effect": "受到传承时:抓一张牌、死亡时:若具有传承，抓一张牌"
+            },
+            {
+                "attack": 3,
+                "life": 7,
+                "effect": "受到传承时:抓一张牌、死亡时:若具有传承，抓一张牌"
+            },
+            {
+                "attack": 3,
+                "life": 9,
+                "effect": "受到传承时:抓一张牌、死亡时:若具有传承，抓一张牌"
+            },
+            {
+                "attack": 3,
+                "life": 11,
+                "effect": "受到传承时:抓一张牌、死亡时:若具有传承，抓一张牌"
+            },
+            {
+                "attack": 3,
+                "life": 13,
+                "effect": "受到传承时:抓一张牌、死亡时:若具有传承，抓一张牌"
+            },
+            {
+                "attack": 3,
+                "life": 15,
+                "effect": "受到传承时:抓一张牌、死亡时:若具有传承，抓一张牌"
+            },
+            {
+                "attack": 4,
+                "life": 16,
+                "effect": "受到传承时:抓一张牌、死亡时:若具有传承，抓一张牌"
+            },
+            {
+                "attack": 5,
+                "life": 17,
+                "effect": "受到传承时:抓一张牌、死亡时:若具有传承，抓一张牌"
+            },
+            {
+                "attack": 6,
+                "life": 18,
+                "effect": "受到传承时:抓一张牌、死亡时:若具有传承，抓一张牌"
+            },
+            {
+                "attack": 7,
+                "life": 19,
+                "effect": "受到传承时:抓一张牌、死亡时:若具有传承，抓一张牌"
+            },
+            {
+                "attack": 8,
+                "life": 20,
+                "effect": "受到传承时:抓一张牌、死亡时:若具有传承，抓一张牌"
+            },
+            {
+                "attack": 9,
+                "life": 22,
+                "effect": "受到传承时:抓一张牌、死亡时:若具有传承，抓一张牌"
+            },
+            {
+                "attack": 10,
+                "life": 24,
+                "effect": "受到传承时:抓一张牌、死亡时:若具有传承，抓一张牌"
+            },
+            {
+                "attack": 11,
+                "life": 27,
+                "effect": "受到传承时:抓一张牌、死亡时:若具有传承，抓一张牌"
+            },
+            {
+                "attack": 13,
+                "life": 29,
+                "effect": "受到传承时:抓一张牌、死亡时:若具有传承，抓一张牌"
+            },
+            {
+                "attack": 15,
+                "life": 31,
+                "effect": "受到传承时:抓一张牌、死亡时:若具有传承，抓一张牌"
+            },
+            {
+                "attack": 17,
+                "life": 33,
+                "effect": "受到传承时:抓一张牌、死亡时:若具有传承，抓一张牌"
+            },
+            {
+                "attack": 19,
+                "life": 35,
+                "effect": "受到传承时:抓一张牌、死亡时:若具有传承，抓一张牌"
+            },
+            {
+                "attack": 21,
+                "life": 38,
+                "effect": "受到传承时:抓一张牌、死亡时:若具有传承，抓一张牌"
+            },
+            {
+                "attack": 23,
+                "life": 42,
+                "effect": "受到传承时:抓一张牌、死亡时:若具有传承，抓一张牌"
+            }
+        ]
+    },
+    {
+        "id": 322,
+        "name": "黑夜射手",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 2,
+        "type": 1,
+        "img": "/tiantanggang/heiyesheshou.jpg",
+        "grade": "[1]",
+        "tag": "[3]",
+        "data": [
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "命中英雄:随机敌军受到1点伤害"
+            },
+            {
+                "attack": 3,
+                "life": 2,
+                "effect": "命中英雄:随机敌军受到1点伤害"
+            },
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "命中英雄:随机敌军受到1点伤害"
+            },
+            {
+                "attack": 4,
+                "life": 4,
+                "effect": "命中英雄:随机敌军受到2点伤害"
+            },
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "命中英雄:随机敌军受到2点伤害"
+            },
+            {
+                "attack": 6,
+                "life": 5,
+                "effect": "命中英雄:随机敌军受到2点伤害"
+            },
+            {
+                "attack": 7,
+                "life": 6,
+                "effect": "命中英雄:随机敌军受到3点伤害"
+            },
+            {
+                "attack": 8,
+                "life": 7,
+                "effect": "命中英雄:随机敌军受到3点伤害"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "命中英雄:随机敌军受到3点伤害"
+            },
+            {
+                "attack": 10,
+                "life": 11,
+                "effect": "命中英雄:【洞察1】，随机敌军受到4点伤害"
+            },
+            {
+                "attack": 12,
+                "life": 11,
+                "effect": "命中英雄:【洞察1】，随机敌军受到4点伤害"
+            },
+            {
+                "attack": 13,
+                "life": 12,
+                "effect": "命中英雄:【洞察1】，随机敌军受到5点伤害"
+            },
+            {
+                "attack": 14,
+                "life": 14,
+                "effect": "命中英雄:【洞察1】，随机敌军受到5点伤害"
+            },
+            {
+                "attack": 16,
+                "life": 15,
+                "effect": "命中英雄:【洞察1】，随机敌军受到6点伤害"
+            },
+            {
+                "attack": 17,
+                "life": 17,
+                "effect": "命中英雄:【洞察1】，随机敌军受到6点伤害"
+            },
+            {
+                "attack": 19,
+                "life": 18,
+                "effect": "命中英雄:【洞察1】，随机敌军受到7点伤害"
+            },
+            {
+                "attack": 20,
+                "life": 20,
+                "effect": "命中英雄:【洞察1】，随机敌军受到7点伤害"
+            },
+            {
+                "attack": 22,
+                "life": 22,
+                "effect": "命中英雄:【洞察1】，随机敌军受到8点伤害"
+            },
+            {
+                "attack": 24,
+                "life": 24,
+                "effect": "命中英雄:【洞察1】，随机敌军受到8点伤害"
+            },
+            {
+                "attack": 26,
+                "life": 26,
+                "effect": "命中英雄:【洞察1】，随机敌军受到9点伤害"
+            },
+            {
+                "attack": 28,
+                "life": 28,
+                "effect": "命中英雄:【洞察1】，随机敌军受到10点伤害"
+            },
+            {
+                "attack": 30,
+                "life": 30,
+                "effect": "命中英雄:【洞察1】，随机敌军受到11点伤害"
+            }
+        ]
+    },
+    {
+        "id": 323,
+        "name": "黑水快剑手",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 2,
+        "type": 1,
+        "img": "/tiantanggang/heishuikuaijianshou.jpg",
+        "grade": "[1]",
+        "tag": "[2,6]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 2,
+                "effect": "【先攻】、登场:吸取敌方英雄1点生命"
+            },
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "【先攻】、登场:吸取敌方英雄2点生命"
+            },
+            {
+                "attack": 4,
+                "life": 3,
+                "effect": "【先攻】、登场:吸取敌方英雄2点生命"
+            },
+            {
+                "attack": 5,
+                "life": 3,
+                "effect": "【先攻】、登场:吸取敌方英雄3点生命"
+            },
+            {
+                "attack": 5,
+                "life": 4,
+                "effect": "【先攻】、登场:吸取敌方英雄3点生命"
+            },
+            {
+                "attack": 6,
+                "life": 4,
+                "effect": "【先攻】、登场:吸取敌方英雄3点生命"
+            },
+            {
+                "attack": 7,
+                "life": 4,
+                "effect": "【先攻】、登场:吸取敌方英雄4点生命"
+            },
+            {
+                "attack": 8,
+                "life": 5,
+                "effect": "【先攻】、登场:吸取敌方英雄4点生命"
+            },
+            {
+                "attack": 9,
+                "life": 5,
+                "effect": "【先攻】、登场:吸取敌方英雄4点生命"
+            },
+            {
+                "attack": 10,
+                "life": 6,
+                "effect": "【先攻】、登场:吸取敌方英雄5点生命"
+            },
+            {
+                "attack": 11,
+                "life": 7,
+                "effect": "【先攻】、登场:吸取敌方英雄5点生命"
+            },
+            {
+                "attack": 12,
+                "life": 8,
+                "effect": "【先攻】、登场:吸取敌方英雄6点生命"
+            },
+            {
+                "attack": 13,
+                "life": 9,
+                "effect": "【先攻】、登场:吸取敌方英雄7点生命"
+            },
+            {
+                "attack": 15,
+                "life": 9,
+                "effect": "【先攻】、登场:吸取敌方英雄8点生命"
+            },
+            {
+                "attack": 17,
+                "life": 9,
+                "effect": "【先攻】、登场:吸取敌方英雄9点生命"
+            },
+            {
+                "attack": 18,
+                "life": 10,
+                "effect": "【先攻】、登场:吸取敌方英雄10点生命"
+            },
+            {
+                "attack": 20,
+                "life": 10,
+                "effect": "【先攻】、登场:吸取敌方英雄11点生命"
+            },
+            {
+                "attack": 21,
+                "life": 11,
+                "effect": "【先攻】、登场:吸取敌方英雄12点生命"
+            },
+            {
+                "attack": 23,
+                "life": 12,
+                "effect": "【先攻】、登场:吸取敌方英雄13点生命"
+            },
+            {
+                "attack": 25,
+                "life": 12,
+                "effect": "【先攻】、登场:吸取敌方英雄15点生命"
+            },
+            {
+                "attack": 27,
+                "life": 13,
+                "effect": "【先攻】、登场:吸取敌方英雄16点生命"
+            },
+            {
+                "attack": 30,
+                "life": 13,
+                "effect": "【先攻】、登场:吸取敌方英雄18点生命"
+            }
+        ]
+    },
+    {
+        "id": 324,
+        "name": "亡命之徒",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 2,
+        "type": 1,
+        "img": "/tiantanggang/wangmingzhitu.jpg",
+        "grade": "[2]",
+        "tag": "[3]",
+        "data": [
+            {
+                "attack": 2,
+                "life": 1,
+                "effect": "【暴露1】、对英雄伤害+1"
+            },
+            {
+                "attack": 3,
+                "life": 1,
+                "effect": "【暴露1】、对英雄伤害+1"
+            },
+            {
+                "attack": 4,
+                "life": 1,
+                "effect": "【洞察1】、【暴露1】、对英雄伤害+1"
+            },
+            {
+                "attack": 5,
+                "life": 1,
+                "effect": "【洞察1】、【暴露1】、对英雄伤害+2"
+            },
+            {
+                "attack": 6,
+                "life": 1,
+                "effect": "【洞察1】、【暴露1】、对英雄伤害+2"
+            },
+            {
+                "attack": 7,
+                "life": 2,
+                "effect": "【洞察1】、【暴露1】、对英雄伤害+2"
+            },
+            {
+                "attack": 8,
+                "life": 2,
+                "effect": "【洞察1】、【暴露1】、对英雄伤害+3"
+            },
+            {
+                "attack": 10,
+                "life": 2,
+                "effect": "【洞察1】、【暴露1】、对英雄伤害+3"
+            },
+            {
+                "attack": 11,
+                "life": 2,
+                "effect": "【洞察1】、【暴露1】、对英雄伤害+4"
+            },
+            {
+                "attack": 14,
+                "life": 4,
+                "effect": "【洞察1】、【暴露1】、对英雄伤害+4"
+            },
+            {
+                "attack": 15,
+                "life": 4,
+                "effect": "【洞察1】、【暴露1】、对英雄伤害+5"
+            },
+            {
+                "attack": 16,
+                "life": 5,
+                "effect": "【洞察1】、【暴露1】、对英雄伤害+5"
+            },
+            {
+                "attack": 18,
+                "life": 6,
+                "effect": "【洞察1】、【暴露1】、对英雄伤害+5"
+            },
+            {
+                "attack": 20,
+                "life": 7,
+                "effect": "【洞察1】、【暴露1】、对英雄伤害+6"
+            },
+            {
+                "attack": 22,
+                "life": 8,
+                "effect": "【洞察1】、【暴露1】、对英雄伤害+6"
+            },
+            {
+                "attack": 24,
+                "life": 9,
+                "effect": "【洞察1】、【暴露1】、对英雄伤害+7"
+            },
+            {
+                "attack": 26,
+                "life": 9,
+                "effect": "【洞察1】、【暴露1】、对英雄伤害+8"
+            },
+            {
+                "attack": 28,
+                "life": 10,
+                "effect": "【洞察1】、【暴露1】、对英雄伤害+9"
+            },
+            {
+                "attack": 30,
+                "life": 11,
+                "effect": "【洞察1】、【暴露1】、对英雄伤害+10"
+            },
+            {
+                "attack": 32,
+                "life": 12,
+                "effect": "【洞察1】、【暴露1】、对英雄伤害+11"
+            },
+            {
+                "attack": 33,
+                "life": 15,
+                "effect": "【洞察1】、【暴露1】、对英雄伤害+12"
+            },
+            {
+                "attack": 35,
+                "life": 16,
+                "effect": "【洞察1】、【暴露1】、对英雄伤害+13"
+            }
+        ]
+    },
+    {
+        "id": 325,
+        "name": "黑夜突袭",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 2,
+        "type": 2,
+        "img": "/tiantanggang/heiyetuxi.jpg",
+        "grade": "[3]",
+        "tag": "[3]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对随机单位造成4点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对随机单位造成5点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对随机单位造成6点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对随机单位造成8点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对随机单位造成10点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对随机单位造成12点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对随机单位造成15点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对随机单位造成18点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对随机单位造成21点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对随机单位造成25点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、对随机单位造成28点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、对随机单位造成32点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、对随机单位造成35点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、对随机单位造成38点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、对随机单位造成42点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、对随机单位造成45点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、对随机单位造成47点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、对随机单位造成50点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、对随机单位造成53点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、对随机单位造成56点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、对随机单位造成60点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、对随机单位造成65点伤害"
+            }
+        ]
+    },
+    {
+        "id": 326,
+        "name": "连锁电光",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 2,
+        "type": 2,
+        "img": "/tiantanggang/liansuodianguang.jpg",
+        "grade": "[0]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标受到3点伤害，35%几率相邻敌军受到3点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标受到4点伤害，35%几率相邻敌军受到4点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标受到5点伤害，40%几率相邻敌军受到4点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标受到6点伤害，50%几率相邻敌军受到4点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标受到7点伤害，50%几率相邻敌军受到5点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标受到9点伤害，50%几率相邻敌军受到5点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标受到9点伤害，65%几率相邻敌军受到6点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标受到10点伤害，70%几率相邻敌军受到6点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标受到11点伤害，75%几率相邻敌军受到7点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标受到13点伤害，80%几率相邻敌军受到7点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标受到14点伤害，相邻敌军受到8点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标受到15点伤害，相邻敌军受到9点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标受到18点伤害，相邻敌军受到10点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标受到21点伤害，相邻敌军受到11点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标受到24点伤害，相邻敌军受到12点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标受到25点伤害，相邻敌军受到15点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标受到27点伤害，相邻敌军受到16点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标受到30点伤害，相邻敌军受到16点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标受到33点伤害，相邻敌军受到17点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标受到36点伤害，相邻敌军受到18点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标受到40点伤害，相邻敌军受到20点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标受到45点伤害，相邻敌军受到22点伤害"
+            }
+        ]
+    },
+    {
+        "id": 327,
+        "name": "火祭邪灵",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 2,
+        "type": 2,
+        "img": "/tiantanggang/huojixieling.jpg",
+        "grade": "[0]",
+        "tag": "[24]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤2/5血炎焦木-lv1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤2/7血炎焦木-lv2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤3/8血炎焦木-lv3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤3/11血炎焦木-lv4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤4/12血炎焦木-lv5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤5/13血炎焦木-lv6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤6/15血炎焦木-lv7"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤7/17血炎焦木-lv8"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤8/18血炎焦木-lv9"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤9/20血炎焦木-lv10"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤10/23血炎焦木-lv11"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤11/26血炎焦木-lv12"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤12/30血炎焦木-lv13"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤13/35血炎焦木-lv14"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤15/37血炎焦木-lv15"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤17/40血炎焦木-lv16"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤19/43血炎焦木-lv17"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤20/47血炎焦木-lv18"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤21/50血炎焦木-lv19"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤22/54血炎焦木-lv20"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤23/56血炎焦木-lv21"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤24/60血炎焦木-lv22"
+            }
+        ]
+    },
+    {
+        "id": 328,
+        "name": "暗潮术士",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 2,
+        "type": 1,
+        "img": "/tiantanggang/anchaoshushi.jpg",
+        "grade": "[1]",
+        "tag": "[2,26]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 1,
+                "effect": "回合结束获得《暗潮涌动》-lv1"
+            },
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "回合结束获得《暗潮涌动》-lv1"
+            },
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "回合结束获得《暗潮涌动》-lv1"
+            },
+            {
+                "attack": 4,
+                "life": 4,
+                "effect": "回合结束获得《暗潮涌动》-lv2"
+            },
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "回合结束获得《暗潮涌动》-lv2"
+            },
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "死亡、回合结束获得《暗潮涌动》-lv2"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "死亡、回合结束获得《暗潮涌动》-lv3"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "死亡、回合结束获得《暗潮涌动》-lv3"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "死亡、回合结束获得《暗潮涌动》-lv4"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "死亡、回合结束获得《暗潮涌动》-lv4"
+            },
+            {
+                "attack": 11,
+                "life": 12,
+                "effect": "死亡、回合结束获得《暗潮涌动》-lv4"
+            },
+            {
+                "attack": 13,
+                "life": 13,
+                "effect": "死亡、回合结束获得《暗潮涌动》-lv5"
+            },
+            {
+                "attack": 14,
+                "life": 15,
+                "effect": "死亡、回合结束获得《暗潮涌动》-lv6"
+            },
+            {
+                "attack": 16,
+                "life": 16,
+                "effect": "死亡、回合结束获得《暗潮涌动》-lv7"
+            },
+            {
+                "attack": 17,
+                "life": 18,
+                "effect": "死亡、回合结束获得《暗潮涌动》-lv8"
+            },
+            {
+                "attack": 19,
+                "life": 19,
+                "effect": "死亡、回合结束获得《暗潮涌动》-lv9"
+            },
+            {
+                "attack": 20,
+                "life": 21,
+                "effect": "死亡、回合结束获得《暗潮涌动》-lv10"
+            },
+            {
+                "attack": 22,
+                "life": 22,
+                "effect": "死亡、回合结束获得《暗潮涌动》-lv11"
+            },
+            {
+                "attack": 24,
+                "life": 24,
+                "effect": "死亡、回合结束获得《暗潮涌动》-lv12"
+            },
+            {
+                "attack": 26,
+                "life": 26,
+                "effect": "死亡、回合结束获得《暗潮涌动》-lv13"
+            },
+            {
+                "attack": 28,
+                "life": 28,
+                "effect": "死亡、回合结束获得《暗潮涌动》-lv14"
+            },
+            {
+                "attack": 30,
+                "life": 30,
+                "effect": "死亡、回合结束获得《暗潮涌动》-lv15"
+            }
+        ]
+    },
+    {
+        "id": 329,
+        "name": "窃笑雪人",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 2,
+        "type": 1,
+        "img": "/tiantanggang/qiexiaoxueren.jpg",
+        "grade": "[1]",
+        "tag": "[11,13]",
+        "data": [
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "【守军】、【荆棘】、登场：冰封脚下"
+            },
+            {
+                "attack": 2,
+                "life": 3,
+                "effect": "【守军】、【荆棘】、登场：冰封脚下"
+            },
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "【守军】、【荆棘】、登场：冰封脚下"
+            },
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "【守军】、【荆棘】、登场：冰封脚下"
+            },
+            {
+                "attack": 4,
+                "life": 4,
+                "effect": "【守军】、【荆棘】、登场：冰封脚下"
+            },
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "【守军】、【荆棘】、登场：冰封脚下"
+            },
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "【守军】、【荆棘】、登场：冰封脚下"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "【守军】、【荆棘】、登场：冰封脚下"
+            },
+            {
+                "attack": 8,
+                "life": 9,
+                "effect": "【守军】、【荆棘】、登场：冰封脚下"
+            },
+            {
+                "attack": 9,
+                "life": 11,
+                "effect": "【守军】、【荆棘】、登场：冰封脚下"
+            },
+            {
+                "attack": 10,
+                "life": 13,
+                "effect": "【守军】、【荆棘】、登场：冰封脚下"
+            },
+            {
+                "attack": 11,
+                "life": 15,
+                "effect": "【守军】、【荆棘】、登场：冰封脚下"
+            },
+            {
+                "attack": 12,
+                "life": 17,
+                "effect": "【守军】、【荆棘】、登场：冰封脚下"
+            },
+            {
+                "attack": 14,
+                "life": 18,
+                "effect": "【守军】、【荆棘】、登场：冰封脚下"
+            },
+            {
+                "attack": 16,
+                "life": 20,
+                "effect": "【守军】、【荆棘】、登场：冰封脚下"
+            },
+            {
+                "attack": 18,
+                "life": 22,
+                "effect": "【守军】、【荆棘】、登场：冰封脚下"
+            },
+            {
+                "attack": 20,
+                "life": 25,
+                "effect": "【守军】、【荆棘】、登场：冰封脚下"
+            },
+            {
+                "attack": 22,
+                "life": 28,
+                "effect": "【守军】、【荆棘】、登场：冰封脚下"
+            },
+            {
+                "attack": 25,
+                "life": 31,
+                "effect": "【守军】、【荆棘】、登场：冰封脚下"
+            },
+            {
+                "attack": 28,
+                "life": 35,
+                "effect": "【守军】、【荆棘】、登场：冰封脚下"
+            },
+            {
+                "attack": 31,
+                "life": 40,
+                "effect": "【守军】、【荆棘】、登场：冰封脚下"
+            },
+            {
+                "attack": 35,
+                "life": 45,
+                "effect": "【守军】、【荆棘】、登场：冰封脚下"
+            }
+        ]
+    },
+    {
+        "id": 330,
+        "name": "传记学者",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 2,
+        "type": 1,
+        "img": "/tiantanggang/zhuanjixuezhe.jpg",
+        "grade": "[1]",
+        "tag": "[3,25]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 3,
+                "effect": "回合开始:每使用过一个法术或传记，随机友军+1/+1"
+            },
+            {
+                "attack": 1,
+                "life": 4,
+                "effect": "回合开始:每使用过一个法术或传记，随机友军+1/+1"
+            },
+            {
+                "attack": 1,
+                "life": 5,
+                "effect": "回合开始:每使用过一个法术或传记，随机友军+1/+2"
+            },
+            {
+                "attack": 2,
+                "life": 6,
+                "effect": "回合开始:每使用过一个法术或传记，随机友军+1/+2"
+            },
+            {
+                "attack": 2,
+                "life": 6,
+                "effect": "回合开始:每使用过一个法术或传记，随机友军+1/+2、初次使用传记:抽一张牌"
+            },
+            {
+                "attack": 3,
+                "life": 7,
+                "effect": "回合开始:每使用过一个法术或传记，随机友军+1/+2、初次使用传记:抽一张牌"
+            },
+            {
+                "attack": 4,
+                "life": 8,
+                "effect": "回合开始:每使用过一个法术或传记，随机友军+1/+3、初次使用传记:抽一张牌"
+            },
+            {
+                "attack": 5,
+                "life": 9,
+                "effect": "回合开始:每使用过一个法术或传记，随机友军+1/+3、初次使用传记:抽一张牌"
+            },
+            {
+                "attack": 6,
+                "life": 10,
+                "effect": "回合开始:每使用过一个法术或传记，随机友军+1/+3、初次使用传记:抽一张牌"
+            },
+            {
+                "attack": 7,
+                "life": 11,
+                "effect": "回合开始:每使用过一个法术或传记，随机友军+1/+4、初次使用传记:抽一张牌"
+            },
+            {
+                "attack": 8,
+                "life": 12,
+                "effect": "回合开始:每使用过一个法术或传记，随机友军+1/+4、初次使用传记:抽一张牌、【洞察1】"
+            },
+            {
+                "attack": 9,
+                "life": 13,
+                "effect": "回合开始:每使用过一个法术或传记，随机友军+1/+5、初次使用传记:抽一张牌、【洞察1】"
+            },
+            {
+                "attack": 9,
+                "life": 16,
+                "effect": "回合开始:每使用过一个法术或传记，随机友军+1/+5、初次使用传记:抽一张牌、【洞察1】"
+            },
+            {
+                "attack": 10,
+                "life": 18,
+                "effect": "回合开始:每使用过一个法术或传记，随机友军+1/+5、初次使用传记:抽一张牌、【洞察1】"
+            },
+            {
+                "attack": 11,
+                "life": 19,
+                "effect": "回合开始:每使用过一个法术或传记，随机友军+1/+6、初次使用传记:抽一张牌、【洞察1】"
+            },
+            {
+                "attack": 12,
+                "life": 21,
+                "effect": "回合开始:每使用过一个法术或传记，随机友军+1/+7、初次使用传记:抽一张牌、【洞察1】"
+            },
+            {
+                "attack": 14,
+                "life": 22,
+                "effect": "回合开始:每使用过一个法术或传记，随机友军+1/+8、初次使用传记:抽一张牌、【洞察1】"
+            },
+            {
+                "attack": 16,
+                "life": 24,
+                "effect": "回合开始:每使用过一个法术或传记，随机友军+1/+9、初次使用传记:抽一张牌、【洞察1】"
+            },
+            {
+                "attack": 18,
+                "life": 27,
+                "effect": "回合开始:每使用过一个法术或传记，随机友军+1/+10、初次使用传记:抽一张牌、【洞察1】"
+            },
+            {
+                "attack": 20,
+                "life": 30,
+                "effect": "回合开始:每使用过一个法术或传记，随机友军+2/+10、初次使用传记:抽一张牌、【洞察1】"
+            },
+            {
+                "attack": 22,
+                "life": 35,
+                "effect": "回合开始:每使用过一个法术或传记，随机友军+2/+11、初次使用传记:抽一张牌、【洞察1】"
+            },
+            {
+                "attack": 25,
+                "life": 39,
+                "effect": "回合开始:每使用过一个法术或传记，随机友军+2/+12、初次使用传记:抽一张牌、【洞察1】"
+            }
+        ]
+    },
+    {
+        "id": 331,
+        "name": "海湾强盗",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 2,
+        "type": 1,
+        "img": "/tiantanggang/haiwanqiangdao.jpg",
+        "grade": "[2]",
+        "tag": "[22]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 2,
+                "effect": "首次命中时:敌方一张手牌法力+1"
+            },
+            {
+                "attack": 2,
+                "life": 4,
+                "effect": "首次命中时:敌方一张手牌法力+1"
+            },
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "首次命中时:敌方一张手牌法力+1、攻击前消耗1点法力:自身攻击+1"
+            },
+            {
+                "attack": 3,
+                "life": 6,
+                "effect": "首次命中时:敌方一张手牌法力+1、攻击前消耗1点法力:自身攻击+1"
+            },
+            {
+                "attack": 4,
+                "life": 6,
+                "effect": "首次命中时:敌方一张手牌法力+1、攻击前消耗1点法力:自身攻击+1"
+            },
+            {
+                "attack": 4,
+                "life": 8,
+                "effect": "首次命中时:敌方一张手牌法力+1、攻击前消耗1点法力:自身攻击+2"
+            },
+            {
+                "attack": 5,
+                "life": 9,
+                "effect": "首次命中时:敌方一张手牌法力+1、攻击前消耗1点法力:自身攻击+2"
+            },
+            {
+                "attack": 6,
+                "life": 10,
+                "effect": "首次命中时:敌方一张手牌法力+1、攻击前消耗1点法力:自身攻击+3"
+            },
+            {
+                "attack": 7,
+                "life": 11,
+                "effect": "首次命中时:敌方一张手牌法力+1、攻击前消耗1点法力:自身攻击+3"
+            },
+            {
+                "attack": 8,
+                "life": 13,
+                "effect": "首次命中时:敌方一张手牌法力+1、攻击前消耗1点法力:自身攻击+3"
+            },
+            {
+                "attack": 9,
+                "life": 15,
+                "effect": "首次命中时:敌方一张手牌法力+1、攻击前消耗1点法力:自身攻击+4"
+            },
+            {
+                "attack": 10,
+                "life": 17,
+                "effect": "首次命中时:敌方一张手牌法力+1、攻击前消耗1点法力:自身攻击+4"
+            },
+            {
+                "attack": 12,
+                "life": 17,
+                "effect": "首次命中时:敌方一张手牌法力+1、攻击前消耗1点法力:自身攻击+4"
+            },
+            {
+                "attack": 13,
+                "life": 19,
+                "effect": "首次命中时:敌方一张手牌法力+1、攻击前消耗1点法力:自身攻击+5"
+            },
+            {
+                "attack": 15,
+                "life": 20,
+                "effect": "首次命中时:敌方一张手牌法力+1、攻击前消耗1点法力:自身攻击+5"
+            },
+            {
+                "attack": 16,
+                "life": 23,
+                "effect": "首次命中时:敌方一张手牌法力+1、攻击前消耗1点法力:自身攻击+5"
+            },
+            {
+                "attack": 18,
+                "life": 25,
+                "effect": "首次命中时:敌方一张手牌法力+1、攻击前消耗1点法力:自身攻击+6"
+            },
+            {
+                "attack": 20,
+                "life": 27,
+                "effect": "首次命中时:敌方一张手牌法力+1、攻击前消耗1点法力:自身攻击+6"
+            },
+            {
+                "attack": 22,
+                "life": 30,
+                "effect": "首次命中时:敌方一张手牌法力+1、攻击前消耗1点法力:自身攻击+6"
+            },
+            {
+                "attack": 25,
+                "life": 32,
+                "effect": "首次命中时:敌方一张手牌法力+1、攻击前消耗1点法力:自身攻击+7"
+            },
+            {
+                "attack": 27,
+                "life": 33,
+                "effect": "首次命中时:敌方一张手牌法力+1、攻击前消耗1点法力:自身攻击+8"
+            },
+            {
+                "attack": 30,
+                "life": 35,
+                "effect": "首次命中时:敌方一张手牌法力+1、攻击前消耗1点法力:自身攻击+9"
+            }
+        ]
+    },
+    {
+        "id": 332,
+        "name": "黑金勒索者",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 2,
+        "type": 1,
+        "img": "/tiantanggang/heijinlesuozhe.jpg",
+        "grade": "[4]",
+        "tag": "[7]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 1,
+                "effect": "每当一个敌军死亡时:随机友军+1/+1，登场:敌方玩家禁疗一回合"
+            },
+            {
+                "attack": 4,
+                "life": 2,
+                "effect": "每当一个敌军死亡时:随机友军+1/+1，登场:敌方玩家禁疗一回合"
+            },
+            {
+                "attack": 5,
+                "life": 3,
+                "effect": "每当一个敌军死亡时:随机友军+1/+1，登场:敌方玩家禁疗一回合"
+            },
+            {
+                "attack": 6,
+                "life": 3,
+                "effect": "每当一个敌军死亡时:随机友军+1/+2，登场:敌方玩家禁疗一回合"
+            },
+            {
+                "attack": 7,
+                "life": 4,
+                "effect": "每当一个敌军死亡时:随机友军+1/+2，登场:敌方玩家禁疗一回合"
+            },
+            {
+                "attack": 8,
+                "life": 5,
+                "effect": "每当一个敌军死亡时:随机友军+1/+2，登场:敌方玩家禁疗一回合"
+            },
+            {
+                "attack": 9,
+                "life": 5,
+                "effect": "每当一个敌军死亡时:随机友军+2/+2，登场:敌方玩家禁疗一回合"
+            },
+            {
+                "attack": 10,
+                "life": 6,
+                "effect": "每当一个敌军死亡时:随机友军+2/+2，登场:敌方玩家禁疗一回合"
+            },
+            {
+                "attack": 11,
+                "life": 7,
+                "effect": "每当一个敌军死亡时:随机友军+2/+2，登场:敌方玩家禁疗一回合"
+            },
+            {
+                "attack": 12,
+                "life": 8,
+                "effect": "每当一个敌军死亡时:随机友军+2/+3，登场:敌方玩家禁疗一回合"
+            },
+            {
+                "attack": 14,
+                "life": 9,
+                "effect": "每当一个敌军死亡时:随机友军+2/+3，登场:敌方玩家禁疗一回合"
+            },
+            {
+                "attack": 15,
+                "life": 10,
+                "effect": "每当一个敌军死亡时:随机友军+3/+3，登场:敌方玩家禁疗一回合"
+            },
+            {
+                "attack": 17,
+                "life": 11,
+                "effect": "每当一个敌军死亡时:随机友军+3/+3，登场:敌方玩家禁疗一回合"
+            },
+            {
+                "attack": 19,
+                "life": 12,
+                "effect": "每当一个敌军死亡时:随机友军+3/+4，登场:敌方玩家禁疗一回合"
+            },
+            {
+                "attack": 21,
+                "life": 14,
+                "effect": "每当一个敌军死亡时:随机友军+3/+4，登场:敌方玩家禁疗一回合"
+            },
+            {
+                "attack": 22,
+                "life": 15,
+                "effect": "每当一个敌军死亡时:随机友军+4/+4，登场:敌方玩家禁疗一回合"
+            },
+            {
+                "attack": 24,
+                "life": 17,
+                "effect": "每当一个敌军死亡时:随机友军+4/+4，登场:敌方玩家禁疗一回合"
+            },
+            {
+                "attack": 26,
+                "life": 20,
+                "effect": "每当一个敌军死亡时:随机友军+4/+5，登场:敌方玩家禁疗一回合"
+            },
+            {
+                "attack": 28,
+                "life": 23,
+                "effect": "每当一个敌军死亡时:随机友军+4/+5，登场:敌方玩家禁疗一回合"
+            },
+            {
+                "attack": 30,
+                "life": 25,
+                "effect": "每当一个敌军死亡时:随机友军+5/+5，登场:敌方玩家禁疗一回合"
+            },
+            {
+                "attack": 33,
+                "life": 27,
+                "effect": "每当一个敌军死亡时:随机友军+5/+6，登场:敌方玩家禁疗一回合"
+            },
+            {
+                "attack": 35,
+                "life": 30,
+                "effect": "每当一个敌军死亡时:随机友军+6/+6，登场:敌方玩家禁疗一回合"
+            }
+        ]
+    },
+    {
+        "id": 333,
+        "name": "无声攫取",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 2,
+        "type": 2,
+        "img": "/tiantanggang/wushengjuequ.jpg",
+        "grade": "[5]",
+        "tag": "[2,3,20,26]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、吸取敌方英雄1点生命、沉默敌方随机符文（等级<=3）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、吸取敌方英雄2点生命、沉默敌方随机符文（等级<=4）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、吸取敌方英雄3点生命、沉默敌方随机符文（等级<=5）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、吸取敌方英雄4点生命、沉默敌方随机符文（等级<=6）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、吸取敌方英雄5点生命、沉默敌方随机符文（等级<=7）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、吸取敌方英雄6点生命、沉默敌方随机符文（等级<=8）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、吸取敌方英雄7点生命、沉默敌方随机符文（等级<=9）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、吸取敌方英雄8点生命、沉默敌方随机符文（等级<=10）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、吸取敌方英雄9点生命、沉默敌方随机符文（等级<=11）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、吸取敌方英雄10点生命、沉默敌方随机符文（等级<=12）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、吸取敌方英雄11点生命、沉默敌方随机符文（等级<=13）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、吸取敌方英雄12点生命、沉默敌方随机符文（等级<=14）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、吸取敌方英雄14点生命、沉默敌方随机符文（等级<=15）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、吸取敌方英雄14点生命、沉默敌方随机符文（等级<=16）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、吸取敌方英雄15点生命、沉默敌方随机符文（等级<=17）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、吸取敌方英雄16点生命、沉默敌方随机符文（等级<=18）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、吸取敌方英雄17点生命、沉默敌方随机符文（等级<=19）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、吸取敌方英雄18点生命、沉默敌方随机符文（等级<=20）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、吸取敌方英雄19点生命、沉默敌方随机符文（等级<=21）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、吸取敌方英雄21点生命、沉默敌方随机符文（等级<=22）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、吸取敌方英雄23点生命、沉默敌方随机符文（等级<=23）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、吸取敌方英雄25点生命、沉默敌方随机符文（等级<=24）"
+            }
+        ]
+    },
+    {
+        "id": 334,
+        "name": "符文·黑金索命",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 2,
+        "type": 4,
+        "img": "/tiantanggang/fuwen_heijinsuoming.jpg",
+        "grade": "[3]",
+        "tag": "[3,26]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、回合结束：随机敌军受到1点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、回合结束：随机敌军受到2点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、回合结束：随机敌军受到3点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、回合结束：随机敌军受到4点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、回合结束：随机敌军受到5点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、回合结束：随机敌军受到6点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、回合结束：随机敌军受到7点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、回合结束：随机敌军受到8点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、回合结束：随机敌军受到9点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、回合结束：随机敌军受到10点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、回合结束：随机敌军受到11点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、回合结束：随机敌军受到12点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、回合结束：随机敌军受到13点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、回合结束：随机敌军受到14点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、回合结束：随机敌军受到15点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、回合结束：随机敌军受到16点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、回合结束：随机敌军受到17点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、回合结束：随机敌军受到18点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、回合结束：随机敌军受到19点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、回合结束：随机敌军受到20点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、回合结束：随机敌军受到21点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、回合结束：随机敌军受到22点伤害"
+            }
+        ]
+    },
+    {
+        "id": 335,
+        "name": "热血矿工",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 3,
+        "type": 1,
+        "img": "/tiantanggang/rexuekuanggong.jpg",
+        "grade": "[3]",
+        "tag": "[3,19,26]",
+        "data": [
+            {
+                "attack": 2,
+                "life": 1,
+                "effect": "回合结束:向敌方英雄投掷铁镐"
+            },
+            {
+                "attack": 2,
+                "life": 3,
+                "effect": "回合结束:向敌方英雄投掷铁镐"
+            },
+            {
+                "attack": 2,
+                "life": 5,
+                "effect": "回合结束:向敌方英雄投掷铁镐"
+            },
+            {
+                "attack": 3,
+                "life": 5,
+                "effect": "【洞察1】、回合结束:向敌方英雄投掷铁镐"
+            },
+            {
+                "attack": 4,
+                "life": 6,
+                "effect": "【洞察1】、回合结束:向敌方英雄投掷铁镐"
+            },
+            {
+                "attack": 5,
+                "life": 8,
+                "effect": "【洞察1】、回合结束:向敌方英雄投掷铁镐"
+            },
+            {
+                "attack": 6,
+                "life": 10,
+                "effect": "【洞察1】、回合结束:向敌方英雄投掷铁镐"
+            },
+            {
+                "attack": 7,
+                "life": 12,
+                "effect": "【洞察1】、回合结束:向敌方英雄投掷铁镐"
+            },
+            {
+                "attack": 8,
+                "life": 14,
+                "effect": "【洞察1】、回合结束:向敌方英雄投掷铁镐"
+            },
+            {
+                "attack": 9,
+                "life": 16,
+                "effect": "【洞察1】、回合结束、死亡时:向敌方英雄投掷铁镐"
+            },
+            {
+                "attack": 10,
+                "life": 19,
+                "effect": "【洞察1】、回合结束、死亡时:向敌方英雄投掷铁镐"
+            },
+            {
+                "attack": 11,
+                "life": 22,
+                "effect": "【洞察1】、回合结束、死亡时:向敌方英雄投掷铁镐"
+            },
+            {
+                "attack": 12,
+                "life": 25,
+                "effect": "【洞察1】、回合结束、死亡时:向敌方英雄投掷铁镐"
+            },
+            {
+                "attack": 13,
+                "life": 28,
+                "effect": "【洞察1】、回合结束、死亡时:向敌方英雄投掷铁镐"
+            },
+            {
+                "attack": 14,
+                "life": 32,
+                "effect": "【洞察1】、回合结束、死亡时:向敌方英雄投掷铁镐"
+            },
+            {
+                "attack": 15,
+                "life": 36,
+                "effect": "【洞察1】、回合结束、死亡时:向敌方英雄投掷铁镐"
+            },
+            {
+                "attack": 16,
+                "life": 40,
+                "effect": "【洞察1】、回合结束、死亡时:向敌方英雄投掷铁镐"
+            },
+            {
+                "attack": 18,
+                "life": 42,
+                "effect": "【洞察1】、回合结束、死亡时:向敌方英雄投掷铁镐"
+            },
+            {
+                "attack": 20,
+                "life": 45,
+                "effect": "【洞察1】、回合结束、死亡时:向敌方英雄投掷铁镐"
+            },
+            {
+                "attack": 22,
+                "life": 50,
+                "effect": "【洞察1】、回合结束、死亡时:向敌方英雄投掷铁镐"
+            },
+            {
+                "attack": 24,
+                "life": 54,
+                "effect": "【洞察1】、回合结束、死亡时:向敌方英雄投掷铁镐"
+            },
+            {
+                "attack": 26,
+                "life": 58,
+                "effect": "【洞察1】、回合结束、死亡时:向敌方英雄投掷铁镐"
+            }
+        ]
+    },
+    {
+        "id": 336,
+        "name": "酗酒暴徒",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 3,
+        "type": 1,
+        "img": "/tiantanggang/xujiubaotu.jpg",
+        "grade": "[0]",
+        "tag": "[8]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 6,
+                "effect": "回合结束:若英雄生命高于敌方，自身+1/+1"
+            },
+            {
+                "attack": 1,
+                "life": 8,
+                "effect": "回合结束:若英雄生命高于敌方，自身+1/+2"
+            },
+            {
+                "attack": 1,
+                "life": 9,
+                "effect": "回合结束:若英雄生命高于敌方，自身+2/+2"
+            },
+            {
+                "attack": 2,
+                "life": 10,
+                "effect": "回合结束:若英雄生命高于敌方，自身+2/+2"
+            },
+            {
+                "attack": 2,
+                "life": 12,
+                "effect": "回合结束:若英雄生命高于敌方，自身+2/+2"
+            },
+            {
+                "attack": 3,
+                "life": 13,
+                "effect": "回合结束:若英雄生命高于敌方，自身+2/+2"
+            },
+            {
+                "attack": 3,
+                "life": 16,
+                "effect": "回合结束:若英雄生命高于敌方，自身+3/+3"
+            },
+            {
+                "attack": 4,
+                "life": 17,
+                "effect": "回合结束:若英雄生命高于敌方，自身+3/+3"
+            },
+            {
+                "attack": 5,
+                "life": 19,
+                "effect": "回合结束:若英雄生命高于敌方，自身+4/+4"
+            },
+            {
+                "attack": 6,
+                "life": 21,
+                "effect": "回合结束:若英雄生命高于敌方，自身+4/+4，获得【磐龙】"
+            },
+            {
+                "attack": 7,
+                "life": 22,
+                "effect": "回合结束:若英雄生命高于敌方，自身+5/+5，获得【磐龙】"
+            },
+            {
+                "attack": 8,
+                "life": 23,
+                "effect": "回合结束:若英雄生命高于敌方，自身+5/+5，获得【磐龙】"
+            },
+            {
+                "attack": 9,
+                "life": 25,
+                "effect": "回合结束:若英雄生命高于敌方，自身+5/+5，获得【磐龙】"
+            },
+            {
+                "attack": 10,
+                "life": 27,
+                "effect": "回合结束:若英雄生命高于敌方，自身+6/+6，获得【磐龙】"
+            },
+            {
+                "attack": 11,
+                "life": 30,
+                "effect": "回合结束:若英雄生命高于敌方，自身+6/+6，获得【磐龙】"
+            },
+            {
+                "attack": 12,
+                "life": 32,
+                "effect": "回合结束:若英雄生命高于敌方，自身+6/+6，获得【磐龙】"
+            },
+            {
+                "attack": 13,
+                "life": 36,
+                "effect": "回合结束:若英雄生命高于敌方，自身+7/+7，获得【磐龙】"
+            },
+            {
+                "attack": 15,
+                "life": 40,
+                "effect": "回合结束:若英雄生命高于敌方，自身+7/+7，获得【磐龙】"
+            },
+            {
+                "attack": 16,
+                "life": 45,
+                "effect": "回合结束:若英雄生命高于敌方，自身+8/+8，获得【磐龙】"
+            },
+            {
+                "attack": 18,
+                "life": 50,
+                "effect": "回合结束:若英雄生命高于敌方，自身+8/+8，获得【磐龙】"
+            },
+            {
+                "attack": 19,
+                "life": 55,
+                "effect": "回合结束:若英雄生命高于敌方，自身+9/+9，获得【磐龙】"
+            },
+            {
+                "attack": 21,
+                "life": 60,
+                "effect": "回合结束:若英雄生命高于敌方，自身+9/+9，获得【磐龙】"
+            }
+        ]
+    },
+    {
+        "id": 337,
+        "name": "教廷学者",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 3,
+        "type": 1,
+        "img": "/tiantanggang/jiaotingxuezhe.jpg",
+        "grade": "[0]",
+        "tag": "[1]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 2,
+                "effect": "回合开始:随机四芒帝国友军和隐秘友军+1/+1"
+            },
+            {
+                "attack": 4,
+                "life": 3,
+                "effect": "回合开始:随机四芒帝国友军和隐秘友军+1/+1"
+            },
+            {
+                "attack": 4,
+                "life": 5,
+                "effect": "回合开始:随机四芒帝国友军和隐秘友军+1/+2"
+            },
+            {
+                "attack": 4,
+                "life": 7,
+                "effect": "回合开始:随机四芒帝国友军和隐秘友军+1/+2，获得【护甲1】"
+            },
+            {
+                "attack": 5,
+                "life": 9,
+                "effect": "回合开始:随机四芒帝国友军和隐秘友军+1/+2，获得【护甲1】"
+            },
+            {
+                "attack": 6,
+                "life": 11,
+                "effect": "回合开始:随机四芒帝国友军和隐秘友军+1/+3，获得【护甲1】"
+            },
+            {
+                "attack": 7,
+                "life": 13,
+                "effect": "回合开始:随机四芒帝国友军和隐秘友军+1/+3，获得【护甲1】"
+            },
+            {
+                "attack": 8,
+                "life": 15,
+                "effect": "回合开始:随机四芒帝国友军和隐秘友军+1/+4，获得【护甲1】"
+            },
+            {
+                "attack": 9,
+                "life": 17,
+                "effect": "回合开始:随机四芒帝国友军和隐秘友军+1/+4，获得【护甲1】"
+            },
+            {
+                "attack": 10,
+                "life": 19,
+                "effect": "回合开始:随机四芒帝国友军和隐秘友军+1/+5，获得【护甲1】"
+            },
+            {
+                "attack": 11,
+                "life": 21,
+                "effect": "回合开始:随机四芒帝国友军和隐秘友军+2/+5，获得【护甲1】"
+            },
+            {
+                "attack": 12,
+                "life": 23,
+                "effect": "回合开始:随机四芒帝国友军和隐秘友军+2/+6，获得【护甲1】"
+            },
+            {
+                "attack": 13,
+                "life": 25,
+                "effect": "回合开始:随机四芒帝国友军和隐秘友军+2/+7，获得【护甲1】"
+            },
+            {
+                "attack": 15,
+                "life": 27,
+                "effect": "回合开始:随机四芒帝国友军和隐秘友军+2/+7，获得【护甲2】"
+            },
+            {
+                "attack": 17,
+                "life": 29,
+                "effect": "回合开始:随机四芒帝国友军和隐秘友军+2/+8，获得【护甲2】"
+            },
+            {
+                "attack": 19,
+                "life": 31,
+                "effect": "回合开始:随机四芒帝国友军和隐秘友军+3/+8，获得【护甲2】"
+            },
+            {
+                "attack": 21,
+                "life": 33,
+                "effect": "回合开始:随机四芒帝国友军和隐秘友军+3/+9，获得【护甲2】"
+            },
+            {
+                "attack": 23,
+                "life": 36,
+                "effect": "回合开始:随机四芒帝国友军和隐秘友军+3/+10，获得【护甲2】"
+            },
+            {
+                "attack": 25,
+                "life": 39,
+                "effect": "回合开始:随机四芒帝国友军和隐秘友军+3/+11，获得【护甲2】"
+            },
+            {
+                "attack": 27,
+                "life": 42,
+                "effect": "回合开始:随机四芒帝国友军和隐秘友军+3/+12，获得【护甲2】"
+            },
+            {
+                "attack": 30,
+                "life": 46,
+                "effect": "回合开始:随机四芒帝国友军和隐秘友军+3/+12，获得【护甲3】"
+            },
+            {
+                "attack": 33,
+                "life": 50,
+                "effect": "回合开始:随机四芒帝国友军和隐秘友军+4/+13，获得【护甲3】"
+            }
+        ]
+    },
+    {
+        "id": 338,
+        "name": "黑金刽子手",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 3,
+        "type": 1,
+        "img": "/tiantanggang/heijinguizishou.jpg",
+        "grade": "[1]",
+        "tag": "[5,12]",
+        "data": [
+            {
+                "attack": 4,
+                "life": 3,
+                "effect": "【迟缓】、【践踏】"
+            },
+            {
+                "attack": 5,
+                "life": 4,
+                "effect": "【迟缓】、【践踏】"
+            },
+            {
+                "attack": 6,
+                "life": 5,
+                "effect": "【迟缓】、【践踏】"
+            },
+            {
+                "attack": 7,
+                "life": 6,
+                "effect": "【迟缓】、【践踏】"
+            },
+            {
+                "attack": 8,
+                "life": 7,
+                "effect": "【迟缓】、【践踏】"
+            },
+            {
+                "attack": 10,
+                "life": 8,
+                "effect": "【迟缓】、【践踏】"
+            },
+            {
+                "attack": 12,
+                "life": 9,
+                "effect": "【迟缓】、【践踏】"
+            },
+            {
+                "attack": 14,
+                "life": 11,
+                "effect": "【迟缓】、【践踏】"
+            },
+            {
+                "attack": 16,
+                "life": 12,
+                "effect": "【迟缓】、【践踏】"
+            },
+            {
+                "attack": 18,
+                "life": 14,
+                "effect": "【迟缓】、【践踏】"
+            },
+            {
+                "attack": 19,
+                "life": 15,
+                "effect": "【迟缓】、【践踏】、对英雄伤害+2"
+            },
+            {
+                "attack": 21,
+                "life": 16,
+                "effect": "【迟缓】、【践踏】、对英雄伤害+3"
+            },
+            {
+                "attack": 23,
+                "life": 18,
+                "effect": "【迟缓】、【践踏】、对英雄伤害+4"
+            },
+            {
+                "attack": 25,
+                "life": 20,
+                "effect": "【迟缓】、【践踏】、对英雄伤害+5"
+            },
+            {
+                "attack": 27,
+                "life": 22,
+                "effect": "【迟缓】、【践踏】、对英雄伤害+6"
+            },
+            {
+                "attack": 30,
+                "life": 24,
+                "effect": "【迟缓】、【践踏】、对英雄伤害+7"
+            },
+            {
+                "attack": 33,
+                "life": 27,
+                "effect": "【迟缓】、【践踏】、对英雄伤害+8"
+            },
+            {
+                "attack": 35,
+                "life": 30,
+                "effect": "【迟缓】、【践踏】、对英雄伤害+9"
+            },
+            {
+                "attack": 39,
+                "life": 35,
+                "effect": "【迟缓】、【践踏】、对英雄伤害+10"
+            },
+            {
+                "attack": 43,
+                "life": 36,
+                "effect": "【迟缓】、【践踏】、对英雄伤害+11"
+            },
+            {
+                "attack": 47,
+                "life": 39,
+                "effect": "【迟缓】、【践踏】、对英雄伤害+12"
+            },
+            {
+                "attack": 52,
+                "life": 40,
+                "effect": "【迟缓】、【践踏】、对英雄伤害+13"
+            }
+        ]
+    },
+    {
+        "id": 339,
+        "name": "沙湾骆驼",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 3,
+        "type": 1,
+        "img": "/tiantanggang/shawanluotuo.jpg",
+        "grade": "[1]",
+        "tag": "[23]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 3,
+                "effect": "法力上限+1"
+            },
+            {
+                "attack": 1,
+                "life": 5,
+                "effect": "法力上限+1"
+            },
+            {
+                "attack": 1,
+                "life": 5,
+                "effect": "法力上限+1、登场:2个其他友军生命+1"
+            },
+            {
+                "attack": 1,
+                "life": 7,
+                "effect": "法力上限+1、登场:2个其他友军生命+1"
+            },
+            {
+                "attack": 1,
+                "life": 8,
+                "effect": "法力上限+1、登场:2个其他友军+1/+1"
+            },
+            {
+                "attack": 1,
+                "life": 10,
+                "effect": "法力上限+1、登场:2个其他友军+1/+1"
+            },
+            {
+                "attack": 1,
+                "life": 12,
+                "effect": "法力上限+1、登场:2个其他友军+1/+2"
+            },
+            {
+                "attack": 2,
+                "life": 14,
+                "effect": "法力上限+1、登场:2个其他友军+1/+2"
+            },
+            {
+                "attack": 2,
+                "life": 17,
+                "effect": "法力上限+1、登场:2个其他友军+1/+3"
+            },
+            {
+                "attack": 2,
+                "life": 20,
+                "effect": "法力上限+1、登场:2个其他友军+1/+3"
+            },
+            {
+                "attack": 2,
+                "life": 22,
+                "effect": "法力上限+1、登场:2个其他友军+2/+3"
+            },
+            {
+                "attack": 3,
+                "life": 23,
+                "effect": "法力上限+1、登场:2个其他友军+2/+3"
+            },
+            {
+                "attack": 3,
+                "life": 26,
+                "effect": "法力上限+1、登场:2个其他友军+2/+3"
+            },
+            {
+                "attack": 4,
+                "life": 28,
+                "effect": "法力上限+1、登场:2个其他友军+3/+3"
+            },
+            {
+                "attack": 4,
+                "life": 32,
+                "effect": "法力上限+1、登场:2个其他友军+3/+4"
+            },
+            {
+                "attack": 5,
+                "life": 34,
+                "effect": "法力上限+1、登场:2个其他友军+3/+5"
+            },
+            {
+                "attack": 5,
+                "life": 38,
+                "effect": "法力上限+1、登场:2个其他友军+3/+5"
+            },
+            {
+                "attack": 6,
+                "life": 40,
+                "effect": "法力上限+1、登场:2个其他友军+3/+6"
+            },
+            {
+                "attack": 7,
+                "life": 45,
+                "effect": "法力上限+1、登场:2个其他友军+3/+8"
+            },
+            {
+                "attack": 8,
+                "life": 50,
+                "effect": "法力上限+1、登场:2个其他友军+4/+8"
+            },
+            {
+                "attack": 9,
+                "life": 54,
+                "effect": "法力上限+1、登场:2个其他友军+4/+9"
+            },
+            {
+                "attack": 10,
+                "life": 58,
+                "effect": "法力上限+1、登场:2个其他友军+4/+10"
+            }
+        ]
+    },
+    {
+        "id": 340,
+        "name": "海燕迫击炮",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 3,
+        "type": 1,
+        "img": "/tiantanggang/haiyanpaijipao.jpg",
+        "grade": "[1]",
+        "tag": "[9,13]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 4,
+                "effect": "【守军】、【协战2】、回合开始:炮击敌军横排随机区域"
+            },
+            {
+                "attack": 0,
+                "life": 6,
+                "effect": "【守军】、【协战2】、回合开始:炮击敌军横排随机区域"
+            },
+            {
+                "attack": 0,
+                "life": 8,
+                "effect": "【守军】、【协战3】、回合开始:炮击敌军横排随机区域"
+            },
+            {
+                "attack": 0,
+                "life": 11,
+                "effect": "【守军】、【协战3】、回合开始:炮击敌军横排随机区域"
+            },
+            {
+                "attack": 0,
+                "life": 14,
+                "effect": "【守军】、【协战4】、回合开始:炮击敌军横排随机区域"
+            },
+            {
+                "attack": 0,
+                "life": 18,
+                "effect": "【守军】、【协战4】、回合开始:炮击敌军横排随机区域"
+            },
+            {
+                "attack": 0,
+                "life": 22,
+                "effect": "【守军】、【协战5】、回合开始:炮击敌军横排随机区域"
+            },
+            {
+                "attack": 0,
+                "life": 26,
+                "effect": "【守军】、【协战5】、回合开始:炮击敌军横排随机区域"
+            },
+            {
+                "attack": 0,
+                "life": 30,
+                "effect": "【守军】、【协战6】、回合开始:炮击敌军横排随机区域"
+            },
+            {
+                "attack": 0,
+                "life": 35,
+                "effect": "【守军】、【协战7】、回合开始:炮击敌军横排随机区域"
+            },
+            {
+                "attack": 0,
+                "life": 40,
+                "effect": "【守军】、【协战7】、回合开始:炮击敌军横排随机区域"
+            },
+            {
+                "attack": 0,
+                "life": 45,
+                "effect": "【守军】、【协战8】、回合开始:炮击敌军横排随机区域"
+            },
+            {
+                "attack": 0,
+                "life": 50,
+                "effect": "【守军】、【协战9】、回合开始:炮击敌军横排随机区域"
+            },
+            {
+                "attack": 0,
+                "life": 55,
+                "effect": "【守军】、【协战10】、回合开始:炮击敌军横排随机区域"
+            },
+            {
+                "attack": 0,
+                "life": 60,
+                "effect": "【守军】、【协战11】、回合开始:炮击敌军横排随机区域"
+            },
+            {
+                "attack": 0,
+                "life": 65,
+                "effect": "【守军】、【协战12】、回合开始:炮击敌军横排随机区域"
+            },
+            {
+                "attack": 0,
+                "life": 70,
+                "effect": "【守军】、【协战13】、回合开始:炮击敌军横排随机区域"
+            },
+            {
+                "attack": 0,
+                "life": 75,
+                "effect": "【守军】、【协战15】、回合开始:炮击敌军横排随机区域"
+            },
+            {
+                "attack": 0,
+                "life": 80,
+                "effect": "【守军】、【协战17】、回合开始:炮击敌军横排随机区域"
+            },
+            {
+                "attack": 0,
+                "life": 85,
+                "effect": "【守军】、【协战19】、回合开始:炮击敌军横排随机区域"
+            },
+            {
+                "attack": 0,
+                "life": 90,
+                "effect": "【守军】、【协战22】、回合开始:炮击敌军横排随机区域"
+            },
+            {
+                "attack": 0,
+                "life": 95,
+                "effect": "【守军】、【协战25】、回合开始:炮击敌军横排随机区域"
+            }
+        ]
+    },
+    {
+        "id": 341,
+        "name": "黑旗舰队水手",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 3,
+        "type": 1,
+        "img": "/tiantanggang/heiqijianduishuishou.jpg",
+        "grade": "[1]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 2,
+                "life": 4,
+                "effect": "攻击前:若英雄生命高于敌方，自身攻击+1"
+            },
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "攻击前:若英雄生命高于敌方，自身攻击+1"
+            },
+            {
+                "attack": 3,
+                "life": 5,
+                "effect": "攻击前:若英雄生命高于敌方，自身+1/+1"
+            },
+            {
+                "attack": 4,
+                "life": 6,
+                "effect": "攻击前:若英雄生命高于敌方，自身+1/+1"
+            },
+            {
+                "attack": 4,
+                "life": 8,
+                "effect": "攻击前:若英雄生命高于敌方，自身+1/+2"
+            },
+            {
+                "attack": 5,
+                "life": 10,
+                "effect": "攻击前:若英雄生命高于敌方，自身+1/+2"
+            },
+            {
+                "attack": 6,
+                "life": 11,
+                "effect": "攻击前:若英雄生命高于敌方，自身+1/+3"
+            },
+            {
+                "attack": 7,
+                "life": 13,
+                "effect": "攻击前:若英雄生命高于敌方，自身+1/+3"
+            },
+            {
+                "attack": 8,
+                "life": 15,
+                "effect": "攻击前:若英雄生命高于敌方，自身+1/+4"
+            },
+            {
+                "attack": 9,
+                "life": 18,
+                "effect": "攻击前:若英雄生命高于敌方，自身+1/+4"
+            },
+            {
+                "attack": 9,
+                "life": 20,
+                "effect": "攻击前:若英雄生命高于敌方，自身+2/+4"
+            },
+            {
+                "attack": 10,
+                "life": 22,
+                "effect": "攻击前:若英雄生命高于敌方，自身+2/+4"
+            },
+            {
+                "attack": 11,
+                "life": 25,
+                "effect": "攻击前:若英雄生命高于敌方，自身+2/+4"
+            },
+            {
+                "attack": 13,
+                "life": 26,
+                "effect": "攻击前:若英雄生命高于敌方，自身+2/+5"
+            },
+            {
+                "attack": 15,
+                "life": 28,
+                "effect": "攻击前:若英雄生命高于敌方，自身+2/+5"
+            },
+            {
+                "attack": 16,
+                "life": 30,
+                "effect": "攻击前:若英雄生命高于敌方，自身+3/+5"
+            },
+            {
+                "attack": 18,
+                "life": 33,
+                "effect": "攻击前:若英雄生命高于敌方，自身+3/+5"
+            },
+            {
+                "attack": 20,
+                "life": 36,
+                "effect": "攻击前:若英雄生命高于敌方，自身+3/+6"
+            },
+            {
+                "attack": 23,
+                "life": 40,
+                "effect": "攻击前:若英雄生命高于敌方，自身+3/+7"
+            },
+            {
+                "attack": 25,
+                "life": 45,
+                "effect": "攻击前:若英雄生命高于敌方，自身+3/+8"
+            },
+            {
+                "attack": 28,
+                "life": 50,
+                "effect": "攻击前:若英雄生命高于敌方，自身+3/+10"
+            },
+            {
+                "attack": 30,
+                "life": 55,
+                "effect": "攻击前:若英雄生命高于敌方，自身+4/+10"
+            }
+        ]
+    },
+    {
+        "id": 342,
+        "name": "魔力风暴",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 3,
+        "type": 2,
+        "img": "/tiantanggang/molifengbao.jpg",
+        "grade": "[1]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成3点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成4点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成5点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成7点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成8点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成9点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成10点伤害、35%几率获得《真理石碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成12点伤害、35%几率获得《真理石碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成14点伤害、35%几率获得《真理石碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成16点伤害、50%几率获得《真理石碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成18点伤害、65%几率获得《真理石碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成20点伤害、65%几率获得《真理石碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成22点伤害、70%几率获得《真理石碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成24点伤害、70%几率获得《真理石碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成26点伤害、75%几率获得《真理石碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成28点伤害、75%几率获得《真理石碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成30点伤害、75%几率获得《真理石碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成32点伤害、75%几率获得《真理石碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成34点伤害、75%几率获得《真理石碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成36点伤害、75%几率获得《真理石碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成39点伤害、75%几率获得《真理石碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成42点伤害、75%几率获得《真理石碎片》"
+            }
+        ]
+    },
+    {
+        "id": 343,
+        "name": "不法交易",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 3,
+        "type": 2,
+        "img": "/tiantanggang/bufajiaoyi.jpg",
+        "grade": "[3]",
+        "tag": "[3]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "英雄生命-5，抽两张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "英雄生命-4，抽两张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "英雄生命-4，抽两张牌、敌方英雄生命-2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "英雄生命-3，抽两张牌、敌方英雄生命-2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "英雄生命-3，抽两张牌、敌方英雄生命-3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "英雄生命-3，抽两张牌、敌方英雄生命-4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "英雄生命-2，抽两张牌、敌方英雄生命-5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "英雄生命-2，抽两张牌、敌方英雄生命-6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "英雄生命-2，抽两张牌、敌方英雄生命-8"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "英雄生命-2，抽两张牌、敌方英雄生命-10"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、英雄生命-2，抽两张牌、敌方英雄生命-12"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、英雄生命-2，抽两张牌、敌方英雄生命-15"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、英雄生命-2，抽两张牌、敌方英雄生命-17"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、英雄生命-2，抽两张牌、敌方英雄生命-20"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、英雄生命-2，抽两张牌、敌方英雄生命-24"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、英雄生命-2，抽两张牌、敌方英雄生命-30"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、英雄生命-2，抽两张牌、敌方英雄生命-35"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、英雄生命-2，抽两张牌、敌方英雄生命-40"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、英雄生命-2，抽两张牌、敌方英雄生命-44"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、英雄生命-2，抽两张牌、敌方英雄生命-48"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、英雄生命-2，抽两张牌、敌方英雄生命-52"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、英雄生命-2，抽两张牌、敌方英雄生命-56"
+            }
+        ]
+    },
+    {
+        "id": 344,
+        "name": "黑市商人",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 3,
+        "type": 1,
+        "img": "/tiantanggang/heishishangren.jpg",
+        "grade": "[1]",
+        "tag": "[2,21]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 5,
+                "effect": "攻击前：人数多于敌方，吸取敌方英雄2点生命"
+            },
+            {
+                "attack": 2,
+                "life": 5,
+                "effect": "攻击前：人数多于敌方，吸取敌方英雄2点生命"
+            },
+            {
+                "attack": 2,
+                "life": 7,
+                "effect": "【魔防1】、攻击前：人数多于敌方，吸取敌方英雄2点生命"
+            },
+            {
+                "attack": 3,
+                "life": 7,
+                "effect": "【魔防1】、攻击前：人数多于敌方，吸取敌方英雄3点生命"
+            },
+            {
+                "attack": 3,
+                "life": 9,
+                "effect": "【魔防2】、攻击前：人数多于敌方，吸取敌方英雄3点生命"
+            },
+            {
+                "attack": 4,
+                "life": 9,
+                "effect": "【魔防2】、攻击前：人数多于敌方，吸取敌方英雄4点生命"
+            },
+            {
+                "attack": 5,
+                "life": 10,
+                "effect": "【魔防3】、攻击前：人数多于敌方，吸取敌方英雄4点生命"
+            },
+            {
+                "attack": 5,
+                "life": 12,
+                "effect": "【魔防3】、攻击前：人数多于敌方，吸取敌方英雄5点生命"
+            },
+            {
+                "attack": 6,
+                "life": 13,
+                "effect": "【魔防4】、攻击前：人数多于敌方，吸取敌方英雄5点生命"
+            },
+            {
+                "attack": 6,
+                "life": 15,
+                "effect": "【魔防4】、攻击前：人数多于敌方，吸取敌方英雄6点生命"
+            },
+            {
+                "attack": 7,
+                "life": 16,
+                "effect": "【魔防5】、攻击前：人数多于敌方，吸取敌方英雄6点生命"
+            },
+            {
+                "attack": 7,
+                "life": 19,
+                "effect": "【魔防5】、攻击前：人数多于敌方，吸取敌方英雄7点生命"
+            },
+            {
+                "attack": 8,
+                "life": 19,
+                "effect": "【魔防5】、攻击前：人数多于敌方，吸取敌方英雄8点生命"
+            },
+            {
+                "attack": 9,
+                "life": 19,
+                "effect": "【魔防6】、攻击前：人数多于敌方，吸取敌方英雄9点生命"
+            },
+            {
+                "attack": 10,
+                "life": 20,
+                "effect": "【魔防7】、攻击前：人数多于敌方，吸取敌方英雄10点生命"
+            },
+            {
+                "attack": 11,
+                "life": 22,
+                "effect": "【魔防7】、攻击前：人数多于敌方，吸取敌方英雄11点生命"
+            },
+            {
+                "attack": 12,
+                "life": 25,
+                "effect": "【魔防8】、攻击前：人数多于敌方，吸取敌方英雄12点生命"
+            },
+            {
+                "attack": 13,
+                "life": 29,
+                "effect": "【魔防9】、攻击前：人数多于敌方，吸取敌方英雄13点生命"
+            },
+            {
+                "attack": 14,
+                "life": 33,
+                "effect": "【魔防10】、攻击前：人数多于敌方，吸取敌方英雄14点生命"
+            },
+            {
+                "attack": 15,
+                "life": 36,
+                "effect": "【魔防12】、攻击前：人数多于敌方，吸取敌方英雄15点生命"
+            },
+            {
+                "attack": 16,
+                "life": 40,
+                "effect": "【魔防14】、攻击前：人数多于敌方，吸取敌方英雄16点生命"
+            },
+            {
+                "attack": 18,
+                "life": 42,
+                "effect": "【魔防16】、攻击前：人数多于敌方，吸取敌方英雄18点生命"
+            }
+        ]
+    },
+    {
+        "id": 345,
+        "name": "掠夺草人",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 3,
+        "type": 1,
+        "img": "/tiantanggang/lueduocaoren.jpg",
+        "grade": "[1]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 3,
+                "effect": "登场：敌方受到1点伤害、每当一个敌军死亡：随机友军攻击+1"
+            },
+            {
+                "attack": 0,
+                "life": 3,
+                "effect": "登场：敌方受到2点伤害、每当一个敌军死亡：随机友军攻击+1"
+            },
+            {
+                "attack": 0,
+                "life": 4,
+                "effect": "登场：敌方受到3点伤害、每当一个敌军死亡：随机友军攻击+1"
+            },
+            {
+                "attack": 0,
+                "life": 5,
+                "effect": "登场：敌方受到4点伤害、每当一个敌军死亡：随机友军攻击+1"
+            },
+            {
+                "attack": 0,
+                "life": 5,
+                "effect": "登场：敌方受到5点伤害、每当一个敌军死亡：随机友军攻击+2"
+            },
+            {
+                "attack": 0,
+                "life": 6,
+                "effect": "登场：敌方受到6点伤害、每当一个敌军死亡：随机友军攻击+2"
+            },
+            {
+                "attack": 0,
+                "life": 7,
+                "effect": "登场：敌方受到7点伤害、每当一个敌军死亡：随机友军攻击+2"
+            },
+            {
+                "attack": 0,
+                "life": 7,
+                "effect": "登场：敌方受到8点伤害、每当一个敌军死亡：随机友军攻击+3"
+            },
+            {
+                "attack": 0,
+                "life": 8,
+                "effect": "登场：敌方受到9点伤害、每当一个敌军死亡：随机友军攻击+3"
+            },
+            {
+                "attack": 0,
+                "life": 10,
+                "effect": "登场：敌方受到10点伤害、每当一个敌军死亡：随机友军攻击+3"
+            },
+            {
+                "attack": 0,
+                "life": 12,
+                "effect": "登场：敌方受到11点伤害、每当一个敌军死亡：随机友军攻击+3"
+            },
+            {
+                "attack": 0,
+                "life": 13,
+                "effect": "登场：敌方受到12点伤害、每当一个敌军死亡：随机友军攻击+4"
+            },
+            {
+                "attack": 0,
+                "life": 15,
+                "effect": "登场：敌方受到13点伤害、每当一个敌军死亡：随机友军攻击+4"
+            },
+            {
+                "attack": 0,
+                "life": 17,
+                "effect": "登场：敌方受到14点伤害、每当一个敌军死亡：随机友军攻击+5"
+            },
+            {
+                "attack": 0,
+                "life": 20,
+                "effect": "登场：敌方受到16点伤害、每当一个敌军死亡：随机友军攻击+5"
+            },
+            {
+                "attack": 0,
+                "life": 22,
+                "effect": "登场：敌方受到18点伤害、每当一个敌军死亡：随机友军攻击+6"
+            },
+            {
+                "attack": 0,
+                "life": 25,
+                "effect": "登场：敌方受到20点伤害、每当一个敌军死亡：随机友军攻击+6"
+            },
+            {
+                "attack": 0,
+                "life": 28,
+                "effect": "登场：敌方受到22点伤害、每当一个敌军死亡：随机友军攻击+7"
+            },
+            {
+                "attack": 0,
+                "life": 32,
+                "effect": "登场：敌方受到24点伤害、每当一个敌军死亡：随机友军攻击+7"
+            },
+            {
+                "attack": 0,
+                "life": 36,
+                "effect": "登场：敌方受到26点伤害、每当一个敌军死亡：随机友军攻击+8"
+            },
+            {
+                "attack": 0,
+                "life": 39,
+                "effect": "登场：敌方受到28点伤害、每当一个敌军死亡：随机友军攻击+8"
+            },
+            {
+                "attack": 0,
+                "life": 42,
+                "effect": "登场：敌方受到30点伤害、每当一个敌军死亡：随机友军攻击+9"
+            }
+        ]
+    },
+    {
+        "id": 346,
+        "name": "节日南瓜",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 3,
+        "type": 2,
+        "img": "/tiantanggang/jierinangua.jpg",
+        "grade": "[1]",
+        "tag": "[2]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体友军攻击+1、英雄生命+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体友军+1/+1、英雄生命+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体友军+1/+1、英雄生命+5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体友军+1/+2、英雄生命+6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体友军+1/+2、英雄生命+8"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体友军+2/+2、英雄生命+9"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体友军+2/+2、英雄生命+11"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体友军+2/+3、英雄生命+13"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体友军+2/+3、英雄生命+16"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体友军+3/+3、英雄生命+18"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体友军+3/+3、英雄生命+21"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体友军+3/+4、英雄生命+23"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体友军+3/+4、英雄生命+26"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体友军+3/+5、英雄生命+28"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体友军+4/+5、英雄生命+30"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体友军+5/+5、英雄生命+32"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体友军+5/+6、英雄生命+35"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体友军+6/+6、英雄生命+38"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体友军+6/+7、英雄生命+41"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体友军+7/+7、英雄生命+44"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体友军+8/+8、英雄生命+47"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体友军+9/+9、英雄生命+50"
+            }
+        ]
+    },
+    {
+        "id": 347,
+        "name": "酗酒醉汉",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 3,
+        "type": 1,
+        "img": "/tiantanggang/xujiuzuihan.jpg",
+        "grade": "[5]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 2,
+                "life": 5,
+                "effect": "登场、每当一个敌军死亡时:酒瓶投掷敌方横排随机区域（2点伤害）"
+            },
+            {
+                "attack": 2,
+                "life": 5,
+                "effect": "登场、每当一个敌军死亡时:酒瓶投掷敌方横排随机区域（2点伤害）"
+            },
+            {
+                "attack": 3,
+                "life": 8,
+                "effect": "登场、每当一个敌军死亡时:酒瓶投掷敌方横排随机区域（3点伤害）"
+            },
+            {
+                "attack": 3,
+                "life": 9,
+                "effect": "登场、每当一个敌军死亡时:酒瓶投掷敌方横排随机区域（3点伤害）"
+            },
+            {
+                "attack": 4,
+                "life": 10,
+                "effect": "登场、每当一个敌军死亡时:酒瓶投掷敌方横排随机区域（4点伤害）"
+            },
+            {
+                "attack": 5,
+                "life": 11,
+                "effect": "登场、每当一个敌军死亡时:酒瓶投掷敌方横排随机区域（5点伤害）"
+            },
+            {
+                "attack": 6,
+                "life": 12,
+                "effect": "登场、每当一个敌军死亡时:酒瓶投掷敌方横排随机区域（6点伤害）"
+            },
+            {
+                "attack": 7,
+                "life": 13,
+                "effect": "登场、每当一个敌军死亡时:酒瓶投掷敌方横排随机区域（7点伤害）"
+            },
+            {
+                "attack": 8,
+                "life": 15,
+                "effect": "登场、每当一个敌军死亡时:酒瓶投掷敌方横排随机区域（8点伤害）"
+            },
+            {
+                "attack": 9,
+                "life": 17,
+                "effect": "登场、每当一个敌军死亡时:酒瓶投掷敌方横排随机区域（9点伤害）"
+            },
+            {
+                "attack": 10,
+                "life": 20,
+                "effect": "登场、每当一个敌军死亡时:酒瓶投掷敌方横排随机区域（10点伤害）"
+            },
+            {
+                "attack": 11,
+                "life": 23,
+                "effect": "登场、每当一个敌军死亡时:酒瓶投掷敌方横排随机区域（11点伤害）"
+            },
+            {
+                "attack": 12,
+                "life": 26,
+                "effect": "登场、每当一个敌军死亡时:酒瓶投掷敌方横排随机区域（12点伤害）"
+            },
+            {
+                "attack": 13,
+                "life": 29,
+                "effect": "登场、每当一个敌军死亡时:酒瓶投掷敌方横排随机区域（13点伤害）"
+            },
+            {
+                "attack": 14,
+                "life": 32,
+                "effect": "登场、每当一个敌军死亡时:酒瓶投掷敌方横排随机区域（14点伤害）"
+            },
+            {
+                "attack": 15,
+                "life": 35,
+                "effect": "登场、每当一个敌军死亡时:酒瓶投掷敌方横排随机区域（15点伤害）"
+            },
+            {
+                "attack": 16,
+                "life": 39,
+                "effect": "登场、每当一个敌军死亡时:酒瓶投掷敌方横排随机区域（16点伤害）"
+            },
+            {
+                "attack": 18,
+                "life": 40,
+                "effect": "登场、每当一个敌军死亡时:酒瓶投掷敌方横排随机区域（18点伤害）"
+            },
+            {
+                "attack": 20,
+                "life": 42,
+                "effect": "登场、每当一个敌军死亡时:酒瓶投掷敌方横排随机区域（20点伤害）"
+            },
+            {
+                "attack": 22,
+                "life": 45,
+                "effect": "登场、每当一个敌军死亡时:酒瓶投掷敌方横排随机区域（22点伤害）"
+            },
+            {
+                "attack": 23,
+                "life": 49,
+                "effect": "登场、每当一个敌军死亡时:酒瓶投掷敌方横排随机区域（23点伤害）"
+            },
+            {
+                "attack": 24,
+                "life": 54,
+                "effect": "登场、每当一个敌军死亡时:酒瓶投掷敌方横排随机区域（24点伤害）"
+            }
+        ]
+    },
+    {
+        "id": 348,
+        "name": "心灵风暴",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 3,
+        "type": 2,
+        "img": "/tiantanggang/xinlingfengbao.jpg",
+        "grade": "[1]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域敌军吹回手上（敌军等级<=1）、敌方玩家弃一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域敌军吹回手上（敌军等级<=2）、敌方玩家弃一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域敌军吹回手上（敌军等级<=3）、敌方玩家弃一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域敌军吹回手上（敌军等级<=4）、敌方玩家弃一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域敌军吹回手上（敌军等级<=5）、敌方玩家弃一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域敌军吹回手上（敌军等级<=6）、敌方玩家弃一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域敌军吹回手上（敌军等级<=7）、敌方玩家弃一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域敌军吹回手上（敌军等级<=8）、敌方玩家弃一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域敌军吹回手上（敌军等级<=9）、敌方玩家弃一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域敌军吹回手上（敌军等级<=10）、敌方玩家弃一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域敌军吹回手上（敌军等级<=11）、敌方玩家弃一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域敌军吹回手上（敌军等级<=12）、敌方玩家弃一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域敌军吹回手上（敌军等级<=13）、敌方玩家弃一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域敌军吹回手上（敌军等级<=14）、敌方玩家弃一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域敌军吹回手上（敌军等级<=15）、敌方玩家弃一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域敌军吹回手上（敌军等级<=16）、敌方玩家弃一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域敌军吹回手上（敌军等级<=17）、敌方玩家弃一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域敌军吹回手上（敌军等级<=18）、敌方玩家弃一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域敌军吹回手上（敌军等级<=19）、敌方玩家弃一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域敌军吹回手上（敌军等级<=20）、敌方玩家弃一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域敌军吹回手上（敌军等级<=21）、敌方玩家弃一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域敌军吹回手上（敌军等级<=22）、敌方玩家弃一张牌"
+            }
+        ]
+    },
+    {
+        "id": 349,
+        "name": "黑金土匪",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 3,
+        "type": 1,
+        "img": "/tiantanggang/heijintufei.jpg",
+        "grade": "[1]",
+        "tag": "[21]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "【魔防1】、攻击前:友军数量大于敌军，自身+1/+1"
+            },
+            {
+                "attack": 4,
+                "life": 4,
+                "effect": "【魔防2】、攻击前:友军数量大于敌军，自身+1/+1"
+            },
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "【魔防3】、攻击前:友军数量大于敌军，自身+1/+1"
+            },
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "【魔防4】、攻击前:友军数量大于敌军，自身+1/+2"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "【魔防5】、攻击前:友军数量大于敌军，自身+1/+2"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "【魔防6】、攻击前:友军数量大于敌军，自身+2/+2"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "【魔防7】、攻击前:友军数量大于敌军，自身+2/+2"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "【魔防8】、攻击前:友军数量大于敌军，自身+2/+3"
+            },
+            {
+                "attack": 11,
+                "life": 12,
+                "effect": "【魔防9】、攻击前:友军数量大于敌军，自身+2/+3"
+            },
+            {
+                "attack": 13,
+                "life": 13,
+                "effect": "【魔防10】、攻击前:友军数量大于敌军，自身+3/+3"
+            },
+            {
+                "attack": 14,
+                "life": 15,
+                "effect": "【魔防11】、攻击前:友军数量大于敌军，自身+3/+3"
+            },
+            {
+                "attack": 16,
+                "life": 16,
+                "effect": "【魔防12】、攻击前:友军数量大于敌军，自身+3/+4"
+            },
+            {
+                "attack": 17,
+                "life": 18,
+                "effect": "【魔防13】、攻击前:友军数量大于敌军，自身+3/+4"
+            },
+            {
+                "attack": 19,
+                "life": 19,
+                "effect": "【魔防14】、攻击前:友军数量大于敌军，自身+4/+4"
+            },
+            {
+                "attack": 21,
+                "life": 21,
+                "effect": "【魔防15】、攻击前:友军数量大于敌军，自身+4/+4"
+            },
+            {
+                "attack": 23,
+                "life": 23,
+                "effect": "【魔防16】、攻击前:友军数量大于敌军，自身+4/+5"
+            },
+            {
+                "attack": 25,
+                "life": 25,
+                "effect": "【魔防17】、攻击前:友军数量大于敌军，自身+4/+5"
+            },
+            {
+                "attack": 27,
+                "life": 27,
+                "effect": "【魔防18】、攻击前:友军数量大于敌军，自身+5/+5"
+            },
+            {
+                "attack": 29,
+                "life": 29,
+                "effect": "【魔防19】、攻击前:友军数量大于敌军，自身+5/+5"
+            },
+            {
+                "attack": 30,
+                "life": 30,
+                "effect": "【魔防20】、攻击前:友军数量大于敌军，自身+6/+6"
+            },
+            {
+                "attack": 32,
+                "life": 32,
+                "effect": "【魔防22】、攻击前:友军数量大于敌军，自身+6/+6"
+            },
+            {
+                "attack": 35,
+                "life": 35,
+                "effect": "【魔防24】、攻击前:友军数量大于敌军，自身+6/+6"
+            }
+        ]
+    },
+    {
+        "id": 350,
+        "name": "南瓜大婶",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 4,
+        "type": 1,
+        "img": "/tiantanggang/nanguadashen.jpg",
+        "grade": "[0]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 2,
+                "life": 3,
+                "effect": "登场:将南瓜扔向随机敌军，2点伤害"
+            },
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "登场:将南瓜扔向随机敌军，2点伤害"
+            },
+            {
+                "attack": 3,
+                "life": 5,
+                "effect": "登场:将南瓜扔向随机敌军，3点伤害"
+            },
+            {
+                "attack": 4,
+                "life": 7,
+                "effect": "登场:将南瓜扔向随机敌军，3点伤害"
+            },
+            {
+                "attack": 5,
+                "life": 9,
+                "effect": "登场:将南瓜扔向随机敌军，4点伤害"
+            },
+            {
+                "attack": 6,
+                "life": 11,
+                "effect": "登场:将南瓜扔向随机敌军，4点伤害"
+            },
+            {
+                "attack": 7,
+                "life": 14,
+                "effect": "登场:将南瓜扔向随机敌军，5点伤害"
+            },
+            {
+                "attack": 8,
+                "life": 16,
+                "effect": "登场:将南瓜扔向随机敌军，6点伤害"
+            },
+            {
+                "attack": 9,
+                "life": 18,
+                "effect": "登场:将南瓜扔向随机敌军，7点伤害"
+            },
+            {
+                "attack": 10,
+                "life": 20,
+                "effect": "登场:将南瓜扔向随机敌军，8点伤害"
+            },
+            {
+                "attack": 11,
+                "life": 23,
+                "effect": "登场:将南瓜扔向随机敌军，9点伤害"
+            },
+            {
+                "attack": 12,
+                "life": 26,
+                "effect": "登场:将南瓜扔向随机敌军，10点伤害"
+            },
+            {
+                "attack": 13,
+                "life": 29,
+                "effect": "登场:将南瓜扔向随机敌军，11点伤害"
+            },
+            {
+                "attack": 14,
+                "life": 33,
+                "effect": "登场:将南瓜扔向随机敌军，12点伤害"
+            },
+            {
+                "attack": 15,
+                "life": 36,
+                "effect": "登场:将南瓜扔向随机敌军，13点伤害"
+            },
+            {
+                "attack": 16,
+                "life": 40,
+                "effect": "登场:将南瓜扔向随机敌军，15点伤害"
+            },
+            {
+                "attack": 17,
+                "life": 43,
+                "effect": "登场:将南瓜扔向随机敌军，17点伤害"
+            },
+            {
+                "attack": 19,
+                "life": 48,
+                "effect": "登场:将南瓜扔向随机敌军，19点伤害"
+            },
+            {
+                "attack": 21,
+                "life": 52,
+                "effect": "登场:将南瓜扔向随机敌军，21点伤害"
+            },
+            {
+                "attack": 24,
+                "life": 56,
+                "effect": "登场:将南瓜扔向随机敌军，24点伤害"
+            },
+            {
+                "attack": 27,
+                "life": 58,
+                "effect": "登场:将南瓜扔向随机敌军，27点伤害"
+            },
+            {
+                "attack": 30,
+                "life": 60,
+                "effect": "登场:将南瓜扔向随机敌军，30点伤害"
+            }
+        ]
+    },
+    {
+        "id": 351,
+        "name": "妖娆女巫",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 4,
+        "type": 1,
+        "img": "/tiantanggang/yaoraonvwu.jpg",
+        "grade": "[2]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 2,
+                "effect": "攻击前:本回合你使用过法术，随机敌军回手，若是传记，另一友军+1/+1"
+            },
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "攻击前:本回合你使用过法术，随机敌军回手，若是传记，另一友军+1/+1"
+            },
+            {
+                "attack": 4,
+                "life": 4,
+                "effect": "攻击前:本回合你使用过法术，随机敌军回手，若是传记，另一友军+1/+1"
+            },
+            {
+                "attack": 5,
+                "life": 4,
+                "effect": "攻击前:本回合你使用过法术，随机敌军回手，自身攻击+1，若是传记，另一友军+1/+1"
+            },
+            {
+                "attack": 6,
+                "life": 5,
+                "effect": "攻击前:本回合你使用过法术，随机敌军回手，自身攻击+1，若是传记，另一友军+1/+1"
+            },
+            {
+                "attack": 7,
+                "life": 6,
+                "effect": "攻击前:本回合你使用过法术，随机敌军回手，自身攻击+2，若是传记，另一友军+2/+2"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "攻击前:本回合你使用过法术，随机敌军回手，自身攻击+2，若是传记，另一友军+2/+2"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "攻击前:本回合你使用过法术，随机敌军回手，自身攻击+3，若是传记，另一友军+3/+3"
+            },
+            {
+                "attack": 10,
+                "life": 11,
+                "effect": "攻击前:本回合你使用过法术，随机敌军回手，自身攻击+3，若是传记，另一友军+3/+3"
+            },
+            {
+                "attack": 11,
+                "life": 12,
+                "effect": "攻击前:本回合你使用过法术，随机敌军回手，自身攻击+4，若是传记，另一友军+4/+4"
+            },
+            {
+                "attack": 13,
+                "life": 13,
+                "effect": "攻击前:本回合你使用过法术，随机敌军回手，自身攻击+4，若是传记，另一友军+4/+4"
+            },
+            {
+                "attack": 14,
+                "life": 14,
+                "effect": "攻击前:本回合你使用过法术，随机敌军回手，自身攻击+5，若是传记，另一友军+5/+5"
+            },
+            {
+                "attack": 15,
+                "life": 15,
+                "effect": "攻击前:本回合你使用过法术，随机敌军回手，自身攻击+6，若是传记，另一友军+6/+6"
+            },
+            {
+                "attack": 17,
+                "life": 17,
+                "effect": "攻击前:本回合你使用过法术，随机敌军回手，自身攻击+7，若是传记，另一友军+7/+7"
+            },
+            {
+                "attack": 19,
+                "life": 19,
+                "effect": "攻击前:本回合你使用过法术，随机敌军回手，自身攻击+8，若是传记，另一友军+8/+8"
+            },
+            {
+                "attack": 21,
+                "life": 21,
+                "effect": "攻击前:本回合你使用过法术，随机敌军回手，自身攻击+9，若是传记，另一友军+9/+9"
+            },
+            {
+                "attack": 23,
+                "life": 23,
+                "effect": "攻击前:本回合你使用过法术，随机敌军回手，自身攻击+10，若是传记，另一友军+10/+10"
+            },
+            {
+                "attack": 25,
+                "life": 25,
+                "effect": "攻击前:本回合你使用过法术，随机敌军回手，自身攻击+11，若是传记，另一友军+11/+11"
+            },
+            {
+                "attack": 27,
+                "life": 27,
+                "effect": "攻击前:本回合你使用过法术，随机敌军回手，自身攻击+12，若是传记，另一友军+12/+12"
+            },
+            {
+                "attack": 30,
+                "life": 30,
+                "effect": "攻击前:本回合你使用过法术，随机敌军回手，自身攻击+13，若是传记，另一友军+13/+13"
+            },
+            {
+                "attack": 35,
+                "life": 31,
+                "effect": "攻击前:本回合你使用过法术，随机敌军回手，自身攻击+14，若是传记，另一友军+14/+14"
+            },
+            {
+                "attack": 39,
+                "life": 33,
+                "effect": "攻击前:本回合你使用过法术，随机敌军回手，自身攻击+15，若是传记，另一友军+15/+15"
+            }
+        ]
+    },
+    {
+        "id": 352,
+        "name": "黑旗舰队飞斧手",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 4,
+        "type": 1,
+        "img": "/tiantanggang/heiqijianduifeifushou.jpg",
+        "grade": "[1]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 2,
+                "life": 5,
+                "effect": "攻击前:若英雄生命高于敌方，向对面横排投掷飞斧，2点伤害"
+            },
+            {
+                "attack": 3,
+                "life": 6,
+                "effect": "攻击前:若英雄生命高于敌方，向对面横排投掷飞斧，3点伤害"
+            },
+            {
+                "attack": 4,
+                "life": 7,
+                "effect": "攻击前:若英雄生命高于敌方，向对面横排投掷飞斧，4点伤害"
+            },
+            {
+                "attack": 5,
+                "life": 8,
+                "effect": "攻击前:若英雄生命高于敌方，向对面横排投掷飞斧，5点伤害"
+            },
+            {
+                "attack": 6,
+                "life": 9,
+                "effect": "攻击前:若英雄生命高于敌方，向对面横排投掷飞斧，6点伤害"
+            },
+            {
+                "attack": 7,
+                "life": 11,
+                "effect": "攻击前:若英雄生命高于敌方，向对面横排投掷飞斧，7点伤害"
+            },
+            {
+                "attack": 8,
+                "life": 13,
+                "effect": "攻击前:若英雄生命高于敌方，向对面横排投掷飞斧，8点伤害"
+            },
+            {
+                "attack": 8,
+                "life": 18,
+                "effect": "攻击前:若英雄生命高于敌方，向对面横排投掷飞斧，8点伤害"
+            },
+            {
+                "attack": 9,
+                "life": 21,
+                "effect": "攻击前:若英雄生命高于敌方，向对面横排投掷飞斧，9点伤害"
+            },
+            {
+                "attack": 10,
+                "life": 24,
+                "effect": "攻击前:若英雄生命高于敌方，向对面横排投掷飞斧，10点伤害"
+            },
+            {
+                "attack": 11,
+                "life": 27,
+                "effect": "攻击前:若英雄生命高于敌方，向对面横排投掷飞斧，11点伤害"
+            },
+            {
+                "attack": 12,
+                "life": 30,
+                "effect": "攻击前:若英雄生命高于敌方，向对面横排投掷飞斧，12点伤害"
+            },
+            {
+                "attack": 13,
+                "life": 33,
+                "effect": "攻击前:若英雄生命高于敌方，向对面横排投掷飞斧，13点伤害"
+            },
+            {
+                "attack": 15,
+                "life": 35,
+                "effect": "攻击前:若英雄生命高于敌方，向对面横排投掷飞斧，15点伤害"
+            },
+            {
+                "attack": 16,
+                "life": 39,
+                "effect": "攻击前:若英雄生命高于敌方，向对面横排投掷飞斧，16点伤害"
+            },
+            {
+                "attack": 18,
+                "life": 40,
+                "effect": "攻击前:若英雄生命高于敌方，向对面横排投掷飞斧，18点伤害"
+            },
+            {
+                "attack": 20,
+                "life": 42,
+                "effect": "攻击前:若英雄生命高于敌方，向对面横排投掷飞斧，20点伤害"
+            },
+            {
+                "attack": 22,
+                "life": 45,
+                "effect": "攻击前:若英雄生命高于敌方，向对面横排投掷飞斧，22点伤害"
+            },
+            {
+                "attack": 25,
+                "life": 47,
+                "effect": "攻击前:若英雄生命高于敌方，向对面横排投掷飞斧，25点伤害"
+            },
+            {
+                "attack": 28,
+                "life": 50,
+                "effect": "攻击前:若英雄生命高于敌方，向对面横排投掷飞斧，28点伤害"
+            },
+            {
+                "attack": 32,
+                "life": 54,
+                "effect": "攻击前:若英雄生命高于敌方，向对面横排投掷飞斧，32点伤害"
+            },
+            {
+                "attack": 35,
+                "life": 60,
+                "effect": "攻击前:若英雄生命高于敌方，向对面横排投掷飞斧，35点伤害"
+            }
+        ]
+    },
+    {
+        "id": 353,
+        "name": "电光术士",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 4,
+        "type": 1,
+        "img": "/tiantanggang/dianguangshushi.jpg",
+        "grade": "[1]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 3,
+                "effect": "登场：敌方随机位置坠落闪电（1点伤害）、攻击前：人数高于对手，坠落闪电"
+            },
+            {
+                "attack": 1,
+                "life": 4,
+                "effect": "登场：敌方随机位置坠落闪电（1点伤害）、攻击前：人数高于对手，坠落闪电"
+            },
+            {
+                "attack": 2,
+                "life": 4,
+                "effect": "登场：敌方随机位置坠落闪电（2点伤害）、攻击前：人数高于对手，坠落闪电"
+            },
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "登场：敌方随机位置坠落闪电（3点伤害）、攻击前：人数高于对手，坠落闪电"
+            },
+            {
+                "attack": 4,
+                "life": 4,
+                "effect": "登场：敌方随机位置坠落闪电（4点伤害）、攻击前：人数高于对手，坠落闪电"
+            },
+            {
+                "attack": 5,
+                "life": 4,
+                "effect": "登场：敌方随机位置坠落闪电（5点伤害）、攻击前：人数高于对手，坠落闪电"
+            },
+            {
+                "attack": 6,
+                "life": 4,
+                "effect": "登场：敌方随机位置坠落闪电（6点伤害）、攻击前：人数高于对手，坠落闪电"
+            },
+            {
+                "attack": 7,
+                "life": 5,
+                "effect": "登场：敌方随机位置坠落闪电（7点伤害）、攻击前：人数高于对手，坠落闪电"
+            },
+            {
+                "attack": 8,
+                "life": 6,
+                "effect": "登场：敌方随机位置坠落闪电（8点伤害）、攻击前：人数高于对手，坠落闪电"
+            },
+            {
+                "attack": 9,
+                "life": 7,
+                "effect": "登场：敌方随机位置坠落闪电（9点伤害）、攻击前：人数高于对手，坠落闪电"
+            },
+            {
+                "attack": 10,
+                "life": 8,
+                "effect": "登场：敌方随机位置坠落闪电（10点伤害）、攻击前：人数高于对手，坠落闪电"
+            },
+            {
+                "attack": 11,
+                "life": 9,
+                "effect": "登场：敌方随机位置坠落闪电（11点伤害）、攻击前：人数高于对手，坠落闪电"
+            },
+            {
+                "attack": 12,
+                "life": 10,
+                "effect": "登场：敌方随机位置坠落闪电（12点伤害）、攻击前：人数高于对手，坠落闪电"
+            },
+            {
+                "attack": 13,
+                "life": 12,
+                "effect": "登场：敌方随机位置坠落闪电（13点伤害）、攻击前：人数高于对手，坠落闪电"
+            },
+            {
+                "attack": 14,
+                "life": 14,
+                "effect": "登场：敌方随机位置坠落闪电（14点伤害）、攻击前：人数高于对手，坠落闪电"
+            },
+            {
+                "attack": 15,
+                "life": 16,
+                "effect": "登场：敌方随机位置坠落闪电（15点伤害）、攻击前：人数高于对手，坠落闪电"
+            },
+            {
+                "attack": 17,
+                "life": 17,
+                "effect": "登场：敌方随机位置坠落闪电（17点伤害）、攻击前：人数高于对手，坠落闪电"
+            },
+            {
+                "attack": 19,
+                "life": 19,
+                "effect": "登场：敌方随机位置坠落闪电（19点伤害）、攻击前：人数高于对手，坠落闪电"
+            },
+            {
+                "attack": 21,
+                "life": 21,
+                "effect": "登场：敌方随机位置坠落闪电（21点伤害）、攻击前：人数高于对手，坠落闪电"
+            },
+            {
+                "attack": 24,
+                "life": 24,
+                "effect": "登场：敌方随机位置坠落闪电（24点伤害）、攻击前：人数高于对手，坠落闪电"
+            },
+            {
+                "attack": 27,
+                "life": 27,
+                "effect": "登场：敌方随机位置坠落闪电（27点伤害）、攻击前：人数高于对手，坠落闪电"
+            },
+            {
+                "attack": 30,
+                "life": 30,
+                "effect": "登场：敌方随机位置坠落闪电（30点伤害）、攻击前：人数高于对手，坠落闪电"
+            }
+        ]
+    },
+    {
+        "id": 354,
+        "name": "符文·浪花快剑",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 4,
+        "type": 4,
+        "img": "/tiantanggang/fuwen_langhuakuaijian.jpg",
+        "grade": "[2]",
+        "tag": "[2,6]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2/1黑水快剑手-lv1、回合开始：2个先攻友军+1/+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2/2黑水快剑手-lv2、回合开始：2个先攻友军+1/+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤3/2黑水快剑手-lv3、回合开始：2个先攻友军+1/+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤3/3黑水快剑手-lv4、回合开始：2个先攻友军+2/+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤4/3黑水快剑手-lv5、回合开始：2个先攻友军+2/+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤5/3黑水快剑手-lv6、回合开始：2个先攻友军+2/+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤5/4黑水快剑手-lv7、回合开始：2个先攻友军+3/+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤6/4黑水快剑手-lv8、回合开始：2个先攻友军+3/+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤7/4黑水快剑手-lv9、回合开始：2个先攻友军+3/+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤8/5黑水快剑手-lv10、回合开始：2个先攻友军+3/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤9/5黑水快剑手-lv11、回合开始：2个先攻友军+3/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤10/5黑水快剑手-lv12、回合开始：2个先攻友军+4/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤11/6黑水快剑手-lv13、回合开始：2个先攻友军+4/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤12/7黑水快剑手-lv14、回合开始：2个先攻友军+5/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤13/9黑水快剑手-lv15、回合开始：2个先攻友军+5/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤15/9黑水快剑手-lv16、回合开始：2个先攻友军+5/+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤17/9黑水快剑手-lv17、回合开始：2个先攻友军+5/+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤19/10黑水快剑手-lv18、回合开始：2个先攻友军+6/+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤21/12黑水快剑手-lv19、回合开始：2个先攻友军+6/+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤23/13黑水快剑手-lv20、回合开始：2个先攻友军+6/+4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤26/13黑水快剑手-lv21、回合开始：2个先攻友军+6/+4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤29/13黑水快剑手-lv22、回合开始：2个先攻友军+7/+4"
+            }
+        ]
+    },
+    {
+        "id": 355,
+        "name": "恶犬屠夫",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 5,
+        "type": 1,
+        "img": "/tiantanggang/equantufu.jpg",
+        "grade": "[0]",
+        "tag": "[24]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "登场:召唤1/1凶恶幼犬-lv1"
+            },
+            {
+                "attack": 4,
+                "life": 4,
+                "effect": "登场:召唤1/1凶恶幼犬-lv1"
+            },
+            {
+                "attack": 4,
+                "life": 6,
+                "effect": "登场:召唤1/1凶恶幼犬-lv2"
+            },
+            {
+                "attack": 4,
+                "life": 7,
+                "effect": "登场:召唤2个1/1凶恶幼犬-lv2"
+            },
+            {
+                "attack": 5,
+                "life": 9,
+                "effect": "登场:召唤2个1/1凶恶幼犬-lv2"
+            },
+            {
+                "attack": 6,
+                "life": 11,
+                "effect": "登场:召唤2个1/2凶恶幼犬-lv3"
+            },
+            {
+                "attack": 7,
+                "life": 14,
+                "effect": "登场:召唤2个2/2凶恶幼犬-lv4"
+            },
+            {
+                "attack": 8,
+                "life": 18,
+                "effect": "登场:召唤2个2/2凶恶幼犬-lv5"
+            },
+            {
+                "attack": 9,
+                "life": 21,
+                "effect": "登场:召唤2个2/2凶恶幼犬-lv6"
+            },
+            {
+                "attack": 10,
+                "life": 25,
+                "effect": "登场:召唤2个2/2凶恶幼犬-lv7"
+            },
+            {
+                "attack": 11,
+                "life": 28,
+                "effect": "登场:召唤2个2/3凶恶幼犬-lv8"
+            },
+            {
+                "attack": 12,
+                "life": 32,
+                "effect": "登场:召唤2个3/3凶恶幼犬-lv9"
+            },
+            {
+                "attack": 13,
+                "life": 35,
+                "effect": "登场:召唤2个3/3凶恶幼犬-lv10"
+            },
+            {
+                "attack": 14,
+                "life": 38,
+                "effect": "登场:召唤2个4/4凶恶幼犬-lv11"
+            },
+            {
+                "attack": 15,
+                "life": 41,
+                "effect": "登场:召唤2个5/4凶恶幼犬-lv12"
+            },
+            {
+                "attack": 16,
+                "life": 44,
+                "effect": "登场:召唤2个6/5凶恶幼犬-lv13"
+            },
+            {
+                "attack": 17,
+                "life": 48,
+                "effect": "登场:召唤2个6/6凶恶幼犬-lv14"
+            },
+            {
+                "attack": 18,
+                "life": 52,
+                "effect": "登场:召唤2个7/7凶恶幼犬-lv15"
+            },
+            {
+                "attack": 21,
+                "life": 56,
+                "effect": "登场:召唤2个8/8凶恶幼犬-lv16"
+            },
+            {
+                "attack": 24,
+                "life": 60,
+                "effect": "登场:召唤2个9/9凶恶幼犬-lv17"
+            },
+            {
+                "attack": 27,
+                "life": 66,
+                "effect": "登场:召唤2个10/10凶恶幼犬-lv18"
+            },
+            {
+                "attack": 30,
+                "life": 72,
+                "effect": "登场:召唤2个11/11凶恶幼犬-lv19"
+            }
+        ]
+    },
+    {
+        "id": 356,
+        "name": "传记·风暴之夜",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 1,
+        "type": 3,
+        "img": "/tiantanggang/zhuanji_fengbaozhiye.jpg",
+        "grade": "[1]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方生命-1、获得【传记·抢滩登陆】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方生命-2、获得【传记·抢滩登陆】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方生命-3、获得【传记·抢滩登陆】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方生命-4、获得【传记·抢滩登陆】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方生命-5、获得【传记·抢滩登陆】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方生命-6、获得【传记·抢滩登陆】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方生命-7、获得【传记·抢滩登陆】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方生命-8、获得【传记·抢滩登陆】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方生命-9、获得【传记·抢滩登陆】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方生命-10、获得【传记·抢滩登陆】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方生命-11、获得【传记·抢滩登陆】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方生命-12、获得【传记·抢滩登陆】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方生命-13、获得【传记·抢滩登陆】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方生命-14、获得【传记·抢滩登陆】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方生命-15、获得【传记·抢滩登陆】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方生命-16、获得【传记·抢滩登陆】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方生命-17、获得【传记·抢滩登陆】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方生命-18、获得【传记·抢滩登陆】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方生命-19、获得【传记·抢滩登陆】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方生命-20、获得【传记·抢滩登陆】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方生命-22、获得【传记·抢滩登陆】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方生命-24、获得【传记·抢滩登陆】"
+            }
+        ]
+    },
+    {
+        "id": 357,
+        "name": "传记·抢滩登陆",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 2,
+        "type": 3,
+        "img": "/tiantanggang/zhuanji_qiangtandenglu.jpg",
+        "grade": "[1]",
+        "tag": "[2]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄1点生命、获得【传记·残酷掠夺】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄2点生命、获得【传记·残酷掠夺】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄3点生命、获得【传记·残酷掠夺】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄4点生命、获得【传记·残酷掠夺】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄5点生命、获得【传记·残酷掠夺】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄6点生命、获得【传记·残酷掠夺】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄7点生命、获得【传记·残酷掠夺】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄8点生命、获得【传记·残酷掠夺】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄9点生命、获得【传记·残酷掠夺】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄10点生命、获得【传记·残酷掠夺】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄11点生命、获得【传记·残酷掠夺】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄12点生命、获得【传记·残酷掠夺】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄13点生命、获得【传记·残酷掠夺】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄14点生命、获得【传记·残酷掠夺】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄15点生命、获得【传记·残酷掠夺】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄16点生命、获得【传记·残酷掠夺】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄17点生命、获得【传记·残酷掠夺】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄18点生命、获得【传记·残酷掠夺】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄19点生命、获得【传记·残酷掠夺】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄20点生命、获得【传记·残酷掠夺】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄22点生命、获得【传记·残酷掠夺】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄24点生命、获得【传记·残酷掠夺】"
+            }
+        ]
+    },
+    {
+        "id": 358,
+        "name": "传记·残酷掠夺",
+        "zhenyin": 4,
+        "quality": 2,
+        "cost": 3,
+        "type": 3,
+        "img": "/tiantanggang/zhuanji_cankulueduo.jpg",
+        "grade": "[1]",
+        "tag": "[2]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄1点生命、若你的生命高于对手:召唤水手-lv1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄2点生命、若你的生命高于对手:召唤水手-lv2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄3点生命、若你的生命高于对手:召唤水手-lv3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄4点生命、若你的生命高于对手:召唤水手-lv4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄5点生命、若你的生命高于对手:召唤水手-lv5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄6点生命、若你的生命高于对手:召唤水手-lv6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄7点生命、若你的生命高于对手:召唤水手-lv7"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄8点生命、若你的生命高于对手:召唤水手-lv8"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄9点生命、若你的生命高于对手:召唤水手-lv9"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄10点生命、若你的生命高于对手:召唤水手-lv10"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄11点生命、若你的生命高于对手:召唤水手-lv11"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄12点生命、若你的生命高于对手:召唤水手-lv12"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄13点生命、若你的生命高于对手:召唤水手-lv13"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄14点生命、若你的生命高于对手:召唤水手-lv14"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄15点生命、若你的生命高于对手:召唤水手-lv15"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄16点生命、若你的生命高于对手:召唤水手-lv16"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄17点生命、若你的生命高于对手:召唤水手-lv17"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄18点生命、若你的生命高于对手:召唤水手-lv18"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄19点生命、若你的生命高于对手:召唤水手-lv19"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄20点生命、若你的生命高于对手:召唤水手-lv20"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄22点生命、若你的生命高于对手:召唤水手-lv21"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "掠夺敌方英雄24点生命、若你的生命高于对手:召唤水手-lv22"
+            }
+        ]
+    },
+    {
+        "id": 359,
+        "name": "走私狂徒",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 2,
+        "type": 1,
+        "img": "/tiantanggang/zousikuangtu.jpg",
+        "grade": "[2]",
+        "tag": "[2,3,19,24]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 1,
+                "effect": "登场:召唤4/5珍奇兽-lv1"
+            },
+            {
+                "attack": 1,
+                "life": 1,
+                "effect": "登场:召唤5/6珍奇兽-lv2"
+            },
+            {
+                "attack": 1,
+                "life": 1,
+                "effect": "登场:召唤6/7珍奇兽-lv3"
+            },
+            {
+                "attack": 2,
+                "life": 1,
+                "effect": "【洞察1】、登场:召唤7/9珍奇兽-lv4"
+            },
+            {
+                "attack": 2,
+                "life": 1,
+                "effect": "【洞察1】、登场:召唤8/10珍奇兽-lv5"
+            },
+            {
+                "attack": 3,
+                "life": 1,
+                "effect": "【洞察1】、登场:召唤9/11珍奇兽-lv6"
+            },
+            {
+                "attack": 4,
+                "life": 2,
+                "effect": "【洞察1】、登场:召唤11/13珍奇兽-lv7"
+            },
+            {
+                "attack": 5,
+                "life": 2,
+                "effect": "【洞察1】、登场:召唤12/15珍奇兽-lv8"
+            },
+            {
+                "attack": 6,
+                "life": 3,
+                "effect": "【洞察1】、登场:召唤13/18珍奇兽-lv9"
+            },
+            {
+                "attack": 7,
+                "life": 3,
+                "effect": "【洞察1】、登场:召唤15/20珍奇兽-lv10"
+            },
+            {
+                "attack": 8,
+                "life": 4,
+                "effect": "【洞察1】、登场:召唤16/24珍奇兽-lv11"
+            },
+            {
+                "attack": 9,
+                "life": 4,
+                "effect": "【洞察1】、登场:召唤18/28珍奇兽-lv12"
+            },
+            {
+                "attack": 10,
+                "life": 5,
+                "effect": "【洞察1】、登场:召唤20/30珍奇兽-lv13"
+            },
+            {
+                "attack": 11,
+                "life": 5,
+                "effect": "【洞察1】、登场:召唤22/35珍奇兽-lv14"
+            },
+            {
+                "attack": 12,
+                "life": 6,
+                "effect": "【洞察1】、登场:召唤24/40珍奇兽-lv15"
+            },
+            {
+                "attack": 13,
+                "life": 7,
+                "effect": "【洞察1】、登场:召唤25/45珍奇兽-lv16"
+            },
+            {
+                "attack": 15,
+                "life": 8,
+                "effect": "【洞察1】、登场:召唤27/50珍奇兽-lv17"
+            },
+            {
+                "attack": 16,
+                "life": 10,
+                "effect": "【洞察1】、登场:召唤30/55珍奇兽-lv18"
+            },
+            {
+                "attack": 18,
+                "life": 10,
+                "effect": "【洞察1】、登场:召唤33/60珍奇兽-lv19"
+            },
+            {
+                "attack": 20,
+                "life": 10,
+                "effect": "【洞察1】、登场:召唤36/66珍奇兽-lv20"
+            },
+            {
+                "attack": 22,
+                "life": 12,
+                "effect": "【洞察1】、登场:召唤39/72珍奇兽-lv21"
+            },
+            {
+                "attack": 25,
+                "life": 13,
+                "effect": "【洞察1】、登场:召唤42/78珍奇兽-lv22"
+            }
+        ]
+    },
+    {
+        "id": 360,
+        "name": "异域驯兽使",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 2,
+        "type": 1,
+        "img": "/tiantanggang/yiyuxunshoushi.jpg",
+        "grade": "[3]",
+        "tag": "[3,12,17]",
+        "data": [
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "唤醒其他迟缓友军"
+            },
+            {
+                "attack": 3,
+                "life": 2,
+                "effect": "唤醒其他迟缓友军"
+            },
+            {
+                "attack": 4,
+                "life": 3,
+                "effect": "唤醒其他迟缓友军"
+            },
+            {
+                "attack": 4,
+                "life": 4,
+                "effect": "唤醒其他迟缓友军、登场:本回合隐形"
+            },
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "唤醒其他迟缓友军、登场:本回合隐形"
+            },
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "唤醒其他迟缓友军、登场:本回合隐形"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "唤醒其他迟缓友军、登场:本回合隐形"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "唤醒其他迟缓友军、登场:本回合隐形"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "唤醒其他迟缓友军、登场:本回合隐形"
+            },
+            {
+                "attack": 11,
+                "life": 10,
+                "effect": "唤醒其他迟缓友军、登场:本回合隐形"
+            },
+            {
+                "attack": 12,
+                "life": 12,
+                "effect": "【洞察1】、唤醒其他迟缓友军、登场:本回合隐形"
+            },
+            {
+                "attack": 13,
+                "life": 14,
+                "effect": "【洞察1】、唤醒其他迟缓友军、登场:本回合隐形"
+            },
+            {
+                "attack": 15,
+                "life": 15,
+                "effect": "【洞察1】、唤醒其他迟缓友军、登场:本回合隐形"
+            },
+            {
+                "attack": 17,
+                "life": 17,
+                "effect": "【洞察1】、唤醒其他迟缓友军、登场:本回合隐形"
+            },
+            {
+                "attack": 19,
+                "life": 19,
+                "effect": "【洞察1】、唤醒其他迟缓友军、登场:本回合隐形"
+            },
+            {
+                "attack": 21,
+                "life": 21,
+                "effect": "【洞察1】、唤醒其他迟缓友军、登场:本回合隐形"
+            },
+            {
+                "attack": 23,
+                "life": 23,
+                "effect": "【洞察1】、唤醒其他迟缓友军、登场:本回合隐形"
+            },
+            {
+                "attack": 25,
+                "life": 25,
+                "effect": "【洞察1】、唤醒其他迟缓友军、登场:本回合隐形"
+            },
+            {
+                "attack": 27,
+                "life": 27,
+                "effect": "【洞察1】、唤醒其他迟缓友军、登场:本回合隐形"
+            },
+            {
+                "attack": 29,
+                "life": 29,
+                "effect": "【洞察1】、唤醒其他迟缓友军、登场:本回合隐形"
+            },
+            {
+                "attack": 31,
+                "life": 31,
+                "effect": "【洞察1】、唤醒其他迟缓友军、登场:本回合隐形"
+            },
+            {
+                "attack": 33,
+                "life": 33,
+                "effect": "【洞察1】、唤醒其他迟缓友军、登场:本回合隐形"
+            }
+        ]
+    },
+    {
+        "id": 361,
+        "name": "海燕精卫",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 2,
+        "type": 1,
+        "img": "/tiantanggang/haiyanjingwei.jpg",
+        "grade": "[4]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 2,
+                "life": 1,
+                "effect": "攻击前:友军多于敌军则【枪击】"
+            },
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "攻击前:友军多于敌军则【枪击】"
+            },
+            {
+                "attack": 2,
+                "life": 3,
+                "effect": "登场:【枪击】、攻击前:友军多于敌军则【枪击】"
+            },
+            {
+                "attack": 2,
+                "life": 5,
+                "effect": "登场:【枪击】、攻击前:友军多于敌军则【枪击】"
+            },
+            {
+                "attack": 3,
+                "life": 6,
+                "effect": "登场:【枪击】、攻击前:友军多于敌军则【枪击】"
+            },
+            {
+                "attack": 3,
+                "life": 8,
+                "effect": "登场:【枪击】、攻击前:友军多于敌军则【枪击】，无敌军则枪击英雄"
+            },
+            {
+                "attack": 4,
+                "life": 9,
+                "effect": "登场:【枪击】、攻击前:友军多于敌军则【枪击】，无敌军则枪击英雄"
+            },
+            {
+                "attack": 4,
+                "life": 12,
+                "effect": "登场:【枪击】、攻击前:友军多于敌军则【枪击】，无敌军则枪击英雄"
+            },
+            {
+                "attack": 5,
+                "life": 13,
+                "effect": "登场:【枪击】、攻击前:友军多于敌军则【枪击】，无敌军则枪击英雄"
+            },
+            {
+                "attack": 6,
+                "life": 14,
+                "effect": "登场:【枪击】、攻击前:友军多于敌军则【枪击】，无敌军则枪击英雄"
+            },
+            {
+                "attack": 7,
+                "life": 15,
+                "effect": "登场:【枪击】、攻击前:友军多于敌军则【枪击】，无敌军则枪击英雄"
+            },
+            {
+                "attack": 8,
+                "life": 16,
+                "effect": "登场:【枪击】、攻击前:友军多于敌军则【枪击】，无敌军则枪击英雄"
+            },
+            {
+                "attack": 9,
+                "life": 17,
+                "effect": "登场:【枪击】、攻击前:友军多于敌军则【枪击】，无敌军则枪击英雄"
+            },
+            {
+                "attack": 10,
+                "life": 18,
+                "effect": "登场:【枪击】、攻击前:友军多于敌军则【枪击】，无敌军则枪击英雄"
+            },
+            {
+                "attack": 11,
+                "life": 19,
+                "effect": "登场:【枪击】、攻击前:友军多于敌军则【枪击】，无敌军则枪击英雄"
+            },
+            {
+                "attack": 12,
+                "life": 20,
+                "effect": "登场:【枪击】、攻击前:友军多于敌军则【枪击】，无敌军则枪击英雄"
+            },
+            {
+                "attack": 14,
+                "life": 22,
+                "effect": "登场:【枪击】、攻击前:友军多于敌军则【枪击】，无敌军则枪击英雄"
+            },
+            {
+                "attack": 16,
+                "life": 24,
+                "effect": "登场:【枪击】、攻击前:友军多于敌军则【枪击】，无敌军则枪击英雄"
+            },
+            {
+                "attack": 18,
+                "life": 26,
+                "effect": "登场:【枪击】、攻击前:友军多于敌军则【枪击】，无敌军则枪击英雄"
+            },
+            {
+                "attack": 20,
+                "life": 29,
+                "effect": "登场:【枪击】、攻击前:友军多于敌军则【枪击】，无敌军则枪击英雄"
+            },
+            {
+                "attack": 22,
+                "life": 32,
+                "effect": "登场:【枪击】、攻击前:友军多于敌军则【枪击】，无敌军则枪击英雄"
+            },
+            {
+                "attack": 24,
+                "life": 35,
+                "effect": "登场:【枪击】、攻击前:友军多于敌军则【枪击】，无敌军则枪击英雄"
+            }
+        ]
+    },
+    {
+        "id": 362,
+        "name": "红海猎魔人",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 2,
+        "type": 1,
+        "img": "/tiantanggang/honghailiemoren.jpg",
+        "grade": "[4]",
+        "tag": "[3,6]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 1,
+                "effect": "【先攻】、攻击前:本回合你每使用过一个法术或传记，随机敌军生命-1，自身攻击+1"
+            },
+            {
+                "attack": 4,
+                "life": 1,
+                "effect": "【先攻】、攻击前:本回合你每使用过一个法术或传记，随机敌军生命-1，自身攻击+1"
+            },
+            {
+                "attack": 5,
+                "life": 1,
+                "effect": "【先攻】、攻击前:本回合你每使用过一个法术或传记，随机敌军生命-1，自身攻击+1"
+            },
+            {
+                "attack": 6,
+                "life": 3,
+                "effect": "【先攻】、攻击前:本回合你每使用过一个法术或传记，随机敌军生命-1，自身攻击+1"
+            },
+            {
+                "attack": 7,
+                "life": 3,
+                "effect": "【先攻】、攻击前:本回合你每使用过一个法术或传记，随机敌军生命-1，自身攻击+2"
+            },
+            {
+                "attack": 8,
+                "life": 4,
+                "effect": "【先攻】、攻击前:本回合你每使用过一个法术或传记，随机敌军生命-1，自身攻击+2"
+            },
+            {
+                "attack": 9,
+                "life": 5,
+                "effect": "【洞察1】、【先攻】、攻击前:本回合你每使用过一个法术或传记，随机敌军生命-1，自身攻击+2"
+            },
+            {
+                "attack": 10,
+                "life": 6,
+                "effect": "【洞察1】、【先攻】、攻击前:本回合你每使用过一个法术或传记，随机敌军生命-2，自身攻击+2"
+            },
+            {
+                "attack": 11,
+                "life": 7,
+                "effect": "【洞察1】、【先攻】、攻击前:本回合你每使用过一个法术或传记，随机敌军生命-2，自身攻击+2"
+            },
+            {
+                "attack": 12,
+                "life": 7,
+                "effect": "【洞察1】、【先攻】、攻击前:本回合你每使用过一个法术或传记，随机敌军生命-2，自身攻击+2"
+            },
+            {
+                "attack": 13,
+                "life": 7,
+                "effect": "【洞察1】、【先攻】、攻击前:本回合你每使用过一个法术或传记，随机敌军生命-3，自身攻击+2"
+            },
+            {
+                "attack": 14,
+                "life": 8,
+                "effect": "【洞察1】、【先攻】、攻击前:本回合你每使用过一个法术或传记，随机敌军生命-3，自身攻击+3"
+            },
+            {
+                "attack": 15,
+                "life": 9,
+                "effect": "【洞察1】、【先攻】、攻击前:本回合你每使用过一个法术或传记，随机敌军生命-4，自身攻击+3"
+            },
+            {
+                "attack": 17,
+                "life": 10,
+                "effect": "【洞察1】、【先攻】、攻击前:本回合你每使用过一个法术或传记，随机敌军生命-4，自身攻击+4"
+            },
+            {
+                "attack": 19,
+                "life": 10,
+                "effect": "【洞察1】、【先攻】、攻击前:本回合你每使用过一个法术或传记，随机敌军生命-4，自身攻击+4"
+            },
+            {
+                "attack": 21,
+                "life": 11,
+                "effect": "【洞察1】、【先攻】、攻击前:本回合你每使用过一个法术或传记，随机敌军生命-5，自身攻击+5"
+            },
+            {
+                "attack": 23,
+                "life": 11,
+                "effect": "【洞察1】、【先攻】、攻击前:本回合你每使用过一个法术或传记，随机敌军生命-5，自身攻击+5"
+            },
+            {
+                "attack": 25,
+                "life": 12,
+                "effect": "【洞察1】、【先攻】、攻击前:本回合你每使用过一个法术或传记，随机敌军生命-6，自身攻击+6"
+            },
+            {
+                "attack": 27,
+                "life": 13,
+                "effect": "【洞察1】、【先攻】、攻击前:本回合你每使用过一个法术或传记，随机敌军生命-6，自身攻击+6"
+            },
+            {
+                "attack": 29,
+                "life": 15,
+                "effect": "【洞察1】、【先攻】、攻击前:本回合你每使用过一个法术或传记，随机敌军生命-7，自身攻击+7"
+            },
+            {
+                "attack": 32,
+                "life": 17,
+                "effect": "【洞察1】、【先攻】、攻击前:本回合你每使用过一个法术或传记，随机敌军生命-7，自身攻击+7"
+            },
+            {
+                "attack": 35,
+                "life": 18,
+                "effect": "【洞察1】、【先攻】、攻击前:本回合你每使用过一个法术或传记，随机敌军生命-8，自身攻击+8"
+            }
+        ]
+    },
+    {
+        "id": 363,
+        "name": "海神赐福",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 2,
+        "type": 2,
+        "img": "/tiantanggang/haishencifu.jpg",
+        "grade": "[2]",
+        "tag": "[2,3,25]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机友军+1/+1获得【回命】、抽一张牌、无友军则再抽一张牌（3费）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机友军+1/+2获得【回命】、抽一张牌、无友军则再抽一张牌（3费）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机友军+2/+2获得【回命】、抽一张牌、无友军则再抽一张牌（3费）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机友军+2/+2获得【回命】、抽一张牌、无友军则再抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机友军+3/+2获得【回命】、抽一张牌、无友军则再抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、随机友军+3/+3获得【回命】、抽一张牌、无友军则再抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、随机友军+4/+3获得【回命】、抽一张牌、无友军则再抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、随机友军+4/+5获得【回命】、抽一张牌、无友军则再抽一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、随机友军+5/+5获得【回命】、抽一张牌、无友军则再抽一张牌并且【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、随机友军+6/+6获得【回命】、抽一张牌、无友军则再抽一张牌并且【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、随机友军+7/+7获得【回命】、抽一张牌、无友军则再抽一张牌并且【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、随机友军+8/+8获得【回命】、抽一张牌、无友军则再抽一张牌并且【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、随机友军+9/+9获得【回命】、抽一张牌、无友军则再抽一张牌并且【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、随机友军+10/+10获得【回命】、抽一张牌、无友军则再抽一张牌并且【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、随机友军+11/+11获得【回命】、抽一张牌、无友军则再抽一张牌并且【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、随机友军+12/+12获得【回命】、抽一张牌、无友军则再抽一张牌并且【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、随机友军+13/+14获得【回命】、抽一张牌、无友军则再抽一张牌并且【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、随机友军+15/+15获得【回命】、抽一张牌、无友军则再抽一张牌并且【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、随机友军+17/+17获得【回命】、抽一张牌、无友军则再抽一张牌并且【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、随机友军+19/+19获得【回命】、抽一张牌、无友军则再抽一张牌并且【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、随机友军+21/+21获得【回命】、抽一张牌、无友军则再抽一张牌并且【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "【洞察1】、随机友军+23/+23获得【回命】、抽一张牌、无友军则再抽一张牌并且【洞察1】"
+            }
+        ]
+    },
+    {
+        "id": 364,
+        "name": "快乐使者",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 2,
+        "type": 1,
+        "img": "/tiantanggang/kuaileshizhe.jpg",
+        "grade": "[2]",
+        "tag": "[23,25]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 1,
+                "effect": "登场:你的一张手牌法力-2，若你无手牌，则抽一张牌"
+            },
+            {
+                "attack": 2,
+                "life": 1,
+                "effect": "登场:你的一张手牌法力-2，若你无手牌，则抽一张牌"
+            },
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "登场:你的一张手牌法力-2，若你无手牌，则抽一张牌"
+            },
+            {
+                "attack": 3,
+                "life": 2,
+                "effect": "登场:你的一张手牌法力-2，若你无手牌，则抽一张牌"
+            },
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "登场:你的一张手牌法力-2，若你无手牌，则抽一张牌"
+            },
+            {
+                "attack": 4,
+                "life": 3,
+                "effect": "登场:你的一张手牌法力-2，若你无手牌，则抽一张牌"
+            },
+            {
+                "attack": 5,
+                "life": 3,
+                "effect": "登场:你的一张手牌法力-2，若你无手牌，则抽一张牌"
+            },
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "登场:你的一张手牌法力-2，若你无手牌，则抽一张牌"
+            },
+            {
+                "attack": 6,
+                "life": 5,
+                "effect": "登场:你的一张手牌法力-2，若你无手牌，则抽一张牌"
+            },
+            {
+                "attack": 7,
+                "life": 5,
+                "effect": "登场:你的一张手牌法力-2，若你无手牌，则抽一张牌"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "登场:你的一张手牌法力-2，若你无手牌，则抽一张牌"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "登场:你的一张手牌法力-2，若你无手牌，则抽一张牌"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "登场:你的一张手牌法力-2，若你无手牌，则抽一张牌"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "登场:你的一张手牌法力-2，若你无手牌，则抽一张牌"
+            },
+            {
+                "attack": 12,
+                "life": 11,
+                "effect": "登场:你的一张手牌法力-2，若你无手牌，则抽一张牌"
+            },
+            {
+                "attack": 13,
+                "life": 13,
+                "effect": "登场:你的一张手牌法力-2，若你无手牌，则抽一张牌"
+            },
+            {
+                "attack": 15,
+                "life": 14,
+                "effect": "登场:你的一张手牌法力-2，若你无手牌，则抽一张牌"
+            },
+            {
+                "attack": 16,
+                "life": 16,
+                "effect": "登场:你的一张手牌法力-2，若你无手牌，则抽一张牌"
+            },
+            {
+                "attack": 18,
+                "life": 17,
+                "effect": "登场:你的一张手牌法力-2，若你无手牌，则抽一张牌"
+            },
+            {
+                "attack": 19,
+                "life": 19,
+                "effect": "登场:你的一张手牌法力-2，若你无手牌，则抽一张牌"
+            },
+            {
+                "attack": 21,
+                "life": 21,
+                "effect": "登场:你的一张手牌法力-2，若你无手牌，则抽一张牌"
+            },
+            {
+                "attack": 23,
+                "life": 23,
+                "effect": "登场:你的一张手牌法力-2，若你无手牌，则抽一张牌"
+            }
+        ]
+    },
+    {
+        "id": 365,
+        "name": "幸福空间",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 3,
+        "type": 1,
+        "img": "/tiantanggang/xingfukongjian.jpg",
+        "grade": "[1]",
+        "tag": "[2,25]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 4,
+                "effect": "回合结束:若英雄生命高于敌方，抽一张牌"
+            },
+            {
+                "attack": 1,
+                "life": 6,
+                "effect": "回合结束:若英雄生命高于敌方，抽一张牌"
+            },
+            {
+                "attack": 1,
+                "life": 7,
+                "effect": "登场:随机另一友军+1/+1，获得【回命】、回合结束:若英雄生命高于敌方，抽一张牌"
+            },
+            {
+                "attack": 1,
+                "life": 9,
+                "effect": "登场:随机另一友军+1/+1，获得【回命】、回合结束:若英雄生命高于敌方，抽一张牌"
+            },
+            {
+                "attack": 1,
+                "life": 11,
+                "effect": "登场:随机另一友军+1/+1，获得【回命】、回合结束:若英雄生命高于敌方，抽一张牌"
+            },
+            {
+                "attack": 2,
+                "life": 12,
+                "effect": "登场:随机另一友军+1/+2，获得【回命】、回合结束:若英雄生命高于敌方，抽一张牌"
+            },
+            {
+                "attack": 2,
+                "life": 14,
+                "effect": "登场:随机另一友军+1/+2，获得【回命】、回合结束:若英雄生命高于敌方，抽一张牌"
+            },
+            {
+                "attack": 3,
+                "life": 15,
+                "effect": "登场:随机另一友军+2/+2，获得【回命】、回合结束:若英雄生命高于敌方，抽一张牌"
+            },
+            {
+                "attack": 3,
+                "life": 18,
+                "effect": "登场:随机另一友军+2/+2，获得【回命】、回合结束:若英雄生命高于敌方，抽一张牌"
+            },
+            {
+                "attack": 4,
+                "life": 24,
+                "effect": "登场:随机另一友军+2/+3，获得【回命】、回合结束:若英雄生命高于敌方，抽一张牌"
+            },
+            {
+                "attack": 4,
+                "life": 27,
+                "effect": "登场:随机另一友军+2/+3，获得【回命】、回合结束:若英雄生命高于敌方，抽一张牌"
+            },
+            {
+                "attack": 5,
+                "life": 28,
+                "effect": "登场:随机另一友军+3/+3，获得【回命】、回合结束:若英雄生命高于敌方，抽一张牌"
+            },
+            {
+                "attack": 5,
+                "life": 31,
+                "effect": "登场:随机另一友军+3/+4，获得【回命】、回合结束:若英雄生命高于敌方，抽一张牌"
+            },
+            {
+                "attack": 6,
+                "life": 32,
+                "effect": "登场:随机另一友军+4/+4，获得【回命】、回合结束:若英雄生命高于敌方，抽一张牌"
+            },
+            {
+                "attack": 6,
+                "life": 36,
+                "effect": "登场:随机另一友军+5/+5，获得【回命】、回合结束:若英雄生命高于敌方，抽一张牌"
+            },
+            {
+                "attack": 7,
+                "life": 40,
+                "effect": "登场:随机另一友军+6/+6，获得【回命】、回合结束:若英雄生命高于敌方，抽一张牌"
+            },
+            {
+                "attack": 8,
+                "life": 46,
+                "effect": "登场:随机另一友军+7/+7，获得【回命】、回合结束:若英雄生命高于敌方，抽一张牌"
+            },
+            {
+                "attack": 9,
+                "life": 50,
+                "effect": "登场:随机另一友军+7/+7，获得【回命】、回合结束:若英雄生命高于敌方，抽一张牌"
+            },
+            {
+                "attack": 10,
+                "life": 55,
+                "effect": "登场:随机另一友军+8/+8，获得【回命】、回合结束:若英雄生命高于敌方，抽一张牌"
+            },
+            {
+                "attack": 11,
+                "life": 60,
+                "effect": "登场:随机另一友军+9/+9，获得【回命】、回合结束:若英雄生命高于敌方，抽一张牌"
+            },
+            {
+                "attack": 12,
+                "life": 64,
+                "effect": "登场:随机另一友军+11/+11，获得【回命】、回合结束:若英雄生命高于敌方，抽一张牌"
+            },
+            {
+                "attack": 13,
+                "life": 68,
+                "effect": "登场:随机另一友军+13/+13，获得【回命】、回合结束:若英雄生命高于敌方，抽一张牌"
+            }
+        ]
+    },
+    {
+        "id": 366,
+        "name": "无情夺命客",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 3,
+        "type": 1,
+        "img": "/tiantanggang/wuqingduomingke.jpg",
+        "grade": "[3]",
+        "tag": "[3,18]",
+        "data": [
+            {
+                "attack": 2,
+                "life": 4,
+                "effect": "【二连击】、敌方英雄受伤时:攻击+1"
+            },
+            {
+                "attack": 3,
+                "life": 5,
+                "effect": "【二连击】、敌方英雄受伤时:攻击+1"
+            },
+            {
+                "attack": 3,
+                "life": 7,
+                "effect": "【二连击】、敌方英雄受伤时:攻击+1"
+            },
+            {
+                "attack": 4,
+                "life": 7,
+                "effect": "【洞察1】、【二连击】、敌方英雄受伤时:攻击+1"
+            },
+            {
+                "attack": 5,
+                "life": 7,
+                "effect": "【洞察1】、【二连击】、敌方英雄受伤时:攻击+1"
+            },
+            {
+                "attack": 6,
+                "life": 7,
+                "effect": "【洞察1】、【二连击】、敌方英雄受伤时:攻击+1"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "【洞察1】、【二连击】、敌方英雄受伤时:攻击+1"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "【洞察1】、【二连击】、敌方英雄受伤时:攻击+1"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "【洞察1】、【二连击】、敌方英雄受伤时:攻击+1"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "【洞察1】、【二连击】、敌方英雄受伤时:攻击+1"
+            },
+            {
+                "attack": 11,
+                "life": 11,
+                "effect": "【洞察1】、【二连击】、敌方英雄受伤时:攻击+1"
+            },
+            {
+                "attack": 12,
+                "life": 12,
+                "effect": "【洞察1】、【二连击】、敌方英雄受伤时:攻击+1"
+            },
+            {
+                "attack": 13,
+                "life": 14,
+                "effect": "【洞察1】、【二连击】、敌方英雄受伤时:攻击+1"
+            },
+            {
+                "attack": 15,
+                "life": 15,
+                "effect": "【洞察1】、【二连击】、敌方英雄受伤时:攻击+1"
+            },
+            {
+                "attack": 16,
+                "life": 16,
+                "effect": "【洞察1】、【二连击】、敌方英雄受伤时:攻击+2"
+            },
+            {
+                "attack": 18,
+                "life": 18,
+                "effect": "【洞察1】、【二连击】、敌方英雄受伤时:攻击+2"
+            },
+            {
+                "attack": 20,
+                "life": 20,
+                "effect": "【洞察1】、【二连击】、敌方英雄受伤时:攻击+2"
+            },
+            {
+                "attack": 22,
+                "life": 22,
+                "effect": "【洞察1】、【二连击】、敌方英雄受伤时:攻击+2"
+            },
+            {
+                "attack": 24,
+                "life": 24,
+                "effect": "【洞察1】、【二连击】、敌方英雄受伤时:攻击+2"
+            },
+            {
+                "attack": 26,
+                "life": 26,
+                "effect": "【洞察1】、【二连击】、敌方英雄受伤时:攻击+2"
+            },
+            {
+                "attack": 28,
+                "life": 28,
+                "effect": "【洞察1】、【二连击】、敌方英雄受伤时:攻击+2"
+            },
+            {
+                "attack": 30,
+                "life": 30,
+                "effect": "【洞察1】、【二连击】、敌方英雄受伤时:攻击+2"
+            }
+        ]
+    },
+    {
+        "id": 367,
+        "name": "深山老巫",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 3,
+        "type": 1,
+        "img": "/tiantanggang/shenshanlaowu.jpg",
+        "grade": "[4]",
+        "tag": "[2,17,26]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "攻击前:本回合每使用过一个法术，吸取敌方英雄3点生命"
+            },
+            {
+                "attack": 4,
+                "life": 5,
+                "effect": "攻击前:本回合每使用过一个法术，吸取敌方英雄4点生命"
+            },
+            {
+                "attack": 5,
+                "life": 6,
+                "effect": "攻击前:本回合每使用过一个法术，吸取敌方英雄5点生命"
+            },
+            {
+                "attack": 6,
+                "life": 7,
+                "effect": "登场:隐形1回合、攻击前:本回合每使用过一个法术，吸取敌方英雄5点生命"
+            },
+            {
+                "attack": 7,
+                "life": 8,
+                "effect": "登场:隐形1回合、攻击前:本回合每使用过一个法术，吸取敌方英雄6点生命"
+            },
+            {
+                "attack": 8,
+                "life": 9,
+                "effect": "登场:隐形1回合、攻击前:本回合每使用过一个法术，吸取敌方英雄7点生命"
+            },
+            {
+                "attack": 9,
+                "life": 10,
+                "effect": "登场:隐形1回合、攻击前:本回合每使用过一个法术，吸取敌方英雄8点生命"
+            },
+            {
+                "attack": 10,
+                "life": 12,
+                "effect": "登场:隐形2回合、攻击前:本回合每使用过一个法术，吸取敌方英雄8点生命"
+            },
+            {
+                "attack": 11,
+                "life": 13,
+                "effect": "登场:隐形2回合、攻击前:本回合每使用过一个法术，吸取敌方英雄9点生命"
+            },
+            {
+                "attack": 12,
+                "life": 14,
+                "effect": "登场:隐形2回合、攻击前:本回合每使用过一个法术，吸取敌方英雄10点生命"
+            },
+            {
+                "attack": 13,
+                "life": 16,
+                "effect": "登场:隐形2回合、攻击前:本回合每使用过一个法术，吸取敌方英雄11点生命"
+            },
+            {
+                "attack": 14,
+                "life": 18,
+                "effect": "登场:隐形3回合、攻击前:本回合每使用过一个法术，吸取敌方英雄12点生命"
+            },
+            {
+                "attack": 15,
+                "life": 20,
+                "effect": "登场:隐形3回合、攻击前:本回合每使用过一个法术，吸取敌方英雄13点生命"
+            },
+            {
+                "attack": 17,
+                "life": 22,
+                "effect": "登场:隐形3回合、攻击前:本回合每使用过一个法术，吸取敌方英雄14点生命"
+            },
+            {
+                "attack": 19,
+                "life": 25,
+                "effect": "登场:隐形3回合、攻击前:本回合每使用过一个法术，吸取敌方英雄15点生命"
+            },
+            {
+                "attack": 21,
+                "life": 28,
+                "effect": "登场:隐形3回合、攻击前:本回合每使用过一个法术，吸取敌方英雄16点生命"
+            },
+            {
+                "attack": 23,
+                "life": 30,
+                "effect": "登场:隐形3回合、攻击前:本回合每使用过一个法术，吸取敌方英雄17点生命"
+            },
+            {
+                "attack": 25,
+                "life": 32,
+                "effect": "登场:隐形3回合、攻击前:本回合每使用过一个法术，吸取敌方英雄18点生命"
+            },
+            {
+                "attack": 27,
+                "life": 35,
+                "effect": "登场:隐形3回合、攻击前:本回合每使用过一个法术，吸取敌方英雄19点生命"
+            },
+            {
+                "attack": 29,
+                "life": 38,
+                "effect": "登场:隐形3回合、攻击前:本回合每使用过一个法术，吸取敌方英雄20点生命"
+            },
+            {
+                "attack": 31,
+                "life": 42,
+                "effect": "登场:隐形3回合、攻击前:本回合每使用过一个法术，吸取敌方英雄22点生命"
+            },
+            {
+                "attack": 33,
+                "life": 46,
+                "effect": "登场:隐形3回合、攻击前:本回合每使用过一个法术，吸取敌方英雄24点生命"
+            }
+        ]
+    },
+    {
+        "id": 368,
+        "name": "黑水伏击",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 3,
+        "type": 2,
+        "img": "/tiantanggang/heishuifuji.jpg",
+        "grade": "[4]",
+        "tag": "[2,6,24]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军-1/-1，召唤2/1黑水快剑手-lv1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军-1/-1，召唤2/2黑水快剑手-lv2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军-2/-2，召唤3/2黑水快剑手-lv3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军-2/-2，召唤3/3黑水快剑手-lv4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军-3/-3，召唤4/3黑水快剑手-lv5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军-3/-3，召唤5/3黑水快剑手-lv6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军-3/-3（无视神佑、魔免）、召唤5/4黑水快剑手-lv7"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军-4/-4（无视神佑、魔免）、召唤6/4黑水快剑手-lv8"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军-5/-5（无视神佑、魔免）、召唤7/4黑水快剑手-lv9"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军-6/-6（无视神佑、魔免）、召唤8/5黑水快剑手-lv10"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军-7/-7（无视神佑、魔免）、召唤9/5黑水快剑手-lv11"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军-8/-8（无视神佑、魔免）、召唤10/5黑水快剑手-lv12"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军-9/-9（无视神佑、魔免）、召唤11/6黑水快剑手-lv13"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军-10/-10（无视神佑、魔免）、召唤12/7黑水快剑手-lv14"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军-12/-12（无视神佑、魔免）、召唤13/9黑水快剑手-lv15"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军-14/-14（无视神佑、魔免）、召唤15/9黑水快剑手-lv16"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军-15/-15（无视神佑、魔免）、召唤17/9黑水快剑手-lv17"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军-17/-17（无视神佑、魔免）、召唤19/10黑水快剑手-lv18"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军-19/-19（无视神佑、魔免）、召唤21/12黑水快剑手-lv19"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军-21/-21（无视神佑、魔免）、召唤23/13黑水快剑手-lv20"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军-24/-24（无视神佑、魔免）、召唤26/13黑水快剑手-lv21"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军-27/-27（无视神佑、魔免）、召唤29/13黑水快剑手-lv22"
+            }
+        ]
+    },
+    {
+        "id": 369,
+        "name": "寒夜灯灵",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 3,
+        "type": 1,
+        "img": "/tiantanggang/hanyedengling.jpg",
+        "grade": "[3]",
+        "tag": "[7,11,15]",
+        "data": [
+            {
+                "attack": 5,
+                "life": 2,
+                "effect": "【魔免】、对手不能回复生命、登场:冰封脚下"
+            },
+            {
+                "attack": 6,
+                "life": 2,
+                "effect": "【魔免】、对手不能回复生命、登场:冰封脚下"
+            },
+            {
+                "attack": 7,
+                "life": 2,
+                "effect": "【魔免】、对手不能回复生命、登场:冰封脚下"
+            },
+            {
+                "attack": 8,
+                "life": 2,
+                "effect": "【魔免】、对手不能回复生命、登场:冰封脚下"
+            },
+            {
+                "attack": 9,
+                "life": 2,
+                "effect": "【魔免】、对手不能回复生命、登场:冰封脚下"
+            },
+            {
+                "attack": 10,
+                "life": 2,
+                "effect": "【魔免】、对手不能回复生命、登场:冰封脚下"
+            },
+            {
+                "attack": 12,
+                "life": 2,
+                "effect": "【魔免】、对手不能回复生命、登场:冰封脚下"
+            },
+            {
+                "attack": 14,
+                "life": 2,
+                "effect": "【魔免】、对手不能回复生命、登场:冰封脚下"
+            },
+            {
+                "attack": 16,
+                "life": 2,
+                "effect": "【魔免】、对手不能回复生命、登场:冰封脚下"
+            },
+            {
+                "attack": 18,
+                "life": 2,
+                "effect": "【魔免】、对手不能回复生命、登场:冰封脚下"
+            },
+            {
+                "attack": 20,
+                "life": 2,
+                "effect": "【魔免】、对手不能回复生命、登场:冰封脚下"
+            },
+            {
+                "attack": 23,
+                "life": 2,
+                "effect": "【魔免】、对手不能回复生命、登场:冰封脚下"
+            },
+            {
+                "attack": 26,
+                "life": 2,
+                "effect": "【魔免】、对手不能回复生命、登场:冰封脚下"
+            },
+            {
+                "attack": 29,
+                "life": 2,
+                "effect": "【魔免】、对手不能回复生命、登场:冰封脚下"
+            },
+            {
+                "attack": 32,
+                "life": 2,
+                "effect": "【魔免】、对手不能回复生命、登场:冰封脚下"
+            },
+            {
+                "attack": 35,
+                "life": 2,
+                "effect": "【魔免】、对手不能回复生命、登场:冰封脚下"
+            },
+            {
+                "attack": 38,
+                "life": 2,
+                "effect": "【魔免】、对手不能回复生命、登场:冰封脚下"
+            },
+            {
+                "attack": 42,
+                "life": 2,
+                "effect": "【魔免】、对手不能回复生命、登场:冰封脚下"
+            },
+            {
+                "attack": 45,
+                "life": 2,
+                "effect": "【魔免】、对手不能回复生命、登场:冰封脚下"
+            },
+            {
+                "attack": 48,
+                "life": 2,
+                "effect": "【魔免】、对手不能回复生命、登场:冰封脚下"
+            },
+            {
+                "attack": 52,
+                "life": 2,
+                "effect": "【魔免】、对手不能回复生命、登场:冰封脚下"
+            },
+            {
+                "attack": 56,
+                "life": 2,
+                "effect": "【魔免】、对手不能回复生命、登场:冰封脚下"
+            }
+        ]
+    },
+    {
+        "id": 370,
+        "name": "封魔幼兽",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 3,
+        "type": 1,
+        "img": "/tiantanggang/fengmoyoushou.jpg",
+        "grade": "[2]",
+        "tag": "[4,19,26]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 1,
+                "effect": "【法力封锁1】、受到传承:成长为封魔巨兽-lv1、死亡:50%几率获得封魔巨兽-lv1"
+            },
+            {
+                "attack": 1,
+                "life": 2,
+                "effect": "【法力封锁1】、受到传承:成长为封魔巨兽-lv2、死亡:50%几率获得封魔巨兽-lv2"
+            },
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "【法力封锁1】、受到传承:成长为封魔巨兽-lv3、死亡:50%几率获得封魔巨兽-lv3"
+            },
+            {
+                "attack": 2,
+                "life": 3,
+                "effect": "【法力封锁1】、受到传承:成长为封魔巨兽-lv4、死亡:60%几率获得封魔巨兽-lv4"
+            },
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "【法力封锁1】、受到传承:成长为封魔巨兽-lv5、死亡:60%几率获得封魔巨兽-lv5"
+            },
+            {
+                "attack": 4,
+                "life": 4,
+                "effect": "【法力封锁1】、受到传承:成长为封魔巨兽-lv6、死亡:65%几率获得封魔巨兽-lv6"
+            },
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "【法力封锁1】、受到传承:成长为封魔巨兽-lv7、死亡:65%几率获得封魔巨兽-lv7"
+            },
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "【法力封锁1】、受到传承:成长为封魔巨兽-lv8、死亡:70%几率获得封魔巨兽-lv8"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "【法力封锁1】、受到传承:成长为封魔巨兽-lv9、死亡:70%几率获得封魔巨兽-lv9"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "【法力封锁2】、受到传承:成长为封魔巨兽-lv10、死亡:获得封魔巨兽-lv10"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "【法力封锁2】、受到传承:成长为封魔巨兽-lv11、死亡:获得封魔巨兽-lv11"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "【法力封锁2】、受到传承:成长为封魔巨兽-lv12、死亡:获得封魔巨兽-lv12"
+            },
+            {
+                "attack": 11,
+                "life": 11,
+                "effect": "【法力封锁2】、受到传承:成长为封魔巨兽-lv13、死亡:获得封魔巨兽-lv13"
+            },
+            {
+                "attack": 12,
+                "life": 12,
+                "effect": "【法力封锁2】、受到传承:成长为封魔巨兽-lv14、死亡:获得封魔巨兽-lv14"
+            },
+            {
+                "attack": 13,
+                "life": 13,
+                "effect": "【法力封锁2】、受到传承:成长为封魔巨兽-lv15、死亡:获得封魔巨兽-lv15"
+            },
+            {
+                "attack": 14,
+                "life": 15,
+                "effect": "【法力封锁2】、受到传承:成长为封魔巨兽-lv16、死亡:获得封魔巨兽-lv16"
+            },
+            {
+                "attack": 16,
+                "life": 16,
+                "effect": "【法力封锁2】、受到传承:成长为封魔巨兽-lv17、死亡:获得封魔巨兽-lv17"
+            },
+            {
+                "attack": 18,
+                "life": 18,
+                "effect": "【法力封锁2】、受到传承:成长为封魔巨兽-lv18、死亡:获得封魔巨兽-lv18"
+            },
+            {
+                "attack": 20,
+                "life": 20,
+                "effect": "【法力封锁2】、受到传承:成长为封魔巨兽-lv19、死亡:获得封魔巨兽-lv19"
+            },
+            {
+                "attack": 23,
+                "life": 23,
+                "effect": "【法力封锁2】、受到传承:成长为封魔巨兽-lv20、死亡:获得封魔巨兽-lv20"
+            },
+            {
+                "attack": 26,
+                "life": 26,
+                "effect": "【法力封锁2】、受到传承:成长为封魔巨兽-lv21、死亡:获得封魔巨兽-lv21"
+            },
+            {
+                "attack": 30,
+                "life": 30,
+                "effect": "【法力封锁2】、受到传承:成长为封魔巨兽-lv22、死亡:获得封魔巨兽-lv22"
+            }
+        ]
+    },
+    {
+        "id": 371,
+        "name": "晨光魔宠",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 3,
+        "type": 1,
+        "img": "/tiantanggang/chenguangmochong.jpg",
+        "grade": "[1]",
+        "tag": "[21,23]",
+        "data": [
+            {
+                "attack": 2,
+                "life": 1,
+                "effect": "命中英雄:手上一张卡牌法力-1"
+            },
+            {
+                "attack": 3,
+                "life": 1,
+                "effect": "【魔防1】、命中英雄:手上一张卡牌法力-1"
+            },
+            {
+                "attack": 3,
+                "life": 2,
+                "effect": "【魔防2】、命中英雄:手上一张卡牌法力-1"
+            },
+            {
+                "attack": 4,
+                "life": 2,
+                "effect": "【魔防3】、命中英雄:手上一张卡牌法力-1"
+            },
+            {
+                "attack": 5,
+                "life": 2,
+                "effect": "【魔防4】、命中英雄:手上一张卡牌法力-1"
+            },
+            {
+                "attack": 6,
+                "life": 2,
+                "effect": "【魔防5】、命中英雄:手上一张卡牌法力-1"
+            },
+            {
+                "attack": 6,
+                "life": 3,
+                "effect": "【魔防5】、登场、命中英雄:手上一张卡牌法力-1"
+            },
+            {
+                "attack": 7,
+                "life": 3,
+                "effect": "【魔防6】、登场、命中英雄:手上一张卡牌法力-1"
+            },
+            {
+                "attack": 8,
+                "life": 4,
+                "effect": "【魔防7】、登场、命中英雄:手上一张卡牌法力-1"
+            },
+            {
+                "attack": 9,
+                "life": 5,
+                "effect": "【魔防8】、登场、命中英雄:手上一张卡牌法力-1"
+            },
+            {
+                "attack": 10,
+                "life": 6,
+                "effect": "【魔防9】、登场、命中英雄:手上一张卡牌法力-1"
+            },
+            {
+                "attack": 11,
+                "life": 7,
+                "effect": "【魔防10】、登场、命中英雄:手上一张卡牌法力-1"
+            },
+            {
+                "attack": 12,
+                "life": 8,
+                "effect": "【魔防11】、登场、命中英雄:手上一张卡牌法力-1"
+            },
+            {
+                "attack": 13,
+                "life": 9,
+                "effect": "【魔防12】、登场、命中英雄:手上一张卡牌法力-1"
+            },
+            {
+                "attack": 15,
+                "life": 10,
+                "effect": "【魔防13】、登场、命中英雄:手上一张卡牌法力-1"
+            },
+            {
+                "attack": 16,
+                "life": 12,
+                "effect": "【魔防14】、登场、命中英雄:手上一张卡牌法力-1"
+            },
+            {
+                "attack": 18,
+                "life": 13,
+                "effect": "【魔防15】、登场、命中英雄:手上一张卡牌法力-1"
+            },
+            {
+                "attack": 19,
+                "life": 16,
+                "effect": "【魔防16】、登场、命中英雄:手上一张卡牌法力-1"
+            },
+            {
+                "attack": 21,
+                "life": 18,
+                "effect": "【魔防17】、登场、命中英雄:手上一张卡牌法力-1"
+            },
+            {
+                "attack": 24,
+                "life": 19,
+                "effect": "【魔防18】、登场、命中英雄:手上一张卡牌法力-1"
+            },
+            {
+                "attack": 27,
+                "life": 21,
+                "effect": "【魔防19】、登场、命中英雄:手上一张卡牌法力-1"
+            },
+            {
+                "attack": 30,
+                "life": 23,
+                "effect": "【魔防20】、登场、命中英雄:手上一张卡牌法力-1"
+            }
+        ]
+    },
+    {
+        "id": 372,
+        "name": "喧哗水手长",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 3,
+        "type": 1,
+        "img": "/tiantanggang/xuanhuashuishouzhang.jpg",
+        "grade": "[4]",
+        "tag": "[6]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 2,
+                "effect": "【先攻】、敌方英雄受到伤害:随机友军攻击+1"
+            },
+            {
+                "attack": 4,
+                "life": 3,
+                "effect": "【先攻】、敌方英雄受到伤害:随机友军攻击+1"
+            },
+            {
+                "attack": 5,
+                "life": 4,
+                "effect": "【先攻】、敌方英雄受到伤害:随机友军攻击+1"
+            },
+            {
+                "attack": 6,
+                "life": 5,
+                "effect": "【先攻】、敌方英雄受到伤害:随机友军攻击+1"
+            },
+            {
+                "attack": 7,
+                "life": 6,
+                "effect": "【先攻】、敌方英雄受到伤害:随机友军攻击+1"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "【先攻】、敌方英雄受到伤害:随机友军攻击+1"
+            },
+            {
+                "attack": 9,
+                "life": 8,
+                "effect": "【先攻】、敌方英雄受到伤害:随机友军+1/+1"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "【先攻】、敌方英雄受到伤害:随机友军+1/+1"
+            },
+            {
+                "attack": 12,
+                "life": 11,
+                "effect": "【先攻】、敌方英雄受到伤害:随机友军+1/+1"
+            },
+            {
+                "attack": 14,
+                "life": 13,
+                "effect": "【先攻】、敌方英雄受到伤害:随机友军+1/+1"
+            },
+            {
+                "attack": 16,
+                "life": 14,
+                "effect": "【先攻】、敌方英雄受到伤害:随机友军+1/+1"
+            },
+            {
+                "attack": 18,
+                "life": 15,
+                "effect": "【先攻】、敌方英雄受到伤害:随机友军+1/+1"
+            },
+            {
+                "attack": 19,
+                "life": 15,
+                "effect": "【先攻】、敌方英雄受到伤害:随机友军+2/+1"
+            },
+            {
+                "attack": 21,
+                "life": 17,
+                "effect": "【先攻】、敌方英雄受到伤害:随机友军+2/+1"
+            },
+            {
+                "attack": 23,
+                "life": 19,
+                "effect": "【先攻】、敌方英雄受到伤害:随机友军+2/+1"
+            },
+            {
+                "attack": 25,
+                "life": 21,
+                "effect": "【先攻】、敌方英雄受到伤害:随机友军+2/+1"
+            },
+            {
+                "attack": 27,
+                "life": 23,
+                "effect": "【先攻】、敌方英雄受到伤害:随机友军+2/+1"
+            },
+            {
+                "attack": 30,
+                "life": 24,
+                "effect": "【先攻】、敌方英雄受到伤害:随机友军+2/+1"
+            },
+            {
+                "attack": 33,
+                "life": 26,
+                "effect": "【先攻】、敌方英雄受到伤害:随机友军+2/+1"
+            },
+            {
+                "attack": 36,
+                "life": 28,
+                "effect": "【先攻】、敌方英雄受到伤害:随机友军+2/+2"
+            },
+            {
+                "attack": 39,
+                "life": 30,
+                "effect": "【先攻】、敌方英雄受到伤害:随机友军+2/+2"
+            },
+            {
+                "attack": 42,
+                "life": 33,
+                "effect": "【先攻】、敌方英雄受到伤害:随机友军+2/+2"
+            }
+        ]
+    },
+    {
+        "id": 373,
+        "name": "偷渡巨人",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 3,
+        "type": 2,
+        "img": "/tiantanggang/toudujuren.jpg",
+        "grade": "[3]",
+        "tag": "[2,12,24,25]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "若对面场上无敌军，召9/9迷茫巨人-lv1，否则召唤2/3沉稳主祭-lv1，抽一张牌，英雄生命+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "若对面场上无敌军，召唤10/10迷茫巨人-lv2，否则召唤3/3沉稳主祭-lv2，抽一张牌，英雄生命+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "若对面场上无敌军，召唤11/12迷茫巨人-lv3，否则召唤3/4沉稳主祭-lv3，抽一张牌，英雄生命+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "若对面场上无敌军，召唤12/15迷茫巨人-lv4，否则召唤4/4沉稳主祭-lv4，抽一张牌，英雄生命+4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "若对面场上无敌军，召唤14/16迷茫巨人-lv5，否则召唤5/5沉稳主祭-lv5，抽一张牌，英雄生命+5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "若对面场上无敌军，召唤15/20迷茫巨人-lv6，否则召唤6/6沉稳主祭-lv6，抽一张牌，英雄生命+6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "若对面场上无敌军，召唤16/25迷茫巨人-lv7，否则召唤7/7沉稳主祭-lv7，抽一张牌，英雄生命+7"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "若对面场上无敌军，召唤18/28迷茫巨人-lv8，否则召唤8/8沉稳主祭-lv8，抽一张牌，英雄生命+8"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "若对面场上无敌军，召唤20/32迷茫巨人-lv9，否则召唤9/9沉稳主祭-lv9，抽一张牌，英雄生命+9"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "若对面场上无敌军，召唤22/35迷茫巨人-lv10，否则召唤10/10沉稳主祭-lv10，抽一张牌，英雄生命+10"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "若对面场上无敌军，召唤24/38迷茫巨人-lv11，否则召唤11/11沉稳主祭-lv11，抽一张牌，英雄生命+12"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "若对面场上无敌军，召唤26/40迷茫巨人-lv12，否则召唤12/12沉稳主祭-lv12，抽一张牌，英雄生命+14"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "若对面场上无敌军，召唤29/42迷茫巨人-lv13，否则召唤13/13沉稳主祭-lv13，抽一张牌，英雄生命+16"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "若对面场上无敌军，召唤32/45迷茫巨人-lv14，否则召唤14/14沉稳主祭-lv14，抽一张牌，英雄生命+18"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "若对面场上无敌军，召唤35/50迷茫巨人-lv15，否则召唤15/15沉稳主祭-lv15，抽一张牌，英雄生命+20"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "若对面场上无敌军，召唤38/55迷茫巨人-lv16，否则召唤16/16沉稳主祭-lv16，抽一张牌，英雄生命+22"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "若对面场上无敌军，召唤40/60迷茫巨人-lv17，否则召唤17/17沉稳主祭-lv17，抽一张牌，英雄生命+24"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "若对面场上无敌军，召唤45/65迷茫巨人-lv18，否则召唤18/18沉稳主祭-lv18，抽一张牌，英雄生命+26"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "若对面场上无敌军，召唤50/70迷茫巨人-lv19，否则召唤19/19沉稳主祭-lv19，抽一张牌，英雄生命+28"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "若对面场上无敌军，召唤55/75迷茫巨人-lv20，否则召唤20/20沉稳主祭-lv20，抽一张牌，英雄生命+30"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "若对面场上无敌军，召唤60/80迷茫巨人-lv21，否则召唤21/22沉稳主祭-lv21，抽一张牌，英雄生命+33"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "若对面场上无敌军，召唤65/85迷茫巨人-lv22，否则召唤23/23沉稳主祭-lv22，抽一张牌，英雄生命+36"
+            }
+        ]
+    },
+    {
+        "id": 374,
+        "name": "符文·绝命风暴",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 3,
+        "type": 4,
+        "img": "/tiantanggang/fuwen_juemingfengbao.jpg",
+        "grade": "[5]",
+        "tag": "[2,26]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：吸取敌方英雄4点生命、回合开始：若生命高于敌军，随机友军+1/+1、回合结束：若生命高于敌军，回手随机敌军（上限1次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：吸取敌方英雄5点生命、回合开始：若生命高于敌军，随机友军+1/+2、回合结束：若生命高于敌军，回手随机敌军（上限1次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：吸取敌方英雄7点生命、回合开始：若生命高于敌军，随机友军+1/+2、回合结束：若生命高于敌军，回手随机敌军（上限1次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：吸取敌方英雄7点生命、回合开始：若生命高于敌军，随机友军+2/+2、回合结束：若生命高于敌军，回手随机敌军（上限1次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：吸取敌方英雄10点生命、回合开始：若生命高于敌军，随机友军+2/+2、回合结束：若生命高于敌军，回手随机敌军（上限1次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：吸取敌方英雄10点生命、回合开始：若生命高于敌军，随机友军+2/+3、回合结束：若生命高于敌军，回手随机敌军（上限1次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：吸取敌方英雄11点生命、回合开始：若生命高于敌军，随机友军+3/+3、回合结束：若生命高于敌军，回手随机敌军（上限1次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：吸取敌方英雄12点生命、回合开始：若生命高于敌军，随机友军+3/+4、回合结束：若生命高于敌军，回手随机敌军（上限1次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：吸取敌方英雄13点生命、回合开始：若生命高于敌军，随机友军+4/+4、回合结束：若生命高于敌军，回手随机敌军（上限1次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：吸取敌方英雄14点生命、回合开始：若生命高于敌军，随机友军+4/+5、回合结束：若生命高于敌军，回手随机敌军（上限1次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：吸取敌方英雄15点生命、回合开始：若生命高于敌军，随机友军+5/+5、回合结束：若生命高于敌军，回手随机敌军（上限1次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：吸取敌方英雄16点生命、回合开始：若生命高于敌军，随机友军+5/+6、回合结束：若生命高于敌军，回手随机敌军（上限1次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：吸取敌方英雄17点生命、回合开始：若生命高于敌军，随机友军+6/+6、回合结束：若生命高于敌军，回手随机敌军（上限1次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：吸取敌方英雄18点生命、回合开始：若生命高于敌军，随机友军+6/+7、回合结束：若生命高于敌军，回手随机敌军（上限1次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：吸取敌方英雄19点生命、回合开始：若生命高于敌军，随机友军+7/+7、回合结束：若生命高于敌军，回手随机敌军（上限1次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：吸取敌方英雄20点生命、回合开始：若生命高于敌军，随机友军+7/+8、回合结束：若生命高于敌军，回手随机敌军（上限1次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：吸取敌方英雄22点生命、回合开始：若生命高于敌军，随机友军+8/+8、回合结束：若生命高于敌军，回手随机敌军（上限1次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：吸取敌方英雄24点生命、回合开始：若生命高于敌军，随机友军+8/+9、回合结束：若生命高于敌军，回手随机敌军（上限1次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：吸取敌方英雄26点生命、回合开始：若生命高于敌军，随机友军+9/+9、回合结束：若生命高于敌军，回手随机敌军（上限1次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：吸取敌方英雄28点生命、回合开始：若生命高于敌军，随机友军+10/+10、回合结束：若生命高于敌军，回手随机敌军（上限1次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：吸取敌方英雄30点生命、回合开始：若生命高于敌军，随机友军+11/+11、回合结束：若生命高于敌军，回手随机敌军（上限1次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：吸取敌方英雄32点生命、回合开始：若生命高于敌军，随机友军+12/+12、回合结束：若生命高于敌军，回手随机敌军（上限1次）"
+            }
+        ]
+    },
+    {
+        "id": 375,
+        "name": "符文·洞悉未来",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 3,
+        "type": 4,
+        "img": "/tiantanggang/fuwen_dongxiweilai.jpg",
+        "grade": "[5]",
+        "tag": "[3,4]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、洞察时：随机友军+1/+1、友军获得传承时：随机友军+2/+2，【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、洞察时：随机友军+1/+2、友军获得传承时：随机友军+2/+2，【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、洞察时：随机友军+2/+2、友军获得传承时：随机友军+2/+2，【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、洞察时：随机友军+2/+3、友军获得传承时：随机友军+2/+2，【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、洞察时：随机友军+3/+3、友军获得传承时：随机友军+2/+2，【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、洞察时：随机友军+3/+4、友军获得传承时：随机友军+2/+2，【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、洞察时：随机友军+4/+4、友军获得传承时：随机友军+2/+2，【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、洞察时：随机友军+4/+5、友军获得传承时：随机友军+2/+2，【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、洞察时：随机友军+5/+5、友军获得传承时：随机友军+2/+2，【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、洞察时：随机友军+5/+5、友军获得传承时：随机友军+3/+3，【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、洞察时：随机友军+5/+6、友军获得传承时：随机友军+3/+3，【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、洞察时：随机友军+6/+6、友军获得传承时：随机友军+3/+3，【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、洞察时：随机友军+6/+6、友军获得传承时：随机友军+4/+4，【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、洞察时：随机友军+6/+7、友军获得传承时：随机友军+4/+4，【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、洞察时：随机友军+7/+7、友军获得传承时：随机友军+4/+4，【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、洞察时：随机友军+7/+7、友军获得传承时：随机友军+5/+5，【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、洞察时：随机友军+8/+8、友军获得传承时：随机友军+5/+5，【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、洞察时：随机友军+9/+9、友军获得传承时：随机友军+5/+5，【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、洞察时：随机友军+10/+10、友军获得传承时：随机友军+5/+5，【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、洞察时：随机友军+10/+10、友军获得传承时：随机友军+6/+6，【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、洞察时：随机友军+11/+11、友军获得传承时：随机友军+6/+6，【洞察1】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：【洞察1】、洞察时：随机友军+12/+12、友军获得传承时：随机友军+6/+6，【洞察1】"
+            }
+        ]
+    },
+    {
+        "id": 376,
+        "name": "符文·恶犬领地",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 3,
+        "type": 4,
+        "img": "/tiantanggang/fuwen_equanlingdi.jpg",
+        "grade": "[5]",
+        "tag": "[24]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2个1/1凶恶幼犬-lv1、回合结束：召唤1/1凶恶幼犬-lv1，若友军数量大于敌军，3个友军+1/+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2个1/1凶恶幼犬-lv2、回合结束：召唤1/1凶恶幼犬-lv1，若友军数量大于敌军，3个友军+1/+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2个1/1凶恶幼犬-lv2、回合结束：召唤1/1凶恶幼犬-lv2，若友军数量大于敌军，3个友军+1/+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2个1/1凶恶幼犬-lv2、回合结束：召唤1/1凶恶幼犬-lv2，若友军数量大于敌军，3个友军+1/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2个1/2凶恶幼犬-lv3、回合结束：召唤1/1凶恶幼犬-lv2，若友军数量大于敌军，3个友军+1/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2个1/2凶恶幼犬-lv3、回合结束：召唤1/2凶恶幼犬-lv3，若友军数量大于敌军，3个友军+1/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2个1/2凶恶幼犬-lv3、回合结束：召唤1/2凶恶幼犬-lv3，若友军数量大于敌军，3个友军+2/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2个2/2凶恶幼犬-lv4、回合结束：召唤1/2凶恶幼犬-lv3，若友军数量大于敌军，3个友军+2/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2个2/2凶恶幼犬-lv4、回合结束：召唤2/2凶恶幼犬-lv4，若友军数量大于敌军，3个友军+2/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2个2/2凶恶幼犬-lv5、回合结束：召唤2/2凶恶幼犬-lv5，若友军数量大于敌军，3个友军+2/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2个2/2凶恶幼犬-lv6、回合结束：召唤2/2凶恶幼犬-lv6，若友军数量大于敌军，3个友军+2/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2个2/2凶恶幼犬-lv7、回合结束：召唤2/2凶恶幼犬-lv7，若友军数量大于敌军，3个友军+2/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2个2/3凶恶幼犬-lv8、回合结束：召唤2/3凶恶幼犬-lv8，若友军数量大于敌军，3个友军+2/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2个3/3凶恶幼犬-lv9、回合结束：召唤3/3凶恶幼犬-lv9，若友军数量大于敌军，3个友军+2/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2个3/3凶恶幼犬-lv10、回合结束：召唤3/3凶恶幼犬-lv10，若友军数量大于敌军，3个友军+3/+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2个4/4凶恶幼犬-lv11、回合结束：召唤4/4凶恶幼犬-lv11，若友军数量大于敌军，3个友军+3/+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2个5/4凶恶幼犬-lv12、回合结束：召唤5/4凶恶幼犬-lv12，若友军数量大于敌军，3个友军+3/+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2个6/5凶恶幼犬-lv13、回合结束：召唤6/5凶恶幼犬-lv13，若友军数量大于敌军，3个友军+3/+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2个6/6凶恶幼犬-lv14、回合结束：召唤6/6凶恶幼犬-lv14，若友军数量大于敌军，3个友军+3/+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2个7/7凶恶幼犬-lv15、回合结束：召唤7/7凶恶幼犬-lv15，若友军数量大于敌军，3个友军+4/+4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2个8/8凶恶幼犬-lv16、回合结束：召唤8/8凶恶幼犬-lv16，若友军数量大于敌军，3个友军+4/+4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤2个9/9凶恶幼犬-lv17、回合结束：召唤9/9凶恶幼犬-lv17，若友军数量大于敌军，3个友军+4/+4"
+            }
+        ]
+    },
+    {
+        "id": 377,
+        "name": "海盗船长",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 4,
+        "type": 1,
+        "img": "/tiantanggang/haidaochuanzhang.jpg",
+        "grade": "[1]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 3,
+                "life": 5,
+                "effect": "攻击前:若友军多于敌军:全军攻击+1"
+            },
+            {
+                "attack": 4,
+                "life": 7,
+                "effect": "攻击前:若友军多于敌军:全军攻击+1"
+            },
+            {
+                "attack": 4,
+                "life": 9,
+                "effect": "攻击前:若友军多于敌军:全军攻击+1，全体敌军攻击-1"
+            },
+            {
+                "attack": 5,
+                "life": 11,
+                "effect": "攻击前:若友军多于敌军:全军攻击+1，全体敌军攻击-1"
+            },
+            {
+                "attack": 6,
+                "life": 13,
+                "effect": "攻击前:若友军多于敌军:全军+1/+1，全体敌军攻击-1"
+            },
+            {
+                "attack": 7,
+                "life": 16,
+                "effect": "攻击前:若友军多于敌军:全军+1/+1，全体敌军攻击-1"
+            },
+            {
+                "attack": 8,
+                "life": 18,
+                "effect": "攻击前:若友军多于敌军:全军+1/+1，全体敌军攻击-1"
+            },
+            {
+                "attack": 9,
+                "life": 21,
+                "effect": "攻击前:若友军多于敌军:全军+1/+1，全体敌军攻击-1"
+            },
+            {
+                "attack": 10,
+                "life": 24,
+                "effect": "攻击前:若友军多于敌军:全军+1/+2，全体敌军攻击-1"
+            },
+            {
+                "attack": 12,
+                "life": 25,
+                "effect": "攻击前:若友军多于敌军:全军+1/+2，全体敌军攻击-1"
+            },
+            {
+                "attack": 14,
+                "life": 27,
+                "effect": "攻击前:若友军多于敌军:全军+1/+3，全体敌军攻击-1"
+            },
+            {
+                "attack": 16,
+                "life": 30,
+                "effect": "攻击前:若友军多于敌军:全军+1/+3，全体敌军攻击-1"
+            },
+            {
+                "attack": 18,
+                "life": 33,
+                "effect": "攻击前:若友军多于敌军:全军+1/+3，全体敌军攻击-1"
+            },
+            {
+                "attack": 20,
+                "life": 35,
+                "effect": "攻击前:若友军多于敌军:全军+2/+3，全体敌军攻击-1"
+            },
+            {
+                "attack": 22,
+                "life": 39,
+                "effect": "攻击前:若友军多于敌军:全军+2/+3，全体敌军攻击-1"
+            },
+            {
+                "attack": 25,
+                "life": 42,
+                "effect": "攻击前:若友军多于敌军:全军+3/+3，全体敌军攻击-1"
+            },
+            {
+                "attack": 28,
+                "life": 46,
+                "effect": "攻击前:若友军多于敌军:全军+3/+3，全体敌军攻击-1"
+            },
+            {
+                "attack": 30,
+                "life": 50,
+                "effect": "攻击前:若友军多于敌军:全军+3/+3，全体敌军-1/-1"
+            },
+            {
+                "attack": 32,
+                "life": 55,
+                "effect": "攻击前:若友军多于敌军:全军+4/+4，全体敌军-1/-1"
+            },
+            {
+                "attack": 35,
+                "life": 60,
+                "effect": "攻击前:若友军多于敌军:全军+4/+4，全体敌军-2/-2"
+            },
+            {
+                "attack": 38,
+                "life": 65,
+                "effect": "攻击前:若友军多于敌军:全军+5/+5，全体敌军-2/-2"
+            },
+            {
+                "attack": 40,
+                "life": 70,
+                "effect": "攻击前:若友军多于敌军:全军+5/+5，全体敌军-3/-3"
+            }
+        ]
+    },
+    {
+        "id": 378,
+        "name": "炼金术士",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 4,
+        "type": 1,
+        "img": "/tiantanggang/lianjinshushi.jpg",
+        "grade": "[1]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "攻击前:随机敌军-1/-1，否则随机友军+1/+1"
+            },
+            {
+                "attack": 3,
+                "life": 5,
+                "effect": "攻击前:随机敌军-1/-1，否则随机友军+1/+1"
+            },
+            {
+                "attack": 4,
+                "life": 5,
+                "effect": "攻击前:随机敌军-2/-2，否则随机友军+2/+2"
+            },
+            {
+                "attack": 5,
+                "life": 6,
+                "effect": "攻击前:随机敌军-2/-2，否则随机友军+2/+2"
+            },
+            {
+                "attack": 6,
+                "life": 8,
+                "effect": "攻击前:随机敌军-3/-3，否则随机友军+3/+3"
+            },
+            {
+                "attack": 7,
+                "life": 10,
+                "effect": "攻击前:随机敌军-3/-3，否则随机友军+3/+3"
+            },
+            {
+                "attack": 8,
+                "life": 12,
+                "effect": "攻击前:随机敌军-4/-4，否则随机友军+4/+4"
+            },
+            {
+                "attack": 9,
+                "life": 15,
+                "effect": "攻击前:随机敌军-4/-4，否则随机友军+4/+4"
+            },
+            {
+                "attack": 10,
+                "life": 18,
+                "effect": "攻击前:随机敌军-5/-5，否则随机友军+5/+5"
+            },
+            {
+                "attack": 11,
+                "life": 21,
+                "effect": "攻击前:随机敌军-5/-5，否则随机友军+5/+5"
+            },
+            {
+                "attack": 13,
+                "life": 24,
+                "effect": "攻击前:随机敌军-6/-6，否则随机友军+6/+6"
+            },
+            {
+                "attack": 15,
+                "life": 25,
+                "effect": "攻击前:随机敌军-6/-6，否则随机友军+6/+6"
+            },
+            {
+                "attack": 17,
+                "life": 28,
+                "effect": "攻击前:随机敌军-7/-7，否则随机友军+7/+7"
+            },
+            {
+                "attack": 19,
+                "life": 31,
+                "effect": "攻击前:随机敌军-8/-8，否则随机友军+8/+8"
+            },
+            {
+                "attack": 21,
+                "life": 34,
+                "effect": "攻击前:随机敌军-9/-9，否则随机友军+9/+9"
+            },
+            {
+                "attack": 23,
+                "life": 38,
+                "effect": "攻击前:随机敌军-10/-10，否则随机友军+10/+10"
+            },
+            {
+                "attack": 25,
+                "life": 40,
+                "effect": "攻击前:随机敌军-11/-11，否则随机友军+11/+11"
+            },
+            {
+                "attack": 28,
+                "life": 42,
+                "effect": "攻击前:随机敌军-12/-12，否则随机友军+12/+12"
+            },
+            {
+                "attack": 31,
+                "life": 45,
+                "effect": "攻击前:随机敌军-13/-13，否则随机友军+13/+13"
+            },
+            {
+                "attack": 34,
+                "life": 47,
+                "effect": "攻击前:随机敌军-15/-15，否则随机友军+15/+15"
+            },
+            {
+                "attack": 37,
+                "life": 51,
+                "effect": "攻击前:随机敌军-17/-17，否则随机友军+17/+17"
+            },
+            {
+                "attack": 40,
+                "life": 55,
+                "effect": "攻击前:随机敌军-19/-19，否则随机友军+19/+19"
+            }
+        ]
+    },
+    {
+        "id": 379,
+        "name": "动物学家",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 4,
+        "type": 1,
+        "img": "/tiantanggang/dongwuxuejia.jpg",
+        "grade": "[3]",
+        "tag": "[14]",
+        "data": [
+            {
+                "attack": 4,
+                "life": 7,
+                "effect": "回合开始:随机蛮石和禅意友军+1/+2"
+            },
+            {
+                "attack": 5,
+                "life": 9,
+                "effect": "回合开始:随机蛮石和禅意友军+1/+2"
+            },
+            {
+                "attack": 6,
+                "life": 11,
+                "effect": "登场:蛮石和禅意友军本回合获得【神佑】、回合开始:随机蛮石和禅意友军+1/+2"
+            },
+            {
+                "attack": 7,
+                "life": 13,
+                "effect": "登场:蛮石和禅意友军本回合获得【神佑】、回合开始:随机蛮石和禅意友军+1/+2"
+            },
+            {
+                "attack": 8,
+                "life": 15,
+                "effect": "登场:蛮石和禅意友军本回合获得【神佑】、回合开始:随机蛮石和禅意友军+2/+2"
+            },
+            {
+                "attack": 9,
+                "life": 17,
+                "effect": "登场:蛮石和禅意友军本回合获得【神佑】、回合开始:随机蛮石和禅意友军+2/+2"
+            },
+            {
+                "attack": 10,
+                "life": 19,
+                "effect": "登场:蛮石和禅意友军本回合获得【神佑】、回合开始:随机蛮石和禅意友军+3/+3"
+            },
+            {
+                "attack": 12,
+                "life": 20,
+                "effect": "登场:蛮石和禅意友军本回合获得【神佑】、回合开始:随机蛮石和禅意友军+3/+3"
+            },
+            {
+                "attack": 13,
+                "life": 23,
+                "effect": "登场:蛮石和禅意友军本回合获得【神佑】、回合开始:随机蛮石和禅意友军+4/+4"
+            },
+            {
+                "attack": 14,
+                "life": 28,
+                "effect": "登场:蛮石和禅意友军本回合获得【神佑】、回合开始:随机蛮石和禅意友军+4/+4"
+            },
+            {
+                "attack": 15,
+                "life": 30,
+                "effect": "登场:蛮石和禅意友军本回合获得【神佑】、回合开始:随机蛮石和禅意友军+5/+5"
+            },
+            {
+                "attack": 17,
+                "life": 33,
+                "effect": "登场:蛮石和禅意友军本回合获得【神佑】、回合开始:随机蛮石和禅意友军+5/+5"
+            },
+            {
+                "attack": 19,
+                "life": 36,
+                "effect": "登场:蛮石和禅意友军本回合获得【神佑】、回合开始:随机蛮石和禅意友军+6/+6"
+            },
+            {
+                "attack": 21,
+                "life": 40,
+                "effect": "登场:蛮石和禅意友军本回合获得【神佑】、回合开始:随机蛮石和禅意友军+7/+7"
+            },
+            {
+                "attack": 23,
+                "life": 44,
+                "effect": "登场:蛮石和禅意友军本回合获得【神佑】、回合开始:随机蛮石和禅意友军+8/+8"
+            },
+            {
+                "attack": 25,
+                "life": 48,
+                "effect": "登场:蛮石和禅意友军本回合获得【神佑】、回合开始:随机蛮石和禅意友军+9/+9"
+            },
+            {
+                "attack": 28,
+                "life": 52,
+                "effect": "登场:蛮石和禅意友军本回合获得【神佑】、回合开始:随机蛮石和禅意友军+10/+10"
+            },
+            {
+                "attack": 30,
+                "life": 56,
+                "effect": "登场:蛮石和禅意友军本回合获得【神佑】、回合开始:随机蛮石和禅意友军+10/+10"
+            },
+            {
+                "attack": 32,
+                "life": 60,
+                "effect": "登场:蛮石和禅意友军本回合获得【神佑】、回合开始:随机蛮石和禅意友军+11/+11"
+            },
+            {
+                "attack": 35,
+                "life": 65,
+                "effect": "登场:蛮石和禅意友军本回合获得【神佑】、回合开始:随机蛮石和禅意友军+12/+12"
+            },
+            {
+                "attack": 37,
+                "life": 70,
+                "effect": "登场:蛮石和禅意友军本回合获得【神佑】、回合开始:随机蛮石和禅意友军+13/+14"
+            },
+            {
+                "attack": 40,
+                "life": 75,
+                "effect": "登场:蛮石和禅意友军本回合获得【神佑】、回合开始:随机蛮石和禅意友军+15/+15"
+            }
+        ]
+    },
+    {
+        "id": 380,
+        "name": "黑金诈术师",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 4,
+        "type": 1,
+        "img": "/tiantanggang/heijinzhashushi.jpg",
+        "grade": "[3]",
+        "tag": "[12,22,26]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 1,
+                "effect": "【迟缓】、登场:吹回随机敌军、攻击前:33%几率，吹回随机敌军"
+            },
+            {
+                "attack": 2,
+                "life": 1,
+                "effect": "【迟缓】、登场:吹回随机敌军、攻击前:33%几率，吹回随机敌军"
+            },
+            {
+                "attack": 2,
+                "life": 3,
+                "effect": "【迟缓】、登场:吹回随机敌军、攻击前:33%几率，吹回随机敌军"
+            },
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "【迟缓】、登场:吹回随机敌军、攻击前:50%几率，吹回随机敌军"
+            },
+            {
+                "attack": 4,
+                "life": 4,
+                "effect": "【迟缓】、登场:吹回随机敌军、攻击前:50%几率，吹回随机敌军"
+            },
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "【迟缓】、登场:吹回随机敌军、攻击前:50%几率，吹回随机敌军"
+            },
+            {
+                "attack": 5,
+                "life": 6,
+                "effect": "【迟缓】、对手法力上限-1、登场:吹回随机敌军、攻击前:50%几率，吹回随机敌军"
+            },
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "【迟缓】、对手法力上限-1、登场:吹回随机敌军、攻击前:60%几率，吹回随机敌军"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "【迟缓】、对手法力上限-1、登场:吹回随机敌军、攻击前:60%几率，吹回随机敌军"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "【迟缓】、对手法力上限-1、登场:吹回随机敌军、攻击前:65%几率，吹回随机敌军"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "【迟缓】、对手法力上限-1、登场:吹回随机敌军、攻击前:70%几率，吹回随机敌军"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "【迟缓】、对手法力上限-1、登场:吹回随机敌军、攻击前:75%几率，吹回随机敌军"
+            },
+            {
+                "attack": 11,
+                "life": 12,
+                "effect": "【迟缓】、对手法力上限-1、登场:吹回随机敌军、攻击前:75%几率，吹回随机敌军"
+            },
+            {
+                "attack": 13,
+                "life": 13,
+                "effect": "【迟缓】、对手法力上限-1、登场:吹回随机敌军、攻击前:75%几率，吹回随机敌军"
+            },
+            {
+                "attack": 15,
+                "life": 15,
+                "effect": "【迟缓】、对手法力上限-1、登场:吹回随机敌军、攻击前:75%几率，吹回随机敌军"
+            },
+            {
+                "attack": 17,
+                "life": 17,
+                "effect": "【迟缓】、对手法力上限-1、登场:吹回随机敌军、攻击前:75%几率，吹回随机敌军"
+            },
+            {
+                "attack": 20,
+                "life": 20,
+                "effect": "【迟缓】、对手法力上限-1、登场:吹回随机敌军、攻击前:75%几率，吹回随机敌军"
+            },
+            {
+                "attack": 23,
+                "life": 23,
+                "effect": "【迟缓】、对手法力上限-1、登场:吹回随机敌军、攻击前:75%几率，吹回随机敌军"
+            },
+            {
+                "attack": 26,
+                "life": 26,
+                "effect": "【迟缓】、对手法力上限-1、登场:吹回随机敌军、攻击前:75%几率，吹回随机敌军"
+            },
+            {
+                "attack": 30,
+                "life": 30,
+                "effect": "【迟缓】、对手法力上限-1、登场:吹回随机敌军、攻击前:75%几率，吹回随机敌军"
+            },
+            {
+                "attack": 34,
+                "life": 34,
+                "effect": "【迟缓】、对手法力上限-1、登场:吹回随机敌军、攻击前:75%几率，吹回随机敌军"
+            },
+            {
+                "attack": 38,
+                "life": 38,
+                "effect": "【迟缓】、对手法力上限-1、登场:吹回随机敌军、攻击前:75%几率，吹回随机敌军"
+            }
+        ]
+    },
+    {
+        "id": 381,
+        "name": "缴械逆袭",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 4,
+        "type": 2,
+        "img": "/tiantanggang/jiaoxienixi.jpg",
+        "grade": "[1]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机2个敌军攻击-2、随机2个友军攻击+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机2个敌军攻击-2、随机2个友军攻击+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机2个敌军攻击-3、随机2个友军攻击+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机2个敌军攻击-3、随机2个友军攻击+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机3个敌军攻击-3、随机3个友军攻击+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机4个敌军攻击-3、随机4个友军攻击+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机5个敌军攻击-3、随机5个友军攻击+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机5个敌军攻击-4、随机5个友军攻击+4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机5个敌军攻击-4、随机5个友军攻击+5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机6个敌军攻击-5、随机6个友军攻击+5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄5点生命、随机6个敌军攻击-5、随机6个友军攻击+5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄6点生命、随机6个敌军攻击-6、随机6个友军攻击+6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄10点生命、随机6个敌军攻击-6、随机6个友军攻击+6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄12点生命、随机6个敌军攻击-7、随机6个友军攻击+7"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄18点生命、随机6个敌军攻击-7、随机6个友军攻击+7"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄20点生命、随机6个敌军攻击-8、随机6个友军攻击+8"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄22点生命、随机6个敌军攻击-9、随机6个友军攻击+9"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄25点生命、随机6个敌军攻击-10、随机6个友军攻击+10"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄25点生命、随机7个敌军攻击-11、随机6个友军攻击+11"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄25点生命、随机7个敌军攻击-13、随机6个友军攻击+13"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄25点生命、随机7个敌军攻击-15、随机6个友军攻击+15"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "吸取敌方英雄25点生命、随机7个敌军攻击-17、随机6个友军攻击+17"
+            }
+        ]
+    },
+    {
+        "id": 382,
+        "name": "磐龙工匠",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 4,
+        "type": 1,
+        "img": "/tiantanggang/panshigongjiang.jpg",
+        "grade": "[2]",
+        "tag": "[8]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 5,
+                "effect": "回合开始:若英雄生命高于敌方，随机友军+1/+2，获得【磐龙】"
+            },
+            {
+                "attack": 3,
+                "life": 7,
+                "effect": "回合开始:若英雄生命高于敌方，随机友军+1/+2，获得【磐龙】"
+            },
+            {
+                "attack": 4,
+                "life": 8,
+                "effect": "回合开始:若英雄生命高于敌方，随机友军+2/+2，获得【磐龙】"
+            },
+            {
+                "attack": 5,
+                "life": 10,
+                "effect": "回合开始:若英雄生命高于敌方，随机友军+2/+2，获得【磐龙】"
+            },
+            {
+                "attack": 6,
+                "life": 13,
+                "effect": "回合开始:若英雄生命高于敌方，随机友军+2/+3，获得【磐龙】"
+            },
+            {
+                "attack": 7,
+                "life": 14,
+                "effect": "回合开始:若英雄生命高于敌方，随机友军+3/+3，获得【磐龙】"
+            },
+            {
+                "attack": 8,
+                "life": 16,
+                "effect": "回合开始:若英雄生命高于敌方，随机友军+3/+4，获得【磐龙】"
+            },
+            {
+                "attack": 9,
+                "life": 19,
+                "effect": "回合开始:若英雄生命高于敌方，随机友军+4/+4，获得【磐龙】"
+            },
+            {
+                "attack": 10,
+                "life": 22,
+                "effect": "回合开始:若英雄生命高于敌方，随机友军+4/+5，获得【磐龙】"
+            },
+            {
+                "attack": 11,
+                "life": 25,
+                "effect": "回合开始:若英雄生命高于敌方，随机友军+5/+5，获得【磐龙】"
+            },
+            {
+                "attack": 12,
+                "life": 28,
+                "effect": "回合开始:若英雄生命高于敌方，随机友军+5/+6，获得【磐龙】"
+            },
+            {
+                "attack": 14,
+                "life": 31,
+                "effect": "回合开始:若英雄生命高于敌方，随机友军+6/+6，获得【磐龙】"
+            },
+            {
+                "attack": 16,
+                "life": 34,
+                "effect": "回合开始:若英雄生命高于敌方，随机友军+6/+7，获得【磐龙】"
+            },
+            {
+                "attack": 18,
+                "life": 37,
+                "effect": "回合开始:若英雄生命高于敌方，随机友军+7/+7，获得【磐龙】"
+            },
+            {
+                "attack": 20,
+                "life": 40,
+                "effect": "回合开始:若英雄生命高于敌方，随机友军+8/+8，获得【磐龙】"
+            },
+            {
+                "attack": 22,
+                "life": 46,
+                "effect": "回合开始:若英雄生命高于敌方，随机友军+8/+8，获得【磐龙】"
+            },
+            {
+                "attack": 24,
+                "life": 52,
+                "effect": "回合开始:若英雄生命高于敌方，随机友军+9/+9，获得【磐龙】"
+            },
+            {
+                "attack": 26,
+                "life": 60,
+                "effect": "回合开始:若英雄生命高于敌方，随机友军+9/+9，获得【磐龙】"
+            },
+            {
+                "attack": 28,
+                "life": 65,
+                "effect": "回合开始:若英雄生命高于敌方，随机友军+10/+10，获得【磐龙】"
+            },
+            {
+                "attack": 30,
+                "life": 75,
+                "effect": "回合开始:若英雄生命高于敌方，随机友军+10/+10，获得【磐龙】"
+            },
+            {
+                "attack": 33,
+                "life": 80,
+                "effect": "回合开始:若英雄生命高于敌方，随机友军+11/+11，获得【磐龙】"
+            },
+            {
+                "attack": 36,
+                "life": 86,
+                "effect": "回合开始:若英雄生命高于敌方，随机友军+12/+12，获得【磐龙】"
+            }
+        ]
+    },
+    {
+        "id": 383,
+        "name": "奴役黑猿",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 4,
+        "type": 1,
+        "img": "/tiantanggang/nuyiheiyuan.jpg",
+        "grade": "[2]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 6,
+                "life": 8,
+                "effect": "场上人数高于敌方时，才可以攻击"
+            },
+            {
+                "attack": 8,
+                "life": 10,
+                "effect": "场上人数高于敌方时，才可以攻击"
+            },
+            {
+                "attack": 10,
+                "life": 13,
+                "effect": "场上人数高于敌方时，才可以攻击"
+            },
+            {
+                "attack": 12,
+                "life": 16,
+                "effect": "场上人数高于敌方时，才可以攻击"
+            },
+            {
+                "attack": 14,
+                "life": 20,
+                "effect": "场上人数高于敌方时，才可以攻击"
+            },
+            {
+                "attack": 16,
+                "life": 24,
+                "effect": "场上人数高于敌方时，才可以攻击"
+            },
+            {
+                "attack": 18,
+                "life": 28,
+                "effect": "场上人数高于敌方时，才可以攻击"
+            },
+            {
+                "attack": 20,
+                "life": 32,
+                "effect": "场上人数高于敌方时，才可以攻击"
+            },
+            {
+                "attack": 22,
+                "life": 36,
+                "effect": "场上人数高于敌方时，才可以攻击"
+            },
+            {
+                "attack": 24,
+                "life": 40,
+                "effect": "场上人数高于敌方时，才可以攻击"
+            },
+            {
+                "attack": 26,
+                "life": 46,
+                "effect": "场上人数高于敌方时，才可以攻击"
+            },
+            {
+                "attack": 28,
+                "life": 50,
+                "effect": "场上人数高于敌方时，才可以攻击"
+            },
+            {
+                "attack": 30,
+                "life": 55,
+                "effect": "场上人数高于敌方时，才可以攻击"
+            },
+            {
+                "attack": 33,
+                "life": 60,
+                "effect": "场上人数高于敌方时，才可以攻击"
+            },
+            {
+                "attack": 36,
+                "life": 66,
+                "effect": "场上人数高于敌方时，才可以攻击"
+            },
+            {
+                "attack": 40,
+                "life": 70,
+                "effect": "场上人数高于敌方时，才可以攻击"
+            },
+            {
+                "attack": 45,
+                "life": 75,
+                "effect": "场上人数高于敌方时，才可以攻击"
+            },
+            {
+                "attack": 50,
+                "life": 82,
+                "effect": "场上人数高于敌方时，才可以攻击"
+            },
+            {
+                "attack": 55,
+                "life": 90,
+                "effect": "场上人数高于敌方时，才可以攻击"
+            },
+            {
+                "attack": 60,
+                "life": 99,
+                "effect": "场上人数高于敌方时，才可以攻击"
+            },
+            {
+                "attack": 66,
+                "life": 110,
+                "effect": "场上人数高于敌方时，才可以攻击"
+            },
+            {
+                "attack": 72,
+                "life": 120,
+                "effect": "场上人数高于敌方时，才可以攻击"
+            }
+        ]
+    },
+    {
+        "id": 384,
+        "name": "红海领航员",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 4,
+        "type": 1,
+        "img": "/tiantanggang/honghailinghangyuan.jpg",
+        "grade": "[1]",
+        "tag": "[3,6]",
+        "data": [
+            {
+                "attack": 2,
+                "life": 3,
+                "effect": "【先攻】、攻击前：全体先攻友军攻击+1"
+            },
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "【先攻】、攻击前：全体先攻友军攻击+1"
+            },
+            {
+                "attack": 4,
+                "life": 4,
+                "effect": "【先攻】、攻击前：全体先攻友军+1/+1"
+            },
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "【先攻】、攻击前：全体先攻友军+1/+1"
+            },
+            {
+                "attack": 5,
+                "life": 6,
+                "effect": "【先攻】、攻击前：全体先攻友军+2/+1"
+            },
+            {
+                "attack": 6,
+                "life": 7,
+                "effect": "【洞察1】、【先攻】、攻击前：全体先攻友军+2/+1"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "【洞察1】、【先攻】、攻击前：全体先攻友军+3/+1"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "【洞察1】、【先攻】、攻击前：全体先攻友军+3/+1"
+            },
+            {
+                "attack": 9,
+                "life": 8,
+                "effect": "【洞察1】、【先攻】、攻击前：全体先攻友军+3/+2"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "【洞察1】、【先攻】、攻击前：全体先攻友军+3/+2"
+            },
+            {
+                "attack": 12,
+                "life": 12,
+                "effect": "【洞察1】、【先攻】、攻击前：全体先攻友军+3/+2"
+            },
+            {
+                "attack": 13,
+                "life": 13,
+                "effect": "【洞察1】、【先攻】、攻击前：全体先攻友军+4/+2"
+            },
+            {
+                "attack": 14,
+                "life": 16,
+                "effect": "【洞察1】、【先攻】、攻击前：全体先攻友军+4/+2"
+            },
+            {
+                "attack": 16,
+                "life": 16,
+                "effect": "【洞察1】、【先攻】、攻击前：全体先攻友军+4/+3"
+            },
+            {
+                "attack": 18,
+                "life": 18,
+                "effect": "【洞察1】、【先攻】、攻击前：全体先攻友军+4/+3"
+            },
+            {
+                "attack": 20,
+                "life": 19,
+                "effect": "【洞察1】、【先攻】、攻击前：全体先攻友军+5/+3"
+            },
+            {
+                "attack": 22,
+                "life": 20,
+                "effect": "【洞察1】、【先攻】、攻击前：全体先攻友军+5/+3"
+            },
+            {
+                "attack": 25,
+                "life": 20,
+                "effect": "【洞察1】、【先攻】、攻击前：全体先攻友军+5/+4"
+            },
+            {
+                "attack": 28,
+                "life": 22,
+                "effect": "【洞察1】、【先攻】、攻击前：全体先攻友军+5/+4"
+            },
+            {
+                "attack": 30,
+                "life": 23,
+                "effect": "【洞察1】、【先攻】、攻击前：全体先攻友军+6/+4"
+            },
+            {
+                "attack": 33,
+                "life": 25,
+                "effect": "【洞察1】、【先攻】、攻击前：全体先攻友军+6/+4"
+            },
+            {
+                "attack": 35,
+                "life": 28,
+                "effect": "【洞察1】、【先攻】、攻击前：全体先攻友军+6/+5"
+            }
+        ]
+    },
+    {
+        "id": 385,
+        "name": "在逃重犯",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 4,
+        "type": 1,
+        "img": "/tiantanggang/zaitaozhongfan.jpg",
+        "grade": "[2]",
+        "tag": "[5,8,26]",
+        "data": [
+            {
+                "attack": 6,
+                "life": 8,
+                "effect": "【磐龙】、登场：敌方召唤2/1警卫lv1、回合结束：若本回合有2个单位死亡，自身+1/+1获得【践踏】"
+            },
+            {
+                "attack": 7,
+                "life": 9,
+                "effect": "【磐龙】、登场：敌方召唤2/1警卫lv1、回合结束：若本回合有2个单位死亡，自身+1/+1获得【践踏】"
+            },
+            {
+                "attack": 8,
+                "life": 10,
+                "effect": "【磐龙】、登场：敌方召唤2/1警卫lv1、回合结束：若本回合有2个单位死亡，自身+2/+2获得【践踏】"
+            },
+            {
+                "attack": 9,
+                "life": 12,
+                "effect": "【磐龙】、登场：敌方召唤2/1警卫lv1、回合结束：若本回合有2个单位死亡，自身+2/+2获得【践踏】"
+            },
+            {
+                "attack": 11,
+                "life": 13,
+                "effect": "【磐龙】、登场：敌方召唤2/1警卫lv1、回合结束：若本回合有2个单位死亡，自身+3/+3获得【践踏】"
+            },
+            {
+                "attack": 12,
+                "life": 15,
+                "effect": "【磐龙】、登场：敌方召唤2/1警卫lv1、回合结束：若本回合有2个单位死亡，自身+3/+3获得【践踏】"
+            },
+            {
+                "attack": 13,
+                "life": 18,
+                "effect": "【磐龙】、登场：敌方召唤2/1警卫lv1、回合结束：若本回合有2个单位死亡，自身+4/+4获得【践踏】"
+            },
+            {
+                "attack": 14,
+                "life": 21,
+                "effect": "【磐龙】、登场：敌方召唤2/1警卫lv1、回合结束：若本回合有2个单位死亡，自身+4/+4获得【践踏】"
+            },
+            {
+                "attack": 15,
+                "life": 25,
+                "effect": "【磐龙】、登场：敌方召唤2/1警卫lv1、回合结束：若本回合有2个单位死亡，自身+5/+5获得【践踏】"
+            },
+            {
+                "attack": 16,
+                "life": 28,
+                "effect": "【磐龙】、登场：敌方召唤2/1警卫lv1、回合结束：若本回合有2个单位死亡，自身+5/+5获得【践踏】"
+            },
+            {
+                "attack": 18,
+                "life": 32,
+                "effect": "【磐龙】、登场：敌方召唤2/1警卫lv1、回合结束：若本回合有2个单位死亡，自身+6/+6获得【践踏】"
+            },
+            {
+                "attack": 19,
+                "life": 36,
+                "effect": "【磐龙】、登场：敌方召唤2/1警卫lv1、回合结束：若本回合有2个单位死亡，自身+6/+6获得【践踏】"
+            },
+            {
+                "attack": 20,
+                "life": 40,
+                "effect": "【磐龙】、登场：敌方召唤2/1警卫lv1、回合结束：若本回合有2个单位死亡，自身+7/+7获得【践踏】"
+            },
+            {
+                "attack": 22,
+                "life": 45,
+                "effect": "【磐龙】、登场：敌方召唤2/1警卫lv1、回合结束：若本回合有2个单位死亡，自身+8/+8获得【践踏】"
+            },
+            {
+                "attack": 24,
+                "life": 50,
+                "effect": "【磐龙】、登场：敌方召唤2/1警卫lv1、回合结束：若本回合有2个单位死亡，自身+8/+8获得【践踏】"
+            },
+            {
+                "attack": 27,
+                "life": 55,
+                "effect": "【磐龙】、登场：敌方召唤2/1警卫lv1、回合结束：若本回合有2个单位死亡，自身+9/+9获得【践踏】"
+            },
+            {
+                "attack": 30,
+                "life": 60,
+                "effect": "【磐龙】、登场：敌方召唤2/1警卫lv1、回合结束：若本回合有2个单位死亡，自身+9/+9获得【践踏】"
+            },
+            {
+                "attack": 33,
+                "life": 65,
+                "effect": "【磐龙】、登场：敌方召唤2/1警卫lv1、回合结束：若本回合有2个单位死亡，自身+10/+10获得【践踏】"
+            },
+            {
+                "attack": 36,
+                "life": 70,
+                "effect": "【磐龙】、登场：敌方召唤2/1警卫lv1、回合结束：若本回合有2个单位死亡，自身+12/+12获得【践踏】"
+            },
+            {
+                "attack": 39,
+                "life": 75,
+                "effect": "【磐龙】、登场：敌方召唤2/1警卫lv1、回合结束：若本回合有2个单位死亡，自身+13/+13获得【践踏】"
+            },
+            {
+                "attack": 42,
+                "life": 82,
+                "effect": "【磐龙】、登场：敌方召唤2/1警卫lv1、回合结束：若本回合有2个单位死亡，自身+15/+15获得【践踏】"
+            },
+            {
+                "attack": 45,
+                "life": 90,
+                "effect": "【磐龙】、登场：敌方召唤2/1警卫lv1、回合结束：若本回合有2个单位死亡，自身+18/+18获得【践踏】"
+            }
+        ]
+    },
+    {
+        "id": 386,
+        "name": "地心冒险家",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 4,
+        "type": 1,
+        "img": "/tiantanggang/dixinmaoxianjia.jpg",
+        "grade": "[1]",
+        "tag": "[2]",
+        "data": [
+            {
+                "attack": 4,
+                "life": 5,
+                "effect": "【法力封锁1】、攻击前:每使用过一个法术或传记，自身+1/+1，使用传记:获得【回命】"
+            },
+            {
+                "attack": 5,
+                "life": 7,
+                "effect": "【法力封锁1】、攻击前:每使用过一个法术或传记，自身+1/+1，使用传记:获得【回命】"
+            },
+            {
+                "attack": 6,
+                "life": 8,
+                "effect": "【法力封锁1】、攻击前:每使用过一个法术或传记，自身+1/+2，使用传记:获得【回命】"
+            },
+            {
+                "attack": 7,
+                "life": 10,
+                "effect": "【法力封锁1】、攻击前:每使用过一个法术或传记，自身+1/+2，使用传记:获得【回命】"
+            },
+            {
+                "attack": 8,
+                "life": 12,
+                "effect": "【法力封锁1】、攻击前:每使用过一个法术或传记，自身+1/+3，使用传记:获得【回命】"
+            },
+            {
+                "attack": 9,
+                "life": 15,
+                "effect": "【法力封锁1】、攻击前:每使用过一个法术或传记，自身+1/+3，使用传记:获得【回命】"
+            },
+            {
+                "attack": 10,
+                "life": 17,
+                "effect": "【法力封锁1】、攻击前:每使用过一个法术或传记，自身+1/+3，使用传记:获得【回命】"
+            },
+            {
+                "attack": 12,
+                "life": 18,
+                "effect": "【法力封锁1】、攻击前:每使用过一个法术或传记，自身+1/+4，使用传记:获得【回命】"
+            },
+            {
+                "attack": 14,
+                "life": 19,
+                "effect": "【法力封锁1】、攻击前:每使用过一个法术或传记，自身+1/+4，使用传记:获得【回命】"
+            },
+            {
+                "attack": 15,
+                "life": 22,
+                "effect": "【法力封锁2】、攻击前:每使用过一个法术或传记，自身+2/+4，使用传记:获得【回命】"
+            },
+            {
+                "attack": 16,
+                "life": 26,
+                "effect": "【法力封锁2】、攻击前:每使用过一个法术或传记，自身+2/+4，使用传记:获得【回命】"
+            },
+            {
+                "attack": 18,
+                "life": 28,
+                "effect": "【法力封锁2】、攻击前:每使用过一个法术或传记，自身+2/+5，使用传记:获得【回命】"
+            },
+            {
+                "attack": 20,
+                "life": 30,
+                "effect": "【法力封锁2】、攻击前:每使用过一个法术或传记，自身+2/+5，使用传记:获得【回命】"
+            },
+            {
+                "attack": 22,
+                "life": 32,
+                "effect": "【法力封锁2】、攻击前:每使用过一个法术或传记，自身+3/+5，使用传记:获得【回命】"
+            },
+            {
+                "attack": 25,
+                "life": 36,
+                "effect": "【法力封锁2】、攻击前:每使用过一个法术或传记，自身+3/+5，使用传记:获得【回命】"
+            },
+            {
+                "attack": 28,
+                "life": 40,
+                "effect": "【法力封锁2】、攻击前:每使用过一个法术或传记，自身+3/+6，使用传记:获得【回命】"
+            },
+            {
+                "attack": 31,
+                "life": 45,
+                "effect": "【法力封锁2】、攻击前:每使用过一个法术或传记，自身+3/+7，使用传记:获得【回命】"
+            },
+            {
+                "attack": 35,
+                "life": 50,
+                "effect": "【法力封锁2】、攻击前:每使用过一个法术或传记，自身+3/+8，使用传记:获得【回命】"
+            },
+            {
+                "attack": 37,
+                "life": 55,
+                "effect": "【法力封锁2】、攻击前:每使用过一个法术或传记，自身+4/+9，使用传记:获得【回命】"
+            },
+            {
+                "attack": 40,
+                "life": 60,
+                "effect": "【法力封锁2】、攻击前:每使用过一个法术或传记，自身+5/+10，使用传记:获得【回命】"
+            },
+            {
+                "attack": 43,
+                "life": 66,
+                "effect": "【法力封锁2】、攻击前:每使用过一个法术或传记，自身+5/+12，使用传记:获得【回命】"
+            },
+            {
+                "attack": 46,
+                "life": 72,
+                "effect": "【法力封锁2】、攻击前:每使用过一个法术或传记，自身+6/+12，使用传记:获得【回命】"
+            }
+        ]
+    },
+    {
+        "id": 387,
+        "name": "寻宝队长",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 4,
+        "type": 1,
+        "img": "/tiantanggang/xunbaoduizhang.jpg",
+        "grade": "[3]",
+        "tag": "[1,23,25]",
+        "data": [
+            {
+                "attack": 4,
+                "life": 4,
+                "effect": "【护甲1】、法力上限+1、命中时:抽一张牌"
+            },
+            {
+                "attack": 5,
+                "life": 6,
+                "effect": "【护甲1】、法力上限+1、命中时:抽一张牌"
+            },
+            {
+                "attack": 6,
+                "life": 8,
+                "effect": "【护甲1】、法力上限+1、命中时:抽一张牌"
+            },
+            {
+                "attack": 7,
+                "life": 10,
+                "effect": "【护甲1】、法力上限+1、命中时:抽一张牌"
+            },
+            {
+                "attack": 8,
+                "life": 11,
+                "effect": "【护甲2】、法力上限+1、命中时:抽一张牌"
+            },
+            {
+                "attack": 9,
+                "life": 13,
+                "effect": "【护甲2】、法力上限+1、命中时:抽一张牌"
+            },
+            {
+                "attack": 10,
+                "life": 15,
+                "effect": "【护甲2】、法力上限+1、命中时:抽一张牌"
+            },
+            {
+                "attack": 11,
+                "life": 17,
+                "effect": "【护甲2】、法力上限+1、命中时:抽一张牌"
+            },
+            {
+                "attack": 12,
+                "life": 19,
+                "effect": "【护甲2】、法力上限+1、命中时:抽一张牌"
+            },
+            {
+                "attack": 14,
+                "life": 20,
+                "effect": "【护甲3】、法力上限+1、命中时:抽一张牌"
+            },
+            {
+                "attack": 16,
+                "life": 22,
+                "effect": "【护甲3】、法力上限+1、命中时:抽一张牌"
+            },
+            {
+                "attack": 18,
+                "life": 23,
+                "effect": "【护甲4】、法力上限+1、命中时:抽一张牌"
+            },
+            {
+                "attack": 20,
+                "life": 26,
+                "effect": "【护甲4】、法力上限+1、命中时:抽一张牌"
+            },
+            {
+                "attack": 22,
+                "life": 29,
+                "effect": "【护甲4】、法力上限+1、命中时:抽一张牌"
+            },
+            {
+                "attack": 24,
+                "life": 32,
+                "effect": "【护甲5】、法力上限+1、命中时:抽一张牌"
+            },
+            {
+                "attack": 26,
+                "life": 36,
+                "effect": "【护甲5】、法力上限+1、命中时:抽一张牌"
+            },
+            {
+                "attack": 28,
+                "life": 39,
+                "effect": "【护甲5】、法力上限+1、命中时:抽一张牌"
+            },
+            {
+                "attack": 30,
+                "life": 42,
+                "effect": "【护甲6】、法力上限+1、命中时:抽一张牌"
+            },
+            {
+                "attack": 32,
+                "life": 46,
+                "effect": "【护甲6】、法力上限+1、命中时:抽一张牌"
+            },
+            {
+                "attack": 35,
+                "life": 50,
+                "effect": "【护甲6】、法力上限+1、命中时:抽一张牌"
+            },
+            {
+                "attack": 38,
+                "life": 53,
+                "effect": "【护甲7】、法力上限+1、命中时:抽一张牌"
+            },
+            {
+                "attack": 40,
+                "life": 60,
+                "effect": "【护甲7】、法力上限+1、命中时:抽一张牌"
+            }
+        ]
+    },
+    {
+        "id": 388,
+        "name": "符文·杀戮之锚",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 4,
+        "type": 4,
+        "img": "/tiantanggang/fuwen_shaluzhimao.jpg",
+        "grade": "[2]",
+        "tag": "[19]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：随机敌军受到12点伤害、每当1个敌军死亡：随机友军+1/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：随机敌军受到12点伤害、每当1个敌军死亡：随机友军+2/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：随机敌军受到20点伤害、每当1个敌军死亡：随机友军+2/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：随机敌军受到20点伤害、每当1个敌军死亡：随机友军+2/+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：随机敌军受到30点伤害、每当1个敌军死亡：随机友军+2/+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：随机敌军受到30点伤害、每当1个敌军死亡：随机友军+3/+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：随机敌军受到40点伤害、每当1个敌军死亡：随机友军+3/+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：随机敌军受到40点伤害、每当1个敌军死亡：随机友军+3/+4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：随机敌军受到55点伤害、每当1个敌军死亡：随机友军+3/+4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：随机敌军受到55点伤害、每当1个敌军死亡：随机友军+4/+4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：随机敌军受到70点伤害、每当1个敌军死亡：随机友军+4/+4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：随机敌军受到70点伤害、每当1个敌军死亡：随机友军+4/+5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：随机敌军受到85点伤害、每当1个敌军死亡：随机友军+4/+5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：随机敌军受到85点伤害、每当1个敌军死亡：随机友军+5/+5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：随机敌军受到100点伤害、每当1个敌军死亡：随机友军+5/+5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：随机敌军受到100点伤害、每当1个敌军死亡：随机友军+5/+6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：随机敌军受到115点伤害、每当1个敌军死亡：随机友军+5/+6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：随机敌军受到115点伤害、每当1个敌军死亡：随机友军+6/+6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：随机敌军受到130点伤害、每当1个敌军死亡：随机友军+6/+6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：随机敌军受到130点伤害、每当1个敌军死亡：随机友军+6/+7"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：随机敌军受到150点伤害、每当1个敌军死亡：随机友军+6/+7"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：随机敌军受到150点伤害、每当1个敌军死亡：随机友军+7/+7"
+            }
+        ]
+    },
+    {
+        "id": 389,
+        "name": "贵族运输象",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 5,
+        "type": 1,
+        "img": "/tiantanggang/guizuyunshuxiang.jpg",
+        "grade": "[0]",
+        "tag": "[2,25]",
+        "data": [
+            {
+                "attack": 4,
+                "life": 6,
+                "effect": "登场:英雄生命+5"
+            },
+            {
+                "attack": 4,
+                "life": 9,
+                "effect": "登场:英雄生命+7"
+            },
+            {
+                "attack": 5,
+                "life": 10,
+                "effect": "登场:英雄生命+8，随机另一友军+1/+1"
+            },
+            {
+                "attack": 6,
+                "life": 12,
+                "effect": "登场:英雄生命+9，随机另一友军+1/+3"
+            },
+            {
+                "attack": 7,
+                "life": 14,
+                "effect": "登场:英雄生命+9，随机另一友军+1/+3、若有帝国或蛮石友军在场，抓一张牌"
+            },
+            {
+                "attack": 8,
+                "life": 16,
+                "effect": "登场:英雄生命+12，随机另一友军+1/+4、若有帝国或蛮石友军在场，抓一张牌"
+            },
+            {
+                "attack": 10,
+                "life": 20,
+                "effect": "登场:英雄生命+13，随机另一友军+1/+4、若有帝国或蛮石友军在场，抓一张牌"
+            },
+            {
+                "attack": 12,
+                "life": 23,
+                "effect": "登场:英雄生命+15，随机另一友军+1/+5、若有帝国或蛮石友军在场，抓一张牌"
+            },
+            {
+                "attack": 14,
+                "life": 26,
+                "effect": "登场:英雄生命+18，随机另一友军+1/+5、若有帝国或蛮石友军在场，抓一张牌"
+            },
+            {
+                "attack": 16,
+                "life": 30,
+                "effect": "登场:英雄生命+20，随机另一友军+2/+5、若有帝国或蛮石友军在场，抓一张牌"
+            },
+            {
+                "attack": 18,
+                "life": 33,
+                "effect": "登场:英雄生命+22，随机另一友军+2/+5、若有帝国或蛮石友军在场，抓一张牌"
+            },
+            {
+                "attack": 20,
+                "life": 36,
+                "effect": "登场:英雄生命+25，随机另一友军+3/+6、若有帝国或蛮石友军在场，抓一张牌"
+            },
+            {
+                "attack": 22,
+                "life": 40,
+                "effect": "登场:英雄生命+30，随机另一友军+4/+6、若有帝国或蛮石友军在场，抓一张牌"
+            },
+            {
+                "attack": 24,
+                "life": 45,
+                "effect": "登场:英雄生命+35，随机另一友军+5/+6、若有帝国或蛮石友军在场，抓一张牌"
+            },
+            {
+                "attack": 26,
+                "life": 48,
+                "effect": "登场:英雄生命+40，随机另一友军+6/+6、若有帝国或蛮石友军在场，抓一张牌"
+            },
+            {
+                "attack": 28,
+                "life": 52,
+                "effect": "登场:英雄生命+45，随机另一友军+7/+7、若有帝国或蛮石友军在场，抓一张牌"
+            },
+            {
+                "attack": 30,
+                "life": 56,
+                "effect": "登场:英雄生命+50，随机另一友军+8/+8、若有帝国或蛮石友军在场，抓一张牌"
+            },
+            {
+                "attack": 33,
+                "life": 60,
+                "effect": "登场:英雄生命+55，随机另一友军+9/+9、若有帝国或蛮石友军在场，抓一张牌"
+            },
+            {
+                "attack": 36,
+                "life": 65,
+                "effect": "登场:英雄生命+60，随机另一友军+10/+10、若有帝国或蛮石友军在场，抓一张牌"
+            },
+            {
+                "attack": 39,
+                "life": 70,
+                "effect": "登场:英雄生命+66，随机另一友军+12/+12、若有帝国或蛮石友军在场，抓一张牌"
+            },
+            {
+                "attack": 42,
+                "life": 75,
+                "effect": "登场:英雄生命+72，随机另一友军+14/+14、若有帝国或蛮石友军在场，抓一张牌"
+            },
+            {
+                "attack": 45,
+                "life": 80,
+                "effect": "登场:英雄生命+80，随机另一友军+16/+16、若有帝国或蛮石友军在场，抓一张牌"
+            }
+        ]
+    },
+    {
+        "id": 390,
+        "name": "黑旗舰队双枪客",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 5,
+        "type": 1,
+        "img": "/tiantanggang/heiqijianduishuangqiangke.jpg",
+        "grade": "[0]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 5,
+                "life": 4,
+                "effect": "攻击前:若英雄生命高于敌方，射击随机敌军，2点伤害"
+            },
+            {
+                "attack": 6,
+                "life": 5,
+                "effect": "攻击前:若英雄生命高于敌方，射击随机敌军，2点伤害"
+            },
+            {
+                "attack": 7,
+                "life": 8,
+                "effect": "登场:射击随机敌军，2点伤害、攻击前:若英雄生命高于敌方，射击随机敌军，2点伤害"
+            },
+            {
+                "attack": 8,
+                "life": 7,
+                "effect": "登场:射击随机敌军，3点伤害、攻击前:若英雄生命高于敌方，射击随机敌军，3点伤害"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "登场:射击随机敌军，4点伤害、攻击前:若英雄生命高于敌方，射击随机敌军，3点伤害"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "登场:射击随机敌军，5点伤害、攻击前:若英雄生命高于敌方，射击随机2个敌军，3点伤害"
+            },
+            {
+                "attack": 12,
+                "life": 12,
+                "effect": "登场:射击随机敌军，5点伤害、攻击前:若英雄生命高于敌方，射击随机2个敌军，4点伤害"
+            },
+            {
+                "attack": 14,
+                "life": 14,
+                "effect": "登场:射击随机敌军，7点伤害、攻击前:若英雄生命高于敌方，射击随机2个敌军，4点伤害"
+            },
+            {
+                "attack": 16,
+                "life": 15,
+                "effect": "登场:射击随机敌军，7点伤害、攻击前:若英雄生命高于敌方，射击随机2个敌军，5点伤害"
+            },
+            {
+                "attack": 17,
+                "life": 17,
+                "effect": "登场:射击随机敌军，9点伤害、攻击前:若英雄生命高于敌方，射击随机2个敌军，5点伤害"
+            },
+            {
+                "attack": 19,
+                "life": 19,
+                "effect": "登场:射击随机敌军，10点伤害、攻击前:若英雄生命高于敌方，射击随机2个敌军，6点伤害"
+            },
+            {
+                "attack": 21,
+                "life": 21,
+                "effect": "登场:射击随机敌军，12点伤害、攻击前:若英雄生命高于敌方，射击随机2个敌军，6点伤害"
+            },
+            {
+                "attack": 23,
+                "life": 23,
+                "effect": "登场:射击随机敌军，13点伤害、攻击前:若英雄生命高于敌方，射击随机2个敌军，7点伤害"
+            },
+            {
+                "attack": 25,
+                "life": 25,
+                "effect": "登场:射击随机敌军，15点伤害、攻击前:若英雄生命高于敌方，射击随机2个敌军，7点伤害"
+            },
+            {
+                "attack": 27,
+                "life": 27,
+                "effect": "登场:射击随机敌军，16点伤害、攻击前:若英雄生命高于敌方，射击随机2个敌军，8点伤害"
+            },
+            {
+                "attack": 30,
+                "life": 30,
+                "effect": "登场:射击随机敌军，18点伤害、攻击前:若英雄生命高于敌方，射击随机2个敌军，9点伤害"
+            },
+            {
+                "attack": 33,
+                "life": 33,
+                "effect": "登场:射击随机敌军，21点伤害、攻击前:若英雄生命高于敌方，射击随机2个敌军，10点伤害"
+            },
+            {
+                "attack": 37,
+                "life": 37,
+                "effect": "登场:射击随机敌军，24点伤害、攻击前:若英雄生命高于敌方，射击随机2个敌军，12点伤害"
+            },
+            {
+                "attack": 40,
+                "life": 40,
+                "effect": "登场:射击随机敌军，26点伤害、攻击前:若英雄生命高于敌方，射击随机2个敌军，13点伤害"
+            },
+            {
+                "attack": 45,
+                "life": 45,
+                "effect": "登场:射击随机敌军，30点伤害、攻击前:若英雄生命高于敌方，射击随机2个敌军，15点伤害"
+            },
+            {
+                "attack": 50,
+                "life": 50,
+                "effect": "登场:射击随机敌军，35点伤害、攻击前:若英雄生命高于敌方，射击随机2个敌军，17点伤害"
+            },
+            {
+                "attack": 55,
+                "life": 55,
+                "effect": "登场:射击随机敌军，40点伤害、攻击前:若英雄生命高于敌方，射击随机2个敌军，20点伤害"
+            }
+        ]
+    },
+    {
+        "id": 391,
+        "name": "星辰陨落",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 5,
+        "type": 2,
+        "img": "/tiantanggang/xingchenyunluo.jpg",
+        "grade": "[3]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落3点伤害，随机3个区域坠落1点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落4点伤害，随机4个区域坠落1点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落5点伤害，随机5个区域坠落1点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落7点伤害，随机5个区域坠落1点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落7点伤害，随机5个区域坠落2点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落10点伤害，随机5个区域坠落2点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落11点伤害，随机6个区域坠落2点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落14点伤害，随机6个区域坠落2点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落15点伤害，随机7个区域坠落2点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落19点伤害，随机7个区域坠落2点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落24点伤害，随机7个区域坠落2点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落24点伤害，随机7个区域坠落3点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落29点伤害，随机7个区域坠落3点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落30点伤害，随机7个区域坠落4点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落38点伤害，随机7个区域坠落4点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落45点伤害，随机7个区域坠落4点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落45点伤害，随机7个区域坠落5点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落55点伤害，随机7个区域坠落5点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落55点伤害，随机7个区域坠落6点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落66点伤害，随机7个区域坠落6点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落70点伤害，随机7个区域坠落7点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落79点伤害，随机7个区域坠落7点伤害"
+            }
+        ]
+    },
+    {
+        "id": 392,
+        "name": "万圣节秘树",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 5,
+        "type": 1,
+        "img": "/tiantanggang/wanshengjiemishu.jpg",
+        "grade": "[2]",
+        "tag": "[8,23,26]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 15,
+                "effect": "回合结束:获得《节日南瓜》-lv1"
+            },
+            {
+                "attack": 0,
+                "life": 20,
+                "effect": "回合结束:获得《节日南瓜》-lv2"
+            },
+            {
+                "attack": 0,
+                "life": 25,
+                "effect": "回合结束:获得《节日南瓜》-lv3"
+            },
+            {
+                "attack": 0,
+                "life": 30,
+                "effect": "回合结束:获得《节日南瓜》-lv4"
+            },
+            {
+                "attack": 0,
+                "life": 35,
+                "effect": "法力上限+1、回合结束:获得《节日南瓜》-lv5"
+            },
+            {
+                "attack": 0,
+                "life": 40,
+                "effect": "法力上限+1、回合结束:获得《节日南瓜》-lv6"
+            },
+            {
+                "attack": 0,
+                "life": 45,
+                "effect": "法力上限+1、回合结束:获得《节日南瓜》-lv7"
+            },
+            {
+                "attack": 0,
+                "life": 50,
+                "effect": "法力上限+1、回合结束:获得《节日南瓜》-lv8"
+            },
+            {
+                "attack": 0,
+                "life": 55,
+                "effect": "法力上限+1、【磐龙】、回合结束:获得《节日南瓜》-lv9"
+            },
+            {
+                "attack": 0,
+                "life": 60,
+                "effect": "法力上限+1、【磐龙】、回合结束:获得《节日南瓜》-lv10"
+            },
+            {
+                "attack": 0,
+                "life": 66,
+                "effect": "法力上限+1、【磐龙】、回合结束:获得《节日南瓜》-lv11"
+            },
+            {
+                "attack": 0,
+                "life": 73,
+                "effect": "法力上限+1、【磐龙】、回合结束:获得《节日南瓜》-lv12"
+            },
+            {
+                "attack": 0,
+                "life": 80,
+                "effect": "法力上限+1、【磐龙】、回合结束:获得《节日南瓜》-lv13"
+            },
+            {
+                "attack": 0,
+                "life": 88,
+                "effect": "法力上限+1、【磐龙】、回合结束:获得《节日南瓜》-lv14"
+            },
+            {
+                "attack": 0,
+                "life": 99,
+                "effect": "法力上限+1、【磐龙】、回合结束:获得《节日南瓜》-lv15"
+            },
+            {
+                "attack": 0,
+                "life": 111,
+                "effect": "法力上限+1、【磐龙】、回合结束:获得《节日南瓜》-lv16"
+            },
+            {
+                "attack": 0,
+                "life": 125,
+                "effect": "法力上限+1、【磐龙】、回合结束:获得《节日南瓜》-lv17"
+            },
+            {
+                "attack": 0,
+                "life": 137,
+                "effect": "法力上限+1、【磐龙】、回合结束:获得《节日南瓜》-lv18"
+            },
+            {
+                "attack": 0,
+                "life": 150,
+                "effect": "法力上限+1、【磐龙】、回合结束:获得《节日南瓜》-lv19"
+            },
+            {
+                "attack": 0,
+                "life": 173,
+                "effect": "法力上限+1、【磐龙】、回合结束:获得《节日南瓜》-lv20"
+            },
+            {
+                "attack": 0,
+                "life": 186,
+                "effect": "法力上限+1、【磐龙】、回合结束:获得《节日南瓜》-lv21"
+            },
+            {
+                "attack": 0,
+                "life": 200,
+                "effect": "法力上限+1、【磐龙】、回合结束:获得《节日南瓜》-lv22"
+            }
+        ]
+    },
+    {
+        "id": 393,
+        "name": "烈日大祭师",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 5,
+        "type": 1,
+        "img": "/tiantanggang/lieridajishi.jpg",
+        "grade": "[2]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 4,
+                "life": 4,
+                "effect": "回合开始：英雄生命高于对手，坠落闪电、攻击前：人数高于对手，投射火球"
+            },
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "回合开始：英雄生命高于对手，坠落闪电、攻击前：人数高于对手，投射火球"
+            },
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "回合开始：英雄生命高于对手，坠落闪电、攻击前：人数高于对手，投射火球"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "回合开始：英雄生命高于对手，坠落闪电、攻击前：人数高于对手，投射火球"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "回合开始：英雄生命高于对手，坠落闪电、攻击前：人数高于对手，投射火球"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "回合开始：英雄生命高于对手，坠落闪电、攻击前：人数高于对手，投射火球"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "回合开始：英雄生命高于对手，坠落闪电、攻击前：人数高于对手，投射火球"
+            },
+            {
+                "attack": 11,
+                "life": 11,
+                "effect": "回合开始：英雄生命高于对手，坠落闪电、攻击前：人数高于对手，投射火球"
+            },
+            {
+                "attack": 12,
+                "life": 12,
+                "effect": "回合开始：英雄生命高于对手，坠落闪电、攻击前：人数高于对手，投射火球"
+            },
+            {
+                "attack": 13,
+                "life": 14,
+                "effect": "回合开始：英雄生命高于对手，坠落闪电、攻击前：人数高于对手，投射火球"
+            },
+            {
+                "attack": 14,
+                "life": 16,
+                "effect": "回合开始：英雄生命高于对手，坠落闪电、攻击前：人数高于对手，投射火球"
+            },
+            {
+                "attack": 15,
+                "life": 18,
+                "effect": "回合开始：英雄生命高于对手，坠落闪电、攻击前：人数高于对手，投射火球"
+            },
+            {
+                "attack": 16,
+                "life": 21,
+                "effect": "回合开始：英雄生命高于对手，坠落闪电、攻击前：人数高于对手，投射火球"
+            },
+            {
+                "attack": 18,
+                "life": 24,
+                "effect": "回合开始：英雄生命高于对手，坠落闪电、攻击前：人数高于对手，投射火球"
+            },
+            {
+                "attack": 20,
+                "life": 27,
+                "effect": "回合开始：英雄生命高于对手，坠落闪电、攻击前：人数高于对手，投射火球"
+            },
+            {
+                "attack": 22,
+                "life": 30,
+                "effect": "回合开始：英雄生命高于对手，坠落闪电、攻击前：人数高于对手，投射火球"
+            },
+            {
+                "attack": 25,
+                "life": 32,
+                "effect": "回合开始：英雄生命高于对手，坠落闪电、攻击前：人数高于对手，投射火球"
+            },
+            {
+                "attack": 28,
+                "life": 35,
+                "effect": "回合开始：英雄生命高于对手，坠落闪电、攻击前：人数高于对手，投射火球"
+            },
+            {
+                "attack": 30,
+                "life": 40,
+                "effect": "回合开始：英雄生命高于对手，坠落闪电、攻击前：人数高于对手，投射火球"
+            },
+            {
+                "attack": 35,
+                "life": 40,
+                "effect": "回合开始：英雄生命高于对手，坠落闪电、攻击前：人数高于对手，投射火球"
+            },
+            {
+                "attack": 38,
+                "life": 45,
+                "effect": "回合开始：英雄生命高于对手，坠落闪电、攻击前：人数高于对手，投射火球"
+            },
+            {
+                "attack": 40,
+                "life": 52,
+                "effect": "回合开始：英雄生命高于对手，坠落闪电、攻击前：人数高于对手，投射火球"
+            }
+        ]
+    },
+    {
+        "id": 394,
+        "name": "符文·夜莺晚歌",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 5,
+        "type": 4,
+        "img": "/tiantanggang/fuwen_yeyingwange.jpg",
+        "grade": "[4]",
+        "tag": "[22,24]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方法力-1、回合开始：召唤2/1夜幕魔宠-lv1（上限3次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方法力-1、回合开始：召唤3/1夜幕魔宠-lv2（上限3次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方法力-1、回合开始：召唤3/2夜幕魔宠-lv3（上限3次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方法力-1、回合开始：召唤4/2夜幕魔宠-lv4（上限3次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方法力-1、回合开始：召唤5/2夜幕魔宠-lv5（上限3次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方法力-1、回合开始：召唤6/2夜幕魔宠-lv6（上限3次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方法力-1、回合开始：召唤6/3夜幕魔宠-lv7（上限3次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方法力-1、回合开始：召唤7/3夜幕魔宠-lv8（上限3次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方法力-1、回合开始：召唤8/4夜幕魔宠-lv9（上限3次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方法力-1、回合开始：召唤9/5夜幕魔宠-lv10（上限3次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方法力-1、回合开始：召唤10/6夜幕魔宠-lv11（上限3次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方法力-1、回合开始：召唤11/7夜幕魔宠-lv12（上限3次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方法力-1、回合开始：召唤12/8夜幕魔宠-lv13（上限3次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方法力-1、回合开始：召唤13/9夜幕魔宠-lv14（上限3次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方法力-1、回合开始：召唤15/10夜幕魔宠-lv15（上限3次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方法力-1、回合开始：召唤16/12夜幕魔宠-lv16（上限3次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方法力-1、回合开始：召唤18/13夜幕魔宠-lv17（上限3次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方法力-1、回合开始：召唤19/16夜幕魔宠-lv18（上限3次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方法力-1、回合开始：召唤21/18夜幕魔宠-lv19（上限3次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方法力-1、回合开始：召唤24/19夜幕魔宠-lv20（上限3次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方法力-1、回合开始：召唤27/20夜幕魔宠-lv21（上限3次）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方法力-1、回合开始：召唤30/21夜幕魔宠-lv22（上限3次）"
+            }
+        ]
+    },
+    {
+        "id": 395,
+        "name": "钢斧开山者",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 6,
+        "type": 1,
+        "img": "/tiantanggang/gangfukaishanzhe.jpg",
+        "grade": "[1]",
+        "tag": "[8]",
+        "data": [
+            {
+                "attack": 4,
+                "life": 10,
+                "effect": "回合开始:轰炸敌方随机区域4点伤害"
+            },
+            {
+                "attack": 5,
+                "life": 12,
+                "effect": "回合开始:轰炸敌方随机区域5点伤害"
+            },
+            {
+                "attack": 5,
+                "life": 12,
+                "effect": "回合开始、回合结束:轰炸敌方随机区域5点伤害"
+            },
+            {
+                "attack": 5,
+                "life": 18,
+                "effect": "回合开始、回合结束:轰炸敌方随机区域5点伤害"
+            },
+            {
+                "attack": 6,
+                "life": 18,
+                "effect": "回合开始、回合结束:轰炸敌方随机区域5点伤害"
+            },
+            {
+                "attack": 6,
+                "life": 23,
+                "effect": "【磐龙】、回合开始、回合结束:轰炸敌方随机区域6点伤害"
+            },
+            {
+                "attack": 7,
+                "life": 24,
+                "effect": "【磐龙】、回合开始、回合结束:轰炸敌方随机区域7点伤害"
+            },
+            {
+                "attack": 8,
+                "life": 25,
+                "effect": "【磐龙】、回合开始、回合结束:轰炸敌方随机区域8点伤害"
+            },
+            {
+                "attack": 9,
+                "life": 28,
+                "effect": "【磐龙】、回合开始、回合结束:轰炸敌方随机区域9点伤害"
+            },
+            {
+                "attack": 10,
+                "life": 31,
+                "effect": "【磐龙】、回合开始、回合结束:轰炸敌方随机区域10点伤害"
+            },
+            {
+                "attack": 10,
+                "life": 40,
+                "effect": "【磐龙】、回合开始、回合结束:轰炸敌方随机区域10点伤害"
+            },
+            {
+                "attack": 11,
+                "life": 45,
+                "effect": "【磐龙】、回合开始、回合结束:轰炸敌方随机区域11点伤害"
+            },
+            {
+                "attack": 12,
+                "life": 52,
+                "effect": "【磐龙】、回合开始、回合结束:轰炸敌方随机区域12点伤害"
+            },
+            {
+                "attack": 13,
+                "life": 60,
+                "effect": "【磐龙】、回合开始、回合结束:轰炸敌方随机区域13点伤害"
+            },
+            {
+                "attack": 15,
+                "life": 65,
+                "effect": "【磐龙】、回合开始、回合结束:轰炸敌方随机区域15点伤害"
+            },
+            {
+                "attack": 16,
+                "life": 75,
+                "effect": "【磐龙】、回合开始、回合结束:轰炸敌方随机区域16点伤害"
+            },
+            {
+                "attack": 18,
+                "life": 85,
+                "effect": "【磐龙】、回合开始、回合结束:轰炸敌方随机区域18点伤害"
+            },
+            {
+                "attack": 20,
+                "life": 95,
+                "effect": "【磐龙】、回合开始、回合结束:轰炸敌方随机区域20点伤害"
+            },
+            {
+                "attack": 22,
+                "life": 100,
+                "effect": "【磐龙】、回合开始、回合结束:轰炸敌方随机区域22点伤害"
+            },
+            {
+                "attack": 24,
+                "life": 106,
+                "effect": "【磐龙】、回合开始、回合结束:轰炸敌方随机区域24点伤害"
+            },
+            {
+                "attack": 27,
+                "life": 112,
+                "effect": "【磐龙】、回合开始、回合结束:轰炸敌方随机区域27点伤害"
+            },
+            {
+                "attack": 30,
+                "life": 120,
+                "effect": "【磐龙】、回合开始、回合结束:轰炸敌方随机区域30点伤害"
+            }
+        ]
+    },
+    {
+        "id": 396,
+        "name": "黑旗舰队船长",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 6,
+        "type": 1,
+        "img": "/tiantanggang/heiqijianduichuanzhang.jpg",
+        "grade": "[1]",
+        "tag": "[2]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 9,
+                "effect": "攻击前:若英雄生命高于敌方，吸取随机敌军3点攻击"
+            },
+            {
+                "attack": 3,
+                "life": 10,
+                "effect": "攻击前:若英雄生命高于敌方，吸取随机敌军3点攻击"
+            },
+            {
+                "attack": 4,
+                "life": 12,
+                "effect": "回合开始:吸取对手3点生命、攻击前:若英雄生命高于敌方，吸取随机敌军3点攻击"
+            },
+            {
+                "attack": 4,
+                "life": 15,
+                "effect": "回合开始:吸取对手4点生命、攻击前:若英雄生命高于敌方，吸取随机敌军3点攻击"
+            },
+            {
+                "attack": 5,
+                "life": 18,
+                "effect": "回合开始:吸取对手4点生命、攻击前:若英雄生命高于敌方，吸取随机敌军4点攻击"
+            },
+            {
+                "attack": 6,
+                "life": 20,
+                "effect": "回合开始:吸取对手5点生命、攻击前:若英雄生命高于敌方，吸取随机敌军4点攻击"
+            },
+            {
+                "attack": 7,
+                "life": 23,
+                "effect": "回合开始:吸取对手6点生命、攻击前:若英雄生命高于敌方，吸取随机敌军5点攻击"
+            },
+            {
+                "attack": 8,
+                "life": 26,
+                "effect": "回合开始:吸取对手7点生命、攻击前:若英雄生命高于敌方，吸取随机敌军5点攻击"
+            },
+            {
+                "attack": 10,
+                "life": 30,
+                "effect": "回合开始:吸取对手8点生命、攻击前:若英雄生命高于敌方，吸取随机敌军6点攻击"
+            },
+            {
+                "attack": 12,
+                "life": 32,
+                "effect": "回合开始:吸取对手9点生命、攻击前:若英雄生命高于敌方，吸取随机敌军6点攻击"
+            },
+            {
+                "attack": 14,
+                "life": 36,
+                "effect": "回合开始:吸取对手10点生命、攻击前:若英雄生命高于敌方，吸取随机敌军7点攻击"
+            },
+            {
+                "attack": 16,
+                "life": 42,
+                "effect": "回合开始:吸取对手11点生命、攻击前:若英雄生命高于敌方，吸取随机敌军7点攻击"
+            },
+            {
+                "attack": 18,
+                "life": 49,
+                "effect": "回合开始:吸取对手12点生命、攻击前:若英雄生命高于敌方，吸取随机敌军7点攻击"
+            },
+            {
+                "attack": 20,
+                "life": 55,
+                "effect": "回合开始:吸取对手13点生命、攻击前:若英雄生命高于敌方，吸取随机敌军8点攻击"
+            },
+            {
+                "attack": 22,
+                "life": 60,
+                "effect": "回合开始:吸取对手15点生命、攻击前:若英雄生命高于敌方，吸取随机敌军8点攻击"
+            },
+            {
+                "attack": 24,
+                "life": 65,
+                "effect": "回合开始:吸取对手16点生命、攻击前:若英雄生命高于敌方，吸取随机敌军9点攻击"
+            },
+            {
+                "attack": 26,
+                "life": 70,
+                "effect": "回合开始:吸取对手18点生命、攻击前:若英雄生命高于敌方，吸取随机敌军9点攻击"
+            },
+            {
+                "attack": 28,
+                "life": 75,
+                "effect": "回合开始:吸取对手20点生命、攻击前:若英雄生命高于敌方，吸取随机敌军10点攻击"
+            },
+            {
+                "attack": 31,
+                "life": 80,
+                "effect": "回合开始:吸取对手23点生命、攻击前:若英雄生命高于敌方，吸取随机敌军11点攻击"
+            },
+            {
+                "attack": 34,
+                "life": 85,
+                "effect": "回合开始:吸取对手26点生命、攻击前:若英雄生命高于敌方，吸取随机敌军12点攻击"
+            },
+            {
+                "attack": 37,
+                "life": 92,
+                "effect": "回合开始:吸取对手29点生命、攻击前:若英雄生命高于敌方，吸取随机敌军13点攻击"
+            },
+            {
+                "attack": 40,
+                "life": 100,
+                "effect": "回合开始:吸取对手32点生命、攻击前:若英雄生命高于敌方，吸取随机敌军14点攻击"
+            }
+        ]
+    },
+    {
+        "id": 397,
+        "name": "封魔巨兽",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 6,
+        "type": 1,
+        "img": "/tiantanggang/fengmojushou.jpg",
+        "grade": "[2]",
+        "tag": "[8,12,16,22]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 8,
+                "effect": "【迟缓】、【磐龙】、【魂歌】、敌方法力上限-2"
+            },
+            {
+                "attack": 4,
+                "life": 9,
+                "effect": "【迟缓】、【磐龙】、【魂歌】、敌方法力上限-2"
+            },
+            {
+                "attack": 5,
+                "life": 10,
+                "effect": "【迟缓】、【磐龙】、【魂歌】、敌方法力上限-2"
+            },
+            {
+                "attack": 6,
+                "life": 11,
+                "effect": "【迟缓】、【磐龙】、【魂歌】、敌方法力上限-2"
+            },
+            {
+                "attack": 7,
+                "life": 13,
+                "effect": "【迟缓】、【磐龙】、【魂歌】、敌方法力上限-2"
+            },
+            {
+                "attack": 8,
+                "life": 15,
+                "effect": "【迟缓】、【磐龙】、【魂歌】、敌方法力上限-2"
+            },
+            {
+                "attack": 9,
+                "life": 18,
+                "effect": "【迟缓】、【磐龙】、【魂歌】、敌方法力上限-2"
+            },
+            {
+                "attack": 10,
+                "life": 22,
+                "effect": "【迟缓】、【磐龙】、【魂歌】、敌方法力上限-2"
+            },
+            {
+                "attack": 12,
+                "life": 25,
+                "effect": "【迟缓】、【磐龙】、【魂歌】、敌方法力上限-2"
+            },
+            {
+                "attack": 14,
+                "life": 28,
+                "effect": "【迟缓】、【磐龙】、【魂歌】、敌方法力上限-2"
+            },
+            {
+                "attack": 16,
+                "life": 32,
+                "effect": "【迟缓】、【磐龙】、【魂歌】、敌方法力上限-2"
+            },
+            {
+                "attack": 18,
+                "life": 36,
+                "effect": "【迟缓】、【磐龙】、【魂歌】、敌方法力上限-2"
+            },
+            {
+                "attack": 20,
+                "life": 40,
+                "effect": "【迟缓】、【磐龙】、【魂歌】、敌方法力上限-2"
+            },
+            {
+                "attack": 22,
+                "life": 45,
+                "effect": "【迟缓】、【磐龙】、【魂歌】、敌方法力上限-2"
+            },
+            {
+                "attack": 25,
+                "life": 50,
+                "effect": "【迟缓】、【磐龙】、【魂歌】、敌方法力上限-2"
+            },
+            {
+                "attack": 28,
+                "life": 55,
+                "effect": "【迟缓】、【磐龙】、【魂歌】、敌方法力上限-2"
+            },
+            {
+                "attack": 32,
+                "life": 60,
+                "effect": "【迟缓】、【磐龙】、【魂歌】、敌方法力上限-2"
+            },
+            {
+                "attack": 35,
+                "life": 70,
+                "effect": "【迟缓】、【磐龙】、【魂歌】、敌方法力上限-2"
+            },
+            {
+                "attack": 37,
+                "life": 80,
+                "effect": "【迟缓】、【磐龙】、【魂歌】、敌方法力上限-2"
+            },
+            {
+                "attack": 40,
+                "life": 90,
+                "effect": "【迟缓】、【磐龙】、【魂歌】、敌方法力上限-2"
+            },
+            {
+                "attack": 45,
+                "life": 95,
+                "effect": "【迟缓】、【磐龙】、【魂歌】、敌方法力上限-2"
+            },
+            {
+                "attack": 50,
+                "life": 100,
+                "effect": "【迟缓】、【磐龙】、【魂歌】、敌方法力上限-2"
+            }
+        ]
+    },
+    {
+        "id": 398,
+        "name": "黑金铸造大师",
+        "zhenyin": 4,
+        "quality": 3,
+        "cost": 7,
+        "type": 1,
+        "img": "/tiantanggang/heijinzhuzaodashi.jpg",
+        "grade": "[1]",
+        "tag": "[1,5,8]",
+        "data": [
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "【护甲4】、【践踏】、登场:相邻一个友军+5/+5，护甲+4，获得【践踏】"
+            },
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "【护甲4】、【践踏】、登场:相邻一个友军+6/+6，护甲+4，获得【践踏】"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "【护甲5】、【践踏】、登场:相邻一个友军+7/+7，护甲+5，获得【践踏】"
+            },
+            {
+                "attack": 8,
+                "life": 9,
+                "effect": "【护甲5】、【践踏】、登场:相邻一个友军+8/+9，护甲+5，获得【践踏】"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "【护甲6】、【践踏】、登场:相邻一个友军+10/+10，护甲+6，获得【践踏】"
+            },
+            {
+                "attack": 12,
+                "life": 12,
+                "effect": "【护甲6】、【践踏】、登场:相邻一个友军+12/+12，护甲+6，获得【践踏】"
+            },
+            {
+                "attack": 13,
+                "life": 13,
+                "effect": "【护甲7】、【践踏】、登场:相邻一个友军+13/+13，护甲+7，获得【践踏】"
+            },
+            {
+                "attack": 14,
+                "life": 14,
+                "effect": "【护甲8】、【践踏】、登场:相邻一个友军+14/+14，护甲+8，获得【践踏】"
+            },
+            {
+                "attack": 16,
+                "life": 16,
+                "effect": "【护甲8】、【践踏】、登场:相邻一个友军+16/+16，护甲+8，获得【践踏】"
+            },
+            {
+                "attack": 17,
+                "life": 17,
+                "effect": "【护甲9】、【践踏】、登场:相邻一个友军+17/+17，护甲+9，获得【磐龙】和【践踏】"
+            },
+            {
+                "attack": 19,
+                "life": 19,
+                "effect": "【护甲9】、【践踏】、登场:相邻一个友军+19/+19，护甲+9，获得【磐龙】和【践踏】"
+            },
+            {
+                "attack": 21,
+                "life": 21,
+                "effect": "【护甲10】、【践踏】、登场:相邻一个友军+21/+21，护甲+10，获得【磐龙】和【践踏】"
+            },
+            {
+                "attack": 23,
+                "life": 23,
+                "effect": "【护甲10】、【践踏】、登场:相邻一个友军+23/+23，护甲+10，获得【磐龙】和【践踏】"
+            },
+            {
+                "attack": 25,
+                "life": 25,
+                "effect": "【护甲11】、【践踏】、登场:相邻一个友军+25/+25，护甲+11，获得【磐龙】和【践踏】"
+            },
+            {
+                "attack": 27,
+                "life": 27,
+                "effect": "【护甲11】、【践踏】、登场:相邻一个友军+27/+27，护甲+11，获得【磐龙】和【践踏】"
+            },
+            {
+                "attack": 29,
+                "life": 29,
+                "effect": "【护甲12】、【践踏】、登场:相邻一个友军+29/+29，护甲+12，获得【磐龙】和【践踏】"
+            },
+            {
+                "attack": 32,
+                "life": 32,
+                "effect": "【护甲13】、【践踏】、登场:相邻一个友军+32/+32，护甲+13，获得【磐龙】和【践踏】"
+            },
+            {
+                "attack": 34,
+                "life": 34,
+                "effect": "【护甲13】、【践踏】、登场:相邻一个友军+34/+34，护甲+13，获得【磐龙】和【践踏】"
+            },
+            {
+                "attack": 37,
+                "life": 37,
+                "effect": "【护甲14】、【践踏】、登场:相邻一个友军+37/+37，护甲+14，获得【磐龙】和【践踏】"
+            },
+            {
+                "attack": 40,
+                "life": 40,
+                "effect": "【护甲15】、【践踏】、登场:相邻一个友军+40/+40，护甲+15，获得【磐龙】和【践踏】"
+            },
+            {
+                "attack": 45,
+                "life": 45,
+                "effect": "【护甲14】、【践踏】、登场:相邻一个友军+45/+45，护甲+16，获得【磐龙】和【践踏】"
+            },
+            {
+                "attack": 50,
+                "life": 50,
+                "effect": "【护甲15】、【践踏】、登场:相邻一个友军+50/+50，护甲+18，获得【磐龙】和【践踏】"
+            }
+        ]
+    },
+    {
+        "id": 399,
+        "name": "蕾拉密卷",
+        "zhenyin": 4,
+        "quality": 4,
+        "cost": 2,
+        "type": 2,
+        "img": "/tiantanggang/leilamijuan.jpg",
+        "grade": "[3]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "获得2张【蕾拉火弹-lv2】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "获得2张【蕾拉火弹-lv3】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "获得2张【蕾拉火弹-lv4】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "获得2张【蕾拉火弹-lv5】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "获得3张【蕾拉火弹-lv5】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "获得3张【蕾拉火弹-lv6】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "获得3张【蕾拉火弹-lv7】、25%几率获得获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "获得3张【蕾拉火弹-lv8】、33%几率获得获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "获得3张【蕾拉火弹-lv9】、40%几率获得获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "获得3张【蕾拉火弹-lv10】、50%几率获得获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "获得3张【蕾拉火弹-lv11】、60%几率获得获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "获得3张【蕾拉火弹-lv12】、70%几率获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "获得3张【蕾拉火弹-lv13】、75%几率获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "获得3张【蕾拉火弹-lv14】、80%几率获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "获得3张【蕾拉火弹-lv15】、85%几率获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "获得3张【蕾拉火弹-lv16】、获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "获得3张【蕾拉火弹-lv17】、获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "获得3张【蕾拉火弹-lv18】、获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "获得3张【蕾拉火弹-lv19】、获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "获得3张【蕾拉火弹-lv20】、获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "获得3张【蕾拉火弹-lv21】、获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "获得3张【蕾拉火弹-lv22】、获得《真理碎片》"
+            }
+        ]
+    },
+    {
+        "id": 400,
+        "name": "花剑绅士·翔",
+        "zhenyin": 4,
+        "quality": 4,
+        "cost": 2,
+        "type": 1,
+        "img": "/tiantanggang/huajianshenshi_xiang.jpg",
+        "grade": "[4]",
+        "tag": "[2,6,9,20]",
+        "data": [
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "【先攻】、【回命】、【协战1】"
+            },
+            {
+                "attack": 3,
+                "life": 2,
+                "effect": "【先攻】、【回命】、【协战1】"
+            },
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "【先攻】、【回命】、【协战2】"
+            },
+            {
+                "attack": 4,
+                "life": 4,
+                "effect": "【先攻】、【回命】、【协战2】"
+            },
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "【先攻】、【回命】、【协战2】"
+            },
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "【先攻】、【回命】、【协战3】"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "【先攻】、【回命】、【协战3】"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "【先攻】、【回命】、【协战3】"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "【先攻】、【回命】、【协战3】"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "【先攻】、【回命】、【协战3】"
+            },
+            {
+                "attack": 11,
+                "life": 11,
+                "effect": "【先攻】、【回命】、【协战4】"
+            },
+            {
+                "attack": 12,
+                "life": 13,
+                "effect": "【先攻】、【回命】、【协战4】"
+            },
+            {
+                "attack": 13,
+                "life": 13,
+                "effect": "【先攻】、【回命】、【协战5】"
+            },
+            {
+                "attack": 14,
+                "life": 14,
+                "effect": "【先攻】、【回命】、【协战6】"
+            },
+            {
+                "attack": 16,
+                "life": 15,
+                "effect": "【先攻】、【回命】、【协战7】"
+            },
+            {
+                "attack": 17,
+                "life": 17,
+                "effect": "【先攻】、【回命】、【协战8】"
+            },
+            {
+                "attack": 19,
+                "life": 19,
+                "effect": "【先攻】、【回命】、【协战9】"
+            },
+            {
+                "attack": 21,
+                "life": 21,
+                "effect": "【先攻】、【回命】、【协战10】"
+            },
+            {
+                "attack": 23,
+                "life": 23,
+                "effect": "【先攻】、【回命】、【协战11】"
+            },
+            {
+                "attack": 25,
+                "life": 25,
+                "effect": "【先攻】、【回命】、【协战12】"
+            },
+            {
+                "attack": 27,
+                "life": 27,
+                "effect": "【先攻】、【回命】、【协战13】"
+            },
+            {
+                "attack": 29,
+                "life": 29,
+                "effect": "【先攻】、【回命】、【协战14】"
+            }
+        ]
+    },
+    {
+        "id": 401,
+        "name": "海燕·鲍莉",
+        "zhenyin": 4,
+        "quality": 4,
+        "cost": 3,
+        "type": 1,
+        "img": "/tiantanggang/haiyan_baoli.jpg",
+        "grade": "[6]",
+        "tag": "[2,5,12,16,24,26]",
+        "data": [
+            {
+                "attack": 2,
+                "life": 1,
+                "effect": "登场:召唤3/3水手-lv3、回合结束:自身回手"
+            },
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "登场:召唤3/3水手-lv3、攻击前:随机敌军受到1点伤害、回合结束:自身回手"
+            },
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "登场:召唤3/3水手-lv3、攻击前:随机敌军受到2点伤害、回合结束:自身回手"
+            },
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "登场:召唤4/4水手-lv4、攻击前:随机敌军受到3点伤害、回合结束:自身回手"
+            },
+            {
+                "attack": 4,
+                "life": 4,
+                "effect": "登场:召唤4/4水手-lv4、攻击前:随机敌军受到4点伤害、回合结束:自身回手"
+            },
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "登场:召唤4/4水手-lv5、攻击前:随机敌军受到5点伤害、回合结束:自身回手"
+            },
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "登场:召唤5/5水手-lv5、攻击前:随机敌军受到6点伤害、回合结束:自身回手"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "登场:召唤5/5水手-lv7、攻击前:随机敌军受到7点伤害、回合结束:自身回手"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "登场:召唤5/5水手-lv7、攻击前:随机敌军受到8点伤害、回合结束:自身回手"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "登场:召唤6/6水手-lv9、攻击前:随机敌军受到8点伤害、回合结束:自身回手"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "登场:召唤7/7水手-lv10、攻击前:随机敌军受到10点伤害、回合结束:自身回手"
+            },
+            {
+                "attack": 11,
+                "life": 11,
+                "effect": "登场:召唤8/8水手-lv11、攻击前:随机敌军受到11点伤害、回合结束:自身回手"
+            },
+            {
+                "attack": 13,
+                "life": 13,
+                "effect": "登场:召唤9/9水手-lv12、攻击前:随机敌军受到13点伤害、回合结束:自身回手"
+            },
+            {
+                "attack": 15,
+                "life": 15,
+                "effect": "登场:召唤10/10水手-lv13、攻击前:随机敌军受到15点伤害、回合结束:自身回手"
+            },
+            {
+                "attack": 17,
+                "life": 17,
+                "effect": "登场:召唤11/11水手-lv14、攻击前:随机敌军受到17点伤害、回合结束:自身回手"
+            },
+            {
+                "attack": 19,
+                "life": 19,
+                "effect": "登场:召唤12/12水手-lv15、攻击前:随机敌军受到19点伤害、回合结束:自身回手"
+            },
+            {
+                "attack": 22,
+                "life": 22,
+                "effect": "登场:召唤13/13水手-lv16、攻击前:随机敌军受到22点伤害、回合结束:自身回手"
+            },
+            {
+                "attack": 25,
+                "life": 25,
+                "effect": "登场:召唤15/15水手-lv18、攻击前:随机敌军受到25点伤害、回合结束:自身回手"
+            },
+            {
+                "attack": 27,
+                "life": 27,
+                "effect": "登场:召唤16/17水手-lv19、攻击前:随机敌军受到27点伤害、回合结束:自身回手"
+            },
+            {
+                "attack": 30,
+                "life": 30,
+                "effect": "登场:召唤18/18水手-lv20、攻击前:随机敌军受到30点伤害、回合结束:自身回手"
+            },
+            {
+                "attack": 33,
+                "life": 33,
+                "effect": "登场:召唤20/20水手-lv21、攻击前:随机敌军受到33点伤害、回合结束:自身回手"
+            },
+            {
+                "attack": 36,
+                "life": 36,
+                "effect": "登场:召唤22/22水手-lv22、攻击前:随机敌军受到36点伤害、回合结束:自身回手"
+            }
+        ]
+    },
+    {
+        "id": 402,
+        "name": "欢乐歌唱的戴维",
+        "zhenyin": 4,
+        "quality": 4,
+        "cost": 3,
+        "type": 1,
+        "img": "/tiantanggang/huanlegechangdedaiwei.jpg",
+        "grade": "[5]",
+        "tag": "[16,19,23,26]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 3,
+                "effect": "【魂音】、回合开始:手上一张卡牌法力-1，若人数多于对手，全体友军生命+1"
+            },
+            {
+                "attack": 2,
+                "life": 3,
+                "effect": "【魂音】、回合开始:手上一张卡牌法力-1，若人数多于对手，全体友军生命+1"
+            },
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "【魂音】、回合开始:手上一张卡牌法力-1，若人数多于对手，全体友军生命+1"
+            },
+            {
+                "attack": 4,
+                "life": 4,
+                "effect": "【魂音】、回合开始:手上一张卡牌法力-1，若人数多于对手，全体友军+1/+1"
+            },
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "【魂音】、回合开始:手上一张卡牌法力-1，若人数多于对手，全体友军+1/+1"
+            },
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "【魂音】、回合开始:手上一张卡牌法力-1，若人数多于对手，全体友军+1/+1"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "【魂音】、回合开始:手上一张卡牌法力-1，若人数多于对手，全体友军+1/+2"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "【魂音】、回合开始:手上一张卡牌法力-1，若人数多于对手，全体友军+1/+2"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "【魂音】、回合开始:手上一张卡牌法力-1，若人数多于对手，全体友军+1/+2"
+            },
+            {
+                "attack": 10,
+                "life": 11,
+                "effect": "【魂音】、回合开始:手上一张卡牌法力-1，若人数多于对手，全体友军+1/+3"
+            },
+            {
+                "attack": 12,
+                "life": 12,
+                "effect": "【魂音】、回合开始:手上一张卡牌法力-1，若人数多于对手，全体友军+1/+3"
+            },
+            {
+                "attack": 13,
+                "life": 14,
+                "effect": "【魂音】、回合开始:手上一张卡牌法力-1，若人数多于对手，全体友军+1/+3"
+            },
+            {
+                "attack": 15,
+                "life": 15,
+                "effect": "【魂音】、回合开始:手上一张卡牌法力-1，若人数多于对手，全体友军+1/+4"
+            },
+            {
+                "attack": 17,
+                "life": 17,
+                "effect": "【魂音】、回合开始:手上一张卡牌法力-1，若人数多于对手，全体友军+1/+4"
+            },
+            {
+                "attack": 19,
+                "life": 19,
+                "effect": "【魂音】、回合开始:手上一张卡牌法力-1，若人数多于对手，全体友军+1/+4"
+            },
+            {
+                "attack": 21,
+                "life": 21,
+                "effect": "【魂音】、回合开始:手上一张卡牌法力-1，若人数多于对手，全体友军+1/+5"
+            },
+            {
+                "attack": 23,
+                "life": 25,
+                "effect": "【魂音】、回合开始:手上一张卡牌法力-1，若人数多于对手，全体友军+1/+6"
+            },
+            {
+                "attack": 26,
+                "life": 26,
+                "effect": "【魂音】、回合开始:手上一张卡牌法力-1，若人数多于对手，全体友军+1/+7"
+            },
+            {
+                "attack": 29,
+                "life": 29,
+                "effect": "【魂音】、回合开始:手上一张卡牌法力-1，若人数多于对手，全体友军+1/+7"
+            },
+            {
+                "attack": 32,
+                "life": 32,
+                "effect": "【魂音】、回合开始:手上一张卡牌法力-1，若人数多于对手，全体友军+1/+7"
+            },
+            {
+                "attack": 35,
+                "life": 35,
+                "effect": "【魂音】、回合开始:手上一张卡牌法力-1，若人数多于对手，全体友军+2/+7"
+            },
+            {
+                "attack": 38,
+                "life": 38,
+                "effect": "【魂音】、回合开始:手上一张卡牌法力-1，若人数多于对手，全体友军+2/+9"
+            }
+        ]
+    },
+    {
+        "id": 403,
+        "name": "戴维的惊天计谋",
+        "zhenyin": 4,
+        "quality": 4,
+        "cost": 3,
+        "type": 2,
+        "img": "/tiantanggang/daiweidejingtianjimou.jpg",
+        "grade": "[5]",
+        "tag": "[23,25]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "手上一张卡牌法力-3，无手牌则抽2张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "手上一张卡牌法力-3，无手牌则抽2张牌、随机敌军-1/-1（无视神佑和魔免）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "手上一张卡牌法力-3，无手牌则抽2张牌、随机敌军-2/-2（无视神佑和魔免）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "手上一张卡牌法力-3，无手牌则抽2张牌、随机敌军-3/-3（无视神佑和魔免）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "手上一张卡牌法力-3，无手牌则抽2张牌、随机敌军-4/-4（无视神佑和魔免）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "手上一张卡牌法力-3，无手牌则抽2张牌、随机敌军-5/-5（无视神佑和魔免）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "手上一张卡牌法力-3，无手牌则抽2张牌、随机敌军-6/-6（无视神佑和魔免）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "手上一张卡牌法力-3，无手牌则抽2张牌、随机敌军-7/-7（无视神佑和魔免）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "手上一张卡牌法力-3，无手牌则抽2张牌、随机敌军-8/-8（无视神佑和魔免）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "手上一张卡牌法力-3，无手牌则抽2张牌、随机敌军-9/-9（无视神佑和魔免）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "手上一张卡牌法力-3，无手牌则抽2张牌、随机敌军-10/-10（无视神佑和魔免）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "手上一张卡牌法力-3，无手牌则抽2张牌、随机敌军-12/-11（无视神佑和魔免）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "手上一张卡牌法力-3，无手牌则抽2张牌、随机敌军-13/-13（无视神佑和魔免）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "手上一张卡牌法力-3，无手牌则抽2张牌、随机敌军-15/-14（无视神佑和魔免）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "手上一张卡牌法力-3，无手牌则抽2张牌、随机敌军-16/-16（无视神佑和魔免）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "手上一张卡牌法力-3，无手牌则抽2张牌、随机敌军-18/-17（无视神佑和魔免）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "手上一张卡牌法力-3，无手牌则抽2张牌、随机敌军-19/-19（无视神佑和魔免）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "手上一张卡牌法力-3，无手牌则抽2张牌、随机敌军-21/-21（无视神佑和魔免）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "手上一张卡牌法力-3，无手牌则抽2张牌、随机敌军-23/-23（无视神佑和魔免）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "手上一张卡牌法力-3，无手牌则抽2张牌、随机敌军-25/-25（无视神佑和魔免）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "手上一张卡牌法力-3，无手牌则抽2张牌、随机敌军-28/-28（无视神佑和魔免）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "手上一张卡牌法力-3，无手牌则抽2张牌、随机敌军-32/-32（无视神佑和魔免）"
+            }
+        ]
+    },
+    {
+        "id": 404,
+        "name": "魔卡幻术师·梅基",
+        "zhenyin": 4,
+        "quality": 4,
+        "cost": 4,
+        "type": 1,
+        "img": "/tiantanggang/mokahuanshushi_meiji.jpg",
+        "grade": "[6]",
+        "tag": "[3,23,25,26]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 4,
+                "effect": "命中英雄:你抓一张牌，对手弃掉一张牌"
+            },
+            {
+                "attack": 2,
+                "life": 5,
+                "effect": "命中英雄:你抓一张牌，对手弃掉一张牌"
+            },
+            {
+                "attack": 2,
+                "life": 6,
+                "effect": "命中英雄:你抓一张牌，对手弃掉一张牌，若对手无手牌，则随机敌军-3/-3"
+            },
+            {
+                "attack": 3,
+                "life": 7,
+                "effect": "命中英雄:你抓一张牌，对手弃掉一张牌，若对手无手牌，则随机敌军-3/-3"
+            },
+            {
+                "attack": 4,
+                "life": 7,
+                "effect": "命中英雄:你抓一张牌，对手弃掉一张牌，若对手无手牌，则随机敌军-4/-4"
+            },
+            {
+                "attack": 4,
+                "life": 9,
+                "effect": "命中英雄:你抓一张牌，对手弃掉一张牌，若对手无手牌，则随机敌军-5/-5"
+            },
+            {
+                "attack": 5,
+                "life": 10,
+                "effect": "充能:随机敌军-1/-1，命中英雄:你抓一张牌，对手弃掉一张牌，若对手无手牌，则随机敌军-5/-5"
+            },
+            {
+                "attack": 5,
+                "life": 13,
+                "effect": "充能:随机敌军-1/-1，命中英雄:你抓一张牌，对手弃掉一张牌，若对手无手牌，则随机敌军-6/-6"
+            },
+            {
+                "attack": 6,
+                "life": 15,
+                "effect": "充能:随机敌军-2/-2，命中英雄:你抓一张牌，对手弃掉一张牌，若对手无手牌，则随机敌军-6/-6"
+            },
+            {
+                "attack": 7,
+                "life": 17,
+                "effect": "充能:随机敌军-2/-2，命中英雄:你抓一张牌，对手弃掉一张牌，若对手无手牌，则随机敌军-7/-7"
+            },
+            {
+                "attack": 8,
+                "life": 18,
+                "effect": "充能:随机敌军-3/-3，命中英雄:你抓一张牌，对手弃掉一张牌，若对手无手牌，则随机敌军-8/-8"
+            },
+            {
+                "attack": 9,
+                "life": 19,
+                "effect": "充能:随机敌军-3/-3，命中英雄:你抓一张牌，对手弃掉一张牌，若对手无手牌，则随机敌军-9/-9"
+            },
+            {
+                "attack": 10,
+                "life": 21,
+                "effect": "充能:随机敌军-4/-4，命中英雄:你抓一张牌，对手弃掉一张牌，若对手无手牌，则随机敌军-10/-10"
+            },
+            {
+                "attack": 12,
+                "life": 24,
+                "effect": "充能:随机敌军-5/-5，命中英雄:你抓一张牌，对手弃掉一张牌，若对手无手牌，则随机敌军-11/-11"
+            },
+            {
+                "attack": 13,
+                "life": 29,
+                "effect": "充能:随机敌军-6/-6，命中英雄:你抓一张牌，对手弃掉一张牌，若对手无手牌，则随机敌军-12/-12"
+            },
+            {
+                "attack": 15,
+                "life": 33,
+                "effect": "充能:随机敌军-7/-7，命中英雄:你抓一张牌，对手弃掉一张牌，若对手无手牌，则随机敌军-13/-13"
+            },
+            {
+                "attack": 18,
+                "life": 36,
+                "effect": "充能:随机敌军-9/-9，命中英雄:你抓一张牌，对手弃掉一张牌，若对手无手牌，则随机敌军-15/-15"
+            },
+            {
+                "attack": 21,
+                "life": 39,
+                "effect": "充能:随机敌军-10/-10，命中英雄:你抓一张牌，对手弃掉一张牌，若对手无手牌，则随机敌军-18/-18"
+            },
+            {
+                "attack": 24,
+                "life": 42,
+                "effect": "充能:随机敌军-11/-11，命中英雄:你抓一张牌，对手弃掉一张牌，若对手无手牌，则随机敌军-21/-21"
+            },
+            {
+                "attack": 27,
+                "life": 45,
+                "effect": "充能:随机敌军-13/-13，命中英雄:你抓一张牌，对手弃掉一张牌，若对手无手牌，则随机敌军-24/-24"
+            },
+            {
+                "attack": 30,
+                "life": 49,
+                "effect": "充能:随机敌军-15/-15，命中英雄:你抓一张牌，对手弃掉一张牌，若对手无手牌，则随机敌军-27/-27"
+            },
+            {
+                "attack": 33,
+                "life": 54,
+                "effect": "充能:随机敌军-18/-18，命中英雄:你抓一张牌，对手弃掉一张牌，若对手无手牌，则随机敌军-30/-30"
+            }
+        ]
+    },
+    {
+        "id": 405,
+        "name": "赤影·艾希尔",
+        "zhenyin": 4,
+        "quality": 4,
+        "cost": 4,
+        "type": 1,
+        "img": "/tiantanggang/chiying_aixier.jpg",
+        "grade": "[5]",
+        "tag": "[3,18,21]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 1,
+                "effect": "【连击】、【魔防10】、回合开始：若生命高于对手，获得【隐形】1回合；若人数多于对手，攻击+1"
+            },
+            {
+                "attack": 4,
+                "life": 1,
+                "effect": "【连击】、【魔防15】、回合开始：若生命高于对手，获得【隐形】1回合；若人数多于对手，攻击+1"
+            },
+            {
+                "attack": 5,
+                "life": 2,
+                "effect": "【连击】、【魔防15】、回合开始：若生命高于对手，获得【隐形】1回合；若人数多于对手，攻击+1"
+            },
+            {
+                "attack": 6,
+                "life": 2,
+                "effect": "【连击】、【魔防20】、回合开始：若生命高于对手，获得【隐形】1回合；若人数多于对手，攻击+1"
+            },
+            {
+                "attack": 7,
+                "life": 3,
+                "effect": "【洞察1】、【连击】、【魔防20】、回合开始：若生命高于对手，获得【隐形】1回合；若人数多于对手，攻击+1"
+            },
+            {
+                "attack": 8,
+                "life": 3,
+                "effect": "【洞察1】、【连击】、【魔防25】、回合开始：若生命高于对手，获得【隐形】1回合；若人数多于对手，攻击+1"
+            },
+            {
+                "attack": 9,
+                "life": 4,
+                "effect": "【洞察1】、【连击】、【魔防25】、回合开始：若生命高于对手，获得【隐形】1回合；若人数多于对手，攻击+1"
+            },
+            {
+                "attack": 10,
+                "life": 4,
+                "effect": "【洞察1】、【连击】、【魔防30】、回合开始：若生命高于对手，获得【隐形】1回合；若人数多于对手，攻击+1"
+            },
+            {
+                "attack": 11,
+                "life": 5,
+                "effect": "【洞察1】、【连击】、【魔防30】、回合开始：若生命高于对手，获得【隐形】1回合；若人数多于对手，攻击+1"
+            },
+            {
+                "attack": 12,
+                "life": 5,
+                "effect": "【洞察1】、【连击】、【魔防40】、回合开始：若生命高于对手，获得【隐形】1回合；若人数多于对手，攻击+1"
+            },
+            {
+                "attack": 13,
+                "life": 6,
+                "effect": "【洞察2】、【连击】、【魔防40】、回合开始：若生命高于对手，获得【隐形】1回合；若人数多于对手，攻击+1"
+            },
+            {
+                "attack": 15,
+                "life": 7,
+                "effect": "【洞察2】、【连击】、【魔防50】、回合开始：若生命高于对手，获得【隐形】1回合；若人数多于对手，攻击+1"
+            },
+            {
+                "attack": 16,
+                "life": 9,
+                "effect": "【洞察2】、【连击】、【魔防60】、回合开始：若生命高于对手，获得【隐形】1回合；若人数多于对手，攻击+1"
+            },
+            {
+                "attack": 18,
+                "life": 10,
+                "effect": "【洞察2】、【连击】、【魔防70】、回合开始：若生命高于对手，获得【隐形】1回合；若人数多于对手，攻击+1"
+            },
+            {
+                "attack": 21,
+                "life": 10,
+                "effect": "【洞察2】、【连击】、【魔防80】、回合开始：若生命高于对手，获得【隐形】1回合；若人数多于对手，攻击+1"
+            },
+            {
+                "attack": 23,
+                "life": 12,
+                "effect": "【洞察2】、【连击】、【魔防90】、回合开始：若生命高于对手，获得【隐形】1回合；若人数多于对手，攻击+1"
+            },
+            {
+                "attack": 26,
+                "life": 14,
+                "effect": "【洞察2】、【连击】、【魔防100】、回合开始：若生命高于对手，获得【隐形】1回合；若人数多于对手，攻击+1"
+            },
+            {
+                "attack": 28,
+                "life": 15,
+                "effect": "【洞察2】、【连击】、【魔防100】、回合开始：若生命高于对手，获得【隐形】1回合；若人数多于对手，攻击+2"
+            },
+            {
+                "attack": 30,
+                "life": 16,
+                "effect": "【洞察2】、【连击】、【魔防110】、回合开始：若生命高于对手，获得【隐形】1回合；若人数多于对手，攻击+2"
+            },
+            {
+                "attack": 33,
+                "life": 17,
+                "effect": "【洞察2】、【连击】、【魔防120】、回合开始：若生命高于对手，获得【隐形】1回合；若人数多于对手，攻击+3"
+            },
+            {
+                "attack": 37,
+                "life": 18,
+                "effect": "【洞察2】、【连击】、【魔防130】、回合开始：若生命高于对手，获得【隐形】1回合；若人数多于对手，攻击+3"
+            },
+            {
+                "attack": 42,
+                "life": 19,
+                "effect": "【洞察2】、【连击】、【魔防140】、回合开始：若生命高于对手，获得【隐形】1回合；若人数多于对手，攻击+3"
+            }
+        ]
+    },
+    {
+        "id": 406,
+        "name": "符文·海皇之怒",
+        "zhenyin": 4,
+        "quality": 4,
+        "cost": 4,
+        "type": 4,
+        "img": "/tiantanggang/fuwen_haihuangzhinu.jpg",
+        "grade": "[6]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：敌方3个随机位置坠落闪电（1、1、2点伤害），被击中的敌人36%几率眩晕1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：敌方3个随机位置坠落闪电（2点伤害），被击中的敌人36%几率眩晕1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：敌方3个随机位置坠落闪电（2、2、3点伤害），被击中的敌人40%几率眩晕1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：敌方3个随机位置坠落闪电（3点伤害），被击中的敌人40%几率眩晕1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：敌方3个随机位置坠落闪电（3、3、4点伤害），被击中的敌人42%几率眩晕1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：敌方3个随机位置坠落闪电（4点伤害），被击中的敌人42%几率眩晕1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：敌方3个随机位置坠落闪电（4、4、5点伤害），被击中的敌人45%几率眩晕1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：敌方3个随机位置坠落闪电（5点伤害），被击中的敌人45%几率眩晕1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：敌方3个随机位置坠落闪电（5、5、6点伤害），被击中的敌人48%几率眩晕1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：敌方3个随机位置坠落闪电（6点伤害），被击中的敌人48%几率眩晕1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：敌方3个随机位置坠落闪电（6、6、7点伤害），被击中的敌人50%几率眩晕1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：敌方3个随机位置坠落闪电（7点伤害），被击中的敌人50%几率眩晕1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：敌方3个随机位置坠落闪电（7、7、8点伤害），被击中的敌人55%几率眩晕1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：敌方3个随机位置坠落闪电（8点伤害），被击中的敌人55%几率眩晕1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：敌方3个随机位置坠落闪电（8、8、9点伤害），被击中的敌人60%几率眩晕1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：敌方3个随机位置坠落闪电（9点伤害），被击中的敌人60%几率眩晕1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：敌方3个随机位置坠落闪电（9、9、10点伤害），被击中的敌人65%几率眩晕1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：敌方3个随机位置坠落闪电（10点伤害），被击中的敌人65%几率眩晕1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：敌方3个随机位置坠落闪电（10、10、11点伤害），被击中的敌人70%几率眩晕1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：敌方3个随机位置坠落闪电（11点伤害），被击中的敌人70%几率眩晕1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：敌方3个随机位置坠落闪电（11、11、12点伤害），被击中的敌人75%几率眩晕1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：敌方3个随机位置坠落闪电（12点伤害），被击中的敌人75%几率眩晕1回合"
+            }
+        ]
+    },
+    {
+        "id": 407,
+        "name": "钢之咆哮·布瑞恩",
+        "zhenyin": 4,
+        "quality": 4,
+        "cost": 5,
+        "type": 1,
+        "img": "/tiantanggang/gangzhipaoxiao_buruien.jpg",
+        "grade": "[3]",
+        "tag": "[1,5,26]",
+        "data": [
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "【护甲2】、登场:横排敌军受到3点伤害、攻击前:友军多于敌军，自身+1/+1"
+            },
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "【护甲2】、登场:横排敌军受到4点伤害、攻击前:友军多于敌军，自身+1/+1"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "【护甲3】、登场:横排敌军受到4点伤害、攻击前:友军多于敌军，自身+1/+1"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "【护甲3】、【践踏】、登场:横排敌军受到4点伤害、攻击前:友军多于敌军，自身+1/+1"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "【护甲3】、【践踏】、登场:横排敌军受到5点伤害、攻击前:友军多于敌军，自身+1/+1"
+            },
+            {
+                "attack": 11,
+                "life": 10,
+                "effect": "【护甲4】、【践踏】、登场:横排敌军受到5点伤害、攻击前:友军多于敌军，自身+1/+2"
+            },
+            {
+                "attack": 12,
+                "life": 12,
+                "effect": "【护甲4】、【践踏】、登场:横排敌军受到6点伤害、攻击前:友军多于敌军，自身+1/+2"
+            },
+            {
+                "attack": 14,
+                "life": 14,
+                "effect": "【护甲5】、【践踏】、登场:横排敌军受到6点伤害、攻击前:友军多于敌军，自身+1/+2"
+            },
+            {
+                "attack": 16,
+                "life": 16,
+                "effect": "【护甲5】、【践踏】、登场:横排敌军受到7点伤害、攻击前:友军多于敌军，自身+1/+3"
+            },
+            {
+                "attack": 18,
+                "life": 18,
+                "effect": "【护甲6】、【践踏】、登场:横排敌军受到8点伤害、攻击前:友军多于敌军，自身+1/+3"
+            },
+            {
+                "attack": 20,
+                "life": 20,
+                "effect": "【护甲6】、【践踏】、登场:横排敌军受到9点伤害、攻击前:友军多于敌军，自身+1/+4"
+            },
+            {
+                "attack": 22,
+                "life": 22,
+                "effect": "【护甲7】、【践踏】、登场:横排敌军受到10点伤害、攻击前:友军多于敌军，自身+2/+4"
+            },
+            {
+                "attack": 24,
+                "life": 24,
+                "effect": "【护甲8】、【践踏】、登场:横排敌军受到11点伤害、攻击前:友军多于敌军，自身+2/+6"
+            },
+            {
+                "attack": 26,
+                "life": 26,
+                "effect": "【护甲9】、【践踏】、登场:横排敌军受到12点伤害、攻击前:友军多于敌军，自身+3/+6"
+            },
+            {
+                "attack": 28,
+                "life": 28,
+                "effect": "【护甲10】、【践踏】、登场:横排敌军受到13点伤害、攻击前:友军多于敌军，自身+4/+8"
+            },
+            {
+                "attack": 30,
+                "life": 30,
+                "effect": "【护甲10】、【践踏】、登场:横排敌军受到14点伤害、攻击前:友军多于敌军，自身+4/+9"
+            },
+            {
+                "attack": 33,
+                "life": 33,
+                "effect": "【护甲11】、【践踏】、登场:横排敌军受到16点伤害、攻击前:友军多于敌军，自身+5/+11"
+            },
+            {
+                "attack": 36,
+                "life": 36,
+                "effect": "【护甲12】、【践踏】、登场:横排敌军受到18点伤害、攻击前:友军多于敌军，自身+6/+12"
+            },
+            {
+                "attack": 39,
+                "life": 39,
+                "effect": "【护甲13】、【践踏】、登场:横排敌军受到20点伤害、攻击前:友军多于敌军，自身+6/+14"
+            },
+            {
+                "attack": 42,
+                "life": 42,
+                "effect": "【护甲14】、【践踏】、登场:横排敌军受到22点伤害、攻击前:友军多于敌军，自身+7/+15"
+            },
+            {
+                "attack": 46,
+                "life": 46,
+                "effect": "【护甲15】、【践踏】、登场:横排敌军受到24点伤害、攻击前:友军多于敌军，自身+8/+16"
+            },
+            {
+                "attack": 50,
+                "life": 50,
+                "effect": "【护甲16】、【践踏】、登场:横排敌军受到26点伤害、攻击前:友军多于敌军，自身+9/+18"
+            }
+        ]
+    },
+    {
+        "id": 408,
+        "name": "烈火·蕾拉",
+        "zhenyin": 4,
+        "quality": 4,
+        "cost": 5,
+        "type": 1,
+        "img": "/tiantanggang/liehuo_leila.jpg",
+        "grade": "[3]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 5,
+                "life": 4,
+                "effect": "登场:获得【蕾拉火弹-lv3】、回合结束:获得【蕾拉火弹-lv3】"
+            },
+            {
+                "attack": 7,
+                "life": 6,
+                "effect": "登场:获得【蕾拉火弹-lv4】、回合结束:获得【蕾拉火弹-lv4】"
+            },
+            {
+                "attack": 9,
+                "life": 8,
+                "effect": "登场:获得【蕾拉火弹-lv4】、回合结束、命中英雄:获得【蕾拉火弹-lv4】"
+            },
+            {
+                "attack": 11,
+                "life": 10,
+                "effect": "登场:获得【蕾拉火弹-lv5】、回合结束、命中英雄:获得【蕾拉火弹-lv5】"
+            },
+            {
+                "attack": 14,
+                "life": 12,
+                "effect": "登场:获得【蕾拉火弹-lv6】、回合结束、命中英雄:获得【蕾拉火弹-lv6】"
+            },
+            {
+                "attack": 17,
+                "life": 13,
+                "effect": "登场:获得【蕾拉火弹-lv7】、回合结束、命中英雄:获得【蕾拉火弹-lv7】"
+            },
+            {
+                "attack": 20,
+                "life": 14,
+                "effect": "登场:获得2张【蕾拉火弹-lv7】、回合结束、命中英雄:获得【蕾拉火弹-lv7】"
+            },
+            {
+                "attack": 23,
+                "life": 15,
+                "effect": "登场:获得2张【蕾拉火弹-lv8】、回合结束、命中英雄:获得【蕾拉火弹-lv8】"
+            },
+            {
+                "attack": 26,
+                "life": 16,
+                "effect": "登场:获得2张【蕾拉火弹-lv9】、回合结束、命中英雄:获得【蕾拉火弹-lv9】"
+            },
+            {
+                "attack": 29,
+                "life": 17,
+                "effect": "登场:获得2张【蕾拉火弹-lv10】、回合结束、命中英雄:获得【蕾拉火弹-lv10】"
+            },
+            {
+                "attack": 32,
+                "life": 18,
+                "effect": "登场:获得2张【蕾拉火弹-lv11】、回合结束、命中英雄:获得【蕾拉火弹-lv11】"
+            },
+            {
+                "attack": 36,
+                "life": 19,
+                "effect": "登场:获得2张【蕾拉火弹-lv12】、回合结束、命中英雄:获得【蕾拉火弹-lv12】"
+            },
+            {
+                "attack": 40,
+                "life": 21,
+                "effect": "登场:获得3张【蕾拉火弹-lv13】、回合结束、命中英雄:获得【蕾拉火弹-lv13】"
+            },
+            {
+                "attack": 45,
+                "life": 23,
+                "effect": "登场:获得3张【蕾拉火弹-lv14】、回合结束、命中英雄:获得【蕾拉火弹-lv14】"
+            },
+            {
+                "attack": 50,
+                "life": 25,
+                "effect": "登场:获得3张【蕾拉火弹-lv15】、回合结束、命中英雄:获得【蕾拉火弹-lv15】"
+            },
+            {
+                "attack": 55,
+                "life": 27,
+                "effect": "登场:获得3张【蕾拉火弹-lv16】、回合结束、命中英雄:获得【蕾拉火弹-lv16】"
+            },
+            {
+                "attack": 60,
+                "life": 29,
+                "effect": "登场:获得3张【蕾拉火弹-lv17】、回合结束、命中英雄:获得【蕾拉火弹-lv17】"
+            },
+            {
+                "attack": 66,
+                "life": 31,
+                "effect": "登场:获得3张【蕾拉火弹-lv18】、回合结束、命中英雄:获得【蕾拉火弹-lv18】"
+            },
+            {
+                "attack": 72,
+                "life": 33,
+                "effect": "登场:获得3张【蕾拉火弹-lv19】、回合结束、命中英雄:获得【蕾拉火弹-lv19】"
+            },
+            {
+                "attack": 78,
+                "life": 35,
+                "effect": "登场:获得3张【蕾拉火弹-lv20】、回合结束、命中英雄:获得【蕾拉火弹-lv20】"
+            },
+            {
+                "attack": 85,
+                "life": 37,
+                "effect": "登场:获得3张【蕾拉火弹-lv21】、回合结束、命中英雄:获得【蕾拉火弹-lv21】"
+            },
+            {
+                "attack": 95,
+                "life": 39,
+                "effect": "登场:获得3张【蕾拉火弹-lv22】、回合结束、命中英雄:获得【蕾拉火弹-lv22】"
+            }
+        ]
+    },
+    {
+        "id": 409,
+        "name": "黑金三代目·梅森",
+        "zhenyin": 4,
+        "quality": 4,
+        "cost": 7,
+        "type": 1,
+        "img": "/tiantanggang/heijinsandaimu_meisen.jpg",
+        "grade": "[4]",
+        "tag": "[8,19,21,22,26]",
+        "data": [
+            {
+                "attack": 6,
+                "life": 9,
+                "effect": "攻击前:消灭对面首位敌军"
+            },
+            {
+                "attack": 7,
+                "life": 10,
+                "effect": "攻击前:消灭对面首位敌军"
+            },
+            {
+                "attack": 8,
+                "life": 12,
+                "effect": "攻击前:消灭对面首位敌军、命中英雄时:30%几率，敌军受到10点伤害"
+            },
+            {
+                "attack": 9,
+                "life": 14,
+                "effect": "攻击前:消灭对面首位敌军、命中英雄时:35%几率，敌军受到10点伤害"
+            },
+            {
+                "attack": 10,
+                "life": 16,
+                "effect": "攻击前:消灭对面首位敌军、命中英雄时:40%几率，敌军受到12点伤害"
+            },
+            {
+                "attack": 11,
+                "life": 18,
+                "effect": "攻击前:消灭对面首位敌军、命中英雄时:50%几率，敌军受到13点伤害"
+            },
+            {
+                "attack": 12,
+                "life": 21,
+                "effect": "攻击前:消灭对面首位敌军、命中英雄时:60%几率，敌军受到13点伤害"
+            },
+            {
+                "attack": 14,
+                "life": 25,
+                "effect": "攻击前:消灭对面首位敌军、命中英雄时:65%几率，敌军受到15点伤害"
+            },
+            {
+                "attack": 16,
+                "life": 27,
+                "effect": "攻击前:消灭对面首位敌军、命中英雄时:70%几率，敌军受到16点伤害"
+            },
+            {
+                "attack": 18,
+                "life": 30,
+                "effect": "攻击前:消灭对面首位敌军、命中英雄时:75%几率，敌军受到18点伤害"
+            },
+            {
+                "attack": 20,
+                "life": 36,
+                "effect": "【磐龙】、攻击前:消灭对面首位敌军、命中英雄时:75%几率，敌军受到20点伤害"
+            },
+            {
+                "attack": 22,
+                "life": 40,
+                "effect": "【磐龙】、攻击前:消灭对面首位敌军、命中英雄时:75%几率，敌军受到22点伤害"
+            },
+            {
+                "attack": 25,
+                "life": 45,
+                "effect": "【磐龙】、攻击前:消灭对面首位敌军、命中英雄时:80%几率，敌军受到25点伤害"
+            },
+            {
+                "attack": 30,
+                "life": 50,
+                "effect": "【磐龙】、攻击前:消灭对面首位敌军、命中英雄时:80%几率，敌军受到30点伤害"
+            },
+            {
+                "attack": 34,
+                "life": 55,
+                "effect": "【磐龙】、攻击前:消灭对面首位敌军、命中英雄时:80%几率，敌军受到34点伤害"
+            },
+            {
+                "attack": 37,
+                "life": 65,
+                "effect": "【磐龙】、攻击前:消灭对面首位敌军、命中英雄时:敌军受到37点伤害"
+            },
+            {
+                "attack": 40,
+                "life": 75,
+                "effect": "【磐龙】、攻击前:消灭对面首位敌军、命中英雄时:敌军受到40点伤害"
+            },
+            {
+                "attack": 45,
+                "life": 85,
+                "effect": "【磐龙】、攻击前:消灭对面首位敌军、命中英雄时:敌军受到45点伤害"
+            },
+            {
+                "attack": 50,
+                "life": 95,
+                "effect": "【磐龙】、攻击前:消灭对面首位敌军、命中英雄时:敌军受到50点伤害"
+            },
+            {
+                "attack": 55,
+                "life": 105,
+                "effect": "【磐龙】、攻击前:消灭对面首位敌军、命中英雄时:敌军受到55点伤害"
+            },
+            {
+                "attack": 60,
+                "life": 115,
+                "effect": "【磐龙】、攻击前:消灭对面首位敌军、命中英雄时:敌军受到60点伤害"
+            },
+            {
+                "attack": 65,
+                "life": 125,
+                "effect": "【磐龙】、攻击前:消灭对面首位敌军、命中英雄时:敌军受到65点伤害"
+            }
+        ]
+    },
+    {
+        "id": 410,
+        "name": "红海使魔",
+        "zhenyin": 5,
+        "quality": 1,
+        "cost": 0,
+        "type": 1,
+        "img": "/lianyushenyuan/honghaishimo.jpg",
+        "grade": "[1]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 1,
+                "life": 1,
+                "effect": "/"
+            },
+            {
+                "attack": 2,
+                "life": 1,
+                "effect": "/"
+            },
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "/"
+            },
+            {
+                "attack": 3,
+                "life": 2,
+                "effect": "/"
+            },
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "/"
+            },
+            {
+                "attack": 4,
+                "life": 3,
+                "effect": "/"
+            },
+            {
+                "attack": 5,
+                "life": 3,
+                "effect": "/"
+            },
+            {
+                "attack": 5,
+                "life": 4,
+                "effect": "/"
+            },
+            {
+                "attack": 6,
+                "life": 4,
+                "effect": "/"
+            },
+            {
+                "attack": 7,
+                "life": 4,
+                "effect": "/"
+            },
+            {
+                "attack": 8,
+                "life": 5,
+                "effect": "/"
+            },
+            {
+                "attack": 9,
+                "life": 6,
+                "effect": "/"
+            },
+            {
+                "attack": 10,
+                "life": 7,
+                "effect": "/"
+            },
+            {
+                "attack": 11,
+                "life": 8,
+                "effect": "/"
+            },
+            {
+                "attack": 12,
+                "life": 9,
+                "effect": "/"
+            },
+            {
+                "attack": 13,
+                "life": 10,
+                "effect": "/"
+            },
+            {
+                "attack": 14,
+                "life": 11,
+                "effect": "/"
+            },
+            {
+                "attack": 15,
+                "life": 12,
+                "effect": "/"
+            },
+            {
+                "attack": 16,
+                "life": 13,
+                "effect": "/"
+            },
+            {
+                "attack": 17,
+                "life": 14,
+                "effect": "/"
+            },
+            {
+                "attack": 19,
+                "life": 15,
+                "effect": "/"
+            },
+            {
+                "attack": 21,
+                "life": 16,
+                "effect": "/"
+            }
+        ]
+    },
+    {
+        "id": 411,
+        "name": "燃烧鬼怪",
+        "zhenyin": 5,
+        "quality": 1,
+        "cost": 2,
+        "type": 1,
+        "img": "/lianyushenyuan/ranshaoguiguai.jpg",
+        "grade": "[0]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 1,
+                "life": 1,
+                "effect": "登场:对面首位敌军受到1点伤害"
+            },
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "登场:对面首位敌军受到1点伤害"
+            },
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "登场:对面首位敌军受到2点伤害"
+            },
+            {
+                "attack": 3,
+                "life": 2,
+                "effect": "登场:对面首位敌军受到2点伤害"
+            },
+            {
+                "attack": 3,
+                "life": 2,
+                "effect": "登场:对面首位敌军受到3点伤害"
+            },
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "登场:对面首位敌军受到3点伤害"
+            },
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "登场:对面首位敌军受到4点伤害"
+            },
+            {
+                "attack": 4,
+                "life": 4,
+                "effect": "登场:对面首位敌军受到4点伤害"
+            },
+            {
+                "attack": 4,
+                "life": 5,
+                "effect": "登场:对面首位敌军受到5点伤害"
+            },
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "登场:对面首位敌军受到5点伤害"
+            },
+            {
+                "attack": 5,
+                "life": 6,
+                "effect": "登场:对面首位敌军受到6点伤害"
+            },
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "登场:对面首位敌军受到6点伤害"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "登场:对面首位敌军受到7点伤害"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "登场:对面首位敌军受到8点伤害"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "登场:对面首位敌军受到9点伤害"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "登场:对面首位敌军受到10点伤害"
+            },
+            {
+                "attack": 11,
+                "life": 11,
+                "effect": "登场:对面首位敌军受到11点伤害"
+            },
+            {
+                "attack": 12,
+                "life": 12,
+                "effect": "登场:对面首位敌军受到12点伤害"
+            },
+            {
+                "attack": 13,
+                "life": 13,
+                "effect": "登场:对面首位敌军受到13点伤害"
+            },
+            {
+                "attack": 14,
+                "life": 14,
+                "effect": "登场:对面首位敌军受到14点伤害"
+            },
+            {
+                "attack": 15,
+                "life": 15,
+                "effect": "登场:对面首位敌军受到15点伤害"
+            },
+            {
+                "attack": 16,
+                "life": 16,
+                "effect": "登场:对面首位敌军受到16点伤害"
+            }
+        ]
+    },
+    {
+        "id": 412,
+        "name": "嗜血卒",
+        "zhenyin": 5,
+        "quality": 1,
+        "cost": 2,
+        "type": 1,
+        "img": "/lianyushenyuan/shixuezu.jpg",
+        "grade": "[0]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 1,
+                "life": 1,
+                "effect": "命中英雄:自身攻击+1"
+            },
+            {
+                "attack": 1,
+                "life": 2,
+                "effect": "命中英雄:自身攻击+1"
+            },
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "命中英雄:自身攻击+1"
+            },
+            {
+                "attack": 2,
+                "life": 3,
+                "effect": "命中英雄:自身攻击+2"
+            },
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "命中英雄:自身攻击+2"
+            },
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "命中英雄:自身攻击+3"
+            },
+            {
+                "attack": 4,
+                "life": 4,
+                "effect": "命中英雄:自身攻击+3"
+            },
+            {
+                "attack": 4,
+                "life": 5,
+                "effect": "命中英雄:自身攻击+4"
+            },
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "命中英雄:自身攻击+4"
+            },
+            {
+                "attack": 5,
+                "life": 6,
+                "effect": "命中英雄:自身攻击+5"
+            },
+            {
+                "attack": 6,
+                "life": 7,
+                "effect": "命中英雄:自身攻击+5"
+            },
+            {
+                "attack": 6,
+                "life": 8,
+                "effect": "命中英雄:自身攻击+6"
+            },
+            {
+                "attack": 7,
+                "life": 9,
+                "effect": "命中英雄:自身攻击+6"
+            },
+            {
+                "attack": 8,
+                "life": 10,
+                "effect": "命中英雄:自身攻击+7"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "命中英雄:自身攻击+7"
+            },
+            {
+                "attack": 11,
+                "life": 11,
+                "effect": "命中英雄:自身攻击+8"
+            },
+            {
+                "attack": 12,
+                "life": 12,
+                "effect": "命中英雄:自身攻击+9"
+            },
+            {
+                "attack": 13,
+                "life": 13,
+                "effect": "命中英雄:自身攻击+10"
+            },
+            {
+                "attack": 14,
+                "life": 14,
+                "effect": "命中英雄:自身攻击+11"
+            },
+            {
+                "attack": 15,
+                "life": 15,
+                "effect": "命中英雄:自身攻击+12"
+            },
+            {
+                "attack": 16,
+                "life": 16,
+                "effect": "命中英雄:自身攻击+13"
+            },
+            {
+                "attack": 17,
+                "life": 17,
+                "effect": "命中英雄:自身攻击+14"
+            }
+        ]
+    },
+    {
+        "id": 413,
+        "name": "猩红仆从",
+        "zhenyin": 5,
+        "quality": 1,
+        "cost": 2,
+        "type": 1,
+        "img": "/lianyushenyuan/xinghongpucong.jpg",
+        "grade": "[1]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "死亡:敌方英雄受到伤害，等同自身攻击"
+            },
+            {
+                "attack": 2,
+                "life": 3,
+                "effect": "死亡:敌方英雄受到伤害，等同自身攻击"
+            },
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "死亡:敌方英雄受到伤害，等同自身攻击"
+            },
+            {
+                "attack": 4,
+                "life": 3,
+                "effect": "死亡:敌方英雄受到伤害，等同自身攻击"
+            },
+            {
+                "attack": 4,
+                "life": 4,
+                "effect": "死亡:敌方英雄受到伤害，等同自身攻击"
+            },
+            {
+                "attack": 5,
+                "life": 4,
+                "effect": "死亡:敌方英雄受到伤害，等同自身攻击"
+            },
+            {
+                "attack": 5,
+                "life": 6,
+                "effect": "死亡:敌方英雄受到伤害，等同自身攻击"
+            },
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "死亡:敌方英雄受到伤害，等同自身攻击"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "死亡:敌方英雄受到伤害，等同自身攻击"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "死亡:敌方英雄受到伤害，等同自身攻击"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "死亡:敌方英雄受到伤害，等同自身攻击"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "死亡:敌方英雄受到伤害，等同自身攻击"
+            },
+            {
+                "attack": 11,
+                "life": 11,
+                "effect": "死亡:敌方英雄受到伤害，等同自身攻击"
+            },
+            {
+                "attack": 12,
+                "life": 12,
+                "effect": "死亡:敌方英雄受到伤害，等同自身攻击"
+            },
+            {
+                "attack": 13,
+                "life": 13,
+                "effect": "死亡:敌方英雄受到伤害，等同自身攻击"
+            },
+            {
+                "attack": 14,
+                "life": 14,
+                "effect": "死亡:敌方英雄受到伤害，等同自身攻击"
+            },
+            {
+                "attack": 15,
+                "life": 15,
+                "effect": "死亡:敌方英雄受到伤害，等同自身攻击"
+            },
+            {
+                "attack": 16,
+                "life": 16,
+                "effect": "死亡:敌方英雄受到伤害，等同自身攻击"
+            },
+            {
+                "attack": 18,
+                "life": 17,
+                "effect": "死亡:敌方英雄受到伤害，等同自身攻击"
+            },
+            {
+                "attack": 19,
+                "life": 19,
+                "effect": "死亡:敌方英雄受到伤害，等同自身攻击"
+            },
+            {
+                "attack": 20,
+                "life": 21,
+                "effect": "死亡:敌方英雄受到伤害，等同自身攻击"
+            },
+            {
+                "attack": 22,
+                "life": 22,
+                "effect": "死亡:敌方英雄受到伤害，等同自身攻击"
+            }
+        ]
+    },
+    {
+        "id": 414,
+        "name": "混乱恶鬼",
+        "zhenyin": 5,
+        "quality": 1,
+        "cost": 3,
+        "type": 1,
+        "img": "/lianyushenyuan/hunluanegui.jpg",
+        "grade": "[0]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 2,
+                "life": 1,
+                "effect": "登场:双方英雄生命-2"
+            },
+            {
+                "attack": 3,
+                "life": 1,
+                "effect": "登场:双方英雄生命-3"
+            },
+            {
+                "attack": 4,
+                "life": 2,
+                "effect": "登场:双方英雄生命-4"
+            },
+            {
+                "attack": 5,
+                "life": 3,
+                "effect": "登场:双方英雄生命-5"
+            },
+            {
+                "attack": 6,
+                "life": 3,
+                "effect": "登场:双方英雄生命-6"
+            },
+            {
+                "attack": 7,
+                "life": 3,
+                "effect": "登场:双方英雄生命-7"
+            },
+            {
+                "attack": 8,
+                "life": 3,
+                "effect": "登场:双方英雄生命-8"
+            },
+            {
+                "attack": 9,
+                "life": 4,
+                "effect": "登场:双方英雄生命-9"
+            },
+            {
+                "attack": 10,
+                "life": 4,
+                "effect": "登场:双方英雄生命-10"
+            },
+            {
+                "attack": 11,
+                "life": 5,
+                "effect": "登场:双方英雄生命-11"
+            },
+            {
+                "attack": 12,
+                "life": 6,
+                "effect": "登场:双方英雄生命-12"
+            },
+            {
+                "attack": 13,
+                "life": 7,
+                "effect": "登场:双方英雄生命-13"
+            },
+            {
+                "attack": 14,
+                "life": 8,
+                "effect": "登场:双方英雄生命-14"
+            },
+            {
+                "attack": 15,
+                "life": 10,
+                "effect": "登场:双方英雄生命-15"
+            },
+            {
+                "attack": 16,
+                "life": 12,
+                "effect": "登场:双方英雄生命-16"
+            },
+            {
+                "attack": 18,
+                "life": 12,
+                "effect": "登场:双方英雄生命-18"
+            },
+            {
+                "attack": 20,
+                "life": 13,
+                "effect": "登场:双方英雄生命-20"
+            },
+            {
+                "attack": 22,
+                "life": 14,
+                "effect": "登场:双方英雄生命-22"
+            },
+            {
+                "attack": 24,
+                "life": 15,
+                "effect": "登场:双方英雄生命-24"
+            },
+            {
+                "attack": 26,
+                "life": 16,
+                "effect": "登场:双方英雄生命-26"
+            },
+            {
+                "attack": 28,
+                "life": 17,
+                "effect": "登场:双方英雄生命-28"
+            },
+            {
+                "attack": 30,
+                "life": 18,
+                "effect": "登场:双方英雄生命-30"
+            }
+        ]
+    },
+    {
+        "id": 415,
+        "name": "烈火术",
+        "zhenyin": 5,
+        "quality": 1,
+        "cost": 3,
+        "type": 2,
+        "img": "/lianyushenyuan/liehuoshu.jpg",
+        "grade": "[0]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成1点伤害，敌方英雄生命-1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成2点伤害，敌方英雄生命-2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成3点伤害，敌方英雄生命-3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成3点伤害，敌方英雄生命-4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成4点伤害，敌方英雄生命-5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成4点伤害，敌方英雄生命-6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成5点伤害，敌方英雄生命-7"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成5点伤害，敌方英雄生命-8"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成6点伤害，敌方英雄生命-9"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成6点伤害，敌方英雄生命-10"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成7点伤害，敌方英雄生命-11"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成8点伤害，敌方英雄生命-12"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成8点伤害，敌方英雄生命-13"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成8点伤害，敌方英雄生命-14"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成8点伤害，敌方英雄生命-15"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成9点伤害，敌方英雄生命-16"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成10点伤害，敌方英雄生命-17"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成11点伤害，敌方英雄生命-18"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成12点伤害，敌方英雄生命-19"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成13点伤害，敌方英雄生命-20"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成14点伤害，敌方英雄生命-22"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成15点伤害，敌方英雄生命-24"
+            }
+        ]
+    },
+    {
+        "id": 416,
+        "name": "焦毒尸嵌",
+        "zhenyin": 5,
+        "quality": 1,
+        "cost": 4,
+        "type": 1,
+        "img": "/lianyushenyuan/jiaodushiqian.jpg",
+        "grade": "[0]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 2,
+                "life": 3,
+                "effect": "命中英雄:敌方英雄生命-2"
+            },
+            {
+                "attack": 2,
+                "life": 5,
+                "effect": "命中英雄:敌方英雄生命-2"
+            },
+            {
+                "attack": 3,
+                "life": 5,
+                "effect": "命中英雄:敌方英雄生命-3"
+            },
+            {
+                "attack": 4,
+                "life": 5,
+                "effect": "命中英雄:敌方英雄生命-4"
+            },
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "命中英雄:敌方英雄生命-5"
+            },
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "命中英雄:敌方英雄生命-6"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "命中英雄:敌方英雄生命-7"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "命中英雄:敌方英雄生命-8"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "命中英雄:敌方英雄生命-9"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "命中英雄:敌方英雄生命-10"
+            },
+            {
+                "attack": 11,
+                "life": 11,
+                "effect": "命中英雄:敌方英雄生命-11"
+            },
+            {
+                "attack": 12,
+                "life": 12,
+                "effect": "命中英雄:敌方英雄生命-12"
+            },
+            {
+                "attack": 13,
+                "life": 13,
+                "effect": "命中英雄:敌方英雄生命-13"
+            },
+            {
+                "attack": 14,
+                "life": 14,
+                "effect": "命中英雄:敌方英雄生命-14"
+            },
+            {
+                "attack": 15,
+                "life": 15,
+                "effect": "命中英雄:敌方英雄生命-15"
+            },
+            {
+                "attack": 16,
+                "life": 16,
+                "effect": "命中英雄:敌方英雄生命-16"
+            },
+            {
+                "attack": 17,
+                "life": 18,
+                "effect": "命中英雄:敌方英雄生命-17"
+            },
+            {
+                "attack": 19,
+                "life": 19,
+                "effect": "命中英雄:敌方英雄生命-19"
+            },
+            {
+                "attack": 21,
+                "life": 21,
+                "effect": "命中英雄:敌方英雄生命-21"
+            },
+            {
+                "attack": 23,
+                "life": 23,
+                "effect": "命中英雄:敌方英雄生命-23"
+            },
+            {
+                "attack": 25,
+                "life": 25,
+                "effect": "命中英雄:敌方英雄生命-25"
+            },
+            {
+                "attack": 27,
+                "life": 27,
+                "effect": "命中英雄:敌方英雄生命-27"
+            }
+        ]
+    },
+    {
+        "id": 417,
+        "name": "冥河守卫",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 1,
+        "type": 1,
+        "img": "/lianyushenyuan/mingheshouwei.jpg",
+        "grade": "[3]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "玩家充能时，该玩家生命-1"
+            },
+            {
+                "attack": 3,
+                "life": 2,
+                "effect": "玩家充能时，该玩家生命-2"
+            },
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "玩家充能时，该玩家生命-2"
+            },
+            {
+                "attack": 5,
+                "life": 2,
+                "effect": "玩家充能时，该玩家生命-2"
+            },
+            {
+                "attack": 6,
+                "life": 3,
+                "effect": "玩家充能时，该玩家生命-3"
+            },
+            {
+                "attack": 7,
+                "life": 3,
+                "effect": "玩家充能时，该玩家生命-3"
+            },
+            {
+                "attack": 8,
+                "life": 4,
+                "effect": "玩家充能时，该玩家生命-4"
+            },
+            {
+                "attack": 9,
+                "life": 4,
+                "effect": "玩家充能时，该玩家生命-4"
+            },
+            {
+                "attack": 10,
+                "life": 5,
+                "effect": "玩家充能时，该玩家生命-5"
+            },
+            {
+                "attack": 11,
+                "life": 7,
+                "effect": "玩家充能时，该玩家生命-5"
+            },
+            {
+                "attack": 12,
+                "life": 8,
+                "effect": "玩家充能时，该玩家生命-6"
+            },
+            {
+                "attack": 13,
+                "life": 9,
+                "effect": "玩家充能时，该玩家生命-6"
+            },
+            {
+                "attack": 15,
+                "life": 10,
+                "effect": "玩家充能时，该玩家生命-7"
+            },
+            {
+                "attack": 16,
+                "life": 12,
+                "effect": "玩家充能时，该玩家生命-7"
+            },
+            {
+                "attack": 17,
+                "life": 13,
+                "effect": "玩家充能时，该玩家生命-8"
+            },
+            {
+                "attack": 19,
+                "life": 14,
+                "effect": "玩家充能时，该玩家生命-8"
+            },
+            {
+                "attack": 20,
+                "life": 16,
+                "effect": "玩家充能时，该玩家生命-8"
+            },
+            {
+                "attack": 22,
+                "life": 17,
+                "effect": "玩家充能时，该玩家生命-9"
+            },
+            {
+                "attack": 23,
+                "life": 19,
+                "effect": "玩家充能时，该玩家生命-9"
+            },
+            {
+                "attack": 25,
+                "life": 22,
+                "effect": "玩家充能时，该玩家生命-10"
+            },
+            {
+                "attack": 27,
+                "life": 25,
+                "effect": "玩家充能时，该玩家生命-11"
+            },
+            {
+                "attack": 30,
+                "life": 25,
+                "effect": "玩家充能时，该玩家生命-12"
+            }
+        ]
+    },
+    {
+        "id": 418,
+        "name": "落雷击",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 1,
+        "type": 2,
+        "img": "/lianyushenyuan/luoleiji.jpg",
+        "grade": "[3]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落3点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落4点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落5点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落6点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落7点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落8点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落10点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落12点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落14点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落16点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落18点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落21点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落23点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落25点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落27点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落29点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落31点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落33点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落35点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落37点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落40点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落43点伤害"
+            }
+        ]
+    },
+    {
+        "id": 419,
+        "name": "沸腾血刃",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 1,
+        "type": 2,
+        "img": "/lianyushenyuan/feitengxueren.jpg",
+        "grade": "[3]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位攻击+3，生命-2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位攻击+4，生命-2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位攻击+5，生命-3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位攻击+6，生命-3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位攻击+7，生命-4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位攻击+8，生命-4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位攻击+9，生命-5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位攻击+10，生命-5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位攻击+11，生命-6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位攻击+13，生命-7"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位攻击+15，生命-8"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位攻击+18，生命-9"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位攻击+20，生命-10"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位攻击+22，生命-11"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位攻击+25，生命-12"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位攻击+28，生命-13"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位攻击+32，生命-14"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位攻击+36，生命-15"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位攻击+39，生命-16"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位攻击+42，生命-18"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位攻击+45，生命-19"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位攻击+48，生命-20"
+            }
+        ]
+    },
+    {
+        "id": 420,
+        "name": "炼狱刀吏",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 2,
+        "type": 1,
+        "img": "/lianyushenyuan/diyudaoli.jpg",
+        "grade": "[2]",
+        "tag": "[3]",
+        "data": [
+            {
+                "attack": 4,
+                "life": 1,
+                "effect": "回合开始时:若你无手牌，自身攻击+2"
+            },
+            {
+                "attack": 5,
+                "life": 1,
+                "effect": "回合开始时:若你无手牌，自身攻击+2"
+            },
+            {
+                "attack": 6,
+                "life": 1,
+                "effect": "回合开始时:若你无手牌，自身攻击+2"
+            },
+            {
+                "attack": 7,
+                "life": 1,
+                "effect": "回合开始时:若你无手牌，自身攻击+3"
+            },
+            {
+                "attack": 8,
+                "life": 1,
+                "effect": "回合开始时:若你无手牌，自身攻击+3"
+            },
+            {
+                "attack": 9,
+                "life": 2,
+                "effect": "回合开始时:若你无手牌，自身攻击+3"
+            },
+            {
+                "attack": 10,
+                "life": 2,
+                "effect": "【洞察1】、回合开始时:若你无手牌，自身攻击+4"
+            },
+            {
+                "attack": 11,
+                "life": 3,
+                "effect": "【洞察1】、回合开始时:若你无手牌，自身攻击+4"
+            },
+            {
+                "attack": 13,
+                "life": 3,
+                "effect": "【洞察1】、回合开始时:若你无手牌，自身攻击+4"
+            },
+            {
+                "attack": 15,
+                "life": 3,
+                "effect": "【洞察1】、回合开始时:若你无手牌，自身攻击+5"
+            },
+            {
+                "attack": 17,
+                "life": 4,
+                "effect": "【洞察1】、回合开始时:若你无手牌，自身攻击+5"
+            },
+            {
+                "attack": 19,
+                "life": 4,
+                "effect": "【洞察1】、回合开始时:若你无手牌，自身攻击+6"
+            },
+            {
+                "attack": 21,
+                "life": 4,
+                "effect": "【洞察1】、回合开始时:若你无手牌，自身攻击+6"
+            },
+            {
+                "attack": 23,
+                "life": 5,
+                "effect": "【洞察1】、回合开始时:若你无手牌，自身攻击+7"
+            },
+            {
+                "attack": 25,
+                "life": 6,
+                "effect": "【洞察1】、回合开始时:若你无手牌，自身攻击+7"
+            },
+            {
+                "attack": 27,
+                "life": 7,
+                "effect": "【洞察1】、回合开始时:若你无手牌，自身攻击+8"
+            },
+            {
+                "attack": 29,
+                "life": 8,
+                "effect": "【洞察1】、回合开始时:若你无手牌，自身攻击+8"
+            },
+            {
+                "attack": 31,
+                "life": 9,
+                "effect": "【洞察1】、回合开始时:若你无手牌，自身攻击+9"
+            },
+            {
+                "attack": 33,
+                "life": 10,
+                "effect": "【洞察1】、回合开始时:若你无手牌，自身攻击+9"
+            },
+            {
+                "attack": 35,
+                "life": 11,
+                "effect": "【洞察1】、回合开始时:若你无手牌，自身攻击+10"
+            },
+            {
+                "attack": 37,
+                "life": 12,
+                "effect": "【洞察1】、回合开始时:若你无手牌，自身攻击+11"
+            },
+            {
+                "attack": 40,
+                "life": 13,
+                "effect": "【洞察1】、回合开始时:若你无手牌，自身攻击+12"
+            }
+        ]
+    },
+    {
+        "id": 421,
+        "name": "邪眼魔",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 2,
+        "type": 1,
+        "img": "/lianyushenyuan/xieyanmo.jpg",
+        "grade": "[2]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 1,
+                "effect": "死亡:对手弃掉一张牌"
+            },
+            {
+                "attack": 2,
+                "life": 1,
+                "effect": "死亡:对手弃掉一张牌"
+            },
+            {
+                "attack": 3,
+                "life": 1,
+                "effect": "死亡:对手弃掉一张牌"
+            },
+            {
+                "attack": 4,
+                "life": 1,
+                "effect": "登场:敌方英雄生命-1、死亡:对手弃掉一张牌"
+            },
+            {
+                "attack": 5,
+                "life": 1,
+                "effect": "登场:敌方英雄生命-1、死亡:对手弃掉一张牌"
+            },
+            {
+                "attack": 6,
+                "life": 2,
+                "effect": "登场:敌方英雄生命-2、死亡:对手弃掉一张牌"
+            },
+            {
+                "attack": 7,
+                "life": 3,
+                "effect": "登场:敌方英雄生命-2、死亡:对手弃掉一张牌"
+            },
+            {
+                "attack": 8,
+                "life": 4,
+                "effect": "登场:敌方英雄生命-3、死亡:对手弃掉一张牌"
+            },
+            {
+                "attack": 9,
+                "life": 5,
+                "effect": "登场:敌方英雄生命-3、死亡:对手弃掉一张牌"
+            },
+            {
+                "attack": 10,
+                "life": 6,
+                "effect": "登场:敌方英雄生命-4、死亡:对手弃掉一张牌"
+            },
+            {
+                "attack": 11,
+                "life": 7,
+                "effect": "登场:敌方英雄生命-5、死亡:对手弃掉一张牌"
+            },
+            {
+                "attack": 12,
+                "life": 8,
+                "effect": "登场:敌方英雄生命-6、死亡:对手弃掉一张牌"
+            },
+            {
+                "attack": 13,
+                "life": 9,
+                "effect": "登场:敌方英雄生命-7、死亡:对手弃掉一张牌"
+            },
+            {
+                "attack": 14,
+                "life": 10,
+                "effect": "登场:敌方英雄生命-8、死亡:对手弃掉一张牌"
+            },
+            {
+                "attack": 15,
+                "life": 11,
+                "effect": "登场:敌方英雄生命-9、死亡:对手弃掉一张牌"
+            },
+            {
+                "attack": 16,
+                "life": 12,
+                "effect": "登场:敌方英雄生命-10、死亡:对手弃掉一张牌"
+            },
+            {
+                "attack": 17,
+                "life": 13,
+                "effect": "登场:敌方英雄生命-11、死亡:对手弃掉一张牌"
+            },
+            {
+                "attack": 18,
+                "life": 14,
+                "effect": "登场:敌方英雄生命-12、死亡:对手弃掉一张牌"
+            },
+            {
+                "attack": 19,
+                "life": 15,
+                "effect": "登场:敌方英雄生命-13、死亡:对手弃掉一张牌"
+            },
+            {
+                "attack": 20,
+                "life": 16,
+                "effect": "登场:敌方英雄生命-15、死亡:对手弃掉一张牌"
+            },
+            {
+                "attack": 22,
+                "life": 17,
+                "effect": "登场:敌方英雄生命-17、死亡:对手弃掉一张牌"
+            },
+            {
+                "attack": 25,
+                "life": 18,
+                "effect": "登场:敌方英雄生命-20、死亡:对手弃掉一张牌"
+            }
+        ]
+    },
+    {
+        "id": 422,
+        "name": "残暴爪钩",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 2,
+        "type": 1,
+        "img": "/lianyushenyuan/canbaozhuagou.jpg",
+        "grade": "[1]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 3,
+                "life": 2,
+                "effect": "命中英雄:双方英雄生命-1"
+            },
+            {
+                "attack": 4,
+                "life": 2,
+                "effect": "命中英雄:双方英雄生命-1"
+            },
+            {
+                "attack": 4,
+                "life": 3,
+                "effect": "命中英雄:双方英雄生命-2"
+            },
+            {
+                "attack": 5,
+                "life": 4,
+                "effect": "命中英雄:双方英雄生命-2"
+            },
+            {
+                "attack": 6,
+                "life": 5,
+                "effect": "命中英雄:双方英雄生命-2"
+            },
+            {
+                "attack": 7,
+                "life": 6,
+                "effect": "命中英雄:双方英雄生命-3"
+            },
+            {
+                "attack": 8,
+                "life": 7,
+                "effect": "命中英雄:双方英雄生命-3"
+            },
+            {
+                "attack": 9,
+                "life": 8,
+                "effect": "命中英雄:双方英雄生命-3"
+            },
+            {
+                "attack": 10,
+                "life": 9,
+                "effect": "命中英雄:双方英雄生命-4"
+            },
+            {
+                "attack": 12,
+                "life": 10,
+                "effect": "命中英雄:双方英雄生命-4"
+            },
+            {
+                "attack": 13,
+                "life": 11,
+                "effect": "命中英雄:双方英雄生命-5"
+            },
+            {
+                "attack": 15,
+                "life": 12,
+                "effect": "命中英雄:双方英雄生命-5"
+            },
+            {
+                "attack": 17,
+                "life": 13,
+                "effect": "命中英雄:双方英雄生命-6"
+            },
+            {
+                "attack": 19,
+                "life": 14,
+                "effect": "命中英雄:双方英雄生命-6"
+            },
+            {
+                "attack": 21,
+                "life": 15,
+                "effect": "命中英雄:双方英雄生命-7"
+            },
+            {
+                "attack": 23,
+                "life": 16,
+                "effect": "命中英雄:双方英雄生命-7"
+            },
+            {
+                "attack": 25,
+                "life": 18,
+                "effect": "命中英雄:双方英雄生命-8"
+            },
+            {
+                "attack": 27,
+                "life": 20,
+                "effect": "命中英雄:双方英雄生命-8"
+            },
+            {
+                "attack": 29,
+                "life": 22,
+                "effect": "命中英雄:双方英雄生命-9"
+            },
+            {
+                "attack": 31,
+                "life": 24,
+                "effect": "命中英雄:双方英雄生命-9"
+            },
+            {
+                "attack": 33,
+                "life": 26,
+                "effect": "命中英雄:双方英雄生命-10"
+            },
+            {
+                "attack": 35,
+                "life": 28,
+                "effect": "命中英雄:双方英雄生命-10"
+            }
+        ]
+    },
+    {
+        "id": 423,
+        "name": "炎球",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 2,
+        "type": 2,
+        "img": "/lianyushenyuan/yanqiu.jpg",
+        "grade": "[2]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射4点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射6点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射8点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射10点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射12点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射14点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射16点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射18点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射20点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射22点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射25点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射28点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射32点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射36点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射40点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射44点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射48点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射52点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射56点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射60点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射64点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射68点伤害"
+            }
+        ]
+    },
+    {
+        "id": 424,
+        "name": "毒液甲虫",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 2,
+        "type": 1,
+        "img": "/lianyushenyuan/duyejiachong.jpg",
+        "grade": "[3]",
+        "tag": "[1,19]",
+        "data": [
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "【护甲1】、死亡:向敌方随机区域喷吐毒液(坠落伤害)"
+            },
+            {
+                "attack": 2,
+                "life": 4,
+                "effect": "【护甲1】、死亡:向敌方随机区域喷吐毒液(坠落伤害)"
+            },
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "【护甲1】、死亡:向敌方随机区域喷吐毒液(坠落伤害)"
+            },
+            {
+                "attack": 4,
+                "life": 5,
+                "effect": "【护甲1】、死亡:向敌方随机区域喷吐毒液(坠落伤害)"
+            },
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "【护甲2】、死亡:向敌方随机区域喷吐毒液(坠落伤害)"
+            },
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "【护甲2】、死亡:向敌方随机区域喷吐毒液(坠落伤害)"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "【护甲2】、死亡:向敌方随机区域喷吐毒液(坠落伤害)"
+            },
+            {
+                "attack": 9,
+                "life": 8,
+                "effect": "【护甲2】、死亡:向敌方随机区域喷吐毒液(坠落伤害)"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "【护甲2】、死亡:向敌方随机区域喷吐毒液(坠落伤害)"
+            },
+            {
+                "attack": 11,
+                "life": 12,
+                "effect": "【护甲2】、死亡:向敌方随机区域喷吐毒液(坠落伤害)"
+            },
+            {
+                "attack": 13,
+                "life": 13,
+                "effect": "【护甲2】、死亡:向敌方随机区域喷吐毒液(坠落伤害)"
+            },
+            {
+                "attack": 14,
+                "life": 15,
+                "effect": "【护甲3】、死亡:向敌方随机区域喷吐毒液(坠落伤害)"
+            },
+            {
+                "attack": 16,
+                "life": 16,
+                "effect": "【护甲3】、死亡:向敌方随机区域喷吐毒液(坠落伤害)"
+            },
+            {
+                "attack": 18,
+                "life": 18,
+                "effect": "【护甲3】、死亡:向敌方随机区域喷吐毒液(坠落伤害)"
+            },
+            {
+                "attack": 20,
+                "life": 20,
+                "effect": "【护甲4】、死亡:向敌方随机区域喷吐毒液(坠落伤害)"
+            },
+            {
+                "attack": 22,
+                "life": 22,
+                "effect": "【护甲4】、死亡:向敌方随机区域喷吐毒液(坠落伤害)"
+            },
+            {
+                "attack": 24,
+                "life": 24,
+                "effect": "【护甲4】、死亡:向敌方随机区域喷吐毒液(坠落伤害)"
+            },
+            {
+                "attack": 26,
+                "life": 26,
+                "effect": "【护甲4】、死亡:向敌方随机区域喷吐毒液(坠落伤害)"
+            },
+            {
+                "attack": 28,
+                "life": 28,
+                "effect": "【护甲5】、死亡:向敌方随机区域喷吐毒液(坠落伤害)"
+            },
+            {
+                "attack": 30,
+                "life": 30,
+                "effect": "【护甲5】、死亡:向敌方随机区域喷吐毒液(坠落伤害)"
+            },
+            {
+                "attack": 32,
+                "life": 32,
+                "effect": "【护甲5】、死亡:向敌方随机区域喷吐毒液(坠落伤害)"
+            },
+            {
+                "attack": 34,
+                "life": 34,
+                "effect": "【护甲6】、死亡:向敌方随机区域喷吐毒液(坠落伤害)"
+            }
+        ]
+    },
+    {
+        "id": 425,
+        "name": "热火冲锋",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 2,
+        "type": 2,
+        "img": "/lianyushenyuan/rehuochongfeng.jpg",
+        "grade": "[2]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落2点伤害，随机友军攻击+4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落3点伤害，随机友军攻击+5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落4点伤害，随机友军攻击+6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落5点伤害，随机友军攻击+7"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落6点伤害，随机友军攻击+8"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落7点伤害，随机友军攻击+9"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落8点伤害，随机友军攻击+10"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落9点伤害，随机友军攻击+11"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落10点伤害，随机友军攻击+12"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落11点伤害，随机友军攻击+13"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落12点伤害，随机友军攻击+14"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落13点伤害，随机友军攻击+15"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落14点伤害，随机友军攻击+16"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落15点伤害，随机友军攻击+18"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落16点伤害，随机友军攻击+20"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落18点伤害，随机友军攻击+22"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落20点伤害，随机友军攻击+24"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落22点伤害，随机友军攻击+26"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落25点伤害，随机友军攻击+28"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落28点伤害，随机友军攻击+30"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落31点伤害，随机友军攻击+33"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落34点伤害，随机友军攻击+36"
+            }
+        ]
+    },
+    {
+        "id": 426,
+        "name": "爆燃邪鬼",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 2,
+        "type": 1,
+        "img": "/lianyushenyuan/baoranxiegui.jpg",
+        "grade": "[3]",
+        "tag": "[5,23]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 1,
+                "effect": "【践踏】、登场:手上一张践踏生物卡法力-1"
+            },
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "【践踏】、登场:手上一张践踏生物卡法力-1"
+            },
+            {
+                "attack": 4,
+                "life": 3,
+                "effect": "【践踏】、登场:手上一张践踏生物卡法力-1"
+            },
+            {
+                "attack": 5,
+                "life": 3,
+                "effect": "【践踏】、登场:手上一张践踏生物卡法力-1"
+            },
+            {
+                "attack": 6,
+                "life": 3,
+                "effect": "【践踏】、登场:手上一张践踏生物卡法力-1"
+            },
+            {
+                "attack": 7,
+                "life": 3,
+                "effect": "【践踏】、登场:手上一张践踏生物卡法力-1"
+            },
+            {
+                "attack": 7,
+                "life": 5,
+                "effect": "【践踏】、登场:手上一张践踏生物卡法力-1"
+            },
+            {
+                "attack": 8,
+                "life": 6,
+                "effect": "【践踏】、登场:手上一张践踏生物卡法力-1"
+            },
+            {
+                "attack": 9,
+                "life": 7,
+                "effect": "【践踏】、登场:手上一张践踏生物卡法力-1"
+            },
+            {
+                "attack": 10,
+                "life": 8,
+                "effect": "【践踏】、登场:手上一张践踏生物卡法力-1"
+            },
+            {
+                "attack": 12,
+                "life": 9,
+                "effect": "【践踏】、登场:手上一张践踏生物卡法力-1"
+            },
+            {
+                "attack": 13,
+                "life": 11,
+                "effect": "【践踏】、登场:手上一张践踏生物卡法力-1"
+            },
+            {
+                "attack": 15,
+                "life": 12,
+                "effect": "【践踏】、登场:手上一张践踏生物卡法力-1"
+            },
+            {
+                "attack": 16,
+                "life": 14,
+                "effect": "【践踏】、登场:手上一张践踏生物卡法力-1"
+            },
+            {
+                "attack": 18,
+                "life": 15,
+                "effect": "【践踏】、登场:手上一张践踏生物卡法力-1"
+            },
+            {
+                "attack": 20,
+                "life": 16,
+                "effect": "【践踏】、登场:手上一张践踏生物卡法力-1"
+            },
+            {
+                "attack": 22,
+                "life": 17,
+                "effect": "【践踏】、登场:手上一张践踏生物卡法力-1"
+            },
+            {
+                "attack": 25,
+                "life": 18,
+                "effect": "【践踏】、登场:手上一张践踏生物卡法力-1"
+            },
+            {
+                "attack": 28,
+                "life": 20,
+                "effect": "【践踏】、登场:手上一张践踏生物卡法力-1"
+            },
+            {
+                "attack": 30,
+                "life": 24,
+                "effect": "【践踏】、登场:手上一张践踏生物卡法力-1"
+            },
+            {
+                "attack": 33,
+                "life": 26,
+                "effect": "【践踏】、登场:手上一张践踏生物卡法力-1"
+            },
+            {
+                "attack": 36,
+                "life": 28,
+                "effect": "【践踏】、登场:手上一张践踏生物卡法力-1"
+            }
+        ]
+    },
+    {
+        "id": 427,
+        "name": "嗜血妖蛾",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 2,
+        "type": 1,
+        "img": "/lianyushenyuan/shixueyaoe.jpg",
+        "grade": "[2]",
+        "tag": "[3]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 1,
+                "effect": "敌方玩家受到伤害时:自身攻击+1"
+            },
+            {
+                "attack": 1,
+                "life": 3,
+                "effect": "敌方玩家受到伤害时:自身攻击+1"
+            },
+            {
+                "attack": 2,
+                "life": 3,
+                "effect": "敌方玩家受到伤害时:自身攻击+1"
+            },
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "敌方玩家受到伤害时:自身攻击+1"
+            },
+            {
+                "attack": 4,
+                "life": 3,
+                "effect": "敌方玩家受到伤害时:自身攻击+1"
+            },
+            {
+                "attack": 5,
+                "life": 3,
+                "effect": "【洞察1】、敌方玩家受到伤害时:自身攻击+1"
+            },
+            {
+                "attack": 6,
+                "life": 4,
+                "effect": "【洞察1】、敌方玩家受到伤害时:自身攻击+1"
+            },
+            {
+                "attack": 7,
+                "life": 5,
+                "effect": "【洞察1】、敌方玩家受到伤害时:自身攻击+1"
+            },
+            {
+                "attack": 8,
+                "life": 6,
+                "effect": "【洞察1】、敌方玩家受到伤害时:自身攻击+1"
+            },
+            {
+                "attack": 9,
+                "life": 7,
+                "effect": "【洞察1】、敌方玩家受到伤害时:自身攻击+1"
+            },
+            {
+                "attack": 10,
+                "life": 8,
+                "effect": "【洞察1】、敌方玩家受到伤害时:自身攻击+1"
+            },
+            {
+                "attack": 11,
+                "life": 9,
+                "effect": "【洞察1】、敌方玩家受到伤害时:自身攻击+1"
+            },
+            {
+                "attack": 12,
+                "life": 11,
+                "effect": "【洞察1】、敌方玩家受到伤害时:自身攻击+1"
+            },
+            {
+                "attack": 13,
+                "life": 13,
+                "effect": "【洞察1】、敌方玩家受到伤害时:自身攻击+1"
+            },
+            {
+                "attack": 14,
+                "life": 15,
+                "effect": "【洞察1】、敌方玩家受到伤害时:自身攻击+2"
+            },
+            {
+                "attack": 16,
+                "life": 16,
+                "effect": "【洞察1】、敌方玩家受到伤害时:自身攻击+2"
+            },
+            {
+                "attack": 18,
+                "life": 18,
+                "effect": "【洞察1】、敌方玩家受到伤害时:自身攻击+2"
+            },
+            {
+                "attack": 20,
+                "life": 20,
+                "effect": "【洞察1】、敌方玩家受到伤害时:自身攻击+2"
+            },
+            {
+                "attack": 22,
+                "life": 23,
+                "effect": "【洞察1】、敌方玩家受到伤害时:自身攻击+2"
+            },
+            {
+                "attack": 25,
+                "life": 25,
+                "effect": "【洞察1】、敌方玩家受到伤害时:自身攻击+2"
+            },
+            {
+                "attack": 28,
+                "life": 28,
+                "effect": "【洞察1】、敌方玩家受到伤害时:自身攻击+2"
+            },
+            {
+                "attack": 31,
+                "life": 31,
+                "effect": "【洞察1】、敌方玩家受到伤害时:自身攻击+2"
+            }
+        ]
+    },
+    {
+        "id": 428,
+        "name": "狂噬兽",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 2,
+        "type": 1,
+        "img": "/lianyushenyuan/kuangshishou.jpg",
+        "grade": "[1]",
+        "tag": "[5,21]",
+        "data": [
+            {
+                "attack": 4,
+                "life": 2,
+                "effect": "【践踏】、【魔防1】"
+            },
+            {
+                "attack": 5,
+                "life": 2,
+                "effect": "【践踏】、【魔防2】"
+            },
+            {
+                "attack": 6,
+                "life": 2,
+                "effect": "【践踏】、【魔防3】"
+            },
+            {
+                "attack": 7,
+                "life": 2,
+                "effect": "【践踏】、【魔防4】"
+            },
+            {
+                "attack": 8,
+                "life": 2,
+                "effect": "【践踏】、【魔防5】"
+            },
+            {
+                "attack": 9,
+                "life": 3,
+                "effect": "【践踏】、【魔防6】"
+            },
+            {
+                "attack": 10,
+                "life": 4,
+                "effect": "【践踏】、【魔防7】"
+            },
+            {
+                "attack": 11,
+                "life": 5,
+                "effect": "【践踏】、【魔防8】"
+            },
+            {
+                "attack": 12,
+                "life": 6,
+                "effect": "【践踏】、【魔防9】"
+            },
+            {
+                "attack": 13,
+                "life": 7,
+                "effect": "【践踏】、【魔防10】"
+            },
+            {
+                "attack": 14,
+                "life": 8,
+                "effect": "【践踏】、【魔防11】"
+            },
+            {
+                "attack": 15,
+                "life": 9,
+                "effect": "【践踏】、【魔防12】"
+            },
+            {
+                "attack": 16,
+                "life": 10,
+                "effect": "【践踏】、【魔防13】"
+            },
+            {
+                "attack": 18,
+                "life": 10,
+                "effect": "【践踏】、【魔防14】"
+            },
+            {
+                "attack": 20,
+                "life": 10,
+                "effect": "【践踏】、【魔防15】"
+            },
+            {
+                "attack": 22,
+                "life": 11,
+                "effect": "【践踏】、【魔防16】"
+            },
+            {
+                "attack": 24,
+                "life": 12,
+                "effect": "【践踏】、【魔防17】"
+            },
+            {
+                "attack": 26,
+                "life": 13,
+                "effect": "【践踏】、【魔防18】"
+            },
+            {
+                "attack": 28,
+                "life": 14,
+                "effect": "【践踏】、【魔防19】"
+            },
+            {
+                "attack": 30,
+                "life": 15,
+                "effect": "【践踏】、【魔防20】"
+            },
+            {
+                "attack": 33,
+                "life": 17,
+                "effect": "【践踏】、【魔防22】"
+            },
+            {
+                "attack": 36,
+                "life": 19,
+                "effect": "【践踏】、【魔防24】"
+            }
+        ]
+    },
+    {
+        "id": 429,
+        "name": "符文·岩浆坠落",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 2,
+        "type": 4,
+        "img": "/lianyushenyuan/fuwen_yanjiangzhuiluo.jpg",
+        "grade": "[1]",
+        "tag": "[]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠火球(1点伤害)"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠火球(2点伤害)"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠火球(3点伤害)"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠火球(4点伤害)"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠火球(5点伤害)"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠火球(6点伤害)"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠火球(7点伤害)"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠火球(8点伤害)"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠火球(9点伤害)"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠火球(10点伤害)"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠火球(11点伤害)"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠火球(12点伤害)"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠火球(13点伤害)"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠火球(14点伤害)"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠火球(15点伤害)"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠火球(16点伤害)"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠火球(18点伤害)"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠火球(20点伤害)"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠火球(22点伤害)"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠火球(24点伤害)"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠火球(26点伤害)"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠火球(28点伤害)"
+            }
+        ]
+    },
+    {
+        "id": 430,
+        "name": "猩红勇士",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 3,
+        "type": 1,
+        "img": "/lianyushenyuan/xinghongyongshi.jpg",
+        "grade": "[3]",
+        "tag": "[3]",
+        "data": [
+            {
+                "attack": 4,
+                "life": 2,
+                "effect": "死亡:投掷长枪攻击英雄"
+            },
+            {
+                "attack": 5,
+                "life": 2,
+                "effect": "死亡:投掷长枪攻击英雄"
+            },
+            {
+                "attack": 6,
+                "life": 2,
+                "effect": "死亡:投掷长枪攻击英雄"
+            },
+            {
+                "attack": 7,
+                "life": 4,
+                "effect": "死亡:投掷长枪攻击英雄"
+            },
+            {
+                "attack": 8,
+                "life": 5,
+                "effect": "死亡:投掷长枪攻击英雄"
+            },
+            {
+                "attack": 9,
+                "life": 6,
+                "effect": "死亡:投掷长枪攻击英雄"
+            },
+            {
+                "attack": 10,
+                "life": 7,
+                "effect": "死亡:投掷长枪攻击英雄"
+            },
+            {
+                "attack": 12,
+                "life": 7,
+                "effect": "死亡:投掷长枪攻击英雄"
+            },
+            {
+                "attack": 13,
+                "life": 8,
+                "effect": "死亡:投掷长枪攻击英雄"
+            },
+            {
+                "attack": 15,
+                "life": 8,
+                "effect": "【洞察1】、死亡:投掷长枪攻击英雄"
+            },
+            {
+                "attack": 16,
+                "life": 9,
+                "effect": "【洞察1】、死亡:投掷长枪攻击英雄"
+            },
+            {
+                "attack": 17,
+                "life": 10,
+                "effect": "【洞察1】、死亡:投掷长枪攻击英雄"
+            },
+            {
+                "attack": 18,
+                "life": 11,
+                "effect": "【洞察1】、死亡:投掷长枪攻击英雄"
+            },
+            {
+                "attack": 20,
+                "life": 12,
+                "effect": "【洞察1】、死亡:投掷长枪攻击英雄"
+            },
+            {
+                "attack": 22,
+                "life": 13,
+                "effect": "【洞察1】、死亡:投掷长枪攻击英雄"
+            },
+            {
+                "attack": 25,
+                "life": 14,
+                "effect": "【洞察1】、死亡:投掷长枪攻击英雄"
+            },
+            {
+                "attack": 28,
+                "life": 15,
+                "effect": "【洞察1】、死亡:投掷长枪攻击英雄"
+            },
+            {
+                "attack": 31,
+                "life": 16,
+                "effect": "【洞察1】、死亡:投掷长枪攻击英雄"
+            },
+            {
+                "attack": 35,
+                "life": 17,
+                "effect": "【洞察1】、死亡:投掷长枪攻击英雄"
+            },
+            {
+                "attack": 38,
+                "life": 18,
+                "effect": "【洞察1】、死亡:投掷长枪攻击英雄"
+            },
+            {
+                "attack": 42,
+                "life": 19,
+                "effect": "【洞察1】、死亡:投掷长枪攻击英雄"
+            },
+            {
+                "attack": 45,
+                "life": 20,
+                "effect": "【洞察1】、死亡:投掷长枪攻击英雄"
+            }
+        ]
+    },
+    {
+        "id": 431,
+        "name": "尖叫邪鬼",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 3,
+        "type": 1,
+        "img": "/lianyushenyuan/jianjiaoxiegui.jpg",
+        "grade": "[2]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 2,
+                "effect": "命中玩家:对手弃一张牌"
+            },
+            {
+                "attack": 4,
+                "life": 2,
+                "effect": "命中玩家:对手弃一张牌"
+            },
+            {
+                "attack": 5,
+                "life": 2,
+                "effect": "命中玩家:对手弃一张牌"
+            },
+            {
+                "attack": 6,
+                "life": 3,
+                "effect": "命中玩家:对手弃一张牌"
+            },
+            {
+                "attack": 7,
+                "life": 4,
+                "effect": "命中玩家:对手弃一张牌，若敌方无手牌，自身攻击+1"
+            },
+            {
+                "attack": 8,
+                "life": 5,
+                "effect": "命中玩家:对手弃一张牌，若敌方无手牌，自身攻击+1"
+            },
+            {
+                "attack": 9,
+                "life": 6,
+                "effect": "命中玩家:对手弃一张牌，若敌方无手牌，自身攻击+2"
+            },
+            {
+                "attack": 10,
+                "life": 7,
+                "effect": "命中玩家:对手弃一张牌，若敌方无手牌，自身攻击+2"
+            },
+            {
+                "attack": 11,
+                "life": 8,
+                "effect": "命中玩家:对手弃一张牌，若敌方无手牌，自身攻击+3"
+            },
+            {
+                "attack": 12,
+                "life": 9,
+                "effect": "命中玩家:对手弃一张牌，若敌方无手牌，自身攻击+3"
+            },
+            {
+                "attack": 13,
+                "life": 10,
+                "effect": "命中玩家:对手弃一张牌，若敌方无手牌，自身攻击+4"
+            },
+            {
+                "attack": 14,
+                "life": 11,
+                "effect": "命中玩家:对手弃一张牌，若敌方无手牌，自身攻击+5"
+            },
+            {
+                "attack": 15,
+                "life": 12,
+                "effect": "命中玩家:对手弃一张牌，若敌方无手牌，自身攻击+5"
+            },
+            {
+                "attack": 16,
+                "life": 13,
+                "effect": "命中玩家:对手弃一张牌，若敌方无手牌，自身攻击+6"
+            },
+            {
+                "attack": 17,
+                "life": 14,
+                "effect": "命中玩家:对手弃一张牌，若敌方无手牌，自身攻击+7"
+            },
+            {
+                "attack": 18,
+                "life": 16,
+                "effect": "命中玩家:对手弃一张牌，若敌方无手牌，自身攻击+8"
+            },
+            {
+                "attack": 20,
+                "life": 18,
+                "effect": "命中玩家:对手弃一张牌，若敌方无手牌，自身攻击+9"
+            },
+            {
+                "attack": 22,
+                "life": 20,
+                "effect": "命中玩家:对手弃一张牌，若敌方无手牌，自身攻击+10"
+            },
+            {
+                "attack": 25,
+                "life": 21,
+                "effect": "命中玩家:对手弃一张牌，若敌方无手牌，自身攻击+11"
+            },
+            {
+                "attack": 28,
+                "life": 22,
+                "effect": "命中玩家:对手弃一张牌，若敌方无手牌，自身攻击+12"
+            },
+            {
+                "attack": 32,
+                "life": 23,
+                "effect": "命中玩家:对手弃一张牌，若敌方无手牌，自身攻击+13"
+            },
+            {
+                "attack": 35,
+                "life": 25,
+                "effect": "命中玩家:对手弃一张牌，若敌方无手牌，自身攻击+15"
+            }
+        ]
+    },
+    {
+        "id": 432,
+        "name": "凝血之池",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 3,
+        "type": 1,
+        "img": "/lianyushenyuan/ningxuezhichi.jpg",
+        "grade": "[2]",
+        "tag": "[13,25]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 3,
+                "effect": "【守军】、回合结束:英雄生命-2，抓一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 4,
+                "effect": "【守军】、回合结束:英雄生命-2，抓一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 6,
+                "effect": "【守军】、回合结束:英雄生命-2，抓一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 8,
+                "effect": "【守军】、回合结束:英雄生命-2，抓一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 10,
+                "effect": "【守军】、回合结束:英雄生命-3，抓一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 12,
+                "effect": "【守军】、回合结束:英雄生命-3，抓一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 14,
+                "effect": "【守军】、回合结束:英雄生命-3，抓一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 16,
+                "effect": "【守军】、回合结束:英雄生命-4，抓一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 18,
+                "effect": "【守军】、回合结束:英雄生命-4，抓一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 20,
+                "effect": "【守军】、回合结束:英雄生命-4，抓一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 24,
+                "effect": "【守军】、回合结束:英雄生命-5，抓一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 29,
+                "effect": "【守军】、回合结束:英雄生命-5，抓一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 32,
+                "effect": "【守军】、回合结束:英雄生命-6，抓一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 36,
+                "effect": "【守军】、回合结束:英雄生命-6，抓一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 40,
+                "effect": "【守军】、回合结束:英雄生命-6，抓一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 45,
+                "effect": "【守军】、回合结束:英雄生命-7，抓一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 49,
+                "effect": "【守军】、回合结束:英雄生命-7，抓一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 58,
+                "effect": "【守军】、回合结束:英雄生命-8，抓一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 63,
+                "effect": "【守军】、回合结束:英雄生命-8，抓一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 70,
+                "effect": "【守军】、回合结束:英雄生命-9，抓一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 75,
+                "effect": "【守军】、回合结束:英雄生命-9，抓一张牌"
+            },
+            {
+                "attack": 0,
+                "life": 82,
+                "effect": "【守军】、回合结束:英雄生命-10，抓一张牌"
+            }
+        ]
+    },
+    {
+        "id": 433,
+        "name": "血焰焦木",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 3,
+        "type": 1,
+        "img": "/lianyushenyuan/xueyanjiaomu.jpg",
+        "grade": "[1]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 2,
+                "life": 5,
+                "effect": "敌方英雄受到伤害:自身攻击+1"
+            },
+            {
+                "attack": 2,
+                "life": 7,
+                "effect": "敌方英雄受到伤害:自身攻击+1"
+            },
+            {
+                "attack": 3,
+                "life": 8,
+                "effect": "敌方英雄受到伤害:自身攻击+1"
+            },
+            {
+                "attack": 3,
+                "life": 11,
+                "effect": "敌方英雄受到伤害:自身攻击+1"
+            },
+            {
+                "attack": 4,
+                "life": 12,
+                "effect": "敌方英雄受到伤害:自身攻击+1"
+            },
+            {
+                "attack": 5,
+                "life": 13,
+                "effect": "敌方英雄受到伤害:自身攻击+1"
+            },
+            {
+                "attack": 6,
+                "life": 15,
+                "effect": "敌方英雄受到伤害:自身攻击+1"
+            },
+            {
+                "attack": 7,
+                "life": 17,
+                "effect": "敌方英雄受到伤害:自身攻击+1"
+            },
+            {
+                "attack": 8,
+                "life": 18,
+                "effect": "敌方英雄受到伤害:自身攻击+1"
+            },
+            {
+                "attack": 9,
+                "life": 20,
+                "effect": "敌方英雄受到伤害:自身攻击+1"
+            },
+            {
+                "attack": 10,
+                "life": 23,
+                "effect": "敌方英雄受到伤害:自身+1/+1"
+            },
+            {
+                "attack": 11,
+                "life": 26,
+                "effect": "敌方英雄受到伤害:自身+1/+1"
+            },
+            {
+                "attack": 12,
+                "life": 30,
+                "effect": "敌方英雄受到伤害:自身+1/+1"
+            },
+            {
+                "attack": 13,
+                "life": 35,
+                "effect": "敌方英雄受到伤害:自身+1/+1"
+            },
+            {
+                "attack": 15,
+                "life": 37,
+                "effect": "敌方英雄受到伤害:自身+1/+1"
+            },
+            {
+                "attack": 17,
+                "life": 40,
+                "effect": "敌方英雄受到伤害:自身+1/+1"
+            },
+            {
+                "attack": 19,
+                "life": 43,
+                "effect": "敌方英雄受到伤害:自身+1/+1"
+            },
+            {
+                "attack": 20,
+                "life": 47,
+                "effect": "敌方英雄受到伤害:自身+1/+1"
+            },
+            {
+                "attack": 21,
+                "life": 50,
+                "effect": "敌方英雄受到伤害:自身+1/+1"
+            },
+            {
+                "attack": 22,
+                "life": 54,
+                "effect": "敌方英雄受到伤害:自身+1/+1"
+            },
+            {
+                "attack": 23,
+                "life": 56,
+                "effect": "敌方英雄受到伤害:自身+2/+1"
+            },
+            {
+                "attack": 24,
+                "life": 60,
+                "effect": "敌方英雄受到伤害:自身+2/+1"
+            }
+        ]
+    },
+    {
+        "id": 434,
+        "name": "疯狂战意",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 3,
+        "type": 2,
+        "img": "/lianyushenyuan/fengkuangzhanyi.jpg",
+        "grade": "[2]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位+1/+1，场上每有一个敌军，再攻击+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位+1/+2，场上每有一个敌军，再攻击+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位+2/+2，场上每有一个敌军，再攻击+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位+2/+2，场上每有一个敌军，再+1/+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位+3/+3，场上每有一个敌军，再+1/+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位+4/+4，场上每有一个敌军，再+1/+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位+4/+4，场上每有一个敌军，再+2/+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位+5/+5，场上每有一个敌军，再+2/+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位+5/+5，场上每有一个敌军，再+2/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位+6/+6，场上每有一个敌军，再+2/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位+7/+7，场上每有一个敌军，再+2/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位+8/+8，场上每有一个敌军，再+2/+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位+10/+10，场上每有一个敌军，再+2/+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位+10/+10，场上每有一个敌军，再+3/+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位+12/+12，场上每有一个敌军，再+3/+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位+14/+14，场上每有一个敌军，再+3/+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位+17/+17，场上每有一个敌军，再+3/+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位+19/+19，场上每有一个敌军，再+4/+4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位+22/+22，场上每有一个敌军，再+4/+4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位+25/+25，场上每有一个敌军，再+4/+4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位+28/+28，场上每有一个敌军，再+5/+5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标单位+33/+33，场上每有一个敌军，再+5/+5"
+            }
+        ]
+    },
+    {
+        "id": 435,
+        "name": "狂暴炎球",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 3,
+        "type": 2,
+        "img": "/lianyushenyuan/kuangbaoyanqiu.jpg",
+        "grade": "[3]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到10点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到15点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到20点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到25点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到30点伤害，25%几率获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到40点伤害，30%几率获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到50点伤害，35%几率获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到60点伤害，40%几率获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到70点伤害，45%几率获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到80点伤害，50%几率获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到100点伤害，55%几率获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到125点伤害，60%几率获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到150点伤害，65%几率获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到175点伤害，70%几率获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到200点伤害，75%几率获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到240点伤害，75%几率获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到265点伤害，77%几率获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到300点伤害，80%几率获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到325点伤害，82%几率获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到350点伤害，85%几率获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到375点伤害，88%几率获得《真理碎片》"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标敌军受到400点伤害，90%几率获得《真理碎片》"
+            }
+        ]
+    },
+    {
+        "id": 436,
+        "name": "双头毒虫",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 3,
+        "type": 1,
+        "img": "/lianyushenyuan/shuangtouduchong.jpg",
+        "grade": "[2]",
+        "tag": "[19]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 3,
+                "effect": "攻击前:敌方随机位置，坠落1点伤害"
+            },
+            {
+                "attack": 1,
+                "life": 5,
+                "effect": "攻击前:敌方随机位置，坠落1点伤害"
+            },
+            {
+                "attack": 2,
+                "life": 5,
+                "effect": "攻击前:敌方随机位置，坠落2点伤害"
+            },
+            {
+                "attack": 2,
+                "life": 7,
+                "effect": "攻击前:敌方随机位置，坠落2点伤害"
+            },
+            {
+                "attack": 3,
+                "life": 8,
+                "effect": "攻击前:敌方随机位置，坠落3点伤害"
+            },
+            {
+                "attack": 3,
+                "life": 11,
+                "effect": "死亡、攻击前:敌方随机位置，坠落3点伤害"
+            },
+            {
+                "attack": 4,
+                "life": 12,
+                "effect": "死亡、攻击前:敌方随机位置，坠落4点伤害"
+            },
+            {
+                "attack": 4,
+                "life": 16,
+                "effect": "死亡、攻击前:敌方随机位置，坠落4点伤害"
+            },
+            {
+                "attack": 5,
+                "life": 18,
+                "effect": "死亡、攻击前:敌方随机位置，坠落5点伤害"
+            },
+            {
+                "attack": 6,
+                "life": 20,
+                "effect": "死亡、攻击前:敌方随机位置，坠落6点伤害"
+            },
+            {
+                "attack": 6,
+                "life": 24,
+                "effect": "死亡、攻击前:敌方随机位置，坠落6点伤害"
+            },
+            {
+                "attack": 7,
+                "life": 26,
+                "effect": "死亡、攻击前:敌方随机位置，坠落7点伤害"
+            },
+            {
+                "attack": 8,
+                "life": 28,
+                "effect": "死亡、攻击前:敌方随机位置，坠落8点伤害"
+            },
+            {
+                "attack": 9,
+                "life": 30,
+                "effect": "死亡、攻击前:敌方随机位置，坠落9点伤害"
+            },
+            {
+                "attack": 10,
+                "life": 32,
+                "effect": "死亡、攻击前:敌方随机位置，坠落10点伤害"
+            },
+            {
+                "attack": 11,
+                "life": 34,
+                "effect": "死亡、攻击前:敌方随机位置，坠落11点伤害"
+            },
+            {
+                "attack": 12,
+                "life": 36,
+                "effect": "死亡、攻击前:敌方随机位置，坠落12点伤害"
+            },
+            {
+                "attack": 13,
+                "life": 39,
+                "effect": "死亡、攻击前:敌方随机位置，坠落13点伤害"
+            },
+            {
+                "attack": 14,
+                "life": 42,
+                "effect": "死亡、攻击前:敌方随机位置，坠落14点伤害"
+            },
+            {
+                "attack": 15,
+                "life": 46,
+                "effect": "死亡、攻击前:敌方随机位置，坠落15点伤害"
+            },
+            {
+                "attack": 17,
+                "life": 48,
+                "effect": "死亡、攻击前:敌方随机位置，坠落17点伤害"
+            },
+            {
+                "attack": 19,
+                "life": 50,
+                "effect": "死亡、攻击前:敌方随机位置，坠落19点伤害"
+            }
+        ]
+    },
+    {
+        "id": 437,
+        "name": "无面狂奔者",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 3,
+        "type": 1,
+        "img": "/lianyushenyuan/wumiankuangbenzhe.jpg",
+        "grade": "[2]",
+        "tag": "[5]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 1,
+                "effect": "【践踏】、登场：毒液攻击横排敌军（1点伤害）"
+            },
+            {
+                "attack": 4,
+                "life": 1,
+                "effect": "【践踏】、登场：毒液攻击横排敌军（1点伤害）"
+            },
+            {
+                "attack": 5,
+                "life": 1,
+                "effect": "【践踏】、登场：毒液攻击横排敌军（1点伤害）"
+            },
+            {
+                "attack": 6,
+                "life": 2,
+                "effect": "【践踏】、登场：毒液攻击横排敌军（1点伤害）"
+            },
+            {
+                "attack": 7,
+                "life": 2,
+                "effect": "【践踏】、登场：毒液攻击横排敌军（2点伤害）"
+            },
+            {
+                "attack": 8,
+                "life": 3,
+                "effect": "【践踏】、登场：毒液攻击横排敌军（2点伤害）"
+            },
+            {
+                "attack": 9,
+                "life": 3,
+                "effect": "【践踏】、登场：毒液攻击横排敌军（3点伤害）"
+            },
+            {
+                "attack": 10,
+                "life": 4,
+                "effect": "【践踏】、登场：毒液攻击横排敌军（3点伤害）"
+            },
+            {
+                "attack": 12,
+                "life": 4,
+                "effect": "【践踏】、登场：毒液攻击横排敌军（3点伤害）"
+            },
+            {
+                "attack": 13,
+                "life": 5,
+                "effect": "【践踏】、登场：毒液攻击横排敌军（4点伤害）"
+            },
+            {
+                "attack": 15,
+                "life": 5,
+                "effect": "【践踏】、登场：毒液攻击横排敌军（4点伤害）"
+            },
+            {
+                "attack": 16,
+                "life": 6,
+                "effect": "【践踏】、登场：毒液攻击横排敌军（5点伤害）"
+            },
+            {
+                "attack": 18,
+                "life": 6,
+                "effect": "【践踏】、登场：毒液攻击横排敌军（5点伤害）"
+            },
+            {
+                "attack": 19,
+                "life": 7,
+                "effect": "【践踏】、登场：毒液攻击横排敌军（6点伤害）"
+            },
+            {
+                "attack": 21,
+                "life": 7,
+                "effect": "【践踏】、登场：毒液攻击横排敌军（6点伤害）"
+            },
+            {
+                "attack": 23,
+                "life": 8,
+                "effect": "【践踏】、登场：毒液攻击横排敌军（7点伤害）"
+            },
+            {
+                "attack": 26,
+                "life": 9,
+                "effect": "【践踏】、登场：毒液攻击横排敌军（8点伤害）"
+            },
+            {
+                "attack": 29,
+                "life": 10,
+                "effect": "【践踏】、登场：毒液攻击横排敌军（9点伤害）"
+            },
+            {
+                "attack": 32,
+                "life": 11,
+                "effect": "【践踏】、登场：毒液攻击横排敌军（10点伤害）"
+            },
+            {
+                "attack": 35,
+                "life": 12,
+                "effect": "【践踏】、登场：毒液攻击横排敌军（11点伤害）"
+            },
+            {
+                "attack": 40,
+                "life": 13,
+                "effect": "【践踏】、登场：毒液攻击横排敌军（13点伤害）"
+            },
+            {
+                "attack": 45,
+                "life": 15,
+                "effect": "【践踏】、登场：毒液攻击横排敌军（15点伤害）"
+            }
+        ]
+    },
+    {
+        "id": 438,
+        "name": "恶毒魔眼",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 3,
+        "type": 1,
+        "img": "/lianyushenyuan/edumoyan.jpg",
+        "grade": "[1]",
+        "tag": "[19,21]",
+        "data": [
+            {
+                "attack": 5,
+                "life": 1,
+                "effect": "每当一个炼狱或冬神友军死亡时：攻击+1"
+            },
+            {
+                "attack": 6,
+                "life": 1,
+                "effect": "每当一个炼狱或冬神友军死亡时：攻击+1"
+            },
+            {
+                "attack": 7,
+                "life": 1,
+                "effect": "【魔防1】、每当一个炼狱或冬神友军死亡时：攻击+1"
+            },
+            {
+                "attack": 8,
+                "life": 1,
+                "effect": "【魔防1】、每当一个炼狱或冬神友军死亡时：攻击+2"
+            },
+            {
+                "attack": 9,
+                "life": 2,
+                "effect": "【魔防1】、每当一个炼狱或冬神友军死亡时：攻击+2"
+            },
+            {
+                "attack": 10,
+                "life": 2,
+                "effect": "【魔防2】、每当一个炼狱或冬神友军死亡时：攻击+2"
+            },
+            {
+                "attack": 11,
+                "life": 2,
+                "effect": "【魔防2】、每当一个炼狱或冬神友军死亡时：攻击+3"
+            },
+            {
+                "attack": 12,
+                "life": 2,
+                "effect": "【魔防2】、每当一个炼狱或冬神友军死亡时：攻击+3"
+            },
+            {
+                "attack": 13,
+                "life": 3,
+                "effect": "【魔防2】、每当一个炼狱或冬神友军死亡时：攻击+4"
+            },
+            {
+                "attack": 15,
+                "life": 3,
+                "effect": "【魔防3】、每当一个炼狱或冬神友军死亡时：攻击+4"
+            },
+            {
+                "attack": 16,
+                "life": 3,
+                "effect": "【魔防3】、每当一个炼狱或冬神友军死亡时：攻击+5"
+            },
+            {
+                "attack": 18,
+                "life": 3,
+                "effect": "【魔防4】、每当一个炼狱或冬神友军死亡时：攻击+5"
+            },
+            {
+                "attack": 20,
+                "life": 3,
+                "effect": "【魔防5】、每当一个炼狱或冬神友军死亡时：攻击+5"
+            },
+            {
+                "attack": 22,
+                "life": 3,
+                "effect": "【魔防5】、每当一个炼狱或冬神友军死亡时：攻击+6"
+            },
+            {
+                "attack": 24,
+                "life": 4,
+                "effect": "【魔防6】、每当一个炼狱或冬神友军死亡时：攻击+6"
+            },
+            {
+                "attack": 26,
+                "life": 4,
+                "effect": "【魔防6】、每当一个炼狱或冬神友军死亡时：攻击+7"
+            },
+            {
+                "attack": 29,
+                "life": 5,
+                "effect": "【魔防7】、每当一个炼狱或冬神友军死亡时：攻击+7"
+            },
+            {
+                "attack": 32,
+                "life": 6,
+                "effect": "【魔防7】、每当一个炼狱或冬神友军死亡时：攻击+8"
+            },
+            {
+                "attack": 35,
+                "life": 6,
+                "effect": "【魔防8】、每当一个炼狱或冬神友军死亡时：攻击+8"
+            },
+            {
+                "attack": 39,
+                "life": 7,
+                "effect": "【魔防8】、每当一个炼狱或冬神友军死亡时：攻击+9"
+            },
+            {
+                "attack": 44,
+                "life": 8,
+                "effect": "【魔防8】、每当一个炼狱或冬神友军死亡时：攻击+10"
+            },
+            {
+                "attack": 50,
+                "life": 9,
+                "effect": "【魔防8】、每当一个炼狱或冬神友军死亡时：攻击+11"
+            }
+        ]
+    },
+    {
+        "id": 439,
+        "name": "熔炉尸嵌",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 3,
+        "type": 1,
+        "img": "/lianyushenyuan/ronglushiqian.jpg",
+        "grade": "[1]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "【法力封锁1】、攻击前:若敌方或自己没有手牌，自身攻击+1"
+            },
+            {
+                "attack": 3,
+                "life": 6,
+                "effect": "【法力封锁1】、攻击前:若敌方或自己没有手牌，自身攻击+1"
+            },
+            {
+                "attack": 4,
+                "life": 7,
+                "effect": "【法力封锁1】、攻击前:若敌方或自己没有手牌，自身攻击+1"
+            },
+            {
+                "attack": 4,
+                "life": 9,
+                "effect": "【法力封锁1】、攻击前:若敌方或自己没有手牌，自身+1/+1"
+            },
+            {
+                "attack": 5,
+                "life": 10,
+                "effect": "【法力封锁1】、攻击前:若敌方或自己没有手牌，自身+1/+1"
+            },
+            {
+                "attack": 6,
+                "life": 12,
+                "effect": "【法力封锁1】、攻击前:若敌方或自己没有手牌，自身+1/+2"
+            },
+            {
+                "attack": 7,
+                "life": 14,
+                "effect": "【法力封锁1】、攻击前:若敌方或自己没有手牌，自身+1/+2"
+            },
+            {
+                "attack": 8,
+                "life": 16,
+                "effect": "【法力封锁1】、攻击前:若敌方或自己没有手牌，自身+1/+2"
+            },
+            {
+                "attack": 8,
+                "life": 18,
+                "effect": "【法力封锁2】、攻击前:若敌方或自己没有手牌，自身+1/+2"
+            },
+            {
+                "attack": 9,
+                "life": 20,
+                "effect": "【法力封锁2】、攻击前:若敌方或自己没有手牌，自身+2/+2"
+            },
+            {
+                "attack": 9,
+                "life": 23,
+                "effect": "【法力封锁2】、攻击前:若敌方或自己没有手牌，自身+2/+2"
+            },
+            {
+                "attack": 10,
+                "life": 26,
+                "effect": "【法力封锁2】、攻击前:若敌方或自己没有手牌，自身+2/+3"
+            },
+            {
+                "attack": 11,
+                "life": 30,
+                "effect": "【法力封锁2】、攻击前:若敌方或自己没有手牌，自身+2/+3"
+            },
+            {
+                "attack": 12,
+                "life": 32,
+                "effect": "【法力封锁2】、攻击前:若敌方或自己没有手牌，自身+2/+3"
+            },
+            {
+                "attack": 13,
+                "life": 36,
+                "effect": "【法力封锁2】、攻击前:若敌方或自己没有手牌，自身+3/+3"
+            },
+            {
+                "attack": 14,
+                "life": 39,
+                "effect": "【法力封锁2】、攻击前:若敌方或自己没有手牌，自身+3/+3"
+            },
+            {
+                "attack": 16,
+                "life": 42,
+                "effect": "【法力封锁2】、攻击前:若敌方或自己没有手牌，自身+4/+3"
+            },
+            {
+                "attack": 18,
+                "life": 45,
+                "effect": "【法力封锁2】、攻击前:若敌方或自己没有手牌，自身+4/+3"
+            },
+            {
+                "attack": 20,
+                "life": 49,
+                "effect": "【法力封锁2】、攻击前:若敌方或自己没有手牌，自身+4/+4"
+            },
+            {
+                "attack": 22,
+                "life": 54,
+                "effect": "【法力封锁2】、攻击前:若敌方或自己没有手牌，自身+4/+4"
+            },
+            {
+                "attack": 25,
+                "life": 60,
+                "effect": "【法力封锁2】、攻击前:若敌方或自己没有手牌，自身+4/+5"
+            },
+            {
+                "attack": 28,
+                "life": 66,
+                "effect": "【法力封锁2】、攻击前:若敌方或自己没有手牌，自身+5/+5"
+            }
+        ]
+    },
+    {
+        "id": 440,
+        "name": "渴血兽魔",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 3,
+        "type": 1,
+        "img": "/lianyushenyuan/kexueshoumo.jpg",
+        "grade": "[1]",
+        "tag": "[5]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 2,
+                "effect": "【践踏】、对手获得生命时:自身+1/+2"
+            },
+            {
+                "attack": 4,
+                "life": 3,
+                "effect": "【践踏】、对手获得生命时:自身+1/+2"
+            },
+            {
+                "attack": 5,
+                "life": 4,
+                "effect": "【践踏】、对手获得生命时:自身+1/+2"
+            },
+            {
+                "attack": 6,
+                "life": 5,
+                "effect": "【践踏】、对手获得生命时:自身+2/+2"
+            },
+            {
+                "attack": 7,
+                "life": 6,
+                "effect": "【践踏】、对手获得生命时:自身+2/+2"
+            },
+            {
+                "attack": 8,
+                "life": 7,
+                "effect": "【践踏】、对手获得生命时:自身+2/+2"
+            },
+            {
+                "attack": 9,
+                "life": 8,
+                "effect": "【践踏】、对手获得生命时:自身+2/+3"
+            },
+            {
+                "attack": 10,
+                "life": 9,
+                "effect": "【践踏】、对手获得生命时:自身+2/+3"
+            },
+            {
+                "attack": 12,
+                "life": 10,
+                "effect": "【践踏】、对手获得生命时:自身+2/+3"
+            },
+            {
+                "attack": 14,
+                "life": 11,
+                "effect": "【践踏】、对手获得生命时:自身+3/+3"
+            },
+            {
+                "attack": 16,
+                "life": 12,
+                "effect": "【践踏】、对手获得生命时:自身+3/+3"
+            },
+            {
+                "attack": 18,
+                "life": 13,
+                "effect": "【践踏】、对手获得生命时:自身+3/+4"
+            },
+            {
+                "attack": 20,
+                "life": 14,
+                "effect": "【践踏】、对手获得生命时:自身+3/+4"
+            },
+            {
+                "attack": 22,
+                "life": 15,
+                "effect": "【践踏】、对手获得生命时:自身+4/+4"
+            },
+            {
+                "attack": 24,
+                "life": 16,
+                "effect": "【践踏】、对手获得生命时:自身+4/+4"
+            },
+            {
+                "attack": 26,
+                "life": 17,
+                "effect": "【践踏】、对手获得生命时:自身+5/+5"
+            },
+            {
+                "attack": 29,
+                "life": 18,
+                "effect": "【践踏】、对手获得生命时:自身+5/+5"
+            },
+            {
+                "attack": 32,
+                "life": 19,
+                "effect": "【践踏】、对手获得生命时:自身+6/+6"
+            },
+            {
+                "attack": 35,
+                "life": 20,
+                "effect": "【践踏】、对手获得生命时:自身+6/+6"
+            },
+            {
+                "attack": 38,
+                "life": 22,
+                "effect": "【践踏】、对手获得生命时:自身+7/+7"
+            },
+            {
+                "attack": 42,
+                "life": 23,
+                "effect": "【践踏】、对手获得生命时:自身+7/+7"
+            },
+            {
+                "attack": 45,
+                "life": 25,
+                "effect": "【践踏】、对手获得生命时:自身+8/+8"
+            }
+        ]
+    },
+    {
+        "id": 441,
+        "name": "腐化甲蛾",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 3,
+        "type": 1,
+        "img": "/lianyushenyuan/fuhuajiae.jpg",
+        "grade": "[4]",
+        "tag": "[1,19]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 2,
+                "effect": "【护甲1】、死亡:召唤2/2毒液甲虫-lv1"
+            },
+            {
+                "attack": 4,
+                "life": 2,
+                "effect": "【护甲1】、死亡:召唤2/4毒液甲虫-lv2"
+            },
+            {
+                "attack": 5,
+                "life": 3,
+                "effect": "【护甲1】、死亡:召唤3/4毒液甲虫-lv3"
+            },
+            {
+                "attack": 6,
+                "life": 4,
+                "effect": "【护甲1】、死亡:召唤4/5毒液甲虫-lv4"
+            },
+            {
+                "attack": 7,
+                "life": 4,
+                "effect": "【护甲2】、死亡:召唤5/5毒液甲虫-lv5"
+            },
+            {
+                "attack": 8,
+                "life": 5,
+                "effect": "【护甲2】、死亡:召唤6/6毒液甲虫-lv6"
+            },
+            {
+                "attack": 9,
+                "life": 6,
+                "effect": "【护甲2】、死亡:召唤7/7毒液甲虫-lv7"
+            },
+            {
+                "attack": 10,
+                "life": 7,
+                "effect": "【护甲2】、死亡:召唤9/8毒液甲虫-lv8"
+            },
+            {
+                "attack": 11,
+                "life": 8,
+                "effect": "【护甲2】、死亡:召唤10/10毒液甲虫-lv9"
+            },
+            {
+                "attack": 12,
+                "life": 8,
+                "effect": "【护甲3】、死亡:召唤11/12毒液甲虫-lv10"
+            },
+            {
+                "attack": 14,
+                "life": 9,
+                "effect": "【护甲3】、死亡:召唤13/13毒液甲虫-lv11"
+            },
+            {
+                "attack": 16,
+                "life": 10,
+                "effect": "【护甲3】、死亡:召唤14/15毒液甲虫-lv12"
+            },
+            {
+                "attack": 18,
+                "life": 11,
+                "effect": "【护甲3】、死亡:召唤16/16毒液甲虫-lv13"
+            },
+            {
+                "attack": 20,
+                "life": 12,
+                "effect": "【护甲3】、死亡:召唤18/18毒液甲虫-lv14"
+            },
+            {
+                "attack": 22,
+                "life": 12,
+                "effect": "【护甲4】、死亡:召唤20/20毒液甲虫-lv15"
+            },
+            {
+                "attack": 24,
+                "life": 13,
+                "effect": "【护甲4】、死亡:召唤22/22毒液甲虫-lv16"
+            },
+            {
+                "attack": 26,
+                "life": 14,
+                "effect": "【护甲4】、死亡:召唤24/24毒液甲虫-lv17"
+            },
+            {
+                "attack": 28,
+                "life": 15,
+                "effect": "【护甲4】、死亡:召唤26/26毒液甲虫-lv18"
+            },
+            {
+                "attack": 30,
+                "life": 16,
+                "effect": "【护甲4】、死亡:召唤28/28毒液甲虫-lv19"
+            },
+            {
+                "attack": 32,
+                "life": 16,
+                "effect": "【护甲5】、死亡:召唤30/30毒液甲虫-lv20"
+            },
+            {
+                "attack": 35,
+                "life": 17,
+                "effect": "【护甲5】、死亡:召唤32/32毒液甲虫-lv21"
+            },
+            {
+                "attack": 38,
+                "life": 18,
+                "effect": "【护甲6】、死亡:召唤34/34毒液甲虫-lv22"
+            }
+        ]
+    },
+    {
+        "id": 442,
+        "name": "符文·恶毒侵蚀",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 3,
+        "type": 4,
+        "img": "/lianyushenyuan/fuwen_eduqinshi.jpg",
+        "grade": "[4]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：敌方玩家弃掉1张牌、回合开始：若敌方手牌为1或20，则随机友军+3/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：敌方玩家弃掉1张牌、回合开始：若敌方手牌为1或19，则随机友军+4/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：敌方玩家弃掉1张牌、回合开始：若敌方手牌为1或18，则随机友军+5/+2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：敌方玩家弃掉1张牌，随机友军+1/+1、回合开始：若敌方手牌为1或17，则随机友军+5/+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：敌方玩家弃掉1张牌，随机友军+1/+1、回合开始：若敌方手牌为1或16，则随机友军+6/+3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：敌方玩家弃掉1张牌，随机友军+1/+1、回合开始：若敌方手牌为1或15，则随机友军+6/+4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：敌方玩家弃掉1张牌，随机友军+1/+2、回合开始：若敌方手牌为1或14，则随机友军+7/+4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：敌方玩家弃掉1张牌，随机友军+1/+2、回合开始：若敌方手牌为1或13，则随机友军+8/+4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：敌方玩家弃掉1张牌，随机友军+1/+2、回合开始：若敌方手牌为1或12，则随机友军+8/+5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：敌方玩家弃掉1张牌，随机友军+2/+2、回合开始：若敌方手牌为1或11，则随机友军+9/+5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：敌方玩家弃掉1张牌，随机友军+2/+2、回合开始：若敌方手牌为1或10，则随机友军+10/+5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：敌方玩家弃掉1张牌，随机友军+2/+3、回合开始：若敌方手牌为1或9，则随机友军+10/+6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：敌方玩家弃掉1张牌，随机友军+2/+3、回合开始：若敌方手牌为1或8，则随机友军+11/+6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：敌方玩家弃掉1张牌，随机友军+3/+3、回合开始：若敌方手牌为1或7，则随机友军+12/+6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：敌方玩家弃掉1张牌，随机友军+3/+3、回合开始：若敌方手牌为1或6，则随机友军+13/+6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：敌方玩家弃掉1张牌，随机友军+3/+4、回合开始：若敌方手牌为1或5，则随机友军+14/+6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：敌方玩家弃掉1张牌，随机友军+3/+4、回合开始：若敌方手牌为1或4，则随机友军+15/+6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：敌方玩家弃掉1张牌，随机友军+4/+4、回合开始：若敌方手牌为1或3，则随机友军+16/+6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：敌方玩家弃掉1张牌，随机友军+4/+4、回合开始：若敌方手牌为1或2，则随机友军+17/+7"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：敌方玩家弃掉1张牌，随机友军+4/+5、回合开始：若敌方手牌为1或1，则随机友军+18/+8"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：敌方玩家弃掉1张牌，随机友军+4/+5、回合开始：若敌方手牌为1或0，则随机友军+19/+9"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：敌方玩家弃掉1张牌，随机友军+5/+5、回合开始：若敌方手牌为1或0，则随机友军+20/+10"
+            }
+        ]
+    },
+    {
+        "id": 443,
+        "name": "炼狱双头犬",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 4,
+        "type": 1,
+        "img": "/lianyushenyuan/diyushuangtouquan.jpg",
+        "grade": "[1]",
+        "tag": "[3,18]",
+        "data": [
+            {
+                "attack": 2,
+                "life": 4,
+                "effect": "【二连击】"
+            },
+            {
+                "attack": 2,
+                "life": 6,
+                "effect": "【二连击】"
+            },
+            {
+                "attack": 3,
+                "life": 6,
+                "effect": "【二连击】"
+            },
+            {
+                "attack": 3,
+                "life": 9,
+                "effect": "【二连击】"
+            },
+            {
+                "attack": 4,
+                "life": 10,
+                "effect": "【二连击】"
+            },
+            {
+                "attack": 5,
+                "life": 12,
+                "effect": "【二连击】"
+            },
+            {
+                "attack": 6,
+                "life": 14,
+                "effect": "【二连击】"
+            },
+            {
+                "attack": 7,
+                "life": 16,
+                "effect": "【二连击】"
+            },
+            {
+                "attack": 8,
+                "life": 18,
+                "effect": "【二连击】"
+            },
+            {
+                "attack": 9,
+                "life": 20,
+                "effect": "【洞察1】、【二连击】"
+            },
+            {
+                "attack": 10,
+                "life": 23,
+                "effect": "【洞察1】、【二连击】"
+            },
+            {
+                "attack": 11,
+                "life": 26,
+                "effect": "【洞察1】、【二连击】"
+            },
+            {
+                "attack": 12,
+                "life": 29,
+                "effect": "【洞察1】、【二连击】"
+            },
+            {
+                "attack": 13,
+                "life": 32,
+                "effect": "【洞察1】、【二连击】"
+            },
+            {
+                "attack": 14,
+                "life": 36,
+                "effect": "【洞察1】、【二连击】"
+            },
+            {
+                "attack": 16,
+                "life": 39,
+                "effect": "【洞察1】、【二连击】"
+            },
+            {
+                "attack": 18,
+                "life": 42,
+                "effect": "【洞察1】、【二连击】"
+            },
+            {
+                "attack": 20,
+                "life": 45,
+                "effect": "【洞察1】、【二连击】"
+            },
+            {
+                "attack": 22,
+                "life": 48,
+                "effect": "【洞察1】、【二连击】"
+            },
+            {
+                "attack": 24,
+                "life": 52,
+                "effect": "【洞察1】、【二连击】"
+            },
+            {
+                "attack": 26,
+                "life": 56,
+                "effect": "【洞察1】、【二连击】"
+            },
+            {
+                "attack": 28,
+                "life": 60,
+                "effect": "【洞察1】、【二连击】"
+            }
+        ]
+    },
+    {
+        "id": 444,
+        "name": "焦炎异魔",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 4,
+        "type": 1,
+        "img": "/lianyushenyuan/jiaoyanyimo.jpg",
+        "grade": "[0]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 4,
+                "life": 2,
+                "effect": "攻击前:随机敌军受到2点伤害"
+            },
+            {
+                "attack": 5,
+                "life": 3,
+                "effect": "攻击前:随机敌军受到2点伤害"
+            },
+            {
+                "attack": 6,
+                "life": 3,
+                "effect": "攻击前:随机敌军受到3点伤害"
+            },
+            {
+                "attack": 7,
+                "life": 4,
+                "effect": "攻击前:随机敌军受到3点伤害"
+            },
+            {
+                "attack": 8,
+                "life": 5,
+                "effect": "攻击前:随机敌军受到4点伤害"
+            },
+            {
+                "attack": 9,
+                "life": 6,
+                "effect": "攻击前:随机敌军受到4点伤害"
+            },
+            {
+                "attack": 10,
+                "life": 7,
+                "effect": "攻击前:随机敌军受到5点伤害"
+            },
+            {
+                "attack": 12,
+                "life": 8,
+                "effect": "攻击前:随机敌军受到5点伤害"
+            },
+            {
+                "attack": 14,
+                "life": 9,
+                "effect": "攻击前:随机敌军受到6点伤害"
+            },
+            {
+                "attack": 16,
+                "life": 10,
+                "effect": "攻击前:随机敌军受到6点伤害"
+            },
+            {
+                "attack": 18,
+                "life": 11,
+                "effect": "攻击前:随机敌军受到7点伤害"
+            },
+            {
+                "attack": 20,
+                "life": 12,
+                "effect": "攻击前:随机敌军受到7点伤害"
+            },
+            {
+                "attack": 22,
+                "life": 13,
+                "effect": "攻击前:随机敌军受到8点伤害"
+            },
+            {
+                "attack": 24,
+                "life": 15,
+                "effect": "攻击前:随机敌军受到8点伤害"
+            },
+            {
+                "attack": 26,
+                "life": 17,
+                "effect": "攻击前:随机敌军受到9点伤害"
+            },
+            {
+                "attack": 28,
+                "life": 19,
+                "effect": "攻击前:随机敌军受到10点伤害"
+            },
+            {
+                "attack": 30,
+                "life": 21,
+                "effect": "攻击前:随机敌军受到11点伤害"
+            },
+            {
+                "attack": 33,
+                "life": 22,
+                "effect": "攻击前:随机敌军受到12点伤害"
+            },
+            {
+                "attack": 36,
+                "life": 24,
+                "effect": "攻击前:随机敌军受到13点伤害"
+            },
+            {
+                "attack": 39,
+                "life": 26,
+                "effect": "攻击前:随机敌军受到14点伤害"
+            },
+            {
+                "attack": 42,
+                "life": 28,
+                "effect": "攻击前:随机敌军受到16点伤害"
+            },
+            {
+                "attack": 45,
+                "life": 30,
+                "effect": "攻击前:随机敌军受到18点伤害"
+            }
+        ]
+    },
+    {
+        "id": 445,
+        "name": "贪食之翼",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 4,
+        "type": 1,
+        "img": "/lianyushenyuan/tanshizhiyi.jpg",
+        "grade": "[0]",
+        "tag": "[10]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 6,
+                "effect": "【穿透】、敌方英雄受到伤害:50%几率，自身+1/+1"
+            },
+            {
+                "attack": 1,
+                "life": 8,
+                "effect": "【穿透】、敌方英雄受到伤害:50%几率，自身+1/+1"
+            },
+            {
+                "attack": 1,
+                "life": 10,
+                "effect": "【穿透】、敌方英雄受到伤害:50%几率，自身+1/+1"
+            },
+            {
+                "attack": 1,
+                "life": 13,
+                "effect": "【穿透】、敌方英雄受到伤害:50%几率，自身+1/+2"
+            },
+            {
+                "attack": 2,
+                "life": 14,
+                "effect": "【穿透】、敌方英雄受到伤害:50%几率，自身+1/+2"
+            },
+            {
+                "attack": 3,
+                "life": 16,
+                "effect": "【穿透】、敌方英雄受到伤害:50%几率，自身+1/+2"
+            },
+            {
+                "attack": 4,
+                "life": 18,
+                "effect": "【穿透】、敌方英雄受到伤害:50%几率，自身+2/+2"
+            },
+            {
+                "attack": 5,
+                "life": 20,
+                "effect": "【穿透】、敌方英雄受到伤害:50%几率，自身+2/+2"
+            },
+            {
+                "attack": 6,
+                "life": 22,
+                "effect": "【穿透】、敌方英雄受到伤害:50%几率，自身+2/+3"
+            },
+            {
+                "attack": 7,
+                "life": 25,
+                "effect": "【穿透】、敌方英雄受到伤害:50%几率，自身+2/+3"
+            },
+            {
+                "attack": 8,
+                "life": 28,
+                "effect": "【穿透】、敌方英雄受到伤害:50%几率，自身+3/+3"
+            },
+            {
+                "attack": 9,
+                "life": 31,
+                "effect": "【穿透】、敌方英雄受到伤害:50%几率，自身+3/+3"
+            },
+            {
+                "attack": 10,
+                "life": 34,
+                "effect": "【穿透】、敌方英雄受到伤害:50%几率，自身+3/+4"
+            },
+            {
+                "attack": 11,
+                "life": 37,
+                "effect": "【穿透】、敌方英雄受到伤害:50%几率，自身+3/+5"
+            },
+            {
+                "attack": 12,
+                "life": 40,
+                "effect": "【穿透】、敌方英雄受到伤害:50%几率，自身+3/+5"
+            },
+            {
+                "attack": 13,
+                "life": 43,
+                "effect": "【穿透】、敌方英雄受到伤害:50%几率，自身+3/+6"
+            },
+            {
+                "attack": 14,
+                "life": 46,
+                "effect": "【穿透】、敌方英雄受到伤害:50%几率，自身+3/+6"
+            },
+            {
+                "attack": 15,
+                "life": 50,
+                "effect": "【穿透】、敌方英雄受到伤害:50%几率，自身+4/+6"
+            },
+            {
+                "attack": 16,
+                "life": 55,
+                "effect": "【穿透】、敌方英雄受到伤害:50%几率，自身+4/+7"
+            },
+            {
+                "attack": 17,
+                "life": 60,
+                "effect": "【穿透】、敌方英雄受到伤害:50%几率，自身+4/+8"
+            },
+            {
+                "attack": 18,
+                "life": 66,
+                "effect": "【穿透】、敌方英雄受到伤害:50%几率，自身+4/+10"
+            },
+            {
+                "attack": 20,
+                "life": 70,
+                "effect": "【穿透】、敌方英雄受到伤害:50%几率，自身+5/+10"
+            }
+        ]
+    },
+    {
+        "id": 446,
+        "name": "烈焰风暴",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 4,
+        "type": 2,
+        "img": "/lianyushenyuan/lieyanfengbao.jpg",
+        "grade": "[3]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成2点伤害，对英雄造成3点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成3点伤害，对英雄造成3点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成3点伤害，对英雄造成5点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成4点伤害，对英雄造成5点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成6点伤害，对英雄造成6点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成8点伤害，对英雄造成8点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成10点伤害，对英雄造成10点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成12点伤害，对英雄造成12点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成14点伤害，对英雄造成10点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成16点伤害，对英雄造成16点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成18点伤害，对英雄造成18点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成20点伤害，对英雄造成20点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成23点伤害，对英雄造成23点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成26点伤害，对英雄造成26点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成29点伤害，对英雄造成29点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成32点伤害，对英雄造成32点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成35点伤害，对英雄造成35点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成38点伤害，对英雄造成38点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成41点伤害，对英雄造成41点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成44点伤害，对英雄造成44点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成47点伤害，对英雄造成47点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成50点伤害，对英雄造成50点伤害"
+            }
+        ]
+    },
+    {
+        "id": 447,
+        "name": "恶臭公害",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 4,
+        "type": 1,
+        "img": "/lianyushenyuan/echougonghai.jpg",
+        "grade": "[2]",
+        "tag": "[1]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "【护甲2】、回合开始:英雄受到1点伤害"
+            },
+            {
+                "attack": 4,
+                "life": 5,
+                "effect": "【护甲2】、回合开始:英雄受到1点伤害"
+            },
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "【护甲3】、回合开始:英雄受到1点伤害"
+            },
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "【护甲3】、回合开始:英雄受到1点伤害"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "【护甲4】、回合开始:英雄受到2点伤害"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "【护甲4】、回合开始:英雄受到2点伤害"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "【护甲5】、回合开始:英雄受到2点伤害"
+            },
+            {
+                "attack": 11,
+                "life": 11,
+                "effect": "【护甲5】、回合开始:英雄受到2点伤害"
+            },
+            {
+                "attack": 13,
+                "life": 13,
+                "effect": "【护甲6】、回合开始:英雄受到3点伤害"
+            },
+            {
+                "attack": 14,
+                "life": 16,
+                "effect": "【护甲6】、回合开始:英雄受到3点伤害"
+            },
+            {
+                "attack": 15,
+                "life": 18,
+                "effect": "【护甲7】、回合开始:英雄受到3点伤害"
+            },
+            {
+                "attack": 16,
+                "life": 22,
+                "effect": "【护甲7】、回合开始:英雄受到3点伤害"
+            },
+            {
+                "attack": 18,
+                "life": 24,
+                "effect": "【护甲7】、回合开始:英雄受到3点伤害"
+            },
+            {
+                "attack": 19,
+                "life": 27,
+                "effect": "【护甲8】、回合开始:英雄受到3点伤害"
+            },
+            {
+                "attack": 20,
+                "life": 32,
+                "effect": "【护甲8】、回合开始:英雄受到3点伤害"
+            },
+            {
+                "attack": 22,
+                "life": 33,
+                "effect": "【护甲9】、回合开始:英雄受到3点伤害"
+            },
+            {
+                "attack": 25,
+                "life": 36,
+                "effect": "【护甲9】、回合开始:英雄受到4点伤害"
+            },
+            {
+                "attack": 28,
+                "life": 38,
+                "effect": "【护甲10】、回合开始:英雄受到4点伤害"
+            },
+            {
+                "attack": 31,
+                "life": 41,
+                "effect": "【护甲10】、回合开始:英雄受到4点伤害"
+            },
+            {
+                "attack": 33,
+                "life": 43,
+                "effect": "【护甲11】、回合开始:英雄受到4点伤害"
+            },
+            {
+                "attack": 35,
+                "life": 45,
+                "effect": "【护甲13】、回合开始:英雄受到4点伤害"
+            },
+            {
+                "attack": 40,
+                "life": 50,
+                "effect": "【护甲15】、回合开始:英雄受到5点伤害"
+            }
+        ]
+    },
+    {
+        "id": 448,
+        "name": "肥胖督军",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 4,
+        "type": 1,
+        "img": "/lianyushenyuan/feipangdujun.jpg",
+        "grade": "[1]",
+        "tag": "[5,8]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "【践踏】、登场：全体践踏友军获得【磐龙】1回合"
+            },
+            {
+                "attack": 3,
+                "life": 6,
+                "effect": "【践踏】、登场：全体践踏友军获得【磐龙】1回合"
+            },
+            {
+                "attack": 4,
+                "life": 7,
+                "effect": "【践踏】、登场：全体践踏友军获得【磐龙】1回合"
+            },
+            {
+                "attack": 5,
+                "life": 9,
+                "effect": "【践踏】、登场：全体践踏友军获得【磐龙】1回合"
+            },
+            {
+                "attack": 6,
+                "life": 11,
+                "effect": "【践踏】、登场：全体践踏友军获得【磐龙】1回合"
+            },
+            {
+                "attack": 7,
+                "life": 13,
+                "effect": "【践踏】、登场：全体践踏友军获得【磐龙】1回合"
+            },
+            {
+                "attack": 8,
+                "life": 15,
+                "effect": "【践踏】、登场：全体践踏友军获得【磐龙】1回合"
+            },
+            {
+                "attack": 9,
+                "life": 17,
+                "effect": "【践踏】、登场：全体践踏友军获得【磐龙】1回合"
+            },
+            {
+                "attack": 10,
+                "life": 20,
+                "effect": "【践踏】、登场：全体践踏友军获得【磐龙】1回合"
+            },
+            {
+                "attack": 12,
+                "life": 21,
+                "effect": "【践踏】、登场：全体践踏友军获得【磐龙】1回合"
+            },
+            {
+                "attack": 13,
+                "life": 24,
+                "effect": "【践踏】、登场：全体践踏友军获得【磐龙】1回合"
+            },
+            {
+                "attack": 15,
+                "life": 25,
+                "effect": "【践踏】、登场：全体践踏友军获得【磐龙】1回合"
+            },
+            {
+                "attack": 16,
+                "life": 30,
+                "effect": "【践踏】、登场：全体践踏友军获得【磐龙】1回合"
+            },
+            {
+                "attack": 18,
+                "life": 32,
+                "effect": "【践踏】、登场：全体践踏友军获得【磐龙】1回合"
+            },
+            {
+                "attack": 20,
+                "life": 34,
+                "effect": "【践踏】、登场：全体践踏友军获得【磐龙】1回合"
+            },
+            {
+                "attack": 22,
+                "life": 36,
+                "effect": "【践踏】、登场：全体践踏友军获得【磐龙】1回合"
+            },
+            {
+                "attack": 25,
+                "life": 38,
+                "effect": "【践踏】、登场：全体践踏友军获得【磐龙】1回合"
+            },
+            {
+                "attack": 28,
+                "life": 40,
+                "effect": "【践踏】、登场：全体践踏友军获得【磐龙】1回合"
+            },
+            {
+                "attack": 32,
+                "life": 42,
+                "effect": "【践踏】、登场：全体践踏友军获得【磐龙】1回合"
+            },
+            {
+                "attack": 35,
+                "life": 45,
+                "effect": "【践踏】、登场：全体践踏友军获得【磐龙】1回合"
+            },
+            {
+                "attack": 40,
+                "life": 50,
+                "effect": "【践踏】、登场：全体践踏友军获得【磐龙】1回合"
+            },
+            {
+                "attack": 45,
+                "life": 55,
+                "effect": "【践踏】、登场：全体践踏友军获得【磐龙】1回合"
+            }
+        ]
+    },
+    {
+        "id": 449,
+        "name": "邪鬼草人",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 4,
+        "type": 1,
+        "img": "/lianyushenyuan/xieguicaoren.jpg",
+        "grade": "[1]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 4,
+                "effect": "登场：敌方玩家弃掉一张牌、回合结束：若敌方没有手牌，自身攻击+1"
+            },
+            {
+                "attack": 0,
+                "life": 6,
+                "effect": "登场：敌方玩家弃掉一张牌、回合结束：若敌方没有手牌，自身攻击+1"
+            },
+            {
+                "attack": 0,
+                "life": 7,
+                "effect": "登场：敌方玩家弃掉一张牌、回合结束：若敌方没有手牌，自身攻击+2"
+            },
+            {
+                "attack": 0,
+                "life": 9,
+                "effect": "登场：敌方玩家弃掉一张牌、回合结束：若敌方没有手牌，自身攻击+2"
+            },
+            {
+                "attack": 0,
+                "life": 10,
+                "effect": "登场：敌方玩家弃掉一张牌、回合结束：若敌方没有手牌，自身攻击+3"
+            },
+            {
+                "attack": 0,
+                "life": 12,
+                "effect": "登场：敌方玩家弃掉一张牌、回合结束：若敌方没有手牌，自身攻击+3"
+            },
+            {
+                "attack": 0,
+                "life": 13,
+                "effect": "登场：敌方玩家弃掉一张牌、回合结束：若敌方没有手牌，自身攻击+4"
+            },
+            {
+                "attack": 0,
+                "life": 15,
+                "effect": "登场：敌方玩家弃掉一张牌、回合结束：若敌方没有手牌，自身攻击+4"
+            },
+            {
+                "attack": 0,
+                "life": 16,
+                "effect": "登场：敌方玩家弃掉一张牌、回合结束：若敌方没有手牌，自身攻击+5"
+            },
+            {
+                "attack": 0,
+                "life": 18,
+                "effect": "登场：敌方玩家弃掉一张牌、回合结束：若敌方没有手牌，自身攻击+5"
+            },
+            {
+                "attack": 0,
+                "life": 20,
+                "effect": "登场：敌方玩家弃掉一张牌、回合结束：若敌方没有手牌，自身攻击+6"
+            },
+            {
+                "attack": 0,
+                "life": 22,
+                "effect": "登场：敌方玩家弃掉一张牌、回合结束：若敌方没有手牌，自身攻击+7"
+            },
+            {
+                "attack": 0,
+                "life": 25,
+                "effect": "登场：敌方玩家弃掉一张牌、回合结束：若敌方没有手牌，自身攻击+8"
+            },
+            {
+                "attack": 0,
+                "life": 30,
+                "effect": "登场：敌方玩家弃掉一张牌、回合结束：若敌方没有手牌，自身攻击+9"
+            },
+            {
+                "attack": 0,
+                "life": 36,
+                "effect": "登场：敌方玩家弃掉一张牌、回合结束：若敌方没有手牌，自身攻击+10"
+            },
+            {
+                "attack": 0,
+                "life": 40,
+                "effect": "登场：敌方玩家弃掉一张牌、回合结束：若敌方没有手牌，自身攻击+12"
+            },
+            {
+                "attack": 0,
+                "life": 45,
+                "effect": "登场：敌方玩家弃掉一张牌、回合结束：若敌方没有手牌，自身攻击+13"
+            },
+            {
+                "attack": 0,
+                "life": 50,
+                "effect": "登场：敌方玩家弃掉一张牌、回合结束：若敌方没有手牌，自身攻击+15"
+            },
+            {
+                "attack": 0,
+                "life": 55,
+                "effect": "登场：敌方玩家弃掉一张牌、回合结束：若敌方没有手牌，自身攻击+17"
+            },
+            {
+                "attack": 0,
+                "life": 60,
+                "effect": "登场：敌方玩家弃掉一张牌、回合结束：若敌方没有手牌，自身攻击+20"
+            },
+            {
+                "attack": 0,
+                "life": 66,
+                "effect": "登场：敌方玩家弃掉一张牌、回合结束：若敌方没有手牌，自身攻击+23"
+            },
+            {
+                "attack": 0,
+                "life": 75,
+                "effect": "登场：敌方玩家弃掉一张牌、回合结束：若敌方没有手牌，自身攻击+25"
+            }
+        ]
+    },
+    {
+        "id": 450,
+        "name": "吸魂者",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 4,
+        "type": 1,
+        "img": "/lianyushenyuan/xihunzhe.jpg",
+        "grade": "[1]",
+        "tag": "[2,19]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 6,
+                "effect": "每当一个敌军死亡时:吸取敌方英雄1点生命"
+            },
+            {
+                "attack": 2,
+                "life": 7,
+                "effect": "每当一个敌军死亡时:吸取敌方英雄1点生命"
+            },
+            {
+                "attack": 3,
+                "life": 7,
+                "effect": "每当一个敌军死亡时:吸取敌方英雄2点生命"
+            },
+            {
+                "attack": 4,
+                "life": 9,
+                "effect": "每当一个敌军死亡时:吸取敌方英雄2点生命"
+            },
+            {
+                "attack": 5,
+                "life": 10,
+                "effect": "每当一个敌军死亡时:吸取敌方英雄3点生命"
+            },
+            {
+                "attack": 6,
+                "life": 12,
+                "effect": "每当一个敌军死亡时:吸取敌方英雄3点生命"
+            },
+            {
+                "attack": 7,
+                "life": 15,
+                "effect": "每当一个敌军死亡时:吸取敌方英雄4点生命"
+            },
+            {
+                "attack": 8,
+                "life": 18,
+                "effect": "每当一个敌军死亡时:吸取敌方英雄4点生命"
+            },
+            {
+                "attack": 9,
+                "life": 21,
+                "effect": "每当一个敌军死亡时:吸取敌方英雄5点生命"
+            },
+            {
+                "attack": 10,
+                "life": 25,
+                "effect": "每当一个敌军死亡时:吸取敌方英雄5点生命"
+            },
+            {
+                "attack": 11,
+                "life": 27,
+                "effect": "每当一个敌军死亡时:吸取敌方英雄6点生命"
+            },
+            {
+                "attack": 12,
+                "life": 30,
+                "effect": "每当一个敌军死亡时:吸取敌方英雄6点生命"
+            },
+            {
+                "attack": 13,
+                "life": 33,
+                "effect": "每当一个敌军死亡时:吸取敌方英雄7点生命"
+            },
+            {
+                "attack": 14,
+                "life": 37,
+                "effect": "每当一个敌军死亡时:吸取敌方英雄7点生命"
+            },
+            {
+                "attack": 15,
+                "life": 40,
+                "effect": "每当一个敌军死亡时:吸取敌方英雄8点生命"
+            },
+            {
+                "attack": 17,
+                "life": 46,
+                "effect": "每当一个敌军死亡时:吸取敌方英雄8点生命"
+            },
+            {
+                "attack": 19,
+                "life": 50,
+                "effect": "每当一个敌军死亡时:吸取敌方英雄9点生命"
+            },
+            {
+                "attack": 21,
+                "life": 55,
+                "effect": "每当一个敌军死亡时:吸取敌方英雄9点生命"
+            },
+            {
+                "attack": 23,
+                "life": 59,
+                "effect": "每当一个敌军死亡时:吸取敌方英雄10点生命"
+            },
+            {
+                "attack": 25,
+                "life": 65,
+                "effect": "每当一个敌军死亡时:吸取敌方英雄10点生命"
+            },
+            {
+                "attack": 27,
+                "life": 65,
+                "effect": "每当一个敌军死亡时:吸取敌方英雄11点生命"
+            },
+            {
+                "attack": 30,
+                "life": 70,
+                "effect": "每当一个敌军死亡时:吸取敌方英雄12点生命"
+            }
+        ]
+    },
+    {
+        "id": 451,
+        "name": "符文·入邪魔力",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 4,
+        "type": 2,
+        "img": "/lianyushenyuan/fuwen_ruxiemoli.jpg",
+        "grade": "[3]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：消灭敌方随机符文（等级<=3）、回合开始：随机友军攻击+2，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：消灭敌方随机符文（等级<=4）、回合开始：随机友军攻击+3，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：消灭敌方随机符文（等级<=5）、回合开始：随机友军攻击+4，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：消灭敌方随机符文（等级<=6）、回合开始：随机友军攻击+5，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：消灭敌方随机符文（等级<=7）、回合开始：随机友军攻击+6，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：消灭敌方随机符文（等级<=8）、回合开始：随机友军攻击+7，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：消灭敌方随机符文（等级<=9）、回合开始：随机友军攻击+8，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：消灭敌方随机符文（等级<=10）、回合开始：随机友军攻击+9，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：消灭敌方随机符文（等级<=11）、回合开始：随机友军攻击+10，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：消灭敌方随机符文（等级<=12）、回合开始：随机友军攻击+11，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：消灭敌方随机符文（等级<=13）、回合开始：随机友军攻击+12，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：消灭敌方随机符文（等级<=14）、回合开始：随机友军攻击+13，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：消灭敌方随机符文（等级<=15）、回合开始：随机友军攻击+14，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：消灭敌方随机符文（等级<=16）、回合开始：随机友军攻击+15，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：消灭敌方随机符文（等级<=17）、回合开始：随机友军攻击+16，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：消灭敌方随机符文（等级<=18）、回合开始：随机友军攻击+18，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：消灭敌方随机符文（等级<=19）、回合开始：随机友军攻击+20，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：消灭敌方随机符文（等级<=20）、回合开始：随机友军攻击+22，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：消灭敌方随机符文（等级<=21）、回合开始：随机友军攻击+24，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：消灭敌方随机符文（等级<=22）、回合开始：随机友军攻击+26，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：消灭敌方随机符文（等级<=23）、回合开始：随机友军攻击+28，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：消灭敌方随机符文（等级<=24）、回合开始：随机友军攻击+30，持续1回合"
+            }
+        ]
+    },
+    {
+        "id": 452,
+        "name": "无面屠夫",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 5,
+        "type": 1,
+        "img": "/lianyushenyuan/wumiantufu.jpg",
+        "grade": "[1]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 2,
+                "life": 5,
+                "effect": "登场:横排所有敌军受到2点伤害"
+            },
+            {
+                "attack": 2,
+                "life": 8,
+                "effect": "登场:横排所有敌军受到2点伤害"
+            },
+            {
+                "attack": 3,
+                "life": 9,
+                "effect": "登场:横排所有敌军受到3点伤害"
+            },
+            {
+                "attack": 3,
+                "life": 12,
+                "effect": "登场:横排所有敌军受到3点伤害"
+            },
+            {
+                "attack": 4,
+                "life": 14,
+                "effect": "登场:横排所有敌军受到4点伤害"
+            },
+            {
+                "attack": 4,
+                "life": 18,
+                "effect": "登场:横排所有敌军受到4点伤害"
+            },
+            {
+                "attack": 5,
+                "life": 20,
+                "effect": "登场:横排所有敌军受到5点伤害"
+            },
+            {
+                "attack": 6,
+                "life": 22,
+                "effect": "登场:横排所有敌军受到6点伤害"
+            },
+            {
+                "attack": 7,
+                "life": 24,
+                "effect": "登场:横排所有敌军受到7点伤害"
+            },
+            {
+                "attack": 8,
+                "life": 26,
+                "effect": "登场:横排所有敌军受到8点伤害"
+            },
+            {
+                "attack": 8,
+                "life": 30,
+                "effect": "登场:横排所有敌军受到8点伤害"
+            },
+            {
+                "attack": 9,
+                "life": 32,
+                "effect": "登场:横排所有敌军受到9点伤害"
+            },
+            {
+                "attack": 9,
+                "life": 36,
+                "effect": "登场:横排所有敌军受到9点伤害"
+            },
+            {
+                "attack": 10,
+                "life": 40,
+                "effect": "登场:横排所有敌军受到10点伤害"
+            },
+            {
+                "attack": 10,
+                "life": 45,
+                "effect": "登场:横排所有敌军受到10点伤害"
+            },
+            {
+                "attack": 11,
+                "life": 51,
+                "effect": "登场:横排所有敌军受到11点伤害"
+            },
+            {
+                "attack": 12,
+                "life": 58,
+                "effect": "登场:横排所有敌军受到12点伤害"
+            },
+            {
+                "attack": 13,
+                "life": 65,
+                "effect": "登场:横排所有敌军受到13点伤害"
+            },
+            {
+                "attack": 15,
+                "life": 67,
+                "effect": "登场:横排所有敌军受到15点伤害"
+            },
+            {
+                "attack": 17,
+                "life": 70,
+                "effect": "登场:横排所有敌军受到17点伤害"
+            },
+            {
+                "attack": 19,
+                "life": 75,
+                "effect": "登场:横排所有敌军受到19点伤害"
+            },
+            {
+                "attack": 21,
+                "life": 80,
+                "effect": "登场:横排所有敌军受到21点伤害"
+            }
+        ]
+    },
+    {
+        "id": 453,
+        "name": "传记·火弹",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 1,
+        "type": 3,
+        "img": "/lianyushenyuan/zhuanji_huodan.jpg",
+        "grade": "[0]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射1点伤害，获得【传记·炎弹】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射2点伤害，获得【传记·炎弹】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射3点伤害，获得【传记·炎弹】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射4点伤害，获得【传记·炎弹】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射5点伤害，获得【传记·炎弹】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射6点伤害，获得【传记·炎弹】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射7点伤害，获得【传记·炎弹】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射8点伤害，获得【传记·炎弹】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射9点伤害，获得【传记·炎弹】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射10点伤害，获得【传记·炎弹】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射11点伤害，获得【传记·炎弹】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射12点伤害，获得【传记·炎弹】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射13点伤害，获得【传记·炎弹】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射14点伤害，获得【传记·炎弹】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射15点伤害，获得【传记·炎弹】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射16点伤害，获得【传记·炎弹】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射18点伤害，获得【传记·炎弹】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射20点伤害，获得【传记·炎弹】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射22点伤害，获得【传记·炎弹】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射24点伤害，获得【传记·炎弹】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射27点伤害，获得【传记·炎弹】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射30点伤害，获得【传记·炎弹】"
+            }
+        ]
+    },
+    {
+        "id": 454,
+        "name": "传记·炎弹",
+        "zhenyin": 5,
+        "quality": 2,
+        "cost": 1,
+        "type": 3,
+        "img": "/lianyushenyuan/zhuanji_yandan.jpg",
+        "grade": "[0]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射1点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射2点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射3点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射4点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射5点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射6点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射7点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射8点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射9点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射10点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射11点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射12点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射13点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射14点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射15点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射16点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射18点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射20点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射22点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射24点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射27点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射30点伤害"
+            }
+        ]
+    },
+    {
+        "id": 455,
+        "name": "碎颅魔",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 2,
+        "type": 1,
+        "img": "/lianyushenyuan/suilumo.jpg",
+        "grade": "[4]",
+        "tag": "[5]",
+        "data": [
+            {
+                "attack": 5,
+                "life": 6,
+                "effect": "【践踏】、登场:英雄生命-3"
+            },
+            {
+                "attack": 6,
+                "life": 7,
+                "effect": "【践踏】、登场:英雄生命-3"
+            },
+            {
+                "attack": 7,
+                "life": 8,
+                "effect": "【践踏】、登场:英雄生命-4"
+            },
+            {
+                "attack": 8,
+                "life": 9,
+                "effect": "【践踏】、登场:英雄生命-4"
+            },
+            {
+                "attack": 9,
+                "life": 10,
+                "effect": "【践踏】、登场:英雄生命-5"
+            },
+            {
+                "attack": 10,
+                "life": 12,
+                "effect": "【践踏】、登场:英雄生命-6"
+            },
+            {
+                "attack": 11,
+                "life": 14,
+                "effect": "【践踏】、登场:英雄生命-7"
+            },
+            {
+                "attack": 12,
+                "life": 16,
+                "effect": "【践踏】、登场:英雄生命-8"
+            },
+            {
+                "attack": 13,
+                "life": 18,
+                "effect": "【践踏】、登场:英雄生命-9"
+            },
+            {
+                "attack": 14,
+                "life": 20,
+                "effect": "【践踏】、登场:英雄生命-10"
+            },
+            {
+                "attack": 15,
+                "life": 22,
+                "effect": "【践踏】、登场:英雄生命-11"
+            },
+            {
+                "attack": 16,
+                "life": 24,
+                "effect": "【践踏】、登场:英雄生命-12"
+            },
+            {
+                "attack": 18,
+                "life": 26,
+                "effect": "【践踏】、登场:英雄生命-13"
+            },
+            {
+                "attack": 20,
+                "life": 28,
+                "effect": "【践踏】、登场:英雄生命-14"
+            },
+            {
+                "attack": 22,
+                "life": 30,
+                "effect": "【践踏】、登场:英雄生命-15"
+            },
+            {
+                "attack": 24,
+                "life": 32,
+                "effect": "【践踏】、登场:英雄生命-16"
+            },
+            {
+                "attack": 26,
+                "life": 35,
+                "effect": "【践踏】、登场:英雄生命-17"
+            },
+            {
+                "attack": 28,
+                "life": 38,
+                "effect": "【践踏】、登场:英雄生命-18"
+            },
+            {
+                "attack": 30,
+                "life": 41,
+                "effect": "【践踏】、登场:英雄生命-19"
+            },
+            {
+                "attack": 32,
+                "life": 44,
+                "effect": "【践踏】、登场:英雄生命-20"
+            },
+            {
+                "attack": 35,
+                "life": 47,
+                "effect": "【践踏】、登场:英雄生命-21"
+            },
+            {
+                "attack": 38,
+                "life": 50,
+                "effect": "【践踏】、登场:英雄生命-22"
+            }
+        ]
+    },
+    {
+        "id": 456,
+        "name": "觅食大嘴兽",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 2,
+        "type": 1,
+        "img": "/lianyushenyuan/mishidazuishou.jpg",
+        "grade": "[3]",
+        "tag": "[5]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 4,
+                "effect": "【践踏】、敌方英雄受到伤害自身攻击+1"
+            },
+            {
+                "attack": 1,
+                "life": 6,
+                "effect": "【践踏】、敌方英雄受到伤害自身攻击+1"
+            },
+            {
+                "attack": 2,
+                "life": 7,
+                "effect": "【践踏】、敌方英雄受到伤害自身攻击+1"
+            },
+            {
+                "attack": 2,
+                "life": 9,
+                "effect": "【践踏】、敌方英雄受到伤害自身攻击+1"
+            },
+            {
+                "attack": 3,
+                "life": 10,
+                "effect": "【践踏】、敌方英雄受到伤害自身攻击+1"
+            },
+            {
+                "attack": 4,
+                "life": 12,
+                "effect": "【践踏】、敌方英雄受到伤害自身攻击+1"
+            },
+            {
+                "attack": 5,
+                "life": 14,
+                "effect": "【践踏】、敌方英雄受到伤害自身攻击+1"
+            },
+            {
+                "attack": 6,
+                "life": 16,
+                "effect": "【践踏】、敌方英雄受到伤害自身攻击+1"
+            },
+            {
+                "attack": 7,
+                "life": 18,
+                "effect": "【践踏】、敌方英雄受到伤害自身攻击+1"
+            },
+            {
+                "attack": 8,
+                "life": 18,
+                "effect": "【践踏】、敌方英雄受到伤害自身+1/+1"
+            },
+            {
+                "attack": 9,
+                "life": 20,
+                "effect": "【践踏】、敌方英雄受到伤害自身+1/+1"
+            },
+            {
+                "attack": 10,
+                "life": 22,
+                "effect": "【践踏】、敌方英雄受到伤害自身+1/+1"
+            },
+            {
+                "attack": 11,
+                "life": 25,
+                "effect": "【践踏】、敌方英雄受到伤害自身+1/+1"
+            },
+            {
+                "attack": 12,
+                "life": 28,
+                "effect": "【践踏】、敌方英雄受到伤害自身+1/+1"
+            },
+            {
+                "attack": 13,
+                "life": 30,
+                "effect": "【践踏】、敌方英雄受到伤害自身+1/+1"
+            },
+            {
+                "attack": 14,
+                "life": 33,
+                "effect": "【践踏】、敌方英雄受到伤害自身+1/+1"
+            },
+            {
+                "attack": 15,
+                "life": 35,
+                "effect": "【践踏】、敌方英雄受到伤害自身+1/+1"
+            },
+            {
+                "attack": 17,
+                "life": 37,
+                "effect": "【践踏】、敌方英雄受到伤害自身+1/+1"
+            },
+            {
+                "attack": 18,
+                "life": 42,
+                "effect": "【践踏】、敌方英雄受到伤害自身+1/+1"
+            },
+            {
+                "attack": 21,
+                "life": 46,
+                "effect": "【践踏】、敌方英雄受到伤害自身+1/+1"
+            },
+            {
+                "attack": 21,
+                "life": 47,
+                "effect": "【践踏】、敌方英雄受到伤害自身+2/+1"
+            },
+            {
+                "attack": 24,
+                "life": 50,
+                "effect": "【践踏】、敌方英雄受到伤害自身+2/+1"
+            }
+        ]
+    },
+    {
+        "id": 457,
+        "name": "苦痛守望者",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 2,
+        "type": 1,
+        "img": "/lianyushenyuan/kutongshouwangzhe.jpg",
+        "grade": "[1]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 2,
+                "life": 3,
+                "effect": "回合结束:自身+2/+3，敌方每有一张手牌，再-1/-1"
+            },
+            {
+                "attack": 3,
+                "life": 5,
+                "effect": "回合结束:自身+2/+3，敌方每有一张手牌，再-1/-1"
+            },
+            {
+                "attack": 3,
+                "life": 5,
+                "effect": "回合结束:自身+3/+3，敌方每有一张手牌，再-1/-1"
+            },
+            {
+                "attack": 3,
+                "life": 7,
+                "effect": "回合结束:自身+3/+3，敌方每有一张手牌，再-1/-1"
+            },
+            {
+                "attack": 4,
+                "life": 9,
+                "effect": "回合结束:自身+3/+3，敌方每有一张手牌，再-1/-1"
+            },
+            {
+                "attack": 5,
+                "life": 10,
+                "effect": "回合结束:自身+3/+3，敌方每有一张手牌，再-1/-1"
+            },
+            {
+                "attack": 5,
+                "life": 11,
+                "effect": "回合结束:自身+4/+4，敌方每有一张手牌，再-1/-1"
+            },
+            {
+                "attack": 6,
+                "life": 11,
+                "effect": "回合结束:自身+4/+4，敌方每有一张手牌，再-1/-1"
+            },
+            {
+                "attack": 7,
+                "life": 13,
+                "effect": "回合结束:自身+4/+4，敌方每有一张手牌，再-1/-1"
+            },
+            {
+                "attack": 8,
+                "life": 15,
+                "effect": "回合结束:自身+4/+4，敌方每有一张手牌，再-1/-1"
+            },
+            {
+                "attack": 8,
+                "life": 17,
+                "effect": "回合结束:自身+5/+5，敌方每有一张手牌，再-1/-1"
+            },
+            {
+                "attack": 9,
+                "life": 19,
+                "effect": "回合结束:自身+5/+5，敌方每有一张手牌，再-1/-1"
+            },
+            {
+                "attack": 10,
+                "life": 21,
+                "effect": "回合结束:自身+5/+5，敌方每有一张手牌，再-1/-1"
+            },
+            {
+                "attack": 10,
+                "life": 24,
+                "effect": "回合结束:自身+6/+6，敌方每有一张手牌，再-1/-1"
+            },
+            {
+                "attack": 11,
+                "life": 27,
+                "effect": "回合结束:自身+6/+6，敌方每有一张手牌，再-1/-1"
+            },
+            {
+                "attack": 12,
+                "life": 30,
+                "effect": "回合结束:自身+6/+6，敌方每有一张手牌，再-1/-1"
+            },
+            {
+                "attack": 12,
+                "life": 33,
+                "effect": "回合结束:自身+7/+7，敌方每有一张手牌，再-1/-1"
+            },
+            {
+                "attack": 13,
+                "life": 36,
+                "effect": "回合结束:自身+7/+7，敌方每有一张手牌，再-1/-1"
+            },
+            {
+                "attack": 14,
+                "life": 39,
+                "effect": "回合结束:自身+8/+8，敌方每有一张手牌，再-1/-1"
+            },
+            {
+                "attack": 16,
+                "life": 42,
+                "effect": "回合结束:自身+8/+8，敌方每有一张手牌，再-1/-1"
+            },
+            {
+                "attack": 18,
+                "life": 45,
+                "effect": "回合结束:自身+9/+9，敌方每有一张手牌，再-1/-1"
+            },
+            {
+                "attack": 20,
+                "life": 48,
+                "effect": "回合结束:自身+9/+9，敌方每有一张手牌，再-1/-1"
+            }
+        ]
+    },
+    {
+        "id": 458,
+        "name": "渴血毒甲蝎",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 2,
+        "type": 1,
+        "img": "/lianyushenyuan/kexuedujiaxie.jpg",
+        "grade": "[2]",
+        "tag": "[1]",
+        "data": [
+            {
+                "attack": 1,
+                "life": 3,
+                "effect": "【护甲1】、对英雄伤害+1、敌方英雄受到伤害时：自身生命+1"
+            },
+            {
+                "attack": 2,
+                "life": 3,
+                "effect": "【护甲1】、对英雄伤害+1、敌方英雄受到伤害时：自身生命+1"
+            },
+            {
+                "attack": 2,
+                "life": 3,
+                "effect": "【护甲2】、对英雄伤害+1、敌方英雄受到伤害时：自身生命+1"
+            },
+            {
+                "attack": 2,
+                "life": 4,
+                "effect": "【护甲2】、对英雄伤害+2、敌方英雄受到伤害时：自身生命+1"
+            },
+            {
+                "attack": 3,
+                "life": 5,
+                "effect": "【护甲2】、对英雄伤害+2、敌方英雄受到伤害时：自身生命+1"
+            },
+            {
+                "attack": 4,
+                "life": 6,
+                "effect": "【护甲2】、对英雄伤害+2、敌方英雄受到伤害时：自身生命+1"
+            },
+            {
+                "attack": 5,
+                "life": 7,
+                "effect": "【护甲3】、对英雄伤害+2、敌方英雄受到伤害时：自身生命+1"
+            },
+            {
+                "attack": 5,
+                "life": 9,
+                "effect": "【护甲3】、对英雄伤害+3、敌方英雄受到伤害时：自身生命+1"
+            },
+            {
+                "attack": 6,
+                "life": 10,
+                "effect": "【护甲3】、对英雄伤害+3、敌方英雄受到伤害时：自身生命+1"
+            },
+            {
+                "attack": 7,
+                "life": 11,
+                "effect": "【护甲4】、对英雄伤害+3、敌方英雄受到伤害时：自身生命+1"
+            },
+            {
+                "attack": 8,
+                "life": 13,
+                "effect": "【护甲4】、对英雄伤害+3、敌方英雄受到伤害时：自身生命+1"
+            },
+            {
+                "attack": 9,
+                "life": 14,
+                "effect": "【护甲4】、对英雄伤害+4、敌方英雄受到伤害时：自身生命+1"
+            },
+            {
+                "attack": 11,
+                "life": 14,
+                "effect": "【护甲5】、对英雄伤害+4、敌方英雄受到伤害时：自身生命+1"
+            },
+            {
+                "attack": 13,
+                "life": 15,
+                "effect": "【护甲5】、对英雄伤害+5、敌方英雄受到伤害时：自身生命+1"
+            },
+            {
+                "attack": 15,
+                "life": 16,
+                "effect": "【护甲6】、对英雄伤害+5、敌方英雄受到伤害时：自身生命+1"
+            },
+            {
+                "attack": 16,
+                "life": 19,
+                "effect": "【护甲6】、对英雄伤害+6、敌方英雄受到伤害时：自身生命+1"
+            },
+            {
+                "attack": 18,
+                "life": 21,
+                "effect": "【护甲7】、对英雄伤害+6、敌方英雄受到伤害时：自身生命+1"
+            },
+            {
+                "attack": 20,
+                "life": 22,
+                "effect": "【护甲7】、对英雄伤害+7、敌方英雄受到伤害时：自身生命+2"
+            },
+            {
+                "attack": 22,
+                "life": 24,
+                "effect": "【护甲8】、对英雄伤害+7、敌方英雄受到伤害时：自身生命+2"
+            },
+            {
+                "attack": 24,
+                "life": 28,
+                "effect": "【护甲8】、对英雄伤害+8、敌方英雄受到伤害时：自身生命+2"
+            },
+            {
+                "attack": 27,
+                "life": 30,
+                "effect": "【护甲8】、对英雄伤害+9、敌方英雄受到伤害时：自身生命+3"
+            },
+            {
+                "attack": 30,
+                "life": 35,
+                "effect": "【护甲8】、对英雄伤害+10、敌方英雄受到伤害时：自身生命+3"
+            }
+        ]
+    },
+    {
+        "id": 459,
+        "name": "厌咒食尸犬",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 2,
+        "type": 1,
+        "img": "/lianyushenyuan/yanzhoushishiquan.jpg",
+        "grade": "[4]",
+        "tag": "[21]",
+        "data": [
+            {
+                "attack": 2,
+                "life": 2,
+                "effect": "【魔防2】、每当一个生物死亡时:自身+1/+1"
+            },
+            {
+                "attack": 3,
+                "life": 3,
+                "effect": "【魔防3】、每当一个生物死亡时:自身+1/+1"
+            },
+            {
+                "attack": 4,
+                "life": 3,
+                "effect": "【魔防4】、每当一个生物死亡时:自身+1/+1"
+            },
+            {
+                "attack": 5,
+                "life": 4,
+                "effect": "【魔防5】、每当一个生物死亡时:自身+1/+1"
+            },
+            {
+                "attack": 6,
+                "life": 5,
+                "effect": "【魔防6】、每当一个生物死亡时:自身+1/+1，魔防+1"
+            },
+            {
+                "attack": 7,
+                "life": 6,
+                "effect": "【魔防7】、每当一个生物死亡时:自身+1/+1，魔防+1"
+            },
+            {
+                "attack": 8,
+                "life": 7,
+                "effect": "【魔防8】、每当一个生物死亡时:自身+1/+2，魔防+1"
+            },
+            {
+                "attack": 9,
+                "life": 10,
+                "effect": "【魔防9】、每当一个生物死亡时:自身+1/+2，魔防+1"
+            },
+            {
+                "attack": 11,
+                "life": 11,
+                "effect": "【魔防11】、每当一个生物死亡时:自身+1/+2，魔防+1"
+            },
+            {
+                "attack": 12,
+                "life": 13,
+                "effect": "【魔防12】、每当一个生物死亡时:自身+1/+2，魔防+1"
+            },
+            {
+                "attack": 14,
+                "life": 14,
+                "effect": "【魔防14】、每当一个生物死亡时:自身+1/+2，魔防+1"
+            },
+            {
+                "attack": 15,
+                "life": 16,
+                "effect": "【魔防15】、每当一个生物死亡时:自身+1/+2，魔防+2"
+            },
+            {
+                "attack": 17,
+                "life": 17,
+                "effect": "【魔防17】、每当一个生物死亡时:自身+1/+2，魔防+2"
+            },
+            {
+                "attack": 18,
+                "life": 19,
+                "effect": "【魔防18】、每当一个生物死亡时:自身+1/+2，魔防+2"
+            },
+            {
+                "attack": 20,
+                "life": 20,
+                "effect": "【魔防20】、每当一个生物死亡时:自身+2/+2，魔防+2"
+            },
+            {
+                "attack": 22,
+                "life": 22,
+                "effect": "【魔防22】、每当一个生物死亡时:自身+2/+2，魔防+2"
+            },
+            {
+                "attack": 24,
+                "life": 24,
+                "effect": "【魔防23】、每当一个生物死亡时:自身+2/+2，魔防+2"
+            },
+            {
+                "attack": 26,
+                "life": 26,
+                "effect": "【魔防25】、每当一个生物死亡时:自身+2/+2，魔防+2"
+            },
+            {
+                "attack": 28,
+                "life": 28,
+                "effect": "【魔防26】、每当一个生物死亡时:自身+2/+2，魔防+2"
+            },
+            {
+                "attack": 30,
+                "life": 30,
+                "effect": "【魔防29】、每当一个生物死亡时:自身+2/+2，魔防+2"
+            },
+            {
+                "attack": 32,
+                "life": 32,
+                "effect": "【魔防33】、每当一个生物死亡时:自身+3/+3，魔防+2"
+            },
+            {
+                "attack": 35,
+                "life": 35,
+                "effect": "【魔防35】、每当一个生物死亡时:自身+3/+3，魔防+3"
+            }
+        ]
+    },
+    {
+        "id": 460,
+        "name": "狱铠战魂",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 3,
+        "type": 1,
+        "img": "/lianyushenyuan/yukaizhanhun.jpg",
+        "grade": "[2]",
+        "tag": "[1,3]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 1,
+                "effect": "【护甲3】"
+            },
+            {
+                "attack": 3,
+                "life": 1,
+                "effect": "【护甲4】"
+            },
+            {
+                "attack": 4,
+                "life": 1,
+                "effect": "【护甲5】"
+            },
+            {
+                "attack": 5,
+                "life": 2,
+                "effect": "【护甲6】"
+            },
+            {
+                "attack": 6,
+                "life": 2,
+                "effect": "【护甲7】"
+            },
+            {
+                "attack": 7,
+                "life": 2,
+                "effect": "【护甲8】"
+            },
+            {
+                "attack": 8,
+                "life": 2,
+                "effect": "【洞察1】、【护甲9】"
+            },
+            {
+                "attack": 9,
+                "life": 3,
+                "effect": "【洞察1】、【护甲10】"
+            },
+            {
+                "attack": 10,
+                "life": 3,
+                "effect": "【洞察1】、【护甲11】"
+            },
+            {
+                "attack": 11,
+                "life": 3,
+                "effect": "【洞察1】、【护甲12】"
+            },
+            {
+                "attack": 12,
+                "life": 3,
+                "effect": "【洞察1】、【护甲13】"
+            },
+            {
+                "attack": 13,
+                "life": 4,
+                "effect": "【洞察1】、【护甲14】"
+            },
+            {
+                "attack": 14,
+                "life": 5,
+                "effect": "【洞察1】、【护甲16】"
+            },
+            {
+                "attack": 15,
+                "life": 6,
+                "effect": "【洞察1】、【护甲18】"
+            },
+            {
+                "attack": 16,
+                "life": 7,
+                "effect": "【洞察1】、【护甲20】"
+            },
+            {
+                "attack": 18,
+                "life": 8,
+                "effect": "【洞察1】、【护甲22】"
+            },
+            {
+                "attack": 20,
+                "life": 9,
+                "effect": "【洞察1】、【护甲24】"
+            },
+            {
+                "attack": 22,
+                "life": 10,
+                "effect": "【洞察1】、【护甲26】"
+            },
+            {
+                "attack": 24,
+                "life": 11,
+                "effect": "【洞察1】、【护甲28】"
+            },
+            {
+                "attack": 26,
+                "life": 12,
+                "effect": "【洞察1】、【护甲30】"
+            },
+            {
+                "attack": 28,
+                "life": 13,
+                "effect": "【洞察1】、【护甲32】"
+            },
+            {
+                "attack": 30,
+                "life": 13,
+                "effect": "【洞察1】、【护甲35】"
+            }
+        ]
+    },
+    {
+        "id": 461,
+        "name": "绝望镰魔",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 3,
+        "type": 1,
+        "img": "/lianyushenyuan/juewanglianmo.jpg",
+        "grade": "[4]",
+        "tag": "[7]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "双方玩家无法获得生命、攻击前:若你无手牌，自身+1/+1"
+            },
+            {
+                "attack": 4,
+                "life": 4,
+                "effect": "双方玩家无法获得生命、攻击前:若你无手牌，自身+1/+1"
+            },
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "双方玩家无法获得生命、攻击前:若你无手牌，自身+1/+2"
+            },
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "双方玩家无法获得生命、攻击前:若你无手牌，自身+1/+2"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "双方玩家无法获得生命、攻击前:若你无手牌，自身+1/+2"
+            },
+            {
+                "attack": 8,
+                "life": 9,
+                "effect": "双方玩家无法获得生命、攻击前:若你无手牌，自身+2/+2"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "双方玩家无法获得生命、攻击前:若你无手牌，自身+2/+2"
+            },
+            {
+                "attack": 12,
+                "life": 12,
+                "effect": "双方玩家无法获得生命、攻击前:若你无手牌，自身+2/+2"
+            },
+            {
+                "attack": 14,
+                "life": 14,
+                "effect": "双方玩家无法获得生命、攻击前:若你无手牌，自身+3/+3"
+            },
+            {
+                "attack": 16,
+                "life": 16,
+                "effect": "双方玩家无法获得生命、攻击前:若你无手牌，自身+3/+3"
+            },
+            {
+                "attack": 18,
+                "life": 18,
+                "effect": "双方玩家无法获得生命、攻击前:若你无手牌，自身+3/+4"
+            },
+            {
+                "attack": 20,
+                "life": 20,
+                "effect": "双方玩家无法获得生命、攻击前:若你无手牌，自身+4/+4"
+            },
+            {
+                "attack": 22,
+                "life": 22,
+                "effect": "双方玩家无法获得生命、攻击前:若你无手牌，自身+4/+4"
+            },
+            {
+                "attack": 24,
+                "life": 24,
+                "effect": "双方玩家无法获得生命、攻击前:若你无手牌，自身+5/+5"
+            },
+            {
+                "attack": 26,
+                "life": 26,
+                "effect": "双方玩家无法获得生命、攻击前:若你无手牌，自身+5/+5"
+            },
+            {
+                "attack": 28,
+                "life": 28,
+                "effect": "双方玩家无法获得生命、攻击前:若你无手牌，自身+6/+6"
+            },
+            {
+                "attack": 31,
+                "life": 31,
+                "effect": "双方玩家无法获得生命、攻击前:若你无手牌，自身+6/+6"
+            },
+            {
+                "attack": 34,
+                "life": 34,
+                "effect": "双方玩家无法获得生命、攻击前:若你无手牌，自身+7/+7"
+            },
+            {
+                "attack": 37,
+                "life": 37,
+                "effect": "双方玩家无法获得生命、攻击前:若你无手牌，自身+7/+7"
+            },
+            {
+                "attack": 40,
+                "life": 40,
+                "effect": "双方玩家无法获得生命、攻击前:若你无手牌，自身+8/+8"
+            },
+            {
+                "attack": 43,
+                "life": 43,
+                "effect": "双方玩家无法获得生命、攻击前:若你无手牌，自身+9/+9"
+            },
+            {
+                "attack": 46,
+                "life": 46,
+                "effect": "双方玩家无法获得生命、攻击前:若你无手牌，自身+10/+10"
+            }
+        ]
+    },
+    {
+        "id": 462,
+        "name": "岩浆球",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 3,
+        "type": 2,
+        "img": "/lianyushenyuan/yanjiangqiu.jpg",
+        "grade": "[3]",
+        "tag": "[7]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射7点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射9点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射11点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射13点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射15点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排，投射18点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始阶段，敌方禁疗1回合、向敌方横排，投射20点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始阶段，敌方禁疗1回合、向敌方横排，投射23点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始阶段，敌方禁疗1回合、向敌方横排，投射26点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始阶段，敌方禁疗1回合、向敌方横排，投射30点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始阶段，敌方禁疗1回合、向敌方横排，投射35点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始阶段，敌方禁疗1回合、向敌方横排，投射40点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始阶段，敌方禁疗1回合、向敌方横排，投射44点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始阶段，敌方禁疗1回合、向敌方横排，投射48点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始阶段，敌方禁疗1回合、向敌方横排，投射52点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始阶段，敌方禁疗1回合、向敌方横排，投射56点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始阶段，敌方禁疗1回合、向敌方横排，投射60点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始阶段，敌方禁疗1回合、向敌方横排，投射65点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始阶段，敌方禁疗1回合、向敌方横排，投射69点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始阶段，敌方禁疗1回合、向敌方横排，投射73点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始阶段，敌方禁疗1回合、向敌方横排，投射77点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始阶段，敌方禁疗1回合、向敌方横排，投射82点伤害"
+            }
+        ]
+    },
+    {
+        "id": 463,
+        "name": "铸甲熔岩魔",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 3,
+        "type": 1,
+        "img": "/lianyushenyuan/zhujiarongyanmo.jpg",
+        "grade": "[4]",
+        "tag": "[1,5]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "【护甲1】、回合开始：全体有践踏的友军攻击+1，获得【护甲1】"
+            },
+            {
+                "attack": 3,
+                "life": 6,
+                "effect": "【护甲1】、回合开始：全体有践踏的友军攻击+1，获得【护甲1】"
+            },
+            {
+                "attack": 3,
+                "life": 8,
+                "effect": "【护甲1】、回合开始：全体有践踏的友军攻击+1，获得【护甲1】"
+            },
+            {
+                "attack": 4,
+                "life": 8,
+                "effect": "【护甲2】、回合开始：全体有践踏的友军+1/+1，获得【护甲1】"
+            },
+            {
+                "attack": 4,
+                "life": 10,
+                "effect": "【护甲2】、回合开始：全体有践踏的友军+1/+1，获得【护甲1】"
+            },
+            {
+                "attack": 5,
+                "life": 12,
+                "effect": "【护甲2】、回合开始：全体有践踏的友军+1/+2，获得【护甲1】"
+            },
+            {
+                "attack": 6,
+                "life": 13,
+                "effect": "【护甲3】、回合开始：全体有践踏的友军+1/+2，获得【护甲1】"
+            },
+            {
+                "attack": 7,
+                "life": 14,
+                "effect": "【护甲3】、回合开始：全体有践踏的友军+2/+2，获得【护甲1】"
+            },
+            {
+                "attack": 8,
+                "life": 15,
+                "effect": "【护甲4】、回合开始：全体有践踏的友军+2/+2，获得【护甲1】"
+            },
+            {
+                "attack": 9,
+                "life": 17,
+                "effect": "【护甲4】、回合开始：全体有践踏的友军+2/+3，获得【护甲1】"
+            },
+            {
+                "attack": 11,
+                "life": 17,
+                "effect": "【护甲5】、回合开始：全体有践踏的友军+2/+3，获得【护甲1】"
+            },
+            {
+                "attack": 13,
+                "life": 19,
+                "effect": "【护甲5】、回合开始：全体有践踏的友军+2/+4，获得【护甲1】"
+            },
+            {
+                "attack": 15,
+                "life": 22,
+                "effect": "【护甲6】、回合开始：全体有践踏的友军+2/+4，获得【护甲1】"
+            },
+            {
+                "attack": 17,
+                "life": 23,
+                "effect": "【护甲6】、回合开始：全体有践踏的友军+2/+4，获得【护甲2】"
+            },
+            {
+                "attack": 19,
+                "life": 25,
+                "effect": "【护甲6】、回合开始：全体有践踏的友军+2/+5，获得【护甲2】"
+            },
+            {
+                "attack": 21,
+                "life": 29,
+                "effect": "【护甲7】、回合开始：全体有践踏的友军+2/+5，获得【护甲2】"
+            },
+            {
+                "attack": 23,
+                "life": 32,
+                "effect": "【护甲7】、回合开始：全体有践踏的友军+3/+5，获得【护甲2】"
+            },
+            {
+                "attack": 25,
+                "life": 35,
+                "effect": "【护甲8】、回合开始：全体有践踏的友军+3/+5，获得【护甲2】"
+            },
+            {
+                "attack": 27,
+                "life": 37,
+                "effect": "【护甲9】、回合开始：全体有践踏的友军+3/+6，获得【护甲2】"
+            },
+            {
+                "attack": 30,
+                "life": 40,
+                "effect": "【护甲10】、回合开始：全体有践踏的友军+3/+6，获得【护甲2】"
+            },
+            {
+                "attack": 33,
+                "life": 45,
+                "effect": "【护甲11】、回合开始：全体有践踏的友军+4/+6，获得【护甲2】"
+            },
+            {
+                "attack": 36,
+                "life": 50,
+                "effect": "【护甲12】、回合开始：全体有践踏的友军+4/+6，获得【护甲3】"
+            }
+        ]
+    },
+    {
+        "id": 464,
+        "name": "爆燃突袭",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 3,
+        "type": 2,
+        "img": "/lianyushenyuan/baorantuxi.jpg",
+        "grade": "[3]",
+        "tag": "[5,23]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体敌军和玩家受到1点伤害，召唤3/1爆燃邪鬼-lv1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体敌军和玩家受到1点伤害，召唤3/3爆燃邪鬼-lv2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体敌军和玩家受到1点伤害，召唤4/3爆燃邪鬼-lv3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体敌军和玩家受到1点伤害，召唤5/3爆燃邪鬼-lv4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体敌军和玩家受到2点伤害，召唤6/3爆燃邪鬼-lv5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体敌军和玩家受到2点伤害，召唤7/3爆燃邪鬼-lv6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体敌军和玩家受到2点伤害，召唤7/5爆燃邪鬼-lv7"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体敌军和玩家受到2点伤害，召唤8/6爆燃邪鬼-lv8"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体敌军和玩家受到2点伤害，召唤9/7爆燃邪鬼-lv9"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体敌军和玩家受到3点伤害，召唤10/8爆燃邪鬼-lv10"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体敌军和玩家受到3点伤害，召唤12/9爆燃邪鬼-lv11"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体敌军和玩家受到3点伤害，召唤13/11爆燃邪鬼-lv12"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体敌军和玩家受到3点伤害，召唤15/12爆燃邪鬼-lv13"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体敌军和玩家受到3点伤害，召唤16/14爆燃邪鬼-lv14"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体敌军和玩家受到4点伤害，召唤18/15爆燃邪鬼-lv15"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体敌军和玩家受到4点伤害，召唤20/16爆燃邪鬼-lv16"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体敌军和玩家受到4点伤害，召唤22/17爆燃邪鬼-lv17"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体敌军和玩家受到4点伤害，召唤25/18爆燃邪鬼-lv18"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体敌军和玩家受到4点伤害，召唤28/20爆燃邪鬼-lv19"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体敌军和玩家受到5点伤害，召唤30/24爆燃邪鬼-lv20"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体敌军和玩家受到6点伤害，召唤33/26爆燃邪鬼-lv21"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全体敌军和玩家受到7点伤害，召唤36/28爆燃邪鬼-lv22"
+            }
+        ]
+    },
+    {
+        "id": 465,
+        "name": "魔鬼盛宴",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 3,
+        "type": 2,
+        "img": "/lianyushenyuan/moguishengyan.jpg",
+        "grade": "[0]",
+        "tag": "[24]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤2个1/1红海使魔-lv1（4费）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤2个2/1红海使魔-lv2（4费）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤3个2/1红海使魔-lv2（4费）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤3个2/2红海使魔-lv3（4费）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤3个2/2红海使魔-lv3，你的英雄生命-3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤3个3/2红海使魔-lv4，你的英雄生命-4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤3个3/3红海使魔-lv5，你的英雄生命-5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤3个4/3红海使魔-lv6，你的英雄生命-6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤3个5/3红海使魔-lv7，你的英雄生命-7"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤3个5/4红海使魔-lv8，你的英雄生命-8"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤3个6/4红海使魔-lv9，你的英雄生命-9"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤3个7/4红海使魔-lv10，你的英雄生命-10"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤3个8/5红海使魔-lv11，你的英雄生命-11"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤3个9/6红海使魔-lv12，你的英雄生命-12"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤3个10/7红海使魔-lv13，你的英雄生命-13"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤3个11/8红海使魔-lv14，你的英雄生命-13"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤3个12/9红海使魔-lv15，你的英雄生命-13"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤3个13/10红海使魔-lv16，你的英雄生命-13"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤3个14/11红海使魔-lv17，你的英雄生命-13"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤3个15/12红海使魔-lv18，你的英雄生命-13"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤3个17/14红海使魔-lv20，你的英雄生命-14"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合结束:召唤3个21/16红海使魔-lv22，你的英雄生命-15"
+            }
+        ]
+    },
+    {
+        "id": 466,
+        "name": "破卵而出",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 3,
+        "type": 2,
+        "img": "/lianyushenyuan/poluanerchu.jpg",
+        "grade": "[6]",
+        "tag": "[1,19,24]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤2个2/2毒液甲虫-lv1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤2个2/4毒液甲虫-lv2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤2个3/4毒液甲虫-lv3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤2个4/5毒液甲虫-lv4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤2个5/5毒液甲虫-lv5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤2个6/6毒液甲虫-lv6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤2个7/7毒液甲虫-lv7"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤9/8毒液甲虫-lv8和7/7毒液甲虫-lv7"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤2个9/8毒液甲虫-lv8"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤2个10/10毒液甲虫-lv9"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤2个11/12毒液甲虫-lv10"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤13/13毒液甲虫-lv11和11/12毒液甲虫-lv10"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤2个13/13毒液甲虫-lv11"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤2个14/15毒液甲虫-lv12"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤2个16/16毒液甲虫-lv13"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤2个18/18毒液甲虫-lv14"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤2个20/20毒液甲虫-lv15"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤2个22/22毒液甲虫-lv16"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤2个24/24毒液甲虫-lv17"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤2个26/26毒液甲虫-lv18"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤30/30毒液甲虫-lv20和28/28毒液甲虫-lv19"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤2个32/32毒液甲虫-lv21"
+            }
+        ]
+    },
+    {
+        "id": 467,
+        "name": "符文·致命甲壳",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 3,
+        "type": 4,
+        "img": "/lianyushenyuan/fuwen_zhimingjiake.jpg",
+        "grade": "[6]",
+        "tag": "[1,5,19]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤3/2腐化甲蛾-lv1、回合开始：2个护甲友军攻击+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤4/2腐化甲蛾-lv2、回合开始：2个护甲友军攻击+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤5/3腐化甲蛾-lv3、回合开始：2个护甲友军攻击+1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤6/4腐化甲蛾-lv4、回合开始：2个护甲友军攻击+1，获得【践踏】1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤7/4腐化甲蛾-lv5、回合开始：2个护甲友军攻击+1，获得【践踏】1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤8/5腐化甲蛾-lv6、回合开始：2个护甲友军攻击+2，获得【践踏】1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤9/6腐化甲蛾-lv7、回合开始：2个护甲友军攻击+2，获得【践踏】1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤10/7腐化甲蛾-lv8、回合开始：2个护甲友军攻击+2，获得【践踏】1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤11/8腐化甲蛾-lv9、回合开始：2个护甲友军攻击+2，获得【践踏】1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤12/8腐化甲蛾-lv10、回合开始：2个护甲友军攻击+3，获得【践踏】1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤14/9腐化甲蛾-lv11、回合开始：2个护甲友军攻击+3，获得【践踏】1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤16/10腐化甲蛾-lv12、回合开始：2个护甲友军攻击+3，获得【践踏】1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤18/11腐化甲蛾-lv13、回合开始：2个护甲友军攻击+3，获得【践踏】1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤20/12腐化甲蛾-lv14、回合开始：2个护甲友军攻击+4，获得【践踏】1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤22/12腐化甲蛾-lv15、回合开始：2个护甲友军攻击+4，获得【践踏】1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤24/13腐化甲蛾-lv16、回合开始：2个护甲友军攻击+4，获得【践踏】1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤26/14腐化甲蛾-lv17、回合开始：2个护甲友军攻击+4，获得【践踏】1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤28/15腐化甲蛾-lv18、回合开始：2个护甲友军攻击+5，获得【践踏】1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤30/16腐化甲蛾-lv19、回合开始：2个护甲友军攻击+5，获得【践踏】1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤32/16腐化甲蛾-lv20、回合开始：2个护甲友军攻击+5，获得【践踏】1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤35/17腐化甲蛾-lv21、回合开始：2个护甲友军攻击+5，获得【践踏】1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场：召唤38/18腐化甲蛾-lv22、回合开始：2个护甲友军攻击+6，获得【践踏】1回合"
+            }
+        ]
+    },
+    {
+        "id": 468,
+        "name": "符文·熔岩喷射",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 3,
+        "type": 4,
+        "img": "/lianyushenyuan/fuwen_rongyanpenshe.jpg",
+        "grade": "[4]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：横排投射火球(3点伤害)，无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：横排投射火球(4点伤害)，无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：横排投射火球(5点伤害)，无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：横排投射火球(6点伤害)，无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：横排投射火球(7点伤害)，无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：横排投射火球(8点伤害)，无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：横排投射火球(9点伤害)，无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：横排投射火球(10点伤害)，无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：横排投射火球(11点伤害)，无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：横排投射火球(12点伤害)，无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：横排投射火球(13点伤害)，无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：横排投射火球(14点伤害)，无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：横排投射火球(15点伤害)，无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：横排投射火球(17点伤害)，无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：横排投射火球(19点伤害)，无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：横排投射火球(21点伤害)，无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：横排投射火球(23点伤害)，无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：横排投射火球(25点伤害)，无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：横排投射火球(27点伤害)，无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：横排投射火球(29点伤害)，无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：横排投射火球(31点伤害)，无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：横排投射火球(33点伤害)，无视神佑和魔免"
+            }
+        ]
+    },
+    {
+        "id": 469,
+        "name": "血炎鬼魅",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 4,
+        "type": 1,
+        "img": "/lianyushenyuan/xueyanguimei.jpg",
+        "grade": "[1]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 2,
+                "effect": "回合结束:对手弃掉一张牌，若其无手牌，则敌军受到3点伤害"
+            },
+            {
+                "attack": 4,
+                "life": 2,
+                "effect": "回合结束:对手弃掉一张牌，若其无手牌，则敌军受到4点伤害"
+            },
+            {
+                "attack": 5,
+                "life": 2,
+                "effect": "回合结束:对手弃掉一张牌，若其无手牌，则敌军受到5点伤害"
+            },
+            {
+                "attack": 6,
+                "life": 3,
+                "effect": "回合结束:对手弃掉一张牌，若其无手牌，则敌军受到6点伤害"
+            },
+            {
+                "attack": 7,
+                "life": 4,
+                "effect": "回合结束:对手弃掉一张牌，若其无手牌，则敌军受到7点伤害"
+            },
+            {
+                "attack": 8,
+                "life": 5,
+                "effect": "回合结束:对手弃掉一张牌，若其无手牌，则敌军受到8点伤害"
+            },
+            {
+                "attack": 9,
+                "life": 6,
+                "effect": "回合结束:对手弃掉一张牌，若其无手牌，则敌军受到9点伤害"
+            },
+            {
+                "attack": 10,
+                "life": 7,
+                "effect": "回合结束:对手弃掉一张牌，若其无手牌，则敌军受到10点伤害"
+            },
+            {
+                "attack": 11,
+                "life": 8,
+                "effect": "回合结束:对手弃掉一张牌，若其无手牌，则敌军受到11点伤害"
+            },
+            {
+                "attack": 12,
+                "life": 10,
+                "effect": "回合结束:对手弃掉一张牌，若其无手牌，则敌军受到12点伤害"
+            },
+            {
+                "attack": 13,
+                "life": 12,
+                "effect": "回合结束:对手弃掉一张牌，若其无手牌，则敌军受到13点伤害"
+            },
+            {
+                "attack": 15,
+                "life": 12,
+                "effect": "回合结束:对手弃掉一张牌，若其无手牌，则敌军受到15点伤害"
+            },
+            {
+                "attack": 16,
+                "life": 14,
+                "effect": "回合结束:对手弃掉一张牌，若其无手牌，则敌军受到16点伤害"
+            },
+            {
+                "attack": 18,
+                "life": 15,
+                "effect": "回合结束:对手弃掉一张牌，若其无手牌，则敌军受到18点伤害"
+            },
+            {
+                "attack": 20,
+                "life": 16,
+                "effect": "回合结束:对手弃掉一张牌，若其无手牌，则敌军受到20点伤害"
+            },
+            {
+                "attack": 22,
+                "life": 18,
+                "effect": "回合结束:对手弃掉一张牌，若其无手牌，则敌军受到22点伤害"
+            },
+            {
+                "attack": 25,
+                "life": 19,
+                "effect": "回合结束:对手弃掉一张牌，若其无手牌，则敌军受到25点伤害"
+            },
+            {
+                "attack": 28,
+                "life": 20,
+                "effect": "回合结束:对手弃掉一张牌，若其无手牌，则敌军受到28点伤害"
+            },
+            {
+                "attack": 30,
+                "life": 22,
+                "effect": "回合结束:对手弃掉一张牌，若其无手牌，则敌军受到30点伤害"
+            },
+            {
+                "attack": 33,
+                "life": 23,
+                "effect": "回合结束:对手弃掉一张牌，若其无手牌，则敌军受到33点伤害"
+            },
+            {
+                "attack": 36,
+                "life": 24,
+                "effect": "回合结束:对手弃掉一张牌，若其无手牌，则敌军受到36点伤害"
+            },
+            {
+                "attack": 39,
+                "life": 25,
+                "effect": "回合结束:对手弃掉一张牌，若其无手牌，则敌军受到39点伤害"
+            }
+        ]
+    },
+    {
+        "id": 470,
+        "name": "嗜血破面",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 4,
+        "type": 1,
+        "img": "/lianyushenyuan/shixuepomian.jpg",
+        "grade": "[3]",
+        "tag": "[5]",
+        "data": [
+            {
+                "attack": 5,
+                "life": 4,
+                "effect": "【践踏】、命中英雄:自身+1/+1"
+            },
+            {
+                "attack": 6,
+                "life": 5,
+                "effect": "【践踏】、命中英雄:自身+1/+1"
+            },
+            {
+                "attack": 7,
+                "life": 6,
+                "effect": "【践踏】、命中英雄:自身+1/+2"
+            },
+            {
+                "attack": 8,
+                "life": 7,
+                "effect": "【践踏】、命中英雄:自身+1/+2"
+            },
+            {
+                "attack": 9,
+                "life": 8,
+                "effect": "【践踏】、命中英雄:自身+1/+2"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "【践踏】、命中英雄:自身+1/+2"
+            },
+            {
+                "attack": 12,
+                "life": 12,
+                "effect": "【践踏】、命中英雄:自身+2/+2"
+            },
+            {
+                "attack": 14,
+                "life": 14,
+                "effect": "【践踏】、命中英雄:自身+2/+2"
+            },
+            {
+                "attack": 16,
+                "life": 16,
+                "effect": "【践踏】、命中英雄:自身+2/+3"
+            },
+            {
+                "attack": 18,
+                "life": 18,
+                "effect": "【践踏】、命中英雄:自身+2/+3"
+            },
+            {
+                "attack": 20,
+                "life": 20,
+                "effect": "【践踏】、命中英雄:自身+3/+3"
+            },
+            {
+                "attack": 22,
+                "life": 22,
+                "effect": "【践踏】、命中英雄:自身+3/+3"
+            },
+            {
+                "attack": 25,
+                "life": 25,
+                "effect": "【践踏】、命中英雄:自身+3/+3"
+            },
+            {
+                "attack": 28,
+                "life": 28,
+                "effect": "【践踏】、命中英雄:自身+4/+4"
+            },
+            {
+                "attack": 32,
+                "life": 32,
+                "effect": "【践踏】、命中英雄:自身+4/+4"
+            },
+            {
+                "attack": 35,
+                "life": 35,
+                "effect": "【践踏】、命中英雄:自身+4/+4"
+            },
+            {
+                "attack": 38,
+                "life": 38,
+                "effect": "【践踏】、命中英雄:自身+4/+4"
+            },
+            {
+                "attack": 41,
+                "life": 41,
+                "effect": "【践踏】、命中英雄:自身+5/+5"
+            },
+            {
+                "attack": 44,
+                "life": 44,
+                "effect": "【践踏】、命中英雄:自身+5/+5"
+            },
+            {
+                "attack": 47,
+                "life": 47,
+                "effect": "【践踏】、命中英雄:自身+5/+5"
+            },
+            {
+                "attack": 51,
+                "life": 51,
+                "effect": "【践踏】、命中英雄:自身+6/+6"
+            },
+            {
+                "attack": 55,
+                "life": 55,
+                "effect": "【践踏】、命中英雄:自身+6/+6"
+            }
+        ]
+    },
+    {
+        "id": 471,
+        "name": "夺魂诅咒",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 4,
+        "type": 2,
+        "img": "/lianyushenyuan/duohunzuzhou.jpg",
+        "grade": "[3]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军受到3点伤害，对手弃掉1张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军受到5点伤害，对手弃掉1张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军受到7点伤害，对手弃掉1张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军受到9点伤害，对手弃掉1张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军受到11点伤害，对手弃掉1张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军受到12点伤害，对手弃掉1张牌，若无手牌，英雄也受到伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军受到14点伤害，对手弃掉1张牌，若无手牌，英雄也受到伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军受到16点伤害，对手弃掉1张牌，若无手牌，英雄也受到伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军受到18点伤害，对手弃掉1张牌，若无手牌，英雄也受到伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军受到21点伤害，对手弃掉1张牌，若无手牌，英雄也受到伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军受到23点伤害，对手弃掉1张牌，若无手牌，英雄也受到伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军受到25点伤害，对手弃掉1张牌，若无手牌，英雄也受到伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军受到27点伤害，对手弃掉1张牌，若无手牌，英雄也受到伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军受到30点伤害，对手弃掉1张牌，若无手牌，英雄也受到伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军受到33点伤害，对手弃掉1张牌，若无手牌，英雄也受到伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军受到36点伤害，对手弃掉1张牌，若无手牌，英雄也受到伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军受到40点伤害，对手弃掉1张牌，若无手牌，英雄也受到伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军受到44点伤害，对手弃掉1张牌，若无手牌，英雄也受到伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军受到48点伤害，对手弃掉1张牌，若无手牌，英雄也受到伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军受到52点伤害，对手弃掉1张牌，若无手牌，英雄也受到伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军受到56点伤害，对手弃掉1张牌，若无手牌，英雄也受到伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军受到60点伤害，对手弃掉1张牌，若无手牌，英雄也受到伤害"
+            }
+        ]
+    },
+    {
+        "id": 472,
+        "name": "鲜血督军",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 4,
+        "type": 1,
+        "img": "/lianyushenyuan/xianxuedujun.jpg",
+        "grade": "[3]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 2,
+                "life": 1,
+                "effect": "登场:相邻随机一个友军，攻击加倍！(帝国、禅意友军无效)"
+            },
+            {
+                "attack": 3,
+                "life": 1,
+                "effect": "登场:相邻随机一个友军，攻击加倍！(帝国、禅意友军无效)"
+            },
+            {
+                "attack": 4,
+                "life": 2,
+                "effect": "登场:相邻随机一个友军，攻击加倍！(帝国、禅意友军无效)"
+            },
+            {
+                "attack": 6,
+                "life": 3,
+                "effect": "登场:相邻随机一个友军，攻击加倍！(帝国、禅意友军无效)"
+            },
+            {
+                "attack": 8,
+                "life": 3,
+                "effect": "登场:相邻随机一个友军，攻击加倍！(帝国、禅意友军无效)"
+            },
+            {
+                "attack": 10,
+                "life": 4,
+                "effect": "登场:相邻随机一个友军，攻击加倍！(帝国、禅意友军无效)"
+            },
+            {
+                "attack": 12,
+                "life": 5,
+                "effect": "登场:相邻随机一个友军，攻击加倍！(帝国、禅意友军无效)"
+            },
+            {
+                "attack": 14,
+                "life": 6,
+                "effect": "登场:相邻随机一个友军，攻击加倍！(帝国、禅意友军无效)"
+            },
+            {
+                "attack": 16,
+                "life": 7,
+                "effect": "登场:相邻随机一个友军，攻击加倍！(帝国、禅意友军无效)"
+            },
+            {
+                "attack": 18,
+                "life": 8,
+                "effect": "登场:相邻随机一个友军，攻击加倍！(帝国、禅意友军无效)"
+            },
+            {
+                "attack": 20,
+                "life": 9,
+                "effect": "登场:相邻随机一个友军，攻击加倍！(帝国、禅意友军无效)"
+            },
+            {
+                "attack": 22,
+                "life": 10,
+                "effect": "登场:相邻随机一个友军，攻击加倍！(帝国、禅意友军无效)"
+            },
+            {
+                "attack": 25,
+                "life": 11,
+                "effect": "登场:相邻随机一个友军，攻击加倍！(帝国、禅意友军无效)"
+            },
+            {
+                "attack": 28,
+                "life": 12,
+                "effect": "登场:相邻随机一个友军，攻击加倍！(帝国、禅意友军无效)"
+            },
+            {
+                "attack": 30,
+                "life": 14,
+                "effect": "登场:相邻随机一个友军，攻击加倍！(帝国、禅意友军无效)"
+            },
+            {
+                "attack": 33,
+                "life": 18,
+                "effect": "登场:相邻随机一个友军，攻击加倍！(帝国、禅意友军无效)"
+            },
+            {
+                "attack": 36,
+                "life": 21,
+                "effect": "登场:相邻随机一个友军，攻击加倍！(帝国、禅意友军无效)"
+            },
+            {
+                "attack": 39,
+                "life": 24,
+                "effect": "登场:相邻随机一个友军，攻击加倍！(帝国、禅意友军无效)"
+            },
+            {
+                "attack": 43,
+                "life": 27,
+                "effect": "登场:相邻随机一个友军，攻击加倍！(帝国、禅意友军无效)"
+            },
+            {
+                "attack": 47,
+                "life": 30,
+                "effect": "登场:相邻随机一个友军，攻击加倍！(帝国、禅意友军无效)"
+            },
+            {
+                "attack": 51,
+                "life": 33,
+                "effect": "登场:相邻随机一个友军，攻击加倍！(帝国、禅意友军无效)"
+            },
+            {
+                "attack": 55,
+                "life": 36,
+                "effect": "登场:相邻随机一个友军，攻击加倍！(帝国、禅意友军无效)"
+            }
+        ]
+    },
+    {
+        "id": 473,
+        "name": "熔岩术士",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 4,
+        "type": 1,
+        "img": "/lianyushenyuan/rongyanshushi.jpg",
+        "grade": "[2]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "回合开始:向对面横排投射火球(3点伤害)"
+            },
+            {
+                "attack": 4,
+                "life": 5,
+                "effect": "回合开始:向对面横排投射火球(4点伤害)"
+            },
+            {
+                "attack": 5,
+                "life": 6,
+                "effect": "回合开始:向对面横排投射火球(5点伤害)"
+            },
+            {
+                "attack": 6,
+                "life": 7,
+                "effect": "回合开始:向对面横排投射火球(6点伤害)"
+            },
+            {
+                "attack": 7,
+                "life": 8,
+                "effect": "回合开始:向对面横排投射火球(7点伤害)"
+            },
+            {
+                "attack": 8,
+                "life": 9,
+                "effect": "回合开始:向对面横排投射火球(8点伤害)"
+            },
+            {
+                "attack": 9,
+                "life": 10,
+                "effect": "回合开始:向对面横排投射火球(9点伤害)"
+            },
+            {
+                "attack": 10,
+                "life": 12,
+                "effect": "回合开始:向对面横排投射火球(10点伤害)"
+            },
+            {
+                "attack": 11,
+                "life": 14,
+                "effect": "回合开始:向对面横排投射火球(11点伤害)"
+            },
+            {
+                "attack": 12,
+                "life": 16,
+                "effect": "回合开始:向对面横排投射火球(12点伤害)"
+            },
+            {
+                "attack": 13,
+                "life": 18,
+                "effect": "回合开始:向对面横排投射火球(13点伤害)"
+            },
+            {
+                "attack": 15,
+                "life": 20,
+                "effect": "回合开始:向对面横排投射火球(15点伤害)"
+            },
+            {
+                "attack": 17,
+                "life": 22,
+                "effect": "回合开始:向对面横排投射火球(17点伤害)"
+            },
+            {
+                "attack": 19,
+                "life": 24,
+                "effect": "回合开始:向对面横排投射火球(19点伤害)"
+            },
+            {
+                "attack": 21,
+                "life": 26,
+                "effect": "回合开始:向对面横排投射火球(21点伤害)"
+            },
+            {
+                "attack": 23,
+                "life": 28,
+                "effect": "回合开始:向对面横排投射火球(23点伤害)"
+            },
+            {
+                "attack": 26,
+                "life": 30,
+                "effect": "回合开始:向对面横排投射火球(26点伤害)"
+            },
+            {
+                "attack": 29,
+                "life": 32,
+                "effect": "回合开始:向对面横排投射火球(29点伤害)"
+            },
+            {
+                "attack": 31,
+                "life": 34,
+                "effect": "回合开始:向对面横排投射火球(31点伤害)"
+            },
+            {
+                "attack": 34,
+                "life": 36,
+                "effect": "回合开始:向对面横排投射火球(34点伤害)"
+            },
+            {
+                "attack": 37,
+                "life": 38,
+                "effect": "回合开始:向对面横排投射火球(37点伤害)"
+            },
+            {
+                "attack": 40,
+                "life": 40,
+                "effect": "回合开始:向对面横排投射火球(40点伤害)"
+            }
+        ]
+    },
+    {
+        "id": 474,
+        "name": "灼神双炎",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 4,
+        "type": 2,
+        "img": "/lianyushenyuan/zhuoshenshuangyan.jpg",
+        "grade": "[5]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射3点伤害，两次"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射4点伤害，两次"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射5点伤害，两次"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射6点伤害，两次"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射6点伤害，两次（无视【神佑】和【魔免】）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射7点伤害，两次（无视【神佑】和【魔免】）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射8点伤害，两次（无视【神佑】和【魔免】）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射9点伤害，两次（无视【神佑】和【魔免】）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射10点伤害，两次（无视【神佑】和【魔免】）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射12点伤害，两次（无视【神佑】和【魔免】）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射14点伤害，两次（无视【神佑】和【魔免】）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射16点伤害，两次（无视【神佑】和【魔免】）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射19点伤害，两次（无视【神佑】和【魔免】）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射22点伤害，两次（无视【神佑】和【魔免】）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射25点伤害，两次（无视【神佑】和【魔免】）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射28点伤害，两次（无视【神佑】和【魔免】）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射31点伤害，两次（无视【神佑】和【魔免】）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射35点伤害，两次（无视【神佑】和【魔免】）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射38点伤害，两次（无视【神佑】和【魔免】）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射42点伤害，两次（无视【神佑】和【魔免】）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射46点伤害，两次（无视【神佑】和【魔免】）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "向敌方横排投射50点伤害，两次（无视【神佑】和【魔免】）"
+            }
+        ]
+    },
+    {
+        "id": 475,
+        "name": "凶恶蟹魔",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 4,
+        "type": 1,
+        "img": "/lianyushenyuan/xiongexiemo.jpg",
+        "grade": "[3]",
+        "tag": "[1,5]",
+        "data": [
+            {
+                "attack": 3,
+                "life": 4,
+                "effect": "【护甲3】、【践踏】、攻击前:场上每有一个护甲友军:自身+1/+1"
+            },
+            {
+                "attack": 4,
+                "life": 6,
+                "effect": "【护甲3】、【践踏】、攻击前:场上每有一个护甲友军:自身+1/+1"
+            },
+            {
+                "attack": 5,
+                "life": 6,
+                "effect": "【护甲4】、【践踏】、攻击前:场上每有一个护甲友军:自身+1/+1"
+            },
+            {
+                "attack": 6,
+                "life": 8,
+                "effect": "【护甲4】、【践踏】、攻击前:场上每有一个护甲友军:自身+1/+1"
+            },
+            {
+                "attack": 7,
+                "life": 9,
+                "effect": "【护甲5】、【践踏】、攻击前:场上每有一个护甲友军:自身+1/+1"
+            },
+            {
+                "attack": 8,
+                "life": 11,
+                "effect": "【护甲5】、【践踏】、攻击前:场上每有一个护甲友军:自身+1/+1"
+            },
+            {
+                "attack": 9,
+                "life": 12,
+                "effect": "【护甲6】、【践踏】、攻击前:场上每有一个护甲友军:自身+1/+1"
+            },
+            {
+                "attack": 10,
+                "life": 14,
+                "effect": "【护甲6】、【践踏】、攻击前:场上每有一个护甲友军:自身+1/+1"
+            },
+            {
+                "attack": 11,
+                "life": 15,
+                "effect": "【护甲7】、【践踏】、攻击前:场上每有一个护甲友军:自身+1/+1"
+            },
+            {
+                "attack": 11,
+                "life": 15,
+                "effect": "【护甲7】、【践踏】、攻击前:场上每有一个护甲友军:自身+2/+1"
+            },
+            {
+                "attack": 13,
+                "life": 17,
+                "effect": "【护甲7】、【践踏】、攻击前:场上每有一个护甲友军:自身+2/+1"
+            },
+            {
+                "attack": 15,
+                "life": 18,
+                "effect": "【护甲8】、【践踏】、攻击前:场上每有一个护甲友军:自身+2/+1"
+            },
+            {
+                "attack": 17,
+                "life": 21,
+                "effect": "【护甲8】、【践踏】、攻击前:场上每有一个护甲友军:自身+2/+1"
+            },
+            {
+                "attack": 19,
+                "life": 23,
+                "effect": "【护甲9】、【践踏】、攻击前:场上每有一个护甲友军:自身+2/+1"
+            },
+            {
+                "attack": 21,
+                "life": 27,
+                "effect": "【护甲9】、【践踏】、攻击前:场上每有一个护甲友军:自身+2/+2"
+            },
+            {
+                "attack": 23,
+                "life": 30,
+                "effect": "【护甲10】、【践踏】、攻击前:场上每有一个护甲友军:自身+2/+2"
+            },
+            {
+                "attack": 25,
+                "life": 35,
+                "effect": "【护甲10】、【践踏】、攻击前:场上每有一个护甲友军:自身+2/+2"
+            },
+            {
+                "attack": 27,
+                "life": 40,
+                "effect": "【护甲11】、【践踏】、攻击前:场上每有一个护甲友军:自身+2/+2"
+            },
+            {
+                "attack": 30,
+                "life": 45,
+                "effect": "【护甲11】、【践踏】、攻击前:场上每有一个护甲友军:自身+2/+2"
+            },
+            {
+                "attack": 32,
+                "life": 50,
+                "effect": "【护甲12】、【践踏】、攻击前:场上每有一个护甲友军:自身+2/+2"
+            },
+            {
+                "attack": 36,
+                "life": 54,
+                "effect": "【护甲13】、【践踏】、攻击前:场上每有一个护甲友军:自身+2/+3"
+            },
+            {
+                "attack": 40,
+                "life": 60,
+                "effect": "【护甲14】、【践踏】、攻击前:场上每有一个护甲友军:自身+2/+3"
+            }
+        ]
+    },
+    {
+        "id": 476,
+        "name": "邪恶献祭",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 4,
+        "type": 2,
+        "img": "/lianyushenyuan/xieexianji.jpg",
+        "grade": "[3]",
+        "tag": "[25]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "牺牲目标友军，相邻1个友军+4/+4，抽2张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "牺牲目标友军，相邻1个友军+6/+6，抽2张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "牺牲目标友军，相邻1个友军+8/+8，抽2张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "牺牲目标友军，相邻1个友军+10/+10，抽2张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "牺牲目标友军，相邻1个友军+12/+12，抽2张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "牺牲目标友军，相邻1个友军+14/+14，抽2张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "牺牲目标友军，相邻1个友军+16/+16，抽2张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "牺牲目标友军，相邻1个友军+18/+18，抽2张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "牺牲目标友军，相邻1个友军+20/+20，抽2张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "牺牲目标友军，相邻1个友军+22/+22，抽2张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "牺牲目标友军，相邻1个友军+24/+24，抽2张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "牺牲目标友军，相邻1个友军+26/+26，抽2张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "牺牲目标友军，相邻1个友军+28/+28，抽2张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "牺牲目标友军，相邻1个友军+30/+30，抽2张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "牺牲目标友军，相邻1个友军+32/+32，抽2张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "牺牲目标友军，相邻1个友军+34/+34，抽2张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "牺牲目标友军，相邻1个友军+36/+36，抽2张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "牺牲目标友军，相邻1个友军+39/+39，抽2张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "牺牲目标友军，相邻1个友军+42/+42，抽2张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "牺牲目标友军，相邻1个友军+45/+45，抽2张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "牺牲目标友军，相邻1个友军+48/+48，抽2张牌"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "牺牲目标友军，相邻1个友军+51/+51，抽2张牌"
+            }
+        ]
+    },
+    {
+        "id": 477,
+        "name": "符文·嗜血恶兽",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 4,
+        "type": 4,
+        "img": "/lianyushenyuan/fuwen_shixueeshou.jpg",
+        "grade": "[3]",
+        "tag": "[5,24]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：召唤38/22渴血兽魔-lv1（上限2次）、回合开始：2个践踏友军攻击+2，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：召唤38/22渴血兽魔-lv1（上限2次）、回合开始：2个践踏友军攻击+3，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：召唤38/22渴血兽魔-lv1（上限2次）、回合开始：3个践踏友军攻击+3，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：召唤38/22渴血兽魔-lv2（上限2次）、回合开始：3个践踏友军攻击+3，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：召唤38/22渴血兽魔-lv3（上限2次）、回合开始：3个践踏友军攻击+3，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：召唤38/22渴血兽魔-lv4（上限2次）、回合开始：3个践踏友军攻击+4，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：召唤38/22渴血兽魔-lv5（上限2次）、回合开始：3个践踏友军攻击+4，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：召唤38/22渴血兽魔-lv6（上限2次）、回合开始：3个践踏友军攻击+5，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：召唤38/22渴血兽魔-lv7（上限2次）、回合开始：3个践踏友军攻击+5，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：召唤38/22渴血兽魔-lv8（上限2次）、回合开始：3个践踏友军攻击+6，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：召唤38/22渴血兽魔-lv9（上限2次）、回合开始：3个践踏友军攻击+6，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：召唤38/22渴血兽魔-lv10（上限2次）、回合开始：3个践踏友军攻击+7，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：召唤38/22渴血兽魔-lv11（上限2次）、回合开始：3个践踏友军攻击+7，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：召唤38/22渴血兽魔-lv12（上限2次）、回合开始：3个践踏友军攻击+8，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：召唤38/22渴血兽魔-lv13（上限2次）、回合开始：3个践踏友军攻击+8，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：召唤38/22渴血兽魔-lv14（上限2次）、回合开始：3个践踏友军攻击+9，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：召唤38/22渴血兽魔-lv15（上限2次）、回合开始：3个践踏友军攻击+9，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：召唤38/22渴血兽魔-lv16（上限2次）、回合开始：3个践踏友军攻击+10，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：召唤38/22渴血兽魔-lv17（上限2次）、回合开始：3个践踏友军攻击+10，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：召唤38/22渴血兽魔-lv18（上限2次）、回合开始：3个践踏友军攻击+11，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：召唤38/22渴血兽魔-lv19（上限2次）、回合开始：3个践踏友军攻击+11，持续1回合"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：召唤38/22渴血兽魔-lv20（上限2次）、回合开始：3个践踏友军攻击+12，持续1回合"
+            }
+        ]
+    },
+    {
+        "id": 478,
+        "name": "炼狱屠夫",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 5,
+        "type": 1,
+        "img": "/lianyushenyuan/diyutufu.jpg",
+        "grade": "[2]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 5,
+                "life": 5,
+                "effect": "登场:随机消灭一个敌军、死亡:对手抓一张牌"
+            },
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "登场:随机消灭一个敌军、死亡:对手抓一张牌"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "登场:随机消灭一个敌军、死亡:对手抓一张牌"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "登场:随机消灭一个敌军、死亡:对手抓一张牌"
+            },
+            {
+                "attack": 9,
+                "life": 10,
+                "effect": "登场:随机消灭一个敌军、死亡:对手抓一张牌"
+            },
+            {
+                "attack": 10,
+                "life": 12,
+                "effect": "登场:随机消灭一个敌军、死亡:对手抓一张牌"
+            },
+            {
+                "attack": 11,
+                "life": 14,
+                "effect": "登场:随机消灭一个敌军、死亡:对手抓一张牌"
+            },
+            {
+                "attack": 12,
+                "life": 16,
+                "effect": "登场:随机消灭一个敌军、死亡:对手抓一张牌"
+            },
+            {
+                "attack": 13,
+                "life": 18,
+                "effect": "登场:随机消灭一个敌军、死亡:对手抓一张牌"
+            },
+            {
+                "attack": 15,
+                "life": 21,
+                "effect": "登场:随机消灭一个敌军、死亡:对手抓一张牌"
+            },
+            {
+                "attack": 16,
+                "life": 25,
+                "effect": "登场:随机消灭一个敌军、死亡:对手抓一张牌"
+            },
+            {
+                "attack": 17,
+                "life": 30,
+                "effect": "登场:随机消灭一个敌军、死亡:对手抓一张牌"
+            },
+            {
+                "attack": 18,
+                "life": 33,
+                "effect": "登场:随机消灭一个敌军、死亡:对手抓一张牌"
+            },
+            {
+                "attack": 20,
+                "life": 36,
+                "effect": "登场:随机消灭一个敌军、死亡:对手抓一张牌"
+            },
+            {
+                "attack": 22,
+                "life": 40,
+                "effect": "登场:随机消灭一个敌军、死亡:对手抓一张牌"
+            },
+            {
+                "attack": 25,
+                "life": 44,
+                "effect": "登场:随机消灭一个敌军、死亡:对手抓一张牌"
+            },
+            {
+                "attack": 28,
+                "life": 48,
+                "effect": "登场:随机消灭一个敌军、死亡:对手抓一张牌"
+            },
+            {
+                "attack": 32,
+                "life": 52,
+                "effect": "登场:随机消灭一个敌军、死亡:对手抓一张牌"
+            },
+            {
+                "attack": 36,
+                "life": 56,
+                "effect": "登场:随机消灭一个敌军、死亡:对手抓一张牌"
+            },
+            {
+                "attack": 39,
+                "life": 60,
+                "effect": "登场:随机消灭一个敌军、死亡:对手抓一张牌"
+            },
+            {
+                "attack": 42,
+                "life": 65,
+                "effect": "登场:随机消灭一个敌军、死亡:对手抓一张牌"
+            },
+            {
+                "attack": 45,
+                "life": 70,
+                "effect": "登场:随机消灭一个敌军、死亡:对手抓一张牌"
+            }
+        ]
+    },
+    {
+        "id": 479,
+        "name": "炼狱三头犬",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 5,
+        "type": 1,
+        "img": "/lianyushenyuan/diyusantouquan.jpg",
+        "grade": "[2]",
+        "tag": "[3,18]",
+        "data": [
+            {
+                "attack": 2,
+                "life": 6,
+                "effect": "【三连击】"
+            },
+            {
+                "attack": 2,
+                "life": 8,
+                "effect": "【三连击】"
+            },
+            {
+                "attack": 3,
+                "life": 8,
+                "effect": "【三连击】"
+            },
+            {
+                "attack": 3,
+                "life": 10,
+                "effect": "【三连击】"
+            },
+            {
+                "attack": 4,
+                "life": 12,
+                "effect": "【洞察1】、【三连击】"
+            },
+            {
+                "attack": 4,
+                "life": 16,
+                "effect": "【洞察1】、【三连击】"
+            },
+            {
+                "attack": 5,
+                "life": 17,
+                "effect": "【洞察1】、【三连击】"
+            },
+            {
+                "attack": 6,
+                "life": 19,
+                "effect": "【洞察1】、【三连击】"
+            },
+            {
+                "attack": 7,
+                "life": 22,
+                "effect": "【洞察1】、【三连击】"
+            },
+            {
+                "attack": 8,
+                "life": 25,
+                "effect": "【洞察2】、【三连击】"
+            },
+            {
+                "attack": 9,
+                "life": 29,
+                "effect": "【洞察2】、【三连击】"
+            },
+            {
+                "attack": 10,
+                "life": 32,
+                "effect": "【洞察2】、【三连击】"
+            },
+            {
+                "attack": 11,
+                "life": 35,
+                "effect": "【洞察2】、【三连击】"
+            },
+            {
+                "attack": 12,
+                "life": 38,
+                "effect": "【洞察2】、【三连击】"
+            },
+            {
+                "attack": 13,
+                "life": 42,
+                "effect": "【洞察2】、【三连击】"
+            },
+            {
+                "attack": 15,
+                "life": 45,
+                "effect": "【洞察2】、【三连击】"
+            },
+            {
+                "attack": 17,
+                "life": 49,
+                "effect": "【洞察2】、【三连击】"
+            },
+            {
+                "attack": 19,
+                "life": 55,
+                "effect": "【洞察2】、【三连击】"
+            },
+            {
+                "attack": 21,
+                "life": 60,
+                "effect": "【洞察2】、【三连击】"
+            },
+            {
+                "attack": 24,
+                "life": 64,
+                "effect": "【洞察2】、【三连击】"
+            },
+            {
+                "attack": 27,
+                "life": 70,
+                "effect": "【洞察2】、【三连击】"
+            },
+            {
+                "attack": 30,
+                "life": 77,
+                "effect": "【洞察2】、【三连击】"
+            }
+        ]
+    },
+    {
+        "id": 480,
+        "name": "噬心魔虫",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 5,
+        "type": 1,
+        "img": "/lianyushenyuan/shixinmochong.jpg",
+        "grade": "[3]",
+        "tag": "[5,26]",
+        "data": [
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "【践踏】、命中时:对手弃掉一张牌、攻击前:若其无手牌则自身+2/+2"
+            },
+            {
+                "attack": 7,
+                "life": 8,
+                "effect": "【践踏】、命中时:对手弃掉一张牌、攻击前:若其无手牌则自身+2/+2"
+            },
+            {
+                "attack": 8,
+                "life": 11,
+                "effect": "【践踏】、命中时:对手弃掉一张牌、攻击前:若其无手牌则自身+3/+3"
+            },
+            {
+                "attack": 9,
+                "life": 14,
+                "effect": "【践踏】、命中时:对手弃掉一张牌、攻击前:若其无手牌则自身+3/+3"
+            },
+            {
+                "attack": 10,
+                "life": 17,
+                "effect": "【践踏】、命中时:对手弃掉一张牌、攻击前:若其无手牌则自身+3/+3"
+            },
+            {
+                "attack": 11,
+                "life": 20,
+                "effect": "【践踏】、命中时:对手弃掉一张牌、攻击前:若其无手牌则自身+4/+4"
+            },
+            {
+                "attack": 12,
+                "life": 24,
+                "effect": "【践踏】、命中时:对手弃掉一张牌、攻击前:若其无手牌则自身+4/+4"
+            },
+            {
+                "attack": 13,
+                "life": 27,
+                "effect": "【践踏】、命中时:对手弃掉一张牌、攻击前:若其无手牌则自身+4/+4"
+            },
+            {
+                "attack": 14,
+                "life": 30,
+                "effect": "【践踏】、命中时:对手弃掉一张牌、攻击前:若其无手牌则自身+5/+5"
+            },
+            {
+                "attack": 15,
+                "life": 33,
+                "effect": "【践踏】、命中时:对手弃掉一张牌、攻击前:若其无手牌则自身+5/+5"
+            },
+            {
+                "attack": 17,
+                "life": 36,
+                "effect": "【践踏】、命中时:对手弃掉一张牌、攻击前:若其无手牌则自身+6/+6"
+            },
+            {
+                "attack": 19,
+                "life": 39,
+                "effect": "【践踏】、命中时:对手弃掉一张牌、攻击前:若其无手牌则自身+6/+6"
+            },
+            {
+                "attack": 21,
+                "life": 42,
+                "effect": "【践踏】、命中时:对手弃掉一张牌、攻击前:若其无手牌则自身+6/+6"
+            },
+            {
+                "attack": 24,
+                "life": 45,
+                "effect": "【践踏】、命中时:对手弃掉一张牌、攻击前:若其无手牌则自身+7/+7"
+            },
+            {
+                "attack": 27,
+                "life": 49,
+                "effect": "【践踏】、命中时:对手弃掉一张牌、攻击前:若其无手牌则自身+7/+7"
+            },
+            {
+                "attack": 30,
+                "life": 54,
+                "effect": "【践踏】、命中时:对手弃掉一张牌、攻击前:若其无手牌则自身+7/+7"
+            },
+            {
+                "attack": 33,
+                "life": 58,
+                "effect": "【践踏】、命中时:对手弃掉一张牌、攻击前:若其无手牌则自身+8/+8"
+            },
+            {
+                "attack": 36,
+                "life": 62,
+                "effect": "【践踏】、命中时:对手弃掉一张牌、攻击前:若其无手牌则自身+8/+8"
+            },
+            {
+                "attack": 39,
+                "life": 66,
+                "effect": "【践踏】、命中时:对手弃掉一张牌、攻击前:若其无手牌则自身+9/+9"
+            },
+            {
+                "attack": 42,
+                "life": 72,
+                "effect": "【践踏】、命中时:对手弃掉一张牌、攻击前:若其无手牌则自身+9/+9"
+            },
+            {
+                "attack": 45,
+                "life": 78,
+                "effect": "【践踏】、命中时:对手弃掉一张牌、攻击前:若其无手牌则自身+10/+10"
+            },
+            {
+                "attack": 49,
+                "life": 85,
+                "effect": "【践踏】、命中时:对手弃掉一张牌、攻击前:若其无手牌则自身+11/+11"
+            }
+        ]
+    },
+    {
+        "id": 481,
+        "name": "雷光炼狱",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 5,
+        "type": 2,
+        "img": "/lianyushenyuan/leiguanglianyu.jpg",
+        "grade": "[3]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成4点伤害，对敌方英雄造成4点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成6点伤害，对敌方英雄造成6点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成8点伤害，对敌方英雄造成8点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成10点伤害，对敌方英雄造成6点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成12点伤害，对敌方英雄造成12点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成14点伤害，对敌方英雄造成14点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成16点伤害，对敌方英雄造成16点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成18点伤害，对敌方英雄造成18点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成21点伤害，对敌方英雄造成21点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成24点伤害，对敌方英雄造成24点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成26点伤害，对敌方英雄造成26点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成29点伤害，对敌方英雄造成29点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成32点伤害，对敌方英雄造成32点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成36点伤害，对敌方英雄造成36点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成40点伤害，对敌方英雄造成40点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成44点伤害，对敌方英雄造成44点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成48点伤害，对敌方英雄造成48点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成52点伤害，对敌方英雄造成52点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成56点伤害，对敌方英雄造成56点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成60点伤害，对敌方英雄造成60点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成65点伤害，对敌方英雄造成65点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对横排所有敌军造成70点伤害，对敌方英雄造成70点伤害"
+            }
+        ]
+    },
+    {
+        "id": 482,
+        "name": "夺魂死镰",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 5,
+        "type": 1,
+        "img": "/lianyushenyuan/duohunsilian.jpg",
+        "grade": "[4]",
+        "tag": "[18,26]",
+        "data": [
+            {
+                "attack": 4,
+                "life": 1,
+                "effect": "敌方英雄受到伤害:自身攻击+2"
+            },
+            {
+                "attack": 5,
+                "life": 2,
+                "effect": "敌方英雄受到伤害:自身攻击+2"
+            },
+            {
+                "attack": 6,
+                "life": 3,
+                "effect": "敌方英雄受到伤害:自身攻击+2"
+            },
+            {
+                "attack": 7,
+                "life": 3,
+                "effect": "敌方英雄受到伤害:自身攻击+3"
+            },
+            {
+                "attack": 8,
+                "life": 4,
+                "effect": "敌方英雄受到伤害:自身攻击+3、攻击大于50获得【连击】"
+            },
+            {
+                "attack": 10,
+                "life": 5,
+                "effect": "敌方英雄受到伤害:自身攻击+3、攻击大于50获得【连击】"
+            },
+            {
+                "attack": 12,
+                "life": 6,
+                "effect": "敌方英雄受到伤害:自身攻击+3、攻击大于50获得【连击】"
+            },
+            {
+                "attack": 13,
+                "life": 6,
+                "effect": "敌方英雄受到伤害:自身攻击+4、攻击大于50获得【连击】"
+            },
+            {
+                "attack": 15,
+                "life": 7,
+                "effect": "敌方英雄受到伤害:自身攻击+4、攻击大于50、100获得【连击】"
+            },
+            {
+                "attack": 18,
+                "life": 8,
+                "effect": "敌方英雄受到伤害:自身攻击+4、攻击大于50、100获得【连击】"
+            },
+            {
+                "attack": 20,
+                "life": 8,
+                "effect": "敌方英雄受到伤害:自身攻击+5、攻击大于50、100获得【连击】"
+            },
+            {
+                "attack": 25,
+                "life": 9,
+                "effect": "敌方英雄受到伤害:自身攻击+5、攻击大于50、100获得【连击】"
+            },
+            {
+                "attack": 29,
+                "life": 10,
+                "effect": "敌方英雄受到伤害:自身攻击+5、攻击大于50、100获得【连击】"
+            },
+            {
+                "attack": 30,
+                "life": 11,
+                "effect": "敌方英雄受到伤害:自身攻击+6、攻击大于50、100获得【连击】"
+            },
+            {
+                "attack": 36,
+                "life": 13,
+                "effect": "敌方英雄受到伤害:自身攻击+6、攻击大于50、100获得【连击】"
+            },
+            {
+                "attack": 40,
+                "life": 16,
+                "effect": "敌方英雄受到伤害:自身攻击+6、攻击大于50、100获得【连击】"
+            },
+            {
+                "attack": 42,
+                "life": 20,
+                "effect": "敌方英雄受到伤害:自身攻击+7、攻击大于50、100获得【连击】"
+            },
+            {
+                "attack": 48,
+                "life": 22,
+                "effect": "敌方英雄受到伤害:自身攻击+7、攻击大于50、100获得【连击】"
+            },
+            {
+                "attack": 52,
+                "life": 24,
+                "effect": "敌方英雄受到伤害:自身攻击+8、攻击大于50、100获得【连击】"
+            },
+            {
+                "attack": 60,
+                "life": 25,
+                "effect": "敌方英雄受到伤害:自身攻击+8、攻击大于50、100获得【连击】"
+            },
+            {
+                "attack": 66,
+                "life": 29,
+                "effect": "敌方英雄受到伤害:自身攻击+8、攻击大于50、100获得【连击】"
+            },
+            {
+                "attack": 70,
+                "life": 30,
+                "effect": "敌方英雄受到伤害:自身攻击+9、攻击大于50、100获得【连击】"
+            }
+        ]
+    },
+    {
+        "id": 483,
+        "name": "狂暴铁臂",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 5,
+        "type": 1,
+        "img": "/lianyushenyuan/kuangbaotiebi.jpg",
+        "grade": "[2]",
+        "tag": "[1,8,16]",
+        "data": [
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "【护甲1】、攻击前:全体护甲友军+1/+1"
+            },
+            {
+                "attack": 8,
+                "life": 7,
+                "effect": "【护甲1】、攻击前:全体护甲友军+1/+1"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "【护甲1】、攻击前:全体护甲友军+1/+1、登场回合具有【磐龙】和【魂歌】"
+            },
+            {
+                "attack": 11,
+                "life": 10,
+                "effect": "【护甲1】、攻击前:全体护甲友军+1/+1、登场回合具有【磐龙】和【魂歌】"
+            },
+            {
+                "attack": 12,
+                "life": 12,
+                "effect": "【护甲2】、攻击前:全体护甲友军+1/+1、登场回合具有【磐龙】和【魂歌】"
+            },
+            {
+                "attack": 14,
+                "life": 13,
+                "effect": "【护甲2】、攻击前:全体护甲友军+1/+1、登场回合具有【磐龙】和【魂歌】"
+            },
+            {
+                "attack": 15,
+                "life": 14,
+                "effect": "【护甲2】、攻击前:全体护甲友军+2/+1、登场回合具有【磐龙】和【魂歌】"
+            },
+            {
+                "attack": 17,
+                "life": 16,
+                "effect": "【护甲2】、攻击前:全体护甲友军+2/+1、登场回合具有【磐龙】和【魂歌】"
+            },
+            {
+                "attack": 19,
+                "life": 18,
+                "effect": "【护甲2】、攻击前:全体护甲友军+2/+1、登场回合具有【磐龙】和【魂歌】"
+            },
+            {
+                "attack": 21,
+                "life": 20,
+                "effect": "【护甲2】、攻击前:全体护甲友军+2/+2、登场回合具有【磐龙】和【魂歌】"
+            },
+            {
+                "attack": 23,
+                "life": 22,
+                "effect": "【护甲2】、攻击前:全体护甲友军+2/+2、登场回合具有【磐龙】和【魂歌】"
+            },
+            {
+                "attack": 25,
+                "life": 24,
+                "effect": "【护甲3】、攻击前:全体护甲友军+2/+2、登场回合具有【磐龙】和【魂歌】"
+            },
+            {
+                "attack": 27,
+                "life": 25,
+                "effect": "【护甲3】、攻击前:全体护甲友军+3/+2、登场回合具有【磐龙】和【魂歌】"
+            },
+            {
+                "attack": 29,
+                "life": 29,
+                "effect": "【护甲3】、攻击前:全体护甲友军+3/+2、登场回合具有【磐龙】和【魂歌】"
+            },
+            {
+                "attack": 31,
+                "life": 31,
+                "effect": "【护甲3】、攻击前:全体护甲友军+3/+3、登场回合具有【磐龙】和【魂歌】"
+            },
+            {
+                "attack": 34,
+                "life": 34,
+                "effect": "【护甲4】、攻击前:全体护甲友军+3/+3、登场回合具有【磐龙】和【魂歌】"
+            },
+            {
+                "attack": 36,
+                "life": 36,
+                "effect": "【护甲4】、攻击前:全体护甲友军+4/+4、登场回合具有【磐龙】和【魂歌】"
+            },
+            {
+                "attack": 40,
+                "life": 40,
+                "effect": "【护甲5】、攻击前:全体护甲友军+4/+4、登场回合具有【磐龙】和【魂歌】"
+            },
+            {
+                "attack": 43,
+                "life": 43,
+                "effect": "【护甲5】、攻击前:全体护甲友军+5/+5、登场回合具有【磐龙】和【魂歌】"
+            },
+            {
+                "attack": 48,
+                "life": 48,
+                "effect": "【护甲6】、攻击前:全体护甲友军+5/+5、登场回合具有【磐龙】和【魂歌】"
+            },
+            {
+                "attack": 54,
+                "life": 54,
+                "effect": "【护甲6】、攻击前:全体护甲友军+6/+6、登场回合具有【磐龙】和【魂歌】"
+            },
+            {
+                "attack": 60,
+                "life": 60,
+                "effect": "【护甲7】、攻击前:全体护甲友军+6/+6、登场回合具有【磐龙】和【魂歌】"
+            }
+        ]
+    },
+    {
+        "id": 484,
+        "name": "吞魂魔树",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 5,
+        "type": 1,
+        "img": "/lianyushenyuan/tunhunmoshu.jpg",
+        "grade": "[2]",
+        "tag": "[2,19,24]",
+        "data": [
+            {
+                "attack": 2,
+                "life": 5,
+                "effect": "登场:召唤1/1红海使魔-lv1，每当一个友军死亡:吸取敌方英雄2点生命"
+            },
+            {
+                "attack": 2,
+                "life": 6,
+                "effect": "登场:召唤2/1红海使魔-lv2，每当一个友军死亡:吸取敌方英雄2点生命"
+            },
+            {
+                "attack": 3,
+                "life": 7,
+                "effect": "登场:召唤2/2红海使魔-lv3，每当一个友军死亡:吸取敌方英雄2点生命"
+            },
+            {
+                "attack": 3,
+                "life": 9,
+                "effect": "登场:召唤2/2红海使魔-lv3，每当一个友军死亡:吸取敌方英雄3点生命"
+            },
+            {
+                "attack": 4,
+                "life": 11,
+                "effect": "登场:召唤3/2红海使魔-lv4，每当一个友军死亡:吸取敌方英雄3点生命"
+            },
+            {
+                "attack": 4,
+                "life": 14,
+                "effect": "登场:召唤3/3红海使魔-lv5，每当一个友军死亡:吸取敌方英雄3点生命"
+            },
+            {
+                "attack": 5,
+                "life": 16,
+                "effect": "登场:召唤3/3红海使魔-lv5，每当一个友军死亡:吸取敌方英雄4点生命"
+            },
+            {
+                "attack": 6,
+                "life": 19,
+                "effect": "登场:召唤4/3红海使魔-lv6，每当一个友军死亡:吸取敌方英雄4点生命"
+            },
+            {
+                "attack": 7,
+                "life": 22,
+                "effect": "登场:召唤5/3红海使魔-lv7，每当一个友军死亡:吸取敌方英雄4点生命"
+            },
+            {
+                "attack": 8,
+                "life": 25,
+                "effect": "登场:召唤5/3红海使魔-lv7，每当一个友军死亡:吸取敌方英雄5点生命"
+            },
+            {
+                "attack": 9,
+                "life": 29,
+                "effect": "登场:召唤5/4红海使魔-lv8，每当一个友军死亡:吸取敌方英雄5点生命"
+            },
+            {
+                "attack": 10,
+                "life": 33,
+                "effect": "登场:召唤5/4红海使魔-lv8，每当一个友军死亡:吸取敌方英雄6点生命"
+            },
+            {
+                "attack": 11,
+                "life": 36,
+                "effect": "登场:召唤6/4红海使魔-lv9，每当一个友军死亡:吸取敌方英雄6点生命"
+            },
+            {
+                "attack": 12,
+                "life": 40,
+                "effect": "登场:召唤6/4红海使魔-lv9，每当一个友军死亡:吸取敌方英雄7点生命"
+            },
+            {
+                "attack": 13,
+                "life": 45,
+                "effect": "登场:召唤7/4红海使魔-lv10，每当一个友军死亡:吸取敌方英雄7点生命"
+            },
+            {
+                "attack": 14,
+                "life": 50,
+                "effect": "登场:召唤8/5红海使魔-lv11，每当一个友军死亡:吸取敌方英雄8点生命"
+            },
+            {
+                "attack": 15,
+                "life": 55,
+                "effect": "登场:召唤9/6红海使魔-lv12，每当一个友军死亡:吸取敌方英雄8点生命"
+            },
+            {
+                "attack": 16,
+                "life": 62,
+                "effect": "登场:召唤10/7红海使魔-lv13，每当一个友军死亡:吸取敌方英雄9点生命"
+            },
+            {
+                "attack": 18,
+                "life": 66,
+                "effect": "登场:召唤11/8红海使魔-lv14，每当一个友军死亡:吸取敌方英雄9点生命"
+            },
+            {
+                "attack": 20,
+                "life": 70,
+                "effect": "登场:召唤12/9红海使魔-lv15，每当一个友军死亡:吸取敌方英雄10点生命"
+            },
+            {
+                "attack": 22,
+                "life": 77,
+                "effect": "登场:召唤14/11红海使魔-lv17，每当一个友军死亡:吸取敌方英雄11点生命"
+            },
+            {
+                "attack": 25,
+                "life": 85,
+                "effect": "登场:召唤16/13红海使魔-lv19，每当一个友军死亡:吸取敌方英雄12点生命"
+            }
+        ]
+    },
+    {
+        "id": 485,
+        "name": "符文·猩红大军",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 5,
+        "type": 4,
+        "img": "/lianyushenyuan/fuwen_xinghongdajun.jpg",
+        "grade": "[4]",
+        "tag": "[19,24]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：召唤2/2猩红仆从-lv1，敌方英雄生命-3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：召唤2/3猩红仆从-lv2，敌方英雄生命-3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：召唤3/3猩红仆从-lv3，敌方英雄生命-3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：召唤4/3猩红仆从-lv4，敌方英雄生命-4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：召唤4/4猩红仆从-lv5，敌方英雄生命-4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：召唤5/4猩红仆从-lv6，敌方英雄生命-5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：召唤5/6猩红仆从-lv7，敌方英雄生命-5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：召唤6/6猩红仆从-lv8，敌方英雄生命-6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：召唤7/7猩红仆从-lv9，敌方英雄生命-6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：召唤8/8猩红仆从-lv10，敌方英雄生命-7"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：召唤9/9猩红仆从-lv11，敌方英雄生命-7"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：召唤10/10猩红仆从-lv12，敌方英雄生命-8"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：召唤11/11猩红仆从-lv13，敌方英雄生命-8"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：召唤12/12猩红仆从-lv14，敌方英雄生命-9"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：召唤13/13猩红仆从-lv15，敌方英雄生命-9"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：召唤14/14猩红仆从-lv16，敌方英雄生命-10"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：召唤15/15猩红仆从-lv17，敌方英雄生命-10"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：召唤16/16猩红仆从-lv18，敌方英雄生命-11"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：召唤18/17猩红仆从-lv19，敌方英雄生命-11"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：召唤19/19猩红仆从-lv20，敌方英雄生命-12"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：召唤20/21猩红仆从-lv21，敌方英雄生命-12"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "登场、回合开始：召唤22/22猩红仆从-lv22，敌方英雄生命-13"
+            }
+        ]
+    },
+    {
+        "id": 486,
+        "name": "魔岩邪牛",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 6,
+        "type": 1,
+        "img": "/lianyushenyuan/moyanxieniu.jpg",
+        "grade": "[1]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "登场:随机敌军生命-4、攻击前:若你无手牌，随机敌军生命-4"
+            },
+            {
+                "attack": 9,
+                "life": 9,
+                "effect": "登场:随机敌军生命-5、攻击前:若你无手牌，随机敌军生命-5"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "登场:随机敌军生命-6、攻击前:若你无手牌，随机敌军生命-6"
+            },
+            {
+                "attack": 12,
+                "life": 12,
+                "effect": "登场:随机敌军生命-6、攻击前:若你无手牌，随机敌军生命-6"
+            },
+            {
+                "attack": 14,
+                "life": 14,
+                "effect": "登场:随机敌军生命-7、攻击前:若你无手牌，随机敌军生命-7"
+            },
+            {
+                "attack": 16,
+                "life": 16,
+                "effect": "登场:随机敌军生命-8、攻击前:若你无手牌，随机敌军生命-8"
+            },
+            {
+                "attack": 18,
+                "life": 18,
+                "effect": "登场:随机敌军生命-8、攻击前:若你无手牌，随机敌军生命-8"
+            },
+            {
+                "attack": 20,
+                "life": 20,
+                "effect": "登场:随机敌军生命-9、攻击前:若你无手牌，随机敌军生命-9"
+            },
+            {
+                "attack": 22,
+                "life": 22,
+                "effect": "登场:随机敌军生命-10、攻击前:若你无手牌，随机敌军生命-10"
+            },
+            {
+                "attack": 24,
+                "life": 24,
+                "effect": "登场:随机敌军生命-11、攻击前:若你无手牌，随机敌军生命-11"
+            },
+            {
+                "attack": 26,
+                "life": 26,
+                "effect": "登场:随机敌军生命-12、攻击前:若你无手牌，随机敌军生命-12"
+            },
+            {
+                "attack": 28,
+                "life": 28,
+                "effect": "登场:随机敌军生命-13、攻击前:若你无手牌，随机敌军生命-13"
+            },
+            {
+                "attack": 30,
+                "life": 30,
+                "effect": "登场:随机敌军生命-15、攻击前:若你无手牌，随机敌军生命-15"
+            },
+            {
+                "attack": 33,
+                "life": 33,
+                "effect": "登场:随机敌军生命-16、攻击前:若你无手牌，随机敌军生命-16"
+            },
+            {
+                "attack": 36,
+                "life": 36,
+                "effect": "登场:随机敌军生命-18、攻击前:若你无手牌，随机敌军生命-18"
+            },
+            {
+                "attack": 39,
+                "life": 39,
+                "effect": "登场:随机敌军生命-20、攻击前:若你无手牌，随机敌军生命-20"
+            },
+            {
+                "attack": 42,
+                "life": 42,
+                "effect": "登场:随机敌军生命-23、攻击前:若你无手牌，随机敌军生命-23"
+            },
+            {
+                "attack": 46,
+                "life": 46,
+                "effect": "登场:随机敌军生命-26、攻击前:若你无手牌，随机敌军生命-26"
+            },
+            {
+                "attack": 50,
+                "life": 50,
+                "effect": "登场:随机敌军生命-29、攻击前:若你无手牌，随机敌军生命-29"
+            },
+            {
+                "attack": 55,
+                "life": 55,
+                "effect": "登场:随机敌军生命-32、攻击前:若你无手牌，随机敌军生命-32"
+            },
+            {
+                "attack": 60,
+                "life": 60,
+                "effect": "登场:随机敌军生命-36、攻击前:若你无手牌，随机敌军生命-36"
+            },
+            {
+                "attack": 65,
+                "life": 65,
+                "effect": "登场:随机敌军生命-40、攻击前:若你无手牌，随机敌军生命-40"
+            }
+        ]
+    },
+    {
+        "id": 487,
+        "name": "黑岩裂缝",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 6,
+        "type": 1,
+        "img": "/lianyushenyuan/heiyanliefeng.jpg",
+        "grade": "[2]",
+        "tag": "[24]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 20,
+                "effect": "回合结束:召唤2/3猩红仆从-lv2、若你无手牌，改为召唤5/2猩红勇士-lv2"
+            },
+            {
+                "attack": 0,
+                "life": 25,
+                "effect": "回合结束:召唤2/3猩红仆从-lv2、若你无手牌，改为召唤5/2猩红勇士-lv2"
+            },
+            {
+                "attack": 0,
+                "life": 30,
+                "effect": "回合结束:召唤3/3猩红仆从-lv3、若你无手牌，改为召唤6/2猩红勇士-lv3"
+            },
+            {
+                "attack": 0,
+                "life": 35,
+                "effect": "回合结束:召唤3/3猩红仆从-lv3、若你无手牌，改为召唤6/2猩红勇士-lv3"
+            },
+            {
+                "attack": 0,
+                "life": 40,
+                "effect": "登场、回合结束:召唤3/3猩红仆从-lv3、若你无手牌，改为召唤6/2猩红勇士-lv3"
+            },
+            {
+                "attack": 0,
+                "life": 47,
+                "effect": "登场、回合结束:召唤3/3猩红仆从-lv3、若你无手牌，改为召唤6/2猩红勇士-lv3"
+            },
+            {
+                "attack": 0,
+                "life": 54,
+                "effect": "登场、回合结束:召唤4/4猩红仆从-lv5、若你无手牌，改为召唤8/5猩红勇士-lv5"
+            },
+            {
+                "attack": 0,
+                "life": 61,
+                "effect": "登场、回合结束:召唤4/4猩红仆从-lv5、若你无手牌，改为召唤8/5猩红勇士-lv5"
+            },
+            {
+                "attack": 0,
+                "life": 68,
+                "effect": "登场、回合结束:召唤5/4猩红仆从-lv6、若你无手牌，改为召唤9/6猩红勇士-lv6"
+            },
+            {
+                "attack": 0,
+                "life": 75,
+                "effect": "登场、回合结束:召唤5/4猩红仆从-lv6、若你无手牌，改为召唤9/6猩红勇士-lv6"
+            },
+            {
+                "attack": 0,
+                "life": 82,
+                "effect": "登场、回合结束:召唤5/6猩红仆从-lv7、若你无手牌，改为召唤10/7猩红勇士-lv7"
+            },
+            {
+                "attack": 0,
+                "life": 89,
+                "effect": "登场、回合结束:召唤6/6猩红仆从-lv8、若你无手牌，改为召唤12/7猩红勇士-lv8"
+            },
+            {
+                "attack": 0,
+                "life": 97,
+                "effect": "登场、回合结束:召唤7/7猩红仆从-lv9、若你无手牌，改为召唤13/8猩红勇士-lv9"
+            },
+            {
+                "attack": 0,
+                "life": 105,
+                "effect": "登场、回合结束:召唤8/8猩红仆从-lv10、若你无手牌，改为召唤15/8猩红勇士-lv10"
+            },
+            {
+                "attack": 0,
+                "life": 114,
+                "effect": "登场、回合结束:召唤9/9猩红仆从-lv11、若你无手牌，改为召唤16/9猩红勇士-lv11"
+            },
+            {
+                "attack": 0,
+                "life": 124,
+                "effect": "登场、回合结束:召唤10/10猩红仆从-lv12、若你无手牌，改为召唤17/10猩红勇士-lv12"
+            },
+            {
+                "attack": 0,
+                "life": 135,
+                "effect": "登场、回合结束:召唤11/11猩红仆从-lv13、若你无手牌，改为召唤18/11猩红勇士-lv13"
+            },
+            {
+                "attack": 0,
+                "life": 146,
+                "effect": "登场、回合结束:召唤12/12猩红仆从-lv14、若你无手牌，改为召唤20/12猩红勇士-lv14"
+            },
+            {
+                "attack": 0,
+                "life": 157,
+                "effect": "登场、回合结束:召唤13/13猩红仆从-lv15、若你无手牌，改为召唤22/13猩红勇士-lv15"
+            },
+            {
+                "attack": 0,
+                "life": 168,
+                "effect": "登场、回合结束:召唤14/14猩红仆从-lv16、若你无手牌，改为召唤25/14猩红勇士-lv16"
+            },
+            {
+                "attack": 0,
+                "life": 179,
+                "effect": "登场、回合结束:召唤16/16猩红仆从-lv18、若你无手牌，改为召唤31/16猩红勇士-lv18"
+            },
+            {
+                "attack": 0,
+                "life": 190,
+                "effect": "登场、回合结束:召唤19/19猩红仆从-lv20、若你无手牌，改为召唤38/18猩红勇士-lv20"
+            }
+        ]
+    },
+    {
+        "id": 488,
+        "name": "恶灵魔焰",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 6,
+        "type": 2,
+        "img": "/lianyushenyuan/elingmoyan.jpg",
+        "grade": "[3]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落6点伤害，若你无手牌，则坠落11点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落8点伤害，若你无手牌，则坠落13点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落10点伤害，若你无手牌，则坠落16点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落12点伤害，若你无手牌，则坠落18点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落13点伤害，若你无手牌，则坠落21点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落15点伤害，若你无手牌，则坠落25点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落20点伤害，若你无手牌，则坠落30点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落25点伤害，若你无手牌，则坠落35点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落30点伤害，若你无手牌，则坠落40点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落35点伤害，若你无手牌，则坠落48点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落40点伤害，若你无手牌，则坠落55点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落50点伤害，若你无手牌，则坠落65点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落55点伤害，若你无手牌，则坠落70点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落60点伤害，若你无手牌，则坠落75点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落65点伤害，若你无手牌，则坠落80点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落70点伤害，若你无手牌，则坠落85点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落75点伤害，若你无手牌，则坠落90点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落80点伤害，若你无手牌，则坠落95点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落84点伤害，若你无手牌，则坠落100点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落88点伤害，若你无手牌，则坠落105点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落93点伤害，若你无手牌，则坠落113点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落99点伤害，若你无手牌，则坠落123点伤害"
+            }
+        ]
+    },
+    {
+        "id": 489,
+        "name": "蛮荒魔神",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 6,
+        "type": 1,
+        "img": "/lianyushenyuan/manhuangmoshen.jpg",
+        "grade": "[3]",
+        "tag": "[5,8]",
+        "data": [
+            {
+                "attack": 6,
+                "life": 6,
+                "effect": "【磐龙】、【践踏】、登场：其他有践踏的友军+2/+2，获得【磐龙】"
+            },
+            {
+                "attack": 7,
+                "life": 7,
+                "effect": "【磐龙】、【践踏】、登场：其他有践踏的友军+2/+2，获得【磐龙】"
+            },
+            {
+                "attack": 8,
+                "life": 8,
+                "effect": "【磐龙】、【践踏】、登场：其他有践踏的友军+2/+2，获得【磐龙】"
+            },
+            {
+                "attack": 10,
+                "life": 10,
+                "effect": "【磐龙】、【践踏】、登场：其他有践踏的友军+3/+3，获得【磐龙】"
+            },
+            {
+                "attack": 12,
+                "life": 12,
+                "effect": "【磐龙】、【践踏】、登场：其他有践踏的友军+3/+3，获得【磐龙】"
+            },
+            {
+                "attack": 14,
+                "life": 14,
+                "effect": "【磐龙】、【践踏】、登场：其他有践踏的友军+4/+4，获得【磐龙】"
+            },
+            {
+                "attack": 16,
+                "life": 16,
+                "effect": "【磐龙】、【践踏】、登场：其他有践踏的友军+4/+4，获得【磐龙】"
+            },
+            {
+                "attack": 18,
+                "life": 18,
+                "effect": "【磐龙】、【践踏】、登场：其他有践踏的友军+5/+5，获得【磐龙】"
+            },
+            {
+                "attack": 20,
+                "life": 20,
+                "effect": "【磐龙】、【践踏】、登场：其他有践踏的友军+5/+5，获得【磐龙】"
+            },
+            {
+                "attack": 22,
+                "life": 22,
+                "effect": "【磐龙】、【践踏】、登场：其他有践踏的友军+6/+6，获得【磐龙】"
+            },
+            {
+                "attack": 24,
+                "life": 24,
+                "effect": "【磐龙】、【践踏】、登场：其他有践踏的友军+7/+7，获得【磐龙】"
+            },
+            {
+                "attack": 27,
+                "life": 27,
+                "effect": "【磐龙】、【践踏】、登场：其他有践踏的友军+8/+8，获得【磐龙】"
+            },
+            {
+                "attack": 31,
+                "life": 31,
+                "effect": "【磐龙】、【践踏】、登场：其他有践踏的友军+8/+8，获得【磐龙】"
+            },
+            {
+                "attack": 34,
+                "life": 34,
+                "effect": "【磐龙】、【践踏】、登场：其他有践踏的友军+9/+9，获得【磐龙】"
+            },
+            {
+                "attack": 37,
+                "life": 37,
+                "effect": "【磐龙】、【践踏】、登场：其他有践踏的友军+10/+10，获得【磐龙】"
+            },
+            {
+                "attack": 42,
+                "life": 42,
+                "effect": "【磐龙】、【践踏】、登场：其他有践踏的友军+10/+10，获得【磐龙】"
+            },
+            {
+                "attack": 48,
+                "life": 48,
+                "effect": "【磐龙】、【践踏】、登场：其他有践踏的友军+11/+11，获得【磐龙】"
+            },
+            {
+                "attack": 55,
+                "life": 55,
+                "effect": "【磐龙】、【践踏】、登场：其他有践踏的友军+12/+12，获得【磐龙】"
+            },
+            {
+                "attack": 63,
+                "life": 63,
+                "effect": "【磐龙】、【践踏】、登场：其他有践踏的友军+13/+13，获得【磐龙】"
+            },
+            {
+                "attack": 70,
+                "life": 70,
+                "effect": "【磐龙】、【践踏】、登场：其他有践踏的友军+15/+15，获得【磐龙】"
+            },
+            {
+                "attack": 75,
+                "life": 75,
+                "effect": "【磐龙】、【践踏】、登场：其他有践踏的友军+18/+18，获得【磐龙】"
+            },
+            {
+                "attack": 82,
+                "life": 82,
+                "effect": "【磐龙】、【践踏】、登场：其他有践踏的友军+20/+20，获得【磐龙】"
+            }
+        ]
+    },
+    {
+        "id": 490,
+        "name": "天崩地裂",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 6,
+        "type": 2,
+        "img": "/lianyushenyuan/tianbengdilie.jpg",
+        "grade": "[3]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全场单位受到10点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全场单位受到12点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全场单位受到14点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全场单位受到16点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全场单位受到18点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全场单位受到20点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全场单位受到24点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全场单位受到28点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全场单位受到32点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全场单位受到36点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全场单位受到40点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全场单位受到45点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全场单位受到50点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全场单位受到55点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全场单位受到60点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全场单位受到66点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全场单位受到72点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全场单位受到78点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全场单位受到84点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全场单位受到90点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全场单位受到100点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "全场单位受到110点伤害"
+            }
+        ]
+    },
+    {
+        "id": 491,
+        "name": "深渊剧毒兽",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 7,
+        "type": 1,
+        "img": "/lianyushenyuan/shenyuanjudushou.jpg",
+        "grade": "[1]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 6,
+                "life": 16,
+                "effect": "攻击前:对敌军喷射毒液2次(2点伤害)，若敌方无手牌，自身+2/+2"
+            },
+            {
+                "attack": 7,
+                "life": 19,
+                "effect": "攻击前:对敌军喷射毒液3次(2点伤害)，若敌方无手牌，自身+2/+2"
+            },
+            {
+                "attack": 8,
+                "life": 20,
+                "effect": "攻击前:对敌军喷射毒液3次(2点伤害)，若敌方无手牌，自身+2/+2"
+            },
+            {
+                "attack": 9,
+                "life": 22,
+                "effect": "攻击前:对敌军喷射毒液3次(2点伤害)，若敌方无手牌，自身+2/+2"
+            },
+            {
+                "attack": 10,
+                "life": 25,
+                "effect": "攻击前:对敌军喷射毒液4次(3点伤害)，若敌方无手牌，自身+2/+2"
+            },
+            {
+                "attack": 11,
+                "life": 30,
+                "effect": "攻击前:对敌军喷射毒液4次(3点伤害)，若敌方无手牌，自身+3/+3"
+            },
+            {
+                "attack": 12,
+                "life": 33,
+                "effect": "攻击前:对敌军喷射毒液4次(3点伤害)，若敌方无手牌，自身+3/+3"
+            },
+            {
+                "attack": 13,
+                "life": 35,
+                "effect": "攻击前:对敌军喷射毒液4次(3点伤害)，若敌方无手牌，自身+4/+4"
+            },
+            {
+                "attack": 15,
+                "life": 39,
+                "effect": "攻击前:对敌军喷射毒液5次(4点伤害)，若敌方无手牌，自身+4/+4"
+            },
+            {
+                "attack": 16,
+                "life": 45,
+                "effect": "攻击前:对敌军喷射毒液5次(4点伤害)，若敌方无手牌，自身+4/+4"
+            },
+            {
+                "attack": 18,
+                "life": 50,
+                "effect": "攻击前:对敌军喷射毒液5次(5点伤害)，若敌方无手牌，自身+5/+5"
+            },
+            {
+                "attack": 20,
+                "life": 54,
+                "effect": "攻击前:对敌军喷射毒液6次(2点伤害)，若敌方无手牌，自身+5/+5"
+            },
+            {
+                "attack": 20,
+                "life": 55,
+                "effect": "攻击前:对敌军喷射毒液6次(2点伤害)，若敌方无手牌，自身+6/+6"
+            },
+            {
+                "attack": 22,
+                "life": 60,
+                "effect": "攻击前:对敌军喷射毒液6次(3点伤害)，若敌方无手牌，自身+6/+6"
+            },
+            {
+                "attack": 25,
+                "life": 65,
+                "effect": "攻击前:对敌军喷射毒液6次(3点伤害)，若敌方无手牌，自身+7/+7"
+            },
+            {
+                "attack": 30,
+                "life": 70,
+                "effect": "攻击前:对敌军喷射毒液6次(3点伤害)，若敌方无手牌，自身+7/+7"
+            },
+            {
+                "attack": 32,
+                "life": 75,
+                "effect": "攻击前:对敌军喷射毒液6次(3点伤害)，若敌方无手牌，自身+8/+8"
+            },
+            {
+                "attack": 34,
+                "life": 80,
+                "effect": "攻击前:对敌军喷射毒液6次(4点伤害)，若敌方无手牌，自身+8/+8"
+            },
+            {
+                "attack": 37,
+                "life": 85,
+                "effect": "攻击前:对敌军喷射毒液6次(4点伤害)，若敌方无手牌，自身+9/+9"
+            },
+            {
+                "attack": 40,
+                "life": 90,
+                "effect": "攻击前:对敌军喷射毒液6次(5点伤害)，若敌方无手牌，自身+9/+9"
+            },
+            {
+                "attack": 45,
+                "life": 95,
+                "effect": "攻击前:对敌军喷射毒液6次(5点伤害)，若敌方无手牌，自身+10/+10"
+            },
+            {
+                "attack": 50,
+                "life": 100,
+                "effect": "攻击前:对敌军喷射毒液6次(6点伤害)，若敌方无手牌，自身+10/+10"
+            }
+        ]
+    },
+    {
+        "id": 492,
+        "name": "炼狱巨口",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 7,
+        "type": 1,
+        "img": "/lianyushenyuan/diyujukou.jpg",
+        "grade": "[1]",
+        "tag": "[5,8]",
+        "data": [
+            {
+                "attack": 4,
+                "life": 10,
+                "effect": "【磐龙】、【践踏】、登场:横排敌军受到2点伤害，每当一个敌军死亡:自身+2/+2"
+            },
+            {
+                "attack": 5,
+                "life": 12,
+                "effect": "【磐龙】、【践踏】、登场:横排敌军受到3点伤害，每当一个敌军死亡:自身+2/+2"
+            },
+            {
+                "attack": 6,
+                "life": 14,
+                "effect": "【磐龙】、【践踏】、登场:横排敌军受到4点伤害，每当一个敌军死亡:自身+2/+2"
+            },
+            {
+                "attack": 7,
+                "life": 16,
+                "effect": "【磐龙】、【践踏】、登场:横排敌军受到5点伤害，每当一个敌军死亡:自身+2/+2"
+            },
+            {
+                "attack": 8,
+                "life": 18,
+                "effect": "【磐龙】、【践踏】、登场:横排敌军受到6点伤害，每当一个敌军死亡:自身+2/+2"
+            },
+            {
+                "attack": 9,
+                "life": 21,
+                "effect": "【磐龙】、【践踏】、登场:横排敌军受到7点伤害，每当一个敌军死亡:自身+2/+2"
+            },
+            {
+                "attack": 10,
+                "life": 25,
+                "effect": "【磐龙】、【践踏】、登场:横排敌军受到7点伤害，每当一个敌军死亡:自身+3/+3"
+            },
+            {
+                "attack": 11,
+                "life": 29,
+                "effect": "【磐龙】、【践踏】、登场:横排敌军受到8点伤害，每当一个敌军死亡:自身+3/+3"
+            },
+            {
+                "attack": 13,
+                "life": 30,
+                "effect": "【磐龙】、【践踏】、登场:横排敌军受到10点伤害，每当一个敌军死亡:自身+3/+3"
+            },
+            {
+                "attack": 15,
+                "life": 33,
+                "effect": "【磐龙】、【践踏】、登场:横排敌军受到10点伤害，每当一个敌军死亡:自身+4/+4"
+            },
+            {
+                "attack": 16,
+                "life": 40,
+                "effect": "【磐龙】、【践踏】、登场:横排敌军受到12点伤害，每当一个敌军死亡:自身+4/+4"
+            },
+            {
+                "attack": 18,
+                "life": 45,
+                "effect": "【磐龙】、【践踏】、登场:横排敌军受到13点伤害，每当一个敌军死亡:自身+4/+4"
+            },
+            {
+                "attack": 20,
+                "life": 50,
+                "effect": "【磐龙】、【践踏】、登场:横排敌军受到13点伤害，每当一个敌军死亡:自身+5/+5"
+            },
+            {
+                "attack": 22,
+                "life": 55,
+                "effect": "【磐龙】、【践踏】、登场:横排敌军受到15点伤害，每当一个敌军死亡:自身+5/+5"
+            },
+            {
+                "attack": 24,
+                "life": 60,
+                "effect": "【磐龙】、【践踏】、登场:横排敌军受到15点伤害，每当一个敌军死亡:自身+6/+6"
+            },
+            {
+                "attack": 26,
+                "life": 66,
+                "effect": "【磐龙】、【践踏】、登场:横排敌军受到16点伤害，每当一个敌军死亡:自身+6/+6"
+            },
+            {
+                "attack": 28,
+                "life": 73,
+                "effect": "【磐龙】、【践踏】、登场:横排敌军受到17点伤害，每当一个敌军死亡:自身+7/+7"
+            },
+            {
+                "attack": 30,
+                "life": 80,
+                "effect": "【磐龙】、【践踏】、登场:横排敌军受到20点伤害，每当一个敌军死亡:自身+7/+7"
+            },
+            {
+                "attack": 33,
+                "life": 90,
+                "effect": "【磐龙】、【践踏】、登场:横排敌军受到22点伤害，每当一个敌军死亡:自身+8/+8"
+            },
+            {
+                "attack": 36,
+                "life": 100,
+                "effect": "【磐龙】、【践踏】、登场:横排敌军受到25点伤害，每当一个敌军死亡:自身+8/+8"
+            },
+            {
+                "attack": 40,
+                "life": 110,
+                "effect": "【磐龙】、【践踏】、登场:横排敌军受到27点伤害，每当一个敌军死亡:自身+9/+9"
+            },
+            {
+                "attack": 45,
+                "life": 120,
+                "effect": "【磐龙】、【践踏】、登场:横排敌军受到30点伤害，每当一个敌军死亡:自身+10/+10"
+            }
+        ]
+    },
+    {
+        "id": 493,
+        "name": "传记·流星落",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 1,
+        "type": 3,
+        "img": "/lianyushenyuan/zhuanji_liuxingluo.jpg",
+        "grade": "[0]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方随机区域坠落1点伤害，获得【传记·火尘落】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方随机区域坠落2点伤害，获得【传记·火尘落】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方随机区域坠落3点伤害，获得【传记·火尘落】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方随机区域坠落4点伤害，获得【传记·火尘落】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方随机区域坠落5点伤害，获得【传记·火尘落】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方随机区域坠落6点伤害，获得【传记·火尘落】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方随机区域坠落7点伤害，获得【传记·火尘落】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方随机区域坠落8点伤害，获得【传记·火尘落】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方随机区域坠落9点伤害，获得【传记·火尘落】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方随机区域坠落10点伤害，获得【传记·火尘落】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方随机区域坠落11点伤害，获得【传记·火尘落】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方随机区域坠落12点伤害，获得【传记·火尘落】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方随机区域坠落13点伤害，获得【传记·火尘落】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方随机区域坠落14点伤害，获得【传记·火尘落】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方随机区域坠落15点伤害，获得【传记·火尘落】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方随机区域坠落16点伤害，获得【传记·火尘落】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方随机区域坠落18点伤害，获得【传记·火尘落】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方随机区域坠落20点伤害，获得【传记·火尘落】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方随机区域坠落22点伤害，获得【传记·火尘落】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方随机区域坠落24点伤害，获得【传记·火尘落】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方随机区域坠落27点伤害，获得【传记·火尘落】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "敌方随机区域坠落30点伤害，获得【传记·火尘落】"
+            }
+        ]
+    },
+    {
+        "id": 494,
+        "name": "传记·火尘落",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 1,
+        "type": 3,
+        "img": "/lianyushenyuan/zhuanji_huochenluo.jpg",
+        "grade": "[0]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落1点伤害，获得【传记·流星火陨】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落2点伤害，获得【传记·流星火陨】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落3点伤害，获得【传记·流星火陨】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落4点伤害，获得【传记·流星火陨】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落5点伤害，获得【传记·流星火陨】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落6点伤害，获得【传记·流星火陨】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落7点伤害，获得【传记·流星火陨】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落8点伤害，获得【传记·流星火陨】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落9点伤害，获得【传记·流星火陨】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落10点伤害，获得【传记·流星火陨】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落11点伤害，获得【传记·流星火陨】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落12点伤害，获得【传记·流星火陨】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落13点伤害，获得【传记·流星火陨】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落14点伤害，获得【传记·流星火陨】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落15点伤害，获得【传记·流星火陨】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落16点伤害，获得【传记·流星火陨】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落18点伤害，获得【传记·流星火陨】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落20点伤害，获得【传记·流星火陨】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落22点伤害，获得【传记·流星火陨】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落24点伤害，获得【传记·流星火陨】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落27点伤害，获得【传记·流星火陨】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标区域坠落30点伤害，获得【传记·流星火陨】"
+            }
+        ]
+    },
+    {
+        "id": 495,
+        "name": "传记·流星火陨",
+        "zhenyin": 5,
+        "quality": 3,
+        "cost": 3,
+        "type": 3,
+        "img": "/lianyushenyuan/zhuanji_liuxinghuoyun.jpg",
+        "grade": "[0]",
+        "tag": "",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标及随机敌方区域各坠落1点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标及随机敌方区域各坠落2点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标及随机敌方区域各坠落3点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标及随机敌方区域各坠落4点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标及随机敌方区域各坠落5点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标及随机敌方区域各坠落6点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标及随机敌方区域各坠落7点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标及随机敌方区域各坠落8点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标及随机敌方区域各坠落9点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标及随机敌方区域各坠落10点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标及随机敌方区域各坠落11点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标及随机敌方区域各坠落12点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标及随机敌方区域各坠落13点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标及随机敌方区域各坠落14点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标及随机敌方区域各坠落15点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标及随机敌方区域各坠落16点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标及随机敌方区域各坠落18点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标及随机敌方区域各坠落20点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标及随机敌方区域各坠落22点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标及随机敌方区域各坠落24点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标及随机敌方区域各坠落27点伤害"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "目标及随机敌方区域各坠落30点伤害"
+            }
+        ]
+    },
+    {
+        "id": 496,
+        "name": "火寒毒种",
+        "zhenyin": 5,
+        "quality": 4,
+        "cost": 0,
+        "type": 1,
+        "img": "/lianyushenyuan/huohanduzhong.jpg",
+        "grade": "[3]",
+        "tag": "[13,15,17,19]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "暂无"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "暂无"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "暂无"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "暂无"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "暂无"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "暂无"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "暂无"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "暂无"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "暂无"
+            },
+            {
+                "attack": 0,
+                "life": 1,
+                "effect": "【守军】、【隐形】、【魔免】、每当恶魔敌军死亡:英雄生命-3、每当冬神敌军死亡:相邻生物-2/-2（1星）"
+            },
+            {
+                "attack": 0,
+                "life": 2,
+                "effect": "【守军】、【隐形】、【魔免】、每当恶魔敌军死亡:英雄生命-4、每当冬神敌军死亡:相邻生物-2/-2（2星）"
+            },
+            {
+                "attack": 0,
+                "life": 3,
+                "effect": "【守军】、【隐形】、【魔免】、每当恶魔敌军死亡:英雄生命-5、每当冬神敌军死亡:相邻生物-3/-3（3星）"
+            },
+            {
+                "attack": 0,
+                "life": 4,
+                "effect": "【守军】、【隐形】、【魔免】、每当恶魔敌军死亡:英雄生命-6、每当冬神敌军死亡:相邻生物-3/-3（4星）"
+            },
+            {
+                "attack": 0,
+                "life": 5,
+                "effect": "【守军】、【隐形】、【魔免】、每当恶魔敌军死亡:英雄生命-7、每当冬神敌军死亡:相邻生物-4/-4（5星）"
+            },
+            {
+                "attack": 0,
+                "life": 6,
+                "effect": "【守军】、【隐形】、【魔免】、每当恶魔敌军死亡:英雄生命-8、每当冬神敌军死亡:相邻生物-4/-4（6星）"
+            },
+            {
+                "attack": 0,
+                "life": 7,
+                "effect": "【守军】、【隐形】、【魔免】、每当恶魔敌军死亡:英雄生命-9、每当冬神敌军死亡:相邻生物-5/-5（7星）"
+            },
+            {
+                "attack": 0,
+                "life": 8,
+                "effect": "【守军】、【隐形】、【魔免】、每当恶魔敌军死亡:英雄生命-10、每当冬神敌军死亡:相邻生物-5/-5（8星）"
+            },
+            {
+                "attack": 0,
+                "life": 9,
+                "effect": "【守军】、【隐形】、【魔免】、每当恶魔敌军死亡:英雄生命-11、每当冬神敌军死亡:相邻生物-6/-6（9星）"
+            },
+            {
+                "attack": 0,
+                "life": 10,
+                "effect": "【守军】、【隐形】、【魔免】、每当恶魔敌军死亡:英雄生命-12、每当冬神敌军死亡:相邻生物-6/-6（10星）"
+            },
+            {
+                "attack": 0,
+                "life": 11,
+                "effect": "【守军】、【隐形】、【魔免】、每当恶魔敌军死亡:英雄生命-13、每当冬神敌军死亡:相邻生物-7/-7（11星）"
+            },
+            {
+                "attack": 0,
+                "life": 12,
+                "effect": "【守军】、【隐形】、【魔免】、每当恶魔敌军死亡:英雄生命-14、每当冬神敌军死亡:相邻生物-8/-8（12星）"
+            },
+            {
+                "attack": 0,
+                "life": 13,
+                "effect": "【守军】、【隐形】、【魔免】、每当恶魔敌军死亡:英雄生命-15、每当冬神敌军死亡:相邻生物-9/-9（13星）"
+            }
+        ]
+    },
+    {
+        "id": 497,
+        "name": "痛苦之心",
+        "zhenyin": 5,
+        "quality": 4,
+        "cost": 2,
+        "type": 2,
+        "img": "/lianyushenyuan/tongkuzhixin.jpg",
+        "grade": "[5]",
+        "tag": "[24,26]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对手弃掉一张牌，你获得《痛苦之心-lv1》、若其无手牌:改为召唤2/5苦痛守望者-lv1"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对手弃掉一张牌，你获得《痛苦之心-lv2》、若其无手牌:改为召唤3/5苦痛守望者-lv2"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对手弃掉一张牌，你获得《痛苦之心-lv3》、若其无手牌:改为召唤3/5苦痛守望者-lv3"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对手弃掉一张牌，你获得《痛苦之心-lv4》、若其无手牌:改为召唤3/7苦痛守望者-lv4"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对手弃掉一张牌，你获得《痛苦之心-lv5》、若其无手牌:改为召唤4/9苦痛守望者-lv5"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对手弃掉一张牌，你获得《痛苦之心-lv6》、若其无手牌:改为召唤5/10苦痛守望者-lv6"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对手弃掉一张牌，你获得《痛苦之心-lv7》、若其无手牌:改为召唤5/11苦痛守望者-lv7"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对手弃掉一张牌，你获得《痛苦之心-lv8》、若其无手牌:改为召唤6/11苦痛守望者-lv8"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对手弃掉一张牌，你获得《痛苦之心-lv9》、若其无手牌:改为召唤7/13苦痛守望者-lv9"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对手弃掉一张牌，你获得《痛苦之心-lv10》、若其无手牌:改为召唤8/15苦痛守望者-lv10"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对手弃掉一张牌，你获得《痛苦之心-lv11》、若其无手牌:改为召唤8/17苦痛守望者-lv11"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对手弃掉一张牌，你获得《痛苦之心-lv12》、若其无手牌:改为召唤9/19苦痛守望者-lv12"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对手弃掉一张牌，你获得《痛苦之心-lv13》、若其无手牌:改为召唤10/21苦痛守望者-lv13"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对手弃掉一张牌，你获得《痛苦之心-lv14》、若其无手牌:改为召唤10/24苦痛守望者-lv14"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对手弃掉一张牌，你获得《痛苦之心-lv15》、若其无手牌:改为召唤11/27苦痛守望者-lv15"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对手弃掉一张牌，你获得《痛苦之心-lv16》、若其无手牌:改为召唤12/30苦痛守望者-lv16"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对手弃掉一张牌，你获得《痛苦之心-lv17》、若其无手牌:改为召唤12/33苦痛守望者-lv17"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对手弃掉一张牌，你获得《痛苦之心-lv18》、若其无手牌:改为召唤13/36苦痛守望者-lv18"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对手弃掉一张牌，你获得《痛苦之心-lv19》、若其无手牌:改为召唤14/39苦痛守望者-lv19"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对手弃掉一张牌，你获得《痛苦之心-lv20》、若其无手牌:改为召唤16/42苦痛守望者-lv20"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对手弃掉一张牌，你获得《痛苦之心-lv21》、若其无手牌:改为召唤18/45苦痛守望者-lv21"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "对手弃掉一张牌，你获得《痛苦之心-lv22》、若其无手牌:改为召唤20/48苦痛守望者-lv22"
+            }
+        ]
+    },
+    {
+        "id": 498,
+        "name": "血影",
+        "zhenyin": 5,
+        "quality": 4,
+        "cost": 3,
+        "type": 1,
+        "img": "/lianyushenyuan/xueying.jpg",
+        "grade": "[7]",
+        "tag": "[1,7,21,26]",
+        "data": [
+            {
+                "attack": 5,
+                "life": 1,
+                "effect": "敌方英雄受到伤害:随机敌军生命-1、死亡:30%几率回到手牌"
+            },
+            {
+                "attack": 6,
+                "life": 2,
+                "effect": "敌方英雄受到伤害:随机敌军生命-1、死亡:40%几率回到手牌"
+            },
+            {
+                "attack": 7,
+                "life": 3,
+                "effect": "敌方英雄受到伤害:随机敌军生命-1、死亡:50%几率回到手牌"
+            },
+            {
+                "attack": 9,
+                "life": 3,
+                "effect": "敌方英雄受到伤害:随机敌军生命-1、死亡:60%几率回到手牌"
+            },
+            {
+                "attack": 11,
+                "life": 3,
+                "effect": "敌方英雄受到伤害:随机敌军生命-1、死亡:65%几率回到手牌"
+            },
+            {
+                "attack": 13,
+                "life": 3,
+                "effect": "敌方英雄受到伤害:随机敌军生命-2、死亡:65%几率回到手牌"
+            },
+            {
+                "attack": 15,
+                "life": 4,
+                "effect": "敌方英雄受到伤害:随机敌军生命-2、死亡:70%几率回到手牌"
+            },
+            {
+                "attack": 17,
+                "life": 5,
+                "effect": "敌方英雄受到伤害:随机敌军生命-2、死亡:75%几率回到手牌"
+            },
+            {
+                "attack": 19,
+                "life": 6,
+                "effect": "敌方英雄受到伤害:随机敌军生命-2、死亡:75%几率回到手牌"
+            },
+            {
+                "attack": 21,
+                "life": 7,
+                "effect": "敌方英雄受到伤害:随机敌军生命-2、死亡:75%几率回到手牌"
+            },
+            {
+                "attack": 23,
+                "life": 7,
+                "effect": "敌方英雄受到伤害:随机敌军生命-2、死亡:80%几率回到手牌"
+            },
+            {
+                "attack": 25,
+                "life": 8,
+                "effect": "敌方英雄受到伤害:随机敌军生命-2、死亡:回到手牌"
+            },
+            {
+                "attack": 27,
+                "life": 9,
+                "effect": "敌方英雄受到伤害:随机敌军生命-2、死亡:回到手牌"
+            },
+            {
+                "attack": 29,
+                "life": 11,
+                "effect": "敌方英雄受到伤害:随机敌军生命-2、死亡:回到手牌"
+            },
+            {
+                "attack": 32,
+                "life": 12,
+                "effect": "敌方英雄受到伤害:随机敌军生命-3、死亡:回到手牌"
+            },
+            {
+                "attack": 35,
+                "life": 13,
+                "effect": "敌方英雄受到伤害:随机敌军生命-3、死亡:回到手牌"
+            },
+            {
+                "attack": 38,
+                "life": 14,
+                "effect": "敌方英雄受到伤害:随机敌军生命-3、死亡:回到手牌"
+            },
+            {
+                "attack": 42,
+                "life": 15,
+                "effect": "敌方英雄受到伤害:随机敌军生命-3、死亡:回到手牌"
+            },
+            {
+                "attack": 46,
+                "life": 17,
+                "effect": "敌方英雄受到伤害:随机敌军生命-3、死亡:回到手牌"
+            },
+            {
+                "attack": 50,
+                "life": 19,
+                "effect": "敌方英雄受到伤害:随机敌军生命-4、死亡:回到手牌"
+            },
+            {
+                "attack": 55,
+                "life": 20,
+                "effect": "敌方英雄受到伤害:随机敌军生命-4、死亡:回到手牌"
+            },
+            {
+                "attack": 60,
+                "life": 21,
+                "effect": "敌方英雄受到伤害:随机敌军生命-5、死亡:回到手牌"
+            }
+        ]
+    },
+    {
+        "id": 499,
+        "name": "巴克&巴罗",
+        "zhenyin": 5,
+        "quality": 4,
+        "cost": 4,
+        "type": 1,
+        "img": "/lianyushenyuan/bakebaluo.jpg",
+        "grade": "[4]",
+        "tag": "[1,5,18]",
+        "data": [
+            {
+                "attack": 2,
+                "life": 6,
+                "effect": "【连击】、【践踏】、【护甲1】、攻击前：全体敌军受到1点伤害"
+            },
+            {
+                "attack": 3,
+                "life": 7,
+                "effect": "【连击】、【践踏】、【护甲1】、攻击前：全体敌军受到1点伤害"
+            },
+            {
+                "attack": 4,
+                "life": 8,
+                "effect": "【连击】、【践踏】、【护甲1】、攻击前：全体敌军受到1点伤害"
+            },
+            {
+                "attack": 4,
+                "life": 10,
+                "effect": "【连击】、【践踏】、【护甲1】、攻击前：全体敌军受到2点伤害"
+            },
+            {
+                "attack": 5,
+                "life": 11,
+                "effect": "【连击】、【践踏】、【护甲1】、攻击前：全体敌军受到2点伤害"
+            },
+            {
+                "attack": 6,
+                "life": 12,
+                "effect": "【连击】、【践踏】、【护甲2】、攻击前：全体敌军受到2点伤害"
+            },
+            {
+                "attack": 7,
+                "life": 14,
+                "effect": "【连击】、【践踏】、【护甲2】、攻击前：全体敌军受到2点伤害"
+            },
+            {
+                "attack": 7,
+                "life": 17,
+                "effect": "【连击】、【践踏】、【护甲3】、攻击前：全体敌军受到2点伤害"
+            },
+            {
+                "attack": 8,
+                "life": 19,
+                "effect": "【连击】、【践踏】、【护甲3】、攻击前：全体敌军受到2点伤害"
+            },
+            {
+                "attack": 8,
+                "life": 22,
+                "effect": "【连击】、【践踏】、【护甲3】、攻击前：全体敌军受到3点伤害"
+            },
+            {
+                "attack": 9,
+                "life": 25,
+                "effect": "【连击】、【践踏】、【护甲3】、攻击前：全体敌军受到3点伤害"
+            },
+            {
+                "attack": 10,
+                "life": 27,
+                "effect": "【连击】、【践踏】、【护甲4】、攻击前：全体敌军受到3点伤害"
+            },
+            {
+                "attack": 12,
+                "life": 29,
+                "effect": "【连击】、【践踏】、【护甲4】、攻击前：全体敌军受到3点伤害"
+            },
+            {
+                "attack": 13,
+                "life": 32,
+                "effect": "【连击】、【践踏】、【护甲4】、攻击前：全体敌军受到4点伤害"
+            },
+            {
+                "attack": 15,
+                "life": 35,
+                "effect": "【连击】、【践踏】、【护甲5】、攻击前：全体敌军受到4点伤害"
+            },
+            {
+                "attack": 18,
+                "life": 36,
+                "effect": "【连击】、【践踏】、【护甲5】、攻击前：全体敌军受到4点伤害"
+            },
+            {
+                "attack": 20,
+                "life": 40,
+                "effect": "【连击】、【践踏】、【护甲5】、攻击前：全体敌军受到5点伤害"
+            },
+            {
+                "attack": 22,
+                "life": 42,
+                "effect": "【连击】、【践踏】、【护甲6】、攻击前：全体敌军受到5点伤害"
+            },
+            {
+                "attack": 24,
+                "life": 46,
+                "effect": "【连击】、【践踏】、【护甲6】、攻击前：全体敌军受到6点伤害"
+            },
+            {
+                "attack": 26,
+                "life": 50,
+                "effect": "【连击】、【践踏】、【护甲6】、攻击前：全体敌军受到6点伤害"
+            },
+            {
+                "attack": 28,
+                "life": 55,
+                "effect": "【连击】、【践踏】、【护甲7】、攻击前：全体敌军受到6点伤害"
+            },
+            {
+                "attack": 30,
+                "life": 60,
+                "effect": "【连击】、【践踏】、【护甲7】、攻击前：全体敌军受到7点伤害"
+            }
+        ]
+    },
+    {
+        "id": 500,
+        "name": "熔岩进击",
+        "zhenyin": 5,
+        "quality": 4,
+        "cost": 4,
+        "type": 2,
+        "img": "/lianyushenyuan/rongyanjinji.jpg",
+        "grade": "[6]",
+        "tag": "[1,5,24]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤3/4铸甲熔岩魔-lv1、全体护甲友军+1/+1并且获得【践踏】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤3/6铸甲熔岩魔-lv2、全体护甲友军+1/+1并且获得【践踏】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤3/8铸甲熔岩魔-lv3、全体护甲友军+1/+1并且获得【践踏】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤4/8铸甲熔岩魔-lv4、全体护甲友军+1/+52并且获得【践踏】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤4/10铸甲熔岩魔-lv5、全体护甲友军+1/+2并且获得【践踏】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤5/12铸甲熔岩魔-lv6、全体护甲友军+2/+2并且获得【践踏】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤6/13铸甲熔岩魔-lv7、全体护甲友军+2/+2并且获得【践踏】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤7/14铸甲熔岩魔-lv8、全体护甲友军+2/+3并且获得【践踏】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤8/15铸甲熔岩魔-lv9、全体护甲友军+2/+3并且获得【践踏】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤9/17铸甲熔岩魔-lv10、全体护甲友军+3/+3并且获得【践踏】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤11/17铸甲熔岩魔-lv11、全体护甲友军+3/+3并且获得【践踏】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤13/19铸甲熔岩魔-lv12、全体护甲友军+3/+4并且获得【践踏】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤15/22铸甲熔岩魔-lv13、全体护甲友军+3/+4并且获得【践踏】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤17/23铸甲熔岩魔-lv14、全体护甲友军+3/+4并且获得【践踏】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤19/25铸甲熔岩魔-lv15、全体护甲友军+4/+4并且获得【践踏】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤21/29铸甲熔岩魔-lv16、全体护甲友军+4/+4并且获得【践踏】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤23/32铸甲熔岩魔-lv17、全体护甲友军+4/+4并且获得【践踏】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤25/35铸甲熔岩魔-lv18、全体护甲友军+4/+4并且获得【践踏】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤27/37铸甲熔岩魔-lv19、全体护甲友军+4/+5并且获得【践踏】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤30/40铸甲熔岩魔-lv20、全体护甲友军+5/+5并且获得【践踏】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤33/45铸甲熔岩魔-lv21、全体护甲友军+7/+7并且获得【践踏】"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "召唤36/50铸甲熔岩魔-lv22、全体护甲友军+8/+8并且获得【践踏】"
+            }
+        ]
+    },
+    {
+        "id": 501,
+        "name": "怨魂饕餮兽",
+        "zhenyin": 5,
+        "quality": 4,
+        "cost": 5,
+        "type": 1,
+        "img": "/lianyushenyuan/yuanhuntaotieshou.jpg",
+        "grade": "[6]",
+        "tag": "[1,2,5,7,26]",
+        "data": [
+            {
+                "attack": 6,
+                "life": 10,
+                "effect": "登场:吸取敌方玩家8点生命、死亡:归还敌方玩家8点生命"
+            },
+            {
+                "attack": 7,
+                "life": 12,
+                "effect": "登场:吸取敌方玩家9点生命、死亡:归还敌方玩家9点生命"
+            },
+            {
+                "attack": 8,
+                "life": 14,
+                "effect": "登场:吸取敌方玩家10点生命、死亡:归还敌方玩家10点生命"
+            },
+            {
+                "attack": 9,
+                "life": 16,
+                "effect": "登场:吸取敌方玩家11点生命、死亡:归还敌方玩家11点生命"
+            },
+            {
+                "attack": 10,
+                "life": 18,
+                "effect": "登场:吸取敌方玩家12点生命、死亡:归还敌方玩家12点生命"
+            },
+            {
+                "attack": 11,
+                "life": 20,
+                "effect": "登场:吸取敌方玩家14点生命、死亡:归还敌方玩家14点生命"
+            },
+            {
+                "attack": 12,
+                "life": 23,
+                "effect": "登场:吸取敌方玩家16点生命、死亡:归还敌方玩家16点生命"
+            },
+            {
+                "attack": 13,
+                "life": 26,
+                "effect": "登场:吸取敌方玩家18点生命、死亡:归还敌方玩家18点生命"
+            },
+            {
+                "attack": 14,
+                "life": 29,
+                "effect": "登场:吸取敌方玩家21点生命、死亡:归还敌方玩家21点生命"
+            },
+            {
+                "attack": 16,
+                "life": 30,
+                "effect": "登场:吸取敌方玩家25点生命、死亡:归还敌方玩家25点生命"
+            },
+            {
+                "attack": 18,
+                "life": 32,
+                "effect": "登场:吸取敌方玩家30点生命、死亡:归还敌方玩家30点生命"
+            },
+            {
+                "attack": 20,
+                "life": 35,
+                "effect": "登场:吸取敌方玩家35点生命、死亡:归还敌方玩家35点生命"
+            },
+            {
+                "attack": 22,
+                "life": 40,
+                "effect": "登场:吸取敌方玩家40点生命、死亡:归还敌方玩家40点生命"
+            },
+            {
+                "attack": 24,
+                "life": 45,
+                "effect": "登场:吸取敌方玩家45点生命、死亡:归还敌方玩家45点生命"
+            },
+            {
+                "attack": 27,
+                "life": 50,
+                "effect": "登场:吸取敌方玩家50点生命、死亡:归还敌方玩家50点生命"
+            },
+            {
+                "attack": 29,
+                "life": 55,
+                "effect": "登场:吸取敌方玩家55点生命、死亡:归还敌方玩家55点生命"
+            },
+            {
+                "attack": 31,
+                "life": 60,
+                "effect": "登场:吸取敌方玩家60点生命、死亡:归还敌方玩家60点生命"
+            },
+            {
+                "attack": 33,
+                "life": 66,
+                "effect": "登场:吸取敌方玩家66点生命、死亡:归还敌方玩家66点生命"
+            },
+            {
+                "attack": 36,
+                "life": 72,
+                "effect": "登场:吸取敌方玩家72点生命、死亡:归还敌方玩家72点生命"
+            },
+            {
+                "attack": 39,
+                "life": 78,
+                "effect": "登场:吸取敌方玩家78点生命、死亡:归还敌方玩家78点生命"
+            },
+            {
+                "attack": 42,
+                "life": 84,
+                "effect": "登场:吸取敌方玩家84点生命、死亡:归还敌方玩家84点生命"
+            },
+            {
+                "attack": 45,
+                "life": 90,
+                "effect": "登场:吸取敌方玩家90点生命、死亡:归还敌方玩家90点生命"
+            }
+        ]
+    },
+    {
+        "id": 502,
+        "name": "血翼·莉莉丝",
+        "zhenyin": 5,
+        "quality": 4,
+        "cost": 6,
+        "type": 1,
+        "img": "/lianyushenyuan/xueyi_lilisi.jpg",
+        "grade": "[5]",
+        "tag": "[2,5,6,26]",
+        "data": [
+            {
+                "attack": 7,
+                "life": 5,
+                "effect": "【先攻】、回合开始:若你无手牌，消灭随机敌军，英雄生命-2"
+            },
+            {
+                "attack": 9,
+                "life": 6,
+                "effect": "【先攻】、回合开始:若你无手牌，消灭随机敌军，英雄生命-2"
+            },
+            {
+                "attack": 11,
+                "life": 7,
+                "effect": "【先攻】、回合开始:若你无手牌，消灭随机敌军，英雄生命-3"
+            },
+            {
+                "attack": 14,
+                "life": 8,
+                "effect": "【先攻】、回合开始:若你无手牌，消灭随机敌军，英雄生命-3"
+            },
+            {
+                "attack": 17,
+                "life": 10,
+                "effect": "【先攻】、回合开始:若你无手牌，消灭随机敌军，英雄生命-3"
+            },
+            {
+                "attack": 20,
+                "life": 12,
+                "effect": "【先攻】、回合开始:若你无手牌，消灭随机敌军，英雄生命-3"
+            },
+            {
+                "attack": 23,
+                "life": 14,
+                "effect": "【先攻】、回合开始:若你无手牌，消灭随机敌军，英雄生命-3"
+            },
+            {
+                "attack": 24,
+                "life": 16,
+                "effect": "【先攻】、回合开始:若你无手牌，消灭随机敌军，英雄生命-3"
+            },
+            {
+                "attack": 27,
+                "life": 18,
+                "effect": "【先攻】、回合开始:若你无手牌，消灭随机敌军，英雄生命-3"
+            },
+            {
+                "attack": 30,
+                "life": 20,
+                "effect": "【先攻】、回合开始:若你无手牌，消灭随机敌军，英雄生命-3"
+            },
+            {
+                "attack": 33,
+                "life": 22,
+                "effect": "【先攻】、回合开始:若你无手牌，消灭随机敌军，英雄生命-4"
+            },
+            {
+                "attack": 37,
+                "life": 25,
+                "effect": "【先攻】、回合开始:若你无手牌，消灭随机敌军，英雄生命-4"
+            },
+            {
+                "attack": 42,
+                "life": 29,
+                "effect": "【先攻】、回合开始:若你无手牌，消灭随机敌军，英雄生命-5"
+            },
+            {
+                "attack": 47,
+                "life": 30,
+                "effect": "【先攻】、回合开始:若你无手牌，消灭随机敌军，英雄生命-5"
+            },
+            {
+                "attack": 52,
+                "life": 33,
+                "effect": "【先攻】、回合开始:若你无手牌，消灭随机敌军，英雄生命-5"
+            },
+            {
+                "attack": 58,
+                "life": 35,
+                "effect": "【先攻】、回合开始:若你无手牌，消灭随机敌军，英雄生命-6"
+            },
+            {
+                "attack": 64,
+                "life": 38,
+                "effect": "【先攻】、回合开始:若你无手牌，消灭随机敌军，英雄生命-6"
+            },
+            {
+                "attack": 70,
+                "life": 40,
+                "effect": "【先攻】、回合开始:若你无手牌，消灭随机敌军，英雄生命-7"
+            },
+            {
+                "attack": 76,
+                "life": 42,
+                "effect": "【先攻】、回合开始:若你无手牌，消灭随机敌军，英雄生命-7"
+            },
+            {
+                "attack": 82,
+                "life": 45,
+                "effect": "【先攻】、回合开始:若你无手牌，消灭随机敌军，英雄生命-8"
+            },
+            {
+                "attack": 88,
+                "life": 47,
+                "effect": "【先攻】、回合开始:若你无手牌，消灭随机敌军，英雄生命-8"
+            },
+            {
+                "attack": 95,
+                "life": 50,
+                "effect": "【先攻】、回合开始:若你无手牌，消灭随机敌军，英雄生命-9"
+            }
+        ]
+    },
+    {
+        "id": 503,
+        "name": "符文·地焚天陨",
+        "zhenyin": 5,
+        "quality": 4,
+        "cost": 5,
+        "type": 4,
+        "img": "/lianyushenyuan/fuwen_difentianyun.jpg",
+        "grade": "[2]",
+        "tag": "[26]",
+        "data": [
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠落陨石（10点伤害），无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠落陨石（12点伤害），无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠落陨石（14点伤害），无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠落陨石（16点伤害），无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠落陨石（18点伤害），无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠落陨石（20点伤害），无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠落陨石（22点伤害），无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠落陨石（24点伤害），无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠落陨石（27点伤害），无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠落陨石（30点伤害），无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠落陨石（33点伤害），无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠落陨石（36点伤害），无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠落陨石（39点伤害），无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠落陨石（42点伤害），无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠落陨石（45点伤害），无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠落陨石（48点伤害），无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠落陨石（51点伤害），无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠落陨石（54点伤害），无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠落陨石（57点伤害），无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠落陨石（60点伤害），无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠落陨石（63点伤害），无视神佑和魔免"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "回合开始：随机敌方区域坠落陨石（66点伤害），无视神佑和魔免"
+            }
+        ]
+    },
+    {
+        "id": 504,
+        "name": "熔炉梦魇",
+        "zhenyin": 5,
+        "quality": 4,
+        "cost": 7,
+        "type": 1,
+        "img": "/lianyushenyuan/ronglumengyan.jpg",
+        "grade": "[4]",
+        "tag": "[24,26]",
+        "data": [
+            {
+                "attack": 7,
+                "life": 3,
+                "effect": "登场:敌方玩家弃掉2张牌、回合结束:若敌方没有手牌，召唤3/4熔炉尸嵌-lv1"
+            },
+            {
+                "attack": 8,
+                "life": 4,
+                "effect": "登场:敌方玩家弃掉2张牌、回合结束:若敌方没有手牌，召唤3/6熔炉尸嵌-lv2"
+            },
+            {
+                "attack": 9,
+                "life": 5,
+                "effect": "登场:敌方玩家弃掉2张牌、回合结束:若敌方没有手牌，召唤4/7熔炉尸嵌-lv3"
+            },
+            {
+                "attack": 10,
+                "life": 6,
+                "effect": "登场:敌方玩家弃掉2张牌、回合结束:若敌方没有手牌，召唤4/9熔炉尸嵌-lv4"
+            },
+            {
+                "attack": 11,
+                "life": 7,
+                "effect": "登场:敌方玩家弃掉2张牌、回合结束:若敌方没有手牌，召唤5/10熔炉尸嵌-lv5"
+            },
+            {
+                "attack": 13,
+                "life": 7,
+                "effect": "登场:敌方玩家弃掉2张牌、回合结束:若敌方没有手牌，召唤6/12熔炉尸嵌-lv6"
+            },
+            {
+                "attack": 15,
+                "life": 7,
+                "effect": "登场:敌方玩家弃掉2张牌、回合结束:若敌方没有手牌，召唤7/14熔炉尸嵌-lv7"
+            },
+            {
+                "attack": 16,
+                "life": 8,
+                "effect": "登场:敌方玩家弃掉2张牌、回合结束:若敌方没有手牌，召唤8/16熔炉尸嵌-lv8"
+            },
+            {
+                "attack": 18,
+                "life": 9,
+                "effect": "登场:敌方玩家弃掉2张牌、回合结束:若敌方没有手牌，召唤8/18熔炉尸嵌-lv9"
+            },
+            {
+                "attack": 19,
+                "life": 9,
+                "effect": "登场:敌方玩家弃掉3张牌、回合结束:若敌方没有手牌，召唤9/20熔炉尸嵌-lv10"
+            },
+            {
+                "attack": 21,
+                "life": 11,
+                "effect": "登场:敌方玩家弃掉3张牌、回合结束:若敌方没有手牌，召唤9/23熔炉尸嵌-lv11"
+            },
+            {
+                "attack": 23,
+                "life": 13,
+                "effect": "登场:敌方玩家弃掉3张牌、回合结束:若敌方没有手牌，召唤10/26熔炉尸嵌-lv12"
+            },
+            {
+                "attack": 25,
+                "life": 15,
+                "effect": "登场:敌方玩家弃掉3张牌、回合结束:若敌方没有手牌，召唤11/30熔炉尸嵌-lv13"
+            },
+            {
+                "attack": 27,
+                "life": 17,
+                "effect": "登场:敌方玩家弃掉3张牌、回合结束:若敌方没有手牌，召唤12/32熔炉尸嵌-lv14"
+            },
+            {
+                "attack": 30,
+                "life": 19,
+                "effect": "登场:敌方玩家弃掉3张牌、回合结束:若敌方没有手牌，召唤13/36熔炉尸嵌-lv15"
+            },
+            {
+                "attack": 33,
+                "life": 22,
+                "effect": "登场:敌方玩家弃掉3张牌、回合结束:若敌方没有手牌，召唤14/39熔炉尸嵌-lv16"
+            },
+            {
+                "attack": 38,
+                "life": 25,
+                "effect": "登场:敌方玩家弃掉4张牌、回合结束:若敌方没有手牌，召唤16/42熔炉尸嵌-lv17"
+            },
+            {
+                "attack": 45,
+                "life": 30,
+                "effect": "登场:敌方玩家弃掉4张牌、回合结束:若敌方没有手牌，召唤18/45熔炉尸嵌-lv18"
+            },
+            {
+                "attack": 52,
+                "life": 35,
+                "effect": "登场:敌方玩家弃掉4张牌、回合结束:若敌方没有手牌，召唤20/49熔炉尸嵌-lv19"
+            },
+            {
+                "attack": 60,
+                "life": 40,
+                "effect": "登场:敌方玩家弃掉4张牌、回合结束:若敌方没有手牌，召唤22/54熔炉尸嵌-lv20"
+            },
+            {
+                "attack": 70,
+                "life": 45,
+                "effect": "登场:敌方玩家弃掉4张牌、回合结束:若敌方没有手牌，召唤25/60熔炉尸嵌-lv21"
+            },
+            {
+                "attack": 80,
+                "life": 50,
+                "effect": "登场:敌方玩家弃掉4张牌、回合结束:若敌方没有手牌，召唤28/66熔炉尸嵌-lv22"
+            }
+        ]
+    },
+    {
+        "id": 505,
+        "name": "烬喉炼狱魔",
+        "zhenyin": 5,
+        "quality": 4,
+        "cost": 8,
+        "type": 1,
+        "img": "/lianyushenyuan/jinhoudiyumo.jpg",
+        "grade": "[3]",
+        "tag": "[15]",
+        "data": [
+            {
+                "attack": 9,
+                "life": 25,
+                "effect": "回合开始、攻击前、回合结束:随机敌军生命-3，否则敌方英雄生命-3"
+            },
+            {
+                "attack": 11,
+                "life": 30,
+                "effect": "回合开始、攻击前、回合结束:随机敌军生命-4，否则敌方英雄生命-4"
+            },
+            {
+                "attack": 13,
+                "life": 35,
+                "effect": "回合开始、攻击前、回合结束:随机敌军生命-4，否则敌方英雄生命-4"
+            },
+            {
+                "attack": 15,
+                "life": 40,
+                "effect": "回合开始、攻击前、回合结束:随机敌军生命-5，否则敌方英雄生命-5"
+            },
+            {
+                "attack": 17,
+                "life": 45,
+                "effect": "回合开始、攻击前、回合结束:随机敌军生命-5，否则敌方英雄生命-5"
+            },
+            {
+                "attack": 19,
+                "life": 50,
+                "effect": "回合开始、攻击前、回合结束:随机敌军生命-6，否则敌方英雄生命-6"
+            },
+            {
+                "attack": 21,
+                "life": 55,
+                "effect": "回合开始、攻击前、回合结束:随机敌军生命-6，否则敌方英雄生命-6"
+            },
+            {
+                "attack": 23,
+                "life": 60,
+                "effect": "回合开始、攻击前、回合结束:随机敌军生命-7，否则敌方英雄生命-6"
+            },
+            {
+                "attack": 25,
+                "life": 65,
+                "effect": "回合开始、攻击前、回合结束:随机敌军生命-7，否则敌方英雄生命-7"
+            },
+            {
+                "attack": 27,
+                "life": 70,
+                "effect": "回合开始、攻击前、回合结束:随机敌军生命-8，否则敌方英雄生命-8"
+            },
+            {
+                "attack": 29,
+                "life": 76,
+                "effect": "回合开始、攻击前、回合结束:随机敌军生命-9，否则敌方英雄生命-9"
+            },
+            {
+                "attack": 31,
+                "life": 82,
+                "effect": "回合开始、攻击前、回合结束:随机敌军生命-10，否则敌方英雄生命-10"
+            },
+            {
+                "attack": 33,
+                "life": 89,
+                "effect": "回合开始、攻击前、回合结束:随机敌军生命-11，否则敌方英雄生命-11"
+            },
+            {
+                "attack": 35,
+                "life": 96,
+                "effect": "回合开始、攻击前、回合结束:随机敌军生命-12，否则敌方英雄生命-12"
+            },
+            {
+                "attack": 37,
+                "life": 104,
+                "effect": "回合开始、攻击前、回合结束:随机敌军生命-13，否则敌方英雄生命-13"
+            },
+            {
+                "attack": 39,
+                "life": 113,
+                "effect": "回合开始、攻击前、回合结束:随机敌军生命-14，否则敌方英雄生命-14"
+            },
+            {
+                "attack": 42,
+                "life": 123,
+                "effect": "回合开始、攻击前、回合结束:随机敌军生命-15，否则敌方英雄生命-15"
+            },
+            {
+                "attack": 45,
+                "life": 134,
+                "effect": "回合开始、攻击前、回合结束:随机敌军生命-16，否则敌方英雄生命-16"
+            },
+            {
+                "attack": 48,
+                "life": 145,
+                "effect": "回合开始、攻击前、回合结束:随机敌军生命-17，否则敌方英雄生命-17"
+            },
+            {
+                "attack": 51,
+                "life": 156,
+                "effect": "回合开始、攻击前、回合结束:随机敌军生命-18，否则敌方英雄生命-18"
+            },
+            {
+                "attack": 55,
+                "life": 168,
+                "effect": "回合开始、攻击前、回合结束:随机敌军生命-20，否则敌方英雄生命-20"
+            },
+            {
+                "attack": 60,
+                "life": 180,
+                "effect": "回合开始、攻击前、回合结束:随机敌军生命-22，否则敌方英雄生命-22"
+            }
+        ]
+    },
+    {
+        "id": 506,
+        "name": "猩红领主·巴拉克",
+        "zhenyin": 5,
+        "quality": 4,
+        "cost": 9,
+        "type": 1,
+        "img": "/lianyushenyuan/xinghonglingzhu_balake.jpg",
+        "grade": "[3]",
+        "tag": "[5,24]",
+        "data": [
+            {
+                "attack": 18,
+                "life": 18,
+                "effect": "【践踏】、登场:召唤2个4/4猩红仆从-lv5、攻击前:所有其他友军攻击+2"
+            },
+            {
+                "attack": 20,
+                "life": 20,
+                "effect": "【践踏】、登场:召唤2个4/4猩红仆从-lv5、攻击前:所有其他友军攻击+3"
+            },
+            {
+                "attack": 23,
+                "life": 23,
+                "effect": "【践踏】、登场:召唤2个4/4猩红仆从-lv5、攻击前:所有其他友军攻击+3"
+            },
+            {
+                "attack": 25,
+                "life": 25,
+                "effect": "【践踏】、登场:召唤3个4/4猩红仆从-lv5、攻击前:所有其他友军攻击+3"
+            },
+            {
+                "attack": 27,
+                "life": 27,
+                "effect": "【践踏】、登场:召唤3个5/4猩红仆从-lv6、攻击前:所有其他友军攻击+3"
+            },
+            {
+                "attack": 30,
+                "life": 30,
+                "effect": "【践踏】、登场:召唤3个5/4猩红仆从-lv6、攻击前:所有其他友军攻击+4"
+            },
+            {
+                "attack": 32,
+                "life": 32,
+                "effect": "【践踏】、登场:召唤3个5/6红仆从-lv7、攻击前:所有其他友军攻击+4"
+            },
+            {
+                "attack": 36,
+                "life": 36,
+                "effect": "【践踏】、登场:召唤3个6/6猩红仆从-lv8、攻击前:所有其他友军攻击+5"
+            },
+            {
+                "attack": 38,
+                "life": 38,
+                "effect": "【践踏】、登场:召唤3个6/6猩红仆从-lv8、攻击前:所有其他友军攻击+5"
+            },
+            {
+                "attack": 40,
+                "life": 40,
+                "effect": "【践踏】、登场:召唤3个6/6猩红仆从-lv8、攻击前:所有其他友军攻击+5"
+            },
+            {
+                "attack": 44,
+                "life": 44,
+                "effect": "【践踏】、登场:召唤4个6/6猩红仆从-lv8、攻击前:所有其他友军攻击+5"
+            },
+            {
+                "attack": 48,
+                "life": 48,
+                "effect": "【践踏】、登场:召唤4个6/6猩红仆从-lv8、攻击前:所有其他友军攻击+6"
+            },
+            {
+                "attack": 54,
+                "life": 54,
+                "effect": "【践踏】、登场:召唤4个7/7猩红仆从-lv9、攻击前:所有其他友军攻击+6"
+            },
+            {
+                "attack": 60,
+                "life": 60,
+                "effect": "【践踏】、登场:召唤4个7/7猩红仆从-lv9、攻击前:所有其他友军攻击+7"
+            },
+            {
+                "attack": 68,
+                "life": 68,
+                "effect": "【践踏】、登场:召唤4个8/8猩红仆从-lv10、攻击前:所有其他友军攻击+7"
+            },
+            {
+                "attack": 75,
+                "life": 75,
+                "effect": "【践踏】、登场:召唤4个8/8猩红仆从-lv10、攻击前:所有其他友军攻击+8"
+            },
+            {
+                "attack": 82,
+                "life": 82,
+                "effect": "【践踏】、登场:召唤4个9/9猩红仆从-lv11、攻击前:所有其他友军攻击+8"
+            },
+            {
+                "attack": 89,
+                "life": 89,
+                "effect": "【践踏】、登场:召唤4个10/10猩红仆从-lv12、攻击前:所有其他友军攻击+9"
+            },
+            {
+                "attack": 96,
+                "life": 96,
+                "effect": "【践踏】、登场:召唤4个11/11猩红仆从-lv13、攻击前:所有其他友军攻击+9"
+            },
+            {
+                "attack": 103,
+                "life": 103,
+                "effect": "【践踏】、登场:召唤4个12/12猩红仆从-lv14、攻击前:所有其他友军攻击+10"
+            },
+            {
+                "attack": 111,
+                "life": 111,
+                "effect": "【践踏】、登场:召唤4个14/14猩红仆从-lv16、攻击前:所有其他友军攻击+11"
+            },
+            {
+                "attack": 120,
+                "life": 120,
+                "effect": "【践踏】、登场:召唤4个16/16猩红仆从-lv18、攻击前:所有其他友军攻击+12"
+            }
+        ]
+    },
 ]
