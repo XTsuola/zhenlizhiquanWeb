@@ -115,21 +115,6 @@ const whereList: any = [{
     bgColor: "#000000",
     log: "查询评级"
 }, {
-    name: "卡牌标签",
-    url: "/cardTag",
-    bgColor: "#2727db",
-    log: "查询标签"
-}, {
-    name: "比赛统计",
-    url: "/gameMenu",
-    bgColor: "#e08d9b",
-    log: "查询比赛"
-}, {
-    name: "名人堂",
-    url: "/member",
-    bgColor: "#808080",
-    log: "名人查询"
-}, {
     name: "卡牌工坊",
     url: "/cardDiyList",
     bgColor: "#800080",
@@ -139,6 +124,21 @@ const whereList: any = [{
     url: "/skinDiyList",
     bgColor: "#800080",
     log: "查询皮肤"
+}, {
+    name: "比赛统计",
+    url: "/gameMenu",
+    bgColor: "#e08d9b",
+    log: "查询比赛"
+}, {
+    name: "名人堂",
+    url: "/member",
+    bgColor: "#2727db",
+    log: "名人查询"
+}, {
+    name: "题目回顾",
+    url: "/questionHistory",
+    bgColor: "#03a1c9",
+    log: "查询答题"
 }, {
     name: "每日一题",
     url: "/question",

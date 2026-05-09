@@ -11,7 +11,7 @@
         </div>
         <MyTabel :columnsData="columns" :dataSource="tableData"></MyTabel>
         <a-modal v-model:open="visible" destroyOnClose title="新增每日问题" :maskClosable="false">
-            <a-form ref="passwordAdd" :model="addData" name="basic" :label-col="{ span: 4 }" autocomplete="off">
+            <a-form ref="questionRef" :model="addData" name="basic" :label-col="{ span: 4 }" autocomplete="off">
                 <a-form-item label="每日问题" name="info" :rules="[{ required: true, message: '请输入问题!' }]">
                     <a-textarea style="min-height: 180px;" v-model:value="addData.info"></a-textarea>
                 </a-form-item>
@@ -57,7 +57,7 @@ const addData = reactive<any>({
     info: "",
     time: ""
 });
-const passwordAdd = ref<any>();
+const questionRef = ref<any>();
 
 async function getList() {
     const res = await getQuestionList();
@@ -74,7 +74,7 @@ function showModal() {
 async function save() {
     addData.time = formatDate(new Date());
     try {
-        await passwordAdd.value?.validate();
+        await questionRef.value?.validate();
         const res = await questionAdd(addData)
         if (res.data.code == 200) {
             visible.value = false;

@@ -22,11 +22,6 @@ const routeList: any = [
     component: () => import("@/views/zhongzu/gradeList.vue")
   },
   {
-    path: "/cardTag",
-    name: "cardTag",
-    component: () => import("@/views/zhongzu/tagList.vue")
-  },
-  {
     path: "/shenqi",
     name: "shenqi",
     component: () => import("@/views/shenqi/index.vue")
@@ -220,6 +215,11 @@ const routeList: any = [
     path: "/zuanshishouruTools",
     name: "zuanshishouruTools",
     component: () => import("@/views/tools/zuanshishouru.vue")
+  },
+  {
+    path: "/questionHistory",
+    name: "questionHistory",
+    component: () => import("@/views/question/history.vue")
   },
   {
     path: "/question",
