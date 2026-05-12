@@ -4,14 +4,14 @@
             <a-select v-model:value="formState.quality" style="width: 100%;" placeholder="请选择品质">
                 <a-select-option v-for="item in cardQualityList" :key="item.value" :value="item.value">{{
                     item.label
-                }}</a-select-option>
+                    }}</a-select-option>
             </a-select>
         </div>
         <div class="search_select">
             <a-select v-model:value="formState.cost" style="width: 100%;" placeholder="请选择费用">
                 <a-select-option v-for="item in costList" :key="item.value" :value="item.value">{{
                     item.label
-                }}</a-select-option>
+                    }}</a-select-option>
             </a-select>
         </div>
     </div>
@@ -26,9 +26,10 @@
     </div>
     <div class="search">
         <div class="search_btn">
-            <a-button style="margin-right: 12px;" type="primary" @click="search">查询</a-button>
+            <a-button style="margin-right: 8px;" type="primary" @click="search">查询</a-button>
             <a-button style="margin-right: 8px;" @click="reset">清空</a-button>
-            <a-button @click="goBack">返回</a-button>
+            <a-button @click="goBack" style="margin-right: 8px;">返回</a-button>
+            <a-button @click="view">预览</a-button>
         </div>
     </div>
     <div class="card">
@@ -121,6 +122,10 @@ function reset() {
 
 function goBack() {
     router.go(-1);
+}
+
+function view() {
+    router.push("/img/show");
 }
 
 function showModal(_: number, record: any) {

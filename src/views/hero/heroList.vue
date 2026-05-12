@@ -6,6 +6,7 @@
         <div class="search_btn">
             <a-button style="margin-right: 8px;" type="primary" @click="search">查询</a-button>
             <a-button style="margin-right: 8px;" @click="reset">清空</a-button>
+            <a-button @click="view">预览</a-button>
             <a-button @click="goBack">返回</a-button>
         </div>
     </div>
@@ -132,6 +133,10 @@ async function getOriginalData() {
         originalData.value = res.data.data;
     }
     getList();
+}
+
+function view() {
+    router.push("/img/showHero");
 }
 
 onMounted(() => {

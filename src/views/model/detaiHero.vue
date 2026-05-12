@@ -15,7 +15,7 @@
                     主种族
                 </a-col>
                 <a-col class="aCol" :span="18">
-                     {{ zhenyinList[prop.detailData.zhu - 1] }}
+                    {{ zhenyinList[prop.detailData.zhu - 1] }}
                 </a-col>
             </a-row>
             <a-row type="flex" style="border-bottom: 1px solid #ccc;">
@@ -23,7 +23,7 @@
                     副种族
                 </a-col>
                 <a-col class="aCol" :span="18">
-                     {{ zhenyinList[prop.detailData.fu - 1] }}
+                    {{ zhenyinList[prop.detailData.fu - 1] }}
                 </a-col>
             </a-row>
             <a-row type="flex" style="border-bottom: 1px solid #ccc;">
@@ -39,7 +39,7 @@
                     技能名称
                 </a-col>
                 <a-col class="aCol" :span="18">
-                     {{ prop.detailData.skillName }}
+                    {{ prop.detailData.skillName }}
                 </a-col>
             </a-row>
             <a-row type="flex" style="border-bottom: 1px solid #ccc;">
@@ -63,7 +63,8 @@
                     英雄品质
                 </a-col>
                 <a-col class="aCol" :span="18">
-                    {{ qualityList[prop.detailData.quality - 1] }}
+                    <a-tag :color="getQualityColor(prop.detailData.quality)">{{ getQualityName(prop.detailData.quality)
+                    }}</a-tag>
                 </a-col>
             </a-row>
         </div>
@@ -78,6 +79,31 @@ const prop = defineProps<{
 }>();
 
 const nowlevel = ref(12);
+const qualityColorList = [{
+    label: "橙色",
+    value: 4,
+    color: "#FFA500"
+}, {
+    label: "紫色",
+    value: 3,
+    color: "#8e488e"
+}, {
+    label: "蓝色",
+    value: 2,
+    color: "#2db7f5"
+}, {
+    label: "白色",
+    value: 1,
+    color: "#cccccc"
+}];
+
+function getQualityName(quality: number) {
+    return qualityColorList.find(e => e.value == quality)?.label;
+}
+
+function getQualityColor(quality: number) {
+    return qualityColorList.find(e => e.value == quality)?.color;
+}
 
 </script>
 <style lang="less" scoped>

@@ -17,6 +17,16 @@ const routeList: any = [
     component: () => import("@/views/zhongzu/index.vue")
   },
   {
+    path: "/img/show",
+    name: "imgShow",
+    component: () => import("@/views/cardImgShow/index.vue")
+  },
+  {
+    path: "/img/showHero",
+    name: "imgShowHero",
+    component: () => import("@/views/cardImgShow/index.vue")
+  },
+  {
     path: "/cardGrade",
     name: "cardGrade",
     component: () => import("@/views/zhongzu/gradeList.vue")
