@@ -1,15 +1,14 @@
 <template>
-    <div ref="drawDom">
-        <div style="height: 4px;width: 100%;"></div>
-        <div style="border: 1px solid #ccc;">
+    <div style="border: 1px solid #ccc;">
+        <div>
             <div
                 style="background: #efefef;padding: 10px 0 10px 15px;border-bottom: 1px solid #ccc;display: flex;justify-content: space-between;">
                 <div style="font-weight: bold">{{ prop.detailData.name }}</div>
-                <!-- <div style="margin-right: 10px;">
+                <div style="margin-right: 10px;">
                     <a-button size="small" style="margin-right: 8px;" :disabled="nowlevel == 0"
                         @click="nowlevel--">上一级</a-button>
                     <a-button size="small" :disabled="nowlevel == 21" @click="nowlevel++">下一级</a-button>
-                </div> -->
+                </div>
             </div>
             <a-row type="flex" class="border_bottom">
                 <a-col class="aCol border_right" :span="6">
@@ -25,7 +24,7 @@
                 </a-col>
                 <a-col class="aCol" :span="18">
                     {{ nowlevel + 1 }}
-                    <!-- <a-button size="small" style="margin-left:auto;" @click="nowlevel = 9">跳转至10级</a-button> -->
+                    <a-button size="small" style="margin-left:auto;" @click="nowlevel = 9">跳转至10级</a-button>
                 </a-col>
             </a-row>
             <a-row type="flex" class="border_bottom">
@@ -41,7 +40,7 @@
                     图片
                 </a-col>
                 <a-col class="aCol" :span="18">
-                    <img style="width: 70px;height: 70px;" :src="nowImg" />
+                    <img style="width: 70px;height: 70px;" :src="prop.detailData.img" />
                 </a-col>
             </a-row>
             <a-row type="flex" class="border_bottom">
@@ -84,7 +83,7 @@
                     </div>
                 </a-col>
             </a-row>
-            <a-row type="flex">
+            <a-row type="flex" class="border_bottom">
                 <a-col class="aCol border_right" :span="6">
                     卡牌品质
                 </a-col>
@@ -93,7 +92,7 @@
                         }}</a-tag>
                 </a-col>
             </a-row>
-            <!-- <a-row type="flex" :class="showLine > 1 ? 'border_bottom' : ''">
+            <a-row type="flex" :class="showLine > 1 ? 'border_bottom' : ''">
                 <a-col class="aCol border_right" :span="6">
                     卡牌评级
                 </a-col>
@@ -102,7 +101,7 @@
                         {{ getGradeName(prop.detailData.grade) }}
                     </div>
                     <a-tag v-else :color="getGradeColor(prop.detailData.grade)">{{ getGradeName(prop.detailData.grade)
-                        }}</a-tag>
+                    }}</a-tag>
                     <a-button v-if="showLine > 0" size="small" style="margin-left:auto;" @click="showisHero">{{
                         showLine > 1
                             ?
@@ -117,17 +116,14 @@
                 <a-col class="aCol" :span="18">
                     <div ref="myEcharts" style="height: 300px;width: 100%;"></div>
                 </a-col>
-            </a-row> -->
+            </a-row>
         </div>
-        <div style="height: 4px;width: 100%;"></div>
     </div>
-    <div style="margin-top: 20px;"><a-button @click="exportImg">导出</a-button></div>
 </template>
 <script lang="ts" setup>
 import { ref, onMounted, onBeforeUnmount, nextTick } from "vue";
 import { init } from "echarts";
 import { qualityList, zhenyinList } from "@/utils/func";
-import html2canvas from "html2canvas";
 import skinData from "@/data/skinData/skinData";
 
 declare var window: any;
@@ -135,81 +131,6 @@ const prop = defineProps<{
     detailData: any
     level?: number
 }>();
-
-const drawDom = ref(null);
-// 自定义导出尺寸 宽高
-const EXPORT_WIDTH = 800
-const EXPORT_HEIGHT = 600
-
-const exportImg = async () => {
-    if (!drawDom.value) return
-
-    // 1. 先把DOM转成原始canvas
-    const originCanvas = await html2canvas(drawDom.value, {
-        useCORS: true,
-        scale: 2, // 高清倍率
-        backgroundColor: '#ffffff'
-    })
-
-    // 2. 创建指定大小的最终画布
-    const targetCanvas = document.createElement('canvas')
-    const ctx: any = targetCanvas.getContext('2d')
-    targetCanvas.width = EXPORT_WIDTH
-    targetCanvas.height = EXPORT_HEIGHT
-
-    // 3. 居中绘制原图到指定画布（等比缩放、居中留白）
-    const scale = Math.min(
-        EXPORT_WIDTH / originCanvas.width,
-        EXPORT_HEIGHT / originCanvas.height
-    )
-    const w = originCanvas.width * scale
-    const h = originCanvas.height * scale
-    const x = (EXPORT_WIDTH - w) / 2
-    const y = (EXPORT_HEIGHT - h) / 2
-
-    // 填充背景色
-    ctx.fillStyle = '#fff'
-    ctx.fillRect(0, 0, EXPORT_WIDTH, EXPORT_HEIGHT)
-
-    // 绘制图片
-    ctx.drawImage(originCanvas, x, y, w, h)
-
-    // 4. 下载
-    const link = document.createElement('a')
-    link.href = targetCanvas.toDataURL('image/png')
-    link.download = `${prop.detailData.name}.png`
-    link.click()
-}
-const urlToBase64 = (imgUrl: any) => {
-    return new Promise((resolve, reject) => {
-        const image = new Image()
-
-        // 关键：解决跨域
-        image.crossOrigin = 'Anonymous'
-
-        // 防止缓存导致跨域失败
-        image.src = imgUrl + '?t=' + new Date().getTime()
-
-        image.onload = function () {
-            const canvas = document.createElement('canvas')
-            canvas.width = image.width
-            canvas.height = image.height
-
-            const ctx: any = canvas.getContext('2d')
-            ctx.drawImage(image, 0, 0)
-
-            // 转成base64
-            const base64 = canvas.toDataURL('image/png')
-            resolve(base64)
-        }
-
-        image.onerror = function (err: any) {
-            reject('图片转base64失败：')
-        }
-    })
-}
-const nowImg = ref<any>('');
-
 
 const nowlevel = ref(21);
 if (prop.level) nowlevel.value = prop.level - 1;
@@ -334,11 +255,8 @@ function resizeChart() {
     if (myCharts) myCharts.resize();
 }
 
-onMounted(async () => {
+onMounted(() => {
     window.addEventListener('resize', resizeChart);
-    if (prop.detailData?.img) {
-        nowImg.value = await urlToBase64(prop.detailData.img)
-    }
 });
 
 onBeforeUnmount(() => {

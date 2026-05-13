@@ -1,560 +1,596 @@
-export const manshikuangye = [
+export const simangdiguo = [
     {
-        "name": "草原狼",
+        "name": "小镇民兵",
         "quality": 1,
         "cost": 1,
-        "path": new URL('/public/cardImg/manshikuangye/草原狼.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/小镇民兵.png', import.meta.url)
     },
     {
-        "name": "斑毛幼猪",
+        "name": "警卫",
+        "quality": 1,
+        "cost": 2,
+        "path": new URL('/public/cardImg/simangdiguo/警卫.png', import.meta.url)
+    },
+    {
+        "name": "士兵战衣",
+        "quality": 1,
+        "cost": 2,
+        "path": new URL('/public/cardImg/simangdiguo/士兵战衣.png', import.meta.url)
+    },
+    {
+        "name": "圣堂门卫",
         "quality": 1,
         "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/斑毛幼猪.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/圣堂门卫.png', import.meta.url)
     },
     {
-        "name": "蛮化术",
+        "name": "民兵勇士",
         "quality": 1,
         "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/蛮化术.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/民兵勇士.png', import.meta.url)
     },
     {
-        "name": "再生食人魔",
+        "name": "先锋骑手",
+        "quality": 1,
+        "cost": 4,
+        "path": new URL('/public/cardImg/simangdiguo/先锋骑手.png', import.meta.url)
+    },
+    {
+        "name": "帝国重锤兵",
         "quality": 1,
         "cost": 5,
-        "path": new URL('/public/cardImg/manshikuangye/再生食人魔.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/帝国重锤兵.png', import.meta.url)
     },
     {
-        "name": "长毛象",
-        "quality": 1,
-        "cost": 6,
-        "path": new URL('/public/cardImg/manshikuangye/长毛象.png', import.meta.url)
-    },
-    {
-        "name": "愚笨鲸头鹅",
-        "quality": 2,
-        "cost": 0,
-        "path": new URL('/public/cardImg/manshikuangye/愚笨鲸头鹅.png', import.meta.url)
-    },
-    {
-        "name": "蛮石血蜥",
+        "name": "圣殿斥候",
         "quality": 2,
         "cost": 1,
-        "path": new URL('/public/cardImg/manshikuangye/蛮石血蜥.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/圣殿斥候.png', import.meta.url)
     },
     {
-        "name": "迟来的补给",
+        "name": "旅行背包",
         "quality": 2,
         "cost": 1,
-        "path": new URL('/public/cardImg/manshikuangye/迟来的补给.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/旅行背包.png', import.meta.url)
     },
     {
-        "name": "旷野祭师",
+        "name": "重装固守",
+        "quality": 2,
+        "cost": 1,
+        "path": new URL('/public/cardImg/simangdiguo/重装固守.png', import.meta.url)
+    },
+    {
+        "name": "庇护祝福",
+        "quality": 2,
+        "cost": 1,
+        "path": new URL('/public/cardImg/simangdiguo/庇护祝福.png', import.meta.url)
+    },
+    {
+        "name": "防御工事",
         "quality": 2,
         "cost": 2,
-        "path": new URL('/public/cardImg/manshikuangye/旷野祭师.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/防御工事.png', import.meta.url)
     },
     {
-        "name": "蓄力射手",
+        "name": "圣殿卫士",
         "quality": 2,
         "cost": 2,
-        "path": new URL('/public/cardImg/manshikuangye/蓄力射手.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/圣殿卫士.png', import.meta.url)
     },
     {
-        "name": "痴蛮野人",
+        "name": "修女",
         "quality": 2,
         "cost": 2,
-        "path": new URL('/public/cardImg/manshikuangye/痴蛮野人.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/修女.png', import.meta.url)
     },
     {
-        "name": "贪食肥鼠",
+        "name": "欢乐奶牛",
         "quality": 2,
         "cost": 2,
-        "path": new URL('/public/cardImg/manshikuangye/贪食肥鼠.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/欢乐奶牛.png', import.meta.url)
     },
     {
-        "name": "蛮石穿山甲",
+        "name": "炫目神光",
         "quality": 2,
         "cost": 2,
-        "path": new URL('/public/cardImg/manshikuangye/蛮石穿山甲.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/炫目神光.png', import.meta.url)
     },
     {
-        "name": "势如破竹",
+        "name": "天使琼浆",
         "quality": 2,
         "cost": 2,
-        "path": new URL('/public/cardImg/manshikuangye/势如破竹.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/天使琼浆.png', import.meta.url)
     },
     {
-        "name": "蛮野仙人掌",
+        "name": "圣甲先锋",
         "quality": 2,
         "cost": 2,
-        "path": new URL('/public/cardImg/manshikuangye/蛮野仙人掌.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/圣甲先锋.png', import.meta.url)
     },
     {
-        "name": "高原卫士",
+        "name": "民兵队长",
         "quality": 2,
         "cost": 2,
-        "path": new URL('/public/cardImg/manshikuangye/高原卫士.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/民兵队长.png', import.meta.url)
     },
     {
-        "name": "盘旋秃鹰",
+        "name": "营地大厨",
         "quality": 2,
         "cost": 2,
-        "path": new URL('/public/cardImg/manshikuangye/盘旋秃鹰.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/营地大厨.png', import.meta.url)
     },
     {
-        "name": "沙暴试炼",
+        "name": "铁甲卫队",
         "quality": 2,
         "cost": 2,
-        "path": new URL('/public/cardImg/manshikuangye/沙暴试炼.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/铁甲卫队.png', import.meta.url)
     },
     {
-        "name": "旷野猎手",
+        "name": "符文·神授权柄",
         "quality": 2,
         "cost": 2,
-        "path": new URL('/public/cardImg/manshikuangye/旷野猎手.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/符文·神授权柄.png', import.meta.url)
     },
     {
-        "name": "沉稳主祭",
-        "quality": 2,
-        "cost": 2,
-        "path": new URL('/public/cardImg/manshikuangye/沉稳主祭.png', import.meta.url)
-    },
-    {
-        "name": "寻路斥候",
+        "name": "盾甲禁卫",
         "quality": 2,
         "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/寻路斥候.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/盾甲禁卫.png', import.meta.url)
     },
     {
-        "name": "喧哗舞者",
+        "name": "帝国后勤官",
         "quality": 2,
         "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/喧哗舞者.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/帝国后勤官.png', import.meta.url)
     },
     {
-        "name": "迅捷长矛手",
+        "name": "圣殿弩手",
         "quality": 2,
         "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/迅捷长矛手.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/圣殿弩手.png', import.meta.url)
     },
     {
-        "name": "厚皮河马",
+        "name": "大型弩车",
         "quality": 2,
         "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/厚皮河马.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/大型弩车.png', import.meta.url)
     },
     {
-        "name": "面包树",
+        "name": "无畏爆破手",
         "quality": 2,
         "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/面包树.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/无畏爆破手.png', import.meta.url)
     },
     {
-        "name": "噬人花",
+        "name": "增援战线",
         "quality": 2,
         "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/噬人花.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/增援战线.png', import.meta.url)
     },
     {
-        "name": "天降碎石",
+        "name": "信念雕像",
         "quality": 2,
         "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/天降碎石.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/信念雕像.png', import.meta.url)
     },
     {
-        "name": "机敏雀鹰",
+        "name": "塔楼弓手",
         "quality": 2,
         "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/机敏雀鹰.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/塔楼弓手.png', import.meta.url)
     },
     {
-        "name": "雪域牦牛",
+        "name": "神圣活化",
         "quality": 2,
         "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/雪域牦牛.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/神圣活化.png', import.meta.url)
     },
     {
-        "name": "蛮古灵气",
+        "name": "田园守望者",
         "quality": 2,
         "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/蛮古灵气.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/田园守望者.png', import.meta.url)
     },
     {
-        "name": "符文·原力冲击",
+        "name": "符文·生命徽记",
         "quality": 2,
         "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/符文·原力冲击.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/符文·生命徽记.png', import.meta.url)
     },
     {
-        "name": "荒野赞颂人",
+        "name": "圣殿精英",
         "quality": 2,
         "cost": 4,
-        "path": new URL('/public/cardImg/manshikuangye/荒野赞颂人.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/圣殿精英.png', import.meta.url)
     },
     {
-        "name": "原野狂战士",
+        "name": "白头狮鹫",
         "quality": 2,
         "cost": 4,
-        "path": new URL('/public/cardImg/manshikuangye/原野狂战士.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/白头狮鹫.png', import.meta.url)
     },
     {
-        "name": "巨兽猎户",
+        "name": "箭楼车",
         "quality": 2,
         "cost": 4,
-        "path": new URL('/public/cardImg/manshikuangye/巨兽猎户.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/箭楼车.png', import.meta.url)
     },
     {
-        "name": "生命源力",
+        "name": "帝国老兵",
         "quality": 2,
         "cost": 4,
-        "path": new URL('/public/cardImg/manshikuangye/生命源力.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/帝国老兵.png', import.meta.url)
     },
     {
-        "name": "强行捕猎",
+        "name": "四芒营帐",
         "quality": 2,
         "cost": 4,
-        "path": new URL('/public/cardImg/manshikuangye/强行捕猎.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/四芒营帐.png', import.meta.url)
     },
     {
-        "name": "旷野蛮族",
+        "name": "帝国重炮",
         "quality": 2,
         "cost": 4,
-        "path": new URL('/public/cardImg/manshikuangye/旷野蛮族.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/帝国重炮.png', import.meta.url)
     },
     {
-        "name": "复仇噬人花",
+        "name": "谨慎的火枪手",
         "quality": 2,
         "cost": 4,
-        "path": new URL('/public/cardImg/manshikuangye/复仇噬人花.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/谨慎的火枪手.png', import.meta.url)
     },
     {
-        "name": "雪原野人",
+        "name": "生命之光",
         "quality": 2,
         "cost": 4,
-        "path": new URL('/public/cardImg/manshikuangye/雪原野人.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/生命之光.png', import.meta.url)
     },
     {
-        "name": "鼓舞图腾",
+        "name": "四芒牧师",
+        "quality": 2,
+        "cost": 4,
+        "path": new URL('/public/cardImg/simangdiguo/四芒牧师.png', import.meta.url)
+    },
+    {
+        "name": "精英射手",
+        "quality": 2,
+        "cost": 4,
+        "path": new URL('/public/cardImg/simangdiguo/精英射手.png', import.meta.url)
+    },
+    {
+        "name": "符文·据城反击",
+        "quality": 2,
+        "cost": 4,
+        "path": new URL('/public/cardImg/simangdiguo/符文·据城反击.png', import.meta.url)
+    },
+    {
+        "name": "帝国冲锋骑士",
         "quality": 2,
         "cost": 5,
-        "path": new URL('/public/cardImg/manshikuangye/鼓舞图腾.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/帝国冲锋骑士.png', import.meta.url)
     },
     {
-        "name": "迷茫巨人",
+        "name": "战场传教士",
         "quality": 2,
         "cost": 5,
-        "path": new URL('/public/cardImg/manshikuangye/迷茫巨人.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/战场传教士.png', import.meta.url)
     },
     {
-        "name": "迟钝巨汉",
+        "name": "光明惩戒",
         "quality": 2,
         "cost": 5,
-        "path": new URL('/public/cardImg/manshikuangye/迟钝巨汉.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/光明惩戒.png', import.meta.url)
     },
     {
-        "name": "符文·野性守护",
+        "name": "传记·生命序曲",
         "quality": 2,
+        "cost": 1,
+        "path": new URL('/public/cardImg/simangdiguo/传记·生命序曲.png', import.meta.url)
+    },
+    {
+        "name": "传记·生命赞歌",
+        "quality": 2,
+        "cost": 2,
+        "path": new URL('/public/cardImg/simangdiguo/传记·生命赞歌.png', import.meta.url)
+    },
+    {
+        "name": "传记·生命咏叹调",
+        "quality": 2,
+        "cost": 3,
+        "path": new URL('/public/cardImg/simangdiguo/传记·生命咏叹调.png', import.meta.url)
+    },
+    {
+        "name": "四芒军旗",
+        "quality": 3,
+        "cost": 1,
+        "path": new URL('/public/cardImg/simangdiguo/四芒军旗.png', import.meta.url)
+    },
+    {
+        "name": "圣殿御卫",
+        "quality": 3,
+        "cost": 2,
+        "path": new URL('/public/cardImg/simangdiguo/圣殿御卫.png', import.meta.url)
+    },
+    {
+        "name": "流星斗士",
+        "quality": 3,
+        "cost": 2,
+        "path": new URL('/public/cardImg/simangdiguo/流星斗士.png', import.meta.url)
+    },
+    {
+        "name": "热血冒险家",
+        "quality": 3,
+        "cost": 2,
+        "path": new URL('/public/cardImg/simangdiguo/热血冒险家.png', import.meta.url)
+    },
+    {
+        "name": "辉光圣墙",
+        "quality": 3,
+        "cost": 2,
+        "path": new URL('/public/cardImg/simangdiguo/辉光圣墙.png', import.meta.url)
+    },
+    {
+        "name": "符文·民兵集结",
+        "quality": 3,
+        "cost": 2,
+        "path": new URL('/public/cardImg/simangdiguo/符文·民兵集结.png', import.meta.url)
+    },
+    {
+        "name": "符文·信念为铠",
+        "quality": 3,
+        "cost": 3,
+        "path": new URL('/public/cardImg/simangdiguo/符文·信念为铠.png', import.meta.url)
+    },
+    {
+        "name": "圣殿骑士",
+        "quality": 3,
+        "cost": 3,
+        "path": new URL('/public/cardImg/simangdiguo/圣殿骑士.png', import.meta.url)
+    },
+    {
+        "name": "白袍主教",
+        "quality": 3,
+        "cost": 3,
+        "path": new URL('/public/cardImg/simangdiguo/白袍主教.png', import.meta.url)
+    },
+    {
+        "name": "边境高墙",
+        "quality": 3,
+        "cost": 3,
+        "path": new URL('/public/cardImg/simangdiguo/边境高墙.png', import.meta.url)
+    },
+    {
+        "name": "冲锋装备",
+        "quality": 3,
+        "cost": 3,
+        "path": new URL('/public/cardImg/simangdiguo/冲锋装备.png', import.meta.url)
+    },
+    {
+        "name": "王城酒吧老板",
+        "quality": 3,
+        "cost": 3,
+        "path": new URL('/public/cardImg/simangdiguo/王城酒吧老板.png', import.meta.url)
+    },
+    {
+        "name": "炫光草人",
+        "quality": 3,
+        "cost": 3,
+        "path": new URL('/public/cardImg/simangdiguo/炫光草人.png', import.meta.url)
+    },
+    {
+        "name": "铁甲卫队长",
+        "quality": 3,
+        "cost": 3,
+        "path": new URL('/public/cardImg/simangdiguo/铁甲卫队长.png', import.meta.url)
+    },
+    {
+        "name": "重炮阵地",
+        "quality": 3,
+        "cost": 3,
+        "path": new URL('/public/cardImg/simangdiguo/重炮阵地.png', import.meta.url)
+    },
+    {
+        "name": "符文·圣堂护盾",
+        "quality": 3,
+        "cost": 3,
+        "path": new URL('/public/cardImg/simangdiguo/符文·圣堂护盾.png', import.meta.url)
+    },
+    {
+        "name": "月光祭司",
+        "quality": 3,
+        "cost": 4,
+        "path": new URL('/public/cardImg/simangdiguo/月光祭司.png', import.meta.url)
+    },
+    {
+        "name": "圣殿卫队长",
+        "quality": 3,
+        "cost": 4,
+        "path": new URL('/public/cardImg/simangdiguo/圣殿卫队长.png', import.meta.url)
+    },
+    {
+        "name": "光之赞歌",
+        "quality": 3,
+        "cost": 4,
+        "path": new URL('/public/cardImg/simangdiguo/光之赞歌.png', import.meta.url)
+    },
+    {
+        "name": "夺取阵地",
+        "quality": 3,
+        "cost": 4,
+        "path": new URL('/public/cardImg/simangdiguo/夺取阵地.png', import.meta.url)
+    },
+    {
+        "name": "钢铁大师",
+        "quality": 3,
+        "cost": 4,
+        "path": new URL('/public/cardImg/simangdiguo/钢铁大师.png', import.meta.url)
+    },
+    {
+        "name": "召集护卫",
+        "quality": 3,
+        "cost": 4,
+        "path": new URL('/public/cardImg/simangdiguo/召集护卫.png', import.meta.url)
+    },
+    {
+        "name": "明光主教",
+        "quality": 3,
+        "cost": 4,
+        "path": new URL('/public/cardImg/simangdiguo/明光主教.png', import.meta.url)
+    },
+    {
+        "name": "炽阳坠落",
+        "quality": 3,
+        "cost": 4,
+        "path": new URL('/public/cardImg/simangdiguo/炽阳坠落.png', import.meta.url)
+    },
+    {
+        "name": "符文·天使印记",
+        "quality": 3,
+        "cost": 4,
+        "path": new URL('/public/cardImg/simangdiguo/符文·天使印记.png', import.meta.url)
+    },
+    {
+        "name": "禁卫百夫长",
+        "quality": 3,
         "cost": 5,
-        "path": new URL('/public/cardImg/manshikuangye/符文·野性守护.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/禁卫百夫长.png', import.meta.url)
     },
     {
-        "name": "疯狂祭师",
-        "quality": 3,
-        "cost": 2,
-        "path": new URL('/public/cardImg/manshikuangye/疯狂祭师.png', import.meta.url)
-    },
-    {
-        "name": "无畏猎户",
-        "quality": 3,
-        "cost": 2,
-        "path": new URL('/public/cardImg/manshikuangye/无畏猎户.png', import.meta.url)
-    },
-    {
-        "name": "血蜥头领",
-        "quality": 3,
-        "cost": 2,
-        "path": new URL('/public/cardImg/manshikuangye/血蜥头领.png', import.meta.url)
-    },
-    {
-        "name": "暴怒野人",
-        "quality": 3,
-        "cost": 2,
-        "path": new URL('/public/cardImg/manshikuangye/暴怒野人.png', import.meta.url)
-    },
-    {
-        "name": "诱敌草人",
-        "quality": 3,
-        "cost": 2,
-        "path": new URL('/public/cardImg/manshikuangye/诱敌草人.png', import.meta.url)
-    },
-    {
-        "name": "雪原狼女",
-        "quality": 3,
-        "cost": 2,
-        "path": new URL('/public/cardImg/manshikuangye/雪原狼女.png', import.meta.url)
-    },
-    {
-        "name": "狼月祭师",
-        "quality": 3,
-        "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/狼月祭师.png', import.meta.url)
-    },
-    {
-        "name": "荒原智者",
-        "quality": 3,
-        "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/荒原智者.png', import.meta.url)
-    },
-    {
-        "name": "地洞巨獾",
-        "quality": 3,
-        "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/地洞巨獾.png', import.meta.url)
-    },
-    {
-        "name": "肥鼠晚宴",
-        "quality": 3,
-        "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/肥鼠晚宴.png', import.meta.url)
-    },
-    {
-        "name": "活力仙人掌",
-        "quality": 3,
-        "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/活力仙人掌.png', import.meta.url)
-    },
-    {
-        "name": "圣兽祭师",
-        "quality": 3,
-        "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/圣兽祭师.png', import.meta.url)
-    },
-    {
-        "name": "高原保卫战",
-        "quality": 3,
-        "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/高原保卫战.png', import.meta.url)
-    },
-    {
-        "name": "符文·穿山魔灵",
-        "quality": 3,
-        "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/符文·穿山魔灵.png', import.meta.url)
-    },
-    {
-        "name": "符文·噬人花田",
-        "quality": 3,
-        "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/符文·噬人花田.png', import.meta.url)
-    },
-    {
-        "name": "符文·源力之石",
-        "quality": 3,
-        "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/符文·源力之石.png', import.meta.url)
-    },
-    {
-        "name": "象牙少女",
-        "quality": 3,
-        "cost": 4,
-        "path": new URL('/public/cardImg/manshikuangye/象牙少女.png', import.meta.url)
-    },
-    {
-        "name": "源力祭师",
-        "quality": 3,
-        "cost": 4,
-        "path": new URL('/public/cardImg/manshikuangye/源力祭师.png', import.meta.url)
-    },
-    {
-        "name": "饥蛮巨汉",
-        "quality": 3,
-        "cost": 4,
-        "path": new URL('/public/cardImg/manshikuangye/饥蛮巨汉.png', import.meta.url)
-    },
-    {
-        "name": "飞斧狂人",
-        "quality": 3,
-        "cost": 4,
-        "path": new URL('/public/cardImg/manshikuangye/飞斧狂人.png', import.meta.url)
-    },
-    {
-        "name": "霜矛骑士",
-        "quality": 3,
-        "cost": 4,
-        "path": new URL('/public/cardImg/manshikuangye/霜矛骑士.png', import.meta.url)
-    },
-    {
-        "name": "愤怒狂战士",
-        "quality": 3,
-        "cost": 4,
-        "path": new URL('/public/cardImg/manshikuangye/愤怒狂战士.png', import.meta.url)
-    },
-    {
-        "name": "牛角图腾",
-        "quality": 3,
-        "cost": 4,
-        "path": new URL('/public/cardImg/manshikuangye/牛角图腾.png', import.meta.url)
-    },
-    {
-        "name": "贪婪雪怪",
-        "quality": 3,
-        "cost": 4,
-        "path": new URL('/public/cardImg/manshikuangye/贪婪雪怪.png', import.meta.url)
-    },
-    {
-        "name": "符文·河马足迹",
-        "quality": 3,
-        "cost": 4,
-        "path": new URL('/public/cardImg/manshikuangye/符文·河马足迹.png', import.meta.url)
-    },
-    {
-        "name": "石斧头领",
+        "name": "田园保卫战",
         "quality": 3,
         "cost": 5,
-        "path": new URL('/public/cardImg/manshikuangye/石斧头领.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/田园保卫战.png', import.meta.url)
     },
     {
-        "name": "飞斧女豪",
+        "name": "圣光主祭",
         "quality": 3,
         "cost": 5,
-        "path": new URL('/public/cardImg/manshikuangye/飞斧女豪.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/圣光主祭.png', import.meta.url)
     },
     {
-        "name": "坚毅大祭司",
+        "name": "皇家射手",
         "quality": 3,
         "cost": 5,
-        "path": new URL('/public/cardImg/manshikuangye/坚毅大祭司.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/皇家射手.png', import.meta.url)
     },
     {
-        "name": "荒原牛头怪",
+        "name": "击碎符文",
+        "quality": 3,
+        "cost": 5,
+        "path": new URL('/public/cardImg/simangdiguo/击碎符文.png', import.meta.url)
+    },
+    {
+        "name": "惩戒天使",
         "quality": 3,
         "cost": 6,
-        "path": new URL('/public/cardImg/manshikuangye/荒原牛头怪.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/惩戒天使.png', import.meta.url)
     },
     {
-        "name": "杂斑野猪王",
+        "name": "光明圣骑士",
         "quality": 3,
         "cost": 6,
-        "path": new URL('/public/cardImg/manshikuangye/杂斑野猪王.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/光明圣骑士.png', import.meta.url)
     },
     {
-        "name": "大嘴酋长",
+        "name": "禁卫指挥官",
         "quality": 3,
         "cost": 6,
-        "path": new URL('/public/cardImg/manshikuangye/大嘴酋长.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/禁卫指挥官.png', import.meta.url)
     },
     {
-        "name": "源力苏醒",
-        "quality": 3,
-        "cost": 6,
-        "path": new URL('/public/cardImg/manshikuangye/源力苏醒.png', import.meta.url)
-    },
-    {
-        "name": "驼岩长老",
-        "quality": 3,
-        "cost": 6,
-        "path": new URL('/public/cardImg/manshikuangye/驼岩长老.png', import.meta.url)
-    },
-    {
-        "name": "符文·猛犸之歌",
-        "quality": 3,
-        "cost": 6,
-        "path": new URL('/public/cardImg/manshikuangye/符文·猛犸之歌.png', import.meta.url)
-    },
-    {
-        "name": "蛮石独眼巨人",
+        "name": "皇家狮鹫",
         "quality": 3,
         "cost": 7,
-        "path": new URL('/public/cardImg/manshikuangye/蛮石独眼巨人.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/皇家狮鹫.png', import.meta.url)
     },
     {
-        "name": "旷野的呼唤",
+        "name": "破城者·阿基琉斯",
         "quality": 3,
         "cost": 7,
-        "path": new URL('/public/cardImg/manshikuangye/旷野的呼唤.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/破城者·阿基琉斯.png', import.meta.url)
     },
     {
-        "name": "贪食白龙",
+        "name": "荣光壁垒",
         "quality": 3,
         "cost": 8,
-        "path": new URL('/public/cardImg/manshikuangye/贪食白龙.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/荣光壁垒.png', import.meta.url)
     },
     {
-        "name": "呼伴猎食兽",
-        "quality": 3,
-        "cost": 8,
-        "path": new URL('/public/cardImg/manshikuangye/呼伴猎食兽.png', import.meta.url)
-    },
-    {
-        "name": "传记·野蛮花园",
-        "quality": 3,
-        "cost": 2,
-        "path": new URL('/public/cardImg/manshikuangye/传记·野蛮花园.png', import.meta.url)
-    },
-    {
-        "name": "传记·伤痛记忆",
+        "name": "传记·钢铁守卫",
         "quality": 3,
         "cost": 1,
-        "path": new URL('/public/cardImg/manshikuangye/传记·伤痛记忆.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/传记·钢铁守卫.png', import.meta.url)
     },
     {
-        "name": "鸵鸟王·霍利",
+        "name": "传记·钢铁赞歌",
+        "quality": 3,
+        "cost": 2,
+        "path": new URL('/public/cardImg/simangdiguo/传记·钢铁赞歌.png', import.meta.url)
+    },
+    {
+        "name": "传记·钢铁意志",
+        "quality": 3,
+        "cost": 4,
+        "path": new URL('/public/cardImg/simangdiguo/传记·钢铁意志.png', import.meta.url)
+    },
+    {
+        "name": "曙光·安娜贝尔",
         "quality": 4,
         "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/鸵鸟王·霍利.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/曙光·安娜贝尔.png', import.meta.url)
     },
     {
-        "name": "旷野游侠·大羽",
-        "quality": 4,
-        "cost": 3,
-        "path": new URL('/public/cardImg/manshikuangye/旷野游侠·大羽.png', import.meta.url)
-    },
-    {
-        "name": "比尔&比利",
+        "name": "圣枪·卡洛琳",
         "quality": 4,
         "cost": 4,
-        "path": new URL('/public/cardImg/manshikuangye/比尔&比利.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/圣枪·卡洛琳.png', import.meta.url)
     },
     {
-        "name": "符文·石破天惊",
+        "name": "明日之音·露娜",
         "quality": 4,
         "cost": 4,
-        "path": new URL('/public/cardImg/manshikuangye/符文·石破天惊.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/明日之音·露娜.png', import.meta.url)
     },
     {
-        "name": "血饮烈斧·凯",
+        "name": "符文·辉煌赞美诗",
+        "quality": 4,
+        "cost": 4,
+        "path": new URL('/public/cardImg/simangdiguo/符文·辉煌赞美诗.png', import.meta.url)
+    },
+    {
+        "name": "帝国军魂·莱哈特",
         "quality": 4,
         "cost": 5,
-        "path": new URL('/public/cardImg/manshikuangye/血饮烈斧·凯.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/帝国军魂·莱哈特.png', import.meta.url)
     },
     {
-        "name": "热血战歌！",
-        "quality": 4,
-        "cost": 5,
-        "path": new URL('/public/cardImg/manshikuangye/热血战歌！.png', import.meta.url)
-    },
-    {
-        "name": "蛮古撼地兽",
+        "name": "正阳大主教·伊恩",
         "quality": 4,
         "cost": 6,
-        "path": new URL('/public/cardImg/manshikuangye/蛮古撼地兽.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/正阳大主教·伊恩.png', import.meta.url)
     },
     {
-        "name": "原野大祭师·鲁玛",
+        "name": "司莫斯阵地",
+        "quality": 4,
+        "cost": 6,
+        "path": new URL('/public/cardImg/simangdiguo/司莫斯阵地.png', import.meta.url)
+    },
+    {
+        "name": "炫目天使·蕾娜",
         "quality": 4,
         "cost": 7,
-        "path": new URL('/public/cardImg/manshikuangye/原野大祭师·鲁玛.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/炫目天使·蕾娜.png', import.meta.url)
     },
     {
-        "name": "荒原暴君·血眼",
+        "name": "钢铁统帅·雷蒙德",
         "quality": 4,
         "cost": 8,
-        "path": new URL('/public/cardImg/manshikuangye/荒原暴君·血眼.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/钢铁统帅·雷蒙德.png', import.meta.url)
     },
     {
-        "name": "炎阳巨龙",
+        "name": "司莫斯的光明要塞",
         "quality": 4,
         "cost": 9,
-        "path": new URL('/public/cardImg/manshikuangye/炎阳巨龙.png', import.meta.url)
+        "path": new URL('/public/cardImg/simangdiguo/司莫斯的光明要塞.png', import.meta.url)
     }
 ];

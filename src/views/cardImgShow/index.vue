@@ -70,35 +70,48 @@
 <script lang="ts" setup>
 import { ref, onMounted } from "vue";
 import { simangdiguo } from "@/data/cardImgData/simangdiguo";
+import { yinmizhe } from "@/data/cardImgData/yinmizhe";
+import { chanyigu } from "@/data/cardImgData/chanyigu";
+import { tiantanggang } from "@/data/cardImgData/tiantanggang";
+import { lianyushenyuan } from "@/data/cardImgData/lianyushenyuan";
 import { manshikuangye } from "@/data/cardImgData/manshikuangye";
-import { gradeData } from "@/data/z_otherData/gradeData";
+import { dongshenshitu } from "@/data/cardImgData/dongshenshitu";
+// import { gradeData } from "@/data/z_otherData/gradeData";
 
 const zhenyin = parseInt(sessionStorage.getItem("zhenyin") as string);
-
 const imgList = ref<any>([]);
 
-console.log(simangdiguo, "ppp")
 async function getImg() {
     if (zhenyin == 1) {
         imgList.value = simangdiguo;
+    } else if (zhenyin == 2) {
+        imgList.value = yinmizhe;
+    } else if (zhenyin == 3) {
+        imgList.value = chanyigu;
+    } else if (zhenyin == 4) {
+        imgList.value = tiantanggang;
+    } else if (zhenyin == 5) {
+        imgList.value = lianyushenyuan;
     } else if (zhenyin == 6) {
         imgList.value = manshikuangye;
+    } else if (zhenyin == 7) {
+        imgList.value = dongshenshitu;
     }
 }
 
-async function getData() {
-    const data = gradeData.filter((e: any) => e.zhenyin == 6);
+/* async function getData() {
+    const data = gradeData.filter((e: any) => e.zhenyin == 5);
     const list = data.map((e: any) => {
         return {
             name: e.name,
             quality: e.quality,
             cost: e.cost,
-            path: `new URL('/public/cardImg/simangdiguo/${e.name}.png', import.meta.url)`
+            path: `new URL('/public/cardImg/lianyushenyuan/${e.name}.png', import.meta.url)`
         }
     });
     console.log(list);
 }
-getData()
+getData(); */
 
 onMounted(() => {
     getImg();

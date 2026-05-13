@@ -24,7 +24,7 @@ const routeList: any = [
   {
     path: "/img/showHero",
     name: "imgShowHero",
-    component: () => import("@/views/cardImgShow/index.vue")
+    component: () => import("@/views/cardImgShow/hero.vue")
   },
   {
     path: "/cardGrade",

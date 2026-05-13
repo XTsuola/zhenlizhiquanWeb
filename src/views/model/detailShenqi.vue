@@ -71,7 +71,8 @@
                     神器品质
                 </a-col>
                 <a-col class="aCol" :span="18">
-                    {{ qualityList[prop.detailData.quality] }}
+                    <a-tag :color="getQualityColor(prop.detailData.quality)">{{ getQualityName(prop.detailData.quality)
+                    }}</a-tag>
                 </a-col>
             </a-row>
         </div>
@@ -87,6 +88,19 @@ const prop = defineProps<{
 }>();
 
 const nowlevel = ref(12);
+const qualityColorList = [{
+    label: "橙色",
+    value: 3,
+    color: "#FFA500"
+}, {
+    label: "紫色",
+    value: 2,
+    color: "#8e488e"
+}, {
+    label: "蓝色",
+    value: 1,
+    color: "#2db7f5"
+}];
 
 function getZhanli(quality: number) {
     let zhanli = 0;
@@ -102,6 +116,14 @@ function getZhanli(quality: number) {
     } else {
         return zhanli;
     }
+}
+
+function getQualityName(quality: number) {
+    return qualityColorList.find(e => e.value == quality)?.label;
+}
+
+function getQualityColor(quality: number) {
+    return qualityColorList.find(e => e.value == quality)?.color;
 }
 
 </script>

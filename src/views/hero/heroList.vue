@@ -3,10 +3,12 @@
         <div class="search_input">
             <a-input v-model:value="formState.name" placeholder="请输入名称" />
         </div>
+    </div>
+    <div class="search">
         <div class="search_btn">
             <a-button style="margin-right: 8px;" type="primary" @click="search">查询</a-button>
             <a-button style="margin-right: 8px;" @click="reset">清空</a-button>
-            <a-button @click="view">预览</a-button>
+            <a-button style="margin-right: 8px;" @click="view">预览</a-button>
             <a-button @click="goBack">返回</a-button>
         </div>
     </div>
