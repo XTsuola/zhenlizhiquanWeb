@@ -53,8 +53,6 @@ if (parseInt(gameType as string) > 7) {
         }
     });
 }
-const zhanqu = ref<number | undefined>(undefined);
-const changci = ref<number | undefined>(undefined);
 
 </script>
 <style lang="less" scoped>

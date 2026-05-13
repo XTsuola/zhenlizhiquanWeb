@@ -72,7 +72,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from "vue";
-import { qualityList, zhenyinList } from "@/utils/func";
+import { zhenyinList } from "@/utils/func";
 
 const prop = defineProps<{
     detailData: any

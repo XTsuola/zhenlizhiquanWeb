@@ -126,7 +126,7 @@
 <script lang="ts" setup>
 import { ref, onMounted, onBeforeUnmount, nextTick } from "vue";
 import { init } from "echarts";
-import { qualityList, zhenyinList } from "@/utils/func";
+import { zhenyinList } from "@/utils/func";
 import html2canvas from "html2canvas";
 import skinData from "@/data/skinData/skinData";
 

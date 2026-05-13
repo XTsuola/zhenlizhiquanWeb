@@ -89,7 +89,7 @@
                 </a-col>
                 <a-col class="aCol" :span="18">
                     <a-tag :color="getQualityColor(prop.detailData.quality)">{{ getQualityName(prop.detailData.quality)
-                        }}</a-tag>
+                    }}</a-tag>
                 </a-col>
             </a-row>
             <a-row type="flex" :class="showLine > 1 ? 'border_bottom' : ''">
@@ -101,7 +101,7 @@
                         {{ getGradeName(prop.detailData.grade) }}
                     </div>
                     <a-tag v-else :color="getGradeColor(prop.detailData.grade)">{{ getGradeName(prop.detailData.grade)
-                    }}</a-tag>
+                        }}</a-tag>
                     <a-button v-if="showLine > 0" size="small" style="margin-left:auto;" @click="showisHero">{{
                         showLine > 1
                             ?
@@ -123,7 +123,7 @@
 <script lang="ts" setup>
 import { ref, onMounted, onBeforeUnmount, nextTick } from "vue";
 import { init } from "echarts";
-import { qualityList, zhenyinList } from "@/utils/func";
+import { zhenyinList } from "@/utils/func";
 import skinData from "@/data/skinData/skinData";
 
 declare var window: any;

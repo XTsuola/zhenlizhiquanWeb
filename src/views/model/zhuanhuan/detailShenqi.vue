@@ -72,7 +72,7 @@
                 </a-col>
                 <a-col class="aCol" :span="18">
                     <a-tag :color="getQualityColor(prop.detailData.quality)">{{ getQualityName(prop.detailData.quality)
-                        }}</a-tag>
+                    }}</a-tag>
                 </a-col>
             </a-row>
         </div>
@@ -80,7 +80,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from "vue";
-import { qualityList, zhenyinList } from "@/utils/func";
+import { zhenyinList } from "@/utils/func";
 import { blueList, purpleList, goldList } from "@/data/shenqiData/zhanli";
 
 const prop = defineProps<{

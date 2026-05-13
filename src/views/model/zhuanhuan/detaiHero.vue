@@ -65,7 +65,7 @@
                 </a-col>
                 <a-col class="aCol" :span="18">
                     <a-tag :color="getQualityColor(prop.detailData.quality)">{{ getQualityName(prop.detailData.quality)
-                        }}</a-tag>
+                    }}</a-tag>
                 </a-col>
             </a-row>
         </div>
@@ -75,7 +75,7 @@
 </template>
 <script lang="ts" setup>
 import { onMounted, ref } from "vue";
-import { qualityList, zhenyinList } from "@/utils/func";
+import { zhenyinList } from "@/utils/func";
 import html2canvas from "html2canvas";
 
 const prop = defineProps<{
@@ -188,7 +188,6 @@ onMounted(async () => {
         nowImg.value = await urlToBase64(prop.detailData.img)
     }
 });
-
 
 </script>
 <style lang="less" scoped>
