@@ -170,19 +170,19 @@ const gradeList = [{
 const qualityColorList = [{
     label: "橙卡",
     value: 4,
-    color: "#FFA500"
+    color: "orange"
 }, {
     label: "紫卡",
     value: 3,
-    color: "#8e488e"
+    color: "purple"
 }, {
     label: "蓝卡",
     value: 2,
-    color: "#2db7f5"
+    color: "blue"
 }, {
     label: "白卡",
     value: 1,
-    color: "#cccccc"
+    color: "lightgray"
 }];
 const showLine = ref(0);
 if (prop.detailData.type == 1) showLine.value = 1;
