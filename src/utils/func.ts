@@ -770,7 +770,7 @@ export const skinSelect = [
     "zhenyin": 3,
     "cost": 5,
     "img": "/taxuexing_ming",
-    'pici': 4
+    'pici': 5
   },
   {
     "cardId": 276,
@@ -778,7 +778,7 @@ export const skinSelect = [
     "zhenyin": 3,
     "cost": 5,
     "img": "/xuyuanshenshu",
-    'pici': 5
+    'pici': 4
   },
   {
     "cardId": 278,
@@ -938,7 +938,7 @@ export const skinSelect = [
     "zhenyin": 5,
     "cost": 8,
     "img": "/baqidashe",
-    'pici': 5
+    'pici': 4
   },
   {
     "cardId": 461,
@@ -946,7 +946,7 @@ export const skinSelect = [
     "zhenyin": 5,
     "cost": 9,
     "img": "/heiantaitan_balake",
-    'pici': 4
+    'pici': 5
   },
   {
     "cardId": 537,
@@ -954,7 +954,7 @@ export const skinSelect = [
     "zhenyin": 6,
     "cost": 3,
     "img": "/kongquewang_huoli",
-    'pici': 4
+    'pici': 5
   },
   {
     "cardId": 538,
@@ -970,7 +970,7 @@ export const skinSelect = [
     "zhenyin": 6,
     "cost": 4,
     "img": "/shuangtoufashi",
-    'pici': 5
+    'pici': 4
   },
   {
     "cardId": 540,
