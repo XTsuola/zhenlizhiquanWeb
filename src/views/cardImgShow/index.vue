@@ -109,7 +109,6 @@ async function getImg() {
             path: `new URL('/public/cardImg/lianyushenyuan/${e.name}.png', import.meta.url)`
         }
     });
-    console.log(list);
 }
 getData(); */
 

@@ -4,12 +4,12 @@
             <a-select v-model:value="zhanqu" style="min-width:160px;margin-right: 20px;" placeholder="请选择战区" disabled>
                 <a-select-option v-for="item in nowZhanquList" :key="item.value" :value="item.value">{{
                     item.label
-                }}</a-select-option>
+                    }}</a-select-option>
             </a-select>
             <a-select v-model:value="changci" style="min-width:160px" placeholder="请选择场次" disabled>
                 <a-select-option v-for="item in changciList" :key="item.value" :value="item.value">{{
                     item.label
-                }}</a-select-option>
+                    }}</a-select-option>
             </a-select>
         </div>
         <DetailPlayer>
@@ -20,7 +20,7 @@
                 <a-select style="width: 100%;" v-model:value="aInfo.kedu" placeholder="请选择氪度" disabled>
                     <a-select-option v-for="item in keduList" :key="item.value" :value="item.value">{{
                         item.label
-                    }}</a-select-option>
+                        }}</a-select-option>
                 </a-select>
             </template>
             <template v-slot:left_hero>
@@ -28,7 +28,7 @@
                     disabled>
                     <a-select-option v-for="item in heroSelect" :key="item.value" :value="item.value">{{
                         item.label
-                        }}</a-select-option>
+                    }}</a-select-option>
                 </a-select>
             </template>
             <template v-slot:right_name>
@@ -38,7 +38,7 @@
                 <a-select style="width: 100%;" v-model:value="bInfo.kedu" placeholder="请选择氪度" disabled>
                     <a-select-option v-for="item in keduList" :key="item.value" :value="item.value">{{
                         item.label
-                        }}</a-select-option>
+                    }}</a-select-option>
                 </a-select>
             </template>
             <template v-slot:right_hero>
@@ -46,7 +46,7 @@
                     disabled>
                     <a-select-option v-for="item in heroSelect" :key="item.value" :value="item.value">{{
                         item.label
-                        }}</a-select-option>
+                    }}</a-select-option>
                 </a-select>
             </template>
         </DetailPlayer>
@@ -141,13 +141,19 @@ function getDetaiInfo(value: number, index: number) {
     let left = heroSelect.value.find((e: any) => e.value == aInfo.hero[i])?.label;
     let right = heroSelect.value.find((e: any) => e.value == bInfo.hero[i])?.label;
     if (value === 0) {
-        str = "弃";
+        str = "弃权";
         color = "#cccccc";
     } else if (value === 1) {
-        str = "胜";
+        str = "战胜";
         color = "#87d068";
     } else if (value === 2) {
-        str = "败";
+        str = "战败";
+        color = "#f50";
+    } else if (value === 3) {
+        str = "战胜（无效）";
+        color = "#87d068";
+    } else if (value === 4) {
+        str = "战败（无效）";
         color = "#f50";
     }
     return { str, left, right, color };

@@ -6,10 +6,10 @@
             <div class="b10">
                 <slot name="left_name"></slot>
             </div>
-            <div class="b10">氪度：</div>
+            <!-- <div class="b10">氪度：</div>
             <div class="b10">
                 <slot name="left_kedu"></slot>
-            </div>
+            </div> -->
             <div class="b10">英雄顺位：</div>
             <div class="b10">
                 <slot name="left_hero"></slot>
@@ -21,10 +21,10 @@
             <div class="b10">
                 <slot name="right_name"></slot>
             </div>
-            <div class="b10">氪度：</div>
+            <!-- <div class="b10">氪度：</div>
             <div class="b10">
                 <slot name="right_kedu"></slot>
-            </div>
+            </div> -->
             <div class="b10">英雄顺位：</div>
             <div class="b10">
                 <slot name="right_hero"></slot>

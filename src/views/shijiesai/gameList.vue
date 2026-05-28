@@ -4,7 +4,7 @@
             <div>
                 <a-button @click="goBack">返回</a-button>
                 <a-button style="margin-left: 8px;" type="primary" @click="add"
-                    :disabled="gameType != '10'">新增对局</a-button>
+                    :disabled="gameType != '11'">新增对局</a-button>
             </div>
             <div>
                 <a-button style="margin-left: auto;" type="primary" danger @click="analysis">数据分析</a-button>

@@ -1,19 +1,22 @@
 <template>
     <div class="gameMenu">
-        <div class="gameMenu_btn">
+        <div class="top8">
             <a-button @click="goBack">返回</a-button>
         </div>
-        <div class="gameMenu_btn">
-            <a-button type="primary" @click="goList(7)">第七届世界赛</a-button>
+        <div class="gameMenu_btn top8">
+            <a-button type="primary" @click="goList(7)">第7届世界赛</a-button>
         </div>
-        <div class="gameMenu_btn">
-            <a-button type="primary" @click="goList(8)">第八届世界赛</a-button>
+        <div class="gameMenu_btn top8">
+            <a-button type="primary" @click="goList(8)">第8届世界赛</a-button>
         </div>
-        <div class="gameMenu_btn">
-            <a-button type="primary" @click="goList(9)">第九届世界赛</a-button>
+        <div class="gameMenu_btn top8">
+            <a-button type="primary" @click="goList(9)">第9届世界赛</a-button>
         </div>
-        <div class="gameMenu_btn">
-            <a-button type="primary" @click="goList(10)">第十届世界赛</a-button>
+        <div class="gameMenu_btn top8">
+            <a-button type="primary" @click="goList(10)">第10届世界赛</a-button>
+        </div>
+        <div class="gameMenu_btn top8">
+            <a-button type="primary" @click="goList(11)">第11届世界赛</a-button>
         </div>
     </div>
 </template>
@@ -38,8 +41,13 @@ function goList(num: number) {
     justify-content: flex-start;
     flex-wrap: wrap;
 
-    .gameMenu_btn {
-        margin-bottom: 8px;
+    .top8 {
+        margin-top: 8px;
     }
+
+}
+
+:deep(.gameMenu_btn > button) {
+    width: 120px;
 }
 </style>

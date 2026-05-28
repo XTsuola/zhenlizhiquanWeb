@@ -49,7 +49,6 @@ async function getImg() {
             path: `new URL('/public/heroImg/${e.name}.png', import.meta.url)`
         }
     });
-    console.log(list);
 }
 getData(); */
 

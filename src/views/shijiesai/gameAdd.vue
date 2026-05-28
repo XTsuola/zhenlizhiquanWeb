@@ -156,7 +156,7 @@ function addShengfu() {
         message.error("请先选择完双方英雄顺位！");
         return false;
     }
-    if (nowShengfu.value === 0 || nowShengfu.value === 1 || nowShengfu.value === 2) {
+    if (nowShengfu.value === 0 || nowShengfu.value === 1 || nowShengfu.value === 2 || nowShengfu.value === 3 || nowShengfu.value === 4) {
         shengfuList.value.push(nowShengfu.value);
         nowShengfu.value = undefined;
     } else {
@@ -174,13 +174,19 @@ function getDetaiInfo(value: number, index: number) {
     let left = heroSelect.value.find((e: any) => e.value == aInfo.hero[i]).label;
     let right = heroSelect.value.find((e: any) => e.value == bInfo.hero[i]).label;
     if (value === 0) {
-        str = "弃";
+        str = "弃权";
         color = "#cccccc";
     } else if (value === 1) {
-        str = "胜";
+        str = "战胜";
         color = "#87d068";
     } else if (value === 2) {
-        str = "败";
+        str = "战败";
+        color = "#f50";
+    } else if (value === 3) {
+        str = "战胜（无效）";
+        color = "#87d068";
+    } else if (value === 4) {
+        str = "战败（无效）";
         color = "#f50";
     }
     return { str, left, right, color };
@@ -192,10 +198,10 @@ async function save() {
             message.error("请填写昵称！");
             return false;
         }
-        if (aInfo.kedu == undefined || bInfo.kedu == undefined) {
+        /* if (aInfo.kedu == undefined || bInfo.kedu == undefined) {
             message.error("请填写氪度！");
             return false;
-        }
+        } */
         if (aInfo.hero.length != 4 || bInfo.hero.length != 4) {
             message.error("请先选择完双方英雄顺位！");
             return false;

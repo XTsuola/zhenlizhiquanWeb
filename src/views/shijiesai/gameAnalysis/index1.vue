@@ -2,7 +2,7 @@
     <div class="gameAnalysisHero">
         <div style="margin-bottom: 10px;"><span style="margin-right: 15px;">英雄选取&击杀表</span><a-button size="small"
                 @click="goBack">返回</a-button></div>
-        <MyTabel :columnsData="columns" :rowClass="true" @detail="showModal" :dataSource="data">
+        <MyTabel :columnsData="columns" :rowClass="true" @detail="showModal" @player="showPlayer" :dataSource="data">
         </MyTabel>
         <a-modal v-model:open="visible" destroyOnClose :title="title" :maskClosable="false">
             <div>胜率：{{ nowShenglv.toFixed(2) }}%</div>
@@ -15,7 +15,15 @@
                 <li v-for="value in nowJishaList2">{{ value.name }}：{{ value.count }}</li>
             </ul>
             <template #footer>
-                <a-button key="back" @click="cancel">关闭</a-button>
+                <a-button key="back" @click="visible = false">关闭</a-button>
+            </template>
+        </a-modal>
+        <a-modal v-model:open="visible2" destroyOnClose :title="title2" :maskClosable="false">
+            <ul style="margin-bottom: 15px;">
+                <li v-for="name in nowPlayerList">{{ name }}</li>
+            </ul>
+            <template #footer>
+                <a-button key="back2" @click="visible2 = false">关闭</a-button>
             </template>
         </a-modal>
     </div>
@@ -29,7 +37,9 @@ import router from '@/router';
 
 const gameType = sessionStorage.getItem("gameType");
 const visible = ref(false);
+const visible2 = ref(false);
 const title = ref("击杀信息");
+const title2 = ref("使用选手");
 const data = ref<any>([]);
 const columns = ref<any>([
     {
@@ -47,13 +57,14 @@ const columns = ref<any>([
     {
         title: "操作",
         key: "action",
-        list: ["detail"],
-        width: 50
+        list: ["detail", "player"],
+        width: 80
     }
 ]);
 const nowJishaList = ref<any>([]);
 const nowJishaList2 = ref<any>([]);
 const nowShenglv = ref(0);
+const nowPlayerList = ref<string[]>([]);
 
 async function getList() {
     const params: ShijiesaiInfoListType = {
@@ -79,6 +90,7 @@ async function getList() {
                 count: 0,
                 sheng: 0,
                 bai: 0,
+                player: [],
                 cnt: new Map(),
                 cnt2: new Map()
             }
@@ -88,7 +100,9 @@ async function getList() {
                 const aIndex = heroData.findIndex((e: any) => e.id == data4[i].AInfo.hero[j]);
                 const bIndex = heroData.findIndex((e: any) => e.id == data4[i].BInfo.hero[j]);
                 heroData[aIndex].count++;
+                heroData[aIndex].player.push(data4[i].AInfo.name)
                 heroData[bIndex].count++;
+                heroData[bIndex].player.push(data4[i].BInfo.name)
             }
         }
         for (let i = 0; i < data8.length; i++) {
@@ -159,8 +173,11 @@ function showModal(_: number, record: any) {
     nowShenglv.value = sum != 0 ? (record.sheng / sum) * 100 : 0;
 }
 
-function cancel() {
-    visible.value = false;
+function showPlayer(record: any) {
+    visible2.value = true;
+    title2.value = record.name + "的使用选手";
+    record.player.sort((a: string, b: string) => parseInt(a) - parseInt(b));
+    nowPlayerList.value = record.player;
 }
 
 function goBack() {

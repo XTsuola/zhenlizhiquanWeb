@@ -11,7 +11,7 @@
                 4强至决赛
             </div>
             <div class="box dongshenshitu white" @click="goIndex(1)">
-                英雄击杀表
+                选手与击杀
             </div>
             <div class="box manshikuangye white" @click="goIndex(3)">
                 种族选取表
