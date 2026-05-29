@@ -43,10 +43,16 @@ const columns = ref<any>([
 ]);
 
 async function getList0() {
+    let type = parseInt(gameType as string);
+    if(type == 11) {
+        type -= 2;
+    } else {
+        type -= 1;
+    }
     const params: ShijiesaiInfoListType = {
         pageSize: 200,
         pageNo: 1,
-        gameType: parseInt(gameType as string) - 1
+        gameType: type
     };
     const res = await shijiesaiInfoList(params);
     if (res.status == 200) {
