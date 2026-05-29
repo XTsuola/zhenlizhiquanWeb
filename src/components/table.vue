@@ -35,7 +35,7 @@
                 </span>
                 <span v-if="column.key === 'skillSign'">
                     <a-tag v-for="item in record.skillSign" :color="item.color">{{ item.name
-                        }}</a-tag>
+                    }}</a-tag>
                 </span>
                 <span v-if="column.key === 'now'">
                     <div>人次：</div>
@@ -69,11 +69,6 @@
                             <span v-if="item == 'tag'">
                                 <span class="pointer" @click="emits('tag', record)">
                                     <a-button type="link" size="small">标签</a-button>
-                                </span>
-                            </span>
-                            <span v-if="item == 'player'">
-                                <span class="pointer" @click="emits('player', record)">
-                                    <a-button danger type="link" size="small">选手</a-button>
                                 </span>
                             </span>
                             <span v-if="item == 'look'">
@@ -153,7 +148,7 @@ interface Prop {
 }
 
 const prop = defineProps<Prop>();
-const emits = defineEmits(["detail", "edit", "delete", "player", "changePage", "download", "resetPassword", "changeAdmin", "look", "grade", "tag", "frequency", "together", "level", "star"]);
+const emits = defineEmits(["detail", "edit", "delete", "changePage", "download", "resetPassword", "changeAdmin", "look", "grade", "tag", "frequency", "together", "level", "star"]);
 
 function rowClassName(record: any) {
     if (record.no) {
