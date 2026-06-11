@@ -130,6 +130,16 @@ const whereList: any = [{
     bgColor: "#e08d9b",
     log: "查询比赛"
 }, {
+    name: "题目回顾",
+    url: "/questionHistory",
+    bgColor: "#03a1c9",
+    log: "查询答题"
+}, {
+    name: "每日一题",
+    url: "/question",
+    bgColor: "#03a1c9",
+    log: "查询答题"
+}, {
     name: "名人堂",
     url: "/member",
     bgColor: "#2727db",
@@ -140,20 +150,6 @@ const whereList: any = [{
     bgColor: "#808080",
     log: "查询留言"
 }];
-
-/*
-{
-    name: "题目回顾",
-    url: "/questionHistory",
-    bgColor: "#03a1c9",
-    log: "查询答题"
-}, {
-    name: "每日一题",
-    url: "/question",
-    bgColor: "#03a1c9",
-    log: "查询答题"
-},
-*/
 
 function goCard(id: number) {
     createLog("查询卡牌");

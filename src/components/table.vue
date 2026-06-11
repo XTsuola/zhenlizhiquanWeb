@@ -24,7 +24,7 @@
                     <a-tag v-else :color="getGradeColor(record.grade)">{{ getGradeName(record.grade) }}</a-tag>
                 </span>
                 <span v-if="column.key === 'score'">
-                    <div v-if="record.grade >= 95" class="tagBg">
+                    <div v-if="record.score >= 95" class="tagBg">
                         {{ getScoreGradeName(record.score, record.title) }}
                     </div>
                     <a-tag v-else :color="getScoreGradeColor(record.score)">{{ getScoreGradeName(record.score,
@@ -301,7 +301,7 @@ function getTagName(tag: any) {
 
 .tagBg {
     margin: 0;
-    width: 60px;
+    width: 88px;
     color: #ffffff;
     display: flex;
     justify-content: center;

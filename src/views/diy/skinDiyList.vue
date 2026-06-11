@@ -286,14 +286,6 @@ async function handleOk() {
 
 function getPiciList() {
     const list: any = [{
-        value: 3,
-        label: "批次3",
-        children: []
-    }, {
-        value: 4,
-        label: "批次4",
-        children: []
-    }, {
         value: 5,
         label: "批次5",
         children: []
@@ -320,6 +312,14 @@ function getPiciList() {
     }, {
         value: 2,
         label: "批次2",
+        children: []
+    }, {
+        value: 3,
+        label: "批次3",
+        children: []
+    }, {
+        value: 4,
+        label: "批次4",
         children: []
     }];
     for (let i = 0; i < skinSelect.length; i++) {
