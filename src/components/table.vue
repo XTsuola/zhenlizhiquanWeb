@@ -18,13 +18,13 @@
                     </a-badge>
                 </span>
                 <span v-if="column.key === 'grade'">
-                    <div v-if="getGradeName(record.grade) == 'SSS真神'" class="tagBg">
+                    <div v-if="getGradeName(record.grade) == 'SSS真神'" class="tagBg" style="width: 60px;">
                         {{ getGradeName(record.grade) }}
                     </div>
                     <a-tag v-else :color="getGradeColor(record.grade)">{{ getGradeName(record.grade) }}</a-tag>
                 </span>
                 <span v-if="column.key === 'score'">
-                    <div v-if="record.score >= 95" class="tagBg">
+                    <div v-if="record.score >= 95" class="tagBg" style="width: 88px;">
                         {{ getScoreGradeName(record.score, record.title) }}
                     </div>
                     <a-tag v-else :color="getScoreGradeColor(record.score)">{{ getScoreGradeName(record.score,
@@ -35,7 +35,7 @@
                 </span>
                 <span v-if="column.key === 'skillSign'">
                     <a-tag v-for="item in record.skillSign" :color="item.color">{{ item.name
-                    }}</a-tag>
+                        }}</a-tag>
                 </span>
                 <span v-if="column.key === 'now'">
                     <div>人次：</div>
@@ -301,7 +301,6 @@ function getTagName(tag: any) {
 
 .tagBg {
     margin: 0;
-    width: 88px;
     color: #ffffff;
     display: flex;
     justify-content: center;
