@@ -35,7 +35,7 @@
                 </span>
                 <span v-if="column.key === 'skillSign'">
                     <a-tag v-for="item in record.skillSign" :color="item.color">{{ item.name
-                        }}</a-tag>
+                    }}</a-tag>
                 </span>
                 <span v-if="column.key === 'now'">
                     <div>人次：</div>
@@ -179,20 +179,16 @@ function rowClassName(record: any) {
 }
 const gradeList = [{
     label: "SSS真神",
-    value: 7,
-    color: "#000000"
-}, {
-    label: "SS神话",
     value: 6,
     color: "#000000"
 }, {
-    label: "S顶级",
+    label: "SS神话",
     value: 5,
-    color: "#ff0000"
+    color: "#000000"
 }, {
-    label: "A+超级",
+    label: "S顶级",
     value: 4,
-    color: "#ff6633"
+    color: "#ff0000"
 }, {
     label: "A高级",
     value: 3,

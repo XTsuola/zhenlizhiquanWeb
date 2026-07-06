@@ -4,14 +4,14 @@
             <a-select v-model:value="formState.zhenyin" style="width: 100%;" placeholder="请选择种族">
                 <a-select-option v-for="item in cardZhenyinList" :key="item.value" :value="item.value">{{
                     item.label
-                }}</a-select-option>
+                    }}</a-select-option>
             </a-select>
         </div>
         <div class="search_select">
             <a-select v-model:value="formState.cost" style="width: 100%;" placeholder="请选择费用">
                 <a-select-option v-for="item in costList" :key="item.value" :value="item.value">{{
                     item.label
-                }}</a-select-option>
+                    }}</a-select-option>
             </a-select>
         </div>
     </div>
@@ -20,7 +20,7 @@
             <a-select v-model:value="formState.quality" style="width: 100%;" placeholder="请选择品质">
                 <a-select-option v-for="item in cardQualityList" :key="item.value" :value="item.value">{{
                     item.label
-                }}</a-select-option>
+                    }}</a-select-option>
             </a-select>
         </div>
         <div class="search_input">
@@ -32,14 +32,14 @@
             <a-select v-model:value="formState.tag" style="width: 100%" mode="multiple" placeholder="请选择标签">
                 <a-select-option v-for="item in tabList" :key="item.value" :value="item.value">{{
                     item.label
-                    }}</a-select-option>
+                }}</a-select-option>
             </a-select>
         </div>
         <div class="search_select">
             <a-select v-model:value="formState.type" style="width: 100%;" placeholder="请选择类型">
                 <a-select-option v-for="item in cardTypeList" :key="item.value" :value="item.value">{{
                     item.label
-                }}</a-select-option>
+                    }}</a-select-option>
             </a-select>
         </div>
     </div>
@@ -70,13 +70,13 @@
         <div style="margin-bottom: 10px;">
             <span>选择评级：</span>
             <a-radio-group v-model:value="gradeEditData.grade">
-                <a-radio class="myRadio" :value="7">
+                <a-radio class="myRadio" :value="6">
                     <div class="tagBg">
-                        {{ getGradeName(7) }}
+                        {{ getGradeName(6) }}
                     </div>
                 </a-radio>
-                <a-radio v-for="i in 7" class="myRadio" :value="7 - i">
-                    <a-tag :color="getGradeColor(7 - i)">{{ getGradeName(7 - i) }}</a-tag>
+                <a-radio v-for="i in 6" class="myRadio" :value="6 - i">
+                    <a-tag :color="getGradeColor(6 - i)">{{ getGradeName(6 - i) }}</a-tag>
                 </a-radio>
             </a-radio-group>
 
@@ -117,20 +117,16 @@ import Detail from "../model/detailCard.vue";
 const tableLoading = ref(false);
 const gradeList = [{
     label: "SSS真神",
-    value: 7,
-    color: "#000000"
-}, {
-    label: "SS神话",
     value: 6,
     color: "#000000"
 }, {
-    label: "S顶级",
+    label: "SS神话",
     value: 5,
-    color: "#ff0000"
+    color: "#000000"
 }, {
-    label: "A+超级",
+    label: "S顶级",
     value: 4,
-    color: "#ff6633"
+    color: "#ff0000"
 }, {
     label: "A高级",
     value: 3,
@@ -189,7 +185,7 @@ const tagEditData = reactive({
     tag: [],
     id: 0
 });
-const originalData = ref([]);
+const originalData = ref<any>([]);
 const formState = reactive({
     name: "",
     tag: undefined,
@@ -376,11 +372,8 @@ function showOrder() {
                 dataIndex: "grade",
                 key: "grade",
                 sorter: (a: any, b: any) => {
-                    let aSort = [-1, -1], bSort = [-1, -1];
-                    if (a.grade != "") aSort = JSON.parse(a.grade);
-                    if (b.grade != "") bSort = JSON.parse(b.grade);
-                    if (aSort[1] == bSort[1]) return aSort[0] - bSort[0];
-                    return aSort[1] - bSort[1]
+                    let aSort = JSON.parse(a.grade)[0], bSort = JSON.parse(b.grade)[0];
+                    return aSort - bSort;
                 }
             }
         ];

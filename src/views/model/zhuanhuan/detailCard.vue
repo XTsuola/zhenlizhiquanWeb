@@ -93,31 +93,6 @@
                         }}</a-tag>
                 </a-col>
             </a-row>
-            <!-- <a-row type="flex" :class="showLine > 1 ? 'border_bottom' : ''">
-                <a-col class="aCol border_right" :span="6">
-                    卡牌评级
-                </a-col>
-                <a-col class="aCol" :span="18">
-                    <div v-if="getGradeName(prop.detailData.grade) == 'SSS真神'" class="tagBg">
-                        {{ getGradeName(prop.detailData.grade) }}
-                    </div>
-                    <a-tag v-else :color="getGradeColor(prop.detailData.grade)">{{ getGradeName(prop.detailData.grade)
-                        }}</a-tag>
-                    <a-button v-if="showLine > 0" size="small" style="margin-left:auto;" @click="showisHero">{{
-                        showLine > 1
-                            ?
-                            "关闭" : "打开"
-                    }}提升曲线</a-button>
-                </a-col>
-            </a-row>
-            <a-row type="flex" v-if="showLine > 1">
-                <a-col class="aCol border_right" :span="6">
-                    成长曲线
-                </a-col>
-                <a-col class="aCol" :span="18">
-                    <div ref="myEcharts" style="height: 300px;width: 100%;"></div>
-                </a-col>
-            </a-row> -->
         </div>
         <div style="height: 4px;width: 100%;"></div>
     </div>
@@ -216,20 +191,16 @@ const nowlevel = ref(21);
 if (prop.level) nowlevel.value = prop.level - 1;
 const gradeList = [{
     label: "SSS真神",
-    value: 7,
-    color: "#000000"
-}, {
-    label: "SS神话",
     value: 6,
     color: "#000000"
 }, {
-    label: "S顶级",
+    label: "SS神话",
     value: 5,
-    color: "#ff0000"
+    color: "#000000"
 }, {
-    label: "A+超级",
+    label: "S顶级",
     value: 4,
-    color: "#ff6633"
+    color: "#ff0000"
 }, {
     label: "A高级",
     value: 3,
