@@ -17,16 +17,6 @@ const routeList: any = [
     component: () => import("@/views/zhongzu/index.vue")
   },
   {
-    path: "/img/show",
-    name: "imgShow",
-    component: () => import("@/views/cardImgShow/index.vue")
-  },
-  {
-    path: "/img/showHero",
-    name: "imgShowHero",
-    component: () => import("@/views/cardImgShow/hero.vue")
-  },
-  {
     path: "/cardGrade",
     name: "cardGrade",
     component: () => import("@/views/zhongzu/gradeList.vue")
@@ -251,11 +241,6 @@ const routeList: any = [
     name: "member",
     component: () => import("@/views/member/index.vue")
   }
-  /* {
-    path: "/deepseek",
-    name: "deepseek",
-    component: () => import("@/views/ai/deepseek.vue")
-  } */
 ];
 
 const router = createRouter({
