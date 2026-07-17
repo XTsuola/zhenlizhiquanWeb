@@ -4,6 +4,7 @@ import request from "../utils/request";
 export interface MemberAddType {
     id?: number
     name: string
+    donation: number
     score: number | null
     title?: string
     remark?: string

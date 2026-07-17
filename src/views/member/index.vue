@@ -2,7 +2,7 @@
     <div class="memberManage">
         <div class="header">
             <div class="title">
-                <div class="bold">天下谁人不识君</div>
+                <div class="bold">群贡献榜</div>
                 <div>
                     <a-button v-if="isAdmin" style="margin-right: 10px;" type="primary"
                         @click="showModal(1)">新增</a-button>
@@ -15,6 +15,10 @@
             <a-form ref="passwordAdd" :model="addData" name="basic" :label-col="{ span: 4 }" autocomplete="off">
                 <a-form-item label="名称" name="name" :rules="[{ required: true, message: '请输入名称!' }]">
                     <a-input v-model:value="addData.name"></a-input>
+                </a-form-item>
+                <a-form-item label="贡献" name="donation" :rules="[{ required: true, message: '请输入贡献!' }]">
+                    <a-input-number style="width: 100%;" :min="0" :precision="2"
+                        v-model:value="addData.donation"></a-input-number>
                 </a-form-item>
                 <a-form-item label="评分" name="score" :rules="[{ required: true, message: '请输入评分!' }]">
                     <a-input-number style="width: 100%;" :min="0" :precision="1" :max="100"
@@ -49,7 +53,7 @@ const columns = ref<any>([
         title: "序号",
         dataIndex: "index",
         key: "index",
-        width: 80,
+        width: 120,
     },
     {
         title: "名称",
@@ -58,7 +62,13 @@ const columns = ref<any>([
         width: 200
     },
     {
-        title: "群贡献评级",
+        title: "贡献",
+        dataIndex: "donation",
+        key: "donation",
+        width: 180
+    },
+    {
+        title: "评级",
         dataIndex: "score",
         key: "score",
         width: 180
@@ -67,6 +77,7 @@ const columns = ref<any>([
 const tableData = ref<any>([]);
 const addData = reactive<MemberAddType>({
     name: "",
+    donation: 0,
     score: null,
     title: "",
     remark: ""
@@ -78,7 +89,7 @@ if (isAdmin) {
             title: "序号",
             dataIndex: "index",
             key: "index",
-            width: 100,
+            width: 120,
         },
         {
             title: "名称",
@@ -87,10 +98,16 @@ if (isAdmin) {
             width: 160
         },
         {
-            title: "群贡献评级",
+            title: "贡献",
+            dataIndex: "donation",
+            key: "donation",
+            width: 180
+        },
+        {
+            title: "评级",
             dataIndex: "score",
             key: "score",
-            width: 100
+            width: 180
         },
         {
             title: "操作",
@@ -113,11 +130,13 @@ function showModal(type: number, record?: any) {
     if (type == 1) {
         title.value = "新增成员";
         addData.id = undefined;
+        addData.donation = 0;
         addData.score = null;
         addData.name = addData.title = addData.remark = "";
     } else if (type == 2) {
         title.value = "修改成员";
         addData.id = record.id;
+        addData.donation = record.donation;
         addData.name = record.name;
         addData.score = record.score;
         addData.title = record.title;

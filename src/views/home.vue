@@ -140,10 +140,10 @@ const whereList: any = [{
     bgColor: "#03a1c9",
     log: "查询答题"
 }, {
-    name: "名人堂",
+    name: "贡献榜",
     url: "/member",
     bgColor: "#2727db",
-    log: "名人查询"
+    log: "贡献榜查询"
 }, {
     name: "留言建议",
     url: "/note",
