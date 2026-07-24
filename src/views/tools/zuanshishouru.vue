@@ -35,18 +35,17 @@
     </div>
 </template>
 <script lang="ts" setup>
-import { ref, reactive } from "vue";
-import { message } from "ant-design-vue";
+import { ref } from "vue";
 import router from "@/router";
 
 const baseList = ref([{
     name: "双月卡",
-    value: 37800,
+    value: 40000,
     needMoney: true,
     flag: true
 }, {
     name: "异界20胜利",
-    value: 31680,
+    value: 38000,
     needMoney: false,
     flag: true
 }, {
@@ -56,7 +55,7 @@ const baseList = ref([{
     flag: true
 }, {
     name: "双boss每日排名",
-    value: 31500,
+    value: 30000,
     needMoney: false,
     flag: true
 }, {
@@ -66,17 +65,17 @@ const baseList = ref([{
     flag: true
 }, {
     name: "星域boss成就",
-    value: 4800,
+    value: 4000,
     needMoney: false,
     flag: true
 }, {
     name: "星域boss宝箱白嫖",
-    value: 1280,
+    value: 1000,
     needMoney: false,
     flag: true
 }, {
     name: "星域boss宝箱高性价比带钻石",
-    value: 7240,
+    value: 7000,
     needMoney: true,
     flag: true
 }, {
@@ -86,22 +85,22 @@ const baseList = ref([{
     flag: true
 }, {
     name: "每周任务",
-    value: 2520,
+    value: 2500,
     needMoney: false,
     flag: true
 }, {
     name: "公会任务宝箱",
-    value: 2200,
+    value: 2000,
     needMoney: false,
     flag: true
 }, {
     name: "天梯赛排名",
-    value: 6664,
+    value: 5000,
     needMoney: false,
     flag: true
 }, {
     name: "天梯赛开宝箱",
-    value: 3200,
+    value: 3000,
     needMoney: false,
     flag: true
 }, {
@@ -121,12 +120,17 @@ const baseList = ref([{
     flag: true
 }, {
     name: "节日大活动",
-    value: 1800,
+    value: 1500,
     needMoney: false,
     flag: true
 }, {
-    name: "世界赛竞猜",
-    value: 3333,
+    name: "世界赛",
+    value: 10000,
+    needMoney: false,
+    flag: true
+}, {
+    name: "魔盒比赛",
+    value: 6000,
     needMoney: false,
     flag: true
 }])
