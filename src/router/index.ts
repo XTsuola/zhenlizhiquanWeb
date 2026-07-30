@@ -22,6 +22,11 @@ const routeList: any = [
     component: () => import("@/views/zhongzu/gradeList.vue")
   },
   {
+    path: "/cardOutline",
+    name: "cardOutline",
+    component: () => import("@/views/zhongzu/cardOutlineList.vue")
+  },
+  {
     path: "/shenqi",
     name: "shenqi",
     component: () => import("@/views/shenqi/index.vue")

@@ -7,7 +7,7 @@
                 <div style="margin-right: 10px;">
                     <a-button size="small" style="margin-right: 8px;" :disabled="nowlevel == 0"
                         @click="nowlevel--">上一级</a-button>
-                    <a-button size="small" :disabled="nowlevel == 21" @click="nowlevel++">下一级</a-button>
+                    <a-button size="small" :disabled="nowlevel == 23" @click="nowlevel++">下一级</a-button>
                 </div>
             </div>
             <a-row type="flex" class="border_bottom">
@@ -132,7 +132,7 @@ const prop = defineProps<{
     level?: number
 }>();
 
-const nowlevel = ref(21);
+const nowlevel = ref(23);
 if (prop.level) nowlevel.value = prop.level - 1;
 const gradeList = [{
     label: "SSS真神",
@@ -210,7 +210,7 @@ function drawLine() {
         },
         xAxis: {
             type: 'category',
-            data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+            data: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
         },
         yAxis: {
             type: 'value'
@@ -218,13 +218,13 @@ function drawLine() {
         series: [
             {
                 name: "攻击",
-                data: prop.detailData.data.map((e: any) => e.attack),
+                data: prop.detailData.data.slice(9, 24).map((e: any) => e.attack),
                 type: 'line',
                 showSymbol: false
             },
             {
                 name: "生命",
-                data: prop.detailData.data.map((e: any) => e.life),
+                data: prop.detailData.data.slice(9, 24).map((e: any) => e.life),
                 type: 'line',
                 showSymbol: false
             }

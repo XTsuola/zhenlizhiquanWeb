@@ -30,7 +30,7 @@
             <div v-for="obj in myObj.cards">
                 <div class="flex_center" style="margin-bottom: 15px;">
                     <span style="width: 220px;">{{ obj.name }}</span>
-                    <a-input-number v-model:value="obj.level" :precision="0" :min=1 :max="22" placeholder="等级"
+                    <a-input-number v-model:value="obj.level" :precision="0" :min=1 :max="24" placeholder="等级"
                         addon-after="级" />
                 </div>
             </div>
@@ -242,7 +242,7 @@ function oneStepOk() {
 
 function twoStepOk() {
     for (let i = 0; i < myObj.cards.length; i++) {
-        if (myObj.cards[i].level >= 1 && myObj.cards[i].level <= 22) {
+        if (myObj.cards[i].level) {
             continue;
         } else {
             message.error("请输入所有的等级！");

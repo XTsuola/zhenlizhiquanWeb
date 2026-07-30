@@ -21,8 +21,8 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue';
-import { logList, logAdd } from '@/api/log';
+import { ref } from 'vue';
+import { logAdd } from '@/api/log';
 import router from '@/router';
 
 const count = ref(0);
@@ -115,6 +115,11 @@ const whereList: any = [{
     bgColor: "#000000",
     log: "查询评级"
 }, {
+    name: "离线查询",
+    url: "/cardOutline",
+    bgColor: "#000000",
+    log: ""
+}, {
     name: "卡牌工坊",
     url: "/cardDiyList",
     bgColor: "#800080",
@@ -129,11 +134,6 @@ const whereList: any = [{
     url: "/gameMenu",
     bgColor: "#e08d9b",
     log: "查询比赛"
-}, {
-    name: "题目回顾",
-    url: "/questionHistory",
-    bgColor: "#03a1c9",
-    log: "查询答题"
 }, {
     name: "每日一题",
     url: "/question",
@@ -175,28 +175,13 @@ function goChongwu(id: number) {
 }
 
 function goWhere(obj: any) {
-    createLog(obj.log);
+    if (obj.log) createLog(obj.log);
     router.push(obj.url);
 }
 
 async function createLog(name: string) {
     await logAdd(name);
 }
-
-async function getTodayCount() {
-    const res = await logList();
-    if (res.data.code == 200) {
-        const now = new Date();
-        const todayMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-        const tomorrowMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
-        const list = res.data.data.filter((e: any) => new Date(e.time) > todayMidnight && new Date(e.time) < tomorrowMidnight);
-        count.value = list.length;
-    }
-}
-
-onMounted(() => {
-    getTodayCount();
-})
 
 </script>
 

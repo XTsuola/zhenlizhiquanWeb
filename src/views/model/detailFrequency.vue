@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="card">
-            <div class="bold">到22级还需要的资源：</div>
+            <div class="bold">到24级还需要的资源：</div>
             <div class="card_body">
                 <div class="flex_left">
                     <div style="width: 30%;">蓝卡：</div><span style="width: 70%;">{{ nowLevel.blue }} 张</span>
@@ -61,35 +61,35 @@
                     <div style="width: 30%;">橙卡：</div><span style="width: 70%;">{{ nowLevel.gold }} 张</span>
                 </div>
                 <div class="flex_left">
-                    <div style="width: 30%;">黄石头：</div><span style="width: 70%;">{{ to22Level.huangshitou -
+                    <div style="width: 30%;">黄石头：</div><span style="width: 70%;">{{ to24Level.huangshitou -
                         nowLevel.huangshitou > 10000 ?
-                        ((to22Level.huangshitou - nowLevel.huangshitou) / 10000).toFixed(2) + " 万" :
-                        to22Level.huangshitou
+                        ((to24Level.huangshitou - nowLevel.huangshitou) / 10000).toFixed(2) + " 万" :
+                        to24Level.huangshitou
                         - nowLevel.huangshitou }}</span>
                 </div>
                 <div class="flex_left">
-                    <div style="width: 30%;">红石头：</div><span style="width: 70%;">{{ to22Level.hongshitou -
+                    <div style="width: 30%;">红石头：</div><span style="width: 70%;">{{ to24Level.hongshitou -
                         nowLevel.hongshitou > 10000 ?
-                        ((to22Level.hongshitou - nowLevel.hongshitou) / 10000).toFixed(2) + " 万" :
-                        to22Level.hongshitou
+                        ((to24Level.hongshitou - nowLevel.hongshitou) / 10000).toFixed(2) + " 万" :
+                        to24Level.hongshitou
                         - nowLevel.hongshitou }}</span>
                 </div>
                 <div class="flex_left">
-                    <div style="width: 30%;">黑石头：</div><span style="width: 70%;">{{ to22Level.heishitou -
+                    <div style="width: 30%;">黑石头：</div><span style="width: 70%;">{{ to24Level.heishitou -
                         nowLevel.heishitou > 10000 ?
-                        ((to22Level.heishitou - nowLevel.heishitou) / 10000).toFixed(2) + " 万" : to22Level.heishitou
+                        ((to24Level.heishitou - nowLevel.heishitou) / 10000).toFixed(2) + " 万" : to24Level.heishitou
                         - nowLevel.heishitou }}</span>
                 </div>
                 <div class="flex_left">
-                    <div style="width: 30%;">白石头：</div><span style="width: 70%;">{{ to22Level.baishitou -
+                    <div style="width: 30%;">白石头：</div><span style="width: 70%;">{{ to24Level.baishitou -
                         nowLevel.baishitou > 10000 ?
-                        ((to22Level.baishitou - nowLevel.baishitou) / 10000).toFixed(2) + " 万" : to22Level.baishitou
+                        ((to24Level.baishitou - nowLevel.baishitou) / 10000).toFixed(2) + " 万" : to24Level.baishitou
                         - nowLevel.baishitou }}</span>
                 </div>
                 <div class="flex_left">
-                    <div style="width: 30%;">钻石：</div><span style="width: 70%;">{{ to22Level.zuanshi -
+                    <div style="width: 30%;">钻石：</div><span style="width: 70%;">{{ to24Level.zuanshi -
                         nowLevel.zuanshi > 10000 ?
-                        ((to22Level.zuanshi - nowLevel.zuanshi) / 10000).toFixed(2) + " 万" : to22Level.zuanshi
+                        ((to24Level.zuanshi - nowLevel.zuanshi) / 10000).toFixed(2) + " 万" : to24Level.zuanshi
                         - nowLevel.zuanshi }}</span>
                 </div>
             </div>
@@ -98,18 +98,18 @@
             <div class="bold">强卡占比：</div>
             <div class="card_body">
                 <div class="flex_left">
-                    <div style="width: 30%;">SS级：</div><span style="width: 70px;">{{ ((ss / 30) * 100).toFixed(2)
-                    }}%</span><span>（{{ ss }}张）<a-button v-if="ss > 0" size="small"
+                    <div style="width: 30%;">SSS级：</div><span style="width: 70px;">{{ ((sss / 30) * 100).toFixed(2)
+                    }}%</span><span>（{{ sss }}张）<a-button v-if="ss > 0" size="small"
                             @click="showCards(6)">查看</a-button></span>
                 </div>
                 <div class="flex_left">
-                    <div style="width: 30%;">S级：</div><span style="width: 70px;">{{ ((s / 30) * 100).toFixed(2)
-                    }}%</span><span>（{{ s }}张）<a-button v-if="s > 0" size="small"
+                    <div style="width: 30%;">SS级：</div><span style="width: 70px;">{{ ((ss / 30) * 100).toFixed(2)
+                    }}%</span><span>（{{ ss }}张）<a-button v-if="s > 0" size="small"
                             @click="showCards(5)">查看</a-button></span>
                 </div>
                 <div class="flex_left">
-                    <div style="width: 30%;">A+级：</div><span style="width: 70px;">{{ ((aa / 30) * 100).toFixed(2)
-                    }}%</span><span>（{{ aa }}张）<a-button v-if="aa > 0" size="small"
+                    <div style="width: 30%;">S级：</div><span style="width: 70px;">{{ ((s) * 100).toFixed(2)
+                    }}%</span><span>（{{ s }}张）<a-button v-if="s > 0" size="small"
                             @click="showCards(4)">查看</a-button></span>
                 </div>
                 <div class="flex_left">
@@ -180,13 +180,13 @@ interface Prop {
 
 const prop = defineProps<Prop>();
 const ceshiData = prop.cardData;
-let maxLfie = 319;
+let maxLfie = 349;
 const heroImg = ref<any>("");
 const heroName = ref<any>("");
 const nowLife = ref<any>(0);
+const sss = ref(0);
 const ss = ref(0);
 const s = ref(0);
-const aa = ref(0);
 const a = ref(0);
 const b = ref(0);
 const c = ref(0);
@@ -196,9 +196,9 @@ const cardLevel: number[] = ceshiData.cardLevel;
 const blueList: number[] = [];
 const purpleList: number[] = [];
 const goldList: number[] = [];
+const sssImgList = ref<string[]>([]);
 const ssImgList = ref<string[]>([]);
 const sImgList = ref<string[]>([]);
-const aaImgList = ref<string[]>([]);
 const aImgList = ref<string[]>([]);
 const bImgList = ref<string[]>([]);
 const cImgList = ref<string[]>([]);
@@ -211,14 +211,14 @@ for (let i = 0; i < cardList.length; i++) {
     else if (qulaity == 3) purpleList.push(cardLevel[i]);
     else if (qulaity == 2) blueList.push(cardLevel[i]);
     if (grade >= 6) {
+        sss.value++;
+        sssImgList.value.push(obj);
+    } else if (grade == 5) {
         ss.value++;
         ssImgList.value.push(obj);
-    } else if (grade == 5) {
+    } else if (grade == 4) {
         s.value++;
         sImgList.value.push(obj);
-    } else if (grade == 4) {
-        aa.value++;
-        aaImgList.value.push(obj);
     } else if (grade == 3) {
         a.value++;
         aImgList.value.push(obj);
@@ -239,7 +239,7 @@ const nowImg: any = heroTable.find((e: any) => e.id == ceshiData.hero.id)?.img;
 heroImg.value = import.meta.env.VITE_APP_BASE_URL + "heroImg" + nowImg;
 heroName.value = heroTable.find((e: any) => e.id == ceshiData.hero.id)?.name;
 nowLife.value = ceshiData.hero.life;
-const to22Level = reactive<any>({
+const to24Level = reactive<any>({
     baishitou: 0,
     heishitou: 0,
     hongshitou: 0,
@@ -274,7 +274,7 @@ async function getList() {
         nowLevel.huangshitou += blueObj[blueList[i] - 1].cailiao[0];
         nowLevel.zuanshi += blueObj[blueList[i] - 1].zuanshi;
         nowLevel.zhanli += blueObj[blueList[i] - 1].zhanli;
-        nowLevel.blue += (4864 - blueObj[blueList[i] - 1].count);
+        nowLevel.blue += (6528 - blueObj[blueList[i] - 1].count);
     }
     for (let i = 0; i < purpleList.length; i++) {
         purpleLevel += purpleList[i];
@@ -284,7 +284,7 @@ async function getList() {
         nowLevel.huangshitou += purpleObj[purpleList[i] - 1].cailiao[0];
         nowLevel.zuanshi += purpleObj[purpleList[i] - 1].zuanshi;
         nowLevel.zhanli += purpleObj[purpleList[i] - 1].zhanli;
-        nowLevel.purple += (3200 - purpleObj[purpleList[i] - 1].count);
+        nowLevel.purple += (4352 - purpleObj[purpleList[i] - 1].count);
     }
     for (let i = 0; i < goldList.length; i++) {
         goldLevel += goldList[i];
@@ -294,18 +294,18 @@ async function getList() {
         nowLevel.huangshitou += goldObj[goldList[i] - 1].cailiao[0];
         nowLevel.zuanshi += goldObj[goldList[i] - 1].zuanshi;
         nowLevel.zhanli += goldObj[goldList[i] - 1].zhanli;
-        nowLevel.gold += (2112 - goldObj[goldList[i] - 1].count);
+        nowLevel.gold += (2720 - goldObj[goldList[i] - 1].count);
     }
     blueCard.value = blueLevel / blueList.length;
     purpleCard.value = purpleLevel / purpleList.length;
     orangeCard.value = goldLevel / goldList.length;
     allCard.value = (blueLevel + purpleLevel + goldLevel) / (blueList.length + purpleList.length + goldList.length);
-    to22Level.baishitou = (blueList.length * blueObj[21].cailiao[3]) + (purpleList.length * purpleObj[21].cailiao[3]) + (goldList.length * goldObj[21].cailiao[3]);
-    to22Level.heishitou = (blueList.length * blueObj[21].cailiao[2]) + (purpleList.length * purpleObj[21].cailiao[2]) + (goldList.length * goldObj[21].cailiao[2]);
-    to22Level.hongshitou = (blueList.length * blueObj[21].cailiao[1]) + (purpleList.length * purpleObj[21].cailiao[1]) + (goldList.length * goldObj[21].cailiao[1]);
-    to22Level.huangshitou = (blueList.length * blueObj[21].cailiao[0]) + (purpleList.length * purpleObj[21].cailiao[0]) + (goldList.length * goldObj[21].cailiao[0]);
-    to22Level.zuanshi = (blueList.length * blueObj[21].zuanshi) + (purpleList.length * purpleObj[21].zuanshi) + (goldList.length * goldObj[21].zuanshi);
-    to22Level.zhanli = (blueList.length * blueObj[21].zhanli) + (purpleList.length * purpleObj[21].zhanli) + (goldList.length * goldObj[21].zhanli);
+    to24Level.baishitou = (blueList.length * blueObj[23].cailiao[3]) + (purpleList.length * purpleObj[23].cailiao[3]) + (goldList.length * goldObj[23].cailiao[3]);
+    to24Level.heishitou = (blueList.length * blueObj[23].cailiao[2]) + (purpleList.length * purpleObj[23].cailiao[2]) + (goldList.length * goldObj[23].cailiao[2]);
+    to24Level.hongshitou = (blueList.length * blueObj[23].cailiao[1]) + (purpleList.length * purpleObj[23].cailiao[1]) + (goldList.length * goldObj[23].cailiao[1]);
+    to24Level.huangshitou = (blueList.length * blueObj[23].cailiao[0]) + (purpleList.length * purpleObj[23].cailiao[0]) + (goldList.length * goldObj[23].cailiao[0]);
+    to24Level.zuanshi = (blueList.length * blueObj[23].zuanshi) + (purpleList.length * purpleObj[23].zuanshi) + (goldList.length * goldObj[23].zuanshi);
+    to24Level.zhanli = (blueList.length * blueObj[23].zhanli) + (purpleList.length * purpleObj[23].zhanli) + (goldList.length * goldObj[23].zhanli);
 }
 
 const lajiCards = ref<any>([]);
@@ -314,8 +314,8 @@ const title = ref("弱卡展示");
 function showCards(type: number) {
     visible.value = true;
     if (type >= 6) {
-        title.value = "SS级神卡展示";
-        lajiCards.value = ssImgList.value.map((e: any) => {
+        title.value = "SSS级神卡展示";
+        lajiCards.value = sssImgList.value.map((e: any) => {
             return {
                 img: import.meta.env.VITE_APP_BASE_URL + "cardImg" + e.img,
                 id: e.id,
@@ -329,8 +329,8 @@ function showCards(type: number) {
             }
         });
     } else if (type == 5) {
-        title.value = "S级强卡展示";
-        lajiCards.value = sImgList.value.map((e: any) => {
+        title.value = "SS级强卡展示";
+        lajiCards.value = ssImgList.value.map((e: any) => {
             return {
                 img: import.meta.env.VITE_APP_BASE_URL + "cardImg" + e.img,
                 id: e.id,
@@ -344,8 +344,8 @@ function showCards(type: number) {
             }
         });
     } else if (type == 4) {
-        title.value = "A+级卡牌展示";
-        lajiCards.value = aaImgList.value.map((e: any) => {
+        title.value = "S级卡牌展示";
+        lajiCards.value = sImgList.value.map((e: any) => {
             return {
                 img: import.meta.env.VITE_APP_BASE_URL + "cardImg" + e.img,
                 id: e.id,
