@@ -43,14 +43,14 @@
 </template>
 <script lang="ts" setup>
 import { ref, reactive, onMounted } from "vue";
+import { gradeData } from "@/data/z_otherData/gradeData";
 import { cardQualityList, costList } from "@/utils/func";
-import { getCardList } from "@/api/card";
 import router from "@/router";
 import Detail from "../model/detailCard.vue";
 import MyTabel from "@/components/table.vue";
 
 const tableLoading = ref(false);
-const originalData = ref([]);
+const originalData = ref<any>([]);
 const formState = reactive({
     name: "",
     level: undefined,
@@ -123,10 +123,6 @@ function goBack() {
     router.go(-1);
 }
 
-function view() {
-    router.push("/img/show");
-}
-
 function showModal(_: number, record: any) {
     visible.value = true;
     detailData.id = record.id;
@@ -147,10 +143,7 @@ function cancel() {
 async function getOriginalData() {
     tableLoading.value = true;
     const zhenyin = parseInt(sessionStorage.getItem("zhenyin") as string);
-    const res = await getCardList(zhenyin);
-    if (res.status == 200) {
-        originalData.value = res.data.data;
-    }
+    originalData.value = gradeData.filter((item: any) => item.zhenyin === zhenyin);
     tableLoading.value = false;
     getList();
 }

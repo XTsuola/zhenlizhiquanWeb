@@ -151,7 +151,7 @@ const whereList: WhereItem[] = [{
     name: "离线查询",
     url: "/cardOutline",
     bgColor: "#555555",
-    log: ""
+    log: "查询卡牌"
 }, {
     name: "卡牌工坊",
     url: "/cardDiyList",
@@ -208,12 +208,12 @@ function goChongwu(id: number) {
 }
 
 function goWhere(obj: WhereItem) {
-    if (obj.log) createLog(obj.log);
+    createLog(obj.log);
     router.push(obj.url);
 }
 
-async function createLog(name: string) {
-    await logAdd(name);
+function createLog(name: string) {
+    logAdd(name);
 }
 </script>
 

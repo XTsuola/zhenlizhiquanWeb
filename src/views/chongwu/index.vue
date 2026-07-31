@@ -20,19 +20,12 @@
 </template>
 <script lang="ts" setup>
 import { ref, reactive, onMounted } from "vue";
-import { chongwuData as data1 } from "@/data/chongwuData/simangdiguo";
-import { chongwuData as data2 } from "@/data/chongwuData/yinmizhe";
-import { chongwuData as data3 } from "@/data/chongwuData/chanyigu";
-import { chongwuData as data4 } from "@/data/chongwuData/tiantanggang";
-import { chongwuData as data5 } from "@/data/chongwuData/lianyushenyuan";
-import { chongwuData as data6 } from "@/data/chongwuData/manshikuangye";
-import { chongwuData as data7 } from "@/data/chongwuData/dongshenshitu";
+import { chongwuData } from "@/data/chongwuData/all";
 import router from "@/router";
 import Detail from "../model/detailChongwu.vue";
 import MyTabel from "@/components/table.vue";
 
 const chongwuParams = JSON.parse(sessionStorage.getItem("chongwuParams") as string);
-const dataList = [data1, data2, data3, data4, data5, data6, data7];
 const detailData = reactive({
     zhenyin: "",
     name: "",
@@ -67,8 +60,9 @@ const columns = ref<any>([
 ]);
 
 async function getList() {
-    const chongwuData = dataList[chongwuParams.id - 1];
-    data.value = JSON.parse(JSON.stringify(chongwuData));
+    const chongwuParams = JSON.parse(sessionStorage.getItem("chongwuParams") as string);
+    const originalData = chongwuData.filter((item: any) => item.zhenyin === chongwuParams.id);
+    data.value = JSON.parse(JSON.stringify(originalData));
     for (let i = 0; i < data.value.length; i++) {
         data.value[i].img = import.meta.env.VITE_APP_BASE_URL + "chongwuImg" + data.value[i].img;
     }

@@ -5,14 +5,14 @@
                 <a-select v-model:value="formState.quality" style="width: 100%;" placeholder="请选择品质">
                     <a-select-option v-for="item in shenqiQualityList" :key="item.value" :value="item.value">{{
                         item.label
-                    }}</a-select-option>
+                        }}</a-select-option>
                 </a-select>
             </div>
             <div class="search_select">
                 <a-select v-model:value="formState.type" style="width: 100%;" placeholder="请选择类型">
                     <a-select-option v-for="item in typeList" :key="item.value" :value="item.value">{{
                         item.label
-                    }}</a-select-option>
+                        }}</a-select-option>
                 </a-select>
             </div>
         </div>
@@ -39,14 +39,14 @@
 </template>
 <script lang="ts" setup>
 import { ref, reactive, onMounted } from "vue";
+import { shenqiData } from "@/data/shenqiData/all";
 import { shenqiQualityList, typeList } from "@/utils/func";
-import { getShenqiList } from "@/api/shenqi";
 import router from "@/router";
 import Detail from "../model/detailShenqi.vue";
 import MyTabel from "@/components/table.vue";
 
 const tableLoading = ref(false);
-const originalData = ref([]);
+const originalData = ref<any>([]);
 const formState = reactive({
     name: "",
     quality: undefined,
@@ -129,11 +129,8 @@ function cancel() {
 
 async function getOriginalData() {
     tableLoading.value = true;
-    const shenqi = parseInt(sessionStorage.getItem("shenqi") as string);
-    const res = await getShenqiList(shenqi);
-    if (res.status == 200) {
-        originalData.value = res.data.data;
-    }
+    const zhenyin = parseInt(sessionStorage.getItem("shenqi") as string);
+    originalData.value = shenqiData.filter((item: any) => item.zhenyin === zhenyin);
     tableLoading.value = false;
     getList();
 }
