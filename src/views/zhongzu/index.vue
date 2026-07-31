@@ -26,7 +26,8 @@
         <div class="table-wrap">
             <MyTabel :columnsData="columns" :dataSource="data" :loading="tableLoading" @detail="showModal" />
         </div>
-        <a-modal v-model:open="visible" destroyOnClose title="详细信息" :maskClosable="false">
+        <a-modal v-model:open="visible" destroyOnClose title="详细信息" :maskClosable="false"
+            :width="isNarrow ? '92%' : 520" centered>
             <Detail v-if="visible" :detailData="detailData" :level="formState.level" />
             <template #footer>
                 <a-button @click="cancel">关闭</a-button>
@@ -36,14 +37,15 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive, onMounted, defineAsyncComponent } from "vue";
+import { ref, reactive, onMounted, onBeforeUnmount, defineAsyncComponent } from "vue";
 import { cardQualityList, costList } from "@/utils/func";
 import router from "@/router";
 import MyTabel from "@/components/table.vue";
-
 const Detail = defineAsyncComponent(() => import("../model/detailCard.vue"));
+
 const IMG_PREFIX = import.meta.env.VITE_APP_BASE_URL + "cardImg";
 const tableLoading = ref(false);
+const isNarrow = ref(window.innerWidth < 576);
 const originalData = ref<any[]>([]);
 const formState = reactive<{
     name: string;
@@ -70,24 +72,14 @@ const detailData = reactive({
 const visible = ref(false);
 const data = ref<any[]>([]);
 const columns = [
-    {
-        title: "头像",
-        dataIndex: "headImg",
-        key: "headImg",
-        width: 64
-    },
-    {
-        title: "名称",
-        dataIndex: "name",
-        key: "name"
-    },
-    {
-        title: "操作",
-        key: "action",
-        list: ["detail"],
-        width: 72
-    }
+    { title: "头像", dataIndex: "headImg", key: "headImg", width: 64 },
+    { title: "名称", dataIndex: "name", key: "name", ellipsis: true, minWidth: 120 },
+    { title: "操作", key: "action", list: ["detail"], width: 72, fixed: "right", align: "center" }
 ];
+
+function onResize() {
+    isNarrow.value = window.innerWidth < 576;
+}
 
 function getList() {
     let list = originalData.value;
@@ -153,7 +145,13 @@ async function getOriginalData() {
 }
 
 onMounted(() => {
+    onResize();
+    window.addEventListener("resize", onResize);
     getOriginalData();
+});
+
+onBeforeUnmount(() => {
+    window.removeEventListener("resize", onResize);
 });
 </script>
 
@@ -163,6 +161,7 @@ onMounted(() => {
     padding: 12px;
     box-sizing: border-box;
     background: #f5f6f8;
+    overflow-x: hidden;
 }
 
 .toolbar {
@@ -192,7 +191,9 @@ onMounted(() => {
 }
 
 .table-wrap {
-    background: transparent;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 @media (min-width: 768px) {

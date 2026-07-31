@@ -12,13 +12,8 @@
                         {{ item.label }}
                     </a-select-option>
                 </a-select>
-                <a-input
-                    v-model:value="formState.name"
-                    allow-clear
-                    placeholder="名称"
-                    class="field"
-                    @pressEnter="search"
-                />
+                <a-input v-model:value="formState.name" allow-clear placeholder="名称" class="field"
+                    @pressEnter="search" />
             </div>
             <div class="actions">
                 <a-button type="primary" :loading="tableLoading" @click="search">查询</a-button>
@@ -26,24 +21,11 @@
                 <a-button @click="goBack">返回</a-button>
             </div>
         </div>
-
         <div class="table-wrap">
-            <MyTabel
-                :columnsData="columns"
-                :dataSource="data"
-                :loading="tableLoading"
-                @detail="showModal"
-            />
+            <MyTabel :columnsData="columns" :dataSource="data" :loading="tableLoading" @detail="showModal" />
         </div>
-
-        <a-modal
-            v-model:open="visible"
-            destroyOnClose
-            title="详细信息"
-            :maskClosable="false"
-            :width="isNarrow ? '92%' : 520"
-            centered
-        >
+        <a-modal v-model:open="visible" destroyOnClose title="详细信息" :maskClosable="false"
+            :width="isNarrow ? '92%' : 520" centered>
             <Detail v-if="visible" :detailData="detailData" />
             <template #footer>
                 <a-button @click="visible = false">关闭</a-button>
@@ -58,17 +40,14 @@ import { costList } from "@/utils/func";
 import { getSkinList } from "@/api/skin";
 import router from "@/router";
 import MyTabel from "@/components/table.vue";
-
 const Detail = defineAsyncComponent(() => import("../model/detailSkin.vue"));
 
 const IMG_PREFIX = import.meta.env.VITE_APP_BASE_URL + "skinImg";
-
 const tableLoading = ref(false);
 const originalData = ref<any[]>([]);
 const visible = ref(false);
 const data = ref<any[]>([]);
 const isNarrow = ref(window.innerWidth < 576);
-
 const zhenyinOptions = [
     { label: "帝国", value: 1 },
     { label: "隐秘", value: 2 },
@@ -78,7 +57,6 @@ const zhenyinOptions = [
     { label: "蛮石", value: 6 },
     { label: "冬神", value: 7 }
 ];
-
 const formState = reactive<{
     name: string;
     zhenyin: number | undefined;
@@ -88,7 +66,6 @@ const formState = reactive<{
     zhenyin: undefined,
     cost: undefined
 });
-
 const detailData = reactive({
     name: "",
     zhenyin: "",
@@ -100,7 +77,6 @@ const detailData = reactive({
     cost: null as number | null,
     remark: ""
 });
-
 const columns = [
     { title: "头像", dataIndex: "headImg", key: "headImg", width: 64 },
     { title: "名称", dataIndex: "name", key: "name", ellipsis: true, minWidth: 120 },

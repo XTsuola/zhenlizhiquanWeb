@@ -1,160 +1,190 @@
 <template>
-    <div class="main">
-        <div class="search_select">
-            <a-select v-model:value="zhanqu" style="min-width:160px;margin-right: 20px;" placeholder="请选择战区"
-                @change="getZhanqu">
-                <a-select-option v-for="item in nowZhanquList" :key="item.value" :value="item.value">{{
-                    item.label
-                }}</a-select-option>
-            </a-select>
-            <a-select v-model:value="changci" style="min-width:160px" placeholder="请选择场次" @change="getInfo">
-                <a-select-option v-for="item in changciList" :key="item.value" :value="item.value">{{
-                    item.label
-                }}</a-select-option>
-            </a-select>
+    <div class="page">
+        <div class="toolbar">
+            <h1 class="title">修改对局</h1>
+            <div class="actions">
+                <a-button @click="goBack">返回</a-button>
+                <a-button type="primary" :loading="saving" @click="save">保存</a-button>
+            </div>
         </div>
+
+        <div class="panel">
+            <div class="filters">
+                <a-select v-model:value="zhanqu" allow-clear placeholder="战区" class="field" @change="getZhanqu">
+                    <a-select-option v-for="item in nowZhanquList" :key="item.value" :value="item.value">
+                        {{ item.label }}
+                    </a-select-option>
+                </a-select>
+                <a-select v-model:value="changci" allow-clear placeholder="场次" class="field" @change="getInfo">
+                    <a-select-option v-for="item in changciList" :key="item.value" :value="item.value">
+                        {{ item.label }}
+                    </a-select-option>
+                </a-select>
+            </div>
+        </div>
+
         <DetailPlayer>
-            <template v-slot:left_name>
+            <template #left_name>
                 <a-input v-if="!disabledFlag" v-model:value="aInfo.name" placeholder="请输入昵称" />
-                <a-select v-else v-model:value="aInfo.name" style="width: 100%;" placeholder="请选择昵称"
-                    @change="(value: number) => getXuanshou(value, 1)">
-                    <a-select-option v-for="item in xuanshouSelect" :key="item.value" :value="item.value">{{
-                        item.label
-                        }}</a-select-option>
+                <a-select
+                    v-else
+                    v-model:value="aInfo.name"
+                    class="full"
+                    placeholder="请选择昵称"
+                    @change="(value: number) => getXuanshou(value, 1)"
+                >
+                    <a-select-option v-for="item in xuanshouSelect" :key="item.value" :value="item.value">
+                        {{ item.label }}
+                    </a-select-option>
                 </a-select>
             </template>
-            <template v-slot:left_kedu>
-                <a-select style="width: 100%;" :disabled="disabledFlag" v-model:value="aInfo.kedu" placeholder="请选择氪度">
-                    <a-select-option v-for="item in keduList" :key="item.value" :value="item.value">{{
-                        item.label
-                    }}</a-select-option>
+            <template #left_kedu>
+                <a-select v-model:value="aInfo.kedu" class="full" placeholder="请选择氪度" :disabled="disabledFlag">
+                    <a-select-option v-for="item in keduList" :key="item.value" :value="item.value">
+                        {{ item.label }}
+                    </a-select-option>
                 </a-select>
             </template>
-            <template v-slot:left_hero>
-                <a-select style="width: 100%;" :disabled="disabledFlag" mode="multiple" v-model:value="aInfo.hero"
-                    placeholder="请选择英雄顺位">
-                    <a-select-option v-for="item in heroSelect" :key="item.value" :value="item.value">{{
-                        item.label
-                        }}</a-select-option>
+            <template #left_hero>
+                <a-select
+                    v-model:value="aInfo.hero"
+                    class="full"
+                    mode="multiple"
+                    placeholder="请选择英雄顺位"
+                    :disabled="disabledFlag"
+                >
+                    <a-select-option v-for="item in heroSelect" :key="item.value" :value="item.value">
+                        {{ item.label }}
+                    </a-select-option>
                 </a-select>
             </template>
-            <template v-slot:right_name>
+            <template #right_name>
                 <a-input v-if="!disabledFlag" v-model:value="bInfo.name" placeholder="请输入昵称" />
-                <a-select v-else v-model:value="bInfo.name" style="width: 100%;" placeholder="请选择昵称"
-                    @change="(value: number) => getXuanshou(value, 2)">
-                    <a-select-option v-for="item in xuanshouSelect" :key="item.value" :value="item.value">{{
-                        item.label
-                    }}</a-select-option>
+                <a-select
+                    v-else
+                    v-model:value="bInfo.name"
+                    class="full"
+                    placeholder="请选择昵称"
+                    @change="(value: number) => getXuanshou(value, 2)"
+                >
+                    <a-select-option v-for="item in xuanshouSelect" :key="item.value" :value="item.value">
+                        {{ item.label }}
+                    </a-select-option>
                 </a-select>
             </template>
-            <template v-slot:right_kedu>
-                <a-select style="width: 100%;" :disabled="disabledFlag" v-model:value="bInfo.kedu" placeholder="请选择氪度">
-                    <a-select-option v-for="item in keduList" :key="item.value" :value="item.value">{{
-                        item.label
-                        }}</a-select-option>
+            <template #right_kedu>
+                <a-select v-model:value="bInfo.kedu" class="full" placeholder="请选择氪度" :disabled="disabledFlag">
+                    <a-select-option v-for="item in keduList" :key="item.value" :value="item.value">
+                        {{ item.label }}
+                    </a-select-option>
                 </a-select>
             </template>
-            <template v-slot:right_hero>
-                <a-select style="width: 100%;" :disabled="disabledFlag" mode="multiple" v-model:value="bInfo.hero"
-                    placeholder="请选择英雄顺位">
-                    <a-select-option v-for="item in heroSelect" :key="item.value" :value="item.value">{{
-                        item.label
-                    }}</a-select-option>
+            <template #right_hero>
+                <a-select
+                    v-model:value="bInfo.hero"
+                    class="full"
+                    mode="multiple"
+                    placeholder="请选择英雄顺位"
+                    :disabled="disabledFlag"
+                >
+                    <a-select-option v-for="item in heroSelect" :key="item.value" :value="item.value">
+                        {{ item.label }}
+                    </a-select-option>
                 </a-select>
             </template>
         </DetailPlayer>
-        <div class="footer">
-            <div class="bold b15">对局胜负信息：</div>
-            <div class="b10">
-                <a-select style="width: 100%" placeholder="请选择对局信息" v-model:value="nowShengfu"
-                    :options="shengfuSelect" />
-            </div>
-            <div>
-                <a-button style="margin-right: 10px;" @click="addShengfu">添加</a-button>
+
+        <div class="panel match-panel">
+            <h2 class="section-title">对局胜负信息</h2>
+            <a-select v-model:value="nowShengfu" class="full" placeholder="请选择对局信息" :options="shengfuSelect" />
+            <div class="actions-row">
+                <a-button type="primary" @click="addShengfu">添加</a-button>
                 <a-button @click="resetShengfu">重置</a-button>
             </div>
-            <div style="margin-top: 10px;margin-bottom: 15px;">
-                当前对局信息：
+            <div class="section-label">当前对局信息</div>
+            <div v-if="!matchRows.length" class="empty">暂无对局</div>
+            <div v-for="(row, index) in matchRows" :key="index" class="match-row" :style="{ color: row.color }">
+                <span>{{ row.left }}</span>
+                <span class="match-vs">{{ row.str }}</span>
+                <span>{{ row.right }}</span>
             </div>
-            <div style="margin-bottom: 10px;" v-for="(value, index) in shengfuList">
-                <span :style="{ color: getDetaiInfo(value, index).color }">
-                    {{ getDetaiInfo(value, index).left }}
-                    <span style="margin-left:12px;margin-right: 12px;">{{ getDetaiInfo(value, index).str }}</span>
-                    {{ getDetaiInfo(value, index).right }}
-                </span>
-            </div>
-        </div>
-        <div style="margin-top: 15px;">
-            <a-button @click="goBack" style="margin-right: 10px;">返回</a-button>
-            <a-button type="primary" @click="save">保存</a-button>
         </div>
     </div>
 </template>
+
 <script lang="ts" setup>
-import { ref, reactive, onMounted } from "vue";
+import { ref, reactive, computed, onMounted } from "vue";
 import { message } from "ant-design-vue";
 import { zhanquList, changciList, keduList, shengfuSelect } from "@/utils/func";
 import { getHeroList } from "@/api/hero";
-import { SaveShijiesaiInfoType, shijiesaiSelect, updateShijiesaiInfo, XuanshouInfoType } from "@/api/shijiesai";
+import {
+    updateShijiesaiInfo,
+    shijiesaiSelect,
+    type SaveShijiesaiInfoType,
+    type XuanshouInfoType
+} from "@/api/shijiesai";
 import router from "@/router";
 import DetailPlayer from "../model/detailPalyer.vue";
 
-const nowZhanquList = ref<any>([]);
+const SHENGFU_MAP: Record<number, { str: string; color: string }> = {
+    0: { str: "弃权", color: "#9ca3af" },
+    1: { str: "战胜", color: "#87d068" },
+    2: { str: "战败", color: "#f50" },
+    3: { str: "战胜（无效）", color: "#87d068" },
+    4: { str: "战败（无效）", color: "#f50" }
+};
+
 const gameType = sessionStorage.getItem("gameType");
-if (gameType == "10") {
-    zhanquList.splice(8, zhanquList.length);
-}
-if (parseInt(gameType as string) > 7) {
-    nowZhanquList.value = zhanquList.map((e: any) => {
-        return {
-            label: e.label,
-            value: e.value - 70000 + parseInt(gameType as string) * 10000
-        }
-    });
-} else {
-    nowZhanquList.value = zhanquList.map((e: any) => {
-        return {
-            label: e.label,
-            value: e.value
-        }
-    });
-}
+const nowZhanquList = buildZhanquOptions(gameType);
 const disabledFlag = ref(false);
-const heroList = ref<any>([]);
-const heroSelect = ref<any>([]);
-const zhanqu = ref<number | undefined>(undefined);
-const changci = ref<number | undefined>(undefined);
-const aInfo = reactive<XuanshouInfoType>({
-    name: "",
-    kedu: undefined,
-    hero: []
-});
-const bInfo = reactive<XuanshouInfoType>({
-    name: "",
-    kedu: undefined,
-    hero: []
-});
-const nowId = ref<number>(0);
+const saving = ref(false);
+const heroSelect = ref<{ label: string; value: number }[]>([]);
+const zhanqu = ref<number>();
+const changci = ref<number>();
+const nowId = ref(0);
+const aInfo = reactive<XuanshouInfoType>({ name: "", kedu: undefined, hero: [] });
+const bInfo = reactive<XuanshouInfoType>({ name: "", kedu: undefined, hero: [] });
 const shengfuList = ref<number[]>([]);
-const nowShengfu = ref<number | undefined>(undefined);
-const xuanshouList = ref<any>([]);
-const xuanshouSelect = ref<any>([]);
+const nowShengfu = ref<number>();
+const xuanshouList = ref<any[]>([]);
+const xuanshouSelect = ref<any[]>([]);
+
+const matchRows = computed(() =>
+    shengfuList.value.map((value, index) => {
+        const i = index % 4;
+        const meta = SHENGFU_MAP[value] || { str: "-", color: "#6b7280" };
+        return {
+            ...meta,
+            left: heroSelect.value.find((e) => e.value == aInfo.hero[i])?.label || "-",
+            right: heroSelect.value.find((e) => e.value == bInfo.hero[i])?.label || "-"
+        };
+    })
+);
+
+function buildZhanquOptions(gtStr: string | null) {
+    const gt = parseInt(gtStr || "7", 10);
+    let list = [...zhanquList];
+    if (gtStr === "10") list = list.slice(0, 8);
+    if (gt > 7) {
+        return list.map((e) => ({
+            label: e.label,
+            value: e.value - 70000 + gt * 10000
+        }));
+    }
+    return list.map((e) => ({ label: e.label, value: e.value }));
+}
 
 async function getHeroData() {
     const res = await getHeroList();
     if (res.status == 200) {
-        heroList.value = res.data.data;
-        heroSelect.value = heroList.value.map((e: any) => {
-            return {
-                label: e.name,
-                value: e.id,
-            }
-        });
+        heroSelect.value = res.data.data.map((e: any) => ({ label: e.name, value: e.id }));
     }
 }
 
 function getshijiesaiDetail() {
-    const data = sessionStorage.getItem("changciInfo") ? JSON.parse(sessionStorage.getItem("changciInfo") as string) : null;
+    const raw = sessionStorage.getItem("changciInfo");
+    if (!raw) return;
+    const data = JSON.parse(raw);
     nowId.value = data.id;
     zhanqu.value = Math.floor(data.no / 100) * 100;
     changci.value = data.no % 100;
@@ -171,14 +201,14 @@ function getshijiesaiDetail() {
 function addShengfu() {
     if (aInfo.hero.length != 4 || bInfo.hero.length != 4) {
         message.error("请先选择完双方英雄顺位！");
-        return false;
+        return;
     }
-    if (nowShengfu.value === 0 || nowShengfu.value === 1 || nowShengfu.value === 2 || nowShengfu.value === 3 || nowShengfu.value === 4) {
-        shengfuList.value.push(nowShengfu.value);
-        nowShengfu.value = undefined;
-    } else {
+    if (nowShengfu.value === undefined || !(nowShengfu.value in SHENGFU_MAP)) {
         message.error("请选择对局信息！");
+        return;
     }
+    shengfuList.value.push(nowShengfu.value);
+    nowShengfu.value = undefined;
 }
 
 function resetShengfu() {
@@ -186,53 +216,30 @@ function resetShengfu() {
     nowShengfu.value = undefined;
 }
 
-function getDetaiInfo(value: number, index: number): any {
-    if (value == undefined || index == undefined) return false;
-    let str = "", color = "", i = index % 4;
-    let left = heroSelect.value.find((e: any) => e.value == aInfo.hero[i])?.label;
-    let right = heroSelect.value.find((e: any) => e.value == bInfo.hero[i])?.label;
-    if (value === 0) {
-        str = "弃权";
-        color = "#cccccc";
-    } else if (value === 1) {
-        str = "战胜";
-        color = "#87d068";
-    } else if (value === 2) {
-        str = "战败";
-        color = "#f50";
-    } else if (value === 3) {
-        str = "战胜（无效）";
-        color = "#87d068";
-    } else if (value === 4) {
-        str = "战败（无效）";
-        color = "#f50";
-    }
-    return { str, left, right, color };
-}
-
 async function save() {
-    if (zhanqu.value && changci.value) {
-        if (aInfo.name == "" || bInfo.name == "") {
-            message.error("请填写昵称！");
-            return false;
-        }
-        /* if (aInfo.kedu == undefined || bInfo.kedu == undefined) {
-            message.error("请填写氪度！");
-            return false;
-        } */
-        if (aInfo.hero.length != 4 || bInfo.hero.length != 4) {
-            message.error("请先选择完双方英雄顺位！");
-            return false;
-        }
-        if (shengfuList.value.length == 0) {
-            message.error("请填写对局信息！");
-            return false;
-        }
+    if (!zhanqu.value || !changci.value) {
+        message.error("请填写场次信息！");
+        return;
+    }
+    if (!aInfo.name || !bInfo.name) {
+        message.error("请填写昵称！");
+        return;
+    }
+    if (aInfo.hero.length != 4 || bInfo.hero.length != 4) {
+        message.error("请先选择完双方英雄顺位！");
+        return;
+    }
+    if (!shengfuList.value.length) {
+        message.error("请填写对局信息！");
+        return;
+    }
+    saving.value = true;
+    try {
         const params: SaveShijiesaiInfoType = {
             id: nowId.value,
             no: zhanqu.value + changci.value,
-            aInfo: aInfo,
-            bInfo: bInfo,
+            aInfo,
+            bInfo,
             shengfuList: shengfuList.value
         };
         const res = await updateShijiesaiInfo(params);
@@ -240,8 +247,8 @@ async function save() {
             message.success("操作成功");
             router.push("/gameList");
         }
-    } else {
-        message.error("请填写场次信息！");
+    } finally {
+        saving.value = false;
     }
 }
 
@@ -252,18 +259,9 @@ function goBack() {
 async function getSelect() {
     const res = await shijiesaiSelect(parseInt(gameType as string));
     if (res.status == 200) {
-        let originalData = res.data.data;
-        let data8 = originalData.filter((e: any) => {
-            return e.no % 100 >= 1 && e.no % 100 <= 4;
-        });
-        xuanshouList.value = data8.map((e: any) => {
-            return {
-                id: e.id,
-                no: e.no,
-                AInfo: e.AInfo,
-                BInfo: e.BInfo
-            }
-        });
+        xuanshouList.value = res.data.data
+            .filter((e: any) => e.no % 100 >= 1 && e.no % 100 <= 4)
+            .map((e: any) => ({ id: e.id, no: e.no, AInfo: e.AInfo, BInfo: e.BInfo }));
     }
     getshijiesaiDetail();
 }
@@ -275,7 +273,9 @@ function getZhanqu() {
 function getInfo(type: number) {
     if (type > 4) {
         disabledFlag.value = true;
-        const list = xuanshouList.value.filter((e: any) => Math.floor(e.no / 100) == Math.floor(zhanqu.value as number / 100));
+        const list = xuanshouList.value.filter(
+            (e) => Math.floor(e.no / 100) == Math.floor((zhanqu.value as number) / 100)
+        );
         xuanshouSelect.value = [];
         for (let i = 0; i < list.length; i++) {
             xuanshouSelect.value.push({
@@ -294,61 +294,129 @@ function getInfo(type: number) {
     } else {
         disabledFlag.value = false;
     }
-    aInfo.name = aInfo.kedu = bInfo.name = bInfo.kedu = undefined;
+    aInfo.name = aInfo.kedu = bInfo.name = bInfo.kedu = undefined as any;
     aInfo.hero = [];
     bInfo.hero = [];
     resetShengfu();
 }
 
-function getXuanshou(e: any, type: number) {
-    if (type == 1) {
-        aInfo.name = xuanshouSelect.value[e].label;
-        aInfo.kedu = xuanshouSelect.value[e].kedu;
-        aInfo.hero = xuanshouSelect.value[e].hero;
-    } else {
-        bInfo.name = xuanshouSelect.value[e].label;
-        bInfo.kedu = xuanshouSelect.value[e].kedu;
-        bInfo.hero = xuanshouSelect.value[e].hero;
-    }
+function getXuanshou(e: number, type: number) {
+    const item = xuanshouSelect.value[e];
+    if (!item) return;
+    const target = type == 1 ? aInfo : bInfo;
+    target.name = item.label;
+    target.kedu = item.kedu;
+    target.hero = item.hero;
 }
 
 onMounted(() => {
     getSelect();
     getHeroData();
-})
-
+});
 </script>
+
 <style lang="less" scoped>
-.main {
-    padding: 20px;
+.page {
+    min-height: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    background: #f5f6f8;
+}
 
-    .container {
-        margin-top: 30px;
-        display: flex;
-        justify-content: space-between;
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    background: #fff;
+    border: 1px solid #e8ebf0;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
 
-        .left,
-        .right {
-            width: 50%;
-            padding: 10px;
-            border: 1px solid #ccc;
-        }
-    }
+.title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1f2937;
+}
 
-    .footer {
-        margin-top: 20px;
-    }
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
 
-    .b10 {
-        margin-bottom: 10px;
-    }
+.panel {
+    background: #fff;
+    border: 1px solid #e8ebf0;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
 
-    .b15 {
-        margin-bottom: 15px;
-    }
+.filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
 
-    .bold {
-        font-weight: bold;
+.field,
+.full {
+    width: 100%;
+}
+
+.match-panel {
+    margin-top: 12px;
+}
+
+.section-title {
+    margin: 0 0 12px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.section-label {
+    margin: 14px 0 8px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.actions-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.empty {
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+.match-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.match-vs {
+    margin: 0 4px;
+}
+
+@media (min-width: 768px) {
+    .page {
+        padding: 16px 20px;
+        max-width: 960px;
+        margin: 0 auto;
     }
 }
 </style>

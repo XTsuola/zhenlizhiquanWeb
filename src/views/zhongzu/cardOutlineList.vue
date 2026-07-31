@@ -1,117 +1,133 @@
 <template>
-    <div class="search">
-        <div class="search_select">
-            <a-select v-model:value="formState.zhenyin" style="width: 100%;" placeholder="请选择种族">
-                <a-select-option v-for="item in cardZhenyinList" :key="item.value" :value="item.value">{{
-                    item.label
-                    }}</a-select-option>
-            </a-select>
-        </div>
-        <div class="search_select">
-            <a-select v-model:value="formState.cost" style="width: 100%;" placeholder="请选择费用">
-                <a-select-option v-for="item in costList" :key="item.value" :value="item.value">{{
-                    item.label
-                    }}</a-select-option>
-            </a-select>
-        </div>
-    </div>
-    <div class="search">
-        <div class="search_select">
-            <a-select v-model:value="formState.quality" style="width: 100%;" placeholder="请选择品质">
-                <a-select-option v-for="item in cardQualityList" :key="item.value" :value="item.value">{{
-                    item.label
-                    }}</a-select-option>
-            </a-select>
-        </div>
-        <div class="search_input">
-            <a-input v-model:value="formState.name" placeholder="请输入名称" />
-        </div>
-    </div>
-    <div class="search">
-        <div class="search_select">
-            <a-select v-model:value="formState.tag" style="width: 100%" mode="multiple" placeholder="请选择标签">
-                <a-select-option v-for="item in tabList" :key="item.value" :value="item.value">{{
-                    item.label
-                }}</a-select-option>
-            </a-select>
-        </div>
-        <div class="search_select">
-            <a-select v-model:value="formState.type" style="width: 100%;" placeholder="请选择类型">
-                <a-select-option v-for="item in cardTypeList" :key="item.value" :value="item.value">{{
-                    item.label
-                    }}</a-select-option>
-            </a-select>
-        </div>
-    </div>
-    <div class="search">
-        <div class="search_div">
-            <div class="search_btn">
-                <a-button style="margin-right: 12px;" type="primary" @click="search">查询</a-button>
-                <a-button style="margin-right: 8px;" @click="reset">清空</a-button>
+    <div class="page">
+        <div class="toolbar">
+            <div class="filters">
+                <a-select v-model:value="formState.zhenyin" allow-clear placeholder="种族" class="field">
+                    <a-select-option v-for="item in cardZhenyinList" :key="item.value" :value="item.value">
+                        {{ item.label }}
+                    </a-select-option>
+                </a-select>
+                <a-select v-model:value="formState.cost" allow-clear placeholder="费用" class="field">
+                    <a-select-option v-for="item in costList" :key="item.value" :value="item.value">
+                        {{ item.label }}
+                    </a-select-option>
+                </a-select>
+                <a-select v-model:value="formState.quality" allow-clear placeholder="品质" class="field">
+                    <a-select-option v-for="item in cardQualityList" :key="item.value" :value="item.value">
+                        {{ item.label }}
+                    </a-select-option>
+                </a-select>
+                <a-select v-model:value="formState.type" allow-clear placeholder="类型" class="field">
+                    <a-select-option v-for="item in cardTypeList" :key="item.value" :value="item.value">
+                        {{ item.label }}
+                    </a-select-option>
+                </a-select>
+                <div class="field-row">
+                    <a-input v-model:value="formState.name" allow-clear placeholder="名称" class="field"
+                        @pressEnter="getList" />
+                    <a-select v-model:value="formState.tag" allow-clear mode="multiple" placeholder="标签"
+                        class="field">
+                        <a-select-option v-for="item in tabList" :key="item.value" :value="item.value">
+                            {{ item.label }}
+                        </a-select-option>
+                    </a-select>
+                </div>
+            </div>
+            <div class="actions">
+                <a-button type="primary" :loading="tableLoading" @click="getList">查询</a-button>
+                <a-button @click="reset">清空</a-button>
+                <a-button :type="viewMode === 'tag' ? 'default' : 'primary'" ghost :disabled="tableLoading"
+                    @click="toggleTag">
+                    {{ viewMode === "tag" ? "关闭" : "标签" }}
+                </a-button>
+                <a-button :type="viewMode === 'sort' ? 'default' : 'primary'" ghost :disabled="tableLoading"
+                    @click="toggleSort">
+                    {{ viewMode === "sort" ? "关闭" : "排序" }}
+                </a-button>
                 <a-button @click="goBack">返回</a-button>
             </div>
-            <div>
-                <a-button style="margin-right: 8px;" :type="showFlag == 2 ? 'default' : 'primary'" @click="showTag"
-                    :disabled="tableLoading">{{
-                        showTagText }}</a-button>
-                <a-button style="margin-right: 8px;" :type="showFlag == 1 ? 'default' : 'primary'" @click="showOrder"
-                    :disabled="tableLoading">{{
-                        showSortText }}</a-button>
-            </div>
         </div>
+
+        <div class="table-wrap">
+            <MyTabel :columnsData="columns" :dataSource="data" :loading="tableLoading" @detail="showModal" />
+        </div>
+
+        <a-modal v-model:open="visible" destroyOnClose title="详细信息" :maskClosable="false"
+            :width="isNarrow ? '92%' : 520" centered>
+            <Detail v-if="visible" :detailData="detailData" />
+            <template #footer>
+                <a-button @click="visible = false">关闭</a-button>
+            </template>
+        </a-modal>
     </div>
-    <div class="card">
-        <MyTabel :columnsData="columns" :dataSource="data" @detail="showModal" :loading="tableLoading">
-        </MyTabel>
-    </div>
-    <a-modal v-model:open="visible" destroyOnClose title="详细信息" :maskClosable="false">
-        <Detail :detailData="detailData"></Detail>
-        <template #footer>
-            <a-button key="back" @click="visible = false">关闭</a-button>
-        </template>
-    </a-modal>
 </template>
+
 <script lang="ts" setup>
-import { ref, reactive, onMounted } from "vue";
-import { gradeData } from "@/data/z_otherData/gradeData.js";
+import { ref, reactive, computed, onMounted, onBeforeUnmount, defineAsyncComponent } from "vue";
 import { cardZhenyinList, costList, cardQualityList, tabList, allValuesInArray } from "@/utils/func";
 import router from "@/router";
 import MyTabel from "@/components/table.vue";
-import Detail from "../model/detailCard.vue";
 
+const Detail = defineAsyncComponent(() => import("../model/detailCard.vue"));
+const IMG_PREFIX = import.meta.env.VITE_APP_BASE_URL + "cardImg";
+const cardTypeList = [
+    { label: "全部", value: "" },
+    { label: "部下", value: 1 },
+    { label: "法术", value: 2 },
+    { label: "传记", value: 3 },
+    { label: "符文", value: 4 }
+];
+const baseColumns = [
+    { title: "头像", dataIndex: "headImg2", key: "headImg2", width: 64 },
+    { title: "名称", dataIndex: "name", key: "name", ellipsis: true, minWidth: 96 },
+    { title: "评级", dataIndex: "grade", key: "grade", width: 88, align: "center" }
+];
+const tagColumns = [
+    { title: "头像", dataIndex: "headImg2", key: "headImg2", width: 64 },
+    { title: "标签", dataIndex: "tag", key: "tag", ellipsis: true, minWidth: 120 }
+];
+const sortColumns = [
+    { title: "头像", dataIndex: "headImg2", key: "headImg2", width: 52 },
+    { title: "名称", dataIndex: "name", key: "name", ellipsis: true, width: 72 },
+    {
+        title: "攻",
+        dataIndex: "att",
+        key: "att",
+        width: 56,
+        align: "center",
+        sorter: (a: any, b: any) => a.att - b.att
+    },
+    {
+        title: "血",
+        dataIndex: "life",
+        key: "life",
+        width: 56,
+        align: "center",
+        sorter: (a: any, b: any) => a.life - b.life
+    },
+    {
+        title: "评级",
+        dataIndex: "grade",
+        key: "grade",
+        width: 72,
+        align: "center",
+        sorter: (a: any, b: any) => JSON.parse(a.grade)[0] - JSON.parse(b.grade)[0]
+    }
+];
 const tableLoading = ref(false);
-const cardTypeList = [{
-    label: "全部",
-    value: ""
-}, {
-    label: "部下",
-    value: 1
-}, {
-    label: "法术",
-    value: 2
-}, {
-    label: "传记",
-    value: 3
-}, {
-    label: "符文",
-    value: 4
-}];
-const showFlag = ref(0);
-const showTagText = ref("标签");
-const showSortText = ref("排序");
-const detailData = reactive({
-    id: 0,
-    zhenyin: "",
-    name: "",
-    quality: "",
-    cost: null,
-    type: null,
-    img: "",
-    grade: "",
-    data: []
-});
-const originalData = ref<any>([]);
-const formState = reactive({
+const isNarrow = ref(window.innerWidth < 576);
+const viewMode = ref<"default" | "tag" | "sort">("default");
+const originalData = ref<any[]>([]);
+const data = ref<any[]>([]);
+const visible = ref(false);
+const formState = reactive<{
+    name: string;
+    tag: number[] | undefined;
+    zhenyin: number | undefined;
+    cost: number | undefined;
+    quality: number | undefined;
+    type: number | string | undefined;
+}>({
     name: "",
     tag: undefined,
     zhenyin: undefined,
@@ -119,64 +135,65 @@ const formState = reactive({
     quality: undefined,
     type: undefined
 });
-const visible = ref(false);
-const data = ref<any>([]);
-let originalColumns = [
-    {
-        title: "头像",
-        dataIndex: "headImg2",
-        key: "headImg2",
-        scopedSlots: { customRender: "pic" }
-    },
-    {
-        title: "名称",
-        dataIndex: "name",
-        key: "name"
-    }
-];
-const columns = ref<any>();
-columns.value = originalColumns;
+const detailData = reactive({
+    id: 0,
+    zhenyin: "",
+    name: "",
+    quality: "",
+    cost: null as number | null,
+    type: null as number | null,
+    img: "",
+    grade: "",
+    data: [] as any[]
+});
+const columns = computed(() => {
+    if (viewMode.value === "tag") return tagColumns;
+    if (viewMode.value === "sort") return sortColumns;
+    return baseColumns;
+});
 
-function getList() {
-    let allData: any = JSON.parse(JSON.stringify(originalData.value));
-    if (formState.name) {
-        allData = allData.filter((item: any) => item.name.includes(formState.name));
-    }
-    if (formState.zhenyin) {
-        allData = allData.filter((item: any) => item.zhenyin == formState.zhenyin);
-    }
-    if (formState.cost != undefined && formState.cost !== "") {
-        allData = allData.filter((item: any) => item.cost == formState.cost);
-    }
-    if (formState.quality != undefined && formState.quality != "") {
-        allData = allData.filter((item: any) => item.quality == formState.quality);
-    }
-    if (formState.type != undefined && formState.type != "") {
-        allData = allData.filter((item: any) => item.type == formState.type);
-    }
-    if (formState.tag) {
-        const arr1 = formState.tag ? formState.tag : [];
-        allData = allData.filter((item: any) => {
-            const arr2 = item.tag ? JSON.parse(item.tag) : [];
-            return allValuesInArray(arr1, arr2);
-        })
-    }
-    for (let i = 0; i < allData.length; i++) {
-        allData[i].img = import.meta.env.VITE_APP_BASE_URL + "cardImg" + allData[i].img;
-        allData[i].tag = allData[i].tag ? JSON.parse(allData[i].tag) : [];
-        allData[i].att = allData[i].data.at(-1).attack;
-        allData[i].life = allData[i].data.at(-1).life;
-    }
-    data.value = allData;
+function onResize() {
+    isNarrow.value = window.innerWidth < 576;
 }
 
-function search() {
-    getList();
+function parseTags(tag: unknown) {
+    if (!tag) return [];
+    if (Array.isArray(tag)) return tag;
+    if (typeof tag === "string") return JSON.parse(tag);
+    return [];
+}
+
+function getList() {
+    let list = originalData.value;
+    const name = formState.name.trim();
+    if (name) list = list.filter((item) => item.name.includes(name));
+    if (formState.zhenyin != null) list = list.filter((item) => item.zhenyin == formState.zhenyin);
+    if (formState.cost != null) list = list.filter((item) => item.cost == formState.cost);
+    if (formState.quality != null) list = list.filter((item) => item.quality == formState.quality);
+    if (formState.type != null && formState.type !== "") {
+        list = list.filter((item) => item.type == formState.type);
+    }
+    const selectedTags = formState.tag;
+    if (selectedTags?.length) {
+        list = list.filter((item) => allValuesInArray(selectedTags, parseTags(item.tag)));
+    }
+    data.value = list.map((item) => {
+        const last = item.data?.at?.(-1);
+        return {
+            ...item,
+            img: IMG_PREFIX + item.img,
+            tag: parseTags(item.tag),
+            att: last?.attack,
+            life: last?.life
+        };
+    });
 }
 
 function reset() {
     formState.name = "";
+    formState.tag = undefined;
     formState.zhenyin = formState.cost = formState.quality = formState.type = undefined;
+    viewMode.value = "default";
     getList();
 }
 
@@ -185,168 +202,130 @@ function goBack() {
 }
 
 function showModal(_: number, record: any) {
+    Object.assign(detailData, {
+        id: record.id,
+        name: record.name,
+        zhenyin: record.zhenyin,
+        quality: record.quality,
+        cost: record.cost,
+        type: record.type,
+        img: record.img,
+        grade: record.grade,
+        data: record.data
+    });
     visible.value = true;
-    detailData.id = record.id;
-    detailData.name = record.name;
-    detailData.zhenyin = record.zhenyin;
-    detailData.quality = record.quality;
-    detailData.cost = record.cost;
-    detailData.type = record.type;
-    detailData.img = record.img;
-    detailData.grade = record.grade;
-    detailData.data = record.data;
 }
 
-function showTag() {
-    if (showFlag.value != 2) {
-        showFlag.value = 2;
-        showTagText.value = "关闭";
-        showSortText.value = "排序";
-        columns.value = [
-            {
-                title: "头像",
-                dataIndex: "headImg2",
-                key: "headImg2",
-                scopedSlots: { customRender: "pic" },
-                width: 70
-            },
-            {
-                title: "标签",
-                dataIndex: "tag",
-                key: "tag"
-            }
-        ];
-    } else {
-        showFlag.value = 0;
-        showTagText.value = "标签";
-        columns.value = originalColumns;
-    }
+function toggleTag() {
+    viewMode.value = viewMode.value === "tag" ? "default" : "tag";
 }
 
-function showOrder() {
-    if (showFlag.value != 1) {
-        showFlag.value = 1;
-        showSortText.value = "关闭";
-        showTagText.value = "标签";
-        columns.value = [
-            {
-                title: "头像",
-                dataIndex: "headImg2",
-                key: "headImg2",
-                scopedSlots: { customRender: "pic" }
-            },
-            {
-                title: "名称",
-                dataIndex: "name",
-                key: "name"
-            },
-            {
-                title: "att",
-                dataIndex: "att",
-                key: "att",
-                sorter: (a: any, b: any) => {
-                    return a.att - b.att
-                }
-            },
-            {
-                title: "lif",
-                dataIndex: "life",
-                key: "life",
-                sorter: (a: any, b: any) => {
-                    return a.life - b.life
-                }
-            }
-        ];
-    } else {
-        showFlag.value = 0;
-        showSortText.value = "排序";
-        columns.value = originalColumns;
-    }
+function toggleSort() {
+    viewMode.value = viewMode.value === "sort" ? "default" : "sort";
 }
 
 async function getOriginalData() {
     tableLoading.value = true;
-    originalData.value = JSON.parse(JSON.stringify(gradeData));
-    tableLoading.value = false;
-    getList();
+    try {
+        const { gradeData } = await import("@/data/z_otherData/gradeData");
+        originalData.value = gradeData;
+        getList();
+    } finally {
+        tableLoading.value = false;
+    }
 }
 
 onMounted(() => {
+    onResize();
+    window.addEventListener("resize", onResize);
     getOriginalData();
-})
+});
 
+onBeforeUnmount(() => {
+    window.removeEventListener("resize", onResize);
+});
 </script>
+
 <style lang="less" scoped>
-.search {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    padding: 5px 10px;
-    margin-bottom: 5px;
-
-    .search_input {
-        width: 40%;
-        margin-right: 10px;
-    }
-
-    .search_select {
-        width: 40%;
-        margin-right: 10px;
-    }
-
-    .search_div {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .search_btn {
-        display: flex;
-        justify-content: flex-start;
-        width: 40%;
-    }
+.page {
+    min-height: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    background: #f5f6f8;
+    overflow-x: hidden;
 }
 
-.myRadio {
-    display: 'flex';
-    height: '30px';
-    line-height: '30px';
+.toolbar {
+    background: #fff;
+    border: 1px solid #e8ebf0;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.field {
     width: 100%;
-    margin: 10px 0;
 }
 
-.tagBg {
-    margin: 0;
-    width: 60px;
-    color: #ffffff;
+.field-row {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.actions {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 13px;
-    border-radius: 4px;
-    background: linear-gradient(45deg,
-            #111,
-            #AA8B3B,
-            #FFD700,
-            #FF6B35,
-            #E6B325,
-            #C8A951,
-            #111);
-    background-size: 600% 600%;
-    animation: colorGold 10s ease infinite;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
-@keyframes colorGold {
-    0% {
-        background-position: 0% 50%;
+.table-wrap {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-wrap :deep(.myTable),
+.table-wrap :deep(.table-scroll) {
+    max-width: 100%;
+    min-width: 0;
+}
+
+.table-wrap :deep(.cell-img) {
+    width: 36px;
+    height: 36px;
+}
+
+.table-wrap :deep(.ant-table) {
+    font-size: 12px;
+}
+
+.table-wrap :deep(.ant-table-thead > tr > th),
+.table-wrap :deep(.ant-table-tbody > tr > td) {
+    padding: 8px 4px !important;
+}
+
+@media (min-width: 768px) {
+    .page {
+        padding: 16px 20px;
+        max-width: 960px;
+        margin: 0 auto;
     }
 
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
+    .filters {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-bottom: 12px;
     }
 }
 </style>

@@ -3,7 +3,7 @@
         <div class="table-scroll">
             <a-table :columns="prop.columnsData" :data-source="prop.dataSource" :pagination="false"
                 :row-class-name="prop.rowClass ? rowClassName : undefined" :loading="prop.loading"
-                :scroll="{ x: 'max-content' }" size="middle" bordered>
+                :scroll="{ x: true }" size="middle" bordered>
                 <template #bodyCell="{ column, index, record, text }">
                     <template v-if="column.key === 'index'">
                         {{ index + 1 }}
@@ -247,10 +247,14 @@ function formatDiff(now: number, last: number, isRate = false) {
 <style lang="less" scoped>
 .myTable {
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
 }
 
 .table-scroll {
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     border-radius: 10px;

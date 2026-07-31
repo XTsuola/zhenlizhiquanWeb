@@ -1,25 +1,27 @@
 import { message } from "ant-design-vue";
-import axios from "axios";
+import axios, { type AxiosInstance, type AxiosResponse, type InternalAxiosRequestConfig } from "axios";
 
-// 创建axios实例
-const service = axios.create({
-  // axios中请求配置有baseURL选项，表示请求URL公共部分
+const service: AxiosInstance = axios.create({
   baseURL: import.meta.env.VITE_APP_BASE_URL,
-  // 超时
-  timeout: 20000,
+  timeout: 20000
 });
 
-// 请求拦截器
-service.interceptors.request.use((config) => {
-  return config;
-}, (error) => {
-  return Promise.reject(error);
-});
-// 响应拦截器
-service.interceptors.response.use((res) => {
-  return res;
-}, (error) => {
-  message.error(error.response.data.msg);
-});
+service.interceptors.request.use(
+  (config: InternalAxiosRequestConfig) => config,
+  (error) => Promise.reject(error)
+);
+
+service.interceptors.response.use(
+  (res: AxiosResponse) => res,
+  (error) => {
+    const msg =
+      error?.response?.data?.msg ||
+      error?.response?.data?.message ||
+      error?.message ||
+      "网络请求失败";
+    message.error(msg);
+    return Promise.reject(error);
+  }
+);
 
 export default service;

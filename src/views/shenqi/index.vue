@@ -40,8 +40,8 @@ import { ref, reactive, onMounted, defineAsyncComponent } from "vue";
 import { shenqiQualityList, typeList } from "@/utils/func";
 import router from "@/router";
 import MyTabel from "@/components/table.vue";
-
 const Detail = defineAsyncComponent(() => import("../model/detailShenqi.vue"));
+
 const IMG_PREFIX = import.meta.env.VITE_APP_BASE_URL + "shenqiImg";
 const tableLoading = ref(false);
 const originalData = ref<any[]>([]);
@@ -136,7 +136,6 @@ async function getOriginalData() {
     tableLoading.value = true;
     try {
         const zhenyin = parseInt(sessionStorage.getItem("shenqi") || "0", 10);
-        // 先进页再异步加载大包，避免阻塞首屏
         const { shenqiData } = await import("@/data/shenqiData/all");
         originalData.value = shenqiData.filter((item: any) => item.zhenyin === zhenyin);
         getList();

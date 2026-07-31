@@ -1,46 +1,50 @@
 <template>
-    <div class="search">
-        <div class="search_input">
-            <a-input v-model:value="formState.name" placeholder="请输入名称" />
+    <div class="page">
+        <div class="toolbar">
+            <div class="filters">
+                <a-input v-model:value="formState.name" allow-clear placeholder="名称" class="field"
+                    @pressEnter="search" />
+            </div>
+            <div class="actions">
+                <a-button type="primary" :loading="tableLoading" @click="search">查询</a-button>
+                <a-button @click="reset">清空</a-button>
+                <a-button @click="goBack">返回</a-button>
+            </div>
         </div>
-    </div>
-    <div class="search">
-        <div class="search_btn">
-            <a-button style="margin-right: 8px;" type="primary" @click="search">查询</a-button>
-            <a-button style="margin-right: 8px;" @click="reset">清空</a-button>
-            <a-button @click="goBack">返回</a-button>
+        <div class="table-wrap">
+            <MyTabel :columnsData="columns" :dataSource="data" :loading="tableLoading" @detail="showModal"
+                @frequency="goFrequency" />
         </div>
+        <a-modal v-model:open="visible" destroyOnClose title="详细信息" :maskClosable="false"
+            :width="isNarrow ? '92%' : 520" centered>
+            <Detail v-if="visible" :detailData="detailData" />
+            <template #footer>
+                <a-button @click="cancel">关闭</a-button>
+            </template>
+        </a-modal>
     </div>
-    <div class="card">
-        <MyTabel :columnsData="columns" :dataSource="data" @detail="showModal" @frequency="goFrequency"></MyTabel>
-    </div>
-    <a-modal v-model:open="visible" destroyOnClose title="详细信息" :maskClosable="false">
-        <Detail :detailData="detailData"></Detail>
-        <template #footer>
-            <a-button key="back" @click="cancel">关闭</a-button>
-        </template>
-    </a-modal>
 </template>
+
 <script lang="ts" setup>
-import { ref, reactive, onMounted } from "vue";
+import { ref, reactive, onMounted, onBeforeUnmount, defineAsyncComponent } from "vue";
 import { getHeroList } from "@/api/hero";
 import { getFrequencyCardsAll } from "@/api/frequency";
 import router from "@/router";
 import MyTabel from "@/components/table.vue";
-import Detail from "../model/detaiHero.vue";
 
 interface HeroInfoType {
-    id: number
-    name: string
-    zhu: number
-    fu: number
+    id: number;
+    name: string;
+    zhu: number;
+    fu: number;
 }
 
-const originalData = ref<any>([]);
-const cardsData = ref<any>([]);
-const formState = reactive({
-    name: ""
-});
+const Detail = defineAsyncComponent(() => import("../model/detailHero.vue"));
+const IMG_PREFIX = import.meta.env.VITE_APP_BASE_URL + "heroImg";
+const tableLoading = ref(false);
+const originalData = ref<any[]>([]);
+const cardsData = ref<any[]>([]);
+const formState = reactive({ name: "" });
 const detailData = reactive({
     name: "",
     quality: "",
@@ -48,45 +52,48 @@ const detailData = reactive({
     fu: "",
     skillName: "",
     img: "",
-    data: []
+    data: [] as any[]
 });
 const visible = ref(false);
-const data = ref<any>([]);
-const columns = ref<any>([
-    {
-        title: "头像",
-        dataIndex: "headImg3",
-        key: "headImg3",
-        width: 50,
-        scopedSlots: { customRender: "pic" }
-    },
-    {
-        title: "名称",
-        dataIndex: "name",
-        key: "name",
-        width: 160,
-    },
+const data = ref<any[]>([]);
+const isNarrow = ref(window.innerWidth < 576);
+const columns = [
+    { title: "头像", dataIndex: "headImg3", key: "headImg3", width: 64 },
+    { title: "名称", dataIndex: "name", key: "name", ellipsis: true, minWidth: 120 },
     {
         title: "操作",
         key: "action",
         list: ["skill", "frequency"],
-        width: 80
+        width: 110,
+        fixed: "right",
+        align: "center"
     }
-]);
+];
+
+function onResize() {
+    isNarrow.value = window.innerWidth < 576;
+}
 
 async function getList() {
-    let allData: any = JSON.parse(JSON.stringify(originalData.value));
-    const res = await getFrequencyCardsAll();
-    if (res.data.code == 200) {
-        cardsData.value = res.data.data;
+    tableLoading.value = true;
+    try {
+        let list = originalData.value;
+        const res = await getFrequencyCardsAll();
+        if (res.data.code == 200) {
+            cardsData.value = res.data.data;
+        }
+        const name = formState.name.trim();
+        if (name) list = list.filter((item) => item.name.includes(name));
+        data.value = list
+            .map((item) => ({
+                ...item,
+                cardsCount: cardsData.value.filter((e: any) => e.heroId == item.id).length,
+                img: IMG_PREFIX + item.img
+            }))
+            .sort((a, b) => b.cardsCount - a.cardsCount);
+    } finally {
+        tableLoading.value = false;
     }
-    if (formState.name) allData = allData.filter((item: any) => item.name.includes(formState.name));
-    for (let i = 0; i < allData.length; i++) {
-        allData[i].cardsCount = cardsData.value.filter((e: any) => e.heroId == allData[i].id).length;
-        allData[i].img = import.meta.env.VITE_APP_BASE_URL + "heroImg" + allData[i].img;
-    }
-    allData.sort((a: any, b: any) => b.cardsCount - a.cardsCount);
-    data.value = allData;
 }
 
 function search() {
@@ -103,7 +110,6 @@ function goBack() {
 }
 
 function showModal(_: number, record: any) {
-    visible.value = true;
     detailData.name = record.name;
     detailData.quality = record.quality;
     detailData.zhu = record.zhu;
@@ -111,6 +117,7 @@ function showModal(_: number, record: any) {
     detailData.skillName = record.skillName;
     detailData.img = record.img;
     detailData.data = record.data;
+    visible.value = true;
 }
 
 function goFrequency(record: any) {
@@ -119,7 +126,7 @@ function goFrequency(record: any) {
         name: record.name,
         zhu: record.zhu,
         fu: record.fu
-    }
+    };
     sessionStorage.setItem("heroInfo", JSON.stringify(params));
     router.push("/cardsDetail");
 }
@@ -129,40 +136,73 @@ function cancel() {
 }
 
 async function getOriginalData() {
-    const res = await getHeroList();
-    if (res.status == 200) {
-        originalData.value = res.data.data;
+    tableLoading.value = true;
+    try {
+        const res = await getHeroList();
+        if (res.status == 200) {
+            originalData.value = res.data.data;
+        }
+        await getList();
+    } finally {
+        tableLoading.value = false;
     }
-    getList();
 }
 
 onMounted(() => {
+    onResize();
+    window.addEventListener("resize", onResize);
     getOriginalData();
-})
+});
 
+onBeforeUnmount(() => {
+    window.removeEventListener("resize", onResize);
+});
 </script>
+
 <style lang="less" scoped>
-.search {
+.page {
+    min-height: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    background: #f5f6f8;
+    overflow-x: hidden;
+}
+
+.toolbar {
+    background: #fff;
+    border: 1px solid #e8ebf0;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.filters {
+    margin-bottom: 10px;
+}
+
+.field {
+    width: 100%;
+    max-width: 280px;
+}
+
+.actions {
     display: flex;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    padding: 5px 10px;
-    margin-bottom: 5px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
 
-    .search_input {
-        width: 40%;
-        margin-right: 10px;
-    }
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
 
-    .search_select {
-        width: 40%;
-        margin-right: 10px;
-    }
-
-    .search_btn {
-        display: flex;
-        justify-content: flex-start;
-        width: 40%;
+@media (min-width: 768px) {
+    .page {
+        padding: 16px 20px;
+        max-width: 960px;
+        margin: 0 auto;
     }
 }
 </style>

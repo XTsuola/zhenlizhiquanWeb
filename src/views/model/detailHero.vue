@@ -9,12 +9,12 @@
         </div>
         <div class="detail-body">
             <div class="row">
-                <div class="label">种族</div>
-                <div class="value">{{ zhenyinList[prop.detailData.zhenyin - 1] || "-" }}</div>
+                <div class="label">主种族</div>
+                <div class="value">{{ zhenyinList[prop.detailData.zhu - 1] || "-" }}</div>
             </div>
             <div class="row">
-                <div class="label">星级</div>
-                <div class="value">{{ nowlevel + 1 }}</div>
+                <div class="label">副种族</div>
+                <div class="value">{{ zhenyinList[prop.detailData.fu - 1] || "-" }}</div>
             </div>
             <div class="row">
                 <div class="label">图片</div>
@@ -23,23 +23,19 @@
                 </div>
             </div>
             <div class="row">
+                <div class="label">技能名称</div>
+                <div class="value">{{ prop.detailData.skillName || "-" }}</div>
+            </div>
+            <div class="row">
+                <div class="label">技能等级</div>
+                <div class="value">{{ nowlevel + 1 }}</div>
+            </div>
+            <div class="row">
                 <div class="label">效果描述</div>
                 <div class="value effect">{{ currentEffect }}</div>
             </div>
-            <div class="row">
-                <div class="label">被动加成</div>
-                <div class="value">{{ prop.detailData.bonus || "-" }}</div>
-            </div>
-            <div class="row">
-                <div class="label">战力加成</div>
-                <div class="value">{{ getZhanli(prop.detailData.quality) }}</div>
-            </div>
-            <div class="row">
-                <div class="label">神器类型</div>
-                <div class="value">{{ prop.detailData.type == 1 ? "武器" : "宝物" }}</div>
-            </div>
             <div class="row row--last">
-                <div class="label">神器品质</div>
+                <div class="label">英雄品质</div>
                 <div class="value">
                     <a-tag :color="getQualityColor(prop.detailData.quality)">
                         {{ getQualityName(prop.detailData.quality) }}
@@ -53,32 +49,30 @@
 <script lang="ts" setup>
 import { ref, computed, watch } from "vue";
 import { zhenyinList } from "@/utils/func";
-import { blueList, purpleList, goldList } from "@/data/shenqiData/zhanli";
 
 const prop = defineProps<{
     detailData: any;
 }>();
+
 const nowlevel = ref(12);
-const maxLevel = computed(() => Math.max((prop.detailData?.data?.length || 1) - 1, 0));
+const maxLevel = computed(() => {
+    const len = prop.detailData?.data?.length || 0;
+    return Math.max(len - 1, 0);
+});
+
 const currentEffect = computed(() => {
     const list = prop.detailData?.data;
     if (!list?.length) return "-";
-    return list[Math.min(nowlevel.value, list.length - 1)]?.effect || "-";
+    const item = list[Math.min(nowlevel.value, list.length - 1)];
+    return item?.effect || "-";
 });
 
 const qualityColorList = [
-    { label: "橙色", value: 3, color: "#FFA500" },
-    { label: "紫色", value: 2, color: "#8e488e" },
-    { label: "蓝色", value: 1, color: "#2db7f5" }
+    { label: "橙色", value: 4, color: "#FFA500" },
+    { label: "紫色", value: 3, color: "#8e488e" },
+    { label: "蓝色", value: 2, color: "#2db7f5" },
+    { label: "白色", value: 1, color: "#cccccc" }
 ];
-
-function getZhanli(quality: number) {
-    let zhanli = 0;
-    if (quality == 1) zhanli = blueList[nowlevel.value]?.value || 0;
-    else if (quality == 2) zhanli = purpleList[nowlevel.value]?.value || 0;
-    else if (quality == 3) zhanli = goldList[nowlevel.value]?.value || 0;
-    return zhanli > 10000 ? zhanli / 10000 + "万" : zhanli;
-}
 
 function getQualityName(quality: number) {
     return qualityColorList.find((e) => e.value == quality)?.label || "-";
@@ -124,6 +118,11 @@ watch(
     display: flex;
     gap: 8px;
     flex-shrink: 0;
+}
+
+.detail-body {
+    display: flex;
+    flex-direction: column;
 }
 
 .row {

@@ -1,54 +1,82 @@
-import { ref, onBeforeUnmount } from "vue";
+import { ref, onBeforeUnmount, type Ref } from "vue";
 
-export function useWebSocket(url: string, options: {
-    onmessage?: (msg: any) => void
-} = {}) {
-    const ws = ref<any>(null);
-    const messages = ref<any>([]);
-    const status = ref("disconnected");
-    let reconnectTimer: any = null;
+type WsOptions = {
+  onmessage?: (msg: string) => void;
+  /** 断线后自动重连间隔，默认 3000ms；传 0 关闭自动重连 */
+  reconnectMs?: number;
+};
 
-    const connect = () => {
-        ws.value = new WebSocket(url);
-        ws.value.onopen = () => {
-            status.value = "connected";
-            // console.log("WebSocket 已连接");
-        }
-        ws.value.onmessage = (event: any) => {
-            messages.value.push(event.data)
-            if (options.onmessage) {
-                options.onmessage(event.data);
-            }
-        }
+export function useWebSocket(url: string, options: WsOptions = {}) {
+  const ws: Ref<WebSocket | null> = ref(null);
+  const messages = ref<string[]>([]);
+  const status = ref<"disconnected" | "connecting" | "connected">("disconnected");
 
-        ws.value.onclose = () => {
-            status.value = "disconnected";
-            // console.log("WebSocket 已关闭，准备重连…");
-            reconnectTimer = setTimeout(connect, 3000);
-        }
+  const reconnectMs = options.reconnectMs ?? 3000;
+  let reconnectTimer: ReturnType<typeof setTimeout> | null = null;
+  let intentionalClose = false;
 
-        ws.value.onerror = (err: any) => {
-            // console.error("WebSocket 出错:", err);
-            ws.value.close();
-        }
+  function clearReconnect() {
+    if (reconnectTimer != null) {
+      clearTimeout(reconnectTimer);
+      reconnectTimer = null;
     }
+  }
 
-    const sendMessage = (command: any) => {
-        if (ws.value && command.type) {
-            ws.value.send(JSON.stringify(command));
-        }
+  function connect() {
+    clearReconnect();
+    intentionalClose = false;
+    status.value = "connecting";
+
+    const socket = new WebSocket(url);
+    ws.value = socket;
+
+    socket.onopen = () => {
+      status.value = "connected";
+    };
+
+    socket.onmessage = (event: MessageEvent) => {
+      const data = typeof event.data === "string" ? event.data : String(event.data);
+      messages.value.push(data);
+      options.onmessage?.(data);
+    };
+
+    socket.onclose = () => {
+      status.value = "disconnected";
+      ws.value = null;
+      if (!intentionalClose && reconnectMs > 0) {
+        reconnectTimer = setTimeout(connect, reconnectMs);
+      }
+    };
+
+    socket.onerror = () => {
+      // onclose 会随后触发，在此仅关闭以进入重连流程
+      try {
+        socket.close();
+      } catch {
+        /* ignore */
+      }
+    };
+  }
+
+  function sendMessage(command: { type?: string; [key: string]: unknown }) {
+    if (ws.value?.readyState === WebSocket.OPEN && command?.type) {
+      ws.value.send(JSON.stringify(command));
     }
+  }
 
-    const closeWS = () => {
-        ws.value.close();
-    }
+  function closeWS() {
+    intentionalClose = true;
+    clearReconnect();
+    ws.value?.close();
+    ws.value = null;
+    status.value = "disconnected";
+  }
 
-    connect();
+  connect();
 
-    onBeforeUnmount(() => {
-        clearTimeout(reconnectTimer);
-        ws.value?.close();
-    })
+  onBeforeUnmount(() => {
+    closeWS();
+  });
 
-    return { ws, messages, status, sendMessage, closeWS }
+  return { ws, messages, status, sendMessage, closeWS };
 }

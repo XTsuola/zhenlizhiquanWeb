@@ -1,112 +1,83 @@
 <template>
-    <div class="search">
-        <div class="search_btn">
-            <div>
+    <div class="page">
+        <div class="toolbar">
+            <h1 class="title">第{{ gameType }}届世界赛</h1>
+            <div class="actions">
+                <a-button type="primary" :disabled="gameType != '11'" @click="add">新增对局</a-button>
+                <a-button type="primary" danger @click="analysis">数据分析</a-button>
                 <a-button @click="goBack">返回</a-button>
-                <a-button style="margin-left: 8px;" type="primary" @click="add"
-                    :disabled="gameType != '11'">新增对局</a-button>
-            </div>
-            <div>
-                <a-button style="margin-left: auto;" type="primary" danger @click="analysis">数据分析</a-button>
             </div>
         </div>
+        <div class="table-wrap">
+            <MyTabel
+                :columnsData="columns"
+                :dataSource="data"
+                :rowClass="true"
+                :loading="tableLoading"
+                :pagination="{ pageSize, currentPage, total }"
+                @detail="showModal"
+                @edit="showModal"
+                @delete="deleteOk"
+                @change-page="changePage"
+            />
+        </div>
     </div>
-    <div class="header">
-        第{{ gameType }}届世界赛
-    </div>
-    <div class="card">
-        <MyTabel :columnsData="columns" :dataSource="data" :rowClass="true" :loading="tableLoading"
-            :pagination="{ pageSize: pageSize, currentPage: currentPage, total: total }" @detail="showModal"
-            @edit="showModal" @delete="deleteOk" @change-page="changePage">
-        </MyTabel>
-    </div>
-    <a-modal v-model:open="visible" destroyOnClose title="详细信息" :maskClosable="false">
-        <Detail :detailData="detailData"></Detail>
-        <template #footer>
-            <a-button key="back" @click="cancel">关闭</a-button>
-        </template>
-    </a-modal>
 </template>
+
 <script lang="ts" setup>
-import { ref, reactive, onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import { message } from "ant-design-vue";
 import { zhanquList, changciList } from "@/utils/func";
-import { shijiesaiDelete, shijiesaiInfoList, ShijiesaiInfoListType } from "@/api/shijiesai";
+import { shijiesaiDelete, shijiesaiInfoList, type ShijiesaiInfoListType } from "@/api/shijiesai";
 import router from "@/router";
 import MyTabel from "@/components/table.vue";
-import Detail from "../model/detaiHero.vue";
-
-declare var window: any;
 
 const gameType = sessionStorage.getItem("gameType");
+const isAdmin = !!sessionStorage.getItem("isAdmin");
 const tableLoading = ref(false);
-const loading = ref(false);
-const currentPage = ref<number>(1);
-const pageSize = ref<number>(200);
-const total = ref<number>(0);
-const detailData = reactive({
-    name: "",
-    quality: "",
-    zhu: "",
-    fu: "",
-    skillName: "",
-    img: "",
-    data: []
-});
-const visible = ref(false);
-const data = ref<any>([]);
-const columns = ref<any>([
+const currentPage = ref(1);
+const pageSize = ref(200);
+const total = ref(0);
+const data = ref<any[]>([]);
+
+const columns = [
+    { title: "战区", dataIndex: "zhanqu", key: "zhanqu", ellipsis: true, minWidth: 96 },
+    { title: "场次", dataIndex: "changci", key: "changci", ellipsis: true, minWidth: 120 },
     {
-        title: "战区",
-        dataIndex: "zhanqu",
-        key: "zhanqu",
-        width: 100,
-    },
-    {
-        title: "场次",
-        dataIndex: "changci",
-        key: "changci",
-        width: 100
+        title: "操作",
+        key: "action",
+        list: isAdmin ? ["detail", "edit", "delete"] : ["detail"],
+        width: isAdmin ? 160 : 72,
+        fixed: "right",
+        align: "center"
     }
-]);
-const isAdmin = sessionStorage.getItem("isAdmin");
-if (isAdmin) {
-    columns.value.push({
-        title: "操作",
-        key: "action",
-        list: ["detail", "edit", "delete"],
-        width: 50
-    });
-} else {
-    columns.value.push({
-        title: "操作",
-        key: "action",
-        list: ["detail"],
-        width: 50
-    });
-}
+];
 
 async function getList() {
     tableLoading.value = true;
-    const params: ShijiesaiInfoListType = {
-        pageSize: pageSize.value,
-        pageNo: currentPage.value,
-        gameType: parseInt(gameType as string)
-    };
-    const res = await shijiesaiInfoList(params);
-    if (res.status == 200) {
-        let originalData = res.data.data;
-        total.value = res.data.total;
-        data.value = originalData.map((e: any) => {
-            let zhanquNo = Math.floor(e.no / 100) * 100 - (parseInt(gameType as string) - 7) * 10000, changciNo = e.no % 100;
-            return {
-                ...e,
-                zhanqu: zhanquList.find((v: any) => v.value == zhanquNo)?.label,
-                changci: changciList.find((v: any) => v.value == changciNo)?.label
-            }
-        });
+    try {
+        const params: ShijiesaiInfoListType = {
+            pageSize: pageSize.value,
+            pageNo: currentPage.value,
+            gameType: parseInt(gameType as string)
+        };
+        const res = await shijiesaiInfoList(params);
+        if (res.status == 200) {
+            total.value = res.data.total;
+            const gt = parseInt(gameType as string);
+            data.value = res.data.data.map((e: any) => {
+                const zhanquNo = Math.floor(e.no / 100) * 100 - (gt - 7) * 10000;
+                const changciNo = e.no % 100;
+                return {
+                    ...e,
+                    zhanqu: zhanquList.find((v) => v.value == zhanquNo)?.label,
+                    changci: changciList.find((v) => v.value == changciNo)?.label
+                };
+            });
+        }
+    } finally {
+        tableLoading.value = false;
     }
-    tableLoading.value = false;
 }
 
 function goBack() {
@@ -114,16 +85,13 @@ function goBack() {
 }
 
 function add() {
-    window.open("#/gameAdd", '_blank');
+    window.open("#/gameAdd", "_blank");
 }
 
 function showModal(type: number, record: any) {
     sessionStorage.setItem("changciInfo", JSON.stringify(record));
-    if (type == 3) {
-        window.open("#/gameDetail", '_blank');
-    } else if (type == 2) {
-        window.open("#/gameUpdate", '_blank');
-    }
+    if (type == 3) window.open("#/gameDetail", "_blank");
+    else if (type == 2) window.open("#/gameUpdate", "_blank");
 }
 
 function changePage(page: number, size: number) {
@@ -133,22 +101,11 @@ function changePage(page: number, size: number) {
 }
 
 async function deleteOk(id: number) {
-    loading.value = true;
     const res = await shijiesaiDelete(id);
-    if (res.data.code == 200) {
-        message.success("删除成功");
-    } else {
-        message.error("失败");
-    }
-    if (data.value.length == 1) {
-        currentPage.value--;
-    }
+    if (res.data.code == 200) message.success("删除成功");
+    else message.error("删除失败");
+    if (data.value.length == 1 && currentPage.value > 1) currentPage.value--;
     getList();
-    loading.value = false;
-}
-
-function cancel() {
-    visible.value = false;
 }
 
 function analysis() {
@@ -157,37 +114,57 @@ function analysis() {
 
 onMounted(() => {
     getList();
-})
-
+});
 </script>
+
 <style lang="less" scoped>
-.search {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    padding: 5px 10px;
-    margin-bottom: 5px;
-
-    .search_input {
-        width: 40%;
-        margin-right: 10px;
-    }
-
-    .search_select {
-        width: 40%;
-        margin-right: 10px;
-    }
-
-    .search_btn {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-    }
-
+.page {
+    min-height: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    background: #f5f6f8;
+    overflow-x: hidden;
 }
 
-.header {
-    padding-left: 10px;
-    margin-bottom: 10px;
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    background: #fff;
+    border: 1px solid #e8ebf0;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.table-wrap {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+}
+
+@media (min-width: 768px) {
+    .page {
+        padding: 16px 20px;
+        max-width: 960px;
+        margin: 0 auto;
+    }
 }
 </style>

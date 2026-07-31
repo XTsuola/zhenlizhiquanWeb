@@ -1,192 +1,239 @@
 <template>
-    <div class="search">
-        <div class="search_select">
-            <a-select v-model:value="formState.zhenyin" style="width: 100%;" placeholder="请选择种族">
-                <a-select-option v-for="item in cardZhenyinList" :key="item.value" :value="item.value">{{
-                    item.label
-                    }}</a-select-option>
-            </a-select>
-        </div>
-        <div class="search_select">
-            <a-select v-model:value="formState.cost" style="width: 100%;" placeholder="请选择费用">
-                <a-select-option v-for="item in costList" :key="item.value" :value="item.value">{{
-                    item.label
-                    }}</a-select-option>
-            </a-select>
-        </div>
-    </div>
-    <div class="search">
-        <div class="search_select">
-            <a-select v-model:value="formState.quality" style="width: 100%;" placeholder="请选择品质">
-                <a-select-option v-for="item in cardQualityList" :key="item.value" :value="item.value">{{
-                    item.label
-                    }}</a-select-option>
-            </a-select>
-        </div>
-        <div class="search_input">
-            <a-input v-model:value="formState.name" placeholder="请输入名称" />
-        </div>
-    </div>
-    <div class="search">
-        <div class="search_select">
-            <a-select v-model:value="formState.tag" style="width: 100%" mode="multiple" placeholder="请选择标签">
-                <a-select-option v-for="item in tabList" :key="item.value" :value="item.value">{{
-                    item.label
-                }}</a-select-option>
-            </a-select>
-        </div>
-        <div class="search_select">
-            <a-select v-model:value="formState.type" style="width: 100%;" placeholder="请选择类型">
-                <a-select-option v-for="item in cardTypeList" :key="item.value" :value="item.value">{{
-                    item.label
-                    }}</a-select-option>
-            </a-select>
-        </div>
-    </div>
-    <div class="search">
-        <div class="search_div">
-            <div class="search_btn">
-                <a-button style="margin-right: 12px;" type="primary" @click="search">查询</a-button>
-                <a-button style="margin-right: 8px;" @click="reset">清空</a-button>
+    <div class="page">
+        <div class="toolbar">
+            <div class="filters">
+                <a-select v-model:value="formState.zhenyin" allow-clear placeholder="种族" class="field">
+                    <a-select-option v-for="item in cardZhenyinList" :key="item.value" :value="item.value">
+                        {{ item.label }}
+                    </a-select-option>
+                </a-select>
+                <a-select v-model:value="formState.cost" allow-clear placeholder="费用" class="field">
+                    <a-select-option v-for="item in costList" :key="item.value" :value="item.value">
+                        {{ item.label }}
+                    </a-select-option>
+                </a-select>
+                <a-select v-model:value="formState.quality" allow-clear placeholder="品质" class="field">
+                    <a-select-option v-for="item in cardQualityList" :key="item.value" :value="item.value">
+                        {{ item.label }}
+                    </a-select-option>
+                </a-select>
+                <a-select v-model:value="formState.type" allow-clear placeholder="类型" class="field">
+                    <a-select-option v-for="item in cardTypeList" :key="item.value" :value="item.value">
+                        {{ item.label }}
+                    </a-select-option>
+                </a-select>
+                <a-select
+                    v-model:value="formState.tag"
+                    allow-clear
+                    mode="multiple"
+                    placeholder="标签"
+                    class="field field--span"
+                >
+                    <a-select-option v-for="item in tabList" :key="item.value" :value="item.value">
+                        {{ item.label }}
+                    </a-select-option>
+                </a-select>
+                <a-input
+                    v-model:value="formState.name"
+                    allow-clear
+                    placeholder="名称"
+                    class="field"
+                    @pressEnter="getList"
+                />
+            </div>
+            <div class="actions">
+                <a-button type="primary" :loading="tableLoading" @click="getList">查询</a-button>
+                <a-button @click="reset">清空</a-button>
+                <a-button
+                    :type="viewMode === 'tag' ? 'default' : 'primary'"
+                    ghost
+                    :disabled="tableLoading"
+                    @click="toggleTag"
+                >
+                    {{ viewMode === "tag" ? "关闭" : "标签" }}
+                </a-button>
+                <a-button
+                    :type="viewMode === 'sort' ? 'default' : 'primary'"
+                    ghost
+                    :disabled="tableLoading"
+                    @click="toggleSort"
+                >
+                    {{ viewMode === "sort" ? "关闭" : "排序" }}
+                </a-button>
                 <a-button @click="goBack">返回</a-button>
             </div>
-            <div>
-                <a-button style="margin-right: 8px;" :type="showFlag == 2 ? 'default' : 'primary'" @click="showTag"
-                    :disabled="tableLoading">{{
-                        showTagText }}</a-button>
-                <a-button style="margin-right: 8px;" :type="showFlag == 1 ? 'default' : 'primary'" @click="showOrder"
-                    :disabled="tableLoading">{{
-                        showSortText }}</a-button>
-            </div>
         </div>
-    </div>
-    <div class="card">
-        <MyTabel :columnsData="columns" :dataSource="data" @detail="showModal3" @grade="showModal" @tag="showModal2"
-            :loading="tableLoading">
-        </MyTabel>
-    </div>
-    <a-modal v-model:open="visible" destroyOnClose title="卡牌评级" :maskClosable="false">
-        <div style="margin-bottom: 10px;">卡牌名称：{{ gradeEditData.name }}</div>
-        <div style="margin-bottom: 10px;">
-            <span>选择评级：</span>
-            <a-radio-group v-model:value="gradeEditData.grade">
-                <a-radio class="myRadio" :value="6">
-                    <div class="tagBg">
-                        {{ getGradeName(6) }}
-                    </div>
-                </a-radio>
-                <a-radio v-for="i in 6" class="myRadio" :value="6 - i">
-                    <a-tag :color="getGradeColor(6 - i)">{{ getGradeName(6 - i) }}</a-tag>
+
+        <div class="table-wrap">
+            <MyTabel
+                :columnsData="columns"
+                :dataSource="data"
+                :loading="tableLoading"
+                @detail="openDetail"
+                @grade="openGrade"
+                @tag="openTag"
+            />
+        </div>
+
+        <a-modal
+            v-model:open="gradeVisible"
+            destroyOnClose
+            title="卡牌评级"
+            :maskClosable="false"
+            :width="isNarrow ? '92%' : 420"
+            centered
+        >
+            <div class="modal-line">卡牌名称：{{ gradeEdit.name }}</div>
+            <div class="modal-line">选择评级：</div>
+            <a-radio-group v-model:value="gradeEdit.grade" class="grade-group">
+                <a-radio v-for="item in gradeList" :key="item.value" class="myRadio" :value="item.value">
+                    <div v-if="item.value === 6" class="tagBg">{{ item.label }}</div>
+                    <a-tag v-else :color="item.color">{{ item.label }}</a-tag>
                 </a-radio>
             </a-radio-group>
+            <template #footer>
+                <a-button @click="gradeVisible = false">关闭</a-button>
+                <a-button type="primary" :loading="saving" @click="saveGrade">确定</a-button>
+            </template>
+        </a-modal>
 
-        </div>
-        <template #footer>
-            <a-button style="margin-right: 10px;" key="back" @click="cancel(1)">关闭</a-button>
-            <a-button key="ok" type="primary" @click="ok(1)">确定</a-button>
-        </template>
-    </a-modal>
-    <a-modal v-model:open="visible2" destroyOnClose title="卡牌标签" :maskClosable="false">
-        <div style="margin-bottom: 10px;">卡牌名称：{{ tagEditData.name }}</div>
-        <div style="margin-bottom: 10px;">
-            <div style="margin-bottom: 10px;">添加标签：<a-button size="small" @click="clearTab">清空</a-button></div
-                style="margin-bottom: 10px;">
-            <a-checkbox-group v-model:value="tagEditData.tag" name="checkboxgroup" :options="tabList" />
-        </div>
-        <template #footer>
-            <a-button style="margin-right: 10px;" key="back" @click="cancel(2)">关闭</a-button>
-            <a-button key="ok" type="primary" @click="ok(2)">确定</a-button>
-        </template>
-    </a-modal>
-    <a-modal v-model:open="visible3" destroyOnClose title="详细信息" :maskClosable="false">
-        <Detail :detailData="detailData"></Detail>
-        <template #footer>
-            <a-button key="back" @click="cancel(3)">关闭</a-button>
-        </template>
-    </a-modal>
+        <a-modal
+            v-model:open="tagVisible"
+            destroyOnClose
+            title="卡牌标签"
+            :maskClosable="false"
+            :width="isNarrow ? '92%' : 480"
+            centered
+        >
+            <div class="modal-line">卡牌名称：{{ tagEdit.name }}</div>
+            <div class="modal-line tag-actions">
+                <span>添加标签</span>
+                <a-button size="small" @click="tagEdit.tag = []">清空</a-button>
+            </div>
+            <a-checkbox-group v-model:value="tagEdit.tag" :options="tabList" />
+            <template #footer>
+                <a-button @click="tagVisible = false">关闭</a-button>
+                <a-button type="primary" :loading="saving" @click="saveTag">确定</a-button>
+            </template>
+        </a-modal>
+
+        <a-modal
+            v-model:open="detailVisible"
+            destroyOnClose
+            title="详细信息"
+            :maskClosable="false"
+            :width="isNarrow ? '92%' : 520"
+            centered
+        >
+            <Detail v-if="detailVisible" :detailData="detailData" />
+            <template #footer>
+                <a-button @click="detailVisible = false">关闭</a-button>
+            </template>
+        </a-modal>
+    </div>
 </template>
+
 <script lang="ts" setup>
-import { ref, reactive, onMounted } from "vue";
+import { ref, reactive, computed, onMounted, onBeforeUnmount, defineAsyncComponent } from "vue";
 import { message } from "ant-design-vue";
 import { cardZhenyinList, costList, cardQualityList, tabList, allValuesInArray } from "@/utils/func";
-import { getAllCardList, updateCardGrade, updateCardTag, UpdateCardTagType, type UpdateCardGradeType } from "@/api/card";
+import { getAllCardList, updateCardGrade, updateCardTag } from "@/api/card";
 import router from "@/router";
 import MyTabel from "@/components/table.vue";
-import Detail from "../model/detailCard.vue";
+
+const Detail = defineAsyncComponent(() => import("../model/detailCard.vue"));
+const IMG_PREFIX = import.meta.env.VITE_APP_BASE_URL + "cardImg";
+const isAdmin = !!sessionStorage.getItem("isAdmin");
+
+const gradeList = [
+    { label: "SSS真神", value: 6, color: "#000000" },
+    { label: "SS神话", value: 5, color: "#000000" },
+    { label: "S顶级", value: 4, color: "#ff0000" },
+    { label: "A高级", value: 3, color: "#ff6633" },
+    { label: "B能带", value: 2, color: "#8e488e" },
+    { label: "C普通", value: 1, color: "#2db7f5" },
+    { label: "D垃圾", value: 0, color: "#87d068" }
+];
+
+const cardTypeList = [
+    { label: "全部", value: "" },
+    { label: "部下", value: 1 },
+    { label: "法术", value: 2 },
+    { label: "传记", value: 3 },
+    { label: "符文", value: 4 }
+];
+
+const adminAction = {
+    title: "操作",
+    key: "action",
+    list: ["grade", "tag"],
+    width: 120,
+    fixed: "right",
+    align: "center"
+};
+
+function withAdmin(cols: any[]) {
+    return isAdmin ? [...cols, adminAction] : cols;
+}
+
+const baseColumns = withAdmin([
+    { title: "头像", dataIndex: "headImg2", key: "headImg2", width: 64 },
+    { title: "名称", dataIndex: "name", key: "name", ellipsis: true, minWidth: 96 },
+    { title: "评级", dataIndex: "grade", key: "grade", width: 88, align: "center" }
+]);
+
+const tagColumns = withAdmin([
+    { title: "头像", dataIndex: "headImg2", key: "headImg2", width: 64 },
+    { title: "标签", dataIndex: "tag", key: "tag", ellipsis: true, minWidth: 120 }
+]);
+
+const sortColumns = withAdmin([
+    { title: "头像", dataIndex: "headImg2", key: "headImg2", width: 52 },
+    { title: "名称", dataIndex: "name", key: "name", ellipsis: true, width: 72 },
+    {
+        title: "攻",
+        dataIndex: "att",
+        key: "att",
+        width: 56,
+        align: "center",
+        sorter: (a: any, b: any) => a.att - b.att
+    },
+    {
+        title: "血",
+        dataIndex: "life",
+        key: "life",
+        width: 56,
+        align: "center",
+        sorter: (a: any, b: any) => a.life - b.life
+    },
+    {
+        title: "评级",
+        dataIndex: "grade",
+        key: "grade",
+        width: 72,
+        align: "center",
+        sorter: (a: any, b: any) => JSON.parse(a.grade)[0] - JSON.parse(b.grade)[0]
+    }
+]);
 
 const tableLoading = ref(false);
-const gradeList = [{
-    label: "SSS真神",
-    value: 6,
-    color: "#000000"
-}, {
-    label: "SS神话",
-    value: 5,
-    color: "#000000"
-}, {
-    label: "S顶级",
-    value: 4,
-    color: "#ff0000"
-}, {
-    label: "A高级",
-    value: 3,
-    color: "#ff6633"
-}, {
-    label: "B能带",
-    value: 2,
-    color: "#8e488e"
-}, {
-    label: "C普通",
-    value: 1,
-    color: "#2db7f5"
-}, {
-    label: "D垃圾",
-    value: 0,
-    color: "#87d068"
-}];
-const cardTypeList = [{
-    label: "全部",
-    value: ""
-}, {
-    label: "部下",
-    value: 1
-}, {
-    label: "法术",
-    value: 2
-}, {
-    label: "传记",
-    value: 3
-}, {
-    label: "符文",
-    value: 4
-}];
-const isAdmin = sessionStorage.getItem("isAdmin");
-const showFlag = ref(0);
-const showTagText = ref("标签");
-const showSortText = ref("排序");
-const detailData = reactive({
-    id: 0,
-    zhenyin: "",
-    name: "",
-    quality: "",
-    cost: null,
-    type: null,
-    img: "",
-    grade: "",
-    data: []
-});
-const gradeEditData = reactive({
-    name: "",
-    grade: 0,
-    id: 0
-});
-const tagEditData = reactive({
-    name: "",
-    tag: [],
-    id: 0
-});
-const originalData = ref<any>([]);
-const formState = reactive({
+const saving = ref(false);
+const isNarrow = ref(window.innerWidth < 576);
+const viewMode = ref<"default" | "tag" | "sort">("default");
+const originalData = ref<any[]>([]);
+const data = ref<any[]>([]);
+const gradeVisible = ref(false);
+const tagVisible = ref(false);
+const detailVisible = ref(false);
+
+const formState = reactive<{
+    name: string;
+    tag: number[] | undefined;
+    zhenyin: number | undefined;
+    cost: number | undefined;
+    quality: number | undefined;
+    type: number | string | undefined;
+}>({
     name: "",
     tag: undefined,
     zhenyin: undefined,
@@ -194,86 +241,70 @@ const formState = reactive({
     quality: undefined,
     type: undefined
 });
-const visible = ref(false);
-const visible2 = ref(false);
-const visible3 = ref(false);
-const data = ref<any>([]);
-let originalColumns = [
-    {
-        title: "头像",
-        dataIndex: "headImg2",
-        key: "headImg2",
-        scopedSlots: { customRender: "pic" }
-    },
-    {
-        title: "名称",
-        dataIndex: "name",
-        key: "name"
-    },
-    {
-        title: "评级",
-        dataIndex: "grade",
-        key: "grade"
-    }
-];
-const columns = ref<any>();
-columns.value = originalColumns;
-if (isAdmin) {
-    columns.value.push({
-        title: "操作",
-        key: "action",
-        list: ["grade", "tag"]
-    });
+
+const detailData = reactive({
+    id: 0,
+    zhenyin: "",
+    name: "",
+    quality: "",
+    cost: null as number | null,
+    type: null as number | null,
+    img: "",
+    grade: "",
+    data: [] as any[]
+});
+
+const gradeEdit = reactive({ id: 0, name: "", grade: 0 });
+const tagEdit = reactive<{ id: number; name: string; tag: any[] }>({ id: 0, name: "", tag: [] });
+
+const columns = computed(() => {
+    if (viewMode.value === "tag") return tagColumns;
+    if (viewMode.value === "sort") return sortColumns;
+    return baseColumns;
+});
+
+function onResize() {
+    isNarrow.value = window.innerWidth < 576;
 }
 
-function getGradeName(grade: number) {
-    return gradeList.find(e => e.value == grade)?.label;
-}
-
-function getGradeColor(grade: number) {
-    return gradeList.find(e => e.value == grade)?.color;
+function parseTags(tag: unknown) {
+    if (!tag) return [];
+    if (Array.isArray(tag)) return tag;
+    if (typeof tag === "string") return JSON.parse(tag);
+    return [];
 }
 
 function getList() {
-    let allData: any = JSON.parse(JSON.stringify(originalData.value));
-    if (formState.name) {
-        allData = allData.filter((item: any) => item.name.includes(formState.name));
+    let list = originalData.value;
+    const name = formState.name.trim();
+    if (name) list = list.filter((item) => item.name.includes(name));
+    if (formState.zhenyin != null) list = list.filter((item) => item.zhenyin == formState.zhenyin);
+    if (formState.cost != null) list = list.filter((item) => item.cost == formState.cost);
+    if (formState.quality != null) list = list.filter((item) => item.quality == formState.quality);
+    if (formState.type != null && formState.type !== "") {
+        list = list.filter((item) => item.type == formState.type);
     }
-    if (formState.zhenyin) {
-        allData = allData.filter((item: any) => item.zhenyin == formState.zhenyin);
+    const selectedTags = formState.tag;
+    if (selectedTags?.length) {
+        list = list.filter((item) => allValuesInArray(selectedTags, parseTags(item.tag)));
     }
-    if (formState.cost != undefined && formState.cost !== "") {
-        allData = allData.filter((item: any) => item.cost == formState.cost);
-    }
-    if (formState.quality != undefined && formState.quality != "") {
-        allData = allData.filter((item: any) => item.quality == formState.quality);
-    }
-    if (formState.type != undefined && formState.type != "") {
-        allData = allData.filter((item: any) => item.type == formState.type);
-    }
-    if (formState.tag) {
-        const arr1 = formState.tag ? formState.tag : [];
-        allData = allData.filter((item: any) => {
-            const arr2 = item.tag ? JSON.parse(item.tag) : [];
-            return allValuesInArray(arr1, arr2);
-        })
-    }
-    for (let i = 0; i < allData.length; i++) {
-        allData[i].img = import.meta.env.VITE_APP_BASE_URL + "cardImg" + allData[i].img;
-        allData[i].tag = allData[i].tag ? JSON.parse(allData[i].tag) : [];
-        allData[i].att = allData[i].data.at(-1).attack;
-        allData[i].life = allData[i].data.at(-1).life;
-    }
-    data.value = allData;
-}
-
-function search() {
-    getList();
+    data.value = list.map((item) => {
+        const last = item.data?.at?.(-1);
+        return {
+            ...item,
+            img: IMG_PREFIX + item.img,
+            tag: parseTags(item.tag),
+            att: last?.attack,
+            life: last?.life
+        };
+    });
 }
 
 function reset() {
     formState.name = "";
+    formState.tag = undefined;
     formState.zhenyin = formState.cost = formState.quality = formState.type = undefined;
+    viewMode.value = "default";
     getList();
 }
 
@@ -281,220 +312,177 @@ function goBack() {
     router.go(-1);
 }
 
-function showModal(record: any) {
-    visible.value = true;
-    gradeEditData.id = record.id;
-    gradeEditData.name = record.name;
-    gradeEditData.grade = JSON.parse(record.grade)[0];
+function openGrade(record: any) {
+    gradeEdit.id = record.id;
+    gradeEdit.name = record.name;
+    gradeEdit.grade = JSON.parse(record.grade)[0];
+    gradeVisible.value = true;
 }
 
-function showModal2(record: any) {
-    visible2.value = true;
-    tagEditData.id = record.id;
-    tagEditData.name = record.name;
-    tagEditData.tag = record.tag;
+function openTag(record: any) {
+    tagEdit.id = record.id;
+    tagEdit.name = record.name;
+    tagEdit.tag = Array.isArray(record.tag) ? [...record.tag] : [];
+    tagVisible.value = true;
 }
 
-function showModal3(_: number, record: any) {
-    visible3.value = true;
-    detailData.id = record.id;
-    detailData.name = record.name;
-    detailData.zhenyin = record.zhenyin;
-    detailData.quality = record.quality;
-    detailData.cost = record.cost;
-    detailData.type = record.type;
-    detailData.img = record.img;
-    detailData.grade = record.grade;
-    detailData.data = record.data;
+function openDetail(_: number, record: any) {
+    Object.assign(detailData, {
+        id: record.id,
+        name: record.name,
+        zhenyin: record.zhenyin,
+        quality: record.quality,
+        cost: record.cost,
+        type: record.type,
+        img: record.img,
+        grade: record.grade,
+        data: record.data
+    });
+    detailVisible.value = true;
 }
 
-function showTag() {
-    if (showFlag.value != 2) {
-        showFlag.value = 2;
-        showTagText.value = "关闭";
-        showSortText.value = "排序";
-        columns.value = [
-            {
-                title: "头像",
-                dataIndex: "headImg2",
-                key: "headImg2",
-                scopedSlots: { customRender: "pic" },
-                width: 70
-            },
-            {
-                title: "标签",
-                dataIndex: "tag",
-                key: "tag"
-            }
-        ];
-    } else {
-        showFlag.value = 0;
-        showTagText.value = "标签";
-        columns.value = originalColumns;
-    }
+function toggleTag() {
+    viewMode.value = viewMode.value === "tag" ? "default" : "tag";
 }
 
-function showOrder() {
-    if (showFlag.value != 1) {
-        showFlag.value = 1;
-        showSortText.value = "关闭";
-        showTagText.value = "标签";
-        columns.value = [
-            {
-                title: "头像",
-                dataIndex: "headImg2",
-                key: "headImg2",
-                scopedSlots: { customRender: "pic" }
-            },
-            {
-                title: "名称",
-                dataIndex: "name",
-                key: "name"
-            },
-            {
-                title: "att",
-                dataIndex: "att",
-                key: "att",
-                sorter: (a: any, b: any) => {
-                    return a.att - b.att
-                }
-            },
-            {
-                title: "lif",
-                dataIndex: "life",
-                key: "life",
-                sorter: (a: any, b: any) => {
-                    return a.life - b.life
-                }
-            },
-            {
-                title: "评级",
-                dataIndex: "grade",
-                key: "grade",
-                sorter: (a: any, b: any) => {
-                    let aSort = JSON.parse(a.grade)[0], bSort = JSON.parse(b.grade)[0];
-                    return aSort - bSort;
-                }
-            }
-        ];
-    } else {
-        showFlag.value = 0;
-        showSortText.value = "排序";
-        columns.value = originalColumns;
-    }
+function toggleSort() {
+    viewMode.value = viewMode.value === "sort" ? "default" : "sort";
 }
 
-function cancel(num: number) {
-    if (num == 1) {
-        visible.value = false;
-    } else if (num == 2) {
-        visible2.value = false;
-    } else if (num == 3) {
-        visible3.value = false;
-    }
-}
-
-function clearTab() {
-    tagEditData.tag = [];
-}
-
-async function ok(num: number) {
-    if (num == 1) {
-        const params: UpdateCardGradeType = {
-            id: gradeEditData.id,
-            grade: [gradeEditData.grade]
-        };
-        const res = await updateCardGrade(params);
+async function saveGrade() {
+    saving.value = true;
+    try {
+        const res = await updateCardGrade({ id: gradeEdit.id, grade: [gradeEdit.grade] });
         if (res.data.code == 200) {
-            data.value.find((e: any) => e.id == gradeEditData.id).grade = JSON.stringify([gradeEditData.grade]);
+            const row = data.value.find((e) => e.id == gradeEdit.id);
+            if (row) row.grade = JSON.stringify([gradeEdit.grade]);
             message.success("操作成功");
-            visible.value = false;
+            gradeVisible.value = false;
         }
-    } else if (num == 2) {
-        const params: UpdateCardTagType = {
-            id: tagEditData.id,
-            tag: tagEditData.tag
-        };
-        const res = await updateCardTag(params);
+    } finally {
+        saving.value = false;
+    }
+}
+
+async function saveTag() {
+    saving.value = true;
+    try {
+        const res = await updateCardTag({ id: tagEdit.id, tag: tagEdit.tag });
         if (res.data.code == 200) {
-            data.value.find((e: any) => e.id == tagEditData.id).tag = tagEditData.tag;
+            const row = data.value.find((e) => e.id == tagEdit.id);
+            if (row) row.tag = tagEdit.tag;
             message.success("操作成功");
-            visible2.value = false;
+            tagVisible.value = false;
         }
+    } finally {
+        saving.value = false;
     }
 }
 
 async function getOriginalData() {
     tableLoading.value = true;
-    const res = await getAllCardList();
-    if (res.status == 200) {
-        originalData.value = res.data.data;
+    try {
+        const res = await getAllCardList();
+        if (res.status == 200) originalData.value = res.data.data;
+        getList();
+    } finally {
+        tableLoading.value = false;
     }
-    tableLoading.value = false;
-    getList();
 }
 
 onMounted(() => {
+    onResize();
+    window.addEventListener("resize", onResize);
     getOriginalData();
-})
+});
 
+onBeforeUnmount(() => {
+    window.removeEventListener("resize", onResize);
+});
 </script>
+
 <style lang="less" scoped>
-.search {
+.page {
+    min-height: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    background: #f5f6f8;
+    overflow-x: hidden;
+}
+
+.toolbar {
+    background: #fff;
+    border: 1px solid #e8ebf0;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.field {
+    width: 100%;
+}
+
+.field--span {
+    grid-column: 1 / -1;
+}
+
+.actions {
     display: flex;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    padding: 5px 10px;
-    margin-bottom: 5px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
 
-    .search_input {
-        width: 40%;
-        margin-right: 10px;
-    }
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
 
-    .search_select {
-        width: 40%;
-        margin-right: 10px;
-    }
+.modal-line {
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #374151;
+}
 
-    .search_div {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
+.tag-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
-    .search_btn {
-        display: flex;
-        justify-content: flex-start;
-        width: 40%;
-    }
+.grade-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .myRadio {
-    display: 'flex';
-    height: '30px';
-    line-height: '30px';
-    width: 100%;
-    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    line-height: 30px;
+    margin: 0;
 }
 
 .tagBg {
     margin: 0;
-    width: 60px;
-    color: #ffffff;
+    width: 72px;
+    height: 22px;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 13px;
+    font-size: 12px;
     border-radius: 4px;
-    background: linear-gradient(45deg,
-            #111,
-            #AA8B3B,
-            #FFD700,
-            #FF6B35,
-            #E6B325,
-            #C8A951,
-            #111);
+    background: linear-gradient(45deg, #111, #aa8b3b, #ffd700, #ff6b35, #e6b325, #c8a951, #111);
     background-size: 600% 600%;
     animation: colorGold 10s ease infinite;
 }
@@ -503,13 +491,28 @@ onMounted(() => {
     0% {
         background-position: 0% 50%;
     }
-
     50% {
         background-position: 100% 50%;
     }
-
     100% {
         background-position: 0% 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .page {
+        padding: 16px 20px;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .filters {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-bottom: 12px;
+    }
+
+    .field--span {
+        grid-column: auto;
     }
 }
 </style>
