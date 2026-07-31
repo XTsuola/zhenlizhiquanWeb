@@ -1,53 +1,55 @@
 <template>
-    <div class="shenqi">
-        <div class="search">
-            <div class="search_select">
-                <a-select v-model:value="formState.quality" style="width: 100%;" placeholder="请选择品质">
-                    <a-select-option v-for="item in shenqiQualityList" :key="item.value" :value="item.value">{{
-                        item.label
-                        }}</a-select-option>
+    <div class="page">
+        <div class="toolbar">
+            <div class="filters">
+                <a-select v-model:value="formState.quality" allow-clear placeholder="品质" class="field">
+                    <a-select-option v-for="item in shenqiQualityList" :key="item.value" :value="item.value">
+                        {{ item.label }}
+                    </a-select-option>
                 </a-select>
-            </div>
-            <div class="search_select">
-                <a-select v-model:value="formState.type" style="width: 100%;" placeholder="请选择类型">
-                    <a-select-option v-for="item in typeList" :key="item.value" :value="item.value">{{
-                        item.label
-                        }}</a-select-option>
+                <a-select v-model:value="formState.type" allow-clear placeholder="类型" class="field">
+                    <a-select-option v-for="item in typeList" :key="item.value" :value="item.value">
+                        {{ item.label }}
+                    </a-select-option>
                 </a-select>
+                <a-input v-model:value="formState.name" allow-clear placeholder="名称" class="field"
+                    @pressEnter="search" />
             </div>
-        </div>
-        <div class="search">
-            <div class="search_input">
-                <a-input v-model:value="formState.name" placeholder="请输入名称" />
-            </div>
-            <div class="search_btn">
-                <a-button style="margin-right: 8px;" type="primary" @click="search">查询</a-button>
-                <a-button style="margin-right: 8px;" @click="reset">清空</a-button>
+            <div class="actions">
+                <a-button type="primary" :loading="tableLoading" @click="search">查询</a-button>
+                <a-button @click="reset">清空</a-button>
                 <a-button @click="goBack">返回</a-button>
             </div>
         </div>
-        <div class="card">
-            <MyTabel :columnsData="columns" :dataSource="data" @detail="showModal" :loading="tableLoading"></MyTabel>
+
+        <div class="table-wrap">
+            <MyTabel :columnsData="columns" :dataSource="data" :loading="tableLoading" @detail="showModal" />
         </div>
+
         <a-modal v-model:open="visible" destroyOnClose title="详细信息" :maskClosable="false">
-            <Detail :detailData="detailData"></Detail>
+            <Detail v-if="visible" :detailData="detailData" />
             <template #footer>
-                <a-button key="back" @click="cancel">关闭</a-button>
+                <a-button @click="cancel">关闭</a-button>
             </template>
         </a-modal>
     </div>
 </template>
+
 <script lang="ts" setup>
-import { ref, reactive, onMounted } from "vue";
-import { shenqiData } from "@/data/shenqiData/all";
+import { ref, reactive, onMounted, defineAsyncComponent } from "vue";
 import { shenqiQualityList, typeList } from "@/utils/func";
 import router from "@/router";
-import Detail from "../model/detailShenqi.vue";
 import MyTabel from "@/components/table.vue";
 
+const Detail = defineAsyncComponent(() => import("../model/detailShenqi.vue"));
+const IMG_PREFIX = import.meta.env.VITE_APP_BASE_URL + "shenqiImg";
 const tableLoading = ref(false);
-const originalData = ref<any>([]);
-const formState = reactive({
+const originalData = ref<any[]>([]);
+const formState = reactive<{
+    name: string;
+    quality: number | undefined;
+    type: number | undefined;
+}>({
     name: "",
     quality: undefined,
     type: undefined
@@ -59,47 +61,46 @@ const detailData = reactive({
     type: "",
     img: "",
     bonus: "",
-    data: []
+    data: [] as any[]
 });
 const visible = ref(false);
-const data = ref<any>([]);
-const columns = ref<any>([
+const data = ref<any[]>([]);
+const columns = [
     {
         title: "头像",
         dataIndex: "headImg",
         key: "headImg",
-        width: 50,
-        scopedSlots: { customRender: "pic" }
+        width: 64
     },
     {
         title: "名称",
         dataIndex: "name",
-        key: "name",
-        width: 160
+        key: "name"
     },
     {
         title: "操作",
         key: "action",
         list: ["detail"],
-        width: 50
-    },
-]);
+        width: 72
+    }
+];
 
 function getList() {
-    let allData: any = JSON.parse(JSON.stringify(originalData.value));
-    if (formState.name) {
-        allData = allData.filter((item: any) => item.name.includes(formState.name));
+    let list = originalData.value;
+    const name = formState.name.trim();
+    if (name) {
+        list = list.filter((item) => item.name.includes(name));
     }
-    if (formState.quality) {
-        allData = allData.filter((item: any) => item.quality == formState.quality);
+    if (formState.quality != null) {
+        list = list.filter((item) => item.quality == formState.quality);
     }
-    if (formState.type != undefined && formState.type != "") {
-        allData = allData.filter((item: any) => item.type == formState.type);
+    if (formState.type != null && formState.type !== ("" as any)) {
+        list = list.filter((item) => item.type == formState.type);
     }
-    for (let i = 0; i < allData.length; i++) {
-        allData[i].img = import.meta.env.VITE_APP_BASE_URL + "shenqiImg" + allData[i].img;
-    }
-    data.value = allData;
+    data.value = list.map((item) => ({
+        ...item,
+        img: IMG_PREFIX + item.img
+    }));
 }
 
 function search() {
@@ -112,8 +113,11 @@ function reset() {
     getList();
 }
 
+function goBack() {
+    router.go(-1);
+}
+
 function showModal(_: number, record: any) {
-    visible.value = true;
     detailData.name = record.name;
     detailData.zhenyin = record.zhenyin;
     detailData.quality = record.quality;
@@ -121,6 +125,7 @@ function showModal(_: number, record: any) {
     detailData.img = record.img;
     detailData.bonus = record.bonus;
     detailData.data = record.data;
+    visible.value = true;
 }
 
 function cancel() {
@@ -129,43 +134,70 @@ function cancel() {
 
 async function getOriginalData() {
     tableLoading.value = true;
-    const zhenyin = parseInt(sessionStorage.getItem("shenqi") as string);
-    originalData.value = shenqiData.filter((item: any) => item.zhenyin === zhenyin);
-    tableLoading.value = false;
-    getList();
-}
-
-function goBack() {
-    router.go(-1);
+    try {
+        const zhenyin = parseInt(sessionStorage.getItem("shenqi") || "0", 10);
+        // 先进页再异步加载大包，避免阻塞首屏
+        const { shenqiData } = await import("@/data/shenqiData/all");
+        originalData.value = shenqiData.filter((item: any) => item.zhenyin === zhenyin);
+        getList();
+    } finally {
+        tableLoading.value = false;
+    }
 }
 
 onMounted(() => {
     getOriginalData();
-})
-
+});
 </script>
+
 <style lang="less" scoped>
-.search {
+.page {
+    min-height: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    background: #f5f6f8;
+}
+
+.toolbar {
+    background: #fff;
+    border: 1px solid #e8ebf0;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.field {
+    width: 100%;
+}
+
+.actions {
     display: flex;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    padding: 5px 10px;
-    margin-bottom: 5px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
 
-    .search_input {
-        width: 40%;
-        margin-right: 10px;
+.table-wrap {
+    background: transparent;
+}
+
+@media (min-width: 768px) {
+    .page {
+        padding: 16px 20px;
+        max-width: 960px;
+        margin: 0 auto;
     }
 
-    .search_select {
-        width: 40%;
-        margin-right: 10px;
-    }
-
-    .search_btn {
-        display: flex;
-        justify-content: flex-start;
-        width: 40%;
+    .filters {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-bottom: 12px;
     }
 }
 </style>

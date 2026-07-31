@@ -105,82 +105,82 @@ const zhenyinNameList: ZhenyinItem[] = [{
 const whereList: WhereItem[] = [{
     name: "遗迹奖励",
     url: "/yiji",
-    bgColor: "#ffa500",
+    bgColor: "#c47a2c",
     log: "查询遗迹"
 }, {
     name: "计算工具",
     url: "/menuTools",
-    bgColor: "#03a1c9",
+    bgColor: "#2f8f9a",
     log: "查询计算"
 }, {
     name: "资源查询",
     url: "/resource",
-    bgColor: "#008000",
+    bgColor: "#3a8f5c",
     log: "查询资源"
 }, {
     name: "卡组分享",
     url: "/cardsUpload",
-    bgColor: "#0e5d92",
+    bgColor: "#3d6fa8",
     log: "分享卡组"
 }, {
     name: "英雄统计",
     url: "/heroList",
-    bgColor: "#c01b10",
+    bgColor: "#b04a45",
     log: "查询英雄"
 }, {
     name: "近卫技能",
     url: "/chongwuSkillList",
-    bgColor: "#9bc505",
+    bgColor: "#6f9a3d",
     log: "查询近卫"
 }, {
     name: "英雄碎片",
     url: "/shardList",
-    bgColor: "#15a0a0",
+    bgColor: "#2f9a8a",
     log: "查询碎片"
 }, {
     name: "皮肤查询",
     url: "/skinList",
-    bgColor: "#804400",
+    bgColor: "#8a6540",
     log: "查询皮肤"
-}, {
-    name: "卡牌评级",
-    url: "/cardGrade",
-    bgColor: "#333333",
-    log: "查询评级"
 }, {
     name: "离线查询",
     url: "/cardOutline",
-    bgColor: "#555555",
+    bgColor: "#5c6b7a",
     log: "查询卡牌"
+}, {
+    name: "卡牌评级",
+    url: "/cardGrade",
+    bgColor: "#4a5568",
+    log: "查询评级"
 }, {
     name: "卡牌工坊",
     url: "/cardDiyList",
-    bgColor: "#800080",
+    bgColor: "#7a5a9a",
     log: "查询卡牌"
 }, {
     name: "皮肤许愿",
     url: "/skinDiyList",
-    bgColor: "#9b59b6",
+    bgColor: "#9a5a8a",
     log: "查询皮肤"
 }, {
     name: "比赛统计",
     url: "/gameMenu",
-    bgColor: "#e08d9b",
+    bgColor: "#c47a8a",
     log: "查询比赛"
 }, {
     name: "每日一题",
     url: "/question",
-    bgColor: "#03a1c9",
+    bgColor: "#3d8ab8",
     log: "查询答题"
 }, {
     name: "贡献榜",
     url: "/member",
-    bgColor: "#2727db",
+    bgColor: "#5a6ab0",
     log: "贡献榜查询"
 }, {
     name: "留言建议",
     url: "/note",
-    bgColor: "#6b7280",
+    bgColor: "#6b7a8a",
     log: "查询留言"
 }];
 

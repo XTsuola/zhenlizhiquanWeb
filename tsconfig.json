@@ -3,6 +3,7 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
+    "src/**/*.d.ts",
     "env.d.ts"
   ],
   "compilerOptions": {
@@ -26,7 +27,11 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true
+    "noEmit": true,
+    "types": [
+      "vite/client",
+      "node"
+    ]
   },
   "references": [
     {
