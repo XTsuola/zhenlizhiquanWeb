@@ -1,159 +1,115 @@
 <template>
-    <div class="search">
-        <div class="search_select">
-            <a-select v-model:value="formState.zhenyin" style="width: 100%;" placeholder="请选择种族">
-                <a-select-option v-for="item in zhenyinList" :key="item.value" :value="item.value">{{
-                    item.label
-                    }}</a-select-option>
-            </a-select>
-        </div>
-        <div class="search_select">
-            <a-select v-model:value="formState.cost" style="width: 100%;" placeholder="请选择费用">
-                <a-select-option v-for="item in costList" :key="item.value" :value="item.value">{{
-                    item.label
-                    }}</a-select-option>
-            </a-select>
-        </div>
-    </div>
-    <div class="search">
-        <div class="search_input">
-            <a-input v-model:value="formState.name" placeholder="请输入名称" />
-        </div>
-    </div>
-    <div class="search">
-        <div class="search_div">
-            <div class="search_btn">
-                <a-button style="margin-right: 12px;" type="primary" @click="search">查询</a-button>
-                <a-button style="margin-right: 8px;" @click="reset">清空</a-button>
+    <div class="page">
+        <div class="toolbar">
+            <div class="filters">
+                <a-select v-model:value="formState.zhenyin" allow-clear placeholder="种族" class="field">
+                    <a-select-option v-for="item in zhenyinList" :key="String(item.value)" :value="item.value">
+                        {{ item.label }}
+                    </a-select-option>
+                </a-select>
+                <a-select v-model:value="formState.cost" allow-clear placeholder="费用" class="field">
+                    <a-select-option v-for="item in costList" :key="item.value" :value="item.value">
+                        {{ item.label }}
+                    </a-select-option>
+                </a-select>
+                <a-input v-model:value="formState.name" allow-clear placeholder="名称" class="field"
+                    @pressEnter="search" />
+            </div>
+            <div class="actions">
+                <a-button type="primary" :loading="tableLoading" @click="search">查询</a-button>
+                <a-button @click="reset">清空</a-button>
+                <a-button type="primary" @click="showModal(1)">新增皮肤</a-button>
                 <a-button @click="goBack">返回</a-button>
             </div>
-            <div>
-                <a-button style="margin-right: 8px;" type="primary" @click="showModal(1)">新增皮肤</a-button>
-            </div>
         </div>
+        <div class="table-wrap">
+            <MyTabel :columnsData="columns" :dataSource="data" :loading="tableLoading" @detail="showModal"
+                @edit="showModal" />
+        </div>
+        <a-modal v-model:open="visible" destroyOnClose :title="title" :maskClosable="false"
+            :width="isNarrow ? '92%' : 560" centered>
+            <a-form ref="formRef" :model="addData" :layout="isNarrow ? 'vertical' : 'horizontal'"
+                :label-col="{ span: isNarrow ? 24 : 5 }" :wrapper-col="{ span: isNarrow ? 24 : 19 }" autocomplete="off">
+                <a-form-item label="原始皮肤" name="cardId" :rules="[{ required: !isDetail, message: '请选择原始皮肤!' }]">
+                    <a-select v-model:value="addData.cardId" placeholder="请选择" :disabled="isDetail">
+                        <a-select-option v-for="item in skinSelect" :key="item.cardId" :value="item.cardId">
+                            {{ item.name }}
+                        </a-select-option>
+                    </a-select>
+                </a-form-item>
+                <a-form-item label="皮肤名称" name="name" :rules="[{ required: !isDetail, message: '请输入皮肤名称!' }]">
+                    <a-input v-model:value="addData.name" placeholder="请输入" :readonly="isDetail" />
+                </a-form-item>
+                <a-form-item label="技能名称">
+                    <a-input v-model:value="addData.skill" placeholder="请输入" :readonly="isDetail" />
+                </a-form-item>
+                <a-form-item label="皮肤效果" name="effect" :rules="[{ required: !isDetail, message: '请输入皮肤效果!' }]">
+                    <a-textarea v-model:value="addData.effect" placeholder="请输入" :rows="4" :readonly="isDetail" />
+                </a-form-item>
+                <a-form-item label="设计理由" name="reason" :rules="[{ required: !isDetail, message: '请输入设计理由!' }]">
+                    <a-textarea v-model:value="addData.reason" placeholder="请输入" :rows="4" :readonly="isDetail" />
+                </a-form-item>
+                <a-form-item label="其他备注">
+                    <a-textarea v-model:value="addData.remark" placeholder="请输入" :rows="3" :readonly="isDetail" />
+                </a-form-item>
+                <a-form-item v-if="title === '修改皮肤'" label="管理员密码" name="password"
+                    :rules="[{ required: true, message: '请输入管理员密码!' }]">
+                    <a-input-password v-model:value="addData.password" placeholder="请输入" />
+                </a-form-item>
+            </a-form>
+            <template #footer>
+                <a-button @click="visible = false">关闭</a-button>
+                <a-button v-if="!isDetail" type="primary" :loading="loading" @click="handleOk">保存</a-button>
+            </template>
+        </a-modal>
     </div>
-    <div class="card">
-        <MyTabel :columnsData="columns" :dataSource="data" @detail="showModal" @edit="showModal"
-            :loading="tableLoading"></MyTabel>
-    </div>
-    <a-modal v-model:open="visible" destroyOnClose :title="title" :maskClosable="false">
-        <a-form ref="skinDiyAddRef" style="width: 100%;" :model="addData" name="basic" :label-col="{ span: 4 }"
-            autocomplete="off">
-            <a-form-item label="原始皮肤" name="cardId"
-                :rules="[{ required: title != '皮肤详情' ? true : false, message: '请选择原始皮肤!' }]">
-                <a-select v-model:value="addData.cardId" placeholder="请选择" :disabled="title == '皮肤详情'">
-                    <a-select-option v-for="item in skinSelect" :key="item.cardId" :value="item.cardId">{{
-                        item.name
-                        }}</a-select-option>
-                </a-select>
-            </a-form-item>
-            <a-form-item label="皮肤名称" name="name"
-                :rules="[{ required: title != '皮肤详情' ? true : false, message: '请输入皮肤名称!' }]">
-                <a-input v-model:value="addData.name" placeholder="请输入" :readonly="title == '皮肤详情'" />
-            </a-form-item>
-            <a-form-item label="技能名称">
-                <a-input v-model:value="addData.skill" placeholder="请输入" :readonly="title == '皮肤详情'" />
-            </a-form-item>
-            <a-form-item label="皮肤效果" name="effect"
-                :rules="[{ required: title != '皮肤详情' ? true : false, message: '请输入皮肤效果!' }]">
-                <a-textarea v-model:value="addData.effect" placeholder="请输入" style="height: 100px;"
-                    :readonly="title == '皮肤详情'"></a-textarea>
-            </a-form-item>
-            <a-form-item label="设计理由" name="reason"
-                :rules="[{ required: title != '皮肤详情' ? true : false, message: '请输入设计理由!' }]">
-                <a-textarea v-model:value="addData.reason" placeholder="请输入" style="height: 100px;"
-                    :readonly="title == '皮肤详情'"></a-textarea>
-            </a-form-item>
-            <a-form-item label="其他备注">
-                <a-textarea v-model:value="addData.remark" placeholder="请输入" style="height: 60px;"
-                    :readonly="title == '皮肤详情'"></a-textarea>
-            </a-form-item>
-            <a-form-item v-if="title == '修改皮肤'" label="管理员密码" name="password"
-                :rules="[{ required: true, message: '请输入管理员密码!' }]">
-                <a-input v-model:value="addData.password" placeholder="请输入" />
-            </a-form-item>
-        </a-form>
-        <template #footer>
-            <a-button key="back" @click="visible = false">关闭</a-button>
-            <a-button v-if="title != '皮肤详情'" key="submit" type="primary" :loading="loading" @click="handleOk">保存
-            </a-button>
-        </template>
-    </a-modal>
 </template>
+
 <script lang="ts" setup>
-import { ref, reactive, onMounted } from "vue";
+import { ref, reactive, onMounted, onBeforeUnmount, computed } from "vue";
 import { message } from "ant-design-vue";
 import { costList, skinSelect } from "@/utils/func";
 import { getSkinDiyList, skinDiyAdd, skinDiyUpdate, type SkinDiyAddType } from "@/api/diy";
 import router from "@/router";
 import MyTabel from "@/components/table.vue";
 
+const IMG_PREFIX = import.meta.env.VITE_APP_BASE_URL + "skinImg";
 const loading = ref(false);
 const tableLoading = ref(false);
-const originalData = ref([]);
-const zhenyinList = [{
-    label: "全部",
-    value: ""
-}, {
-    label: "帝国",
-    value: 1
-}, {
-    label: "隐秘",
-    value: 2
-}, {
-    label: "禅意",
-    value: 3
-}, {
-    label: "港口",
-    value: 4
-}, {
-    label: "炼狱",
-    value: 5
-}, {
-    label: "蛮石",
-    value: 6
-}, {
-    label: "冬神",
-    value: 7
-}];
-const formState = reactive({
+const originalData = ref<any[]>([]);
+const visible = ref(false);
+const formRef = ref<any>();
+const title = ref("新增皮肤");
+const data = ref<any[]>([]);
+const isNarrow = ref(window.innerWidth < 576);
+const isDetail = computed(() => title.value === "皮肤详情");
+const zhenyinList = [
+    { label: "全部", value: "" },
+    { label: "帝国", value: 1 },
+    { label: "隐秘", value: 2 },
+    { label: "禅意", value: 3 },
+    { label: "港口", value: 4 },
+    { label: "炼狱", value: 5 },
+    { label: "蛮石", value: 6 },
+    { label: "冬神", value: 7 }
+];
+const formState = reactive<{
+    name: string;
+    zhenyin: number | string | undefined;
+    cost: number | undefined;
+}>({
     name: "",
     zhenyin: undefined,
     cost: undefined
 });
-const visible = ref(false);
-const skinDiyAddRef = ref<any>();
-const title = ref("新增皮肤");
-const data = ref<any>([]);
-let originalColumns = [
-    {
-        title: "头像",
-        dataIndex: "headImg",
-        key: "headImg",
-        width: 50,
-        scopedSlots: { customRender: "pic" }
-    },
-    {
-        title: "名称",
-        dataIndex: "name",
-        key: "name",
-        width: 160
-    },
-    {
-        title: "效果",
-        dataIndex: "effect",
-        key: "effect",
-        width: 160
-    },
-    {
-        title: "操作",
-        key: "action",
-        list: ["detail", "edit"],
-        width: 50
-    },
+
+const columns = [
+    { title: "头像", dataIndex: "headImg", key: "headImg", width: 64 },
+    { title: "名称", dataIndex: "name", key: "name", ellipsis: true, minWidth: 100 },
+    { title: "效果", dataIndex: "effect", key: "effect", ellipsis: true, minWidth: 120 },
+    { title: "操作", key: "action", list: ["detail", "edit"], width: 110, fixed: "right", align: "center" }
 ];
-const columns = ref<any>();
-columns.value = originalColumns;
+
 const addData = reactive<SkinDiyAddType>({
     id: undefined,
     cardId: undefined,
@@ -165,24 +121,32 @@ const addData = reactive<SkinDiyAddType>({
     password: ""
 });
 
+function onResize() {
+    isNarrow.value = window.innerWidth < 576;
+}
+
 function getList() {
-    let allData: any = JSON.parse(JSON.stringify(originalData.value));
-    for (let i = 0; i < allData.length; i++) {
-        const obj: any = skinSelect.find((e: any) => e.cardId == allData[i].cardId);
-        allData[i].img = import.meta.env.VITE_APP_BASE_URL + "skinImg" + obj.img + ".png";
-        allData[i].zhenyin = obj.zhenyin;
-        allData[i].cost = obj.cost;
+    let list = originalData.value.map((item) => {
+        const obj: any = skinSelect.find((e: any) => e.cardId == item.cardId);
+        return {
+            ...item,
+            img: obj ? IMG_PREFIX + obj.img + ".png" : "",
+            zhenyin: obj?.zhenyin,
+            cost: obj?.cost
+        };
+    });
+
+    const name = formState.name.trim();
+    if (name) {
+        list = list.filter((item) => item.name.includes(name));
     }
-    if (formState.name) {
-        allData = allData.filter((item: any) => item.name.includes(formState.name));
+    if (formState.cost != null && formState.cost !== ("" as any)) {
+        list = list.filter((item) => item.cost == formState.cost);
     }
-    if (formState.cost != undefined && formState.cost !== "") {
-        allData = allData.filter((item: any) => item.cost == formState.cost);
+    if (formState.zhenyin != null && formState.zhenyin !== "") {
+        list = list.filter((item) => item.zhenyin == formState.zhenyin);
     }
-    if (formState.zhenyin != undefined && formState.zhenyin != "") {
-        allData = allData.filter((item: any) => item.zhenyin == formState.zhenyin);
-    }
-    data.value = allData;
+    data.value = list;
 }
 
 function search() {
@@ -191,7 +155,8 @@ function search() {
 
 function reset() {
     formState.name = "";
-    formState.zhenyin = formState.cost = undefined;
+    formState.zhenyin = undefined;
+    formState.cost = undefined;
     getList();
 }
 
@@ -204,20 +169,15 @@ function showModal(type: number, record?: any) {
     addData.id = undefined;
     addData.password = "";
     if (type == 1) {
-        title.value = "新增皮肤"
+        title.value = "新增皮肤";
         addData.cardId = undefined;
-        addData.name = addData.skill = addData.effect = addData.reason = addData.remark = "";
-    } else if (type == 2) {
-        title.value = "修改皮肤"
-        addData.id = record.id;
-        addData.cardId = record.cardId;
-        addData.name = record.name;
-        addData.skill = record.skill;
-        addData.effect = record.effect;
-        addData.reason = record.reason;
-        addData.remark = record.remark;
-    } else if (type == 3) {
-        title.value = "皮肤详情"
+        addData.name = "";
+        addData.skill = "";
+        addData.effect = "";
+        addData.reason = "";
+        addData.remark = "";
+    } else if (type == 2 || type == 3) {
+        title.value = type == 2 ? "修改皮肤" : "皮肤详情";
         addData.id = record.id;
         addData.cardId = record.cardId;
         addData.name = record.name;
@@ -230,20 +190,22 @@ function showModal(type: number, record?: any) {
 
 async function getOriginalData() {
     tableLoading.value = true;
-    const res = await getSkinDiyList();
-    if (res.status == 200) {
-        const data = res.data.data.reverse();
-        originalData.value = data;
+    try {
+        const res = await getSkinDiyList();
+        if (res.status == 200) {
+            originalData.value = res.data.data.reverse();
+        }
+        getList();
+    } finally {
+        tableLoading.value = false;
     }
-    tableLoading.value = false;
-    getList();
 }
 
 async function handleOk() {
     loading.value = true;
     try {
-        await skinDiyAddRef.value?.validate();
-        if (title.value == "新增密码") {
+        await formRef.value?.validate();
+        if (title.value === "新增皮肤") {
             const params: SkinDiyAddType = {
                 cardId: addData.cardId,
                 name: addData.name,
@@ -256,7 +218,7 @@ async function handleOk() {
             if (res.data.code == 200) {
                 message.success("新增成功");
                 visible.value = false;
-                getOriginalData();
+                await getOriginalData();
             }
         } else {
             const params: SkinDiyAddType = {
@@ -273,70 +235,76 @@ async function handleOk() {
             if (res.data.code == 200) {
                 message.success("修改成功");
                 visible.value = false;
-                getOriginalData();
+                await getOriginalData();
             }
         }
-
-    } catch (_) { }
-    loading.value = false;
+    } catch (_) {
+    } finally {
+        loading.value = false;
+    }
 }
 
 onMounted(() => {
+    onResize();
+    window.addEventListener("resize", onResize);
     getOriginalData();
-})
+});
 
+onBeforeUnmount(() => {
+    window.removeEventListener("resize", onResize);
+});
 </script>
+
 <style lang="less" scoped>
-.search {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    padding: 5px 10px;
-    margin-bottom: 5px;
-
-    .search_input {
-        width: 40%;
-        margin-right: 10px;
-    }
-
-    .search_select {
-        width: 40%;
-        margin-right: 10px;
-    }
-
-    .search_div {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .search_btn {
-        display: flex;
-        justify-content: flex-start;
-        width: 40%;
-    }
-
+.page {
+    min-height: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    background: #f5f6f8;
+    overflow-x: hidden;
 }
 
-.form_div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.toolbar {
+    background: #fff;
+    border: 1px solid #e8ebf0;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
     margin-bottom: 10px;
 }
 
-.add_or_reduce {
-    width: 100px;
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    column-gap: 10px;
-    transform: translateY(-5px);
+.field {
+    width: 100%;
 }
 
-.flex_center {
+.actions {
     display: flex;
-    justify-self: flex-start;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (min-width: 768px) {
+    .page {
+        padding: 16px 20px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .filters {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }
 </style>

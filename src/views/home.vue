@@ -1,8 +1,5 @@
 <template>
     <div class="home">
-        <header class="home-header">
-            <h1 class="brand">真理之拳</h1>
-        </header>
         <section class="factions">
             <div v-for="item in zhenyinNameList" :key="item.id" class="faction-row" :style="{
                 '--faction': item.color,
@@ -102,85 +99,87 @@ const zhenyinNameList: ZhenyinItem[] = [{
     touxiang: new URL("@/assets/fengmian/dongshenshitu.jpg", import.meta.url).href,
     tubiao: new URL("@/assets/zhongzu/dongshenshitu.png", import.meta.url).href
 }];
+const TOOL_COLORS = ["#4f9bc4", "#45a8b0", "#5a8fc0", "#6a9bb0"];
+
 const whereList: WhereItem[] = [{
     name: "遗迹奖励",
     url: "/yiji",
-    bgColor: "#c47a2c",
+    bgColor: TOOL_COLORS[0],
     log: "查询遗迹"
 }, {
     name: "计算工具",
     url: "/menuTools",
-    bgColor: "#2f8f9a",
+    bgColor: TOOL_COLORS[1],
     log: "查询计算"
 }, {
     name: "资源查询",
     url: "/resource",
-    bgColor: "#3a8f5c",
+    bgColor: TOOL_COLORS[2],
     log: "查询资源"
 }, {
     name: "卡组分享",
     url: "/cardsUpload",
-    bgColor: "#3d6fa8",
+    bgColor: TOOL_COLORS[3],
     log: "分享卡组"
 }, {
     name: "英雄统计",
     url: "/heroList",
-    bgColor: "#b04a45",
+    bgColor: TOOL_COLORS[0],
     log: "查询英雄"
 }, {
     name: "近卫技能",
     url: "/chongwuSkillList",
-    bgColor: "#6f9a3d",
+    bgColor: TOOL_COLORS[1],
     log: "查询近卫"
 }, {
     name: "英雄碎片",
     url: "/shardList",
-    bgColor: "#2f9a8a",
+    bgColor: TOOL_COLORS[2],
     log: "查询碎片"
 }, {
     name: "皮肤查询",
     url: "/skinList",
-    bgColor: "#8a6540",
+    bgColor: TOOL_COLORS[3],
     log: "查询皮肤"
 }, {
     name: "离线查询",
     url: "/cardOutline",
-    bgColor: "#5c6b7a",
+    bgColor: TOOL_COLORS[0],
     log: "查询卡牌"
 }, {
     name: "卡牌评级",
     url: "/cardGrade",
-    bgColor: "#4a5568",
+    bgColor: TOOL_COLORS[1],
     log: "查询评级"
 }, {
     name: "卡牌工坊",
     url: "/cardDiyList",
-    bgColor: "#7a5a9a",
+    bgColor: TOOL_COLORS[2],
     log: "查询卡牌"
 }, {
     name: "皮肤许愿",
     url: "/skinDiyList",
-    bgColor: "#9a5a8a",
+    bgColor: TOOL_COLORS[3],
     log: "查询皮肤"
 }, {
     name: "比赛统计",
     url: "/gameMenu",
-    bgColor: "#c47a8a",
+    bgColor: TOOL_COLORS[0],
     log: "查询比赛"
 }, {
     name: "每日一题",
     url: "/question",
-    bgColor: "#3d8ab8",
+    bgColor: TOOL_COLORS[1],
     log: "查询答题"
 }, {
     name: "贡献榜",
     url: "/member",
-    bgColor: "#5a6ab0",
+    bgColor: TOOL_COLORS[2],
     log: "贡献榜查询"
 }, {
     name: "留言建议",
     url: "/note",
-    bgColor: "#6b7a8a",
+    bgColor: TOOL_COLORS[3],
     log: "查询留言"
 }];
 
@@ -241,21 +240,8 @@ function createLog(name: string) {
     -webkit-tap-highlight-color: transparent;
 }
 
-.home-header {
-    flex: 0 0 auto;
-    padding: 4px 2px 0;
-
-    .brand {
-        margin: 0;
-        font-size: 1.05rem;
-        font-weight: 600;
-        letter-spacing: 0.12em;
-        color: var(--ink);
-    }
-}
-
 .factions {
-    flex: 1 1 55%;
+    flex: 1 1 60%;
     min-height: 0;
     display: flex;
     flex-direction: column;
@@ -386,7 +372,7 @@ function createLog(name: string) {
 }
 
 .tools {
-    flex: 1 1 40%;
+    flex: 0 1 34%;
     min-height: 0;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -397,8 +383,15 @@ function createLog(name: string) {
 .tool {
     appearance: none;
     border: none;
-    border-radius: 6px;
-    background: var(--tool);
+    border-radius: 8px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.22) 0%,
+            rgba(255, 255, 255, 0.06) 42%,
+            rgba(0, 0, 0, 0.12) 100%
+        ),
+        var(--tool);
     color: #fff;
     font-size: clamp(0.68rem, 1.8vh, 0.8rem);
     font-weight: 500;
@@ -411,14 +404,20 @@ function createLog(name: string) {
     justify-content: center;
     text-align: center;
     word-break: keep-all;
-    transition: filter 0.15s ease, transform 0.15s ease;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        0 1px 2px rgba(15, 23, 42, 0.08);
+    transition: filter 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 
     &:hover {
-        filter: brightness(1.08);
+        filter: brightness(1.06);
+        box-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, 0.25),
+            0 2px 6px rgba(15, 23, 42, 0.12);
     }
 
     &:active {
-        filter: brightness(0.9);
+        filter: brightness(0.94);
         transform: scale(0.98);
     }
 }
@@ -440,10 +439,6 @@ function createLog(name: string) {
         gap: 6px;
     }
 
-    .home-header .brand {
-        font-size: 0.95rem;
-    }
-
     .actions button {
         min-width: 48px;
         padding: 0 8px;
@@ -458,14 +453,10 @@ function createLog(name: string) {
         padding: 16px var(--pad) 16px;
     }
 
-    .home-header .brand {
-        font-size: 1.25rem;
-    }
-
     .factions {
         flex-direction: row;
         gap: 10px;
-        flex: 1 1 58%;
+        flex: 1 1 62%;
     }
 
     .faction-row {
@@ -538,7 +529,7 @@ function createLog(name: string) {
     }
 
     .tools {
-        flex: 1 1 36%;
+        flex: 0 1 32%;
         gap: 10px;
     }
 

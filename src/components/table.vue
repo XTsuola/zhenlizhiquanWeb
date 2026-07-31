@@ -39,7 +39,7 @@
                     </template>
                     <template v-else-if="column.key === 'skillSign'">
                         <a-tag v-for="item in record.skillSign" :key="item.name" :color="item.color">{{ item.name
-                            }}</a-tag>
+                        }}</a-tag>
                     </template>
                     <template v-else-if="column.key === 'now'">
                         <div class="stat-cell">

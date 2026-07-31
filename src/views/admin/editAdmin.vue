@@ -1,38 +1,28 @@
 <template>
-    <div class="admin">
-        <div v-if="!isAdminFlag" class="adminLogin">
-            <div>激活管理员：</div>
-            <a-input style="width: 200px;" v-model:value="password" placeholder="请输入管理员密码" />
-            <div>
-                <a-button style="margin-right: 15px" type="primary" @click="ok">确定</a-button>
+    <div class="page">
+        <div v-if="!isAdminFlag" class="login-card">
+            <h1 class="title">激活管理员</h1>
+            <a-input-password v-model:value="password" class="field" placeholder="请输入管理员密码" @pressEnter="ok" />
+            <div class="actions">
+                <a-button type="primary" @click="ok">确定</a-button>
                 <a-button @click="goBack">返回</a-button>
             </div>
         </div>
-        <div style="padding: 5px;" v-else>
-            <a-button @click="goHome" type="primary" style="margin-bottom: 15px;">返回首页</a-button>
-            <div class="adminMenu">
-                <div class="box lianyushenyuan white" @click="goAdmin(1)">
-                    查询图表
-                </div>
-                <div class="box simangdiguo white" @click="goAdmin(2)">
-                    查询卡组
-                </div>
-                <div class="box chanyigu white" @click="goAdmin(3)">
-                    查询密码
-                </div>
-                <div class="box tiantanggang white" @click="goAdmin(4)">
-                    查询消息
-                </div>
-                <div class="box yinmizhe white" @click="goAdmin(5)">
-                    问题管理
-                </div>
-                <div class="box yinmizhe white" @click="goAdmin(6)">
-                    答案管理
-                </div>
+        <template v-else>
+            <div class="toolbar">
+                <h1 class="title">管理后台</h1>
+                <a-button type="primary" @click="goHome">返回首页</a-button>
             </div>
-        </div>
+            <div class="menu-grid">
+                <button v-for="item in menuList" :key="item.path" type="button" class="menu-item"
+                    :style="{ '--menu': item.color }" @click="goAdmin(item.path)">
+                    {{ item.name }}
+                </button>
+            </div>
+        </template>
     </div>
 </template>
+
 <script lang="ts" setup>
 import { ref, onMounted } from "vue";
 import { message } from "ant-design-vue";
@@ -40,18 +30,21 @@ import router from "@/router";
 
 const password = ref("");
 const isAdminFlag = ref(false);
+const menuList = [
+    { name: "查询图表", path: "/msgDetail", color: "#b04a45" },
+    { name: "查询卡组", path: "/cardsAdmin", color: "#c47a2c" },
+    { name: "查询密码", path: "/passwordAdmin", color: "#3a8f5c" },
+    { name: "查询消息", path: "/logList", color: "#3d6fa8" },
+    { name: "问题管理", path: "/questionAdmin", color: "#7a5a9a" },
+    { name: "答案管理", path: "/answerAdmin", color: "#5a6b8a" }
+];
 
 function verifyAdmin() {
-    const isAdmin = sessionStorage.getItem("isAdmin");
-    if (isAdmin == "admin") {
-        isAdminFlag.value = true;
-    } else {
-        isAdminFlag.value = false;
-    }
+    isAdminFlag.value = sessionStorage.getItem("isAdmin") === "admin";
 }
 
 function ok() {
-    if (password.value == "suola666") {
+    if (password.value === "suola666") {
         sessionStorage.setItem("isAdmin", "admin");
         message.success("激活成功！");
         verifyAdmin();
@@ -60,20 +53,8 @@ function ok() {
     }
 }
 
-function goAdmin(type: number) {
-    if (type == 1) {
-        router.push("/msgDetail");
-    } else if (type == 2) {
-        router.push("/cardsAdmin");
-    } else if (type == 3) {
-        router.push("/passwordAdmin");
-    } else if (type == 4) {
-        router.push("/logList");
-    } else if (type == 5) {
-        router.push("/questionAdmin");
-    } else if (type == 6) {
-        router.push("/answerAdmin");
-    }
+function goAdmin(path: string) {
+    router.push(path);
 }
 
 function goBack() {
@@ -86,70 +67,98 @@ function goHome() {
 
 onMounted(() => {
     verifyAdmin();
-})
-
+});
 </script>
+
 <style lang="less" scoped>
-.admin {
-    padding: 15px;
+.page {
+    min-height: 100%;
+    min-height: 100dvh;
+    padding: 16px;
+    box-sizing: border-box;
+    background: #f5f6f8;
+}
 
-    .adminLogin {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        row-gap: 20px;
+.login-card {
+    max-width: 360px;
+    margin: 12vh auto 0;
+    background: #fff;
+    border: 1px solid #e8ebf0;
+    border-radius: 12px;
+    padding: 24px 20px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background: #fff;
+    border: 1px solid #e8ebf0;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.title {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.field {
+    width: 100%;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.menu-item {
+    appearance: none;
+    border: none;
+    min-height: 48px;
+    border-radius: 10px;
+    background: var(--menu);
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: filter 0.15s ease, transform 0.15s ease;
+
+    &:active {
+        filter: brightness(0.92);
+        transform: scale(0.98);
+    }
+}
+
+@media (min-width: 768px) {
+    .page {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 20px;
     }
 
-    .adminMenu {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        row-gap: 15px;
-        column-gap: 4%;
-
-        .box {
-            width: 22%;
-            height: 40px;
-            border-radius: 4px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    .menu-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
     }
-}
 
-.simangdiguo {
-    background-color: #ffa500;
-}
-
-.chanyigu {
-    background-color: green;
-}
-
-.yinmizhe {
-    background-color: purple;
-}
-
-.manshikuangye {
-    background-color: #804400;
-}
-
-.dongshenshitu {
-    background-color: #03a1c9;
-}
-
-.tiantanggang {
-    background-color: #0e5d92;
-}
-
-.lianyushenyuan {
-    background-color: #c01b10;
-}
-
-.white {
-    color: white;
+    .menu-item {
+        min-height: 56px;
+    }
 }
 </style>

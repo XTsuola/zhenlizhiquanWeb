@@ -1,34 +1,32 @@
 <template>
-    <div class="frequencyAdmin">
-        <div class="header">
-            <div class="title">
-                <div style="font-weight: bold; margin-bottom: 8px;">管理卡组</div>
-                <div>
-                    <a-input style="width: 100px;margin-right: 10px;" v-model:value="myObj.password"
-                        placeholder="管理员密码" />
-                    <a-button @click="goBack">返回</a-button>
-                </div>
+    <div class="page">
+        <div class="toolbar">
+            <h1 class="title">管理卡组</h1>
+            <div class="actions">
+                <a-input-password v-model:value="myObj.password" class="pwd-field" placeholder="管理员密码" allow-clear />
+                <a-button @click="goBack">返回</a-button>
             </div>
         </div>
-        <div class="search">
-            <div class="search_select">
-                <a-select v-model:value="hero" style="width: 100%;" placeholder="请选择英雄">
-                    <a-select-option v-for="item in heroSelect" :key="item.value" :value="item.value">{{
-                        item.label
-                    }}</a-select-option>
-                </a-select>
-            </div>
-            <div class="search_btn">
-                <a-button style="margin-right: 8px;" type="primary" @click="getList">查询</a-button>
-                <a-button style="margin-right: 8px;" @click="reset">清空</a-button>
+        <div class="toolbar filters-bar">
+            <a-select v-model:value="hero" allow-clear placeholder="请选择英雄" class="field">
+                <a-select-option v-for="item in heroSelect" :key="item.value" :value="item.value">
+                    {{ item.label }}
+                </a-select-option>
+            </a-select>
+            <div class="actions">
+                <a-button type="primary" :loading="tableLoading" @click="getList">查询</a-button>
+                <a-button @click="reset">清空</a-button>
             </div>
         </div>
-        <MyTabel :columnsData="columns" :dataSource="tableData" @detail="showModal" @edit="showModal"
-            @delete="deleteOk"></MyTabel>
-        <a-modal v-model:open="visible" destroyOnClose :title="title" :maskClosable="false">
-            <a-segmented v-model:value="optionType" :options="options">
+        <div class="table-wrap">
+            <MyTabel :columnsData="columns" :dataSource="tableData" :loading="tableLoading" @detail="showModal"
+                @edit="showModal" @delete="deleteOk" />
+        </div>
+        <a-modal v-model:open="visible" destroyOnClose :title="title" :maskClosable="false"
+            :width="isNarrow ? '94%' : 720" centered>
+            <a-segmented v-model:value="optionType" :options="options" block>
                 <template #label="{ value: val, payload = {} }">
-                    <div style="padding: 4px 4px">
+                    <div class="seg-label">
                         <template v-if="payload.icon">
                             <a-avatar :src="payload.src" :style="payload.style">
                                 <template #icon>
@@ -47,36 +45,35 @@
                 </template>
             </a-segmented>
             <div v-if="optionType == '卡组配置'" class="cardList">
-                <a-badge :count="card.level" v-for="card in cardsImgData" style="margin: 4px;"
-                    :numberStyle="{ fontSize: '10px' }">
-                    <img style="width: 40px;height: 40px;border: 2px solid #cccccc;border-radius: 4px;"
-                        :src="card.img" />
+                <a-badge v-for="card in cardsImgData" :key="`${card.id}-${card.level}`" :count="card.level"
+                    class="card-badge" :numberStyle="{ fontSize: '10px' }">
+                    <img class="card-thumb" :src="card.img" alt="" />
                 </a-badge>
             </div>
-            <DetailCard v-if="optionType == '卡组分析'" :cardData="detailCards"></DetailCard>
+            <DetailCard v-if="optionType == '卡组分析'" :cardData="detailCards" />
             <template #footer>
-                <a-button key="back" @click="visible = false">关闭</a-button>
+                <a-button @click="visible = false">关闭</a-button>
             </template>
         </a-modal>
-        <a-modal v-model:open="visible2" destroyOnClose :title="title" :maskClosable="false">
+        <a-modal v-model:open="visible2" destroyOnClose :title="title" :maskClosable="false"
+            :width="isNarrow ? '94%' : 720" centered>
             <EditFrequency ref="editFrequencyRef" :cardsData="editData" :cardsLevel="editLevel" :nowStep="nowStep"
-                :myObj="myObj" :editType="2">
-            </EditFrequency>
+                :myObj="myObj" :editType="2" />
             <template #footer>
-                <a-button v-if="nowStep != 0" key="back" type="primary" @click="nowStep--">上一步</a-button>
-                <a-button v-if="nowStep == 1" key="two" type="primary" @click="twoStepOk">下一步</a-button>
-                <a-button v-else-if="nowStep == 2" key="three" type="primary" @click="editOk">生成并保存</a-button>
-                <a-button v-else key="one" type="primary" @click="oneStepOk">下一步</a-button>
-                <a-button key="back" @click="visible2 = false">关闭</a-button>
+                <a-button v-if="nowStep != 0" type="primary" @click="nowStep--">上一步</a-button>
+                <a-button v-if="nowStep == 1" type="primary" @click="twoStepOk">下一步</a-button>
+                <a-button v-else-if="nowStep == 2" type="primary" @click="editOk">生成并保存</a-button>
+                <a-button v-else type="primary" @click="oneStepOk">下一步</a-button>
+                <a-button @click="visible2 = false">关闭</a-button>
             </template>
         </a-modal>
     </div>
 </template>
+
 <script lang="ts" setup>
-import { ref, reactive, onMounted } from "vue";
+import { ref, reactive, onMounted, onBeforeUnmount } from "vue";
 import { message } from "ant-design-vue";
-import { SettingOutlined, TableOutlined } from '@ant-design/icons-vue';
-import { gradeData } from "@/data/z_otherData/gradeData";
+import { SettingOutlined, TableOutlined } from "@ant-design/icons-vue";
 import { heroTable } from "@/data/heroData/index";
 import { frequencyDelete, getFrequencyCardsAll } from "@/api/frequency";
 import { CeshiDataType } from "../model/detailFrequency.vue";
@@ -85,51 +82,41 @@ import MyTabel from "@/components/table.vue";
 import DetailCard from "../model/detailFrequency.vue";
 import EditFrequency from "../model/editFrequency.vue";
 
+const IMG_PREFIX = import.meta.env.VITE_APP_BASE_URL + "cardImg";
 const hero = ref<any>(undefined);
-const heroSelect = heroTable.map((e: any) => {
-    return {
-        label: e.name,
-        value: e.id
-    }
-})
-const columns = ref<any>([
-    {
-        title: "区服",
-        dataIndex: "qu",
-        key: "qu",
-        width: 100,
-    },
-    {
-        title: "名称",
-        dataIndex: "name",
-        key: "name",
-        width: 160
-    },
+const heroSelect = heroTable.map((e: any) => ({
+    label: e.name,
+    value: e.id
+}));
+const columns = [
+    { title: "区服", dataIndex: "qu", key: "qu", width: 72, ellipsis: true },
+    { title: "名称", dataIndex: "name", key: "name", ellipsis: true, minWidth: 100 },
     {
         title: "英雄",
         dataIndex: "heroId",
         key: "heroId",
-        width: 160,
+        width: 96,
+        ellipsis: true,
         customRender: (opt: any) => heroTable.find((e: any) => e.id == opt.value)?.name
     },
-    {
-        title: "时间",
-        dataIndex: "time",
-        key: "time",
-        width: 160
-    },
+    { title: "时间", dataIndex: "time", key: "time", width: 140, ellipsis: true },
     {
         title: "操作",
         key: "action",
         list: ["detail", "edit", "delete"],
-        width: 160
-    },
-]);
-const tableData = ref<any>([]);
-const cardMenuAll = ref<any>([]);
-const cardMenu = ref<any>([]);
+        width: 150,
+        fixed: "right",
+        align: "center"
+    }
+];
+
+const tableLoading = ref(false);
+const tableData = ref<any[]>([]);
+const cardMenu = ref<any[]>([]);
 const title = ref("详细信息");
 const visible = ref(false);
+const visible2 = ref(false);
+const isNarrow = ref(window.innerWidth < 576);
 const myObj = reactive<any>({
     id: 0,
     heroId: undefined,
@@ -139,61 +126,61 @@ const myObj = reactive<any>({
     password: "",
     cards: []
 });
-const visible2 = ref(false);
-const imgDataAll = ref<any>([]);
 const editFrequencyRef = ref<any>();
 const nowStep = ref(0);
-const detailData = reactive<any>({
-    data: []
-});
+const detailData = reactive<any>({ data: [] });
 const zhu = ref(0);
 const fu = ref(0);
 const editData = ref<string[]>([]);
-const editLevel = ref<any>([]);
-const cardsImgData = ref<any>([]);
+const editLevel = ref<any[]>([]);
+const cardsImgData = ref<any[]>([]);
 const detailCards = reactive<CeshiDataType>({
     qu: 1,
     name: "",
-    hero: {
-        id: 0,
-        name: "",
-        life: 0
-    },
+    hero: { id: 0, name: "", life: 0 },
     cardList: [],
     cardLevel: []
 });
 const optionType = ref("卡组配置");
 const options = ref([
     {
-        value: '卡组配置',
+        value: "卡组配置",
         payload: {
             icon: SettingOutlined,
-            style: { backgroundColor: '#f56a00' },
-        },
+            style: { backgroundColor: "#4a7c9b" }
+        }
     },
     {
-        value: '卡组分析',
+        value: "卡组分析",
         payload: {
             icon: TableOutlined,
-            style: { backgroundColor: '#f56a00' },
-        },
-    },
+            style: { backgroundColor: "#4a7c9b" }
+        }
+    }
 ]);
 
+function onResize() {
+    isNarrow.value = window.innerWidth < 576;
+}
+
 async function getList() {
-    const res = await getFrequencyCardsAll();
-    if (res.data.code == 200) {
-        if (hero.value) {
-            tableData.value = res.data.data.filter((e: any) => e.heroId == hero.value);
-        } else {
-            tableData.value = res.data.data;
+    tableLoading.value = true;
+    try {
+        const res = await getFrequencyCardsAll();
+        if (res.data.code == 200) {
+            tableData.value = hero.value
+                ? res.data.data.filter((e: any) => e.heroId == hero.value)
+                : res.data.data;
+            tableData.value.sort(
+                (a: any, b: any) => new Date(b.time).getTime() - new Date(a.time).getTime()
+            );
         }
-        tableData.value.sort((a: any, b: any) => new Date(b.time).getTime() - new Date(a.time).getTime());
-        getOriginalData();
+    } finally {
+        tableLoading.value = false;
     }
 }
 
-function showModal(type: number, record: any) {
+async function showModal(type: number, record: any) {
     nowStep.value = 0;
     if (type == 3) {
         visible.value = true;
@@ -201,25 +188,28 @@ function showModal(type: number, record: any) {
         const obj: any = heroTable.find((e: any) => e.id == record.heroId);
         zhu.value = obj.zhu;
         fu.value = obj.fu;
-        const list: any = [...gradeData.filter((e: any) => e.zhenyin == zhu.value), ...gradeData.filter((e: any) => e.zhenyin == fu.value)];
-        cardMenu.value = list.map((e: any) => {
-            return {
-                id: e.id,
-                name: e.name,
-                img: e.img,
-                zhenyin: e.zhenyin,
-                quality: e.quality
-            }
-        });
+        const { gradeData } = await import("@/data/z_otherData/gradeData");
+        const list: any = [
+            ...gradeData.filter((e: any) => e.zhenyin == zhu.value),
+            ...gradeData.filter((e: any) => e.zhenyin == fu.value)
+        ];
+        cardMenu.value = list.map((e: any) => ({
+            id: e.id,
+            name: e.name,
+            img: e.img,
+            zhenyin: e.zhenyin,
+            quality: e.quality
+        }));
         cardsImgData.value = [];
         optionType.value = "卡组配置";
         detailData.data = JSON.parse(record.cards);
         for (let i = 0; i < detailData.data.length; i++) {
+            const matched = cardMenu.value.find((e: any) => e.name == detailData.data[i].name);
             cardsImgData.value.push({
                 id: detailData.data[i].id,
                 name: detailData.data[i].name,
                 level: detailData.data[i].level,
-                img: import.meta.env.VITE_APP_BASE_URL + "cardImg" + cardMenu.value.find((e: any) => e.name == detailData.data[i].name).img
+                img: matched ? IMG_PREFIX + matched.img : ""
             });
         }
         detailCards.qu = record.qu;
@@ -236,29 +226,9 @@ function showModal(type: number, record: any) {
         myObj.heroLife = record.heroLife;
         myObj.name = record.name;
         myObj.qu = record.qu;
-        editData.value = JSON.parse(record.cards).map((e: any) => e.name);
-        editLevel.value = JSON.parse(record.cards).map((e: any) => e.level);
-    }
-}
-
-async function getOriginalData() {
-    cardMenuAll.value = gradeData.map((e: any) => {
-        return {
-            name: e.name,
-            quality: e.quality,
-            cost: e.cost,
-            img: import.meta.env.VITE_APP_BASE_URL + "cardImg" + e.img,
-            zhenyin: e.zhenyin,
-        }
-    });
-    imgDataAll.value = [];
-    for (let i = 0; i < cardMenuAll.value.length; i++) {
-        imgDataAll.value.push({
-            id: cardMenuAll.value[i].id,
-            name: cardMenuAll.value[i].name,
-            quality: cardMenuAll.value[i].quality,
-            img: import.meta.env.VITE_APP_BASE_URL + "cardImg" + cardMenuAll.value[i].img
-        });
+        const cards = JSON.parse(record.cards);
+        editData.value = cards.map((e: any) => e.name);
+        editLevel.value = cards.map((e: any) => e.level);
     }
 }
 
@@ -290,7 +260,7 @@ async function editOk() {
 }
 
 async function deleteOk(id: number) {
-    const res = await frequencyDelete({ id: id, password: myObj.password });
+    const res = await frequencyDelete({ id, password: myObj.password });
     if (res.data.code == 200) {
         message.success("删除成功");
     } else {
@@ -309,52 +279,101 @@ function goBack() {
 }
 
 onMounted(() => {
+    onResize();
+    window.addEventListener("resize", onResize);
     getList();
-})
+});
 
+onBeforeUnmount(() => {
+    window.removeEventListener("resize", onResize);
+});
 </script>
+
 <style lang="less" scoped>
-.frequencyAdmin {
-    .header {
-        padding: 10px;
+.page {
+    min-height: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    background: #f5f6f8;
+    overflow-x: hidden;
+}
 
-        .title {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-    }
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    background: #fff;
+    border: 1px solid #e8ebf0;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
 
-    .search {
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-        padding: 5px 10px;
-        margin-bottom: 5px;
+.filters-bar {
+    justify-content: flex-start;
+}
 
-        .search_input {
-            width: 40%;
-            margin-right: 10px;
-        }
+.title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1f2937;
+}
 
-        .search_select {
-            width: 40%;
-            margin-right: 10px;
-        }
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
 
-        .search_btn {
-            display: flex;
-            justify-content: flex-start;
-            width: 40%;
-        }
-    }
+.pwd-field {
+    width: 140px;
+}
+
+.field {
+    width: min(100%, 220px);
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.seg-label {
+    padding: 4px;
 }
 
 .cardList {
     display: flex;
-    justify-content: flex-start;
     flex-wrap: wrap;
-    margin-top: 10px;
+    gap: 4px;
+    margin-top: 12px;
     margin-bottom: 8px;
+}
+
+.card-badge {
+    margin: 4px;
+}
+
+.card-thumb {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #cccccc;
+    border-radius: 4px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .page {
+        padding: 16px 20px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
 }
 </style>
