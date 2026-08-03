@@ -45,9 +45,14 @@
                 </template>
             </a-segmented>
             <div v-if="optionType == '卡组配置'" class="cardList">
-                <a-badge v-for="card in cardsImgData" :key="`${card.id}-${card.level}`" :count="card.level"
-                    class="card-badge" :numberStyle="{ fontSize: '10px' }">
-                    <img class="card-thumb" :src="card.img" alt="" />
+                <a-badge
+                    v-for="card in cardsImgData"
+                    :key="`${card.id}-${card.level}`"
+                    :count="card.level"
+                    class="card-badge"
+                    :numberStyle="getBadgeStyle(card.quality)"
+                >
+                    <img class="card-thumb" :class="getBgColor(card.quality)" :src="card.img" alt="" />
                 </a-badge>
             </div>
             <DetailCard v-if="optionType == '卡组分析'" :cardData="detailCards" />
@@ -163,6 +168,21 @@ function onResize() {
     isNarrow.value = window.innerWidth < 576;
 }
 
+function getBgColor(quality: number) {
+    if (quality == 2) return "bg_blue";
+    if (quality == 3) return "bg_purple";
+    if (quality == 4) return "bg_orange";
+    return "bg_white";
+}
+
+function getBadgeStyle(quality: number) {
+    const base = { fontSize: "10px", fontWeight: 700, boxShadow: "none" };
+    if (quality == 4) return { ...base, backgroundColor: "#e67e22", color: "#fff" };
+    if (quality == 3) return { ...base, backgroundColor: "#8e488e", color: "#fff" };
+    if (quality == 2) return { ...base, backgroundColor: "#4f9bc4", color: "#fff" };
+    return { ...base, backgroundColor: "#e5e7eb", color: "#374151" };
+}
+
 async function getList() {
     tableLoading.value = true;
     try {
@@ -209,6 +229,7 @@ async function showModal(type: number, record: any) {
                 id: detailData.data[i].id,
                 name: detailData.data[i].name,
                 level: detailData.data[i].level,
+                quality: matched?.quality,
                 img: matched ? IMG_PREFIX + matched.img : ""
             });
         }
@@ -349,24 +370,50 @@ onBeforeUnmount(() => {
 }
 
 .cardList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
     margin-top: 12px;
     margin-bottom: 8px;
 }
 
+@media (min-width: 768px) {
+    .cardList {
+        grid-template-columns: repeat(10, 1fr);
+    }
+}
+
 .card-badge {
-    margin: 4px;
+    margin: 0;
+    width: 100%;
 }
 
 .card-thumb {
-    width: 40px;
-    height: 40px;
-    border: 2px solid #cccccc;
-    border-radius: 4px;
+    width: 100%;
+    aspect-ratio: 1;
+    height: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
     object-fit: cover;
     display: block;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.bg_white {
+    background-color: #e5e7eb;
+}
+
+.bg_blue {
+    background-color: #bae6fd;
+}
+
+.bg_purple {
+    background-color: #f3baf3;
+}
+
+.bg_orange {
+    background-color: #fdba74;
 }
 
 @media (min-width: 768px) {

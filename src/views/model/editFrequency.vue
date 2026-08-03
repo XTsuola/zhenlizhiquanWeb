@@ -52,9 +52,14 @@
             </div>
             <div class="deck-label">你的卡组</div>
             <div class="deck">
-                <a-badge v-for="card in cardsImgData" :key="card.id" :count="card.level" class="deck-item"
-                    :numberStyle="{ fontSize: '10px' }">
-                    <img class="deck-img" :src="card.img" :alt="card.name" />
+                <a-badge
+                    v-for="card in cardsImgData"
+                    :key="card.id"
+                    :count="card.level"
+                    class="deck-item"
+                    :numberStyle="getBadgeStyle(card.quality)"
+                >
+                    <img class="deck-img" :class="getBgColor(card.quality)" :src="card.img" :alt="card.name" />
                 </a-badge>
             </div>
         </div>
@@ -120,11 +125,12 @@ async function getBaseData() {
 
 function getColor(name: string) {
     const ind = cardMenu.value.findIndex((e: any) => e.name == name);
-    if (ind < 0) return "blue";
+    if (ind < 0) return "default";
     const quality = cardMenu.value[ind].quality;
     if (quality == 4) return "orange";
     if (quality == 3) return "purple";
-    return "blue";
+    if (quality == 2) return "blue";
+    return "default";
 }
 
 function getBgColor(quality: number) {
@@ -132,6 +138,14 @@ function getBgColor(quality: number) {
     if (quality == 3) return "bg_purple";
     if (quality == 4) return "bg_orange";
     return "bg_white";
+}
+
+function getBadgeStyle(quality: number) {
+    const base = { fontSize: "10px", fontWeight: 700, boxShadow: "none" };
+    if (quality == 4) return { ...base, backgroundColor: "#e67e22", color: "#fff" };
+    if (quality == 3) return { ...base, backgroundColor: "#8e488e", color: "#fff" };
+    if (quality == 2) return { ...base, backgroundColor: "#4f9bc4", color: "#fff" };
+    return { ...base, backgroundColor: "#e5e7eb", color: "#374151" };
 }
 
 function handleClose(ind: number) {
@@ -150,6 +164,7 @@ function getCardsImg() {
             id: myObj.cards[i].id,
             name: myObj.cards[i].name,
             level: myObj.cards[i].level,
+            quality: found.quality,
             img: import.meta.env.VITE_APP_BASE_URL + "cardImg" + found.img
         });
     }
@@ -382,22 +397,30 @@ defineExpose({
     }
 
     .deck {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
         gap: 8px;
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(10, 1fr);
+        }
     }
 
     .deck-item {
         margin: 0;
+        width: 100%;
     }
 
     .deck-img {
-        width: 40px;
-        height: 40px;
+        width: 100%;
+        aspect-ratio: 1;
+        height: auto;
         border: 1px solid #e5e7eb;
         border-radius: 6px;
         object-fit: cover;
-        background: #fff;
+        padding: 2px;
+        box-sizing: border-box;
+        display: block;
     }
 }
 
