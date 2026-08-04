@@ -1,7 +1,7 @@
 <template>
-    <div class="page">
+    <div class="resourceCard">
         <div class="toolbar">
-            <h1 class="title">升卡 / 资源参考</h1>
+            <h1 class="title">升卡资源参考</h1>
             <div class="actions">
                 <a-radio-group v-model:value="viewMode" button-style="solid" size="small">
                     <a-radio-button value="now">本级</a-radio-button>
@@ -18,13 +18,7 @@
                     : "本级 = 升到该级新增消耗"
             }}
         </div>
-
-        <div
-            v-for="q in qualityTables"
-            :key="q.key"
-            class="section"
-            :style="{ '--q': q.color }"
-        >
+        <div v-for="q in qualityTables" :key="q.key" class="section" :style="{ '--q': q.color }">
             <h2 class="section-title">
                 <span class="dot" />
                 {{ q.label }} · {{ viewMode === "sum" ? "累计" : "本级" }}资源
@@ -56,14 +50,6 @@
                 </table>
             </div>
         </div>
-
-        <div v-for="item in sections" :key="item.title" class="section">
-            <h2 class="section-title plain">{{ item.title }}</h2>
-            <button type="button" class="img-btn" @click="openImage(item.src)">
-                <img :src="item.src" :alt="item.title" loading="lazy" />
-            </button>
-            <div class="hint">点击图片可查看大图</div>
-        </div>
     </div>
 </template>
 
@@ -71,10 +57,6 @@
 import { ref, computed } from "vue";
 import { blueObj, purpleObj, goldObj } from "@/data/z_otherData/cailiao";
 import router from "@/router";
-import cardNeed from "@/assets/yiji/card_need.jpg";
-import shenqiShengji from "@/assets/yiji/shenqishengji.jpg";
-import moheDuihuan from "@/assets/yiji/moheduihuan.jpg";
-import ziyuanBiao from "@/assets/yiji/ziyuanbiao.jpg";
 
 type ViewMode = "now" | "sum";
 type LevelRow = {
@@ -106,13 +88,6 @@ const QUALITIES = [
     { key: "purple", label: "紫卡", color: "#8e488e", list: purpleObj as LevelRow[] },
     { key: "gold", label: "橙卡", color: "#e67e22", list: goldObj as LevelRow[] }
 ] as const;
-
-const sections = [
-    { title: "升卡资源图", src: cardNeed },
-    { title: "神器升级资源图", src: shenqiShengji },
-    { title: "魔盒兑换表", src: moheDuihuan },
-    { title: "资源估值表", src: ziyuanBiao }
-];
 
 function toRows(list: LevelRow[]): CostRow[] {
     return list.map((item, i) => {
@@ -151,13 +126,9 @@ function pick(row: CostRow, key: "zuanshi" | "count" | "huang" | "hong" | "hei" 
 
 function formatNum(n: number) {
     if (n >= 10000) {
-        return `${(n / 10000).toFixed(1)}w`;
+        return `${(n / 10000).toFixed(2)}w`;
     }
     return n.toLocaleString("zh-CN");
-}
-
-function openImage(src: string) {
-    window.open(src, "_blank", "noopener,noreferrer");
 }
 
 function goBack() {
@@ -166,7 +137,7 @@ function goBack() {
 </script>
 
 <style lang="less" scoped>
-.page {
+.resourceCard {
     min-height: 100%;
     padding: 12px;
     box-sizing: border-box;
@@ -228,10 +199,6 @@ function goBack() {
     font-size: 0.95rem;
     font-weight: 700;
     color: var(--q);
-
-    &.plain {
-        color: #1f2937;
-    }
 }
 
 .dot {
@@ -291,29 +258,6 @@ function goBack() {
     }
 }
 
-.img-btn {
-    display: block;
-    width: 100%;
-    padding: 0;
-    border: none;
-    background: transparent;
-    cursor: zoom-in;
-}
-
-.img-btn img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    border-radius: 8px;
-    border: 1px solid #eef1f5;
-}
-
-.hint {
-    margin-top: 8px;
-    font-size: 12px;
-    color: #9ca3af;
-}
-
 @media (min-width: 768px) {
     .page {
         padding: 16px 20px;
@@ -332,11 +276,6 @@ function goBack() {
         td {
             padding: 8px 6px;
         }
-    }
-
-    .img-btn img {
-        width: 42%;
-        max-width: 480px;
     }
 }
 </style>

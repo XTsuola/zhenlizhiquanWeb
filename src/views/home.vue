@@ -107,13 +107,13 @@ const whereList: WhereItem[] = [{
     bgColor: TOOL_COLORS[0],
     log: "查询遗迹"
 }, {
-    name: "计算工具",
-    url: "/menuTools",
+    name: "升卡资源",
+    url: "/resourceCard",
     bgColor: TOOL_COLORS[1],
-    log: "查询计算"
+    log: "查询资源"
 }, {
-    name: "资源查询",
-    url: "/resource",
+    name: "神器资源",
+    url: "/resourceShenqi",
     bgColor: TOOL_COLORS[2],
     log: "查询资源"
 }, {
@@ -122,40 +122,40 @@ const whereList: WhereItem[] = [{
     bgColor: TOOL_COLORS[3],
     log: "分享卡组"
 }, {
-    name: "英雄统计",
-    url: "/heroList",
+    name: "资源估值",
+    url: "/resourceGuzhi",
     bgColor: TOOL_COLORS[0],
-    log: "查询英雄"
+    log: "查询资源"
+}, {
+    name: "皮肤查询",
+    url: "/skinList",
+    bgColor: TOOL_COLORS[1],
+    log: "查询皮肤"
 }, {
     name: "近卫技能",
     url: "/chongwuSkillList",
-    bgColor: TOOL_COLORS[1],
+    bgColor: TOOL_COLORS[2],
     log: "查询近卫"
+}, {
+    name: "计算工具",
+    url: "/menuTools",
+    bgColor: TOOL_COLORS[3],
+    log: "查询计算"
+}, {
+    name: "卡牌评级",
+    url: "/cardOutline",
+    bgColor: TOOL_COLORS[0],
+    log: "查询卡牌"
+}, {
+    name: "英雄统计",
+    url: "/heroList",
+    bgColor: TOOL_COLORS[1],
+    log: "查询英雄"
 }, {
     name: "英雄碎片",
     url: "/shardList",
     bgColor: TOOL_COLORS[2],
     log: "查询碎片"
-}, {
-    name: "皮肤查询",
-    url: "/skinList",
-    bgColor: TOOL_COLORS[3],
-    log: "查询皮肤"
-}, {
-    name: "离线查询",
-    url: "/cardOutline",
-    bgColor: TOOL_COLORS[0],
-    log: "查询卡牌"
-}, {
-    name: "卡牌评级",
-    url: "/cardGrade",
-    bgColor: TOOL_COLORS[1],
-    log: "查询评级"
-}, {
-    name: "卡牌工坊",
-    url: "/cardDiyList",
-    bgColor: TOOL_COLORS[2],
-    log: "查询卡牌"
 }, {
     name: "皮肤许愿",
     url: "/skinDiyList",
@@ -167,15 +167,15 @@ const whereList: WhereItem[] = [{
     bgColor: TOOL_COLORS[0],
     log: "查询比赛"
 }, {
-    name: "每日一题",
-    url: "/question",
-    bgColor: TOOL_COLORS[1],
-    log: "查询答题"
-}, {
     name: "贡献榜",
     url: "/member",
-    bgColor: TOOL_COLORS[2],
+    bgColor: TOOL_COLORS[1],
     log: "贡献榜查询"
+}, {
+    name: "奖励榜",
+    url: "/bonus",
+    bgColor: TOOL_COLORS[2],
+    log: "奖励榜查询"
 }, {
     name: "留言建议",
     url: "/note",
@@ -385,12 +385,10 @@ function createLog(name: string) {
     border: none;
     border-radius: 8px;
     background:
-        linear-gradient(
-            145deg,
+        linear-gradient(145deg,
             rgba(255, 255, 255, 0.22) 0%,
             rgba(255, 255, 255, 0.06) 42%,
-            rgba(0, 0, 0, 0.12) 100%
-        ),
+            rgba(0, 0, 0, 0.12) 100%),
         var(--tool);
     color: #fff;
     font-size: clamp(0.68rem, 1.8vh, 0.8rem);

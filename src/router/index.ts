@@ -1,7 +1,7 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHashHistory, type RouteRecordRaw } from "vue-router";
 import Home from "@/views/home.vue";
 
-const routeList: any = [
+const routeList: RouteRecordRaw[] = [
   {
     path: "/",
     redirect: "/home"
@@ -19,7 +19,7 @@ const routeList: any = [
   {
     path: "/cardGrade",
     name: "cardGrade",
-    component: () => import("@/views/zhongzu/gradeList.vue")
+    component: () => import("@/views/admin/gradeList.vue")
   },
   {
     path: "/cardOutline",
@@ -42,9 +42,19 @@ const routeList: any = [
     component: () => import("@/views/source/yiji.vue")
   },
   {
-    path: "/resource",
-    name: "resource",
-    component: () => import("@/views/source/resource.vue")
+    path: "/resourceCard",
+    name: "resourceCard",
+    component: () => import("@/views/source/resourceCard.vue")
+  },
+  {
+    path: "/resourceShenqi",
+    name: "resourceShenqi",
+    component: () => import("@/views/source/resourceShenqi.vue")
+  },
+  {
+    path: "/resourceGuzhi",
+    name: "resourceGuzhi",
+    component: () => import("@/views/source/resourceGuzhi.vue")
   },
   {
     path: "/heroList",
@@ -245,17 +255,17 @@ const routeList: any = [
     path: "/member",
     name: "member",
     component: () => import("@/views/member/index.vue")
+  },
+  {
+    path: "/bonus",
+    name: "bonus",
+    component: () => import("@/views/member/bonus.vue")
   }
 ];
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes: routeList
-});
-
-// 路由拦截
-router.beforeEach((to, from, next) => {
-  next();
 });
 
 export default router;

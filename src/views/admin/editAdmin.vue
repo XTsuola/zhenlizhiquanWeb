@@ -33,6 +33,7 @@ const isAdminFlag = ref(false);
 const menuList = [
     { name: "查询图表", path: "/msgDetail", color: "#b04a45" },
     { name: "查询卡组", path: "/cardsAdmin", color: "#c47a2c" },
+    { name: "卡牌评级", path: "/cardGrade", color: "#4f9bc4" },
     { name: "查询密码", path: "/passwordAdmin", color: "#3a8f5c" },
     { name: "查询消息", path: "/logList", color: "#3d6fa8" },
     { name: "问题管理", path: "/questionAdmin", color: "#7a5a9a" },
