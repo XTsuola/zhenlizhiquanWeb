@@ -37,6 +37,12 @@ export const blueList = [{
 }, {
     level: 13,
     value: 750000
+}, {
+    level: 14,
+    value: 900000
+}, {
+    level: 15,
+    value: 1050000
 }];
 
 export const purpleList = [{
@@ -78,6 +84,12 @@ export const purpleList = [{
 }, {
     level: 13,
     value: 1500000
+}, {
+    level: 14,
+    value: 1800000
+}, {
+    level: 15,
+    value: 2100000
 }];
 
 export const goldList = [{
@@ -119,4 +131,10 @@ export const goldList = [{
 }, {
     level: 13,
     value: 2500000
+}, {
+    level: 14,
+    value: 3000000
+}, {
+    level: 15,
+    value: 3500000
 }];

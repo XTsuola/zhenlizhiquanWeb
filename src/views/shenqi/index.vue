@@ -23,7 +23,7 @@
         </div>
 
         <div class="table-wrap">
-            <MyTabel :columnsData="columns" :dataSource="data" :loading="tableLoading" @detail="showModal" />
+            <MyTabel :columnsData="columns" :dataSource="data" :rowClass="true" :loading="tableLoading" @detail="showModal" />
         </div>
 
         <a-modal v-model:open="visible" destroyOnClose title="详细信息" :maskClosable="false">
@@ -99,8 +99,10 @@ function getList() {
     }
     data.value = list.map((item) => ({
         ...item,
-        img: IMG_PREFIX + item.img
+        img: IMG_PREFIX + item.img,
+        rowTone: item.quality === 3 ? "orange" : item.quality === 2 ? "purple" : item.quality === 1 ? "blue" : ""
     }));
+    data.value.sort((a, b) => (b.quality || 0) - (a.quality || 0) || String(a.name).localeCompare(String(b.name), "zh"));
 }
 
 function search() {

@@ -49,7 +49,7 @@
         </div>
 
         <div class="table-wrap">
-            <MyTabel :columnsData="columns" :dataSource="data" :loading="tableLoading" @detail="showModal" />
+            <MyTabel :columnsData="columns" :dataSource="data" :rowClass="true" :loading="tableLoading" @detail="showModal" />
         </div>
 
         <a-modal v-model:open="visible" destroyOnClose title="详细信息" :maskClosable="false"

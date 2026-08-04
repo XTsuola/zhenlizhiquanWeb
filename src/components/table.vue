@@ -2,8 +2,8 @@
     <div class="myTable">
         <div class="table-scroll">
             <a-table :columns="prop.columnsData" :data-source="prop.dataSource" :pagination="false"
-                :row-class-name="prop.rowClass ? rowClassName : undefined" :loading="prop.loading"
-                :scroll="{ x: true }" size="middle" bordered>
+                :row-class-name="prop.rowClass ? rowClassName : undefined" :loading="prop.loading" :scroll="{ x: true }"
+                size="middle" bordered>
                 <template #bodyCell="{ column, index, record, text }">
                     <template v-if="column.key === 'index'">
                         {{ index + 1 }}
@@ -39,7 +39,7 @@
                     </template>
                     <template v-else-if="column.key === 'skillSign'">
                         <a-tag v-for="item in record.skillSign" :key="item.name" :color="item.color">{{ item.name
-                        }}</a-tag>
+                            }}</a-tag>
                     </template>
                     <template v-else-if="column.key === 'now'">
                         <div class="stat-cell">
@@ -182,6 +182,7 @@ function onPageChange(page: number, pageSize: number) {
 }
 
 function rowClassName(record: any) {
+    if (record.rowTone) return record.rowTone;
     if (record.no) {
         const num = record.no % 100;
         if (num === 5 || num === 6) return "orange";
@@ -193,6 +194,7 @@ function rowClassName(record: any) {
         if (record.quality === 4) return "orange";
         if (record.quality === 3) return "purple";
         if (record.quality === 2) return "blue";
+        if (record.quality === 1) return "white";
         return "";
     }
     return "";
@@ -381,16 +383,45 @@ function formatDiff(now: number, last: number, isRate = false) {
     background-color: #faf0dc !important;
 }
 
+:deep(.orange > td) {
+    background-color: #faf0dc !important;
+    border-bottom-color: #d9b978 !important;
+}
+
 :deep(.purple) {
     background-color: #f6e4f6 !important;
+}
+
+:deep(.purple > td) {
+    background-color: #f6e4f6 !important;
+    border-bottom-color: #d9a8d9 !important;
 }
 
 :deep(.blue) {
     background-color: #e4f2fb !important;
 }
 
+:deep(.blue > td) {
+    background-color: #e4f2fb !important;
+    border-bottom-color: #9fc8e0 !important;
+}
+
+:deep(.white) {
+    background-color: #f3f4f6 !important;
+}
+
+:deep(.white > td) {
+    background-color: #f3f4f6 !important;
+    border-bottom-color: #cfd3d8 !important;
+}
+
 :deep(.red) {
     background-color: #fdeaea !important;
+}
+
+:deep(.red > td) {
+    background-color: #fdeaea !important;
+    border-bottom-color: #e8b4b4 !important;
 }
 
 :deep(.ant-table) {
@@ -427,13 +458,33 @@ function formatDiff(now: number, last: number, isRate = false) {
     background: #f5f8fc !important;
 }
 
+:deep(.ant-table-tbody > tr.orange:hover > td) {
+    background-color: #f5e6c8 !important;
+}
+
+:deep(.ant-table-tbody > tr.purple:hover > td) {
+    background-color: #f0d4f0 !important;
+}
+
+:deep(.ant-table-tbody > tr.blue:hover > td) {
+    background-color: #d4eaf7 !important;
+}
+
+:deep(.ant-table-tbody > tr.white:hover > td) {
+    background-color: #e8e9eb !important;
+}
+
+:deep(.ant-table-tbody > tr.red:hover > td) {
+    background-color: #f9dede !important;
+}
+
 :deep(.ant-table.ant-table-bordered > .ant-table-container > .ant-table-content > table > thead > tr > th),
 :deep(.ant-table.ant-table-bordered > .ant-table-container > .ant-table-content > table > tbody > tr > td) {
     border-inline-end: 1px solid #eef1f5;
 }
 
 :deep(.ant-table-cell-row-hover) {
-    background: #f5f8fc !important;
+    background: inherit !important;
 }
 
 :deep(.ant-tag) {

@@ -68,6 +68,7 @@
             <MyTabel
                 :columnsData="columns"
                 :dataSource="data"
+                :rowClass="true"
                 :loading="tableLoading"
                 @detail="openDetail"
                 @grade="openGrade"

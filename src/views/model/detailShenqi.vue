@@ -58,7 +58,7 @@ import { blueList, purpleList, goldList } from "@/data/shenqiData/zhanli";
 const prop = defineProps<{
     detailData: any;
 }>();
-const nowlevel = ref(12);
+const nowlevel = ref(14);
 const maxLevel = computed(() => Math.max((prop.detailData?.data?.length || 1) - 1, 0));
 const currentEffect = computed(() => {
     const list = prop.detailData?.data;
@@ -90,7 +90,7 @@ function getQualityColor(quality: number) {
 
 watch(
     () => prop.detailData?.name,
-    () => { nowlevel.value = Math.min(12, maxLevel.value); },
+    () => { nowlevel.value = Math.min(14, maxLevel.value); },
     { immediate: true }
 );
 </script>
