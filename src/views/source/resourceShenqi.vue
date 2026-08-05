@@ -13,7 +13,7 @@
         <div class="legend-hint">
             {{
                 viewMode === "sum"
-                    ? "累计 = 升到该星总共需要"
+                    ? "累计 = 升到该星所需（前5星属本体，不计入后续累计）"
                     : "本级 = 升到该星新增消耗"
             }}
         </div>
@@ -77,7 +77,10 @@ const QUALITIES = [
     { key: "gold", label: "橙神器", color: "#e67e22", list: gold }
 ] as const;
 
-/** ziyuan 为升到 2~15 星的本级消耗；1 星无消耗，累计 = 前缀和 */
+/** 前 BASE_STAR 星属本体；后续累计从 BASE_STAR+1 起重新累加 */
+const BASE_STAR = 5;
+
+/** ziyuan 为升到 2~15 星的本级消耗；1 星无消耗 */
 function toRows(list: number[][]): CostRow[] {
     const full = [[0, 0, 0, 0, 0], ...list];
     let ziSum = 0;
@@ -86,14 +89,19 @@ function toRows(list: number[][]): CostRow[] {
     let ziSuiSum = 0;
     let chengSum = 0;
     return full.map((item, i) => {
+        const level = i + 1;
         const [zi, hong, lan, ziSui, cheng] = item;
+        // 第 6 星起清空本体累计，只统计升星段
+        if (level === BASE_STAR + 1) {
+            ziSum = hongSum = lanSum = ziSuiSum = chengSum = 0;
+        }
         ziSum += zi;
         hongSum += hong;
         lanSum += lan;
         ziSuiSum += ziSui;
         chengSum += cheng;
         return {
-            level: i + 1,
+            level,
             ziNow: zi,
             ziSum,
             hongNow: hong,

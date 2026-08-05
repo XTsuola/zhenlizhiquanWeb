@@ -6,17 +6,11 @@
                 <a-button @click="goBack">返回</a-button>
             </div>
         </div>
-
         <div class="panel">
             <div class="field">
                 <span class="label">橙色碎片</span>
-                <a-input-number
-                    v-model:value="calculate.need"
-                    class="control"
-                    :min="100"
-                    :precision="0"
-                    placeholder="最低100"
-                />
+                <a-input-number v-model:value="calculate.need" class="control" :min="100" :precision="0"
+                    placeholder="最低100" />
             </div>
             <div class="field">
                 <span class="label">每日免费</span>
@@ -24,13 +18,8 @@
             </div>
             <div class="field">
                 <span class="label">每日购买</span>
-                <a-input-number
-                    v-model:value="calculate.num"
-                    class="control"
-                    :min="0"
-                    :precision="0"
-                    placeholder="每日钻石购买碎片数量"
-                />
+                <a-input-number v-model:value="calculate.num" class="control" :min="0" :precision="0"
+                    placeholder="每日钻石购买碎片数量" />
             </div>
             <div class="field">
                 <span class="label label--wide">异界币兑换</span>
@@ -51,7 +40,6 @@
                 <a-button @click="reset">清空</a-button>
             </div>
         </div>
-
         <div v-if="show" class="result">
             <div class="result-row">
                 <span class="result-label">需要天数</span>
