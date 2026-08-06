@@ -157,10 +157,10 @@ const whereList: WhereItem[] = [{
     bgColor: TOOL_COLORS[2],
     log: "查询碎片"
 }, {
-    name: "皮肤许愿",
-    url: "/skinDiyList",
+    name: "模拟站位",
+    url: "/position",
     bgColor: TOOL_COLORS[3],
-    log: "查询皮肤"
+    log: "模拟站位"
 }, {
     name: "比赛统计",
     url: "/gameMenu",

@@ -37,7 +37,6 @@
 <script lang="ts" setup>
 import { ref, reactive, onMounted, onBeforeUnmount, defineAsyncComponent } from "vue";
 import { costList } from "@/utils/func";
-import { getSkinList } from "@/api/skin";
 import router from "@/router";
 import MyTabel from "@/components/table.vue";
 const Detail = defineAsyncComponent(() => import("../model/detailSkin.vue"));
@@ -136,10 +135,8 @@ function showModal(_: number, record: any) {
 async function getOriginalData() {
     tableLoading.value = true;
     try {
-        const res = await getSkinList();
-        if (res.status == 200) {
-            originalData.value = res.data.data;
-        }
+        const { skinData } = await import("@/data/skinData/skinData");
+        originalData.value = skinData;
         getList();
     } finally {
         tableLoading.value = false;

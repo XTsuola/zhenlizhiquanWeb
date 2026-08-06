@@ -1,4 +1,4 @@
-export default [
+export const skinData = [
     {
         "id": 1,
         "cardId": 90,

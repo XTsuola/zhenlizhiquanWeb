@@ -98,7 +98,7 @@
 import { ref, computed, onMounted, onBeforeUnmount, nextTick } from "vue";
 import { init } from "echarts";
 import { zhenyinList } from "@/utils/func";
-import skinData from "@/data/skinData/skinData";
+import { skinData } from "@/data/skinData/skinData";
 
 const prop = defineProps<{
     detailData: any;
@@ -383,12 +383,10 @@ onBeforeUnmount(() => {
 .avatar-wrap {
     padding: 2px;
     border-radius: 10px;
-    background: linear-gradient(
-        145deg,
-        color-mix(in srgb, var(--accent) 70%, #fff),
-        #fff 42%,
-        color-mix(in srgb, var(--accent) 45%, #dbe3ea)
-    );
+    background: linear-gradient(145deg,
+            color-mix(in srgb, var(--accent) 70%, #fff),
+            #fff 42%,
+            color-mix(in srgb, var(--accent) 45%, #dbe3ea));
     box-shadow:
         0 0 0 1px color-mix(in srgb, var(--accent) 20%, transparent),
         0 2px 8px color-mix(in srgb, var(--accent) 18%, transparent);
