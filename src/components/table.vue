@@ -1,8 +1,10 @@
 <template>
     <div class="myTable">
-        <div class="table-scroll">
+        <div class="table-scroll" :class="{ 'table-scroll--fit': prop.scrollX === false }">
             <a-table :columns="prop.columnsData" :data-source="prop.dataSource" :pagination="false"
-                :row-class-name="prop.rowClass ? rowClassName : undefined" :loading="prop.loading" :scroll="{ x: true }"
+                :row-class-name="prop.rowClass ? rowClassName : undefined" :loading="prop.loading"
+                :scroll="scrollConfig"
+                :class="{ 'table--fit': prop.scrollX === false }"
                 size="middle" bordered>
                 <template #bodyCell="{ column, index, record, text }">
                     <template v-if="column.key === 'index'">
@@ -40,6 +42,14 @@
                     <template v-else-if="column.key === 'skillSign'">
                         <a-tag v-for="item in record.skillSign" :key="item.name" :color="item.color">{{ item.name
                             }}</a-tag>
+                    </template>
+                    <template v-else-if="column.key === 'agent'">
+                        <div v-if="record.agent?.length" class="agent-tags">
+                            <div v-for="name in record.agent" :key="name" class="agent-line">
+                                <a-tag class="agent-tag" color="processing">{{ name }}</a-tag>
+                            </div>
+                        </div>
+                        <span v-else class="agent-empty">-</span>
                     </template>
                     <template v-else-if="column.key === 'now'">
                         <div class="stat-cell">
@@ -87,6 +97,7 @@
 </template>
 
 <script lang="ts" setup>
+import { computed } from "vue";
 import { tabList } from "@/utils/func";
 import { Table as aTable } from "ant-design-vue";
 
@@ -102,12 +113,27 @@ interface Prop {
     pagination?: Pagination | boolean | any;
     rowClass?: any;
     loading?: boolean;
+    /** false 关闭横向滚动；number 指定最小宽度；默认按列宽求和可左右滑动 */
+    scrollX?: boolean | number;
 }
 
-type ActionKey = "grade" | "tag" | "look" | "detail" | "edit" | "skill" | "together" | "level" | "star" | "frequency" | "delete";
+type ActionKey = "grade" | "tag" | "look" | "detail" | "edit" | "skill" | "together" | "level" | "star" | "frequency" | "delete" | "add";
 
 const prop = defineProps<Prop>();
-const emits = defineEmits(["detail", "edit", "delete", "changePage", "download", "resetPassword", "changeAdmin", "look", "grade", "tag", "frequency", "together", "level", "star"]);
+const emits = defineEmits(["detail", "edit", "delete", "changePage", "download", "resetPassword", "changeAdmin", "look", "grade", "tag", "frequency", "together", "level", "star", "add"]);
+
+const scrollConfig = computed(() => {
+    if (prop.scrollX === false) return undefined;
+    if (typeof prop.scrollX === "number") return { x: prop.scrollX };
+    const cols = Array.isArray(prop.columnsData) ? prop.columnsData : [];
+    const sum = cols.reduce((total: number, col: any) => {
+        if (typeof col?.width === "number") return total + col.width;
+        if (typeof col?.minWidth === "number") return total + col.minWidth;
+        return total + 120;
+    }, 0);
+    return { x: Math.max(sum, 560) };
+});
+
 const actionLabel: Record<string, string> = {
     grade: "评级",
     tag: "标签",
@@ -119,7 +145,8 @@ const actionLabel: Record<string, string> = {
     level: "等级",
     star: "星级",
     frequency: "卡组",
-    delete: "删除"
+    delete: "删除",
+    add: "代理人"
 };
 const gradeList = [
     { label: "SSS真神", value: 6, color: "#000000" },
@@ -173,6 +200,9 @@ function onAction(item: ActionKey, record: any, index: number) {
             break;
         case "frequency":
             emits("frequency", record);
+            break;
+        case "add":
+            emits("add", record);
             break;
     }
 }
@@ -257,12 +287,41 @@ function formatDiff(now: number, last: number, isRate = false) {
     width: 100%;
     max-width: 100%;
     min-width: 0;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
     border-radius: 10px;
     border: 1px solid #e8ebf0;
     background: #fff;
     box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+
+    :deep(.ant-table-content),
+    :deep(.ant-table-body) {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-x: contain;
+        touch-action: pan-x pan-y;
+    }
+
+    &--fit {
+        overflow-x: hidden;
+
+        :deep(.ant-table-content),
+        :deep(.ant-table-body) {
+            overflow-x: hidden !important;
+        }
+    }
+}
+
+.table--fit {
+    :deep(.ant-table) {
+        table-layout: fixed;
+        width: 100% !important;
+    }
+
+    :deep(.ant-table-content),
+    :deep(.ant-table-body),
+    :deep(.ant-table-container) {
+        overflow-x: hidden !important;
+    }
 }
 
 .cell-img {
@@ -323,6 +382,36 @@ function formatDiff(now: number, last: number, isRate = false) {
 .tag-item {
     margin-bottom: 4px;
     border-radius: 4px;
+}
+
+.agent-tags {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    line-height: 1.2;
+    padding: 2px 0;
+}
+
+.agent-line {
+    display: flex;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.agent-tag {
+    margin: 0;
+    padding: 0 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 18px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.agent-empty {
+    color: #9ca3af;
 }
 
 .stat-cell {

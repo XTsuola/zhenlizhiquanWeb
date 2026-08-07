@@ -1,8 +1,4 @@
-import request from "../utils/request";
+import { get } from "../utils/request";
 
-export function getShenqiList(zhenyin: number) {
-    return request({
-        url: "/shenqi/list?zhenyin=" + zhenyin,
-        method: "get"
-    });
-}
+/** 获取神器 */
+export const getShenqiList = (zhenyin: number) => get("/shenqi/list", { zhenyin });

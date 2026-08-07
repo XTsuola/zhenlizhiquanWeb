@@ -19,8 +19,8 @@
             </div>
         </div>
         <div class="table-wrap">
-            <MyTabel :columnsData="columns" :dataSource="tableData" :loading="tableLoading" @detail="showModal"
-                @edit="showModal" @delete="deleteOk" />
+            <MyTabel :columnsData="columns" :dataSource="tableData" :scrollX="tableScrollX" :loading="tableLoading"
+                @detail="showModal" @edit="showModal" @delete="deleteOk" />
         </div>
         <a-modal v-model:open="visible" destroyOnClose :title="title" :maskClosable="false"
             :width="isNarrow ? '94%' : 720" centered>
@@ -45,13 +45,8 @@
                 </template>
             </a-segmented>
             <div v-if="optionType == '卡组配置'" class="cardList">
-                <a-badge
-                    v-for="card in cardsImgData"
-                    :key="`${card.id}-${card.level}`"
-                    :count="card.level"
-                    class="card-badge"
-                    :numberStyle="getBadgeStyle(card.quality)"
-                >
+                <a-badge v-for="card in cardsImgData" :key="`${card.id}-${card.level}`" :count="card.level"
+                    class="card-badge" :numberStyle="getBadgeStyle(card.quality)">
                     <img class="card-thumb" :class="getBgColor(card.quality)" :src="card.img" alt="" />
                 </a-badge>
             </div>
@@ -76,7 +71,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive, onMounted, onBeforeUnmount } from "vue";
+import { ref, reactive, computed, onMounted, onBeforeUnmount } from "vue";
 import { message } from "ant-design-vue";
 import { SettingOutlined, TableOutlined } from "@ant-design/icons-vue";
 import { heroTable } from "@/data/heroData/index";
@@ -93,35 +88,29 @@ const heroSelect = heroTable.map((e: any) => ({
     label: e.name,
     value: e.id
 }));
-const columns = [
-    { title: "区服", dataIndex: "qu", key: "qu", width: 72, ellipsis: true },
-    { title: "名称", dataIndex: "name", key: "name", ellipsis: true, minWidth: 100 },
-    {
-        title: "英雄",
-        dataIndex: "heroId",
-        key: "heroId",
-        width: 96,
-        ellipsis: true,
-        customRender: (opt: any) => heroTable.find((e: any) => e.id == opt.value)?.name
-    },
-    { title: "时间", dataIndex: "time", key: "time", width: 140, ellipsis: true },
+const isNarrow = ref(window.innerWidth < 576);
+const tableScrollX = 720;
+const columns = computed(() => [
+    { title: "区服", dataIndex: "qu", key: "qu", width: 64 },
+    { title: "名称", dataIndex: "name", key: "name", width: 120 },
+    { title: "英雄", dataIndex: "heroName", key: "heroName", width: 140 },
+    { title: "时间", dataIndex: "time", key: "time", width: 158 },
     {
         title: "操作",
         key: "action",
         list: ["detail", "edit", "delete"],
-        width: 150,
-        fixed: "right",
+        width: isNarrow.value ? 158 : 168,
+        // 手机端取消 fixed，避免挡住横向滑动
+        ...(isNarrow.value ? {} : { fixed: "right" as const }),
         align: "center"
     }
-];
-
+]);
 const tableLoading = ref(false);
 const tableData = ref<any[]>([]);
 const cardMenu = ref<any[]>([]);
 const title = ref("详细信息");
 const visible = ref(false);
 const visible2 = ref(false);
-const isNarrow = ref(window.innerWidth < 576);
 const myObj = reactive<any>({
     id: 0,
     heroId: undefined,
@@ -188,12 +177,17 @@ async function getList() {
     try {
         const res = await getFrequencyCardsAll();
         if (res.data.code == 200) {
-            tableData.value = hero.value
+            const list = hero.value
                 ? res.data.data.filter((e: any) => e.heroId == hero.value)
                 : res.data.data;
-            tableData.value.sort(
-                (a: any, b: any) => new Date(b.time).getTime() - new Date(a.time).getTime()
-            );
+            tableData.value = list
+                .map((e: any) => ({
+                    ...e,
+                    heroName: heroTable.find((h: any) => h.id == e.heroId)?.name || "-"
+                }))
+                .sort(
+                    (a: any, b: any) => new Date(b.time).getTime() - new Date(a.time).getTime()
+                );
         }
     } finally {
         tableLoading.value = false;
@@ -361,8 +355,8 @@ onBeforeUnmount(() => {
 
 .table-wrap {
     width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .seg-label {

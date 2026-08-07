@@ -1,15 +1,7 @@
-import request from "../utils/request";
+import { get } from "../utils/request";
 
-export function logAdd(name: string) {
-    return request({
-        url: "/log/add?name=" + name,
-        method: "get"
-    });
-}
+/** 新增日志 */
+export const logAdd = (name: string) => get("/log/add", { name });
 
-export function logList() {
-    return request({
-        url: "/log/list",
-        method: "get"
-    });
-}
+/** 获取日志 */
+export const logList = () => get("/log/list");

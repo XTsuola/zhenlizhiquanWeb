@@ -1,41 +1,23 @@
-import request from "../utils/request";
-
-export function getCardList(zhenyin: number) {
-    return request({
-        url: "/card/list?zhenyin=" + zhenyin,
-        method: "get",
-        timeout: 0
-    });
-}
-
-export function getAllCardList() {
-    return request({
-        url: "/cardAll/list",
-        method: "get",
-        timeout: 0
-    });
-}
+import { get, post } from "../utils/request";
 
 export interface UpdateCardGradeType {
-    id: number
-    grade: number[]
-}
-export function updateCardGrade(data: UpdateCardGradeType) {
-    return request({
-        url: "/card/gradeUpdate",
-        method: "post",
-        data: data
-    });
+    id: number;
+    grade: number[];
 }
 
 export interface UpdateCardTagType {
-    id: number
-    tag: number[]
+    id: number;
+    tag: number[];
 }
-export function updateCardTag(data: UpdateCardTagType) {
-    return request({
-        url: "/card/tagUpdate",
-        method: "post",
-        data: data
-    });
-}
+
+/** 获取单个种族卡牌 */
+export const getCardList = (zhenyin: number) => get("/card/list", { zhenyin }, { timeout: 0 });
+
+/** 获取所有卡牌 */
+export const getAllCardList = () => get("/cardAll/list", undefined, { timeout: 0 });
+
+/** 修改卡牌评级 */
+export const updateCardGrade = (data: UpdateCardGradeType) => post("/card/gradeUpdate", data);
+
+/** 修改卡牌标签 */
+export const updateCardTag = (data: UpdateCardTagType) => post("/card/tagUpdate", data);

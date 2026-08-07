@@ -1,43 +1,16 @@
-import request from "../utils/request";
+import { get, post } from "../utils/request";
 
-// 获取游戏数据
-export function getGameMap() {
-    return request({
-        url: "/qingshu/getMap",
-        method: "get",
-    });
-}
+/** 获取游戏数据 */
+export const getGameMap = () => get("/qingshu/getMap");
 
-// 重置游戏
-export function resetGame() {
-    return request({
-        url: "/qingshu/reset",
-        method: "get",
-    });
-}
+/** 重置游戏 */
+export const resetGame = () => get("/qingshu/reset");
 
-// 摸牌
-export function getCard(userId: number) {
-    return request({
-        url: "/qingshu/getCard?userId=" + userId,
-        method: "get",
-    });
-}
+/** 获取卡牌 */
+export const getCard = (userId: number) => get("/qingshu/getCard", { userId });
 
-// 出牌
-export function disCard(data: any) {
-    return request({
-        url: "/qingshu/disCard",
-        method: "post",
-        data: data
-    });
-}
+/** 弃牌 */
+export const disCard = (data: any) => post("/qingshu/disCard", data);
 
-// 登录并且修改昵称
-export function loginAndUpdateName(data: any) {
-    return request({
-        url: "/qingshu/updateUsername",
-        method: "post",
-        data: data
-    });
-}
+/** 修改玩家名称 */
+export const loginAndUpdateName = (data: any) => post("/qingshu/updateUsername", data);

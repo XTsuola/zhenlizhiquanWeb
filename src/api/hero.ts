@@ -1,23 +1,13 @@
-import request from "../utils/request";
+import { get, post } from "../utils/request";
 
-export function getHeroList() {
-    return request({
-        url: "/hero/list",
-        method: "get"
-    });
-}
+/** 获取英雄 */
+export const getHeroList = () => get("/hero/list");
 
-export function getShardList() {
-    return request({
-        url: "/hero/shardList",
-        method: "get"
-    });
-}
+/** 获取英雄碎片 */
+export const getShardList = () => get("/hero/shardList");
 
-export function updateShard(data: any) {
-    return request({
-        url: "/hero/shardUpdate",
-        method: "post",
-        data: data
-    });
-}
+/** 修改英雄碎片 */
+export const updateShard = (data: any) => post("/hero/shardUpdate", data);
+
+/** 修改代理人 */
+export const addAgent = (data: any) => post("/hero/agentAdd", data);

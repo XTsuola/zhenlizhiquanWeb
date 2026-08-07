@@ -1,87 +1,48 @@
-import request from "../utils/request";
+import { get, post, del } from "../utils/request";
 
 export interface FrequencyAddType {
-    name: string
-    qu: number
-    heroId: number
-    heroLife: number
-    cards: string
-    time: string
-}
-export function frequencyAdd(data: FrequencyAddType) {
-    return request({
-        url: "/frequency/cardsAdd",
-        method: "post",
-        data: data
-    });
+  name: string;
+  qu: number;
+  heroId: number;
+  heroLife: number;
+  cards: string;
+  time: string;
 }
 
 export interface FrequencyUpdateType {
-    id: number
-    name: string
-    qu: number
-    heroId: number
-    heroLife: number
-    cards: string
-    time: string
-    password: string
-}
-export function frequencyUpdate(data: FrequencyUpdateType) {
-    return request({
-        url: "/frequency/cardsUpdate",
-        method: "post",
-        data: data
-    });
+  id: number;
+  name: string;
+  qu: number;
+  heroId: number;
+  heroLife: number;
+  cards: string;
+  time: string;
+  password: string;
 }
 
-export function frequencyUpdateTemp(data: FrequencyUpdateType) {
-    return request({
-        url: "/frequency/cardsUpdateTemp",
-        method: "post",
-        data: data
-    });
-}
+/** 新增卡组 */
+export const frequencyAdd = (data: FrequencyAddType) => post("/frequency/cardsAdd", data);
 
-export function getFrequencyCardsDetail(id: number) {
-    return request({
-        url: "/frequency/cardsDetail?id=" + id,
-        method: "get"
-    });
-}
+/** 修改卡组 */
+export const frequencyUpdate = (data: FrequencyUpdateType) => post("/frequency/cardsUpdate", data);
 
-export function getFrequencyCardsAll() {
-    return request({
-        url: "/frequency/cardsAll",
-        method: "get"
-    });
-}
+/** 临时修改卡组 */
+export const frequencyUpdateTemp = (data: FrequencyUpdateType) => post("/frequency/cardsUpdateTemp", data);
 
-export function frequencyDelete(params: any) {
-    return request({
-        url: "/frequency/cardsDelete",
-        method: "delete",
-        params: params
-    })
-};
+/** 获取卡组详情 */
+export const getFrequencyCardsDetail = (id: number) => get("/frequency/cardsDetail", { id });
 
-export function frequencyPasswordAdd(data: any) {
-    return request({
-        url: "/frequency/passwordAdd",
-        method: "post",
-        data: data
-    });
-}
+/** 获取所有卡组 */
+export const getFrequencyCardsAll = () => get("/frequency/cardsAll");
 
-export function getFrequencyPasswordList() {
-    return request({
-        url: "/frequency/passwordList",
-        method: "get"
-    });
-}
+/** 删除卡组 */
+export const frequencyDelete = (params: any) => del("/frequency/cardsDelete", params);
 
-export function frequencyPasswordDelete(id: number) {
-    return request({
-        url: "/frequency/passwordDelete?id=" + id,
-        method: "delete"
-    })
-};
+/** 新增临时密码 */
+export const frequencyPasswordAdd = (data: any) => post("/frequency/passwordAdd", data);
+
+/** 获取临时密码 */
+export const getFrequencyPasswordList = () => get("/frequency/passwordList");
+
+/** 删除临时密码 */
+export const frequencyPasswordDelete = (id: number) => del("/frequency/passwordDelete", { id });

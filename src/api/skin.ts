@@ -1,8 +1,4 @@
-import request from "../utils/request";
+import { get } from "../utils/request";
 
-export function getSkinList() {
-    return request({
-        url: "/skin/list",
-        method: "get"
-    });
-}
+/** 获取皮肤 */
+export const getSkinList = () => get("/skin/list");
