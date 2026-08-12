@@ -39,18 +39,6 @@ export const tagList = [
         id: 14,
         name: "马穆鲁克"
     }, {
-        id: 5,
-        name: "舰船"
-    }, {
-        id: 11,
-        name: "掷矛手"
-    }, {
-        id: 13,
-        name: "骆驼"
-    }, {
-        id: 14,
-        name: "马穆鲁克"
-    }, {
         id: 15,
         name: "攻城武器"
     }, {
@@ -64,21 +52,24 @@ export const tagList = [
         name: "舰船"
     }, {
         id: 19,
-        name: "远程舰船"
+        name: "渔船"
     }, {
         id: 20,
-        name: "喷火船"
+        name: "远程舰船"
     }, {
         id: 21,
-        name: "英雄"
+        name: "喷火船"
     }, {
         id: 22,
-        name: "建筑"
+        name: "英雄"
     }, {
         id: 23,
-        name: "石制建筑"
+        name: "建筑"
     }, {
         id: 24,
+        name: "石制建筑"
+    }, {
+        id: 25,
         name: "石墙和门"
     }
 ]
