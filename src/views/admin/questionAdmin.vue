@@ -44,8 +44,8 @@ const addData = reactive<any>({ info: "", time: "" });
 
 const columns = [
     { title: "ID", dataIndex: "id", key: "id", width: 64, align: "center" },
-    { title: "题目", dataIndex: "info", key: "info", ellipsis: true, minWidth: 160 },
-    { title: "时间", dataIndex: "time", key: "time", width: 150, ellipsis: true }
+    { title: "题目", dataIndex: "info", key: "info", minWidth: 200 },
+    { title: "时间", dataIndex: "time", key: "time", width: 150 }
 ];
 
 function onResize() {
@@ -141,6 +141,11 @@ onBeforeUnmount(() => {
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+}
+
+.table-wrap :deep(.ant-table-cell) {
+    white-space: normal;
+    word-break: break-word;
 }
 
 .question-input {

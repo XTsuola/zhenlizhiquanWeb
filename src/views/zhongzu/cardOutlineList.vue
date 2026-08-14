@@ -25,8 +25,7 @@
                 <div class="field-row">
                     <a-input v-model:value="formState.name" allow-clear placeholder="名称" class="field"
                         @pressEnter="getList" />
-                    <a-select v-model:value="formState.tag" allow-clear mode="multiple" placeholder="标签"
-                        class="field">
+                    <a-select v-model:value="formState.tag" allow-clear mode="multiple" placeholder="标签" class="field">
                         <a-select-option v-for="item in tabList" :key="item.value" :value="item.value">
                             {{ item.label }}
                         </a-select-option>
@@ -47,11 +46,10 @@
                 <a-button @click="goBack">返回</a-button>
             </div>
         </div>
-
         <div class="table-wrap">
-            <MyTabel :columnsData="columns" :dataSource="data" :rowClass="true" :loading="tableLoading" @detail="showModal" />
+            <MyTabel :columnsData="columns" :dataSource="data" :rowClass="true" :loading="tableLoading"
+                @detail="showModal" />
         </div>
-
         <a-modal v-model:open="visible" destroyOnClose title="详细信息" :maskClosable="false"
             :width="isNarrow ? '92%' : 520" centered>
             <Detail v-if="visible" :detailData="detailData" />
@@ -77,14 +75,24 @@ const cardTypeList = [
     { label: "传记", value: 3 },
     { label: "符文", value: 4 }
 ];
+const actionColumn = {
+    title: "操作",
+    key: "action",
+    list: ["detail"],
+    width: 72,
+    fixed: "right" as const,
+    align: "center"
+};
 const baseColumns = [
     { title: "头像", dataIndex: "headImg2", key: "headImg2", width: 64 },
     { title: "名称", dataIndex: "name", key: "name", ellipsis: true, minWidth: 96 },
-    { title: "评级", dataIndex: "grade", key: "grade", width: 88, align: "center" }
+    { title: "评级", dataIndex: "grade", key: "grade", width: 88, align: "center" },
+    actionColumn
 ];
 const tagColumns = [
     { title: "头像", dataIndex: "headImg2", key: "headImg2", width: 64 },
-    { title: "标签", dataIndex: "tag", key: "tag", ellipsis: true, minWidth: 120 }
+    { title: "标签", dataIndex: "tag", key: "tag", ellipsis: true, minWidth: 120 },
+    actionColumn
 ];
 const sortColumns = [
     { title: "头像", dataIndex: "headImg2", key: "headImg2", width: 52 },
@@ -112,7 +120,8 @@ const sortColumns = [
         width: 72,
         align: "center",
         sorter: (a: any, b: any) => JSON.parse(a.grade)[0] - JSON.parse(b.grade)[0]
-    }
+    },
+    actionColumn
 ];
 const tableLoading = ref(false);
 const isNarrow = ref(window.innerWidth < 576);

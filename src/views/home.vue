@@ -142,7 +142,7 @@ const whereList: WhereItem[] = [{
     bgColor: TOOL_COLORS[3],
     log: "查询计算"
 }, {
-    name: "卡牌评级",
+    name: "卡牌查询",
     url: "/cardOutline",
     bgColor: TOOL_COLORS[0],
     log: "查询卡牌"

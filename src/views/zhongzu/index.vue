@@ -72,7 +72,7 @@ const detailData = reactive({
 const visible = ref(false);
 const data = ref<any[]>([]);
 const columns = [
-    { title: "头像", dataIndex: "headImg", key: "headImg", width: 64 },
+    { title: "头像", dataIndex: "headImg2", key: "headImg2", width: 64 },
     { title: "名称", dataIndex: "name", key: "name", ellipsis: true, minWidth: 120 },
     { title: "操作", key: "action", list: ["detail"], width: 72, fixed: "right", align: "center" }
 ];
