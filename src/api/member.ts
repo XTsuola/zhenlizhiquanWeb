@@ -4,6 +4,7 @@ export interface MemberAddType {
   id?: number;
   name: string;
   donation: number;
+  reward: number;
   score: number | null;
   title?: string;
   remark?: string;
@@ -17,6 +18,9 @@ export const memberUpdate = (data: MemberAddType) => post(`/member/update/${data
 
 /** 获取所有成员 */
 export const getMemberList = () => get("/member/list");
+
+/** 获取奖励榜（reward > 0） */
+export const getRewardList = () => get("/memberReward/list/");
 
 /** 删除成员 */
 export const memberDelete = (id: number) => del(`/member/delete/${id}/`);

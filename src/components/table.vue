@@ -254,7 +254,7 @@ function getScoreGrade(score: number) {
 
 function getScoreGradeName(score: number, title?: string) {
     const item = getScoreGrade(score);
-    return item.level + (title || item.label);
+    return `${item.level} / ${title || item.label}`;
 }
 
 function getScoreGradeColor(score: number) {
@@ -444,13 +444,18 @@ function formatDiff(now: number, last: number, isRate = false) {
     box-shadow: 0 1px 4px rgba(170, 139, 59, 0.35);
 
     &--grade {
-        width: 60px;
+        width: auto;
         min-height: 22px;
+        padding: 0 8px;
+        white-space: nowrap;
     }
 
     &--score {
-        width: 88px;
+        width: auto;
+        max-width: 100%;
         min-height: 22px;
+        padding: 0 8px;
+        white-space: nowrap;
     }
 }
 

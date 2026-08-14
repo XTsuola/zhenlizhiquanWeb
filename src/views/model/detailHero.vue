@@ -62,7 +62,7 @@ const prop = defineProps<{
     detailData: any;
 }>();
 
-const nowlevel = ref(12);
+const nowlevel = ref(14);
 const maxLevel = computed(() => {
     const len = prop.detailData?.data?.length || 0;
     return Math.max(len - 1, 0);
@@ -102,7 +102,7 @@ function getQualityColor(quality: number) {
 watch(
     () => prop.detailData?.name,
     () => {
-        nowlevel.value = Math.min(12, maxLevel.value);
+        nowlevel.value = Math.min(14, maxLevel.value);
     },
     { immediate: true }
 );

@@ -257,9 +257,9 @@ const routeList: RouteRecordRaw[] = [
     component: () => import("@/views/member/index.vue")
   },
   {
-    path: "/bonus",
-    name: "bonus",
-    component: () => import("@/views/member/bonus.vue")
+    path: "/reward",
+    name: "reward",
+    component: () => import("@/views/member/reward.vue")
   },
   {
     path: "/position",

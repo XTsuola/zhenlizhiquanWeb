@@ -1,67 +1,111 @@
 <template>
     <div class="page" @pointermove="onPointerMove" @pointerup="onPointerUp" @pointercancel="onPointerCancel">
         <div class="toolbar">
-            <h1 class="title">模拟站位</h1>
+            <div class="toolbar-text">
+                <h1 class="title">模拟站位</h1>
+                <p class="subtitle">挑选部下与符文，布置你的九宫格</p>
+            </div>
             <div class="actions">
                 <a-button size="small" @click="clearBoard" :disabled="!boardHasCard">清空场地</a-button>
                 <a-button size="small" @click="goBack">返回</a-button>
             </div>
         </div>
-        <div class="hint">
-            轻点选中后点空格上场；手机长按约 0.3 秒再拖。
-            <span class="hint-em">九宫格只能放入部下卡</span>；左侧 3 格只能放符文。
+
+        <div class="tip">
+            <span class="tip-label">操作</span>
+            <span class="tip-text">
+                轻点选中后点空格上场；手机长按约 0.3 秒再拖。
+                <em>九宫格只能放入部下卡</em>；左侧 3 格只能放符文。
+            </span>
         </div>
-        <div class="race-bar">
-            <button v-for="tab in raceTabs" :key="tab.value" type="button" class="race-tab"
-                :class="{ active: activeRace === tab.value }" @click="activeRace = tab.value">
-                {{ tab.label }}
-            </button>
-        </div>
-        <div class="pool" ref="poolRef" @scroll.passive="onPoolScroll">
-            <div v-if="!poolCards.length" class="pool-empty">该种族暂无可选卡牌</div>
-            <div v-for="card in poolCards" :key="card.id" class="pool-card" :class="[
-                qualityClass(card.quality),
-                {
-                    selected: selectedId === card.id,
-                    armed:
-                        dragState?.from === 'pool' &&
-                        dragState.card.id === card.id &&
-                        dragState.armed &&
-                        !dragState.active,
-                    dragging: dragState?.from === 'pool' && dragState.card.id === card.id && dragState.active,
-                    'is-rune': card.type === 4
-                }
-            ]" @pointerdown="onPoolPointerDown($event, card)">
-                <span v-if="card.type === 4" class="type-tag">符</span>
-                <span v-if="fieldCount(card.id)" class="count-badge">×{{ fieldCount(card.id) }}</span>
-                <img class="thumb" :src="card.imgUrl" :alt="card.name" draggable="false" />
-                <div class="meta">
-                    <span class="cost">{{ card.cost }}</span>
-                    <span class="cname">{{ card.name }}</span>
+
+        <section class="panel pool-panel">
+            <div class="panel-head">
+                <h2 class="panel-title">卡牌池</h2>
+                <span class="panel-count">{{ poolCards.length }} 张</span>
+            </div>
+            <div class="race-bar">
+                <button
+                    v-for="tab in raceTabs"
+                    :key="tab.value"
+                    type="button"
+                    class="race-tab"
+                    :class="{ active: activeRace === tab.value }"
+                    @click="activeRace = tab.value"
+                >
+                    {{ tab.label }}
+                </button>
+            </div>
+            <div class="pool" ref="poolRef" @scroll.passive="onPoolScroll">
+                <div v-if="!poolCards.length" class="pool-empty">该种族暂无可选卡牌</div>
+                <div
+                    v-for="card in poolCards"
+                    :key="card.id"
+                    class="pool-card"
+                    :class="[
+                        qualityClass(card.quality),
+                        {
+                            selected: selectedId === card.id,
+                            armed:
+                                dragState?.from === 'pool' &&
+                                dragState.card.id === card.id &&
+                                dragState.armed &&
+                                !dragState.active,
+                            dragging:
+                                dragState?.from === 'pool' &&
+                                dragState.card.id === card.id &&
+                                dragState.active,
+                            'is-rune': card.type === 4
+                        }
+                    ]"
+                    @pointerdown="onPoolPointerDown($event, card)"
+                >
+                    <span v-if="card.type === 4" class="type-tag">符</span>
+                    <span v-if="fieldCount(card.id)" class="count-badge">×{{ fieldCount(card.id) }}</span>
+                    <img class="thumb" :src="card.imgUrl" :alt="card.name" draggable="false" />
+                    <div class="meta">
+                        <span class="cost">{{ card.cost }}</span>
+                        <span class="cname">{{ card.name }}</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="board-panel">
+        </section>
+
+        <section class="panel board-panel">
+            <div class="panel-head">
+                <h2 class="panel-title">战场</h2>
+                <span class="panel-count">{{ placedCount }}/12</span>
+            </div>
             <div class="field-row">
                 <div class="rune-col">
-                    <div class="rune-title">符文</div>
-                    <div v-for="(slot, index) in runes" :key="'r' + index" class="rune-slot"
-                        :data-drop="`rune:${index}`" :class="{
+                    <div class="zone-label">符文</div>
+                    <div
+                        v-for="(slot, index) in runes"
+                        :key="'r' + index"
+                        class="rune-slot"
+                        :data-drop="`rune:${index}`"
+                        :class="{
                             empty: !slot,
                             over: dragOverKey === `rune:${index}`,
                             'has-card': !!slot,
                             reject: dragState?.active && !canDropOn('rune', dragState.card)
-                        }" @click="onRuneClick(index)">
+                        }"
+                        @click="onRuneClick(index)"
+                    >
                         <template v-if="slot">
-                            <div class="rune-card" :class="[
-                                qualityClass(slot.quality),
-                                {
-                                    dragging:
-                                        dragState?.from === 'rune' &&
-                                        dragState.slotIndex === index &&
-                                        dragState.active
-                                }
-                            ]" @pointerdown="onRunePointerDown($event, index)">
+                            <div
+                                class="rune-card"
+                                :class="[
+                                    qualityClass(slot.quality),
+                                    {
+                                        dragging:
+                                            dragState?.from === 'rune' &&
+                                            dragState.slotIndex === index &&
+                                            dragState.active
+                                    }
+                                ]"
+                                @pointerdown="onRunePointerDown($event, index)"
+                            >
                                 <img class="thumb" :src="slot.imgUrl" :alt="slot.name" draggable="false" />
                             </div>
                         </template>
@@ -69,25 +113,35 @@
                     </div>
                 </div>
                 <div class="board-wrap">
-                    <div class="board-title">3 × 3 场地 · 仅部下</div>
+                    <div class="zone-label">3 × 3 场地 · 仅部下</div>
                     <div class="board">
-                        <div v-for="(slot, index) in board" :key="index" class="cell" :data-drop="`board:${index}`"
+                        <div
+                            v-for="(slot, index) in board"
+                            :key="index"
+                            class="cell"
+                            :data-drop="`board:${index}`"
                             :class="{
                                 empty: !slot,
                                 over: dragOverKey === `board:${index}`,
                                 'has-card': !!slot,
                                 reject: dragState?.active && !canDropOn('board', dragState.card)
-                            }" @click="onCellClick(index)">
+                            }"
+                            @click="onCellClick(index)"
+                        >
                             <template v-if="slot">
-                                <div class="cell-card" :class="[
-                                    qualityClass(slot.quality),
-                                    {
-                                        dragging:
-                                            dragState?.from === 'board' &&
-                                            dragState.slotIndex === index &&
-                                            dragState.active
-                                    }
-                                ]" @pointerdown="onBoardPointerDown($event, index)">
+                                <div
+                                    class="cell-card"
+                                    :class="[
+                                        qualityClass(slot.quality),
+                                        {
+                                            dragging:
+                                                dragState?.from === 'board' &&
+                                                dragState.slotIndex === index &&
+                                                dragState.active
+                                        }
+                                    ]"
+                                    @pointerdown="onBoardPointerDown($event, index)"
+                                >
                                     <img class="thumb" :src="slot.imgUrl" :alt="slot.name" draggable="false" />
                                     <div class="cell-name">{{ slot.name }}</div>
                                 </div>
@@ -97,9 +151,14 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div v-if="dragState?.active" class="drag-ghost" :class="qualityClass(dragState.card.quality)"
-            :style="ghostStyle">
+        </section>
+
+        <div
+            v-if="dragState?.active"
+            class="drag-ghost"
+            :class="qualityClass(dragState.card.quality)"
+            :style="ghostStyle"
+        >
             <img class="thumb" :src="dragState.card.imgUrl" :alt="dragState.card.name" draggable="false" />
             <div class="ghost-name">{{ dragState.card.name }}</div>
         </div>
@@ -192,6 +251,10 @@ const poolCards = computed(() => {
 });
 
 const boardHasCard = computed(() => board.value.some(Boolean) || runes.value.some(Boolean));
+
+const placedCount = computed(
+    () => board.value.filter(Boolean).length + runes.value.filter(Boolean).length
+);
 
 const ghostStyle = computed(() => {
     const d = dragState.value;
@@ -496,15 +559,24 @@ function goBack() {
 
 <style lang="less" scoped>
 .page {
+    --ink: #1f2937;
+    --muted: #64748b;
+    --line: #e8ebf0;
+    --panel: #fff;
+    --bg: #eef1f5;
+    --accent: #4a7c9b;
+
     position: relative;
     min-height: 100%;
-    padding: 10px;
-    padding-bottom: 20px;
+    padding: 12px;
+    padding-bottom: 24px;
     box-sizing: border-box;
-    background: #f5f6f8;
+    background:
+        radial-gradient(ellipse 80% 40% at 50% 0%, rgba(74, 124, 155, 0.08), transparent 70%),
+        var(--bg);
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -514,80 +586,143 @@ function goBack() {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 8px;
-    background: #fff;
-    border: 1px solid #e8ebf0;
+    gap: 12px;
+    background: var(--panel);
+    border: 1px solid var(--line);
     border-radius: 10px;
-    padding: 8px 10px;
+    padding: 12px 14px;
     box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.toolbar-text {
+    min-width: 0;
 }
 
 .title {
     margin: 0;
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 700;
-    color: #1f2937;
+    color: var(--ink);
+}
+
+.subtitle {
+    margin: 3px 0 0;
+    font-size: 12px;
+    color: #94a3b8;
 }
 
 .actions {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
+    flex-shrink: 0;
 }
 
-.hint {
-    margin: 0;
-    font-size: 11px;
-    color: #9ca3af;
-    line-height: 1.4;
+.tip {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    padding: 8px 10px;
+    background: #fff8f1;
+    border: 1px solid #f3e0c8;
+    border-radius: 8px;
 }
 
-.hint-em {
-    color: #e67e22;
+.tip-label {
+    flex-shrink: 0;
+    margin-top: 1px;
+    padding: 0 6px;
+    border-radius: 4px;
+    background: #e67e22;
+    color: #fff;
+    font-size: 10px;
     font-weight: 700;
+    line-height: 18px;
+}
+
+.tip-text {
+    font-size: 12px;
+    color: #78716c;
+    line-height: 1.45;
+
+    em {
+        font-style: normal;
+        color: #c2410c;
+        font-weight: 700;
+    }
+}
+
+.panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 10px 12px 0;
+}
+
+.panel-title {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink);
+}
+
+.panel-count {
+    font-size: 11px;
+    font-weight: 600;
+    color: #94a3b8;
+    font-variant-numeric: tabular-nums;
+}
+
+.pool-panel {
+    padding-bottom: 10px;
 }
 
 .race-bar {
     display: flex;
-    gap: 3px;
+    gap: 4px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    padding-bottom: 1px;
+    padding: 8px 12px 6px;
 }
 
 .race-tab {
     flex-shrink: 0;
     border: 1px solid #e5e7eb;
-    background: #fff;
+    background: #f8fafc;
     color: #4b5563;
-    border-radius: 999px;
-    padding: 1px 7px;
-    font-size: 10px;
+    border-radius: 6px;
+    padding: 3px 9px;
+    font-size: 11px;
     font-weight: 600;
     line-height: 1.35;
     cursor: pointer;
+    transition: background 0.12s ease, border-color 0.12s ease, color 0.12s ease;
 
     &.active {
-        background: #1f2937;
-        border-color: #1f2937;
+        background: var(--accent);
+        border-color: var(--accent);
         color: #fff;
     }
 }
 
 .pool {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
-    gap: 4px;
-    max-height: min(26vh, 200px);
+    grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
+    gap: 5px;
+    max-height: min(26vh, 210px);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
     touch-action: pan-y;
-    padding: 6px;
-    background: #fff;
-    border: 1px solid #e8ebf0;
-    border-radius: 8px;
-    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    padding: 4px 12px 2px;
 }
 
 .pool-empty {
@@ -595,14 +730,15 @@ function goBack() {
     text-align: center;
     color: #9ca3af;
     font-size: 12px;
-    padding: 16px 0;
+    padding: 20px 0;
 }
 
 .pool-card {
     --q: #9ca3af;
     position: relative;
-    border: 1px solid color-mix(in srgb, var(--q) 55%, #e5e7eb);
-    border-radius: 5px;
+    border: 1px solid #e5e7eb;
+    border-top: 2px solid var(--q);
+    border-radius: 6px;
     overflow: hidden;
     background: #fff;
     cursor: grab;
@@ -617,7 +753,7 @@ function goBack() {
     }
 
     &.selected {
-        box-shadow: 0 0 0 2px var(--q), 0 2px 6px color-mix(in srgb, var(--q) 35%, transparent);
+        box-shadow: 0 0 0 2px var(--q), 0 3px 8px rgba(15, 23, 42, 0.12);
         transform: translateY(-1px);
     }
 
@@ -647,18 +783,23 @@ function goBack() {
     &.q-orange {
         --q: #e67e22;
     }
+
+    &.is-rune {
+        border-color: #ddd6fe;
+        border-top-color: #8e488e;
+    }
 }
 
 .count-badge {
     position: absolute;
-    top: 1px;
-    right: 1px;
+    top: 2px;
+    right: 2px;
     z-index: 1;
     min-width: 16px;
-    padding: 0 2px;
-    height: 12px;
+    padding: 0 3px;
+    height: 13px;
     border-radius: 6px;
-    background: rgba(31, 41, 55, 0.85);
+    background: rgba(31, 41, 55, 0.88);
     color: #fff;
     font-size: 8px;
     font-weight: 700;
@@ -671,11 +812,11 @@ function goBack() {
 
 .type-tag {
     position: absolute;
-    top: 1px;
-    left: 1px;
+    top: 2px;
+    left: 2px;
     z-index: 1;
-    width: 12px;
-    height: 12px;
+    width: 13px;
+    height: 13px;
     border-radius: 3px;
     background: #8e488e;
     color: #fff;
@@ -686,10 +827,6 @@ function goBack() {
     justify-content: center;
     line-height: 1;
     pointer-events: none;
-}
-
-.pool-card.is-rune {
-    border-color: color-mix(in srgb, #8e488e 50%, #e5e7eb);
 }
 
 .thumb {
@@ -705,16 +842,16 @@ function goBack() {
     display: flex;
     align-items: center;
     gap: 2px;
-    padding: 1px 2px;
-    background: color-mix(in srgb, var(--q) 10%, #fff);
+    padding: 2px 3px;
+    background: #f8fafc;
     pointer-events: none;
 }
 
 .cost {
     flex-shrink: 0;
-    min-width: 12px;
-    height: 12px;
-    border-radius: 2px;
+    min-width: 13px;
+    height: 13px;
+    border-radius: 3px;
     background: var(--q);
     color: #fff;
     font-size: 8px;
@@ -735,34 +872,31 @@ function goBack() {
 
 .board-panel {
     flex-shrink: 0;
-    margin-top: 4px;
-    background: #fff;
-    border: 1px solid #e8ebf0;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    padding: 0 12px 14px;
 }
 
 .field-row {
     display: flex;
     align-items: stretch;
-    gap: 10px;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.zone-label {
+    margin-bottom: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+    text-align: center;
 }
 
 .rune-col {
     flex: 0 0 auto;
-    width: 52px;
+    width: 56px;
     display: flex;
     flex-direction: column;
     gap: 6px;
-}
-
-.rune-title {
-    font-size: 11px;
-    font-weight: 700;
-    color: #6b7280;
-    text-align: center;
-    line-height: 1.2;
 }
 
 .rune-slot {
@@ -770,21 +904,25 @@ function goBack() {
     width: 100%;
     border: 1.5px dashed #c4b5fd;
     border-radius: 8px;
-    background: #f5f3ff;
+    background:
+        linear-gradient(160deg, #faf5ff 0%, #f3e8ff 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    transition: border-color 0.12s ease, background 0.12s ease;
+    transition: border-color 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
 
     &.over {
         border-color: #8e488e;
-        background: color-mix(in srgb, #8e488e 12%, #fff);
+        border-style: solid;
+        background: #f3e8ff;
+        box-shadow: 0 0 0 2px rgba(142, 72, 142, 0.2);
     }
 
     &.reject.over {
         border-color: #f87171;
-        background: color-mix(in srgb, #f87171 12%, #fff);
+        background: #fef2f2;
+        box-shadow: 0 0 0 2px rgba(248, 113, 113, 0.2);
     }
 
     &.has-card {
@@ -846,39 +984,45 @@ function goBack() {
     min-width: 0;
 }
 
-.board-title {
-    margin-bottom: 8px;
-    font-size: 12px;
-    font-weight: 700;
-    color: #6b7280;
+.board-wrap .zone-label {
+    text-align: left;
 }
 
 .board {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 6px;
-    max-width: 360px;
+    gap: 7px;
+    max-width: 380px;
+    padding: 8px;
+    border-radius: 10px;
+    background:
+        linear-gradient(180deg, rgba(74, 124, 155, 0.06), rgba(74, 124, 155, 0.12)),
+        #f1f5f9;
+    border: 1px solid #dbe3ea;
 }
 
 .cell {
     aspect-ratio: 1;
-    border: 2px dashed #d1d5db;
-    border-radius: 10px;
-    background: #f8fafc;
+    border: 1.5px dashed #cbd5e1;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.72);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    transition: border-color 0.12s ease, background 0.12s ease;
+    transition: border-color 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
 
     &.over {
-        border-color: #4f9bc4;
-        background: color-mix(in srgb, #4f9bc4 12%, #fff);
+        border-color: var(--accent);
+        border-style: solid;
+        background: #e8f2f7;
+        box-shadow: 0 0 0 2px rgba(74, 124, 155, 0.2);
     }
 
     &.reject.over {
         border-color: #f87171;
-        background: color-mix(in srgb, #f87171 12%, #fff);
+        background: #fef2f2;
+        box-shadow: 0 0 0 2px rgba(248, 113, 113, 0.2);
     }
 
     &.has-card {
@@ -890,9 +1034,9 @@ function goBack() {
 }
 
 .cell-placeholder {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
-    color: #d1d5db;
+    color: #cbd5e1;
     pointer-events: none;
 }
 
@@ -904,7 +1048,7 @@ function goBack() {
     flex-direction: column;
     cursor: grab;
     border: 2px solid var(--q);
-    border-radius: 8px;
+    border-radius: 7px;
     overflow: hidden;
     touch-action: none;
     user-select: none;
@@ -943,8 +1087,9 @@ function goBack() {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    background: color-mix(in srgb, var(--q) 14%, #fff);
-    color: #1f2937;
+    background: #f8fafc;
+    color: var(--ink);
+    border-top: 1px solid #eef2f7;
     pointer-events: none;
 }
 
@@ -954,14 +1099,14 @@ function goBack() {
     top: 0;
     left: 0;
     z-index: 1000;
-    width: 72px;
+    width: 76px;
     pointer-events: none;
     border: 2px solid var(--q);
     border-radius: 8px;
     overflow: hidden;
     background: #fff;
-    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25);
-    opacity: 0.95;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.28);
+    opacity: 0.96;
 
     &.q-white {
         --q: #9ca3af;
@@ -988,32 +1133,40 @@ function goBack() {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    background: color-mix(in srgb, var(--q) 14%, #fff);
+    background: #f8fafc;
 }
 
 @media (min-width: 768px) {
     .page {
-        padding: 16px 20px;
+        padding: 16px 20px 28px;
         max-width: 960px;
         margin: 0 auto;
+        gap: 12px;
     }
 
     .title {
-        font-size: 1.05rem;
+        font-size: 1.1rem;
     }
 
     .pool {
-        grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
-        max-height: min(32vh, 260px);
+        grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+        max-height: min(32vh, 280px);
+        gap: 6px;
     }
 
     .rune-col {
-        width: 64px;
+        width: 68px;
+        gap: 8px;
     }
 
     .board {
         gap: 10px;
-        max-width: 420px;
+        max-width: 440px;
+        padding: 12px;
+    }
+
+    .board-panel {
+        padding: 0 16px 16px;
     }
 }
 </style>
