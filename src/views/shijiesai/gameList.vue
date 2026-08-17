@@ -33,7 +33,8 @@ import router from "@/router";
 import MyTabel from "@/components/table.vue";
 
 const gameType = sessionStorage.getItem("gameType");
-const isAdmin = !!sessionStorage.getItem("isAdmin");
+import { isSuperAdmin } from "@/utils/admin";
+const isAdmin = isSuperAdmin();
 const tableLoading = ref(false);
 const currentPage = ref(1);
 const pageSize = ref(200);

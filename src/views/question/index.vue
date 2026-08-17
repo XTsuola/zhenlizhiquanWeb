@@ -64,7 +64,8 @@ import { noteDelete } from "@/api/note";
 import { answerAdd, getAnswerList, questionDetail, type AnswerAddType } from "@/api/question";
 import router from "@/router";
 
-const isAdmin = sessionStorage.getItem("isAdmin") === "admin";
+import { isSuperAdmin } from "@/utils/admin";
+const isAdmin = isSuperAdmin();
 const nowId = ref("");
 const visible = ref(false);
 const visible2 = ref(false);

@@ -61,7 +61,8 @@ import { formatDate } from "@/utils/func";
 import { getNoteList, noteAdd, noteDelete, type NoteAddType } from "@/api/note";
 import router from "@/router";
 
-const isAdmin = sessionStorage.getItem("isAdmin") === "admin";
+import { isSuperAdmin } from "@/utils/admin";
+const isAdmin = isSuperAdmin();
 const pageSize = 4;
 const nowId = ref("");
 const visible = ref(false);

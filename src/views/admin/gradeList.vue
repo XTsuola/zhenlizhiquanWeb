@@ -144,7 +144,8 @@ import MyTabel from "@/components/table.vue";
 
 const Detail = defineAsyncComponent(() => import("../model/detailCard.vue"));
 const IMG_PREFIX = import.meta.env.VITE_APP_BASE_URL + "cardImg";
-const isAdmin = !!sessionStorage.getItem("isAdmin");
+import { isAdmin as checkAdmin } from "@/utils/admin";
+const isAdmin = checkAdmin();
 
 const gradeList = [
     { label: "SSS真神", value: 6, color: "#000000" },

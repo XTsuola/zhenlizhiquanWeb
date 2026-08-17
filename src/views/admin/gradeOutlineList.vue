@@ -39,6 +39,10 @@
                     @click="toggleTag">
                     {{ viewMode === "tag" ? "关闭" : "标签" }}
                 </a-button>
+                <a-button :type="viewMode === 'sort' ? 'default' : 'primary'" ghost :disabled="tableLoading"
+                    @click="toggleSort">
+                    {{ viewMode === "sort" ? "关闭" : "排序" }}
+                </a-button>
                 <a-button @click="goBack">返回</a-button>
             </div>
         </div>
@@ -48,7 +52,7 @@
         </div>
         <a-modal v-model:open="visible" destroyOnClose title="详细信息" :maskClosable="false"
             :width="isNarrow ? '92%' : 520" centered>
-            <Detail v-if="visible" :detailData="detailData" :hideGrade="true" />
+            <Detail v-if="visible" :detailData="detailData" />
             <template #footer>
                 <a-button @click="visible = false">关闭</a-button>
             </template>
@@ -57,11 +61,12 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive, computed, onMounted, onBeforeUnmount } from "vue";
+import { ref, reactive, computed, onMounted, onBeforeUnmount, defineAsyncComponent } from "vue";
 import { cardZhenyinList, costList, cardQualityList, tabList, allValuesInArray } from "@/utils/func";
 import router from "@/router";
 import MyTabel from "@/components/table.vue";
-import Detail from "@/views/model/detailCard.vue";
+
+const Detail = defineAsyncComponent(() => import("../model/detailCard.vue"));
 const IMG_PREFIX = import.meta.env.VITE_APP_BASE_URL + "cardImg";
 const cardTypeList = [
     { label: "全部", value: "" },
@@ -81,22 +86,7 @@ const actionColumn = {
 const baseColumns = [
     { title: "头像", dataIndex: "headImg2", key: "headImg2", width: 64 },
     { title: "名称", dataIndex: "name", key: "name", ellipsis: true, minWidth: 96 },
-    {
-        title: "攻",
-        dataIndex: "att",
-        key: "att",
-        width: 56,
-        align: "center",
-        sorter: (a: any, b: any) => (a.att ?? 0) - (b.att ?? 0)
-    },
-    {
-        title: "血",
-        dataIndex: "life",
-        key: "life",
-        width: 56,
-        align: "center",
-        sorter: (a: any, b: any) => (a.life ?? 0) - (b.life ?? 0)
-    },
+    { title: "评级", dataIndex: "grade", key: "grade", width: 88, align: "center" },
     actionColumn
 ];
 const tagColumns = [
@@ -104,9 +94,38 @@ const tagColumns = [
     { title: "标签", dataIndex: "tag", key: "tag", ellipsis: true, minWidth: 120 },
     actionColumn
 ];
+const sortColumns = [
+    { title: "头像", dataIndex: "headImg2", key: "headImg2", width: 52 },
+    { title: "名称", dataIndex: "name", key: "name", ellipsis: true, width: 72 },
+    {
+        title: "攻",
+        dataIndex: "att",
+        key: "att",
+        width: 56,
+        align: "center",
+        sorter: (a: any, b: any) => a.att - b.att
+    },
+    {
+        title: "血",
+        dataIndex: "life",
+        key: "life",
+        width: 56,
+        align: "center",
+        sorter: (a: any, b: any) => a.life - b.life
+    },
+    {
+        title: "评级",
+        dataIndex: "grade",
+        key: "grade",
+        width: 72,
+        align: "center",
+        sorter: (a: any, b: any) => JSON.parse(a.grade)[0] - JSON.parse(b.grade)[0]
+    },
+    actionColumn
+];
 const tableLoading = ref(false);
 const isNarrow = ref(window.innerWidth < 576);
-const viewMode = ref<"default" | "tag">("default");
+const viewMode = ref<"default" | "tag" | "sort">("default");
 const originalData = ref<any[]>([]);
 const data = ref<any[]>([]);
 const visible = ref(false);
@@ -136,7 +155,11 @@ const detailData = reactive({
     grade: "",
     data: [] as any[]
 });
-const columns = computed(() => (viewMode.value === "tag" ? tagColumns : baseColumns));
+const columns = computed(() => {
+    if (viewMode.value === "tag") return tagColumns;
+    if (viewMode.value === "sort") return sortColumns;
+    return baseColumns;
+});
 
 function onResize() {
     isNarrow.value = window.innerWidth < 576;
@@ -196,7 +219,7 @@ function showModal(_: number, record: any) {
         cost: record.cost,
         type: record.type,
         img: record.img,
-        grade: "",
+        grade: record.grade,
         data: record.data
     });
     visible.value = true;
@@ -204,6 +227,10 @@ function showModal(_: number, record: any) {
 
 function toggleTag() {
     viewMode.value = viewMode.value === "tag" ? "default" : "tag";
+}
+
+function toggleSort() {
+    viewMode.value = viewMode.value === "sort" ? "default" : "sort";
 }
 
 async function getOriginalData() {

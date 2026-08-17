@@ -1,6 +1,6 @@
 <template>
     <div class="page">
-        <div v-if="!isAdminFlag" class="login-card">
+        <div v-if="!adminRole" class="login-card">
             <h1 class="title">激活管理员</h1>
             <a-input-password v-model:value="password" class="field" placeholder="请输入管理员密码" @pressEnter="ok" />
             <div class="actions">
@@ -10,11 +10,17 @@
         </div>
         <template v-else>
             <div class="toolbar">
-                <h1 class="title">管理后台</h1>
-                <a-button type="primary" @click="goHome">返回首页</a-button>
+                <div class="toolbar-text">
+                    <h1 class="title">管理后台</h1>
+                    <p class="subtitle">{{ roleLabel }}</p>
+                </div>
+                <div class="toolbar-actions">
+                    <a-button @click="logout">退出</a-button>
+                    <a-button type="primary" @click="goHome">返回首页</a-button>
+                </div>
             </div>
             <div class="menu-grid">
-                <button v-for="item in menuList" :key="item.path" type="button" class="menu-item"
+                <button v-for="item in visibleMenu" :key="`${adminRole}-${item.path}`" type="button" class="menu-item"
                     :style="{ '--menu': item.color }" @click="goAdmin(item.path)">
                     {{ item.name }}
                 </button>
@@ -24,34 +30,67 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { message } from "ant-design-vue";
 import router from "@/router";
+import {
+    setAdminRole,
+    clearAdminRole,
+    getAdminRole,
+    type AdminRole
+} from "@/utils/admin";
 
 const password = ref("");
-const isAdminFlag = ref(false);
-const menuList = [
-    { name: "查询图表", path: "/msgDetail", color: "#b04a45" },
-    { name: "查询卡组", path: "/cardsAdmin", color: "#c47a2c" },
-    { name: "卡牌评级", path: "/cardGrade", color: "#4f9bc4" },
-    { name: "查询密码", path: "/passwordAdmin", color: "#3a8f5c" },
-    { name: "查询消息", path: "/logList", color: "#3d6fa8" },
-    { name: "问题管理", path: "/questionAdmin", color: "#7a5a9a" },
-    { name: "答案管理", path: "/answerAdmin", color: "#5a6b8a" }
+const adminRole = ref<AdminRole | null>(null);
+
+const allMenuList = [
+    { name: "查询图表", path: "/msgDetail", color: "#b04a45", roles: ["super", "normal"] },
+    { name: "查询卡组", path: "/cardsAdmin", color: "#c47a2c", roles: ["super"] },
+    { name: "卡牌评级", path: "/cardGrade", color: "#4f9bc4", roles: ["super"] },
+    { name: "查询密码", path: "/passwordAdmin", color: "#3a8f5c", roles: ["super"] },
+    { name: "查询消息", path: "/logList", color: "#3d6fa8", roles: ["super"] },
+    { name: "问题管理", path: "/questionAdmin", color: "#7a5a9a", roles: ["super"] },
+    { name: "答案管理", path: "/answerAdmin", color: "#5a6b8a", roles: ["super"] },
+    { name: "查询评级", path: "/gradeOutline", color: "#8b6b4a", roles: ["super", "normal"] },
 ];
 
+const visibleMenu = computed(() => {
+    const role = adminRole.value;
+    if (!role) return [];
+    return allMenuList.filter((item) => item.roles.includes(role));
+});
+
+const roleLabel = computed(() =>
+    adminRole.value === "super" ? "超级管理员" : "普通管理员（图表 / 查询评级）"
+);
+
 function verifyAdmin() {
-    isAdminFlag.value = sessionStorage.getItem("isAdmin") === "admin";
+    adminRole.value = getAdminRole();
 }
 
 function ok() {
     if (password.value === "suola666") {
-        sessionStorage.setItem("isAdmin", "admin");
-        message.success("激活成功！");
+        setAdminRole("super");
+        message.success("已激活超级管理员");
+        password.value = "";
         verifyAdmin();
-    } else {
-        message.error("密码错误！");
+        return;
     }
+    if (password.value === "suola18") {
+        setAdminRole("normal");
+        message.success("已激活普通管理员");
+        password.value = "";
+        verifyAdmin();
+        return;
+    }
+    message.error("密码错误！");
+}
+
+function logout() {
+    clearAdminRole();
+    password.value = "";
+    verifyAdmin();
+    message.success("已退出管理员");
 }
 
 function goAdmin(path: string) {
@@ -106,11 +145,28 @@ onMounted(() => {
     box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
 }
 
+.toolbar-text {
+    min-width: 0;
+}
+
+.toolbar-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
 .title {
     margin: 0;
     font-size: 1.05rem;
     font-weight: 700;
     color: #1f2937;
+}
+
+.subtitle {
+    margin: 4px 0 0;
+    font-size: 12px;
+    color: #94a3b8;
 }
 
 .field {

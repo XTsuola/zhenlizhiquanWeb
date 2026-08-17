@@ -70,7 +70,7 @@
                     </a-tag>
                 </div>
             </div>
-            <div class="row" :class="{ 'row--last': showLine <= 1 }">
+            <div v-if="!shouldHideGrade" class="row" :class="{ 'row--last': showLine <= 1 }">
                 <div class="label">卡牌评级</div>
                 <div class="value value--actions">
                     <div v-if="getGradeName(prop.detailData.grade) == 'SSS真神'" class="tagBg">
@@ -80,6 +80,14 @@
                         {{ getGradeName(prop.detailData.grade) }}
                     </a-tag>
                     <a-button v-if="showLine > 0" size="small" @click="showisHero">
+                        {{ showLine > 1 ? "关闭" : "打开" }}提升曲线
+                    </a-button>
+                </div>
+            </div>
+            <div v-else-if="showLine > 0" class="row" :class="{ 'row--last': showLine <= 1 }">
+                <div class="label">成长</div>
+                <div class="value value--actions">
+                    <a-button size="small" @click="showisHero">
                         {{ showLine > 1 ? "关闭" : "打开" }}提升曲线
                     </a-button>
                 </div>
@@ -96,14 +104,27 @@
 
 <script lang="ts" setup>
 import { ref, computed, onMounted, onBeforeUnmount, nextTick } from "vue";
+import { useRoute } from "vue-router";
 import { init } from "echarts";
 import { zhenyinList } from "@/utils/func";
 import { skinData } from "@/data/skinData/skinData";
 
-const prop = defineProps<{
-    detailData: any;
-    level?: number;
-}>();
+const route = useRoute();
+const prop = defineProps({
+    detailData: { type: Object, required: true },
+    level: { type: Number, default: undefined },
+    /** 为 true 时隐藏卡牌评级（提升曲线仍可用） */
+    hideGrade: { type: Boolean, default: false }
+});
+/** 卡牌大纲页默认隐藏评级；也可用 hideGrade 强制隐藏 */
+const shouldHideGrade = computed(
+    () =>
+        prop.hideGrade === true ||
+        route.name === "cardOutline" ||
+        route.path === "/cardOutline" ||
+        route.name === "zhongzu" ||
+        route.path === "/zhongzu"
+);
 const nowlevel = ref(23);
 if (prop.level) nowlevel.value = prop.level - 1;
 const maxLevel = computed(() => Math.max((prop.detailData?.data?.length || 1) - 1, 0));

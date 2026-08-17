@@ -54,7 +54,8 @@ import { message } from "ant-design-vue";
 import { getRewardList, memberUpdate, type MemberAddType } from "@/api/member";
 import router from "@/router";
 
-const isAdmin = !!sessionStorage.getItem("isAdmin");
+import { isSuperAdmin } from "@/utils/admin";
+const isAdmin = isSuperAdmin();
 const visible = ref(false);
 const tableLoading = ref(false);
 const saving = ref(false);

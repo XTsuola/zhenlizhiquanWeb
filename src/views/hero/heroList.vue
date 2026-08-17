@@ -155,7 +155,8 @@ interface HeroInfoType {
 
 const Detail = defineAsyncComponent(() => import("../model/detailHero.vue"));
 const IMG_PREFIX = import.meta.env.VITE_APP_BASE_URL + "heroImg";
-const isAdmin = !!sessionStorage.getItem("isAdmin");
+import { isSuperAdmin } from "@/utils/admin";
+const isAdmin = isSuperAdmin();
 const qualityNames = ["", "白色", "蓝色", "紫色", "橙色"];
 
 function normalizeAgent(agent: unknown): string[] {

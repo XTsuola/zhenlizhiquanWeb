@@ -28,7 +28,7 @@
         </div>
         <a-modal v-model:open="visible" destroyOnClose title="详细信息" :maskClosable="false"
             :width="isNarrow ? '92%' : 520" centered>
-            <Detail v-if="visible" :detailData="detailData" :level="formState.level" />
+            <Detail v-if="visible" :detailData="detailData" :level="formState.level" :hideGrade="true" />
             <template #footer>
                 <a-button @click="cancel">关闭</a-button>
             </template>
@@ -123,7 +123,7 @@ function showModal(_: number, record: any) {
     detailData.cost = record.cost;
     detailData.type = record.type;
     detailData.img = record.img;
-    detailData.grade = record.grade;
+    detailData.grade = "";
     detailData.data = record.data;
     visible.value = true;
 }

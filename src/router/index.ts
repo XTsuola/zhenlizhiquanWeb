@@ -1,5 +1,20 @@
 import { createRouter, createWebHashHistory, type RouteRecordRaw } from "vue-router";
+import { message } from "ant-design-vue";
 import Home from "@/views/home.vue";
+import { isAdmin, isSuperAdmin } from "@/utils/admin";
+
+/** 需管理员登录的后台路径；未标 superOnly 的普通管理员也可进（图表 / 卡牌评级） */
+const ADMIN_GUARD_PATHS = [
+  { path: "/msgDetail", superOnly: false },
+  { path: "/cardGrade", superOnly: false },
+  { path: "/gradeOutline", superOnly: false },
+  { path: "/cardsAdmin", superOnly: true },
+  { path: "/passwordAdmin", superOnly: true },
+  { path: "/logList", superOnly: true },
+  { path: "/questionAdmin", superOnly: true },
+  { path: "/answerAdmin", superOnly: true },
+  { path: "/skinDiyAdmin", superOnly: true }
+] as const;
 
 const routeList: RouteRecordRaw[] = [
   {
@@ -20,6 +35,11 @@ const routeList: RouteRecordRaw[] = [
     path: "/cardGrade",
     name: "cardGrade",
     component: () => import("@/views/admin/gradeList.vue")
+  },
+  {
+    path: "/gradeOutline",
+    name: "gradeOutline",
+    component: () => import("@/views/admin/gradeOutlineList.vue")
   },
   {
     path: "/cardOutline",
@@ -271,6 +291,23 @@ const routeList: RouteRecordRaw[] = [
 const router = createRouter({
   history: createWebHashHistory(),
   routes: routeList
+});
+
+router.beforeEach((to) => {
+  const guard = ADMIN_GUARD_PATHS.find(
+    (item) => to.path === item.path || to.path.startsWith(`${item.path}/`)
+  );
+  if (!guard) return true;
+
+  if (!isAdmin()) {
+    message.warning("请先激活管理员");
+    return { path: "/admin" };
+  }
+  if (guard.superOnly && !isSuperAdmin()) {
+    message.warning("当前账号无权限访问该页面");
+    return { path: "/admin" };
+  }
+  return true;
 });
 
 export default router;

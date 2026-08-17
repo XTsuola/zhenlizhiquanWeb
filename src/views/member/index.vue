@@ -77,7 +77,8 @@ import { message } from "ant-design-vue";
 import { getMemberList, memberAdd, memberDelete, memberUpdate, type MemberAddType } from "@/api/member";
 import router from "@/router";
 
-const isAdmin = !!sessionStorage.getItem("isAdmin");
+import { isSuperAdmin } from "@/utils/admin";
+const isAdmin = isSuperAdmin();
 const visible = ref(false);
 const title = ref("新增成员");
 const tableLoading = ref(false);
