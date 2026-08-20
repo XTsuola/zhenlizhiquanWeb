@@ -82,6 +82,11 @@ const routeList: RouteRecordRaw[] = [
     component: () => import("@/views/hero/heroList.vue")
   },
   {
+    path: "/heroWR",
+    name: "heroWR",
+    component: () => import("@/views/hero/heroWR.vue")
+  },
+  {
     path: "/chongwuSkillList",
     name: "chongwuSkillList",
     component: () => import("@/views/chongwu/skillList.vue")
@@ -278,8 +283,7 @@ const routeList: RouteRecordRaw[] = [
   },
   {
     path: "/reward",
-    name: "reward",
-    component: () => import("@/views/member/reward.vue")
+    redirect: { path: "/member", query: { tab: "reward" } }
   },
   {
     path: "/position",

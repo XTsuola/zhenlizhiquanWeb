@@ -26,13 +26,8 @@
         <DetailPlayer>
             <template #left_name>
                 <a-input v-if="!disabledFlag" v-model:value="aInfo.name" placeholder="请输入昵称" />
-                <a-select
-                    v-else
-                    v-model:value="aInfo.name"
-                    class="full"
-                    placeholder="请选择昵称"
-                    @change="(value: number) => getXuanshou(value, 1)"
-                >
+                <a-select v-else v-model:value="aInfo.name" class="full" placeholder="请选择昵称"
+                    @change="(value: number) => getXuanshou(value, 1)">
                     <a-select-option v-for="item in xuanshouSelect" :key="item.value" :value="item.value">
                         {{ item.label }}
                     </a-select-option>
@@ -46,13 +41,8 @@
                 </a-select>
             </template>
             <template #left_hero>
-                <a-select
-                    v-model:value="aInfo.hero"
-                    class="full"
-                    mode="multiple"
-                    placeholder="请选择英雄顺位"
-                    :disabled="disabledFlag"
-                >
+                <a-select v-model:value="aInfo.hero" class="full" mode="multiple" placeholder="请选择英雄顺位"
+                    :disabled="disabledFlag">
                     <a-select-option v-for="item in heroSelect" :key="item.value" :value="item.value">
                         {{ item.label }}
                     </a-select-option>
@@ -60,13 +50,8 @@
             </template>
             <template #right_name>
                 <a-input v-if="!disabledFlag" v-model:value="bInfo.name" placeholder="请输入昵称" />
-                <a-select
-                    v-else
-                    v-model:value="bInfo.name"
-                    class="full"
-                    placeholder="请选择昵称"
-                    @change="(value: number) => getXuanshou(value, 2)"
-                >
+                <a-select v-else v-model:value="bInfo.name" class="full" placeholder="请选择昵称"
+                    @change="(value: number) => getXuanshou(value, 2)">
                     <a-select-option v-for="item in xuanshouSelect" :key="item.value" :value="item.value">
                         {{ item.label }}
                     </a-select-option>
@@ -80,13 +65,8 @@
                 </a-select>
             </template>
             <template #right_hero>
-                <a-select
-                    v-model:value="bInfo.hero"
-                    class="full"
-                    mode="multiple"
-                    placeholder="请选择英雄顺位"
-                    :disabled="disabledFlag"
-                >
+                <a-select v-model:value="bInfo.hero" class="full" mode="multiple" placeholder="请选择英雄顺位"
+                    :disabled="disabledFlag">
                     <a-select-option v-for="item in heroSelect" :key="item.value" :value="item.value">
                         {{ item.label }}
                     </a-select-option>
@@ -158,7 +138,7 @@ const matchRows = computed(() =>
 function buildZhanquOptions(gtStr: string | null) {
     const gt = parseInt(gtStr || "7", 10);
     let list = [...zhanquList];
-    if (gtStr === "10") list = list.slice(0, 8);
+    if (gtStr === "10" || gtStr === "12") list = list.slice(0, 8);
     if (gt > 7) {
         return list.map((e) => ({
             label: e.label,

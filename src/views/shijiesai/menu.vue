@@ -7,14 +7,8 @@
             </div>
         </div>
         <div class="tools">
-            <button
-                v-for="(item, index) in seasons"
-                :key="item.num"
-                type="button"
-                class="tool"
-                :style="{ '--tool': TOOL_COLORS[index % TOOL_COLORS.length] }"
-                @click="goList(item.num)"
-            >
+            <button v-for="(item, index) in seasons" :key="item.num" type="button" class="tool"
+                :style="{ '--tool': TOOL_COLORS[index % TOOL_COLORS.length] }" @click="goList(item.num)">
                 {{ item.label }}
             </button>
         </div>
@@ -24,8 +18,8 @@
 <script lang="ts" setup>
 import router from "@/router";
 
-const TOOL_COLORS = ["#4f9bc4", "#45a8b0", "#5a8fc0", "#6a9bb0"];
-const seasons = [7, 8, 9, 10, 11].map((num) => ({
+const TOOL_COLORS = ["#4f9bc4", "#45a8b0", "#6a9bb0"];
+const seasons = [7, 8, 9, 10, 11, 12].map((num) => ({
     num,
     label: `第${num}届世界赛`
 }));
@@ -86,12 +80,10 @@ function goList(num: number) {
     min-height: 52px;
     padding: 12px;
     background:
-        linear-gradient(
-            145deg,
+        linear-gradient(145deg,
             rgba(255, 255, 255, 0.22) 0%,
             rgba(255, 255, 255, 0.06) 42%,
-            rgba(0, 0, 0, 0.12) 100%
-        ),
+            rgba(0, 0, 0, 0.12) 100%),
         var(--tool);
     color: #fff;
     font-size: 0.95rem;

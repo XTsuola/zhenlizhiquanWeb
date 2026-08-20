@@ -3,7 +3,7 @@
         <div class="toolbar">
             <h1 class="title">第{{ gameType }}届世界赛</h1>
             <div class="actions">
-                <a-button type="primary" :disabled="gameType != '11'" @click="add">新增对局</a-button>
+                <a-button type="primary" :disabled="gameType != '12'" @click="add">新增对局</a-button>
                 <a-button type="primary" danger @click="analysis">数据分析</a-button>
                 <a-button @click="goBack">返回</a-button>
             </div>
@@ -158,7 +158,18 @@ onMounted(() => {
     width: 100%;
     max-width: 100%;
     min-width: 0;
-    overflow-x: auto;
+    overflow: hidden;
+
+    :deep(.myTable) {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    :deep(.ant-table-content),
+    :deep(.ant-table-body) {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+    }
 }
 
 @media (min-width: 768px) {

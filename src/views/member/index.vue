@@ -1,9 +1,12 @@
 <template>
     <div class="page">
         <div class="toolbar">
-            <h1 class="title">群贡献榜</h1>
+            <div class="toolbar-left">
+                <h1 class="title">群贡献 / 奖励</h1>
+                <a-segmented v-model:value="listMode" size="small" :options="modeOptions" @change="onModeChange" />
+            </div>
             <div class="actions">
-                <a-button v-if="isAdmin" type="primary" @click="showModal(1)">新增</a-button>
+                <a-button v-if="isAdmin && listMode === 'donation'" type="primary" @click="showModal(1)">新增</a-button>
                 <a-button @click="goBack">返回</a-button>
             </div>
         </div>
@@ -15,19 +18,30 @@
                         <div class="info">
                             <div class="line1">
                                 <span class="name">{{ item.name }}</span>
-                                <div v-if="item.score >= 95" class="tagBg tagBg--score">
-                                    {{ getScoreGradeName(item.score, item.title) }}
-                                </div>
-                                <a-tag v-else class="score-tag" :color="getScoreGradeColor(item.score)">
-                                    {{ getScoreGradeName(item.score, item.title) }}
-                                </a-tag>
+                                <template v-if="listMode === 'donation'">
+                                    <div v-if="item.score >= 95" class="tagBg tagBg--score">
+                                        {{ getScoreGradeName(item.score, item.title) }}
+                                    </div>
+                                    <a-tag v-else class="score-tag" :color="getScoreGradeColor(item.score)">
+                                        {{ getScoreGradeName(item.score, item.title) }}
+                                    </a-tag>
+                                </template>
                             </div>
                             <div class="line2">
-                                <span class="donation">贡献 {{ formatNum(item.donation) }}</span>
+                                <div class="meta">
+                                    <template v-if="listMode === 'donation'">
+                                        <span class="donation">贡献 {{ formatNum(item.donation) }}</span>
+                                        <span class="reward-inline">奖励 {{ formatNum(item.reward) }}</span>
+                                    </template>
+                                    <template v-else>
+                                        <span class="reward-label">奖励</span>
+                                        <span class="reward-value">{{ formatNum(item.reward) }}</span>
+                                    </template>
+                                </div>
                                 <div v-if="isAdmin" class="ops">
                                     <a-button type="link" size="small" @click="showModal(2, item)">修改</a-button>
-                                    <a-popconfirm title="确定删除该数据吗?" ok-text="确定" cancel-text="取消"
-                                        @confirm="deleteOk(item.id)">
+                                    <a-popconfirm v-if="listMode === 'donation'" title="确定删除该数据吗?" ok-text="确定"
+                                        cancel-text="取消" @confirm="deleteOk(item.id)">
                                         <a-button type="link" danger size="small">删除</a-button>
                                     </a-popconfirm>
                                 </div>
@@ -43,24 +57,33 @@
             <a-form ref="formRef" :model="addData" :label-col="{ span: isNarrow ? 24 : 5 }"
                 :wrapper-col="{ span: isNarrow ? 24 : 19 }" :layout="isNarrow ? 'vertical' : 'horizontal'"
                 autocomplete="off">
-                <a-form-item label="名称" name="name" :rules="[{ required: true, message: '请输入名称!' }]">
+                <a-form-item v-if="listMode === 'donation' && !addData.id" label="名称" name="name"
+                    :rules="[{ required: true, message: '请输入名称!' }]">
                     <a-input v-model:value="addData.name" placeholder="请输入名称" />
                 </a-form-item>
-                <a-form-item label="贡献" name="donation" :rules="[{ required: true, message: '请输入贡献!' }]">
-                    <a-input-number v-model:value="addData.donation" class="full-field" :min="0" :precision="2" />
+                <a-form-item v-else label="名称">
+                    <a-input :value="addData.name" disabled />
                 </a-form-item>
-                <a-form-item label="奖励" name="donation" :rules="[{ required: true, message: '请输入奖励!' }]">
+                <template v-if="listMode === 'donation'">
+                    <a-form-item label="贡献" name="donation" :rules="[{ required: true, message: '请输入贡献!' }]">
+                        <a-input-number v-model:value="addData.donation" class="full-field" :min="0" :precision="2" />
+                    </a-form-item>
+                    <a-form-item label="奖励" name="reward" :rules="[{ required: true, message: '请输入奖励!' }]">
+                        <a-input-number v-model:value="addData.reward" class="full-field" :min="0" :precision="2" />
+                    </a-form-item>
+                    <a-form-item label="评分" name="score" :rules="[{ required: true, message: '请输入评分!' }]">
+                        <a-input-number v-model:value="addData.score" class="full-field" :min="0" :max="100"
+                            :precision="1" />
+                    </a-form-item>
+                    <a-form-item label="称号">
+                        <a-input v-model:value="addData.title" placeholder="选填" />
+                    </a-form-item>
+                    <a-form-item label="备注">
+                        <a-input v-model:value="addData.remark" placeholder="选填" />
+                    </a-form-item>
+                </template>
+                <a-form-item v-else label="奖励" name="reward" :rules="[{ required: true, message: '请输入奖励!' }]">
                     <a-input-number v-model:value="addData.reward" class="full-field" :min="0" :precision="2" />
-                </a-form-item>
-                <a-form-item label="评分" name="score" :rules="[{ required: true, message: '请输入评分!' }]">
-                    <a-input-number v-model:value="addData.score" class="full-field" :min="0" :max="100"
-                        :precision="1" />
-                </a-form-item>
-                <a-form-item label="称号">
-                    <a-input v-model:value="addData.title" placeholder="选填" />
-                </a-form-item>
-                <a-form-item label="备注">
-                    <a-input v-model:value="addData.remark" placeholder="选填" />
                 </a-form-item>
             </a-form>
             <template #footer>
@@ -73,11 +96,22 @@
 
 <script lang="ts" setup>
 import { ref, reactive, onMounted, onBeforeUnmount } from "vue";
+import { useRoute, useRouter } from "vue-router";
 import { message } from "ant-design-vue";
-import { getMemberList, memberAdd, memberDelete, memberUpdate, type MemberAddType } from "@/api/member";
-import router from "@/router";
-
+import {
+    getMemberList,
+    getRewardList,
+    memberAdd,
+    memberDelete,
+    memberUpdate,
+    type MemberAddType
+} from "@/api/member";
 import { isSuperAdmin } from "@/utils/admin";
+
+type ListMode = "donation" | "reward";
+
+const route = useRoute();
+const router = useRouter();
 const isAdmin = isSuperAdmin();
 const visible = ref(false);
 const title = ref("新增成员");
@@ -86,6 +120,11 @@ const saving = ref(false);
 const tableData = ref<any[]>([]);
 const formRef = ref<any>();
 const isNarrow = ref(window.innerWidth < 576);
+const listMode = ref<ListMode>(route.query.tab === "reward" ? "reward" : "donation");
+const modeOptions = [
+    { label: "贡献榜", value: "donation" },
+    { label: "奖励榜", value: "reward" }
+];
 
 const scoreGradeList = [
     { label: "神话", value: 95, level: "SSS", color: "#000000" },
@@ -127,10 +166,16 @@ function onResize() {
     isNarrow.value = window.innerWidth < 576;
 }
 
+function onModeChange() {
+    const tab = listMode.value === "reward" ? "reward" : undefined;
+    router.replace({ path: "/member", query: tab ? { tab } : {} });
+    getList();
+}
+
 async function getList() {
     tableLoading.value = true;
     try {
-        const res = await getMemberList();
+        const res = listMode.value === "reward" ? await getRewardList() : await getMemberList();
         if (res.data.code == 200) {
             tableData.value = res.data.data;
         }
@@ -147,16 +192,16 @@ function showModal(type: number, record?: any) {
         addData.donation = addData.reward = 0;
         addData.score = null;
         addData.name = addData.title = addData.remark = "";
-    } else if (type == 2) {
-        title.value = "修改成员";
-        addData.id = record.id;
-        addData.donation = record.donation;
-        addData.reward = record.reward;
-        addData.name = record.name;
-        addData.score = record.score;
-        addData.title = record.title;
-        addData.remark = record.remark;
+        return;
     }
+    title.value = listMode.value === "reward" ? "修改奖励" : "修改成员";
+    addData.id = record.id;
+    addData.donation = record.donation ?? 0;
+    addData.reward = record.reward ?? 0;
+    addData.name = record.name;
+    addData.score = record.score ?? null;
+    addData.title = record.title ?? "";
+    addData.remark = record.remark ?? "";
 }
 
 async function save() {
@@ -230,6 +275,13 @@ onBeforeUnmount(() => {
     box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
 }
 
+.toolbar-left {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
 .title {
     margin: 0;
     font-size: 1rem;
@@ -242,6 +294,7 @@ onBeforeUnmount(() => {
     flex-wrap: wrap;
     gap: 8px;
     flex-shrink: 0;
+    align-self: flex-start;
 }
 
 .list {
@@ -366,9 +419,36 @@ onBeforeUnmount(() => {
     min-height: 24px;
 }
 
+.meta {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+    min-width: 0;
+}
+
 .donation {
     color: #64748b;
     font-size: 13px;
+}
+
+.reward-inline {
+    color: #b8860b;
+    font-size: 13px;
+    font-variant-numeric: tabular-nums;
+}
+
+.reward-label {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.reward-value {
+    color: #b8860b;
+    font-size: 14px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.2;
 }
 
 .ops {
@@ -394,8 +474,18 @@ onBeforeUnmount(() => {
         margin: 0 auto;
     }
 
+    .toolbar-left {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+
     .title {
         font-size: 1.1rem;
+    }
+
+    .actions {
+        align-self: center;
     }
 
     .row {
