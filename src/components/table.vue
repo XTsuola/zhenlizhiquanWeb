@@ -65,8 +65,8 @@
                     </template>
                     <template v-else-if="column.key === 'change'">
                         <div class="stat-cell">
-                            <div>人次：{{ formatDiff(record.now[0], record.last[0]) }}</div>
-                            <div>胜率：{{ formatDiff(record.now[1], record.last[1], true) }}%</div>
+                            <div>{{ formatDiff(record.now[0], record.last[0]) }}</div>
+                            <div>{{ formatDiff(record.now[1], record.last[1], true) }}%</div>
                         </div>
                     </template>
                     <template v-else-if="column.key === 'action'">
@@ -227,7 +227,28 @@ function rowClassName(record: any) {
         if (record.quality === 1) return "white";
         return "";
     }
+    const rate = getShenglvRate(record);
+    if (rate != null) {
+        if (rate < 0.4) return "purple";
+        if (rate >= 0.6) return "red";
+    }
     return "";
+}
+
+function getShenglvRate(record: any): number | null {
+    if (record._shenglv != null && record._shenglv !== "") {
+        const n = Number(record._shenglv);
+        return Number.isNaN(n) ? null : n;
+    }
+    if (record.shenglv == null || record.shenglv === "") return null;
+    if (typeof record.shenglv === "number") return record.shenglv;
+    const s = String(record.shenglv);
+    if (s.endsWith("%")) {
+        const n = parseFloat(s);
+        return Number.isNaN(n) ? null : n / 100;
+    }
+    const n = Number(s);
+    return Number.isNaN(n) ? null : n;
 }
 
 function parseGrade(grade: string) {

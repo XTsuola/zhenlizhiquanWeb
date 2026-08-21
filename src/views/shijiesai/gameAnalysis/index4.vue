@@ -27,8 +27,7 @@ const columns = ref<any>([
         title: "名称",
         dataIndex: "name",
         key: "name",
-        width: 100,
-        ellipsis: true
+        width: 160
     },
     {
         title: "胜场",
@@ -49,10 +48,7 @@ const columns = ref<any>([
         dataIndex: "shenglv",
         key: "shenglv",
         width: 88,
-        align: "center",
-        customRender: (opt: any) => {
-            return opt.value == 0 ? "0.00%" : (opt.value * 100).toFixed(2) + "%";
-        }
+        align: "center"
     }
 ]);
 
@@ -98,10 +94,12 @@ async function getList() {
                 }
             }
             for (let i = 0; i < heroData.length; i++) {
-                heroData[i].shenglv = (heroData[i].sheng + heroData[i].bai) != 0 ? (heroData[i].sheng / (heroData[i].sheng + heroData[i].bai)).toFixed(4) : 0;
+                const games = heroData[i].sheng + heroData[i].bai;
+                const rate = games ? heroData[i].sheng / games : 0;
+                heroData[i]._shenglv = rate;
+                heroData[i].shenglv = `${(rate * 100).toFixed(2)}%`;
             }
-            heroData.sort((a: any, b: any) => (b.sheng + b.bai) - (a.sheng + a.bai));
-            heroData.sort((a: any, b: any) => b.shenglv - a.shenglv);
+            heroData.sort((a: any, b: any) => b._shenglv - a._shenglv || b.sheng + b.bai - (a.sheng + a.bai));
             data.value = heroData;
         }
     } finally {

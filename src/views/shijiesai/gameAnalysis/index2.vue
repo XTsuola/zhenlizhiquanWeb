@@ -7,7 +7,8 @@
             </div>
         </div>
         <div class="table-wrap">
-            <MyTabel :columnsData="columns" :rowClass="true" :dataSource="data" :loading="tableLoading" />
+            <MyTabel :columnsData="columns" :rowClass="true" :dataSource="data" :loading="tableLoading"
+                :scrollX="false" />
         </div>
     </div>
 </template>
@@ -27,31 +28,33 @@ const columns = ref<any>([
         title: "名称",
         dataIndex: "name",
         key: "name",
-        width: 100,
-        ellipsis: true
+        width: 140
     },
     {
         title: "这届",
         dataIndex: "now",
         key: "now",
-        width: 120,
-        ellipsis: true
+        width: 140
     },
     {
         title: "上届",
         dataIndex: "last",
         key: "last",
-        width: 120,
-        ellipsis: true
+        width: 140
     },
     {
         title: "变化",
         dataIndex: "change",
         key: "change",
-        width: 72,
+        width: 100,
         align: "center"
     }
 ]);
+
+function shortHeroName(name: string) {
+    const i = name.indexOf("·");
+    return i >= 0 ? name.slice(i + 1) : name;
+}
 
 async function getList0() {
     let type = parseInt(gameType as string);
@@ -168,7 +171,7 @@ async function getList() {
                 const obj = data0.find((e: any) => e.id == data1[i].id);
                 data2.push({
                     id: data1[i].id,
-                    name: data1[i].name,
+                    name: shortHeroName(data1[i].name),
                     now: [data1[i].count, data1[i].sheng + data1[i].bai != 0 ? (data1[i].sheng / (data1[i].sheng + data1[i].bai)) * 100 : 0],
                     last: [obj.count, obj.sheng + obj.bai != 0 ? (obj.sheng / (obj.sheng + obj.bai)) * 100 : 0],
                     sort: data1[i].count - obj.count

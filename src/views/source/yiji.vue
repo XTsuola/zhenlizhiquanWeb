@@ -25,7 +25,6 @@ import img60 from "@/assets/yiji/60.jpg";
 import img50 from "@/assets/yiji/50.jpg";
 import jiangli from "@/assets/yiji/jiangli.jpg";
 import other from "@/assets/yiji/1.jpg";
-import guai from "@/assets/yiji/guai.jpg";
 
 const sections = [
     { title: "86-90层遗迹", src: img90 },
@@ -35,7 +34,6 @@ const sections = [
     { title: "40-50层遗迹", src: img50 },
     { title: "遗迹暴击奖励图", src: jiangli },
     { title: "其他遗迹", src: other },
-    { title: "守塔怪物", src: guai }
 ];
 
 function openImage(src: string) {

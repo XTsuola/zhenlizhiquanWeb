@@ -38,7 +38,7 @@
                         <li v-for="name in nowPlayerList2" :key="'p4-' + name">
                             <span>{{ name }}</span>
                             <span
-                                v-if="nowPlayerList3.length != 0 && nowPlayerList3.findIndex((e: any) => e == name) == -1"
+                                v-if="nowPlayerList3.length == 0 || nowPlayerList3.findIndex((e: any) => e == name) == -1"
                                 class="eliminated">（淘汰）</span>
                         </li>
                     </ul>
@@ -71,8 +71,8 @@ const data = ref<any>([]);
 const columns = ref<any>([
     {
         title: "名称",
-        dataIndex: "name",
-        key: "name",
+        dataIndex: "shortName",
+        key: "shortName",
         width: 100,
         ellipsis: true
     },
@@ -80,22 +80,26 @@ const columns = ref<any>([
         title: "8强",
         dataIndex: "count",
         key: "count",
-        width: 64,
-        align: "center"
+        width: 72,
+        align: "center",
+        sorter: (a: any, b: any) => a.count - b.count,
+        defaultSortOrder: "descend"
     },
     {
         title: "4强",
         dataIndex: "count2",
         key: "count2",
-        width: 64,
-        align: "center"
+        width: 72,
+        align: "center",
+        sorter: (a: any, b: any) => a.count2 - b.count2
     },
     {
         title: "2强",
         dataIndex: "count3",
         key: "count3",
-        width: 64,
-        align: "center"
+        width: 72,
+        align: "center",
+        sorter: (a: any, b: any) => a.count3 - b.count3
     },
     {
         title: "操作",
@@ -111,6 +115,11 @@ const nowPlayerList = ref<string[]>([]);
 const nowPlayerList2 = ref<string[]>([]);
 const nowPlayerList3 = ref<string[]>([]);
 const activeKey = ref("1");
+
+function shortHeroName(name: string) {
+    const i = name.indexOf("·");
+    return i >= 0 ? name.slice(i + 1) : name;
+}
 
 async function getList() {
     tableLoading.value = true;
@@ -139,6 +148,7 @@ async function getList() {
                 return {
                     id: e.id,
                     name: e.name,
+                    shortName: shortHeroName(e.name),
                     zhu: e.zhu,
                     fu: e.fu,
                     count: 0,
