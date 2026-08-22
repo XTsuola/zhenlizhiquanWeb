@@ -29,10 +29,11 @@ const menuItems = computed(() => {
         { label: "8强比赛", index: 8 },
         { label: "4强至决赛", index: 4 },
         { label: "选手与击杀", index: 1 },
-        { label: "种族选取表", index: 3 }
+        { label: "种族选取表", index: 3 },
+        { label: "种族胜率表", index: 5 }
     ];
     if (parseInt(gameType as string) - 7 > 0) {
-        items.push({ label: "上届对比", index: 2 });
+        items.push({ label: "上届种族对比", index: 2 });
     }
     return items;
 });
@@ -50,6 +51,8 @@ function goIndex(index: number) {
         router.push("/gameAnalysis/heroList");
     } else if (index == 3) {
         router.push("/gameAnalysis/zhongzuList");
+    } else if (index == 5) {
+        router.push("/gameAnalysis/zhongzuWR");
     }
 }
 
