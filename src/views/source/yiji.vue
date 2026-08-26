@@ -18,6 +18,7 @@
 
 <script lang="ts" setup>
 import router from "@/router";
+import img100 from "@/assets/yiji/100.jpg";
 import img90 from "@/assets/yiji/90.jpg";
 import img85 from "@/assets/yiji/85.jpg";
 import img80 from "@/assets/yiji/80.jpg";
@@ -27,6 +28,7 @@ import jiangli from "@/assets/yiji/jiangli.jpg";
 import other from "@/assets/yiji/1.jpg";
 
 const sections = [
+    { title: "91-100层遗迹", src: img100 },
     { title: "86-90层遗迹", src: img90 },
     { title: "80-85层遗迹", src: img85 },
     { title: "60-80层遗迹", src: img80 },

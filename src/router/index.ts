@@ -182,6 +182,11 @@ const routeList: RouteRecordRaw[] = [
     component: () => import("@/views/shijiesai/gameAnalysis/index5.vue")
   },
   {
+    path: "/gameAnalysis/playerDetail",
+    name: "gameAnalysisPlayerDetail",
+    component: () => import("@/views/shijiesai/gameAnalysis/index7.vue")
+  },
+  {
     path: "/cardsList",
     name: "cardsList",
     component: () => import("@/views/cardFrequency/list.vue")
