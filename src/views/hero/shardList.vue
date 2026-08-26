@@ -7,79 +7,64 @@
             </div>
             <a-button @click="goBack">返回</a-button>
         </div>
-
-        <a-spin :spinning="tableLoading">
-            <div v-if="data.length" class="list">
-                <div
-                    v-for="item in sortedData"
-                    :key="item.id"
-                    class="card"
-                    :class="`card--q${item.quality}`"
-                >
-                    <div class="card-head">
-                        <span class="quality-dot" aria-hidden="true" />
-                        <div class="card-meta">
-                            <span class="quality-name">{{ qualityLabel(item.quality) }}</span>
-                            <span class="quality-hint">{{ qualityHint(item.quality) }}</span>
-                        </div>
-                    </div>
-                    <div class="card-actions">
-                        <button type="button" class="action-btn" @click="showModal(1, item)">
-                            <span class="action-label">升级</span>
-                            <span class="action-desc">等级碎片</span>
-                        </button>
-                        <button type="button" class="action-btn" @click="showModal(2, item)">
-                            <span class="action-label">升星</span>
-                            <span class="action-desc">星级碎片</span>
-                        </button>
+        <div v-if="data.length" class="list">
+            <div v-for="item in sortedData" :key="item.id" class="card" :class="`card--q${item.quality}`">
+                <div class="card-head">
+                    <span class="quality-dot" aria-hidden="true" />
+                    <div class="card-meta">
+                        <span class="quality-name">{{ qualityLabel(item.quality) }}</span>
+                        <span class="quality-hint">{{ qualityHint(item.quality) }}</span>
                     </div>
                 </div>
+                <div class="card-actions">
+                    <button type="button" class="action-btn" @click="showModal(1, item)">
+                        <span class="action-label">升级</span>
+                        <span class="action-desc">等级碎片</span>
+                    </button>
+                    <button type="button" class="action-btn" @click="showModal(2, item)">
+                        <span class="action-label">升星</span>
+                        <span class="action-desc">星级碎片</span>
+                    </button>
+                </div>
             </div>
-            <a-empty v-else description="暂无数据" />
-        </a-spin>
-
-        <a-modal
-            v-model:open="visible"
-            destroyOnClose
-            :title="levelTitle"
-            :maskClosable="false"
-            :width="isNarrow ? '94%' : 640"
-            centered
-        >
+        </div>
+        <a-empty v-else description="暂无数据" />
+        <a-modal v-model:open="visible" destroyOnClose :title="levelTitle" :maskClosable="false" :width="modalWidth"
+            centered wrap-class-name="shard-modal" :body-style="{ padding: '12px 14px' }">
             <div class="modal-panel" :class="`modal-panel--q${detailData.quality}`">
-                <a-table
-                    :columns="columns2"
-                    :data-source="detailData.levelData"
-                    :pagination="false"
-                    size="middle"
-                    bordered
-                    :scroll="{ x: 'max-content' }"
-                    row-key="name"
-                />
+                <div class="modal-summary">
+                    <span>碎片累计 <b>{{ levelSummary.suipianTotal }}</b></span>
+                    <span>钻石累计 <b>{{ levelSummary.zuanshiTotal }}</b></span>
+                </div>
+                <a-table :columns="levelColumns" :data-source="detailData.levelData" :pagination="false" size="small"
+                    bordered table-layout="fixed" row-key="name" class="shard-table">
+                    <template #bodyCell="{ column, text }">
+                        <template v-if="column.key === 'name'">{{ formatStageName(text) }}</template>
+                        <template v-else><span class="num">{{ text }}</span></template>
+                    </template>
+                </a-table>
             </div>
             <template #footer>
                 <a-button @click="visible = false">关闭</a-button>
             </template>
         </a-modal>
 
-        <a-modal
-            v-model:open="visible2"
-            destroyOnClose
-            :title="starTitle"
-            :maskClosable="false"
-            :width="isNarrow ? '94%' : 560"
-            centered
-        >
+        <a-modal v-model:open="visible2" destroyOnClose :title="starTitle" :maskClosable="false" :width="modalWidth"
+            centered wrap-class-name="shard-modal" :body-style="{ padding: '12px 14px' }">
             <div class="modal-panel" :class="`modal-panel--q${detailData.quality}`">
-                <a-table
-                    :columns="columns3"
-                    :data-source="detailData.skillData"
-                    :pagination="false"
-                    size="middle"
-                    bordered
-                    :scroll="{ x: 'max-content' }"
-                    row-key="name"
-                />
+                <div class="modal-summary">
+                    <span>碎片累计 <b>{{ starSummary.suipianTotal }}</b></span>
+                    <span>红石 <b>{{ starSummary.hongTotal }}</b></span>
+                    <span>黑石 <b>{{ starSummary.heiTotal }}</b></span>
+                    <span>白石 <b>{{ starSummary.baiTotal }}</b></span>
+                </div>
+                <a-table :columns="starColumns" :data-source="detailData.skillData" :pagination="false" size="small"
+                    bordered table-layout="fixed" row-key="name" class="shard-table">
+                    <template #bodyCell="{ column, text }">
+                        <template v-if="column.key === 'name'">{{ formatStageName(text) }}</template>
+                        <template v-else><span class="num">{{ text }}</span></template>
+                    </template>
+                </a-table>
             </div>
             <template #footer>
                 <a-button @click="visible2 = false">关闭</a-button>
@@ -90,21 +75,32 @@
 
 <script lang="ts" setup>
 import { ref, reactive, computed, onMounted, onBeforeUnmount } from "vue";
-import { getShardList } from "@/api/hero";
+import { shardData, type ShardQualityData, type ShardStarItem } from "@/data/shardData";
 import router from "@/router";
+
+interface ShardListItem extends ShardQualityData {
+    id: number;
+}
 
 interface DetailDataType {
     id: number;
     quality: number;
-    levelData: any[];
-    skillData: any[];
+    levelData: (ShardQualityData["levelData"][number] & { suipianTotal: number; zuanshiTotal: number })[];
+    skillData: {
+        name: string;
+        suipian: number;
+        suipianTotal: number;
+        hong: number;
+        hei: number;
+        bai: number;
+    }[];
 }
 
 const qualityList = ["白色英雄", "蓝色英雄", "紫色英雄", "橙色英雄"];
 const qualityHints = ["基础品质", "精良品质", "史诗品质", "传说品质"];
-
-const tableLoading = ref(false);
-const data = ref<any[]>([]);
+const data = ref<ShardListItem[]>(
+    shardData.map((item) => ({ ...item, id: item.quality }))
+);
 const visible = ref(false);
 const visible2 = ref(false);
 const levelTitle = ref("橙色英雄升级碎片需求");
@@ -117,15 +113,42 @@ const detailData = reactive<DetailDataType>({
     skillData: []
 });
 
-const columns2 = [
-    { title: "描述", dataIndex: "name", key: "name", ellipsis: true },
-    { title: "碎片", dataIndex: "suipian", key: "suipian", width: 88, align: "right" },
-    { title: "钻石", dataIndex: "zuanshi", key: "zuanshi", width: 88, align: "right" }
-];
-const columns3 = [
-    { title: "描述", dataIndex: "name", key: "name", ellipsis: true },
-    { title: "碎片", dataIndex: "suipian", key: "suipian", width: 88, align: "right" }
-];
+const modalWidth = computed(() => (isNarrow.value ? "calc(100vw - 16px)" : 680));
+
+const levelColumns = computed(() => [
+    { title: "阶段", dataIndex: "name", key: "name", ellipsis: true },
+    { title: "碎片", dataIndex: "suipian", key: "suipian", width: 52, align: "right" as const },
+    { title: "累计", dataIndex: "suipianTotal", key: "suipianTotal", width: 60, align: "right" as const },
+    { title: "钻石", dataIndex: "zuanshi", key: "zuanshi", width: 52, align: "right" as const },
+    { title: "累计", dataIndex: "zuanshiTotal", key: "zuanshiTotal", width: 64, align: "right" as const }
+]);
+
+const starColumns = computed(() => [
+    { title: "阶段", dataIndex: "name", key: "name", ellipsis: true },
+    { title: "碎片", dataIndex: "suipian", key: "suipian", width: 48, align: "right" as const },
+    { title: "累计", dataIndex: "suipianTotal", key: "suipianTotal", width: 52, align: "right" as const },
+    { title: "红石", dataIndex: "hong", key: "hong", width: 48, align: "right" as const },
+    { title: "黑石", dataIndex: "hei", key: "hei", width: 48, align: "right" as const },
+    { title: "白石", dataIndex: "bai", key: "bai", width: 48, align: "right" as const }
+]);
+
+const levelSummary = computed(() => {
+    const rows = detailData.levelData;
+    if (!rows.length) return { suipianTotal: 0, zuanshiTotal: 0 };
+    const last = rows[rows.length - 1];
+    return { suipianTotal: last.suipianTotal, zuanshiTotal: last.zuanshiTotal };
+});
+
+const starSummary = computed(() => {
+    const rows = detailData.skillData;
+    if (!rows.length) return { suipianTotal: 0, hongTotal: 0, heiTotal: 0, baiTotal: 0 };
+    return {
+        suipianTotal: rows[rows.length - 1].suipianTotal,
+        hongTotal: rows.reduce((sum, row) => sum + row.hong, 0),
+        heiTotal: rows.reduce((sum, row) => sum + row.hei, 0),
+        baiTotal: rows.reduce((sum, row) => sum + row.bai, 0)
+    };
+});
 
 const sortedData = computed(() =>
     [...data.value].sort((a, b) => (b.quality || 0) - (a.quality || 0))
@@ -139,29 +162,54 @@ function qualityHint(quality: number) {
     return qualityHints[quality - 1] || "";
 }
 
+function formatStageName(name: string) {
+    return name
+        .replace(/(\d+)->(\d+)级数据/, "$1→$2")
+        .replace(/(\d+)->(\d+)星数据/, "$1→$2星")
+        .replace(/(.+)->(.+)数据/, "$1→$2");
+}
+
 function onResize() {
     isNarrow.value = window.innerWidth < 576;
 }
 
-function showModal(type: number, record: any) {
+function withLevelCumulative(items: ShardQualityData["levelData"]) {
+    let suipianTotal = 0;
+    let zuanshiTotal = 0;
+    return items.map((item) => {
+        suipianTotal += item.suipian;
+        zuanshiTotal += item.zuanshi;
+        return { ...item, suipianTotal, zuanshiTotal };
+    });
+}
+
+function buildSkillData(skinData: ShardStarItem[]) {
+    let suipianTotal = 0;
+    return skinData.map((item, index) => {
+        suipianTotal += item.suipian;
+        const [hong, hei, bai] = item.shitou;
+        return {
+            name: `${index}->${index + 1}星数据`,
+            suipian: item.suipian,
+            suipianTotal,
+            hong,
+            hei,
+            bai
+        };
+    });
+}
+
+function showModal(type: number, record: ShardListItem) {
     detailData.id = record.id;
     detailData.quality = record.quality;
     if (type == 1) {
         visible.value = true;
         levelTitle.value = (qualityList[record.quality - 1] || "英雄") + "升级碎片需求";
-        try {
-            detailData.levelData = JSON.parse(record.levelData);
-        } catch {
-            detailData.levelData = [];
-        }
+        detailData.levelData = withLevelCumulative(record.levelData);
     } else {
         visible2.value = true;
         starTitle.value = (qualityList[record.quality - 1] || "英雄") + "升星碎片需求";
-        try {
-            detailData.skillData = JSON.parse(record.skillData);
-        } catch {
-            detailData.skillData = [];
-        }
+        detailData.skillData = buildSkillData(record.skinData);
     }
 }
 
@@ -169,22 +217,9 @@ function goBack() {
     router.go(-1);
 }
 
-async function getOriginalData() {
-    tableLoading.value = true;
-    try {
-        const res = await getShardList();
-        if (res.status == 200) {
-            data.value = res.data.data;
-        }
-    } finally {
-        tableLoading.value = false;
-    }
-}
-
 onMounted(() => {
     onResize();
     window.addEventListener("resize", onResize);
-    getOriginalData();
 });
 
 onBeforeUnmount(() => {
@@ -346,6 +381,7 @@ onBeforeUnmount(() => {
 
 .modal-panel {
     --accent: #94a3b8;
+    --soft: #f8fafc;
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid #e8ebf0;
@@ -353,24 +389,76 @@ onBeforeUnmount(() => {
 
     &--q1 {
         --accent: #9ca3af;
+        --soft: #f3f4f6;
     }
 
     &--q2 {
         --accent: #4f9bc4;
+        --soft: #eaf6fb;
     }
 
     &--q3 {
         --accent: #8e488e;
+        --soft: #f8edf8;
     }
 
     &--q4 {
         --accent: #e67e22;
+        --soft: #fff3e8;
+    }
+}
+
+.modal-summary {
+    display: flex;
+    gap: 10px 16px;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 8px 10px;
+    background: var(--soft);
+    border-bottom: 1px solid #e8ebf0;
+    font-size: 12px;
+    color: #64748b;
+
+    b {
+        margin-left: 4px;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--accent);
+        font-variant-numeric: tabular-nums;
+    }
+}
+
+.shard-table {
+    :deep(.ant-table) {
+        font-size: 12px;
     }
 
     :deep(.ant-table-thead > tr > th) {
-        background: #f8fafc;
+        background: var(--soft);
+        color: #374151;
         font-weight: 600;
+        padding: 6px 4px !important;
+        font-size: 11px;
+        line-height: 1.3;
+        white-space: nowrap;
     }
+
+    :deep(.ant-table-tbody > tr > td) {
+        padding: 5px 4px !important;
+        line-height: 1.35;
+    }
+
+    :deep(.ant-table-cell) {
+        overflow: hidden;
+    }
+
+    .num {
+        font-variant-numeric: tabular-nums;
+    }
+}
+
+:global(.shard-modal .ant-modal) {
+    max-width: calc(100vw - 16px);
 }
 
 /* color-mix 不支持时的兜底：圆点不加外环也没关系 */
