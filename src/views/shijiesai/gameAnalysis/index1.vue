@@ -196,10 +196,10 @@ async function getList() {
             for (let i = 0; i < data8.length; i++) {
                 for (let j = 0; j < data8[i].shengfuList.length; j++) {
                     let n = data8[i].shengfuList[j];
-                    if (n != 0) {
-                        let aHeroIndex = heroData.findIndex((e: any) => e.id == data8[i].AInfo.hero[j % 4]);
-                        let bHeroIndex = heroData.findIndex((e: any) => e.id == data8[i].BInfo.hero[j % 4]);
-                        if (n == 1) {
+                    if (n != 1 && n != 2) continue;
+                    let aHeroIndex = heroData.findIndex((e: any) => e.id == data8[i].AInfo.hero[j % 4]);
+                    let bHeroIndex = heroData.findIndex((e: any) => e.id == data8[i].BInfo.hero[j % 4]);
+                    if (n == 1) {
                             heroData[aHeroIndex].sheng++;
                             heroData[bHeroIndex].bai++;
                             if (heroData[aHeroIndex].cnt.get(heroData[bHeroIndex].id)) {
@@ -223,8 +223,7 @@ async function getList() {
                             if (heroData[aHeroIndex].cnt2.get(heroData[bHeroIndex].id)) {
                                 heroData[aHeroIndex].cnt2.set(heroData[bHeroIndex].id, heroData[aHeroIndex].cnt2.get(heroData[bHeroIndex].id) + 1);
                             } else {
-                                heroData[aHeroIndex].cnt2.set(heroData[bHeroIndex].id, 1);
-                            }
+                            heroData[aHeroIndex].cnt2.set(heroData[bHeroIndex].id, 1);
                         }
                     }
                 }

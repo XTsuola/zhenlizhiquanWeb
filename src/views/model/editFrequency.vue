@@ -9,31 +9,72 @@
         <div v-if="prop.nowStep == 0" class="step-panel">
             <div class="panel-head">
                 <span class="panel-title">可选卡牌</span>
-                <span class="count-chip" :class="{ full: cardsData.length >= 30 }">
-                    {{ cardsData.length }} / 30
-                </span>
+                <div class="count-group">
+                    <span class="count-chip count-chip--zhu">主 {{ zhuPickCount }}</span>
+                    <span class="count-chip count-chip--fu">副 {{ fuPickCount }} / 15</span>
+                    <span v-for="item in QUALITY_META" :key="'q-' + item.quality"
+                        class="count-chip" :class="`count-chip--q${item.quality}`">
+                        {{ item.short }} {{ qualityPickCount(item.quality) }}
+                    </span>
+                    <span class="count-chip" :class="{ full: cardsData.length >= 30 }">
+                        {{ cardsData.length }} / 30
+                    </span>
+                </div>
             </div>
-            <div class="cardList">
-                <button v-for="value in imgData" :key="value.id + value.name" type="button" class="card"
-                    :class="[getBgColor(value.quality), { picked: pickCount(value.name) > 0 }]"
-                    @click="addCardOk(value)">
-                    <a-tooltip :title="value.name">
-                        <img :src="value.img" :alt="value.name" />
-                    </a-tooltip>
-                    <span v-if="pickCount(value.name)" class="pick-badge">{{ pickCount(value.name) }}</span>
-                </button>
-            </div>
+
+            <section v-for="section in raceSections" :key="section.key" class="race-section">
+                <div class="race-head">
+                    <span class="race-dot" :class="`race-dot--${section.key}`" />
+                    <span class="race-title">{{ section.title }}</span>
+                    <span class="race-count">{{ section.count }}</span>
+                </div>
+                <div v-for="group in groupByQuality(section.cards)" :key="section.key + '-q-' + group.quality"
+                    class="quality-block">
+                    <div class="quality-head">
+                        <span class="quality-label" :class="`quality-label--q${group.quality}`">{{ group.label }}</span>
+                        <span class="quality-count">{{ qualityPickCountIn(section.cards, group.quality) }} 张</span>
+                    </div>
+                    <div class="cardList">
+                        <button v-for="value in group.list" :key="section.key + '-' + value.id + value.name"
+                            type="button" class="card" :class="[
+                                `card--${section.key}`,
+                                getBgColor(value.quality),
+                                { picked: pickCount(value.name) > 0 }
+                            ]" @click="addCardOk(value)">
+                            <span class="race-badge" :class="`race-badge--${section.key}`">{{ section.badge }}</span>
+                            <span class="quality-badge" :class="`quality-badge--q${value.quality}`">{{ group.short }}</span>
+                            <a-tooltip :title="value.name">
+                                <img :src="value.img" :alt="value.name" />
+                            </a-tooltip>
+                            <span v-if="pickCount(value.name)" class="pick-badge">{{ pickCount(value.name) }}</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
 
             <div class="panel-head panel-head--sub">
                 <span class="panel-title">已选卡组</span>
                 <span class="panel-tip">点击标签可移除</span>
             </div>
             <div v-if="!cardsData.length" class="empty-picked">尚未选择卡牌</div>
-            <div v-else class="tags">
-                <a-tag v-for="(tag, index) in cardsData" :key="index + tag" class="tag" :color="getColor(tag)" closable
-                    @close.prevent="handleClose(index)">
-                    {{ tag }}
-                </a-tag>
+            <div v-else class="picked-groups">
+                <div v-for="section in raceSections" :key="'picked-' + section.key" class="picked-group">
+                    <template v-if="pickedTags(section.key).length">
+                        <div class="picked-group-title">{{ section.title }}</div>
+                        <div v-for="group in groupPickedByQuality(pickedTags(section.key))"
+                            :key="'picked-' + section.key + '-q-' + group.quality" class="picked-quality">
+                            <span class="quality-label quality-label--sm"
+                                :class="`quality-label--q${group.quality}`">{{ group.label }}</span>
+                            <div class="tags">
+                                <a-tag v-for="tag in group.list" :key="section.key + '-' + tag.index + tag.name"
+                                    class="tag" :color="getColor(tag.name)" closable
+                                    @close.prevent="handleClose(tag.index)">
+                                    {{ tag.name }}
+                                </a-tag>
+                            </div>
+                        </div>
+                    </template>
+                </div>
             </div>
         </div>
         <!-- 步骤2：等级 -->
@@ -101,6 +142,23 @@ import { heroTable } from "@/data/heroData/index";
 import { formatDate } from "@/utils/func";
 import { frequencyAdd, FrequencyAddType, frequencyUpdate, frequencyUpdateTemp, FrequencyUpdateType } from "@/api/frequency";
 
+const RACE_NAMES: Record<number, string> = {
+    1: "帝国",
+    2: "隐秘",
+    3: "禅意",
+    4: "港口",
+    5: "炼狱",
+    6: "蛮石",
+    7: "冬神"
+};
+
+const QUALITY_META = [
+    { quality: 4, label: "橙卡", short: "橙" },
+    { quality: 3, label: "紫卡", short: "紫" },
+    { quality: 2, label: "蓝卡", short: "蓝" },
+    { quality: 1, label: "白卡", short: "白" }
+];
+
 const prop = defineProps<{
     cardsData: string[];
     cardsLevel?: number[] | any;
@@ -132,6 +190,86 @@ const pickCountMap = computed(() => {
     }
     return map;
 });
+
+const zhuRaceName = computed(() => RACE_NAMES[zhu.value] || "主种族");
+const fuRaceName = computed(() => RACE_NAMES[fu.value] || "副种族");
+
+const zhuImgData = computed(() =>
+    imgData.value.filter((item) => item.zhenyin === zhu.value)
+);
+
+const fuImgData = computed(() =>
+    imgData.value.filter((item) => item.zhenyin === fu.value)
+);
+
+function isZhuCard(name: string) {
+    const card = cardMenu.value.find((e: any) => e.name === name);
+    return card?.zhenyin === zhu.value;
+}
+
+const zhuPickCount = computed(() =>
+    cardsData.value.filter((name) => isZhuCard(name)).length
+);
+
+const fuPickCount = computed(() =>
+    cardsData.value.filter((name) => !isZhuCard(name)).length
+);
+
+const zhuPickedTags = computed(() =>
+    cardsData.value
+        .map((name, index) => ({ name, index }))
+        .filter((item) => isZhuCard(item.name))
+);
+
+const fuPickedTags = computed(() =>
+    cardsData.value
+        .map((name, index) => ({ name, index }))
+        .filter((item) => !isZhuCard(item.name))
+);
+
+const raceSections = computed(() => [
+    {
+        key: "zhu" as const,
+        title: `主种族 · ${zhuRaceName.value}`,
+        count: `${zhuPickCount.value} 张`,
+        cards: zhuImgData.value,
+        badge: "主"
+    },
+    {
+        key: "fu" as const,
+        title: `副种族 · ${fuRaceName.value}`,
+        count: `${fuPickCount.value} / 15`,
+        cards: fuImgData.value,
+        badge: "副"
+    }
+]);
+
+function pickedTags(key: "zhu" | "fu") {
+    return key === "zhu" ? zhuPickedTags.value : fuPickedTags.value;
+}
+
+function groupByQuality(cards: any[]) {
+    return QUALITY_META.map((meta) => ({
+        ...meta,
+        list: cards.filter((c) => c.quality === meta.quality)
+    })).filter((g) => g.list.length > 0);
+}
+
+function groupPickedByQuality(tags: { name: string; index: number }[]) {
+    return QUALITY_META.map((meta) => ({
+        ...meta,
+        list: tags.filter((t) => cardQuality(t.name) === meta.quality)
+    })).filter((g) => g.list.length > 0);
+}
+
+function qualityPickCount(quality: number) {
+    return cardsData.value.filter((name) => cardQuality(name) === quality).length;
+}
+
+function qualityPickCountIn(cards: any[], quality: number) {
+    const names = new Set(cards.map((c) => c.name));
+    return cardsData.value.filter((name) => names.has(name) && cardQuality(name) === quality).length;
+}
 
 function pickCount(name: string) {
     return pickCountMap.value.get(name) || 0;
@@ -168,6 +306,7 @@ async function getBaseData() {
             id: e.id,
             name: e.name,
             quality: e.quality,
+            zhenyin: e.zhenyin,
             img: import.meta.env.VITE_APP_BASE_URL + "cardImg" + e.img
         }))
         .sort((a: any, b: any) => b.quality - a.quality || a.name.localeCompare(b.name, "zh"));
@@ -425,13 +564,146 @@ defineExpose({
         background: color-mix(in srgb, #45a8b0 16%, #fff);
         color: #0f766e;
     }
+
+    &--zhu {
+        background: #ecfdf5;
+        color: #047857;
+    }
+
+    &--fu {
+        background: #eff6ff;
+        color: #1d4ed8;
+    }
+
+    &--q4 {
+        background: #ffedd5;
+        color: #c2410c;
+    }
+
+    &--q3 {
+        background: #fce7fc;
+        color: #7e22ce;
+    }
+
+    &--q2 {
+        background: #e0f2fe;
+        color: #0369a1;
+    }
+
+    &--q1 {
+        background: #f3f4f6;
+        color: #4b5563;
+    }
+}
+
+.count-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: flex-end;
+}
+
+.race-section {
+    margin-bottom: 12px;
+}
+
+.race-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.race-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+
+    &--zhu {
+        background: #10b981;
+    }
+
+    &--fu {
+        background: #3b82f6;
+    }
+}
+
+.race-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #374151;
+}
+
+.race-count {
+    margin-left: auto;
+    font-size: 11px;
+    color: #9ca3af;
+    font-variant-numeric: tabular-nums;
+}
+
+.quality-block {
+    margin-bottom: 8px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.quality-head {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+    padding-left: 16px;
+}
+
+.quality-label {
+    display: inline-flex;
+    align-items: center;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+
+    &--sm {
+        flex-shrink: 0;
+        font-size: 10px;
+        padding: 1px 5px;
+    }
+
+    &--q4 {
+        background: #ffedd5;
+        color: #c2410c;
+    }
+
+    &--q3 {
+        background: #fce7fc;
+        color: #7e22ce;
+    }
+
+    &--q2 {
+        background: #e0f2fe;
+        color: #0369a1;
+    }
+
+    &--q1 {
+        background: #f3f4f6;
+        color: #4b5563;
+    }
+}
+
+.quality-count {
+    font-size: 10px;
+    color: #9ca3af;
+    font-variant-numeric: tabular-nums;
 }
 
 .cardList {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
     gap: 6px;
-    max-height: min(36vh, 280px);
+    max-height: min(28vh, 220px);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     padding: 8px;
@@ -460,6 +732,14 @@ defineExpose({
 
     &.picked {
         box-shadow: 0 0 0 1px var(--q);
+    }
+
+    &--zhu {
+        border-color: color-mix(in srgb, #10b981 35%, color-mix(in srgb, var(--q) 45%, #e5e7eb));
+    }
+
+    &--fu {
+        border-color: color-mix(in srgb, #3b82f6 35%, color-mix(in srgb, var(--q) 45%, #e5e7eb));
     }
 
     &.bg_white {
@@ -510,6 +790,62 @@ defineExpose({
     line-height: 1;
 }
 
+.race-badge {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: 1;
+    min-width: 14px;
+    height: 14px;
+    padding: 0 3px;
+    border-radius: 4px;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 14px;
+    text-align: center;
+    color: #fff;
+
+    &--zhu {
+        background: rgba(16, 185, 129, 0.92);
+    }
+
+    &--fu {
+        background: rgba(59, 130, 246, 0.92);
+    }
+}
+
+.quality-badge {
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    z-index: 1;
+    min-width: 12px;
+    height: 12px;
+    padding: 0 2px;
+    border-radius: 3px;
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 12px;
+    text-align: center;
+    color: #fff;
+
+    &--q4 {
+        background: rgba(230, 126, 34, 0.92);
+    }
+
+    &--q3 {
+        background: rgba(142, 72, 142, 0.92);
+    }
+
+    &--q2 {
+        background: rgba(79, 155, 196, 0.92);
+    }
+
+    &--q1 {
+        background: rgba(107, 114, 128, 0.88);
+    }
+}
+
 .empty-picked {
     padding: 16px;
     text-align: center;
@@ -518,6 +854,35 @@ defineExpose({
     background: #fafbfc;
     border: 1px dashed var(--line);
     border-radius: 8px;
+}
+
+.picked-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.picked-group-title {
+    margin-bottom: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #6b7280;
+}
+
+.picked-quality {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 6px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .tags {
+        flex: 1;
+        min-width: 0;
+    }
 }
 
 .tags {

@@ -134,13 +134,13 @@ function getEdition(no: number) {
     return Math.floor(no / 10000);
 }
 
-/** 1/3 A胜，2/4 B胜，0 弃权不计 */
+/** 1 A胜，2 B胜，其他不计 */
 function isAWin(n: number) {
-    return n === 1 || n === 3;
+    return n === 1;
 }
 
 function isBWin(n: number) {
-    return n === 2 || n === 4;
+    return n === 2;
 }
 
 function formatRate(win: number, lose: number) {
@@ -225,7 +225,7 @@ const statsByHero = (() => {
         const list = match.shengfuList || [];
         for (let j = 0; j < list.length; j++) {
             const n = list[j];
-            if (n === 0) continue;
+            if (n !== 1 && n !== 2) continue;
             const slot = j % 4;
             const aId = aHeroes[slot];
             const bId = bHeroes[slot];
