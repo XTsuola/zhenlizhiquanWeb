@@ -52,6 +52,7 @@ const allMenuList = [
     { name: "问题管理", path: "/questionAdmin", color: "#7a5a9a", roles: ["super"] },
     { name: "答案管理", path: "/answerAdmin", color: "#5a6b8a", roles: ["super"] },
     { name: "查询评级", path: "/gradeOutline", color: "#8b6b4a", roles: ["super", "normal"] },
+    { name: "魔塔小游戏", path: "/game/mota", color: "#6b4a8b", roles: ["super", "normal"] },
 ];
 
 const visibleMenu = computed(() => {

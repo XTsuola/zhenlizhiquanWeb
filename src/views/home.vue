@@ -30,6 +30,7 @@
 </template>
 
 <script lang="ts" setup>
+import { ref } from "vue";
 import { logAdd } from '@/api/log';
 import router from '@/router';
 
@@ -175,7 +176,7 @@ const whereList: WhereItem[] = [{
     name: "贡献榜",
     url: "/member",
     bgColor: TOOL_COLORS[2],
-    log: "贡献榜查询"
+    log: "贡献榜"
 }, {
     name: "留言建议",
     url: "/note",
@@ -376,7 +377,7 @@ function createLog(name: string) {
     min-height: 0;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: minmax(0, 1fr);
     gap: 5px;
 }
 

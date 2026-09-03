@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory, type RouteRecordRaw } from "vue-rou
 import { message } from "ant-design-vue";
 import Home from "@/views/home.vue";
 import { isAdmin, isSuperAdmin } from "@/utils/admin";
+import { isMotaCleared } from "@/utils/mota";
 
 /** 需管理员登录的后台路径；未标 superOnly 的普通管理员也可进（图表 / 卡牌评级） */
 const ADMIN_GUARD_PATHS = [
@@ -237,6 +238,11 @@ const routeList: RouteRecordRaw[] = [
     component: () => import("@/views/admin/editAdmin.vue")
   },
   {
+    path: "/game/mota",
+    name: "motaGame",
+    component: () => import("@/views/game/mota/index.vue")
+  },
+  {
     path: "/qingshu",
     name: "qingshu",
     component: () => import("@/views/qingshu/login.vue")
@@ -313,7 +319,15 @@ router.beforeEach((to) => {
   );
   if (!guard) return true;
 
+  if (guard.path === "/cardGrade" && isMotaCleared()) {
+    return true;
+  }
+
   if (!isAdmin()) {
+    if (guard.path === "/cardGrade") {
+      message.warning("请先通关魔塔小游戏");
+      return { path: "/game/mota" };
+    }
     message.warning("请先激活管理员");
     return { path: "/admin" };
   }
