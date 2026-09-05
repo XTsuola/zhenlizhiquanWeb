@@ -1,28 +1,56 @@
 <template>
     <div class="page">
         <div class="toolbar">
-            <div class="toolbar-text">
-                <h1 class="title">英雄淘汰赛数据</h1>
-                <p class="subtitle">{{ modeHint }}</p>
+            <div class="toolbar-top">
+                <h1 class="title">英雄淘汰赛</h1>
+                <a-button size="small" @click="goBack">返回</a-button>
             </div>
+            <p class="subtitle">{{ modeHint }}</p>
             <div class="toolbar-actions">
                 <a-segmented v-model:value="viewMode" size="small" :options="modeOptions" />
                 <a-segmented v-model:value="displayMode" size="small" :options="displayOptions" />
-                <a-button v-if="displayMode === 'detail'" :type="showCharts ? 'primary' : 'default'"
+                <a-button v-if="displayMode === 'detail'" size="small" :type="showCharts ? 'primary' : 'default'"
                     @click="toggleCharts">
-                    {{ showCharts ? "收起曲线" : "胜率曲线" }}
+                    {{ showCharts ? "收起" : "曲线" }}
                 </a-button>
-                <a-button @click="goBack">返回</a-button>
             </div>
         </div>
-        <template v-if="displayMode === 'rate'">
-            <div class="filter-bar">
+        <div class="filter-bar">
+            <div class="filter-row">
                 <a-input v-model:value="filterName" allow-clear placeholder="英雄名称" class="filter-field"
-                    @pressEnter="searchRate" />
-                <a-button type="primary" @click="searchRate">查询</a-button>
-                <a-button @click="resetRate">清空</a-button>
-                <span class="filter-tip">※ 出场次数 &lt; 20 不参与胜率排序</span>
+                    @pressEnter="searchFilter" />
+                <a-button type="primary" size="small" @click="searchFilter">查询</a-button>
+                <a-button size="small" @click="resetFilter">清空</a-button>
             </div>
+            <div class="race-block">
+                <div class="race-head">
+                    <span class="race-tag race-tag--zhu">主种族</span>
+                    <button v-if="filterZhu" type="button" class="race-clear" @click="filterZhu = undefined">清除</button>
+                </div>
+                <div class="race-chips">
+                    <button v-for="race in raceChips" :key="'zhu-' + race.id" type="button" class="race-chip"
+                        :class="{ active: filterZhu === race.id }" :style="{ '--race': race.color }"
+                        @click="toggleZhu(race.id)">
+                        {{ race.name }}
+                    </button>
+                </div>
+            </div>
+            <div class="race-block">
+                <div class="race-head">
+                    <span class="race-tag race-tag--fu">副种族</span>
+                    <button v-if="filterFu" type="button" class="race-clear" @click="filterFu = undefined">清除</button>
+                </div>
+                <div class="race-chips">
+                    <button v-for="race in raceChips" :key="'fu-' + race.id" type="button" class="race-chip"
+                        :class="{ active: filterFu === race.id }" :style="{ '--race': race.color }"
+                        @click="toggleFu(race.id)">
+                        {{ race.name }}
+                    </button>
+                </div>
+            </div>
+            <span v-if="displayMode === 'rate'" class="filter-tip">※ 出场 &lt; 20 不参与胜率排序</span>
+        </div>
+        <template v-if="displayMode === 'rate'">
             <div class="table-wrap">
                 <MyTabel :columnsData="rateColumns" :dataSource="rateTableData" :rowClass="true"
                     :scroll-x="rateScrollX" />
@@ -92,6 +120,8 @@ const IMG_PREFIX = import.meta.env.VITE_APP_BASE_URL + "heroImg";
 const viewMode = ref<ViewMode>("top8");
 const displayMode = ref<DisplayMode>("detail");
 const filterName = ref("");
+const filterZhu = ref<number | undefined>(undefined);
+const filterFu = ref<number | undefined>(undefined);
 const rateKeyword = ref("");
 const isNarrow = ref(window.innerWidth < 768);
 const showCharts = ref(false);
@@ -104,6 +134,16 @@ const modeOptions = [
 const displayOptions = [
     { label: "详细", value: "detail" },
     { label: "仅胜率", value: "rate" }
+];
+/** 短名 + 首页种族色 */
+const raceChips = [
+    { id: 1, name: "帝国", color: "#e69500" },
+    { id: 2, name: "隐秘", color: "#8a2be2" },
+    { id: 3, name: "禅意", color: "#2e8b57" },
+    { id: 4, name: "海港", color: "#1a6fa5" },
+    { id: 5, name: "炼狱", color: "#c01b10" },
+    { id: 6, name: "蛮石", color: "#8b5a2b" },
+    { id: 7, name: "冬神", color: "#0290b5" }
 ];
 
 const modeHint = computed(() =>
@@ -265,6 +305,8 @@ const heroList = computed(() =>
         return {
             id: item.id,
             name: item.name,
+            zhu: item.zhu,
+            fu: item.fu,
             img: IMG_PREFIX + item.img,
             byEdition,
             total,
@@ -276,9 +318,18 @@ const heroList = computed(() =>
     })
 );
 
+function matchHeroFilter(item: { name: string; zhu: number; fu: number }) {
+    const kw = rateKeyword.value.trim();
+    if (kw && !item.name.includes(kw)) return false;
+    if (filterZhu.value && item.zhu !== filterZhu.value) return false;
+    if (filterFu.value && item.fu !== filterFu.value) return false;
+    return true;
+}
+
 const displayList = computed(() => {
     const isTop8 = viewMode.value === "top8";
     return heroList.value
+        .filter(matchHeroFilter)
         .map((item) => {
             const viewWin = isTop8 ? item.totalWin : item.totalWin4;
             const viewLose = isTop8 ? item.totalLose : item.totalLose4;
@@ -354,8 +405,8 @@ function rateSortValue(row: { total: number; rate: number }) {
 
 const rateTableData = computed(() => {
     const isTop8 = viewMode.value === "top8";
-    const kw = rateKeyword.value.trim();
     return heroList.value
+        .filter(matchHeroFilter)
         .map((item) => {
             const viewWin = isTop8 ? item.totalWin : item.totalWin4;
             const viewLose = isTop8 ? item.totalLose : item.totalLose4;
@@ -364,6 +415,8 @@ const rateTableData = computed(() => {
             const row: Record<string, any> = {
                 id: item.id,
                 name: item.name,
+                zhu: item.zhu,
+                fu: item.fu,
                 img: item.img,
                 total: item.total,
                 rate,
@@ -379,7 +432,6 @@ const rateTableData = computed(() => {
             }
             return row;
         })
-        .filter((row) => !kw || row.name.includes(kw))
         .sort(
             (a: any, b: any) =>
                 rateSortValue(b) - rateSortValue(a) ||
@@ -388,13 +440,23 @@ const rateTableData = computed(() => {
         );
 });
 
-function searchRate() {
+function searchFilter() {
     rateKeyword.value = filterName.value.trim();
 }
 
-function resetRate() {
+function resetFilter() {
     filterName.value = "";
+    filterZhu.value = undefined;
+    filterFu.value = undefined;
     rateKeyword.value = "";
+}
+
+function toggleZhu(id: number) {
+    filterZhu.value = filterZhu.value === id ? undefined : id;
+}
+
+function toggleFu(id: number) {
+    filterFu.value = filterFu.value === id ? undefined : id;
 }
 
 function edWin(item: { byEdition: Record<number, EditionStat> }, ed: number) {
@@ -539,27 +601,28 @@ onBeforeUnmount(() => {
 
 .toolbar {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 12px;
+    flex-direction: column;
+    gap: 8px;
     background: #fff;
     border: 1px solid #e8ebf0;
     border-radius: 10px;
-    padding: 12px;
-    margin-bottom: 12px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
     box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
 }
 
-.toolbar-text {
-    min-width: 0;
+.toolbar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
 }
 
 .toolbar-actions {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 8px;
-    flex-shrink: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
 }
 
 .title {
@@ -570,42 +633,173 @@ onBeforeUnmount(() => {
 }
 
 .subtitle {
-    margin: 4px 0 0;
-    font-size: 12px;
+    margin: 0;
+    font-size: 11px;
     color: #94a3b8;
-    line-height: 1.4;
+    line-height: 1.35;
+    display: none;
 }
 
 .filter-bar {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-direction: column;
     gap: 8px;
     background: #fff;
     border: 1px solid #e8ebf0;
     border-radius: 10px;
-    padding: 12px;
-    margin-bottom: 12px;
+    padding: 8px 10px;
+    margin-bottom: 10px;
     box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.filter-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .filter-field {
     flex: 1;
-    min-width: 140px;
-    max-width: 240px;
+    min-width: 0;
+}
+
+.race-block {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.race-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.race-tag {
+    display: inline-flex;
+    align-items: center;
+    height: 18px;
+    padding: 0 7px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1;
+
+    &--zhu {
+        background: #eef2ff;
+        color: #4338ca;
+    }
+
+    &--fu {
+        background: #f5f3ff;
+        color: #7c3aed;
+    }
+}
+
+.race-clear {
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-size: 11px;
+    color: #94a3b8;
+    cursor: pointer;
+
+    &:active {
+        color: #64748b;
+    }
+}
+
+.race-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    min-width: 0;
+}
+
+.race-chip {
+    height: 26px;
+    padding: 0 8px;
+    border: 1.5px solid var(--race);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--race);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.78;
+    transition: background 0.15s, color 0.15s, opacity 0.15s, transform 0.1s;
+
+    &:active {
+        transform: scale(0.96);
+    }
+
+    &.active {
+        background: var(--race);
+        color: #fff;
+        opacity: 1;
+    }
 }
 
 .filter-tip {
-    flex: 1 1 100%;
-    font-size: 12px;
+    font-size: 11px;
     color: #94a3b8;
-    line-height: 1.4;
+    line-height: 1.35;
+    display: none;
 }
 
 @media (min-width: 768px) {
+    .page {
+        padding: 16px;
+    }
+
+    .toolbar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+
+    .toolbar-top {
+        flex: 0 1 auto;
+    }
+
+    .subtitle {
+        display: block;
+        flex: 1 1 100%;
+        order: 3;
+        font-size: 12px;
+    }
+
+    .toolbar-actions {
+        margin-left: auto;
+        gap: 8px;
+    }
+
+    .filter-bar {
+        gap: 10px;
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+
+    .filter-field {
+        max-width: 240px;
+    }
+
+    .race-chip {
+        height: 28px;
+        padding: 0 10px;
+        font-size: 13px;
+    }
+
     .filter-tip {
-        flex: 1 1 auto;
-        text-align: right;
+        display: block;
+        font-size: 12px;
     }
 }
 
