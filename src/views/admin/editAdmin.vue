@@ -53,6 +53,7 @@ const allMenuList = [
     { name: "答案管理", path: "/answerAdmin", color: "#5a6b8a", roles: ["super"] },
     { name: "查询评级", path: "/gradeOutline", color: "#8b6b4a", roles: ["super", "normal"] },
     { name: "魔塔小游戏", path: "/game/mota", color: "#6b4a8b", roles: ["super", "normal"] },
+    { name: "金主赛", path: "/jinzhusai", color: "#c9a227", roles: ["super", "normal"] },
 ];
 
 const visibleMenu = computed(() => {
@@ -62,7 +63,7 @@ const visibleMenu = computed(() => {
 });
 
 const roleLabel = computed(() =>
-    adminRole.value === "super" ? "超级管理员" : "普通管理员（图表 / 查询评级）"
+    adminRole.value === "super" ? "超级管理员" : "普通管理员（图表 / 评级 / 金主赛）"
 );
 
 function verifyAdmin() {

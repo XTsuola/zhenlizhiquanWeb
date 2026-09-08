@@ -14,7 +14,8 @@ const ADMIN_GUARD_PATHS = [
   { path: "/logList", superOnly: true },
   { path: "/questionAdmin", superOnly: true },
   { path: "/answerAdmin", superOnly: true },
-  { path: "/skinDiyAdmin", superOnly: true }
+  { path: "/skinDiyAdmin", superOnly: true },
+  // { path: "/jinzhusai", superOnly: false }
 ] as const;
 
 const routeList: RouteRecordRaw[] = [
@@ -236,6 +237,11 @@ const routeList: RouteRecordRaw[] = [
     path: "/admin",
     name: "admin",
     component: () => import("@/views/admin/editAdmin.vue")
+  },
+  {
+    path: "/jinzhusai",
+    name: "jinzhusai",
+    component: () => import("@/views/shijiesai/jinzhusai/index.vue")
   },
   {
     path: "/game/mota",
