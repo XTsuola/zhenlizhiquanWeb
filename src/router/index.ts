@@ -244,6 +244,11 @@ const routeList: RouteRecordRaw[] = [
     component: () => import("@/views/shijiesai/jinzhusai/index.vue")
   },
   {
+    path: "/jinzhusai/heroWR",
+    name: "jinzhusaiHeroWR",
+    component: () => import("@/views/shijiesai/jinzhusai/HeroWinRate.vue")
+  },
+  {
     path: "/game/mota",
     name: "motaGame",
     component: () => import("@/views/game/mota/index.vue")

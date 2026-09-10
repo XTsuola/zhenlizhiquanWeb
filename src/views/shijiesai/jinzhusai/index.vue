@@ -9,6 +9,13 @@
                 <!-- <a-button size="small" @click="goAdmin">管理后台</a-button> -->
                 <a-button
                     size="small"
+                    :type="viewMode === 'roster' ? 'primary' : 'default'"
+                    @click="toggleRosterView"
+                >
+                    选手名单
+                </a-button>
+                <a-button
+                    size="small"
                     :type="viewMode === 'zhanli' ? 'primary' : 'default'"
                     @click="toggleZhanliView"
                 >
@@ -28,6 +35,7 @@
                     @click="activeRound = tab.key">
                     {{ tab.label }}
                 </button>
+                <button type="button" class="round-tab" @click="goHeroWinRate">英雄胜率</button>
             </div>
 
             <div v-if="showHalfSwitch" class="half-switch">
@@ -42,8 +50,67 @@
             </div>
         </div>
 
+        <!-- 选手名单 -->
+        <div v-if="viewMode === 'roster'" class="zhanli-view">
+            <div class="zhanli-bar">
+                <div class="zhanli-bar-text">
+                    <h2 class="zhanli-title">选手名单</h2>
+                    <p class="zhanli-desc">共 {{ roster.length }} 人 · 按签位 1–128 · 数据来自金主赛晋级图.xlsx</p>
+                </div>
+                <div class="zhanli-bar-actions">
+                    <a-button size="small" @click="viewMode = 'rounds'">返回晋级图</a-button>
+                </div>
+            </div>
+            <div class="roster-table-wrap">
+                <table class="roster-table">
+                    <thead>
+                        <tr>
+                            <th>签位</th>
+                            <th>半区</th>
+                            <th>分区</th>
+                            <th>选手</th>
+                            <th>战力</th>
+                            <th>过亿</th>
+                            <th>名次</th>
+                            <th>英雄顺位</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr
+                            v-for="item in roster"
+                            :key="item.id"
+                            :class="{ 'over-yi': isOverYi(item.zhanli) }"
+                            @click="openPlayerDetail(item.id)"
+                        >
+                            <td class="num">{{ item.id }}</td>
+                            <td>{{ getPlayerHalf(item.id) }}</td>
+                            <td>{{ getPlayerZone(item.id) }}</td>
+                            <td class="name">{{ item.name }}</td>
+                            <td class="num power">{{ formatZhanli(item.zhanli) }}</td>
+                            <td>{{ isOverYi(item.zhanli) ? "是" : "否" }}</td>
+                            <td>{{ LEVEL_LABELS[getPlayer(item.id)?.level ?? 1] }}</td>
+                            <td>
+                                <div class="zhanli-heroes">
+                                    <template v-if="item.heroList.length">
+                                        <span
+                                            v-for="(hid, hi) in item.heroList"
+                                            :key="item.id + '-rh-' + hi"
+                                            class="hero-chip"
+                                        >
+                                            <HeroIcon :hid="hid" />{{ hi + 1 }}.{{ getHeroName(hid) }}
+                                        </span>
+                                    </template>
+                                    <span v-else class="hero-empty">暂无英雄顺位</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
         <!-- 战力排序查询 -->
-        <div v-if="viewMode === 'zhanli'" class="zhanli-view">
+        <div v-else-if="viewMode === 'zhanli'" class="zhanli-view">
             <div class="zhanli-bar">
                 <div class="zhanli-bar-text">
                     <h2 class="zhanli-title">战力排序</h2>
@@ -57,17 +124,32 @@
                 </div>
             </div>
             <div class="zhanli-list">
-                <div v-for="(item, index) in zhanliRankList" :key="item.id" class="zhanli-row" :class="{ 'over-yi': isOverYi(item.zhanli) }">
-                    <span class="zhanli-rank" :class="{ top: index < 3 }">{{ index + 1 }}</span>
+                <div
+                    v-for="(item, index) in zhanliRankList"
+                    :key="item.id"
+                    class="zhanli-row"
+                    :class="{ 'over-yi': isOverYi(item.zhanli), out: item.out }"
+                    @click="openPlayerDetail(item.id)"
+                >
+                    <span class="zhanli-rank" :class="{ top: index < 3 && !item.out }">{{ index + 1 }}</span>
                     <div class="zhanli-info">
                         <div class="zhanli-line1">
                             <span class="zhanli-name">{{ item.name }}</span>
+                            <span v-if="item.out" class="out-tag">淘汰</span>
                             <span v-if="isOverYi(item.zhanli)" class="yi-tag">过亿</span>
                             <span class="zhanli-power">{{ formatZhanli(item.zhanli) }}</span>
                         </div>
                         <div class="zhanli-line2">
                             <span>签位 {{ item.id }}</span>
                             <span>{{ item.zone }}</span>
+                        </div>
+                        <div class="zhanli-heroes">
+                            <template v-if="item.heroList.length">
+                                <span v-for="(hid, hi) in item.heroList" :key="item.id + '-h-' + hi" class="hero-chip">
+                                    <HeroIcon :hid="hid" />{{ hi + 1 }}.{{ getHeroName(hid) }}
+                                </span>
+                            </template>
+                            <span v-else class="hero-empty">暂无英雄顺位</span>
                         </div>
                     </div>
                 </div>
@@ -89,6 +171,42 @@
             </template>
 
             <template v-else>
+                <div v-if="showRaceSummary" class="round-summaries">
+                    <div class="race-summary">
+                        <span
+                            v-for="r in roundRaceStats"
+                            :key="String(r.id)"
+                            class="race-summary-chip"
+                            :class="{ 'tag-rainbow': r.id === 'tianlong' }"
+                            :style="r.id === 'tianlong' ? undefined : { background: r.color + '18', color: r.color, borderColor: r.color + '55' }"
+                        >
+                            <span class="race-summary-main">{{ r.name }} <b>{{ r.count }}</b></span>
+                            <span class="race-pct">占比 {{ r.pct }}</span>
+                            <span v-if="r.advanceRate" class="race-advance">晋级率 {{ r.advanceRate }}</span>
+                        </span>
+                    </div>
+                    <div class="hero-summary">
+                        <div class="hero-summary-title">英雄数量</div>
+                        <div class="hero-summary-chips">
+                            <span
+                                v-for="h in roundHeroStats"
+                                :key="h.id"
+                                class="hero-summary-chip"
+                                :class="{
+                                    'hero-summary-chip--out': !h.unused && h.count === 0 && !!h.advanceRate,
+                                    'hero-summary-chip--unused': h.unused,
+                                    'hero-summary-chip--click': !h.unused
+                                }"
+                                @click.stop="openHeroUsers(h)"
+                            >
+                                <span class="hero-summary-main"><HeroIcon :hid="h.id" />{{ h.name }} <b>{{ h.count }}</b></span>
+                                <span class="race-pct">占比 {{ h.pct }}</span>
+                                <span v-if="h.unused" class="hero-unused">未上场</span>
+                                <span v-else-if="h.advanceRate" class="race-advance">晋级率 {{ h.advanceRate }}</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
                 <div class="round-panels">
                     <section v-show="showLeftPanel" class="panel panel--left">
                         <h2 class="panel-title">
@@ -98,17 +216,45 @@
                         <div class="match-list">
                             <div v-for="(match, mi) in leftActiveMatches" :key="'L' + mi" class="match-card">
                                 <div class="match-index">第 {{ mi + 1 }} 场</div>
-                                <div class="slot" :class="{ empty: !match.a, 'over-yi': isOverYi(match.a?.zhanli) }">
+                                <div
+                                    class="slot"
+                                    :class="{ empty: !match.a, 'over-yi': isOverYi(match.a?.zhanli), 'slot--player': !!match.a, lost: isOut(match.a?.id, currentRoundLabel) }"
+                                    @click.stop="match.a && openPlayerDetail(match.a.id)"
+                                >
                                     <template v-if="match.a">
-                                        <span class="slot-name">{{ match.a.name }}</span>
-                                        <span class="slot-zhanli">{{ formatZhanli(match.a.zhanli) }}</span>
+                                        <div class="slot-main">
+                                            <span class="slot-name">{{ match.a.name }}</span>
+                                            <span class="slot-zhanli">{{ formatZhanli(match.a.zhanli) }}</span>
+                                        </div>
+                                        <div class="slot-heroes">
+                                            <template v-if="match.a.heroList.length">
+                                                <span v-for="(hid, hi) in match.a.heroList" :key="'La-' + mi + '-' + hi" class="hero-chip">
+                                                    <HeroIcon :hid="hid" />{{ hi + 1 }}.{{ getHeroName(hid) }}
+                                                </span>
+                                            </template>
+                                            <span v-else class="hero-empty">暂无英雄顺位</span>
+                                        </div>
                                     </template>
                                     <span v-else class="slot-empty">{{ pendingLabel(currentRoundLabel) }}</span>
                                 </div>
-                                <div class="slot" :class="{ empty: !match.b, 'over-yi': isOverYi(match.b?.zhanli) }">
+                                <div
+                                    class="slot"
+                                    :class="{ empty: !match.b, 'over-yi': isOverYi(match.b?.zhanli), 'slot--player': !!match.b, lost: isOut(match.b?.id, currentRoundLabel) }"
+                                    @click.stop="match.b && openPlayerDetail(match.b.id)"
+                                >
                                     <template v-if="match.b">
-                                        <span class="slot-name">{{ match.b.name }}</span>
-                                        <span class="slot-zhanli">{{ formatZhanli(match.b.zhanli) }}</span>
+                                        <div class="slot-main">
+                                            <span class="slot-name">{{ match.b.name }}</span>
+                                            <span class="slot-zhanli">{{ formatZhanli(match.b.zhanli) }}</span>
+                                        </div>
+                                        <div class="slot-heroes">
+                                            <template v-if="match.b.heroList.length">
+                                                <span v-for="(hid, hi) in match.b.heroList" :key="'Lb-' + mi + '-' + hi" class="hero-chip">
+                                                    <HeroIcon :hid="hid" />{{ hi + 1 }}.{{ getHeroName(hid) }}
+                                                </span>
+                                            </template>
+                                            <span v-else class="hero-empty">暂无英雄顺位</span>
+                                        </div>
                                     </template>
                                     <span v-else class="slot-empty">{{ pendingLabel(currentRoundLabel) }}</span>
                                 </div>
@@ -124,17 +270,45 @@
                         <div class="match-list">
                             <div v-for="(match, mi) in rightActiveMatches" :key="'R' + mi" class="match-card">
                                 <div class="match-index">第 {{ mi + 1 }} 场</div>
-                                <div class="slot" :class="{ empty: !match.a, 'over-yi': isOverYi(match.a?.zhanli) }">
+                                <div
+                                    class="slot"
+                                    :class="{ empty: !match.a, 'over-yi': isOverYi(match.a?.zhanli), 'slot--player': !!match.a, lost: isOut(match.a?.id, currentRoundLabel) }"
+                                    @click.stop="match.a && openPlayerDetail(match.a.id)"
+                                >
                                     <template v-if="match.a">
-                                        <span class="slot-name">{{ match.a.name }}</span>
-                                        <span class="slot-zhanli">{{ formatZhanli(match.a.zhanli) }}</span>
+                                        <div class="slot-main">
+                                            <span class="slot-name">{{ match.a.name }}</span>
+                                            <span class="slot-zhanli">{{ formatZhanli(match.a.zhanli) }}</span>
+                                        </div>
+                                        <div class="slot-heroes">
+                                            <template v-if="match.a.heroList.length">
+                                                <span v-for="(hid, hi) in match.a.heroList" :key="'Ra-' + mi + '-' + hi" class="hero-chip">
+                                                    <HeroIcon :hid="hid" />{{ hi + 1 }}.{{ getHeroName(hid) }}
+                                                </span>
+                                            </template>
+                                            <span v-else class="hero-empty">暂无英雄顺位</span>
+                                        </div>
                                     </template>
                                     <span v-else class="slot-empty">{{ pendingLabel(currentRoundLabel) }}</span>
                                 </div>
-                                <div class="slot" :class="{ empty: !match.b, 'over-yi': isOverYi(match.b?.zhanli) }">
+                                <div
+                                    class="slot"
+                                    :class="{ empty: !match.b, 'over-yi': isOverYi(match.b?.zhanli), 'slot--player': !!match.b, lost: isOut(match.b?.id, currentRoundLabel) }"
+                                    @click.stop="match.b && openPlayerDetail(match.b.id)"
+                                >
                                     <template v-if="match.b">
-                                        <span class="slot-name">{{ match.b.name }}</span>
-                                        <span class="slot-zhanli">{{ formatZhanli(match.b.zhanli) }}</span>
+                                        <div class="slot-main">
+                                            <span class="slot-name">{{ match.b.name }}</span>
+                                            <span class="slot-zhanli">{{ formatZhanli(match.b.zhanli) }}</span>
+                                        </div>
+                                        <div class="slot-heroes">
+                                            <template v-if="match.b.heroList.length">
+                                                <span v-for="(hid, hi) in match.b.heroList" :key="'Rb-' + mi + '-' + hi" class="hero-chip">
+                                                    <HeroIcon :hid="hid" />{{ hi + 1 }}.{{ getHeroName(hid) }}
+                                                </span>
+                                            </template>
+                                            <span v-else class="hero-empty">暂无英雄顺位</span>
+                                        </div>
                                     </template>
                                     <span v-else class="slot-empty">{{ pendingLabel(currentRoundLabel) }}</span>
                                 </div>
@@ -156,9 +330,6 @@
                     <a-button size="small" :disabled="zoom >= ZOOM_MAX" @click="zoomIn">放大</a-button>
                     <a-button size="small" @click="applyReadableZoom">默认大小</a-button>
                     <a-button size="small" @click="fitZoom">看全图</a-button>
-                    <a-button size="small" type="primary" :loading="exporting" @click="exportOverview">
-                        导出总览图
-                    </a-button>
                 </div>
             </div>
             <div ref="viewportScrollRef" class="bracket-scroll">
@@ -212,14 +383,24 @@
                                                     class="match"
                                                     :style="{ '--slot-span': match.span }"
                                                 >
-                                                    <div class="slot" :class="{ empty: !match.a, 'over-yi': isOverYi(match.a?.zhanli) }">
+                                                    <div
+                                                        class="slot"
+                                                        :class="{ empty: !match.a, 'over-yi': isOverYi(match.a?.zhanli), 'slot--player': !!match.a, lost: isOut(match.a?.id, round.title) }"
+                                                        :title="match.a ? '点击查看英雄顺位' : undefined"
+                                                        @click.stop="match.a && openPlayerDetail(match.a.id)"
+                                                    >
                                                         <template v-if="match.a">
                                                             <span class="slot-name">{{ match.a.name }}</span>
                                                             <span class="slot-zhanli">{{ formatZhanli(match.a.zhanli) }}</span>
                                                         </template>
                                                         <span v-else class="slot-empty">{{ pendingLabel(round.title) }}</span>
                                                     </div>
-                                                    <div class="slot" :class="{ empty: !match.b, 'over-yi': isOverYi(match.b?.zhanli) }">
+                                                    <div
+                                                        class="slot"
+                                                        :class="{ empty: !match.b, 'over-yi': isOverYi(match.b?.zhanli), 'slot--player': !!match.b, lost: isOut(match.b?.id, round.title) }"
+                                                        :title="match.b ? '点击查看英雄顺位' : undefined"
+                                                        @click.stop="match.b && openPlayerDetail(match.b.id)"
+                                                    >
                                                         <template v-if="match.b">
                                                             <span class="slot-name">{{ match.b.name }}</span>
                                                             <span class="slot-zhanli">{{ formatZhanli(match.b.zhanli) }}</span>
@@ -329,14 +510,24 @@
                                                     class="match"
                                                     :style="{ '--slot-span': match.span }"
                                                 >
-                                                    <div class="slot" :class="{ empty: !match.a, 'over-yi': isOverYi(match.a?.zhanli) }">
+                                                    <div
+                                                        class="slot"
+                                                        :class="{ empty: !match.a, 'over-yi': isOverYi(match.a?.zhanli), 'slot--player': !!match.a, lost: isOut(match.a?.id, round.title) }"
+                                                        :title="match.a ? '点击查看英雄顺位' : undefined"
+                                                        @click.stop="match.a && openPlayerDetail(match.a.id)"
+                                                    >
                                                         <template v-if="match.a">
                                                             <span class="slot-name">{{ match.a.name }}</span>
                                                             <span class="slot-zhanli">{{ formatZhanli(match.a.zhanli) }}</span>
                                                         </template>
                                                         <span v-else class="slot-empty">{{ pendingLabel(round.title) }}</span>
                                                     </div>
-                                                    <div class="slot" :class="{ empty: !match.b, 'over-yi': isOverYi(match.b?.zhanli) }">
+                                                    <div
+                                                        class="slot"
+                                                        :class="{ empty: !match.b, 'over-yi': isOverYi(match.b?.zhanli), 'slot--player': !!match.b, lost: isOut(match.b?.id, round.title) }"
+                                                        :title="match.b ? '点击查看英雄顺位' : undefined"
+                                                        @click.stop="match.b && openPlayerDetail(match.b.id)"
+                                                    >
                                                         <template v-if="match.b">
                                                             <span class="slot-name">{{ match.b.name }}</span>
                                                             <span class="slot-zhanli">{{ formatZhanli(match.b.zhanli) }}</span>
@@ -355,6 +546,36 @@
                 </div>
             </div>
         </div>
+
+        <a-modal
+            :open="heroUserOpen"
+            :footer="null"
+            destroyOnClose
+            @update:open="heroUserOpen = $event"
+        >
+            <template #title>
+                <span class="hero-user-title">
+                    <HeroIcon v-if="heroUserHero" :hid="heroUserHero.id" />
+                    {{ heroUserTitle }}
+                </span>
+            </template>
+            <div v-if="heroUserPlayers.length" class="hero-user-list">
+                <button
+                    v-for="u in heroUserPlayers"
+                    :key="u.id"
+                    type="button"
+                    class="hero-user-row"
+                    @click="openPlayerFromHeroUsers(u.id)"
+                >
+                    <span class="hero-user-name">{{ u.name }}</span>
+                    <span class="hero-user-slots">
+                        <span v-for="slot in u.slots" :key="slot" class="hero-slot-tag">{{ slot }}号顺位</span>
+                    </span>
+                </button>
+            </div>
+            <p v-else class="hero-user-empty">本轮无人使用</p>
+        </a-modal>
+        <PlayerDetail v-model:open="detailOpen" :player-id="detailPlayerId" />
     </div>
 </template>
 
@@ -363,7 +584,10 @@ import { computed, nextTick, onMounted, onUnmounted, ref, watch } from "vue";
 import { message } from "ant-design-vue";
 import { toBlob } from "html-to-image";
 import router from "@/router";
-import { getPlayerSlot, players, type PlayerSlotInfo } from "./players";
+import { countHeroesFromHeroLists, countRacesFromHeroLists, countTianlongPlayers, getHeroName, getHeroUsers, getPlayer, getPlayerSlot, LEVEL_LABELS, players, type PlayerSlotInfo } from "./players";
+import { roster, getRosterPlayer, hasAdvanced, isEliminated, type BracketRound } from "./data";
+import PlayerDetail from "./PlayerDetail.vue";
+import HeroIcon from "./HeroIcon.vue";
 
 type MatchView = {
     a: PlayerSlotInfo | null;
@@ -378,7 +602,7 @@ type RoundView = {
 
 type RoundKey = "128" | "64" | "32" | "16" | "8" | "semi" | "final" | "all";
 type HalfKey = "left" | "right";
-type ViewMode = "rounds" | "zhanli";
+type ViewMode = "rounds" | "zhanli" | "roster";
 type ZhanliOrder = "desc" | "asc";
 
 const PLAYER_COUNT = players.length;
@@ -423,6 +647,10 @@ const bracketSize = ref({ w: 0, h: 0 });
 const viewportScrollRef = ref<HTMLElement | null>(null);
 const bracketRef = ref<HTMLElement | null>(null);
 const exportRootRef = ref<HTMLElement | null>(null);
+const detailOpen = ref(false);
+const heroUserOpen = ref(false);
+const heroUserHero = ref<{ id: number; name: string } | null>(null);
+const detailPlayerId = ref<number | null>(null);
 
 const zoomPercent = computed(() => Math.round(zoom.value * 100));
 
@@ -437,12 +665,18 @@ function getPlayerZone(id: number) {
     return "八区";
 }
 
+function getPlayerHalf(id: number) {
+    return id <= 64 ? "左半区" : "右半区";
+}
+
 const zhanliRankList = computed(() => {
     const list = players.map((p) => ({
         id: p.id,
         name: p.name,
         zhanli: Number(Number(p.zhanli).toFixed(2)),
-        zone: getPlayerZone(p.id)
+        zone: getPlayerZone(p.id),
+        heroList: p.heroList,
+        out: isEliminated(getRosterPlayer(p.id))
     }));
     list.sort((a, b) =>
         zhanliOrder.value === "desc" ? b.zhanli - a.zhanli || a.id - b.id : a.zhanli - b.zhanli || a.id - b.id
@@ -452,6 +686,38 @@ const zhanliRankList = computed(() => {
 
 const overYiCount = computed(() => players.filter((p) => isOverYi(p.zhanli)).length);
 
+function openPlayerDetail(id: number) {
+    detailPlayerId.value = id;
+    detailOpen.value = true;
+}
+
+function openHeroUsers(h: { id: number; name: string; unused?: boolean }) {
+    if (h.unused) return;
+    heroUserHero.value = { id: h.id, name: h.name };
+    heroUserOpen.value = true;
+}
+
+function openPlayerFromHeroUsers(id: number) {
+    heroUserOpen.value = false;
+    openPlayerDetail(id);
+}
+
+const heroUserTitle = computed(() => {
+    if (!heroUserHero.value) return "使用者";
+    return `${heroUserHero.value.name} · ${currentRoundLabel.value}使用者`;
+});
+
+const heroUserPlayers = computed(() => {
+    if (!heroUserHero.value) return [];
+    const pool =
+        activeRound.value === "32"
+            ? roster.filter((r) => hasAdvanced(r, "64"))
+            : activeRound.value === "64"
+              ? roster.filter((r) => hasAdvanced(r))
+              : roster;
+    return getHeroUsers(heroUserHero.value.id, pool);
+});
+
 function toggleZhanliView() {
     if (viewMode.value === "zhanli") {
         viewMode.value = "rounds";
@@ -459,6 +725,10 @@ function toggleZhanliView() {
     }
     viewMode.value = "zhanli";
     zhanliOrder.value = "desc";
+}
+
+function toggleRosterView() {
+    viewMode.value = viewMode.value === "roster" ? "rounds" : "roster";
 }
 
 let mq: MediaQueryList | null = null;
@@ -678,11 +948,51 @@ function buildFirstRound(start: number, end: number): MatchView[] {
   return matches;
 }
 
-function buildLaterRounds(firstCount: number): RoundView[] {
+function matchWinner(
+    a: PlayerSlotInfo | null,
+    b: PlayerSlotInfo | null,
+    from: BracketRound = "128"
+): PlayerSlotInfo | null {
+    if (a && hasAdvanced(getRosterPlayer(a.id), from)) return a;
+    if (b && hasAdvanced(getRosterPlayer(b.id), from)) return b;
+    return null;
+}
+
+function buildWinnerRound(prev: MatchView[], title: string, span: number, from: BracketRound = "128"): RoundView {
+    const matches: MatchView[] = [];
+    for (let i = 0; i < prev.length; i += 2) {
+        matches.push({
+            a: matchWinner(prev[i].a, prev[i].b, from),
+            b: matchWinner(prev[i + 1].a, prev[i + 1].b, from),
+            span
+        });
+    }
+    return { title, matches };
+}
+
+const ROUND_TITLE_KEY: Record<string, BracketRound> = {
+    "128强": "128",
+    "64强": "64",
+    "32强": "32",
+    "16强": "16",
+    "8强": "8",
+    半决赛: "4",
+    决赛: "final"
+};
+
+function isOut(id: number | undefined, roundTitle?: string) {
+    const p = getRosterPlayer(id ?? -1);
+    if (!p) return false;
+    const key = roundTitle ? ROUND_TITLE_KEY[roundTitle] : undefined;
+    if (key) return p.rounds[key]?.advanced === false;
+    return isEliminated(p);
+}
+
+function buildLaterRounds(prevMatchCount: number, fromTitleIdx: number, fromSpan: number): RoundView[] {
     const rounds: RoundView[] = [];
-    let matchCount = firstCount / 2;
-    let span = 2;
-    let titleIdx = 1;
+    let matchCount = prevMatchCount / 2;
+    let span = fromSpan;
+    let titleIdx = fromTitleIdx;
     while (matchCount >= 1) {
         rounds.push({
             title: ROUND_TITLES[titleIdx] || `第${titleIdx + 1}轮`,
@@ -711,10 +1021,16 @@ const ZONE_ROUND_TITLES = ["128强", "64强", "32强", "16强"];
 
 function buildZoneRounds(start: number, end: number): RoundView[] {
     const first = buildFirstRound(start, end);
-    const rounds: RoundView[] = [{ title: ZONE_ROUND_TITLES[0], matches: first }];
-    let matchCount = first.length / 2;
-    let span = 2;
-    let titleIdx = 1;
+    const r64 = buildWinnerRound(first, ZONE_ROUND_TITLES[1], 2, "128");
+    const r32 = buildWinnerRound(r64.matches, ZONE_ROUND_TITLES[2], 4, "64");
+    const rounds: RoundView[] = [
+        { title: ZONE_ROUND_TITLES[0], matches: first },
+        r64,
+        r32
+    ];
+    let matchCount = r32.matches.length / 2;
+    let span = 8;
+    let titleIdx = 3;
     while (matchCount >= 1 && titleIdx < ZONE_ROUND_TITLES.length) {
         rounds.push({
             title: ZONE_ROUND_TITLES[titleIdx],
@@ -786,17 +1102,119 @@ const rightSemiMatch: KnockoutMatch = {
 
 const leftRounds = computed<RoundView[]>(() => {
     const first = buildFirstRound(1, HALF);
-    return [{ title: ROUND_TITLES[0], matches: first }, ...buildLaterRounds(first.length)];
+    const r64 = buildWinnerRound(first, ROUND_TITLES[1], 2, "128");
+    const r32 = buildWinnerRound(r64.matches, ROUND_TITLES[2], 4, "64");
+    return [
+        { title: ROUND_TITLES[0], matches: first },
+        r64,
+        r32,
+        ...buildLaterRounds(r32.matches.length, 3, 8)
+    ];
 });
 
 const rightRounds = computed<RoundView[]>(() => {
     const first = buildFirstRound(HALF + 1, PLAYER_COUNT);
-    return [{ title: ROUND_TITLES[0], matches: first }, ...buildLaterRounds(first.length)];
+    const r64 = buildWinnerRound(first, ROUND_TITLES[1], 2, "128");
+    const r32 = buildWinnerRound(r64.matches, ROUND_TITLES[2], 4, "64");
+    return [
+        { title: ROUND_TITLES[0], matches: first },
+        r64,
+        r32,
+        ...buildLaterRounds(r32.matches.length, 3, 8)
+    ];
 });
 
 const currentRoundLabel = computed(() => {
     const tab = roundTabs.find((t) => t.key === activeRound.value);
     return tab?.label || "";
+});
+
+const showRaceSummary = computed(
+    () => activeRound.value === "128" || activeRound.value === "64" || activeRound.value === "32"
+);
+
+function formatPct(count: number, total: number) {
+    if (!total) return "0%";
+    return `${((count / total) * 100).toFixed(1)}%`;
+}
+
+const lists128 = computed(() => players.map((p) => p.heroList));
+const lists64 = computed(() => roster.filter((r) => hasAdvanced(r)).map((r) => r.heroList));
+const lists32 = computed(() => roster.filter((r) => hasAdvanced(r, "64")).map((r) => r.heroList));
+const raceStats128 = computed(() => countRacesFromHeroLists(lists128.value));
+const raceStats64 = computed(() => countRacesFromHeroLists(lists64.value));
+const raceStats32 = computed(() => countRacesFromHeroLists(lists32.value));
+const heroStats128 = computed(() => countHeroesFromHeroLists(lists128.value));
+const heroStats64 = computed(() => countHeroesFromHeroLists(lists64.value));
+const heroStats32 = computed(() => countHeroesFromHeroLists(lists32.value));
+const tianlong128 = computed(() => countTianlongPlayers(lists128.value));
+const tianlong64 = computed(() => countTianlongPlayers(lists64.value));
+const tianlong32 = computed(() => countTianlongPlayers(lists32.value));
+
+const roundRaceStats = computed(() => {
+    const round = activeRound.value;
+    const raceRows = round === "32" ? raceStats32.value : round === "64" ? raceStats64.value : raceStats128.value;
+    const raceTotal = raceRows.reduce((sum, r) => sum + r.count, 0);
+    const playerTotal = round === "32" ? lists32.value.length : round === "64" ? lists64.value.length : lists128.value.length;
+    const tianlongCount = round === "32" ? tianlong32.value : round === "64" ? tianlong64.value : tianlong128.value;
+    const prevTianlong = round === "32" ? tianlong64.value : round === "64" ? tianlong128.value : 0;
+    const tianlong = {
+        id: "tianlong" as const,
+        name: "天龙人",
+        color: "#b45309",
+        count: tianlongCount,
+        pct: formatPct(tianlongCount, playerTotal),
+        advanceRate: round === "32" || round === "64" ? formatPct(tianlongCount, prevTianlong) : ""
+    };
+    if (round !== "32" && round !== "64") {
+        return [
+            tianlong,
+            ...raceRows.map((r) => ({ ...r, pct: formatPct(r.count, raceTotal), advanceRate: "" }))
+        ];
+    }
+    const prevRaces = round === "32" ? raceStats64.value : raceStats128.value;
+    const prevCount = Object.fromEntries(prevRaces.map((r) => [r.id, r.count]));
+    return [
+        tianlong,
+        ...raceRows.map((r) => ({
+            ...r,
+            pct: formatPct(r.count, raceTotal),
+            advanceRate: formatPct(r.count, prevCount[r.id] || 0)
+        }))
+    ];
+});
+
+const roundHeroStats = computed(() => {
+    const round = activeRound.value;
+    if (round !== "32" && round !== "64") {
+        const total = heroStats128.value.reduce((sum, h) => sum + h.count, 0);
+        return heroStats128.value.map((h) => ({
+            ...h,
+            fromPrev: h.count,
+            unused: h.count === 0,
+            pct: formatPct(h.count, total),
+            advanceRate: ""
+        }));
+    }
+    const curHeroes = round === "32" ? heroStats32.value : heroStats64.value;
+    const prevHeroes = round === "32" ? heroStats64.value : heroStats128.value;
+    const curCount = Object.fromEntries(curHeroes.map((h) => [h.id, h.count]));
+    const prevCount = Object.fromEntries(prevHeroes.map((h) => [h.id, h.count]));
+    const total = curHeroes.reduce((sum, h) => sum + h.count, 0);
+    return heroStats128.value
+        .map((h) => {
+            const count = curCount[h.id] || 0;
+            const fromPrev = prevCount[h.id] || 0;
+            return {
+                ...h,
+                count,
+                fromPrev,
+                unused: fromPrev === 0,
+                pct: formatPct(count, total),
+                advanceRate: fromPrev === 0 ? "" : formatPct(count, fromPrev)
+            };
+        })
+        .sort((a, b) => b.count - a.count || b.fromPrev - a.fromPrev || a.id - b.id);
 });
 
 const leftActiveMatches = computed(() => {
@@ -817,6 +1235,10 @@ function goAdmin() {
 
 function goHome() {
     router.push("/home");
+}
+
+function goHeroWinRate() {
+    router.push({ name: "jinzhusaiHeroWR" });
 }
 </script>
 
@@ -930,11 +1352,22 @@ function goHome() {
     background: #fff;
     border: 1px solid #e5e7eb;
     position: relative;
+    cursor: pointer;
 
     &.over-yi {
         background: #1e293b;
         border-color: #0f172a;
         color: #f8fafc;
+    }
+
+    &.out {
+        border-color: #fecaca;
+        background: #fff7f7;
+    }
+
+    &.over-yi.out {
+        border-color: #7f1d1d;
+        background: #1c1418;
     }
 }
 
@@ -993,6 +1426,26 @@ function goHome() {
     line-height: 1;
 }
 
+.out-tag {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    height: 22px;
+    padding: 0 8px;
+    border-radius: 6px;
+    background: #dc2626;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.04em;
+}
+
+.zhanli-row.over-yi .out-tag {
+    background: #ef4444;
+    color: #fff;
+}
+
 .zhanli-power {
     flex-shrink: 0;
     margin-left: auto;
@@ -1003,8 +1456,16 @@ function goHome() {
     color: #0369a1;
 }
 
+.zhanli-row.out .zhanli-name {
+    color: #6b7280;
+}
+
 .zhanli-row.over-yi .zhanli-name {
     color: #f8fafc;
+}
+
+.zhanli-row.over-yi.out .zhanli-name {
+    color: #94a3b8;
 }
 
 .zhanli-row.over-yi .zhanli-power {
@@ -1027,6 +1488,195 @@ function goHome() {
     gap: 10px;
     font-size: 12px;
     color: #6b7280;
+}
+
+.zhanli-heroes {
+    margin-top: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+}
+
+.hero-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #0369a1;
+    background: #e0f2fe;
+    border-radius: 999px;
+    padding: 1px 8px 1px 4px;
+    line-height: 18px;
+}
+
+.hero-empty {
+    font-size: 11px;
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+.zhanli-row.over-yi .hero-chip {
+    background: #334155;
+    color: #fde047;
+}
+
+.zhanli-row.over-yi .hero-empty {
+    color: #94a3b8;
+}
+
+.roster-table-wrap {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    -webkit-overflow-scrolling: touch;
+}
+
+.roster-table {
+    width: 100%;
+    min-width: 920px;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.roster-table th,
+.roster-table td {
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #eef2f7;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.roster-table th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #f8fafc;
+    font-weight: 800;
+    color: #334155;
+}
+
+.roster-table tbody tr {
+    cursor: pointer;
+}
+
+.roster-table tbody tr:hover {
+    background: #f0f9ff;
+}
+
+.roster-table .num {
+    font-variant-numeric: tabular-nums;
+}
+
+.roster-table .name {
+    font-weight: 700;
+    color: #111827;
+}
+
+.roster-table .power {
+    font-weight: 800;
+    color: #0369a1;
+}
+
+.roster-table tr.over-yi {
+    background: #1e293b;
+    color: #f8fafc;
+}
+
+.roster-table tr.over-yi:hover {
+    background: #334155;
+}
+
+.roster-table tr.over-yi .name,
+.roster-table tr.over-yi td {
+    color: #f8fafc;
+}
+
+.roster-table tr.over-yi .power {
+    color: #fde047;
+}
+
+.roster-table tr.over-yi .hero-chip {
+    background: #334155;
+    color: #fde047;
+}
+
+.roster-table .zhanli-heroes,
+.roster-table .result-chips {
+    margin-top: 0;
+}
+
+.result-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.result-chip {
+    display: inline-flex;
+    align-items: center;
+    height: 20px;
+    padding: 0 6px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1;
+    background: #e2e8f0;
+    color: #475569;
+}
+
+.result-chip.result-1 {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.result-chip.result-2 {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.result-chip.result-3 {
+    background: #ecfccb;
+    color: #4d7c0f;
+}
+
+.result-chip.result-4 {
+    background: #ffedd5;
+    color: #c2410c;
+}
+
+.result-chip.result-5 {
+    background: #e2e8f0;
+    color: #64748b;
+}
+
+.roster-table tr.over-yi .result-1 {
+    background: #14532d;
+    color: #86efac;
+}
+
+.roster-table tr.over-yi .result-2 {
+    background: #7f1d1d;
+    color: #fecaca;
+}
+
+.roster-table tr.over-yi .result-3 {
+    background: #3f6212;
+    color: #d9f99d;
+}
+
+.roster-table tr.over-yi .result-4 {
+    background: #7c2d12;
+    color: #fed7aa;
+}
+
+.roster-table tr.over-yi .result-5 {
+    background: #334155;
+    color: #cbd5e1;
 }
 
 .controls {
@@ -1116,6 +1766,245 @@ function goHome() {
     flex: 1;
 }
 
+.round-summaries {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.race-summary {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.hero-summary {
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.hero-summary-title {
+    margin: 0 0 8px;
+    font-size: 12px;
+    font-weight: 800;
+    color: #64748b;
+}
+
+.hero-summary-chips {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+}
+
+.hero-summary-chip {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2px;
+    min-width: 0;
+    padding: 6px 8px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    color: #0f172a;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    b {
+        font-variant-numeric: tabular-nums;
+    }
+}
+
+.hero-summary-chip--click {
+    cursor: pointer;
+
+    &:hover {
+        border-color: #7dd3fc;
+        background: #f0f9ff;
+    }
+}
+
+.hero-summary-chip--out {
+    opacity: 0.72;
+    border-color: #fecaca;
+    background: #fef2f2;
+    color: #7f1d1d;
+
+    .race-advance {
+        color: #dc2626;
+    }
+}
+
+.hero-summary-chip--unused {
+    opacity: 0.62;
+    border-color: #e5e7eb;
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+.hero-unused {
+    font-size: 10px;
+    font-weight: 800;
+    color: #9ca3af;
+}
+
+.hero-user-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: min(60vh, 520px);
+    overflow: auto;
+}
+
+.hero-user-row {
+    appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #f8fafc;
+    cursor: pointer;
+    text-align: left;
+}
+
+.hero-user-row:hover {
+    border-color: #7dd3fc;
+    background: #f0f9ff;
+}
+
+.hero-user-name {
+    font-size: 14px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.hero-user-slots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.hero-slot-tag {
+    display: inline-flex;
+    align-items: center;
+    height: 22px;
+    padding: 0 8px;
+    border-radius: 999px;
+    background: #e0f2fe;
+    color: #0369a1;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.hero-user-empty {
+    margin: 0;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.hero-user-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-summary-main {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.race-summary-chip {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    min-width: 0;
+    padding: 6px 4px;
+    border-radius: 8px;
+    border: 1px solid;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+
+    b {
+        font-variant-numeric: tabular-nums;
+    }
+}
+
+.race-pct {
+    font-size: 10px;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    opacity: 0.85;
+}
+
+.race-advance {
+    font-size: 10px;
+    font-weight: 800;
+    color: #15803d;
+    font-variant-numeric: tabular-nums;
+}
+
+.race-summary-chip.tag-rainbow {
+    position: relative;
+    overflow: hidden;
+    color: #5c3d0a;
+    border: 1px solid #e0b84a;
+    background: linear-gradient(135deg, #fff4c8 0%, #f0d078 45%, #e8b84a 100%);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.65),
+        0 1px 3px rgba(180, 130, 30, 0.25);
+
+    .race-summary-main,
+    .race-pct,
+    .race-advance {
+        position: relative;
+        z-index: 1;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -40%;
+        width: 40%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+        animation: shineSweep 2.4s ease-in-out infinite;
+    }
+}
+
+@keyframes shineSweep {
+    0% {
+        left: -40%;
+    }
+    60%,
+    100% {
+        left: 120%;
+    }
+}
+
 .round-panels {
     display: grid;
     grid-template-columns: 1fr;
@@ -1186,6 +2075,21 @@ function goHome() {
     color: #6b7280;
 }
 
+.match-card .slot:not(.empty) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+}
+
+.slot-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    min-width: 0;
+}
+
 .slot {
     min-height: 42px;
     padding: 8px 12px;
@@ -1202,6 +2106,15 @@ function goHome() {
     gap: 10px;
     box-sizing: border-box;
     position: relative;
+
+    &.slot--player {
+        cursor: pointer;
+    }
+
+    &.lost {
+        opacity: 0.42;
+        filter: grayscale(0.35);
+    }
 
     .panel--right & {
         background: #fce7f3;
@@ -1295,6 +2208,19 @@ function goHome() {
 .slot-empty {
     width: 100%;
     text-align: center;
+}
+
+.match-card .slot .hero-chip {
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.match-card .slot.over-yi .hero-chip {
+    background: #334155;
+    color: #fde047;
+}
+
+.match-card .slot.over-yi .hero-empty {
+    color: #94a3b8;
 }
 
 .final-card {
@@ -2137,6 +3063,16 @@ function goHome() {
         overscroll-behavior: contain;
     }
 
+    .round-summaries {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background: #f3f4f6;
+        padding-bottom: 2px;
+        max-height: 42vh;
+        overflow: auto;
+    }
+
   .bracket-viewport {
     max-height: none;
   }
@@ -2198,6 +3134,23 @@ function goHome() {
     .round-panels {
         grid-template-columns: 1fr 1fr;
         gap: 12px;
+    }
+
+    .round-summaries {
+        position: static;
+        max-height: none;
+        overflow: visible;
+        background: transparent;
+        padding-bottom: 0;
+    }
+
+    .race-summary {
+        grid-template-columns: repeat(8, minmax(0, 1fr));
+        position: static;
+    }
+
+    .hero-summary-chips {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
     }
 
     .panel {
