@@ -3,9 +3,15 @@
         <header class="toolbar">
             <div class="toolbar-text">
                 <h1 class="title">金主赛 · 英雄胜率</h1>
-                <p class="subtitle">第 N 局对应英雄顺位第 N 位 · 只计胜/负，胜无效、负无效、弃权不统计</p>
+                <p class="subtitle">
+                    第 N 局对应英雄顺位第 N 位 · 只计胜/负，胜无效、负无效、弃权不统计
+                    <template v-if="excludeMirror"> · 已剔除双方同英雄对局</template>
+                </p>
             </div>
             <div class="toolbar-actions">
+                <a-button size="small" :type="excludeMirror ? 'primary' : 'default'" @click="excludeMirror = !excludeMirror">
+                    {{ excludeMirror ? "已剔除相同英雄对战" : "剔除相同英雄对战" }}
+                </a-button>
                 <a-button size="small" @click="goBack">返回晋级图</a-button>
             </div>
         </header>
@@ -33,7 +39,7 @@
                         <td class="name">
                             <span class="hero-cell">
                                 <HeroIcon :hid="item.id" />
-                                {{ item.name }}
+                                <span class="hero-name">{{ item.name }}</span>
                             </span>
                         </td>
                         <td class="num win">{{ item.win }}</td>
@@ -57,10 +63,12 @@
                     {{ detailHero ? detailHero.name + " · 历史对局" : "历史对局" }}
                 </span>
             </template>
-            <div v-if="detailHero" class="match-detail">
+            <div v-if="detailHeroLive" class="match-detail">
                 <p class="match-meta">
-                    有效 {{ detailHero.total }} 场 · 胜 {{ detailHero.win }} · 负 {{ detailHero.lose }} · 胜率 {{ formatRate(detailHero) }}
+                    有效 {{ detailHeroLive.total }} 场 · 胜 {{ detailHeroLive.win }} · 负 {{ detailHeroLive.lose }} · 胜率 {{ formatRate(detailHeroLive) }}
+                    <template v-if="excludeMirror"> · 已剔除镜像</template>
                 </p>
+                <HeroMatchupTables :win="detailMatchup.win" :lose="detailMatchup.lose" />
                 <div v-if="detailLogs.length" class="match-list">
                     <div v-for="(log, i) in detailLogs" :key="i" class="match-row">
                         <div class="match-head">
@@ -89,13 +97,27 @@
 import { computed, ref } from "vue";
 import router from "@/router";
 import { BRACKET_ROUND_LABELS, RESULT_LABELS } from "./data";
-import { calcHeroWinRates, getHeroMatchLogs, type HeroWinStat } from "./players";
+import { calcHeroWinRates, getHeroMatchLogs, getHeroMatchupSummary, type HeroWinStat } from "./players";
 import HeroIcon from "./HeroIcon.vue";
+import HeroMatchupTables from "./HeroMatchupTables.vue";
 
-const rows = computed(() => calcHeroWinRates());
+const excludeMirror = ref(false);
+const rateOpts = computed(() => ({ excludeMirror: excludeMirror.value }));
+const rows = computed(() => calcHeroWinRates(rateOpts.value));
 const detailOpen = ref(false);
 const detailHero = ref<HeroWinStat | null>(null);
-const detailLogs = computed(() => (detailHero.value ? getHeroMatchLogs(detailHero.value.id) : []));
+const detailHeroLive = computed(() => {
+    if (!detailHero.value) return null;
+    return rows.value.find((r) => r.id === detailHero.value!.id) ?? detailHero.value;
+});
+const detailLogs = computed(() =>
+    detailHero.value ? getHeroMatchLogs(detailHero.value.id, rateOpts.value) : []
+);
+const detailMatchup = computed(() =>
+    detailHero.value
+        ? getHeroMatchupSummary(detailHero.value.id, rateOpts.value)
+        : { win: [], lose: [] }
+);
 
 function formatRate(item: HeroWinStat) {
     if (item.rate == null) return "未上场";
@@ -362,6 +384,12 @@ function goBack() {
 
     .rate-table {
         font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-name {
+        display: none;
     }
 }
 </style>

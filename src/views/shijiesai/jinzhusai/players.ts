@@ -1,5 +1,5 @@
 import { heroTable } from "@/data/heroData/index";
-import { BRACKET_ROUNDS, getRoundOpponent, getStandingLabel, roster } from "./data";
+import { BRACKET_ROUNDS, getRoundOpponent, getStandingLabel, reachedRound, roster } from "./data";
 
 /** 金主赛选手：签位 1–128，名单来自 data.ts（Excel 选手名单页） */
 
@@ -114,6 +114,113 @@ export function countHeroesFromHeroLists(heroLists: number[][]): HeroCount[] {
     .sort((a, b) => b.count - a.count || a.id - b.id);
 }
 
+export type HeroAdvanceRow = {
+  id: number;
+  name: string;
+  /** 与 BRACKET_ROUNDS 对齐：128 → 决赛 */
+  counts: number[];
+  /** 相对上一轮减少量；第一轮为 0 */
+  drops: number[];
+  unused: boolean;
+};
+
+/** 各轮仍在场选手的英雄顺位数量（128 强到决赛） */
+export function calcHeroAdvanceTable(): { playerTotals: number[]; rows: HeroAdvanceRow[] } {
+  const playerTotals = BRACKET_ROUNDS.map((round) => roster.filter((p) => reachedRound(p, round)).length);
+  const countsByRound = BRACKET_ROUNDS.map((round) => {
+    const lists = roster.filter((p) => reachedRound(p, round)).map((p) => p.heroList);
+    return Object.fromEntries(countHeroesFromHeroLists(lists).map((h) => [h.id, h.count]));
+  });
+  const rows = Object.keys(HERO_NAME_BY_ID)
+    .map(Number)
+    .map((id) => {
+      const counts = countsByRound.map((m) => m[id] || 0);
+      const drops = counts.map((c, i) => (i === 0 ? 0 : counts[i - 1] - c));
+      return { id, name: getHeroName(id), counts, drops, unused: counts[0] === 0 };
+    })
+    .sort((a, b) => {
+      if (a.unused !== b.unused) return a.unused ? 1 : -1;
+      for (let i = a.counts.length - 1; i >= 0; i--) {
+        if (b.counts[i] !== a.counts[i]) return b.counts[i] - a.counts[i];
+      }
+      return a.id - b.id;
+    });
+  return { playerTotals, rows };
+}
+
+export function getPlayerGoldScore(p: Parameters<typeof getStandingLabel>[0]): number {
+  const label = getStandingLabel(p);
+  if (label === "冠军") return 10;
+  if (label === "亚军") return 5;
+  if (label === "决赛" || label === "半决赛" || label === "殿军" || label === "季军") return 3;
+  if (label === "8强") return 2;
+  if (label === "16强") return 1.5;
+  if (label === "32强") return 1;
+  return 0;
+}
+
+export type HeroGoldRow = {
+  id: number;
+  name: string;
+  score: number;
+  players: number;
+};
+
+export type HeroGoldContributor = {
+  playerId: number;
+  playerName: string;
+  standing: string;
+  score: number;
+  slots: number[];
+};
+
+/** 按选手当前最高名次给 4 个顺位英雄加分，不累加前面轮次 */
+export function calcHeroGoldTable(): HeroGoldRow[] {
+  const stats: Record<number, { score: number; players: Set<number> }> = {};
+  for (const id of Object.keys(HERO_NAME_BY_ID).map(Number)) {
+    stats[id] = { score: 0, players: new Set() };
+  }
+  for (const p of roster) {
+    const add = getPlayerGoldScore(p);
+    if (!add) continue;
+    for (const hid of p.heroList) {
+      if (!hid || !stats[hid]) continue;
+      stats[hid].score += add;
+      stats[hid].players.add(p.id);
+    }
+  }
+  return Object.keys(HERO_NAME_BY_ID)
+    .map(Number)
+    .map((id) => ({
+      id,
+      name: getHeroName(id),
+      score: stats[id].score,
+      players: stats[id].players.size
+    }))
+    .sort((a, b) => b.score - a.score || b.players - a.players || a.id - b.id);
+}
+
+export function getHeroGoldContributors(heroId: number): HeroGoldContributor[] {
+  const out: HeroGoldContributor[] = [];
+  for (const p of roster) {
+    const unit = getPlayerGoldScore(p);
+    if (!unit) continue;
+    const slots: number[] = [];
+    p.heroList.forEach((hid, i) => {
+      if (hid === heroId) slots.push(i + 1);
+    });
+    if (!slots.length) continue;
+    out.push({
+      playerId: p.id,
+      playerName: p.name,
+      standing: getStandingLabel(p),
+      score: unit * slots.length,
+      slots
+    });
+  }
+  return out.sort((a, b) => b.score - a.score || a.playerId - b.playerId);
+}
+
 export type HeroUser = {
   id: number;
   name: string;
@@ -146,8 +253,13 @@ export type HeroWinStat = {
   rate: number | null;
 };
 
+export type HeroWinRateOptions = {
+  /** 剔除双方同一局使用相同英雄的对局 */
+  excludeMirror?: boolean;
+};
+
 /** 按对局详情计英雄胜率：第 N 局对应顺位第 N 位；只计 1胜/2负，3/4/5 不计入 */
-export function calcHeroWinRates(): HeroWinStat[] {
+export function calcHeroWinRates(opts: HeroWinRateOptions = {}): HeroWinStat[] {
   const stats: Record<number, { win: number; lose: number }> = {};
   for (const id of Object.keys(HERO_NAME_BY_ID).map(Number)) {
     stats[id] = { win: 0, lose: 0 };
@@ -159,6 +271,11 @@ export function calcHeroWinRates(): HeroWinStat[] {
       rec.results.forEach((code, i) => {
         const hid = getHeroIdByGame(p.heroList, i);
         if (!hid || !stats[hid]) return;
+        if (opts.excludeMirror) {
+          const opp = getRoundOpponent(p.id, round);
+          const oppHid = opp ? getHeroIdByGame(opp.heroList, i) : undefined;
+          if (oppHid && oppHid === hid) return;
+        }
         if (code === 1) stats[hid].win += 1;
         else if (code === 2) stats[hid].lose += 1;
       });
@@ -199,8 +316,39 @@ export type HeroMatchLog = {
   result: 1 | 2;
 };
 
+export type HeroMatchupRow = {
+  id: number | null;
+  name: string;
+  count: number;
+};
+
+export type HeroMatchupSummary = {
+  win: HeroMatchupRow[];
+  lose: HeroMatchupRow[];
+};
+
+/** 某英雄对其他英雄的胜/负场次汇总（不计内战：双方同一英雄） */
+export function getHeroMatchupSummary(heroId: number, opts: HeroWinRateOptions = {}): HeroMatchupSummary {
+  const winMap = new Map<number | "unknown", number>();
+  const loseMap = new Map<number | "unknown", number>();
+  for (const log of getHeroMatchLogs(heroId, { ...opts, excludeMirror: true })) {
+    const key = log.opponentHeroId ?? "unknown";
+    const map = log.result === 1 ? winMap : loseMap;
+    map.set(key, (map.get(key) || 0) + 1);
+  }
+  const toRows = (map: Map<number | "unknown", number>): HeroMatchupRow[] =>
+    [...map.entries()]
+      .map(([key, count]) =>
+        key === "unknown"
+          ? { id: null, name: "未知英雄", count }
+          : { id: key, name: getHeroName(key), count }
+      )
+      .sort((a, b) => b.count - a.count || (a.id ?? 999) - (b.id ?? 999));
+  return { win: toRows(winMap), lose: toRows(loseMap) };
+}
+
 /** 某英雄所有有效对局（1胜/2负），含对手 */
-export function getHeroMatchLogs(heroId: number): HeroMatchLog[] {
+export function getHeroMatchLogs(heroId: number, opts: HeroWinRateOptions = {}): HeroMatchLog[] {
   const logs: HeroMatchLog[] = [];
   for (const p of roster) {
     for (const round of BRACKET_ROUNDS) {
@@ -211,6 +359,7 @@ export function getHeroMatchLogs(heroId: number): HeroMatchLog[] {
         if (code !== 1 && code !== 2) return;
         const opp = getRoundOpponent(p.id, round);
         const oppHeroId = opp ? getHeroIdByGame(opp.heroList, i) ?? null : null;
+        if (opts.excludeMirror && oppHeroId === heroId) return;
         logs.push({
           round,
           game: i + 1,
@@ -245,20 +394,49 @@ export type RaceCount = {
   count: number;
 };
 
+function countRacesInHeroList(heroList: number[]): Record<number, number> {
+  const cnt: Record<number, number> = {};
+  for (const hid of heroList) {
+    const hero = heroTable.find((h) => h.id === hid) as { zhu: number; fu: number } | undefined;
+    if (!hero) continue;
+    cnt[hero.zhu] = (cnt[hero.zhu] || 0) + 1;
+    cnt[hero.fu] = (cnt[hero.fu] || 0) + 1;
+  }
+  return cnt;
+}
+
 /** 统计英雄顺位中主、副种族出现次数 */
 export function countRacesFromHeroLists(heroLists: number[][]): RaceCount[] {
   const cnt: Record<number, number> = {};
   for (const heroList of heroLists) {
-    for (const hid of heroList) {
-      const hero = heroTable.find((h) => h.id === hid) as { zhu: number; fu: number } | undefined;
-      if (!hero) continue;
-      cnt[hero.zhu] = (cnt[hero.zhu] || 0) + 1;
-      cnt[hero.fu] = (cnt[hero.fu] || 0) + 1;
+    const races = countRacesInHeroList(heroList);
+    for (const [id, n] of Object.entries(races)) {
+      const rid = Number(id);
+      cnt[rid] = (cnt[rid] || 0) + n;
     }
   }
   return RACE_LIST.map((r) => ({
     id: r.id,
     name: r.name,
+    color: r.color,
+    count: cnt[r.id] || 0
+  })).sort((a, b) => b.count - a.count || a.id - b.id);
+}
+
+/** 4 个顺位英雄中，单种族主副合计 ≥3 计该种族玩家 +1；同一人可叠多个种族 */
+export function countRacePlayersFromHeroLists(heroLists: number[][]): RaceCount[] {
+  const cnt: Record<number, number> = {};
+  for (const heroList of heroLists) {
+    const races = countRacesInHeroList(heroList);
+    for (const r of RACE_LIST) {
+      if ((races[r.id] || 0) >= 3) {
+        cnt[r.id] = (cnt[r.id] || 0) + 1;
+      }
+    }
+  }
+  return RACE_LIST.map((r) => ({
+    id: r.id,
+    name: `${r.name}玩家`,
     color: r.color,
     count: cnt[r.id] || 0
   })).sort((a, b) => b.count - a.count || a.id - b.id);
@@ -272,15 +450,9 @@ export type PlayerRaceTag = {
   color: string;
 };
 
-/** 主副种族合计：单种族 ≥3 为该种族玩家；冬神+港口+炼狱 ≥5 为天龙玩家（天龙标签置顶） */
+/** 主副种族合计：单种族 ≥3 为该种族玩家；港口+炼狱+冬神 ≥5 天龙、≥7 大威天龙（大威置顶） */
 export function getHeroRaceTags(heroList: number[]): PlayerRaceTag[] {
-  const cnt: Record<number, number> = {};
-  for (const hid of heroList) {
-    const hero = heroTable.find((h) => h.id === hid) as { zhu: number; fu: number } | undefined;
-    if (!hero) continue;
-    cnt[hero.zhu] = (cnt[hero.zhu] || 0) + 1;
-    cnt[hero.fu] = (cnt[hero.fu] || 0) + 1;
-  }
+  const cnt = countRacesInHeroList(heroList);
   const tags: PlayerRaceTag[] = RACE_LIST.filter((r) => (cnt[r.id] || 0) >= 3)
     .sort((a, b) => (cnt[b.id] || 0) - (cnt[a.id] || 0))
     .map((r) => ({
@@ -288,23 +460,42 @@ export function getHeroRaceTags(heroList: number[]): PlayerRaceTag[] {
       label: `${r.name}玩家`,
       color: r.color
     }));
-  const tianlongCount = TIANLONG_RACE_IDS.reduce((sum, id) => sum + (cnt[id] || 0), 0);
-  if (tianlongCount >= 5) {
+  if (isTianlongPlayer(heroList)) {
     tags.unshift({
       id: "tianlong",
       label: "天龙玩家",
       color: "#b45309"
     });
   }
+  if (isDaweiTianlongPlayer(heroList)) {
+    tags.unshift({
+      id: "dawei",
+      label: "大威天龙",
+      color: "#7c2d12"
+    });
+  }
   return tags;
 }
 
+function tianlongRaceCount(heroList: number[]): number {
+  const cnt = countRacesInHeroList(heroList);
+  return TIANLONG_RACE_IDS.reduce((n, id) => n + (cnt[id] || 0), 0);
+}
+
 export function isTianlongPlayer(heroList: number[]): boolean {
-  return getHeroRaceTags(heroList).some((t) => t.id === "tianlong");
+  return tianlongRaceCount(heroList) >= 5;
+}
+
+export function isDaweiTianlongPlayer(heroList: number[]): boolean {
+  return tianlongRaceCount(heroList) >= 7;
 }
 
 export function countTianlongPlayers(heroLists: number[][]): number {
   return heroLists.reduce((n, list) => n + (isTianlongPlayer(list) ? 1 : 0), 0);
+}
+
+export function countDaweiTianlongPlayers(heroLists: number[][]): number {
+  return heroLists.reduce((n, list) => n + (isDaweiTianlongPlayer(list) ? 1 : 0), 0);
 }
 
 export type JinzhusaiPlayer = {

@@ -19,8 +19,8 @@
                     v-for="tag in raceTags"
                     :key="String(tag.id)"
                     class="player-tag"
-                    :class="{ 'tag-rainbow': tag.id === 'tianlong' }"
-                    :style="tag.id === 'tianlong' ? undefined : { color: '#fff', background: tag.color, borderColor: tag.color }"
+                    :class="{ 'tag-rainbow': tag.id === 'tianlong', 'tag-rainbow-dawei': tag.id === 'dawei' }"
+                    :style="tag.id === 'tianlong' || tag.id === 'dawei' ? undefined : { color: '#fff', background: tag.color, borderColor: tag.color }"
                 >{{ tag.label }}</span>
             </div>
             <h3 class="detail-heading">英雄顺位</h3>
@@ -146,6 +146,29 @@ function formatZhanli(v: number) {
         height: 100%;
         background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
         animation: shineSweep 2.4s ease-in-out infinite;
+    }
+}
+
+.tag-rainbow-dawei {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    border: 1px solid #c4b5fd;
+    background: linear-gradient(135deg, #fef3c7 0%, #f59e0b 28%, #a855f7 62%, #7c3aed 100%);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.55),
+        0 1px 4px rgba(124, 58, 237, 0.35);
+    text-shadow: 0 1px 1px rgba(76, 29, 149, 0.45);
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -40%;
+        width: 40%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+        animation: shineSweep 1.8s ease-in-out infinite;
     }
 }
 

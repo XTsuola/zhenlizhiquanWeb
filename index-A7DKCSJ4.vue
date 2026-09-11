@@ -37,7 +37,6 @@
                 </button>
                 <button type="button" class="round-tab" @click="goHeroWinRate">英雄胜率</button>
                 <button type="button" class="round-tab" @click="goHeroAdvance">英雄晋级</button>
-                <button type="button" class="round-tab" @click="goHeroGold">英雄含金量</button>
             </div>
 
             <div v-if="showHalfSwitch" class="half-switch">
@@ -99,7 +98,7 @@
                                             :key="item.id + '-rh-' + hi"
                                             class="hero-chip"
                                         >
-                                            <HeroIcon :hid="hid" /><span class="hero-name">{{ hi + 1 }}.{{ getHeroName(hid) }}</span>
+                                            <HeroIcon :hid="hid" />{{ hi + 1 }}.{{ getHeroName(hid) }}
                                         </span>
                                     </template>
                                     <span v-else class="hero-empty">暂无英雄顺位</span>
@@ -148,7 +147,7 @@
                         <div class="zhanli-heroes">
                             <template v-if="item.heroList.length">
                                 <span v-for="(hid, hi) in item.heroList" :key="item.id + '-h-' + hi" class="hero-chip">
-                                    <HeroIcon :hid="hid" /><span class="hero-name">{{ hi + 1 }}.{{ getHeroName(hid) }}</span>
+                                    <HeroIcon :hid="hid" />{{ hi + 1 }}.{{ getHeroName(hid) }}
                                 </span>
                             </template>
                             <span v-else class="hero-empty">暂无英雄顺位</span>
@@ -179,8 +178,8 @@
                             v-for="r in roundRaceStats"
                             :key="String(r.id)"
                             class="race-summary-chip"
-                            :class="{ 'tag-rainbow': r.id === 'tianlong', 'tag-rainbow-dawei': r.id === 'dawei' }"
-                            :style="r.id === 'tianlong' || r.id === 'dawei' ? undefined : { background: r.color + '18', color: r.color, borderColor: r.color + '55' }"
+                            :class="{ 'tag-rainbow': r.id === 'tianlong' }"
+                            :style="r.id === 'tianlong' ? undefined : { background: r.color + '18', color: r.color, borderColor: r.color + '55' }"
                         >
                             <span class="race-summary-main">{{ r.name }} <b>{{ r.count }}</b></span>
                             <span class="race-pct">占比 {{ r.pct }}</span>
@@ -201,7 +200,7 @@
                                 }"
                                 @click.stop="openHeroUsers(h)"
                             >
-                                <span class="hero-summary-main"><HeroIcon :hid="h.id" /><span class="hero-name">{{ h.name }}</span> <b>{{ h.count }}</b></span>
+                                <span class="hero-summary-main"><HeroIcon :hid="h.id" />{{ h.name }} <b>{{ h.count }}</b></span>
                                 <span class="race-pct">占比 {{ h.pct }}</span>
                                 <span v-if="h.unused" class="hero-unused">未上场</span>
                                 <span v-else-if="h.advanceRate" class="race-advance">晋级率 {{ h.advanceRate }}</span>
@@ -231,7 +230,7 @@
                                         <div class="slot-heroes">
                                             <template v-if="match.a.heroList.length">
                                                 <span v-for="(hid, hi) in match.a.heroList" :key="'La-' + mi + '-' + hi" class="hero-chip">
-                                                    <HeroIcon :hid="hid" /><span class="hero-name">{{ hi + 1 }}.{{ getHeroName(hid) }}</span>
+                                                    <HeroIcon :hid="hid" />{{ hi + 1 }}.{{ getHeroName(hid) }}
                                                 </span>
                                             </template>
                                             <span v-else class="hero-empty">暂无英雄顺位</span>
@@ -252,7 +251,7 @@
                                         <div class="slot-heroes">
                                             <template v-if="match.b.heroList.length">
                                                 <span v-for="(hid, hi) in match.b.heroList" :key="'Lb-' + mi + '-' + hi" class="hero-chip">
-                                                    <HeroIcon :hid="hid" /><span class="hero-name">{{ hi + 1 }}.{{ getHeroName(hid) }}</span>
+                                                    <HeroIcon :hid="hid" />{{ hi + 1 }}.{{ getHeroName(hid) }}
                                                 </span>
                                             </template>
                                             <span v-else class="hero-empty">暂无英雄顺位</span>
@@ -285,7 +284,7 @@
                                         <div class="slot-heroes">
                                             <template v-if="match.a.heroList.length">
                                                 <span v-for="(hid, hi) in match.a.heroList" :key="'Ra-' + mi + '-' + hi" class="hero-chip">
-                                                    <HeroIcon :hid="hid" /><span class="hero-name">{{ hi + 1 }}.{{ getHeroName(hid) }}</span>
+                                                    <HeroIcon :hid="hid" />{{ hi + 1 }}.{{ getHeroName(hid) }}
                                                 </span>
                                             </template>
                                             <span v-else class="hero-empty">暂无英雄顺位</span>
@@ -306,7 +305,7 @@
                                         <div class="slot-heroes">
                                             <template v-if="match.b.heroList.length">
                                                 <span v-for="(hid, hi) in match.b.heroList" :key="'Rb-' + mi + '-' + hi" class="hero-chip">
-                                                    <HeroIcon :hid="hid" /><span class="hero-name">{{ hi + 1 }}.{{ getHeroName(hid) }}</span>
+                                                    <HeroIcon :hid="hid" />{{ hi + 1 }}.{{ getHeroName(hid) }}
                                                 </span>
                                             </template>
                                             <span v-else class="hero-empty">暂无英雄顺位</span>
@@ -605,9 +604,7 @@
                     {{ heroUserTitle }}
                 </span>
             </template>
-            <div class="hero-user-body">
-                <HeroMatchupTables v-if="heroUserHero" :win="heroUserMatchup.win" :lose="heroUserMatchup.lose" />
-                <div v-if="heroUserPlayers.length" class="hero-user-list">
+            <div v-if="heroUserPlayers.length" class="hero-user-list">
                 <button
                     v-for="u in heroUserPlayers"
                     :key="u.id"
@@ -622,7 +619,6 @@
                 </button>
             </div>
             <p v-else class="hero-user-empty">本轮无人使用</p>
-            </div>
         </a-modal>
         <PlayerDetail v-model:open="detailOpen" :player-id="detailPlayerId" />
     </div>
@@ -633,19 +629,10 @@ import { computed, nextTick, onMounted, onUnmounted, ref, watch } from "vue";
 import { message } from "ant-design-vue";
 import { toBlob } from "html-to-image";
 import router from "@/router";
-import { countDaweiTianlongPlayers, countHeroesFromHeroLists, countRacePlayersFromHeroLists, countRacesFromHeroLists, countTianlongPlayers, getHeroMatchupSummary, getHeroName, getHeroUsers, getPlayer, getPlayerSlot, LEVEL_LABELS, players, type PlayerSlotInfo } from "./players";
+import { countHeroesFromHeroLists, countRacesFromHeroLists, countTianlongPlayers, getHeroName, getHeroUsers, getPlayer, getPlayerSlot, LEVEL_LABELS, players, type PlayerSlotInfo } from "./players";
 import { roster, getRosterPlayer, hasAdvanced, isEliminated, type BracketRound } from "./data";
 import PlayerDetail from "./PlayerDetail.vue";
 import HeroIcon from "./HeroIcon.vue";
-import HeroMatchupTables from "./HeroMatchupTables.vue";
-
-function goHeroAdvance() {
-    router.push("/jinzhusai/heroAdvance");
-}
-
-function goHeroGold() {
-    router.push("/jinzhusai/heroGold");
-}
 
 type MatchView = {
     a: PlayerSlotInfo | null;
@@ -779,10 +766,6 @@ const heroUserPlayers = computed(() => {
                   : roster;
     return getHeroUsers(heroUserHero.value.id, pool);
 });
-
-const heroUserMatchup = computed(() =>
-    heroUserHero.value ? getHeroMatchupSummary(heroUserHero.value.id) : { win: [], lose: [] }
-);
 
 function toggleZhanliView() {
     if (viewMode.value === "zhanli") {
@@ -1229,11 +1212,6 @@ const raceStats64 = computed(() => countRacesFromHeroLists(lists64.value));
 const raceStats32 = computed(() => countRacesFromHeroLists(lists32.value));
 const raceStats16 = computed(() => countRacesFromHeroLists(lists16.value));
 const raceStats8 = computed(() => countRacesFromHeroLists(lists8.value));
-const racePlayerStats128 = computed(() => countRacePlayersFromHeroLists(lists128.value));
-const racePlayerStats64 = computed(() => countRacePlayersFromHeroLists(lists64.value));
-const racePlayerStats32 = computed(() => countRacePlayersFromHeroLists(lists32.value));
-const racePlayerStats16 = computed(() => countRacePlayersFromHeroLists(lists16.value));
-const racePlayerStats8 = computed(() => countRacePlayersFromHeroLists(lists8.value));
 const heroStats128 = computed(() => countHeroesFromHeroLists(lists128.value));
 const heroStats64 = computed(() => countHeroesFromHeroLists(lists64.value));
 const heroStats32 = computed(() => countHeroesFromHeroLists(lists32.value));
@@ -1244,11 +1222,6 @@ const tianlong64 = computed(() => countTianlongPlayers(lists64.value));
 const tianlong32 = computed(() => countTianlongPlayers(lists32.value));
 const tianlong16 = computed(() => countTianlongPlayers(lists16.value));
 const tianlong8 = computed(() => countTianlongPlayers(lists8.value));
-const dawei128 = computed(() => countDaweiTianlongPlayers(lists128.value));
-const dawei64 = computed(() => countDaweiTianlongPlayers(lists64.value));
-const dawei32 = computed(() => countDaweiTianlongPlayers(lists32.value));
-const dawei16 = computed(() => countDaweiTianlongPlayers(lists16.value));
-const dawei8 = computed(() => countDaweiTianlongPlayers(lists8.value));
 
 const roundRaceStats = computed(() => {
     const round = isSummaryRound(activeRound.value) ? activeRound.value : "128";
@@ -1258,13 +1231,6 @@ const roundRaceStats = computed(() => {
         "32": raceStats32.value,
         "16": raceStats16.value,
         "8": raceStats8.value
-    };
-    const racePlayerByRound: Record<SummaryRound, typeof racePlayerStats128.value> = {
-        "128": racePlayerStats128.value,
-        "64": racePlayerStats64.value,
-        "32": racePlayerStats32.value,
-        "16": racePlayerStats16.value,
-        "8": racePlayerStats8.value
     };
     const listByRound: Record<SummaryRound, number[][]> = {
         "128": lists128.value,
@@ -1280,28 +1246,11 @@ const roundRaceStats = computed(() => {
         "16": tianlong16.value,
         "8": tianlong8.value
     };
-    const daweiByRound: Record<SummaryRound, number> = {
-        "128": dawei128.value,
-        "64": dawei64.value,
-        "32": dawei32.value,
-        "16": dawei16.value,
-        "8": dawei8.value
-    };
     const prevRound = round === "128" ? null : SUMMARY_PREV[round];
     const raceRows = raceByRound[round];
-    const racePlayerRows = racePlayerByRound[round];
     const raceTotal = raceRows.reduce((sum, r) => sum + r.count, 0);
     const playerTotal = listByRound[round].length;
     const tianlongCount = tianlongByRound[round];
-    const daweiCount = daweiByRound[round];
-    const dawei = {
-        id: "dawei" as const,
-        name: "大威天龙",
-        color: "#7c2d12",
-        count: daweiCount,
-        pct: formatPct(daweiCount, playerTotal),
-        advanceRate: prevRound ? formatPct(daweiCount, daweiByRound[prevRound]) : ""
-    };
     const tianlong = {
         id: "tianlong" as const,
         name: "天龙人",
@@ -1310,30 +1259,15 @@ const roundRaceStats = computed(() => {
         pct: formatPct(tianlongCount, playerTotal),
         advanceRate: prevRound ? formatPct(tianlongCount, tianlongByRound[prevRound]) : ""
     };
-    const prevRacePlayerCount = prevRound
-        ? Object.fromEntries(racePlayerByRound[prevRound].map((r) => [r.id, r.count]))
-        : {};
-    const racePlayerChips = racePlayerRows.map((r) => ({
-        id: `rp-${r.id}`,
-        name: r.name,
-        color: r.color,
-        count: r.count,
-        pct: formatPct(r.count, playerTotal),
-        advanceRate: prevRound ? formatPct(r.count, prevRacePlayerCount[r.id] || 0) : ""
-    }));
     if (!prevRound) {
         return [
-            dawei,
             tianlong,
-            ...racePlayerChips,
             ...raceRows.map((r) => ({ ...r, pct: formatPct(r.count, raceTotal), advanceRate: "" }))
         ];
     }
     const prevCount = Object.fromEntries(raceByRound[prevRound].map((r) => [r.id, r.count]));
     return [
-        dawei,
         tianlong,
-        ...racePlayerChips,
         ...raceRows.map((r) => ({
             ...r,
             pct: formatPct(r.count, raceTotal),
@@ -1405,6 +1339,10 @@ function goHome() {
 
 function goHeroWinRate() {
     router.push({ name: "jinzhusaiHeroWR" });
+}
+
+function goHeroAdvance() {
+    router.push({ name: "jinzhusaiHeroAdvance" });
 }
 </script>
 
@@ -2023,12 +1961,6 @@ function goHeroWinRate() {
     color: #9ca3af;
 }
 
-.hero-user-body {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
 .hero-user-list {
     display: flex;
     flex-direction: column;
@@ -2164,37 +2096,6 @@ function goHeroWinRate() {
         height: 100%;
         background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
         animation: shineSweep 2.4s ease-in-out infinite;
-    }
-}
-
-.race-summary-chip.tag-rainbow-dawei {
-    position: relative;
-    overflow: hidden;
-    color: #4c1d95;
-    border: 1px solid #c4b5fd;
-    background: linear-gradient(135deg, #fef3c7 0%, #f59e0b 28%, #a855f7 62%, #7c3aed 100%);
-    box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.55),
-        0 1px 4px rgba(124, 58, 237, 0.35);
-
-    .race-summary-main,
-    .race-pct,
-    .race-advance {
-        position: relative;
-        z-index: 1;
-        color: #fff;
-        text-shadow: 0 1px 1px rgba(76, 29, 149, 0.45);
-    }
-
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -40%;
-        width: 40%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
-        animation: shineSweep 1.8s ease-in-out infinite;
     }
 }
 
@@ -3274,10 +3175,6 @@ function goHeroWinRate() {
         padding-bottom: 2px;
         max-height: 42vh;
         overflow: auto;
-    }
-
-    .hero-name {
-        display: none;
     }
 
   .bracket-viewport {
