@@ -148,6 +148,50 @@ export function calcHeroAdvanceTable(): { playerTotals: number[]; rows: HeroAdva
   return { playerTotals, rows };
 }
 
+const STANDING_RANK_ORDER: Record<string, number> = {
+  冠军: 1,
+  亚军: 2,
+  季军: 3,
+  殿军: 4,
+  决赛: 5,
+  半决赛: 6,
+  "8强": 7,
+  "16强": 8,
+  "32强": 9,
+  "64强": 10,
+  "128强": 11
+};
+
+export type PlayerRankRow = {
+  rank: number;
+  id: number;
+  name: string;
+  standing: string;
+  zhanli: number;
+  heroList: number[];
+  tags: PlayerRaceTag[];
+};
+
+/** 按本届最终名次排序：冠亚季殿，其后同轮按战力 */
+export function calcPlayerRankTable(): PlayerRankRow[] {
+  return roster
+    .map((p) => ({
+      rank: 0,
+      id: p.id,
+      name: p.name,
+      standing: getStandingLabel(p),
+      zhanli: Number(p.zhanli.toFixed(2)),
+      heroList: p.heroList,
+      tags: getHeroRaceTags(p.heroList)
+    }))
+    .sort((a, b) => {
+      const sa = STANDING_RANK_ORDER[a.standing] ?? 99;
+      const sb = STANDING_RANK_ORDER[b.standing] ?? 99;
+      return sa - sb || b.zhanli - a.zhanli || a.id - b.id;
+    })
+    .map((row, i) => ({ ...row, rank: i + 1 }));
+}
+
 export function getPlayerGoldScore(p: Parameters<typeof getStandingLabel>[0]): number {
   const label = getStandingLabel(p);
   if (label === "冠军") return 10;

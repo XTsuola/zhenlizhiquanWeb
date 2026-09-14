@@ -38,6 +38,7 @@
                 <button type="button" class="round-tab" @click="goHeroWinRate">英雄胜率</button>
                 <button type="button" class="round-tab" @click="goHeroAdvance">英雄晋级</button>
                 <button type="button" class="round-tab" @click="goHeroGold">英雄含金量</button>
+                <button type="button" class="round-tab" @click="goPlayerRank">选手排名</button>
             </div>
 
             <div v-if="showHalfSwitch" class="half-switch">
@@ -160,55 +161,107 @@
 
         <!-- 单轮列表视图 -->
         <div v-else-if="activeRound !== 'all'" class="round-view">
-            <template v-if="activeRound === 'final'">
+            <div v-if="showRaceSummary" class="round-summaries">
+                <div class="race-summary">
+                    <span
+                        v-for="r in roundRaceStats"
+                        :key="String(r.id)"
+                        class="race-summary-chip"
+                        :class="{ 'tag-rainbow': r.id === 'tianlong', 'tag-rainbow-dawei': r.id === 'dawei' }"
+                        :style="r.id === 'tianlong' || r.id === 'dawei' ? undefined : { background: r.color + '18', color: r.color, borderColor: r.color + '55' }"
+                    >
+                        <span class="race-summary-main">{{ r.name }} <b>{{ r.count }}</b></span>
+                        <span class="race-pct">占比 {{ r.pct }}</span>
+                        <span v-if="r.advanceRate" class="race-advance">晋级率 {{ r.advanceRate }}</span>
+                    </span>
+                </div>
+                <div class="hero-summary">
+                    <div class="hero-summary-title">英雄数量</div>
+                    <div class="hero-summary-chips">
+                        <span
+                            v-for="h in roundHeroStats"
+                            :key="h.id"
+                            class="hero-summary-chip"
+                            :class="{
+                                'hero-summary-chip--out': !h.unused && h.count === 0 && !!h.advanceRate,
+                                'hero-summary-chip--unused': h.unused,
+                                'hero-summary-chip--click': !h.unused
+                            }"
+                            @click.stop="openHeroUsers(h)"
+                        >
+                            <span class="hero-summary-main"><HeroIcon :hid="h.id" /><span class="hero-name">{{ h.name }}</span> <b>{{ h.count }}</b></span>
+                            <span class="race-pct">占比 {{ h.pct }}</span>
+                            <span v-if="h.unused" class="hero-unused">未上场</span>
+                            <span v-else-if="h.advanceRate" class="race-advance">晋级率 {{ h.advanceRate }}</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <template v-if="activeRound === 'third'">
+                <section class="panel panel--third">
+                    <h2 class="panel-title">季军赛</h2>
+                    <div class="final-card third-card">
+                        <div
+                            class="slot"
+                            :class="{ empty: !thirdMatch.a, 'over-yi': isOverYi(thirdMatch.a?.zhanli), 'slot--player': !!thirdMatch.a, lost: isOut(thirdMatch.a?.id, '季军赛') }"
+                            @click.stop="thirdMatch.a && openPlayerDetail(thirdMatch.a.id)"
+                        >
+                            <template v-if="thirdMatch.a">
+                                <span class="slot-name">{{ thirdMatch.a.name }}</span>
+                                <span class="slot-zhanli">{{ formatZhanli(thirdMatch.a.zhanli) }}</span>
+                            </template>
+                            <span v-else>{{ pendingLabel("季军赛") }} · 左</span>
+                        </div>
+                        <div class="vs">VS</div>
+                        <div
+                            class="slot"
+                            :class="{ empty: !thirdMatch.b, 'over-yi': isOverYi(thirdMatch.b?.zhanli), 'slot--player': !!thirdMatch.b, lost: isOut(thirdMatch.b?.id, '季军赛') }"
+                            @click.stop="thirdMatch.b && openPlayerDetail(thirdMatch.b.id)"
+                        >
+                            <template v-if="thirdMatch.b">
+                                <span class="slot-name">{{ thirdMatch.b.name }}</span>
+                                <span class="slot-zhanli">{{ formatZhanli(thirdMatch.b.zhanli) }}</span>
+                            </template>
+                            <span v-else>{{ pendingLabel("季军赛") }} · 右</span>
+                        </div>
+                        <div class="champion champion--third">{{ thirdPlacePlayer ? "季军 " + thirdPlacePlayer.name : "季军待定" }}</div>
+                    </div>
+                </section>
+            </template>
+
+            <template v-else-if="activeRound === 'final'">
                 <section class="panel panel--final">
                     <h2 class="panel-title">决赛</h2>
                     <div class="final-card">
-                        <div class="slot empty">{{ pendingLabel("决赛") }} · 左</div>
+                        <div
+                            class="slot"
+                            :class="{ empty: !finalMatch.a, 'over-yi': isOverYi(finalMatch.a?.zhanli), 'slot--player': !!finalMatch.a, lost: isOut(finalMatch.a?.id, '决赛') }"
+                            @click.stop="finalMatch.a && openPlayerDetail(finalMatch.a.id)"
+                        >
+                            <template v-if="finalMatch.a">
+                                <span class="slot-name">{{ finalMatch.a.name }}</span>
+                                <span class="slot-zhanli">{{ formatZhanli(finalMatch.a.zhanli) }}</span>
+                            </template>
+                            <span v-else>{{ pendingLabel("决赛") }} · 左</span>
+                        </div>
                         <div class="vs">VS</div>
-                        <div class="slot empty">{{ pendingLabel("决赛") }} · 右</div>
-                        <div class="champion">冠军待定</div>
+                        <div
+                            class="slot"
+                            :class="{ empty: !finalMatch.b, 'over-yi': isOverYi(finalMatch.b?.zhanli), 'slot--player': !!finalMatch.b, lost: isOut(finalMatch.b?.id, '决赛') }"
+                            @click.stop="finalMatch.b && openPlayerDetail(finalMatch.b.id)"
+                        >
+                            <template v-if="finalMatch.b">
+                                <span class="slot-name">{{ finalMatch.b.name }}</span>
+                                <span class="slot-zhanli">{{ formatZhanli(finalMatch.b.zhanli) }}</span>
+                            </template>
+                            <span v-else>{{ pendingLabel("决赛") }} · 右</span>
+                        </div>
+                        <div class="champion">{{ championPlayer ? "冠军 " + championPlayer.name : "冠军待定" }}</div>
                     </div>
                 </section>
             </template>
 
             <template v-else>
-                <div v-if="showRaceSummary" class="round-summaries">
-                    <div class="race-summary">
-                        <span
-                            v-for="r in roundRaceStats"
-                            :key="String(r.id)"
-                            class="race-summary-chip"
-                            :class="{ 'tag-rainbow': r.id === 'tianlong', 'tag-rainbow-dawei': r.id === 'dawei' }"
-                            :style="r.id === 'tianlong' || r.id === 'dawei' ? undefined : { background: r.color + '18', color: r.color, borderColor: r.color + '55' }"
-                        >
-                            <span class="race-summary-main">{{ r.name }} <b>{{ r.count }}</b></span>
-                            <span class="race-pct">占比 {{ r.pct }}</span>
-                            <span v-if="r.advanceRate" class="race-advance">晋级率 {{ r.advanceRate }}</span>
-                        </span>
-                    </div>
-                    <div class="hero-summary">
-                        <div class="hero-summary-title">英雄数量</div>
-                        <div class="hero-summary-chips">
-                            <span
-                                v-for="h in roundHeroStats"
-                                :key="h.id"
-                                class="hero-summary-chip"
-                                :class="{
-                                    'hero-summary-chip--out': !h.unused && h.count === 0 && !!h.advanceRate,
-                                    'hero-summary-chip--unused': h.unused,
-                                    'hero-summary-chip--click': !h.unused
-                                }"
-                                @click.stop="openHeroUsers(h)"
-                            >
-                                <span class="hero-summary-main"><HeroIcon :hid="h.id" /><span class="hero-name">{{ h.name }}</span> <b>{{ h.count }}</b></span>
-                                <span class="race-pct">占比 {{ h.pct }}</span>
-                                <span v-if="h.unused" class="hero-unused">未上场</span>
-                                <span v-else-if="h.advanceRate" class="race-advance">晋级率 {{ h.advanceRate }}</span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
                 <div class="round-panels">
                     <section v-show="showLeftPanel" class="panel panel--left">
                         <h2 class="panel-title">
@@ -460,19 +513,92 @@
                                     <span class="knockout-range">{{ leftSemiMatch.range }}</span>
                                 </div>
                                 <div class="match match--knockout match--semi">
-                                    <div class="slot empty">{{ pendingLabel("半决赛") }}</div>
-                                    <div class="slot empty">{{ pendingLabel("半决赛") }}</div>
+                                    <div
+                                        class="slot"
+                                        :class="{ empty: !leftSemiMatch.a, 'over-yi': isOverYi(leftSemiMatch.a?.zhanli), 'slot--player': !!leftSemiMatch.a, lost: isOut(leftSemiMatch.a?.id, '半决赛') }"
+                                        :title="leftSemiMatch.a ? '点击查看英雄顺位' : undefined"
+                                        @click.stop="leftSemiMatch.a && openPlayerDetail(leftSemiMatch.a.id)"
+                                    >
+                                        <template v-if="leftSemiMatch.a">
+                                            <span class="slot-name">{{ leftSemiMatch.a.name }}</span>
+                                            <span class="slot-zhanli">{{ formatZhanli(leftSemiMatch.a.zhanli) }}</span>
+                                        </template>
+                                        <span v-else class="slot-empty">{{ pendingLabel("半决赛") }}</span>
+                                    </div>
+                                    <div
+                                        class="slot"
+                                        :class="{ empty: !leftSemiMatch.b, 'over-yi': isOverYi(leftSemiMatch.b?.zhanli), 'slot--player': !!leftSemiMatch.b, lost: isOut(leftSemiMatch.b?.id, '半决赛') }"
+                                        :title="leftSemiMatch.b ? '点击查看英雄顺位' : undefined"
+                                        @click.stop="leftSemiMatch.b && openPlayerDetail(leftSemiMatch.b.id)"
+                                    >
+                                        <template v-if="leftSemiMatch.b">
+                                            <span class="slot-name">{{ leftSemiMatch.b.name }}</span>
+                                            <span class="slot-zhanli">{{ formatZhanli(leftSemiMatch.b.zhanli) }}</span>
+                                        </template>
+                                        <span v-else class="slot-empty">{{ pendingLabel("半决赛") }}</span>
+                                    </div>
                                 </div>
                             </section>
                         </div>
 
                         <div class="final-col">
+                            <div class="round-title">季军赛</div>
+                            <div class="third-match">
+                                <div
+                                    class="slot slot--third"
+                                    :class="{ empty: !thirdMatch.a, 'over-yi': isOverYi(thirdMatch.a?.zhanli), 'slot--player': !!thirdMatch.a, lost: isOut(thirdMatch.a?.id, '季军赛') }"
+                                    :title="thirdMatch.a ? '点击查看英雄顺位' : undefined"
+                                    @click.stop="thirdMatch.a && openPlayerDetail(thirdMatch.a.id)"
+                                >
+                                    <template v-if="thirdMatch.a">
+                                        <span class="slot-name">{{ thirdMatch.a.name }}</span>
+                                        <span class="slot-zhanli">{{ formatZhanli(thirdMatch.a.zhanli) }}</span>
+                                    </template>
+                                    <span v-else class="slot-empty">左半决赛负者</span>
+                                </div>
+                                <div class="vs">VS</div>
+                                <div
+                                    class="slot slot--third"
+                                    :class="{ empty: !thirdMatch.b, 'over-yi': isOverYi(thirdMatch.b?.zhanli), 'slot--player': !!thirdMatch.b, lost: isOut(thirdMatch.b?.id, '季军赛') }"
+                                    :title="thirdMatch.b ? '点击查看英雄顺位' : undefined"
+                                    @click.stop="thirdMatch.b && openPlayerDetail(thirdMatch.b.id)"
+                                >
+                                    <template v-if="thirdMatch.b">
+                                        <span class="slot-name">{{ thirdMatch.b.name }}</span>
+                                        <span class="slot-zhanli">{{ formatZhanli(thirdMatch.b.zhanli) }}</span>
+                                    </template>
+                                    <span v-else class="slot-empty">右半决赛负者</span>
+                                </div>
+                                <div class="champion champion--third">{{ thirdPlacePlayer ? "季军 " + thirdPlacePlayer.name : "季军待定" }}</div>
+                            </div>
                             <div class="round-title">决赛</div>
                             <div class="final-match">
-                                <div class="slot slot--final empty">左半决赛胜者</div>
+                                <div
+                                    class="slot slot--final"
+                                    :class="{ empty: !finalMatch.a, 'over-yi': isOverYi(finalMatch.a?.zhanli), 'slot--player': !!finalMatch.a, lost: isOut(finalMatch.a?.id, '决赛') }"
+                                    :title="finalMatch.a ? '点击查看英雄顺位' : undefined"
+                                    @click.stop="finalMatch.a && openPlayerDetail(finalMatch.a.id)"
+                                >
+                                    <template v-if="finalMatch.a">
+                                        <span class="slot-name">{{ finalMatch.a.name }}</span>
+                                        <span class="slot-zhanli">{{ formatZhanli(finalMatch.a.zhanli) }}</span>
+                                    </template>
+                                    <span v-else class="slot-empty">左半决赛胜者</span>
+                                </div>
                                 <div class="vs">VS</div>
-                                <div class="slot slot--final empty">右半决赛胜者</div>
-                                <div class="champion">冠军待定</div>
+                                <div
+                                    class="slot slot--final"
+                                    :class="{ empty: !finalMatch.b, 'over-yi': isOverYi(finalMatch.b?.zhanli), 'slot--player': !!finalMatch.b, lost: isOut(finalMatch.b?.id, '决赛') }"
+                                    :title="finalMatch.b ? '点击查看英雄顺位' : undefined"
+                                    @click.stop="finalMatch.b && openPlayerDetail(finalMatch.b.id)"
+                                >
+                                    <template v-if="finalMatch.b">
+                                        <span class="slot-name">{{ finalMatch.b.name }}</span>
+                                        <span class="slot-zhanli">{{ formatZhanli(finalMatch.b.zhanli) }}</span>
+                                    </template>
+                                    <span v-else class="slot-empty">右半决赛胜者</span>
+                                </div>
+                                <div class="champion">{{ championPlayer ? "冠军 " + championPlayer.name : "冠军待定" }}</div>
                             </div>
                             <div class="final-zones">
                                 <span>左：一～四区 → 半决赛</span>
@@ -487,8 +613,30 @@
                                     <span class="knockout-range">{{ rightSemiMatch.range }}</span>
                                 </div>
                                 <div class="match match--knockout match--semi">
-                                    <div class="slot empty">{{ pendingLabel("半决赛") }}</div>
-                                    <div class="slot empty">{{ pendingLabel("半决赛") }}</div>
+                                    <div
+                                        class="slot"
+                                        :class="{ empty: !rightSemiMatch.a, 'over-yi': isOverYi(rightSemiMatch.a?.zhanli), 'slot--player': !!rightSemiMatch.a, lost: isOut(rightSemiMatch.a?.id, '半决赛') }"
+                                        :title="rightSemiMatch.a ? '点击查看英雄顺位' : undefined"
+                                        @click.stop="rightSemiMatch.a && openPlayerDetail(rightSemiMatch.a.id)"
+                                    >
+                                        <template v-if="rightSemiMatch.a">
+                                            <span class="slot-name">{{ rightSemiMatch.a.name }}</span>
+                                            <span class="slot-zhanli">{{ formatZhanli(rightSemiMatch.a.zhanli) }}</span>
+                                        </template>
+                                        <span v-else class="slot-empty">{{ pendingLabel("半决赛") }}</span>
+                                    </div>
+                                    <div
+                                        class="slot"
+                                        :class="{ empty: !rightSemiMatch.b, 'over-yi': isOverYi(rightSemiMatch.b?.zhanli), 'slot--player': !!rightSemiMatch.b, lost: isOut(rightSemiMatch.b?.id, '半决赛') }"
+                                        :title="rightSemiMatch.b ? '点击查看英雄顺位' : undefined"
+                                        @click.stop="rightSemiMatch.b && openPlayerDetail(rightSemiMatch.b.id)"
+                                    >
+                                        <template v-if="rightSemiMatch.b">
+                                            <span class="slot-name">{{ rightSemiMatch.b.name }}</span>
+                                            <span class="slot-zhanli">{{ formatZhanli(rightSemiMatch.b.zhanli) }}</span>
+                                        </template>
+                                        <span v-else class="slot-empty">{{ pendingLabel("半决赛") }}</span>
+                                    </div>
                                 </div>
                             </section>
                             <div class="knockout-join knockout-join--1" aria-hidden="true"><span class="join-out"></span></div>
@@ -647,6 +795,10 @@ function goHeroGold() {
     router.push("/jinzhusai/heroGold");
 }
 
+function goPlayerRank() {
+    router.push("/jinzhusai/playerRank");
+}
+
 type MatchView = {
     a: PlayerSlotInfo | null;
     b: PlayerSlotInfo | null;
@@ -658,7 +810,7 @@ type RoundView = {
     matches: MatchView[];
 };
 
-type RoundKey = "128" | "64" | "32" | "16" | "8" | "semi" | "final" | "all";
+type RoundKey = "128" | "64" | "32" | "16" | "8" | "semi" | "third" | "final" | "all";
 type HalfKey = "left" | "right";
 type ViewMode = "rounds" | "zhanli" | "roster";
 type ZhanliOrder = "desc" | "asc";
@@ -682,10 +834,11 @@ const roundTabs: { key: RoundKey; label: string }[] = [
     { key: "16", label: "16强" },
     { key: "8", label: "8强" },
     { key: "semi", label: "半决赛" },
+    { key: "third", label: "季军赛" },
     { key: "final", label: "决赛" }
 ];
 
-const ROUND_KEY_TO_INDEX: Record<Exclude<RoundKey, "final" | "all">, number> = {
+const ROUND_KEY_TO_INDEX: Record<Exclude<RoundKey, "third" | "final" | "all">, number> = {
     "128": 0,
     "64": 1,
     "32": 2,
@@ -768,15 +921,21 @@ const heroUserTitle = computed(() => {
 const heroUserPlayers = computed(() => {
     if (!heroUserHero.value) return [];
     const pool =
-        activeRound.value === "8"
-            ? roster.filter((r) => hasAdvanced(r, "16"))
-            : activeRound.value === "16"
-              ? roster.filter((r) => hasAdvanced(r, "32"))
-              : activeRound.value === "32"
-                ? roster.filter((r) => hasAdvanced(r, "64"))
-                : activeRound.value === "64"
-                  ? roster.filter((r) => hasAdvanced(r))
-                  : roster;
+        activeRound.value === "final"
+            ? roster.filter((r) => hasAdvanced(r, "4"))
+            : activeRound.value === "third"
+              ? roster.filter((r) => r.rounds["4"]?.advanced === false)
+              : activeRound.value === "semi"
+                ? roster.filter((r) => hasAdvanced(r, "8"))
+                : activeRound.value === "8"
+                  ? roster.filter((r) => hasAdvanced(r, "16"))
+                  : activeRound.value === "16"
+                    ? roster.filter((r) => hasAdvanced(r, "32"))
+                    : activeRound.value === "32"
+                      ? roster.filter((r) => hasAdvanced(r, "64"))
+                      : activeRound.value === "64"
+                        ? roster.filter((r) => hasAdvanced(r))
+                        : roster;
     return getHeroUsers(heroUserHero.value.id, pool);
 });
 
@@ -983,7 +1142,11 @@ watch(activeRound, (key) => {
 });
 
 const showHalfSwitch = computed(
-    () => isMobile.value && activeRound.value !== "final" && activeRound.value !== "all"
+    () =>
+        isMobile.value &&
+        activeRound.value !== "third" &&
+        activeRound.value !== "final" &&
+        activeRound.value !== "all"
 );
 
 const showLeftPanel = computed(() => !isMobile.value || activeHalf.value === "left");
@@ -1043,6 +1206,7 @@ const ROUND_TITLE_KEY: Record<string, BracketRound> = {
     "16强": "16",
     "8强": "8",
     半决赛: "4",
+    季军赛: "third",
     决赛: "final"
 };
 
@@ -1123,6 +1287,21 @@ function zoneChampion(start: number, end: number): PlayerSlotInfo | null {
     return p ? getPlayerSlot(p.id) : null;
 }
 
+function eightWinner(start: number, end: number): PlayerSlotInfo | null {
+    const p = roster.find((r) => r.id >= start && r.id <= end && hasAdvanced(r, "8"));
+    return p ? getPlayerSlot(p.id) : null;
+}
+
+function semiLoser(start: number, end: number): PlayerSlotInfo | null {
+    const p = roster.find((r) => r.id >= start && r.id <= end && r.rounds["4"]?.advanced === false);
+    return p ? getPlayerSlot(p.id) : null;
+}
+
+function semiWinner(start: number, end: number): PlayerSlotInfo | null {
+    const p = roster.find((r) => r.id >= start && r.id <= end && hasAdvanced(r, "4"));
+    return p ? getPlayerSlot(p.id) : null;
+}
+
 function toPairs<T>(list: T[]): T[][] {
     const pairs: T[][] = [];
     for (let i = 0; i < list.length; i += 2) {
@@ -1139,22 +1318,44 @@ const leftEightMatches = computed<KnockoutMatch[]>(() => [
     { range: "三/四区", a: zoneChampion(33, 48), b: zoneChampion(49, 64) }
 ]);
 
-const leftSemiMatch: KnockoutMatch = {
+const leftSemiMatch = computed<KnockoutMatch>(() => ({
     range: "左半区",
-    a: null,
-    b: null
-};
+    a: eightWinner(1, 32),
+    b: eightWinner(33, 64)
+}));
 
 const rightEightMatches = computed<KnockoutMatch[]>(() => [
     { range: "五/六区", a: zoneChampion(65, 80), b: zoneChampion(81, 96) },
     { range: "七/八区", a: zoneChampion(97, 112), b: zoneChampion(113, 128) }
 ]);
 
-const rightSemiMatch: KnockoutMatch = {
+const rightSemiMatch = computed<KnockoutMatch>(() => ({
     range: "右半区",
-    a: null,
-    b: null
-};
+    a: eightWinner(65, 96),
+    b: eightWinner(97, 128)
+}));
+
+const thirdMatch = computed<KnockoutMatch>(() => ({
+    range: "半决赛负者",
+    a: semiLoser(1, 64),
+    b: semiLoser(65, 128)
+}));
+
+const finalMatch = computed<KnockoutMatch>(() => ({
+    range: "决赛",
+    a: semiWinner(1, 64),
+    b: semiWinner(65, 128)
+}));
+
+const championPlayer = computed(() => {
+    const p = roster.find((r) => r.rounds.final?.advanced);
+    return p ? getPlayerSlot(p.id) : null;
+});
+
+const thirdPlacePlayer = computed(() => {
+    const p = roster.find((r) => r.rounds.third?.advanced);
+    return p ? getPlayerSlot(p.id) : null;
+});
 
 const leftRounds = computed<RoundView[]>(() => {
     const first = buildFirstRound(1, HALF);
@@ -1162,13 +1363,14 @@ const leftRounds = computed<RoundView[]>(() => {
     const r32 = buildWinnerRound(r64.matches, ROUND_TITLES[2], 4, "64");
     const r16 = buildWinnerRound(r32.matches, ROUND_TITLES[3], 8, "32");
     const r8 = buildWinnerRound(r16.matches, ROUND_TITLES[4], 16, "16");
+    const r4 = buildWinnerRound(r8.matches, ROUND_TITLES[5], 32, "8");
     return [
         { title: ROUND_TITLES[0], matches: first },
         r64,
         r32,
         r16,
         r8,
-        ...buildLaterRounds(r8.matches.length, 5, 32)
+        r4
     ];
 });
 
@@ -1178,13 +1380,14 @@ const rightRounds = computed<RoundView[]>(() => {
     const r32 = buildWinnerRound(r64.matches, ROUND_TITLES[2], 4, "64");
     const r16 = buildWinnerRound(r32.matches, ROUND_TITLES[3], 8, "32");
     const r8 = buildWinnerRound(r16.matches, ROUND_TITLES[4], 16, "16");
+    const r4 = buildWinnerRound(r8.matches, ROUND_TITLES[5], 32, "8");
     return [
         { title: ROUND_TITLES[0], matches: first },
         r64,
         r32,
         r16,
         r8,
-        ...buildLaterRounds(r8.matches.length, 5, 32)
+        r4
     ];
 });
 
@@ -1199,7 +1402,10 @@ const showRaceSummary = computed(
         activeRound.value === "64" ||
         activeRound.value === "32" ||
         activeRound.value === "16" ||
-        activeRound.value === "8"
+        activeRound.value === "8" ||
+        activeRound.value === "semi" ||
+        activeRound.value === "third" ||
+        activeRound.value === "final"
 );
 
 function formatPct(count: number, total: number) {
@@ -1207,8 +1413,11 @@ function formatPct(count: number, total: number) {
     return `${((count / total) * 100).toFixed(1)}%`;
 }
 
-type SummaryRound = "128" | "64" | "32" | "16" | "8";
+type SummaryRound = "128" | "64" | "32" | "16" | "8" | "semi" | "third" | "final";
 const SUMMARY_PREV: Record<Exclude<SummaryRound, "128">, SummaryRound> = {
+    final: "semi",
+    third: "semi",
+    semi: "8",
     "8": "16",
     "16": "32",
     "32": "64",
@@ -1216,7 +1425,16 @@ const SUMMARY_PREV: Record<Exclude<SummaryRound, "128">, SummaryRound> = {
 };
 
 function isSummaryRound(round: string): round is SummaryRound {
-    return round === "128" || round === "64" || round === "32" || round === "16" || round === "8";
+    return (
+        round === "128" ||
+        round === "64" ||
+        round === "32" ||
+        round === "16" ||
+        round === "8" ||
+        round === "semi" ||
+        round === "third" ||
+        round === "final"
+    );
 }
 
 const lists128 = computed(() => players.map((p) => p.heroList));
@@ -1224,31 +1442,49 @@ const lists64 = computed(() => roster.filter((r) => hasAdvanced(r)).map((r) => r
 const lists32 = computed(() => roster.filter((r) => hasAdvanced(r, "64")).map((r) => r.heroList));
 const lists16 = computed(() => roster.filter((r) => hasAdvanced(r, "32")).map((r) => r.heroList));
 const lists8 = computed(() => roster.filter((r) => hasAdvanced(r, "16")).map((r) => r.heroList));
+const listsSemi = computed(() => roster.filter((r) => hasAdvanced(r, "8")).map((r) => r.heroList));
+const listsThird = computed(() => roster.filter((r) => r.rounds["4"]?.advanced === false).map((r) => r.heroList));
+const listsFinal = computed(() => roster.filter((r) => hasAdvanced(r, "4")).map((r) => r.heroList));
 const raceStats128 = computed(() => countRacesFromHeroLists(lists128.value));
 const raceStats64 = computed(() => countRacesFromHeroLists(lists64.value));
 const raceStats32 = computed(() => countRacesFromHeroLists(lists32.value));
 const raceStats16 = computed(() => countRacesFromHeroLists(lists16.value));
 const raceStats8 = computed(() => countRacesFromHeroLists(lists8.value));
+const raceStatsSemi = computed(() => countRacesFromHeroLists(listsSemi.value));
+const raceStatsThird = computed(() => countRacesFromHeroLists(listsThird.value));
+const raceStatsFinal = computed(() => countRacesFromHeroLists(listsFinal.value));
 const racePlayerStats128 = computed(() => countRacePlayersFromHeroLists(lists128.value));
 const racePlayerStats64 = computed(() => countRacePlayersFromHeroLists(lists64.value));
 const racePlayerStats32 = computed(() => countRacePlayersFromHeroLists(lists32.value));
 const racePlayerStats16 = computed(() => countRacePlayersFromHeroLists(lists16.value));
 const racePlayerStats8 = computed(() => countRacePlayersFromHeroLists(lists8.value));
+const racePlayerStatsSemi = computed(() => countRacePlayersFromHeroLists(listsSemi.value));
+const racePlayerStatsThird = computed(() => countRacePlayersFromHeroLists(listsThird.value));
+const racePlayerStatsFinal = computed(() => countRacePlayersFromHeroLists(listsFinal.value));
 const heroStats128 = computed(() => countHeroesFromHeroLists(lists128.value));
 const heroStats64 = computed(() => countHeroesFromHeroLists(lists64.value));
 const heroStats32 = computed(() => countHeroesFromHeroLists(lists32.value));
 const heroStats16 = computed(() => countHeroesFromHeroLists(lists16.value));
 const heroStats8 = computed(() => countHeroesFromHeroLists(lists8.value));
+const heroStatsSemi = computed(() => countHeroesFromHeroLists(listsSemi.value));
+const heroStatsThird = computed(() => countHeroesFromHeroLists(listsThird.value));
+const heroStatsFinal = computed(() => countHeroesFromHeroLists(listsFinal.value));
 const tianlong128 = computed(() => countTianlongPlayers(lists128.value));
 const tianlong64 = computed(() => countTianlongPlayers(lists64.value));
 const tianlong32 = computed(() => countTianlongPlayers(lists32.value));
 const tianlong16 = computed(() => countTianlongPlayers(lists16.value));
 const tianlong8 = computed(() => countTianlongPlayers(lists8.value));
+const tianlongSemi = computed(() => countTianlongPlayers(listsSemi.value));
+const tianlongThird = computed(() => countTianlongPlayers(listsThird.value));
+const tianlongFinal = computed(() => countTianlongPlayers(listsFinal.value));
 const dawei128 = computed(() => countDaweiTianlongPlayers(lists128.value));
 const dawei64 = computed(() => countDaweiTianlongPlayers(lists64.value));
 const dawei32 = computed(() => countDaweiTianlongPlayers(lists32.value));
 const dawei16 = computed(() => countDaweiTianlongPlayers(lists16.value));
 const dawei8 = computed(() => countDaweiTianlongPlayers(lists8.value));
+const daweiSemi = computed(() => countDaweiTianlongPlayers(listsSemi.value));
+const daweiThird = computed(() => countDaweiTianlongPlayers(listsThird.value));
+const daweiFinal = computed(() => countDaweiTianlongPlayers(listsFinal.value));
 
 const roundRaceStats = computed(() => {
     const round = isSummaryRound(activeRound.value) ? activeRound.value : "128";
@@ -1257,35 +1493,50 @@ const roundRaceStats = computed(() => {
         "64": raceStats64.value,
         "32": raceStats32.value,
         "16": raceStats16.value,
-        "8": raceStats8.value
+        "8": raceStats8.value,
+        semi: raceStatsSemi.value,
+        third: raceStatsThird.value,
+        final: raceStatsFinal.value
     };
     const racePlayerByRound: Record<SummaryRound, typeof racePlayerStats128.value> = {
         "128": racePlayerStats128.value,
         "64": racePlayerStats64.value,
         "32": racePlayerStats32.value,
         "16": racePlayerStats16.value,
-        "8": racePlayerStats8.value
+        "8": racePlayerStats8.value,
+        semi: racePlayerStatsSemi.value,
+        third: racePlayerStatsThird.value,
+        final: racePlayerStatsFinal.value
     };
     const listByRound: Record<SummaryRound, number[][]> = {
         "128": lists128.value,
         "64": lists64.value,
         "32": lists32.value,
         "16": lists16.value,
-        "8": lists8.value
+        "8": lists8.value,
+        semi: listsSemi.value,
+        third: listsThird.value,
+        final: listsFinal.value
     };
     const tianlongByRound: Record<SummaryRound, number> = {
         "128": tianlong128.value,
         "64": tianlong64.value,
         "32": tianlong32.value,
         "16": tianlong16.value,
-        "8": tianlong8.value
+        "8": tianlong8.value,
+        semi: tianlongSemi.value,
+        third: tianlongThird.value,
+        final: tianlongFinal.value
     };
     const daweiByRound: Record<SummaryRound, number> = {
         "128": dawei128.value,
         "64": dawei64.value,
         "32": dawei32.value,
         "16": dawei16.value,
-        "8": dawei8.value
+        "8": dawei8.value,
+        semi: daweiSemi.value,
+        third: daweiThird.value,
+        final: daweiFinal.value
     };
     const prevRound = round === "128" ? null : SUMMARY_PREV[round];
     const raceRows = raceByRound[round];
@@ -1349,7 +1600,10 @@ const roundHeroStats = computed(() => {
         "64": heroStats64.value,
         "32": heroStats32.value,
         "16": heroStats16.value,
-        "8": heroStats8.value
+        "8": heroStats8.value,
+        semi: heroStatsSemi.value,
+        third: heroStatsThird.value,
+        final: heroStatsFinal.value
     };
     const prevRound = round === "128" ? null : SUMMARY_PREV[round];
     if (!prevRound) {
@@ -1384,13 +1638,13 @@ const roundHeroStats = computed(() => {
 });
 
 const leftActiveMatches = computed(() => {
-    if (activeRound.value === "final" || activeRound.value === "all") return [];
+    if (activeRound.value === "third" || activeRound.value === "final" || activeRound.value === "all") return [];
     const idx = ROUND_KEY_TO_INDEX[activeRound.value];
     return leftRounds.value[idx]?.matches || [];
 });
 
 const rightActiveMatches = computed(() => {
-    if (activeRound.value === "final" || activeRound.value === "all") return [];
+    if (activeRound.value === "third" || activeRound.value === "final" || activeRound.value === "all") return [];
     const idx = ROUND_KEY_TO_INDEX[activeRound.value];
     return rightRounds.value[idx]?.matches || [];
 });
@@ -2256,6 +2510,16 @@ function goHeroWinRate() {
     color: #b45309;
 }
 
+.panel--third {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.panel--third .panel-title {
+    justify-content: center;
+    color: #78716c;
+}
+
 .match-list {
     display: grid;
     grid-template-columns: 1fr;
@@ -2436,6 +2700,22 @@ function goHeroWinRate() {
     border: 2px solid #f59e0b;
 }
 
+.third-card {
+    background: #f8fafc;
+    border-color: #94a3b8;
+}
+
+.third-card .slot,
+.slot--third {
+    justify-content: center;
+    text-align: center;
+    background: #e2e8f0 !important;
+    border-color: #94a3b8 !important;
+    color: #334155 !important;
+    min-height: 44px;
+    font-size: 15px;
+}
+
 .final-card .slot,
 .slot--final {
     justify-content: center;
@@ -2461,6 +2741,10 @@ function goHeroWinRate() {
     font-size: 15px;
     font-weight: 800;
     color: #b45309;
+}
+
+.champion--third {
+    color: #57534e;
 }
 
 .bracket-viewport {
@@ -3213,7 +3497,8 @@ function goHeroWinRate() {
     gap: 8px;
 }
 
-.final-match {
+.final-match,
+.third-match {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -3221,8 +3506,16 @@ function goHeroWinRate() {
     width: 148px;
     padding: 10px 8px;
     border-radius: 10px;
+}
+
+.final-match {
     background: #fffbeb;
     border: 2px solid #f59e0b;
+}
+
+.third-match {
+    background: #f8fafc;
+    border: 2px solid #94a3b8;
 }
 
 .final-zones {
@@ -3236,7 +3529,8 @@ function goHeroWinRate() {
     line-height: 1.35;
 }
 
-.slot--final {
+.slot--final,
+.slot--third {
     height: 32px;
     line-height: 32px;
     text-align: center;
@@ -3411,12 +3705,14 @@ function goHeroWinRate() {
         min-width: 0;
     }
 
-    .final-match {
+    .final-match,
+    .third-match {
         width: 160px;
         padding: 12px 10px;
     }
 
-    .slot--final {
+    .slot--final,
+    .slot--third {
         height: 36px;
         line-height: 36px;
         font-size: 14px;
