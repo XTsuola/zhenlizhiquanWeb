@@ -24,7 +24,8 @@ const TOOL_COLORS = ["#4f9bc4", "#45a8b0", "#5a8fc0", "#6a9bb0"];
 const tools = [
     { label: "英雄消耗", path: "/heroZuanshiTools" },
     { label: "神器计算", path: "/shenqiTools" },
-    { label: "钻石收入", path: "/zuanshishouruTools" }
+    { label: "钻石收入", path: "/zuanshishouruTools" },
+    { label: "英雄碎片", path: "/shardList" }
 ];
 
 function goUrl(path: string) {

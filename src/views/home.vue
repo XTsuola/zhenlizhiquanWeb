@@ -153,10 +153,10 @@ const whereList: WhereItem[] = [{
     bgColor: TOOL_COLORS[1],
     log: "查询英雄"
 }, {
-    name: "英雄碎片",
-    url: "/shardList",
+    name: "贡献榜",
+    url: "/member",
     bgColor: TOOL_COLORS[2],
-    log: "查询碎片"
+    log: "查询贡献"
 }, {
     name: "模拟站位",
     url: "/position",
