@@ -11971,7 +11971,7 @@ export const gradeData = [
     },
     {
         "id": 91,
-        "name": "圣枪·卡洛琳",
+        "name": "圣枪·卡罗琳",
         "zhenyin": 1,
         "quality": 4,
         "cost": 4,
@@ -12244,7 +12244,7 @@ export const gradeData = [
         "type": 4,
         "img": "/simangdiguo/fuwen_huihuangzanmeishi.jpg",
         "grade": "[4]",
-        "tag": "[1,21]",
+        "tag": "[1,8,21]",
         "data": [
             {
                 "attack": 0,
@@ -26658,16 +26658,6 @@ export const gradeData = [
             {
                 "attack": 0,
                 "life": 0,
-                "effect": "暂无"
-            },
-            {
-                "attack": 0,
-                "life": 0,
-                "effect": "暂无"
-            },
-            {
-                "attack": 0,
-                "life": 0,
                 "effect": "随机敌军攻击-3，荒芜随机敌方区域，获得【传记·荒芜挽歌·破】（无视神佑）（1星）"
             },
             {
@@ -26729,6 +26719,16 @@ export const gradeData = [
                 "attack": 0,
                 "life": 0,
                 "effect": "随机敌军攻击-36，荒芜随机敌方区域，获得【传记·荒芜挽歌·破】（无视神佑）（13星）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军攻击-40，荒芜随机敌方区域，获得【传记·荒芜挽歌·破】（无视神佑）（14星）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "随机敌军攻击-44，荒芜随机敌方区域，获得【传记·荒芜挽歌·破】（无视神佑）（15星）"
             }
         ]
     },
@@ -26743,16 +26743,6 @@ export const gradeData = [
         "grade": "[4]",
         "tag": "[24]",
         "data": [
-            {
-                "attack": 0,
-                "life": 0,
-                "effect": "暂无"
-            },
-            {
-                "attack": 0,
-                "life": 0,
-                "effect": "暂无"
-            },
             {
                 "attack": 0,
                 "life": 0,
@@ -26862,6 +26852,16 @@ export const gradeData = [
                 "attack": 0,
                 "life": 0,
                 "effect": "在目标区域和随机区域召唤2个28/28幻想蛇-lv20，获得【传记·荒芜挽歌·终】（13星）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "在目标区域和随机区域召唤2个30/30幻想蛇-lv21，获得【传记·荒芜挽歌·终】（14星）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "在目标区域和随机区域召唤2个32/32幻想蛇-lv22，获得【传记·荒芜挽歌·终】（15星）"
             }
         ]
     },
@@ -26876,16 +26876,6 @@ export const gradeData = [
         "grade": "[4]",
         "tag": "",
         "data": [
-            {
-                "attack": 0,
-                "life": 0,
-                "effect": "暂无"
-            },
-            {
-                "attack": 0,
-                "life": 0,
-                "effect": "暂无"
-            },
             {
                 "attack": 0,
                 "life": 0,
@@ -26995,6 +26985,16 @@ export const gradeData = [
                 "attack": 0,
                 "life": 0,
                 "effect": "所有幻象生物+30/+30(无视魔免)（13星）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "所有幻象生物+34/+34(无视魔免)（14星）"
+            },
+            {
+                "attack": 0,
+                "life": 0,
+                "effect": "所有幻象生物+38/+38(无视魔免)（15星）"
             }
         ]
     },
@@ -39376,7 +39376,7 @@ export const gradeData = [
         "type": 4,
         "img": "/chanyigu/fuwen_rulaishenzhang.jpg",
         "grade": "[4]",
-        "tag": "[1,2,5]",
+        "tag": "[1,2,5,8,14]",
         "data": [
             {
                 "attack": 0,
@@ -66631,7 +66631,7 @@ export const gradeData = [
         "type": 4,
         "img": "/lianyushenyuan/fuwen_difentianyun.jpg",
         "grade": "[2]",
-        "tag": "[26]",
+        "tag": "[5,26]",
         "data": [
             {
                 "attack": 0,
@@ -78734,7 +78734,7 @@ export const gradeData = [
         "type": 4,
         "img": "/manshikuangye/fuwen_shipotianjing.jpg",
         "grade": "[4]",
-        "tag": "[3,5,21,26]",
+        "tag": "[2,3,5,21,26]",
         "data": [
             {
                 "attack": 0,
@@ -79818,107 +79818,107 @@ export const gradeData = [
             {
                 "attack": 3,
                 "life": 3,
-                "effect": "死亡:冰封自身位置，英雄生命+1"
+                "effect": "死亡:冰封自身位置"
             },
             {
                 "attack": 3,
                 "life": 4,
-                "effect": "死亡:冰封自身位置，英雄生命+1"
+                "effect": "死亡:冰封自身位置"
             },
             {
                 "attack": 4,
                 "life": 4,
-                "effect": "死亡:冰封自身位置，英雄生命+1"
+                "effect": "死亡:冰封自身位置"
             },
             {
                 "attack": 5,
                 "life": 5,
-                "effect": "死亡:冰封自身位置，英雄生命+1"
+                "effect": "死亡:冰封自身位置"
             },
             {
                 "attack": 6,
                 "life": 6,
-                "effect": "死亡:冰封自身位置，英雄生命+1"
+                "effect": "死亡:冰封自身位置"
             },
             {
                 "attack": 7,
                 "life": 7,
-                "effect": "死亡:冰封自身位置，英雄生命+1"
+                "effect": "死亡:冰封自身位置"
             },
             {
                 "attack": 8,
                 "life": 8,
-                "effect": "死亡:冰封自身位置，英雄生命+1"
+                "effect": "死亡:冰封自身位置"
             },
             {
                 "attack": 9,
                 "life": 9,
-                "effect": "死亡:冰封自身位置，英雄生命+1"
+                "effect": "死亡:冰封自身位置"
             },
             {
                 "attack": 10,
                 "life": 10,
-                "effect": "死亡:冰封自身位置，英雄生命+1"
+                "effect": "死亡:冰封自身位置"
             },
             {
                 "attack": 11,
                 "life": 12,
-                "effect": "死亡:冰封自身位置，英雄生命+1"
+                "effect": "死亡:冰封自身位置"
             },
             {
                 "attack": 13,
                 "life": 13,
-                "effect": "死亡:冰封自身位置，英雄生命+1"
+                "effect": "死亡:冰封自身位置"
             },
             {
                 "attack": 14,
                 "life": 15,
-                "effect": "死亡:冰封自身位置，英雄生命+1"
+                "effect": "死亡:冰封自身位置"
             },
             {
                 "attack": 16,
                 "life": 16,
-                "effect": "死亡:冰封自身位置，英雄生命+1"
+                "effect": "死亡:冰封自身位置"
             },
             {
                 "attack": 17,
                 "life": 18,
-                "effect": "死亡:冰封自身位置，英雄生命+1"
+                "effect": "死亡:冰封自身位置"
             },
             {
                 "attack": 19,
                 "life": 19,
-                "effect": "死亡:冰封自身位置，英雄生命+1"
+                "effect": "死亡:冰封自身位置"
             },
             {
                 "attack": 21,
                 "life": 21,
-                "effect": "死亡:冰封自身位置，英雄生命+1"
+                "effect": "死亡:冰封自身位置"
             },
             {
                 "attack": 23,
                 "life": 23,
-                "effect": "死亡:冰封自身位置，英雄生命+1"
+                "effect": "死亡:冰封自身位置"
             },
             {
                 "attack": 25,
                 "life": 25,
-                "effect": "死亡:冰封自身位置，英雄生命+1"
+                "effect": "死亡:冰封自身位置"
             },
             {
                 "attack": 27,
                 "life": 27,
-                "effect": "死亡:冰封自身位置，英雄生命+1"
+                "effect": "死亡:冰封自身位置"
             },
             {
                 "attack": 30,
                 "life": 30,
-                "effect": "死亡:冰封自身位置，英雄生命+1"
+                "effect": "死亡:冰封自身位置"
             },
             {
                 "attack": 33,
                 "life": 33,
-                "effect": "死亡:冰封自身位置，英雄生命+1"
+                "effect": "死亡:冰封自身位置"
             }
         ]
     },

@@ -247,7 +247,7 @@ export const skinSelect = [
   },
   {
     "cardId": 83,
-    "name": "圣枪·卡洛琳",
+    "name": "圣枪·卡罗琳",
     "zhenyin": 1,
     "cost": 4,
     "img": "/baihuachangqiang_kaluolin",
