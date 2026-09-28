@@ -46,6 +46,7 @@ interface ZhenyinItem {
 interface WhereItem {
     name: string;
     url: string;
+    query?: Record<string, string>;
     bgColor: string;
     log: string;
 }
@@ -173,11 +174,14 @@ const whereList: WhereItem[] = [{
     bgColor: TOOL_COLORS[1],
     log: "查询英雄"
 }, {
-    name: "金主赛",
-    url: "/jinzhusai",
+    name: "英雄评测",
+    url: "/heroList",
+    query: { tab: "review" },
     bgColor: TOOL_COLORS[2],
-    log: "金主赛"
-}, {
+    log: "英雄评测"
+},
+// { name: "金主赛", url: "/jinzhusai", bgColor: TOOL_COLORS[2], log: "金主赛" },
+{
     name: "留言建议",
     url: "/note",
     bgColor: TOOL_COLORS[3],
@@ -209,7 +213,7 @@ function goChongwu(id: number) {
 
 function goWhere(obj: WhereItem) {
     createLog(obj.log);
-    router.push(obj.url);
+    router.push({ path: obj.url, query: obj.query });
 }
 
 function createLog(name: string) {
