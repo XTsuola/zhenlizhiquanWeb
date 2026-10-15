@@ -6,10 +6,6 @@
             <div class="field-body">
                 <slot name="left_name" />
             </div>
-            <div class="field-label">氪度</div>
-            <div class="field-body">
-                <slot name="left_kedu" />
-            </div>
             <div class="field-label">英雄顺位</div>
             <div class="field-body field-body--last">
                 <slot name="left_hero" />
@@ -20,10 +16,6 @@
             <div class="field-label">昵称</div>
             <div class="field-body">
                 <slot name="right_name" />
-            </div>
-            <div class="field-label">氪度</div>
-            <div class="field-body">
-                <slot name="right_kedu" />
             </div>
             <div class="field-label">英雄顺位</div>
             <div class="field-body field-body--last">

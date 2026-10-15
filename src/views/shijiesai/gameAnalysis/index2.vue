@@ -46,7 +46,7 @@
 <script lang="ts" setup>
 import { ref, onMounted } from "vue";
 import { heroTable } from "@/data/heroData/index";
-import { shijiesaiInfoList, ShijiesaiInfoListType } from "@/api/shijiesai";
+import { shijiesaiData } from "@/data/shijiesaiData/all";
 import router from "@/router";
 
 const gameType = sessionStorage.getItem("gameType");
@@ -159,24 +159,16 @@ function getPreviousGameType() {
     return type;
 }
 
-async function fetchRaceStats(type: number) {
-    const params: ShijiesaiInfoListType = {
-        pageSize: 200,
-        pageNo: 1,
-        gameType: type
-    };
-    const res = await shijiesaiInfoList(params);
-    if (res.status == 200) {
-        return buildRaceStats(res.data.data);
-    }
-    return [];
+function fetchRaceStats(type: number) {
+    const raw = shijiesaiData.filter((e: any) => Math.floor(e.no / 10000) === type);
+    return buildRaceStats(raw);
 }
 
-async function getList() {
+function getList() {
     tableLoading.value = true;
     try {
-        const nowStats = await fetchRaceStats(parseInt(gameType as string));
-        const lastStats = await fetchRaceStats(getPreviousGameType());
+        const nowStats = fetchRaceStats(parseInt(gameType as string));
+        const lastStats = fetchRaceStats(getPreviousGameType());
         data.value = nowStats
             .map((now: any) => {
                 const last = lastStats.find((e: any) => e.id == now.id) || {

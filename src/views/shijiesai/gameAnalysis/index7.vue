@@ -52,7 +52,7 @@
 <script lang="ts" setup>
 import { ref, computed, onMounted } from "vue";
 import { heroTable } from "@/data/heroData/index";
-import { shijiesaiInfoList, ShijiesaiInfoListType } from "@/api/shijiesai";
+import { shijiesaiData } from "@/data/shijiesaiData/all";
 import router from "@/router";
 
 const gameType = sessionStorage.getItem("gameType");
@@ -160,40 +160,35 @@ function buildSummary(players: any[]) {
     ];
 }
 
-async function getList() {
+function getList() {
     tableLoading.value = true;
     try {
-        const params: ShijiesaiInfoListType = {
-            pageSize: 200,
-            pageNo: 1,
-            gameType: parseInt(gameType as string)
-        };
-        const res = await shijiesaiInfoList(params);
-        if (res.status == 200) {
-            const map = new Map<string, any>();
-            const data4 = res.data.data.filter((e: any) => e.no % 100 >= 1 && e.no % 100 <= 4);
-            for (const match of data4) {
-                addSide(map, match.no, "A", match.AInfo);
-                addSide(map, match.no, "B", match.BInfo);
-            }
-            data.value = [...map.values()]
-                .map((p: any) => {
-                    const raceList = toRaceList(p.raceCnt);
-                    return {
-                        id: p.id,
-                        name: p.name,
-                        raceList,
-                        tags: buildTags(raceList)
-                    };
-                })
-                .sort((a, b) => {
-                    const an = parseInt(a.name);
-                    const bn = parseInt(b.name);
-                    if (!Number.isNaN(an) && !Number.isNaN(bn)) return an - bn;
-                    return String(a.name).localeCompare(String(b.name), "zh");
-                });
-            summary.value = buildSummary(data.value);
+        const gt = parseInt(gameType as string);
+        const map = new Map<string, any>();
+        const data4 = shijiesaiData.filter(
+            (e: any) => Math.floor(e.no / 10000) === gt && e.no % 100 >= 1 && e.no % 100 <= 4
+        );
+        for (const match of data4) {
+            addSide(map, match.no, "A", match.AInfo);
+            addSide(map, match.no, "B", match.BInfo);
         }
+        data.value = [...map.values()]
+            .map((p: any) => {
+                const raceList = toRaceList(p.raceCnt);
+                return {
+                    id: p.id,
+                    name: p.name,
+                    raceList,
+                    tags: buildTags(raceList)
+                };
+            })
+            .sort((a, b) => {
+                const an = parseInt(a.name);
+                const bn = parseInt(b.name);
+                if (!Number.isNaN(an) && !Number.isNaN(bn)) return an - bn;
+                return String(a.name).localeCompare(String(b.name), "zh");
+            });
+        summary.value = buildSummary(data.value);
     } finally {
         tableLoading.value = false;
     }

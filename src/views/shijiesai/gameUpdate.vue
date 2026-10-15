@@ -38,13 +38,6 @@
                     </a-select-option>
                 </a-select>
             </template>
-            <template #left_kedu>
-                <a-select v-model:value="aInfo.kedu" class="full" placeholder="请选择氪度" :disabled="disabledFlag">
-                    <a-select-option v-for="item in keduList" :key="item.value" :value="item.value">
-                        {{ item.label }}
-                    </a-select-option>
-                </a-select>
-            </template>
             <template #left_hero>
                 <a-select
                     v-model:value="aInfo.hero"
@@ -68,13 +61,6 @@
                     @change="(value: number) => getXuanshou(value, 2)"
                 >
                     <a-select-option v-for="item in xuanshouSelect" :key="item.value" :value="item.value">
-                        {{ item.label }}
-                    </a-select-option>
-                </a-select>
-            </template>
-            <template #right_kedu>
-                <a-select v-model:value="bInfo.kedu" class="full" placeholder="请选择氪度" :disabled="disabledFlag">
-                    <a-select-option v-for="item in keduList" :key="item.value" :value="item.value">
                         {{ item.label }}
                     </a-select-option>
                 </a-select>
@@ -115,7 +101,7 @@
 <script lang="ts" setup>
 import { ref, reactive, computed, onMounted } from "vue";
 import { message } from "ant-design-vue";
-import { zhanquList, changciList, keduList, shengfuSelect } from "@/utils/func";
+import { zhanquList, changciList, shengfuSelect } from "@/utils/func";
 import { getHeroList } from "@/api/hero";
 import {
     updateShijiesaiInfo,

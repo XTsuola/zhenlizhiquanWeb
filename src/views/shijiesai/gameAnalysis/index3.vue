@@ -49,7 +49,7 @@
 <script lang="ts" setup>
 import { ref, onMounted } from "vue";
 import { heroTable } from "@/data/heroData/index";
-import { shijiesaiInfoList, ShijiesaiInfoListType } from "@/api/shijiesai";
+import { shijiesaiData } from "@/data/shijiesaiData/all";
 import router from "@/router";
 
 const gameType = sessionStorage.getItem("gameType");
@@ -143,48 +143,41 @@ function toHeroList(cnt: Record<number, number>) {
         .sort((a, b) => b.count - a.count);
 }
 
-async function getList() {
+function getList() {
     tableLoading.value = true;
     try {
-        const params: ShijiesaiInfoListType = {
-            pageSize: 200,
-            pageNo: 1,
-            gameType: parseInt(gameType as string)
-        };
-        const res = await shijiesaiInfoList(params);
-        if (res.status == 200) {
-            zhongzuData.forEach((e: any) => {
-                e.count1 = 0;
-                e.count2 = 0;
-                e.heroCnt = {};
-                e.heroCnt2 = {};
-            });
-            let originalData = res.data.data;
-            let data4 = originalData.filter((e: any) => {
-                return e.no % 100 >= 1 && e.no % 100 <= 4;
-            });
-            for (let i = 0; i < data4.length; i++) {
-                for (let j = 0; j < 4; j++) {
-                    const aObj: any = heroTable.find((e: any) => e.id == data4[i].AInfo.hero[j]);
-                    const bObj: any = heroTable.find((e: any) => e.id == data4[i].BInfo.hero[j]);
-                    addZhuPick(aObj);
-                    addFuPick(aObj);
-                    addZhuPick(bObj);
-                    addFuPick(bObj);
-                }
+        const gt = parseInt(gameType as string);
+        zhongzuData.forEach((e: any) => {
+            e.count1 = 0;
+            e.count2 = 0;
+            e.heroCnt = {};
+            e.heroCnt2 = {};
+        });
+        const originalData = shijiesaiData.filter((e: any) => Math.floor(e.no / 10000) === gt);
+        let data4 = originalData.filter((e: any) => {
+            return e.no % 100 >= 1 && e.no % 100 <= 4;
+        });
+        for (let i = 0; i < data4.length; i++) {
+            for (let j = 0; j < 4; j++) {
+                const aObj: any = heroTable.find((e: any) => e.id == data4[i].AInfo.hero[j]);
+                const bObj: any = heroTable.find((e: any) => e.id == data4[i].BInfo.hero[j]);
+                addZhuPick(aObj);
+                addFuPick(aObj);
+                addZhuPick(bObj);
+                addFuPick(bObj);
             }
-            const totalZhu = zhongzuData.reduce((sum: number, e: any) => sum + e.count1, 0);
-            const totalFu = zhongzuData.reduce((sum: number, e: any) => sum + e.count2, 0);
-            data.value = zhongzuData
-                .map((e: any) => ({
-                    ...e,
-                    rate1: formatRate(e.count1, totalZhu),
-                    rate2: formatRate(e.count2, totalFu),
-                    heroList: toHeroList(e.heroCnt),
-                    heroList2: toHeroList(e.heroCnt2)
-                }))
-                .sort((a: any, b: any) => (b.count1 + b.count2) - (a.count1 + a.count2));
         }
+        const totalZhu = zhongzuData.reduce((sum: number, e: any) => sum + e.count1, 0);
+        const totalFu = zhongzuData.reduce((sum: number, e: any) => sum + e.count2, 0);
+        data.value = zhongzuData
+            .map((e: any) => ({
+                ...e,
+                rate1: formatRate(e.count1, totalZhu),
+                rate2: formatRate(e.count2, totalFu),
+                heroList: toHeroList(e.heroCnt),
+                heroList2: toHeroList(e.heroCnt2)
+            }))
+            .sort((a: any, b: any) => (b.count1 + b.count2) - (a.count1 + a.count2));
     } finally {
         tableLoading.value = false;
     }

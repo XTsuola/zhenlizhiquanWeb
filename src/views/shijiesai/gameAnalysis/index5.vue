@@ -69,7 +69,7 @@
 <script lang="ts" setup>
 import { ref, onMounted } from "vue";
 import { heroTable } from "@/data/heroData/index";
-import { shijiesaiInfoList, ShijiesaiInfoListType } from "@/api/shijiesai";
+import { shijiesaiData } from "@/data/shijiesaiData/all";
 import router from "@/router";
 
 const gameType = sessionStorage.getItem("gameType");
@@ -161,59 +161,54 @@ function toggleExpand(id: number) {
     expandedId.value = expandedId.value === id ? null : id;
 }
 
-async function getList() {
+function getList() {
     tableLoading.value = true;
     try {
-        const params: ShijiesaiInfoListType = {
-            pageSize: 200,
-            pageNo: 1,
-            gameType: parseInt(gameType as string)
-        };
-        const res = await shijiesaiInfoList(params);
-        if (res.status == 200) {
-            const raceData = createRaceData();
-            const matchList = res.data.data.filter((e: any) => e.no % 100 >= 1 && e.no % 100 <= 8);
-            for (let i = 0; i < matchList.length; i++) {
-                for (let j = 0; j < matchList[i].shengfuList.length; j++) {
-                    const n = matchList[i].shengfuList[j];
-                    if (n != 1 && n != 2) continue;
-                    const aHero: any = heroTable.find((e: any) => e.id == matchList[i].AInfo.hero[j % 4]);
-                    const bHero: any = heroTable.find((e: any) => e.id == matchList[i].BInfo.hero[j % 4]);
-                    if (!aHero || !bHero) continue;
-                    if (n == 1) {
-                        addResult(raceData, aHero.zhu, aHero.id, "zhu", true);
-                        addResult(raceData, bHero.zhu, bHero.id, "zhu", false);
-                        addResult(raceData, aHero.fu, aHero.id, "fu", true);
-                        addResult(raceData, bHero.fu, bHero.id, "fu", false);
-                    } else {
-                        addResult(raceData, aHero.zhu, aHero.id, "zhu", false);
-                        addResult(raceData, bHero.zhu, bHero.id, "zhu", true);
-                        addResult(raceData, aHero.fu, aHero.id, "fu", false);
-                        addResult(raceData, bHero.fu, bHero.id, "fu", true);
-                    }
+        const gt = parseInt(gameType as string);
+        const raceData = createRaceData();
+        const matchList = shijiesaiData.filter(
+            (e: any) => Math.floor(e.no / 10000) === gt && e.no % 100 >= 1 && e.no % 100 <= 8
+        );
+        for (let i = 0; i < matchList.length; i++) {
+            for (let j = 0; j < matchList[i].shengfuList.length; j++) {
+                const n = matchList[i].shengfuList[j];
+                if (n != 1 && n != 2) continue;
+                const aHero: any = heroTable.find((e: any) => e.id == matchList[i].AInfo.hero[j % 4]);
+                const bHero: any = heroTable.find((e: any) => e.id == matchList[i].BInfo.hero[j % 4]);
+                if (!aHero || !bHero) continue;
+                if (n == 1) {
+                    addResult(raceData, aHero.zhu, aHero.id, "zhu", true);
+                    addResult(raceData, bHero.zhu, bHero.id, "zhu", false);
+                    addResult(raceData, aHero.fu, aHero.id, "fu", true);
+                    addResult(raceData, bHero.fu, bHero.id, "fu", false);
+                } else {
+                    addResult(raceData, aHero.zhu, aHero.id, "zhu", false);
+                    addResult(raceData, bHero.zhu, bHero.id, "zhu", true);
+                    addResult(raceData, aHero.fu, aHero.id, "fu", false);
+                    addResult(raceData, bHero.fu, bHero.id, "fu", true);
                 }
             }
-            data.value = raceData
-                .map((e: any) => {
-                    const zhu = formatRate(e.zhuSheng, e.zhuBai);
-                    const fu = formatRate(e.fuSheng, e.fuBai);
-                    const totalSheng = e.zhuSheng + e.fuSheng;
-                    const totalBai = e.zhuBai + e.fuBai;
-                    const total = formatRate(totalSheng, totalBai);
-                    return {
-                        ...e,
-                        zhuRate: zhu.text,
-                        fuRate: fu.text,
-                        totalSheng,
-                        totalBai,
-                        totalRate: total.text,
-                        _totalRate: total.rate,
-                        heroListZhu: toHeroList(e.heroZhu),
-                        heroListFu: toHeroList(e.heroFu)
-                    };
-                })
-                .sort((a: any, b: any) => b._totalRate - a._totalRate || b.totalSheng + b.totalBai - (a.totalSheng + a.totalBai));
         }
+        data.value = raceData
+            .map((e: any) => {
+                const zhu = formatRate(e.zhuSheng, e.zhuBai);
+                const fu = formatRate(e.fuSheng, e.fuBai);
+                const totalSheng = e.zhuSheng + e.fuSheng;
+                const totalBai = e.zhuBai + e.fuBai;
+                const total = formatRate(totalSheng, totalBai);
+                return {
+                    ...e,
+                    zhuRate: zhu.text,
+                    fuRate: fu.text,
+                    totalSheng,
+                    totalBai,
+                    totalRate: total.text,
+                    _totalRate: total.rate,
+                    heroListZhu: toHeroList(e.heroZhu),
+                    heroListFu: toHeroList(e.heroFu)
+                };
+            })
+            .sort((a: any, b: any) => b._totalRate - a._totalRate || b.totalSheng + b.totalBai - (a.totalSheng + a.totalBai));
     } finally {
         tableLoading.value = false;
     }

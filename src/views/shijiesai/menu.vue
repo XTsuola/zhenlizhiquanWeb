@@ -19,7 +19,7 @@
 import router from "@/router";
 
 const TOOL_COLORS = ["#4f9bc4", "#45a8b0", "#6a9bb0"];
-const seasons = [7, 8, 9, 10, 11, 12].map((num) => ({
+const seasons = [7, 8, 9, 10, 11, 12, 13].map((num) => ({
     num,
     label: `第${num}届世界赛`
 }));

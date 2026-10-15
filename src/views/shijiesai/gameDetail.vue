@@ -26,13 +26,6 @@
             <template #left_name>
                 <a-input v-model:value="aInfo.name" placeholder="请输入昵称" disabled />
             </template>
-            <template #left_kedu>
-                <a-select v-model:value="aInfo.kedu" class="full" placeholder="请选择氪度" disabled>
-                    <a-select-option v-for="item in keduList" :key="item.value" :value="item.value">
-                        {{ item.label }}
-                    </a-select-option>
-                </a-select>
-            </template>
             <template #left_hero>
                 <a-select v-model:value="aInfo.hero" class="full" mode="multiple" placeholder="请选择英雄顺位" disabled>
                     <a-select-option v-for="item in heroSelect" :key="item.value" :value="item.value">
@@ -42,13 +35,6 @@
             </template>
             <template #right_name>
                 <a-input v-model:value="bInfo.name" placeholder="请输入昵称" disabled />
-            </template>
-            <template #right_kedu>
-                <a-select v-model:value="bInfo.kedu" class="full" placeholder="请选择氪度" disabled>
-                    <a-select-option v-for="item in keduList" :key="item.value" :value="item.value">
-                        {{ item.label }}
-                    </a-select-option>
-                </a-select>
             </template>
             <template #right_hero>
                 <a-select v-model:value="bInfo.hero" class="full" mode="multiple" placeholder="请选择英雄顺位" disabled>
@@ -73,7 +59,7 @@
 
 <script lang="ts" setup>
 import { ref, reactive, computed, onMounted } from "vue";
-import { zhanquList, changciList, keduList } from "@/utils/func";
+import { zhanquList, changciList } from "@/utils/func";
 import { getHeroList } from "@/api/hero";
 import type { XuanshouInfoType } from "@/api/shijiesai";
 import router from "@/router";
