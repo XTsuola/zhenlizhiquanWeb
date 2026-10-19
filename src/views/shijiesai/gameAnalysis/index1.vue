@@ -1,8 +1,9 @@
 <template>
     <div class="page">
         <div class="toolbar">
-            <h1 class="title">英雄击杀表&各强数据</h1>
+            <h1 class="title">英雄击杀表数据</h1>
             <div class="actions">
+                <a-button :type="viewMode === 'advance' ? 'primary' : 'default'" @click="toggleView">英雄晋级率</a-button>
                 <a-button @click="goBack">返回</a-button>
             </div>
         </div>
@@ -10,35 +11,63 @@
             <MyTabel :columnsData="columns" :rowClass="true" @detail="showModal" :dataSource="data"
                 :loading="tableLoading" />
         </div>
-        <a-modal v-model:open="visible" destroyOnClose :title="title" :maskClosable="false">
+        <a-modal v-model:open="visible" destroyOnClose :maskClosable="false">
+            <template #title>
+                <span class="modal-title">
+                    <img v-if="detailImg" class="avatar" :src="detailImg" :alt="title" />
+                    {{ title }}
+                </span>
+            </template>
             <a-tabs v-model:activeKey="activeKey">
                 <a-tab-pane key="1" tab="击杀">
                     <div>胜率：{{ nowShenglv.toFixed(2) }}%</div>
                     <div>英雄击杀排名：</div>
                     <ul class="modal-list">
-                        <li v-for="value in nowJishaList" :key="'k-' + value.name">{{ value.name }}：{{ value.count }}</li>
+                        <li v-for="value in nowJishaList" :key="'k-' + value.name" class="hero-line">
+                            <img class="avatar" :src="value.img" :alt="value.name" />
+                            <span>{{ value.name }}：{{ value.count }}</span>
+                        </li>
                     </ul>
                     <div>英雄被击杀排名：</div>
                     <ul>
-                        <li v-for="value in nowJishaList2" :key="'d-' + value.name">{{ value.name }}：{{ value.count }}</li>
+                        <li v-for="value in nowJishaList2" :key="'d-' + value.name" class="hero-line">
+                            <img class="avatar" :src="value.img" :alt="value.name" />
+                            <span>{{ value.name }}：{{ value.count }}</span>
+                        </li>
                     </ul>
                 </a-tab-pane>
                 <a-tab-pane key="2" tab="8强">
+                    <div class="advance-block">
+                        <div class="advance-label">8强→4强晋级率</div>
+                        <div class="advance-frac">{{ detailRate8Frac }}</div>
+                        <div v-if="detailRate8Pct" class="advance-pct">{{ detailRate8Pct }}</div>
+                    </div>
                     <ul class="modal-list">
                         <li v-for="name in nowPlayerList" :key="'p8-' + name">
                             <span>{{ name }}</span>
                             <span
-                                v-if="nowPlayerList2.length != 0 && nowPlayerList2.findIndex((e: any) => e == name) == -1"
+                                v-if="nowPlayerList2.length != 0 && nowPlayerList2.findIndex((e: any) => e == name) != -1"
+                                class="advanced">（晋级）</span>
+                            <span
+                                v-else-if="nowPlayerList2.length != 0 && nowPlayerList2.findIndex((e: any) => e == name) == -1"
                                 class="eliminated">（淘汰）</span>
                         </li>
                     </ul>
                 </a-tab-pane>
                 <a-tab-pane key="3" tab="4强">
+                    <div class="advance-block">
+                        <div class="advance-label">4强→决赛晋级率</div>
+                        <div class="advance-frac">{{ detailRate4Frac }}</div>
+                        <div v-if="detailRate4Pct" class="advance-pct">{{ detailRate4Pct }}</div>
+                    </div>
                     <ul class="modal-list">
                         <li v-for="name in nowPlayerList2" :key="'p4-' + name">
                             <span>{{ name }}</span>
                             <span
-                                v-if="nowPlayerList3.length == 0 || nowPlayerList3.findIndex((e: any) => e == name) == -1"
+                                v-if="nowPlayerList3.length != 0 && nowPlayerList3.findIndex((e: any) => e == name) != -1"
+                                class="advanced">（晋级）</span>
+                            <span
+                                v-else-if="nowPlayerList3.length != 0 && nowPlayerList3.findIndex((e: any) => e == name) == -1"
                                 class="eliminated">（淘汰）</span>
                         </li>
                     </ul>
@@ -57,57 +86,81 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted } from "vue";
+import { computed, ref, onMounted } from "vue";
 import { heroTable } from "@/data/heroData/index";
 import { shijiesaiData } from "@/data/shijiesaiData/all";
 import MyTabel from "@/components/table.vue";
 import router from "@/router";
 
+const IMG_PREFIX = import.meta.env.VITE_APP_BASE_URL + "heroImg";
 const gameType = sessionStorage.getItem("gameType");
 const tableLoading = ref(false);
+const viewMode = ref<"count" | "advance">("count");
 const visible = ref(false);
 const title = ref("");
+const detailImg = ref("");
+const detailRate8Frac = ref("—");
+const detailRate8Pct = ref("");
+const detailRate4Frac = ref("—");
+const detailRate4Pct = ref("");
 const data = ref<any>([]);
-const columns = ref<any>([
-    {
-        title: "名称",
-        dataIndex: "shortName",
-        key: "shortName",
-        width: 100,
-        ellipsis: true
-    },
-    {
-        title: "8强",
-        dataIndex: "count",
-        key: "count",
-        width: 72,
-        align: "center",
-        sorter: (a: any, b: any) => a.count - b.count,
-        defaultSortOrder: "descend"
-    },
-    {
-        title: "4强",
-        dataIndex: "count2",
-        key: "count2",
-        width: 72,
-        align: "center",
-        sorter: (a: any, b: any) => a.count2 - b.count2
-    },
-    {
-        title: "2强",
-        dataIndex: "count3",
-        key: "count3",
-        width: 72,
-        align: "center",
-        sorter: (a: any, b: any) => a.count3 - b.count3
-    },
-    {
-        title: "操作",
-        key: "action",
-        list: ["detail"],
-        width: 72
+const columns = computed(() => {
+    const head = { title: "头像", dataIndex: "headImg", key: "headImg", width: 64 };
+    const action = { title: "操作", key: "action", list: ["detail"], width: 72 };
+    if (viewMode.value === "advance") {
+        return [
+            head,
+            {
+                title: "8强→4强",
+                key: "rate8",
+                frac: "rate8Frac",
+                pct: "rate8Pct",
+                width: 110,
+                align: "center",
+                sorter: (a: any, b: any) => a.rate8 - b.rate8
+            },
+            {
+                title: "4强→决赛",
+                key: "rate4",
+                frac: "rate4Frac",
+                pct: "rate4Pct",
+                width: 110,
+                align: "center",
+                sorter: (a: any, b: any) => a.rate4 - b.rate4
+            },
+            action
+        ];
     }
-]);
+    return [
+        head,
+        {
+            title: "8强",
+            dataIndex: "count",
+            key: "count",
+            width: 72,
+            align: "center",
+            sorter: (a: any, b: any) => a.count - b.count,
+            defaultSortOrder: "descend"
+        },
+        {
+            title: "4强",
+            dataIndex: "count2",
+            key: "count2",
+            width: 72,
+            align: "center",
+            sorter: (a: any, b: any) => a.count2 - b.count2
+        },
+        {
+            title: "2强",
+            dataIndex: "count3",
+            key: "count3",
+            width: 72,
+            align: "center",
+            sorter: (a: any, b: any) => a.count3 - b.count3
+        },
+        action
+    ];
+});
 const nowJishaList = ref<any>([]);
 const nowJishaList2 = ref<any>([]);
 const nowShenglv = ref(0);
@@ -115,6 +168,22 @@ const nowPlayerList = ref<string[]>([]);
 const nowPlayerList2 = ref<string[]>([]);
 const nowPlayerList3 = ref<string[]>([]);
 const activeKey = ref("1");
+
+function advanceStat(baseNames: string[], laterNames: string[], laterExists: boolean) {
+    if (!laterExists || !baseNames.length) {
+        return { hit: 0, base: baseNames.length, rate: -1, frac: "—", pct: "" };
+    }
+    const later = new Set(laterNames);
+    const hit = baseNames.filter((name) => later.has(name)).length;
+    const rate = hit / baseNames.length;
+    return {
+        hit,
+        base: baseNames.length,
+        rate,
+        frac: `${hit}/${baseNames.length}`,
+        pct: `${(rate * 100).toFixed(2)}%`
+    };
+}
 
 function shortHeroName(name: string) {
     const i = name.indexOf("·");
@@ -142,6 +211,7 @@ function getList() {
             return {
                 id: e.id,
                 name: e.name,
+                img: IMG_PREFIX + e.img,
                 shortName: shortHeroName(e.name),
                 zhu: e.zhu,
                 fu: e.fu,
@@ -222,22 +292,55 @@ function getList() {
                 }
             }
         }
-        heroData.sort((a: any, b: any) => b.count - a.count);
+        const hasRound4 = data5.length > 0;
+        const hasFinal = data6.length > 0;
+        for (const hero of heroData) {
+            const to4 = advanceStat(hero.player, hero.player2, hasRound4);
+            const toFinal = advanceStat(hero.player2, hero.player3, hasFinal);
+            hero.rate8 = to4.rate;
+            hero.rate8Frac = to4.frac;
+            hero.rate8Pct = to4.pct;
+            hero.rate4 = toFinal.rate;
+            hero.rate4Frac = toFinal.frac;
+            hero.rate4Pct = toFinal.pct;
+        }
         data.value = heroData;
+        applySort();
     } finally {
         tableLoading.value = false;
     }
+}
+
+function applySort() {
+    const list = [...data.value];
+    if (viewMode.value === "advance") {
+        list.sort((a, b) => b.rate8 - a.rate8 || b.rate4 - a.rate4 || b.count - a.count);
+    } else {
+        list.sort((a, b) => b.count - a.count);
+    }
+    data.value = list;
+}
+
+function toggleView() {
+    viewMode.value = viewMode.value === "advance" ? "count" : "advance";
+    applySort();
 }
 
 function showModal(_: number, record: any) {
     nowJishaList.value = [];
     visible.value = true;
     title.value = record.name + "的信息";
+    detailImg.value = record.img || "";
+    detailRate8Frac.value = record.rate8Frac || "—";
+    detailRate8Pct.value = record.rate8Pct || "";
+    detailRate4Frac.value = record.rate4Frac || "—";
+    detailRate4Pct.value = record.rate4Pct || "";
     let data = [], data2 = [];
     for (let v of record.cnt) {
         let heroObj: any = heroTable.find((e: any) => e.id == v[0]);
         data.push({
             name: heroObj.name,
+            img: IMG_PREFIX + heroObj.img,
             count: v[1]
         });
     }
@@ -245,6 +348,7 @@ function showModal(_: number, record: any) {
         let heroObj: any = heroTable.find((e: any) => e.id == v[0]);
         data2.push({
             name: heroObj.name,
+            img: IMG_PREFIX + heroObj.img,
             count: v[1]
         });
     }
@@ -312,12 +416,62 @@ onMounted(() => {
     -webkit-overflow-scrolling: touch;
 }
 
+.modal-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .modal-list {
     margin-bottom: 15px;
 }
 
+.hero-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0;
+}
+
+.avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: #e2e8f0;
+}
+
 .eliminated {
     color: #dc2626;
+}
+
+.advanced {
+    color: #15803d;
+}
+
+.advance-block {
+    margin-bottom: 10px;
+}
+
+.advance-label {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.advance-frac {
+    margin-top: 2px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+}
+
+.advance-pct {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #0c4a6e;
+    font-variant-numeric: tabular-nums;
 }
 
 @media (min-width: 768px) {

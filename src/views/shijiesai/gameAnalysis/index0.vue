@@ -7,7 +7,28 @@
             </div>
         </div>
         <div class="table-wrap">
-            <MyTabel :columnsData="columns" :rowClass="true" :dataSource="data" :loading="tableLoading" />
+            <a-spin :spinning="tableLoading">
+                <table class="rate-table">
+                    <thead>
+                        <tr>
+                            <th>名称</th>
+                            <th>胜场</th>
+                            <th>败场</th>
+                            <th>胜率</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="item in data" :key="item.id">
+                            <td class="name">
+                                <HeroCell :name="item.name" :img="item.img" :zhu="item.zhu" :fu="item.fu" />
+                            </td>
+                            <td class="num">{{ item.sheng }}</td>
+                            <td class="num">{{ item.bai }}</td>
+                            <td class="num">{{ item.shenglv }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </a-spin>
         </div>
     </div>
 </template>
@@ -16,41 +37,14 @@
 import { ref, onMounted } from "vue";
 import { heroTable } from "@/data/heroData/index";
 import { shijiesaiData } from "@/data/shijiesaiData/all";
-import MyTabel from "@/components/table.vue";
 import router from "@/router";
+import HeroCell from "./heroCell.vue";
+
+const IMG_PREFIX = import.meta.env.VITE_APP_BASE_URL + "heroImg";
 
 const gameType = sessionStorage.getItem("gameType");
 const tableLoading = ref(false);
 const data = ref<any>([]);
-const columns = ref<any>([
-    {
-        title: "名称",
-        dataIndex: "name",
-        key: "name",
-        width: 160
-    },
-    {
-        title: "胜场",
-        dataIndex: "sheng",
-        key: "sheng",
-        width: 72,
-        align: "center"
-    },
-    {
-        title: "败场",
-        dataIndex: "bai",
-        key: "bai",
-        width: 72,
-        align: "center"
-    },
-    {
-        title: "胜率",
-        dataIndex: "shenglv",
-        key: "shenglv",
-        width: 88,
-        align: "center"
-    }
-]);
 
 function getList() {
     tableLoading.value = true;
@@ -64,6 +58,7 @@ function getList() {
             return {
                 id: e.id,
                 name: e.name,
+                img: IMG_PREFIX + e.img,
                 zhu: e.zhu,
                 fu: e.fu,
                 count: 0,
@@ -149,6 +144,38 @@ onMounted(() => {
     min-width: 0;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    background: #fff;
+    border: 1px solid #e8ebf0;
+    border-radius: 10px;
+}
+
+.rate-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.rate-table th,
+.rate-table td {
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #eef2f6;
+    white-space: nowrap;
+}
+
+.rate-table th {
+    background: #f8fafc;
+    font-weight: 800;
+    color: #334155;
+}
+
+.rate-table td.name {
+    white-space: normal;
+}
+
+.rate-table .num {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
 }
 
 @media (min-width: 768px) {

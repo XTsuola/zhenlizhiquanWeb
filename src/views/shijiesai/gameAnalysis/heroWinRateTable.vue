@@ -27,7 +27,9 @@
                             :class="{ unused: !item.sheng && !item.bai, clickable: item.sheng + item.bai > 0 }"
                             @click="openHero(item)"
                         >
-                            <td class="name">{{ item.name }}</td>
+                            <td class="name">
+                                <HeroCell :name="item.name" :img="item.img" :zhu="item.zhu" :fu="item.fu" />
+                            </td>
                             <td class="num win">{{ item.sheng }}</td>
                             <td class="num lose">{{ item.bai }}</td>
                             <td class="num rate">{{ item.shenglv }}</td>
@@ -96,6 +98,9 @@ import { heroTable } from "@/data/heroData/index";
 import { shijiesaiData } from "@/data/shijiesaiData/all";
 import { changciList, zhanquList } from "@/utils/func";
 import router from "@/router";
+import HeroCell from "./heroCell.vue";
+
+const IMG_PREFIX = import.meta.env.VITE_APP_BASE_URL + "heroImg";
 
 const props = defineProps<{
     title: string;
@@ -108,6 +113,9 @@ const props = defineProps<{
 type HeroRow = {
     id: number;
     name: string;
+    img: string;
+    zhu: number;
+    fu: number;
     sheng: number;
     bai: number;
     shenglv: string;
@@ -161,6 +169,9 @@ function getList() {
         const heroData: HeroRow[] = heroTable.map((e: any) => ({
             id: e.id,
             name: e.name,
+            img: IMG_PREFIX + e.img,
+            zhu: e.zhu,
+            fu: e.fu,
             sheng: 0,
             bai: 0,
             shenglv: "0.00%",
@@ -356,6 +367,10 @@ onBeforeUnmount(() => {
     text-align: left;
     border-bottom: 1px solid #eef2f6;
     white-space: nowrap;
+}
+
+.rate-table td.name {
+    white-space: normal;
 }
 
 .rate-table th {

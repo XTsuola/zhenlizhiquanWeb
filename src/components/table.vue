@@ -83,6 +83,12 @@
                             </template>
                         </div>
                     </template>
+                    <template v-else-if="column.frac && column.pct">
+                        <div class="advance-rate">
+                            <div class="advance-frac">{{ record[column.frac] }}</div>
+                            <div v-if="record[column.pct]" class="advance-pct">{{ record[column.pct] }}</div>
+                        </div>
+                    </template>
                     <template v-else>
                         {{ text }}
                     </template>
@@ -363,6 +369,27 @@ function formatDiff(now: number, last: number, isRate = false) {
             box-shadow: 0 2px 8px rgba(15, 23, 42, 0.14);
         }
     }
+}
+
+.advance-rate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.15;
+}
+
+.advance-frac {
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.advance-pct {
+    margin-top: 2px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #0c4a6e;
+    font-variant-numeric: tabular-nums;
 }
 
 .action {
