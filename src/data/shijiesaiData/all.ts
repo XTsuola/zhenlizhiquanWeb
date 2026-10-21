@@ -20104,7 +20104,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 681,
+        "id": 621,
         "no": 130105,
         "AInfo": {
             "name": "27-热血战歌",
@@ -20138,7 +20138,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 682,
+        "id": 622,
         "no": 130106,
         "AInfo": {
             "name": "12-叶某人",
@@ -20169,7 +20169,75 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 621,
+        "id": 623,
+        "no": 130107,
+        "AInfo": {
+            "name": "22-塔罗会愚者",
+            "kedu": 0,
+            "hero": [
+                7,
+                27,
+                3,
+                40
+            ]
+        },
+        "BInfo": {
+            "name": "12-叶某人",
+            "kedu": 0,
+            "hero": [
+                4,
+                35,
+                38,
+                33
+            ]
+        },
+        "shengfuList": [
+            1,
+            1,
+            2,
+            1,
+            1,
+            2,
+            2,
+            1
+        ]
+    },
+    {
+        "id": 624,
+        "no": 130108,
+        "AInfo": {
+            "name": "27-热血战歌",
+            "kedu": 0,
+            "hero": [
+                3,
+                36,
+                34,
+                14
+            ]
+        },
+        "BInfo": {
+            "name": "26-狗宁",
+            "kedu": 0,
+            "hero": [
+                4,
+                7,
+                33,
+                35
+            ]
+        },
+        "shengfuList": [
+            2,
+            2,
+            1,
+            4,
+            1,
+            2,
+            1,
+            4
+        ]
+    },
+    {
+        "id": 625,
         "no": 130201,
         "AInfo": {
             "name": "56-颜",
@@ -20200,7 +20268,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 622,
+        "id": 626,
         "no": 130202,
         "AInfo": {
             "name": "49-ZCY",
@@ -20234,7 +20302,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 623,
+        "id": 627,
         "no": 130203,
         "AInfo": {
             "name": "50-Mr",
@@ -20261,7 +20329,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 624,
+        "id": 628,
         "no": 130204,
         "AInfo": {
             "name": "48-果汁",
@@ -20293,7 +20361,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 683,
+        "id": 629,
         "no": 130205,
         "AInfo": {
             "name": "43-不如氪金",
@@ -20328,7 +20396,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 684,
+        "id": 630,
         "no": 130206,
         "AInfo": {
             "name": "43-闹笑话的绅士",
@@ -20359,7 +20427,74 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 625,
+        "id": 631,
+        "no": 130207,
+        "AInfo": {
+            "name": "49-ZCY",
+            "kedu": 0,
+            "hero": [
+                4,
+                35,
+                33,
+                7
+            ]
+        },
+        "BInfo": {
+            "name": "64-=",
+            "kedu": 0,
+            "hero": [
+                38,
+                22,
+                29,
+                40
+            ]
+        },
+        "shengfuList": [
+            2,
+            1,
+            1,
+            3,
+            2,
+            1,
+            2,
+            3
+        ]
+    },
+    {
+        "id": 632,
+        "no": 130208,
+        "AInfo": {
+            "name": "43-不如氪金",
+            "kedu": 0,
+            "hero": [
+                4,
+                7,
+                23,
+                5
+            ]
+        },
+        "BInfo": {
+            "name": "43-闹笑话的绅士",
+            "kedu": 0,
+            "hero": [
+                4,
+                3,
+                35,
+                7
+            ]
+        },
+        "shengfuList": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1
+        ]
+    },
+    {
+        "id": 633,
         "no": 130301,
         "AInfo": {
             "name": "69-伴宫星自",
@@ -20390,7 +20525,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 626,
+        "id": 634,
         "no": 130302,
         "AInfo": {
             "name": "81-风",
@@ -20421,7 +20556,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 627,
+        "id": 635,
         "no": 130303,
         "AInfo": {
             "name": "69-卓一塑业",
@@ -20454,7 +20589,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 628,
+        "id": 636,
         "no": 130304,
         "AInfo": {
             "name": "68-秀颜阿金",
@@ -20486,7 +20621,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 685,
+        "id": 637,
         "no": 130305,
         "AInfo": {
             "name": "69-伴宫星自",
@@ -20518,7 +20653,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 686,
+        "id": 638,
         "no": 130306,
         "AInfo": {
             "name": "69-卓一塑业",
@@ -20549,7 +20684,71 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 629,
+        "id": 639,
+        "no": 130307,
+        "AInfo": {
+            "name": "91-李果",
+            "kedu": 0,
+            "hero": [
+                6,
+                13,
+                1,
+                37
+            ]
+        },
+        "BInfo": {
+            "name": "75-倪",
+            "kedu": 0,
+            "hero": [
+                3,
+                40,
+                34,
+                36
+            ]
+        },
+        "shengfuList": [
+            3,
+            3,
+            3,
+            3,
+            3
+        ]
+    },
+    {
+        "id": 640,
+        "no": 130308,
+        "AInfo": {
+            "name": "69-伴宫星自",
+            "kedu": 0,
+            "hero": [
+                4,
+                5,
+                41,
+                7
+            ]
+        },
+        "BInfo": {
+            "name": "69-卓一塑业",
+            "kedu": 0,
+            "hero": [
+                4,
+                41,
+                5,
+                13
+            ]
+        },
+        "shengfuList": [
+            1,
+            3,
+            2,
+            3,
+            2,
+            3,
+            1
+        ]
+    },
+    {
+        "id": 641,
         "no": 130401,
         "AInfo": {
             "name": "99-河中山",
@@ -20580,7 +20779,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 630,
+        "id": 642,
         "no": 130402,
         "AInfo": {
             "name": "101-谢光雄",
@@ -20611,7 +20810,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 631,
+        "id": 643,
         "no": 130403,
         "AInfo": {
             "name": "117-不过须臾",
@@ -20642,7 +20841,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 632,
+        "id": 644,
         "no": 130404,
         "AInfo": {
             "name": "118-風尘依旧",
@@ -20674,7 +20873,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 687,
+        "id": 645,
         "no": 130405,
         "AInfo": {
             "name": "99-河中山",
@@ -20705,7 +20904,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 688,
+        "id": 646,
         "no": 130406,
         "AInfo": {
             "name": "117-不过须臾",
@@ -20738,7 +20937,75 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 633,
+        "id": 647,
+        "no": 130407,
+        "AInfo": {
+            "name": "101-大土",
+            "kedu": 0,
+            "hero": [
+                3,
+                34,
+                36,
+                40
+            ]
+        },
+        "BInfo": {
+            "name": "118-風尘依旧",
+            "kedu": 0,
+            "hero": [
+                11,
+                17,
+                3,
+                16
+            ]
+        },
+        "shengfuList": [
+            2,
+            2,
+            1,
+            4,
+            1,
+            1,
+            2,
+            4
+        ]
+    },
+    {
+        "id": 648,
+        "no": 130408,
+        "AInfo": {
+            "name": "99-河中山",
+            "kedu": 0,
+            "hero": [
+                34,
+                3,
+                32,
+                27
+            ]
+        },
+        "BInfo": {
+            "name": "117-不过须臾",
+            "kedu": 0,
+            "hero": [
+                3,
+                20,
+                25,
+                16
+            ]
+        },
+        "shengfuList": [
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            1,
+            2
+        ]
+    },
+    {
+        "id": 649,
         "no": 130501,
         "AInfo": {
             "name": "129-旧城之下",
@@ -20773,7 +21040,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 634,
+        "id": 650,
         "no": 130502,
         "AInfo": {
             "name": "149-灰企鹅呆瓜",
@@ -20804,7 +21071,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 635,
+        "id": 651,
         "no": 130503,
         "AInfo": {
             "name": "148-请叫我阿奎",
@@ -20835,7 +21102,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 636,
+        "id": 652,
         "no": 130504,
         "AInfo": {
             "name": "148-大核桃",
@@ -20866,7 +21133,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 689,
+        "id": 653,
         "no": 130505,
         "AInfo": {
             "name": "157-#",
@@ -20899,7 +21166,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 690,
+        "id": 654,
         "no": 130506,
         "AInfo": {
             "name": "144-九霄环佩",
@@ -20931,7 +21198,75 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 637,
+        "id": 655,
+        "no": 130507,
+        "AInfo": {
+            "name": "157-#",
+            "kedu": 0,
+            "hero": [
+                5,
+                41,
+                1,
+                13
+            ]
+        },
+        "BInfo": {
+            "name": "148-大核桃",
+            "kedu": 0,
+            "hero": [
+                37,
+                3,
+                32,
+                22
+            ]
+        },
+        "shengfuList": [
+            2,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            1,
+            1
+        ]
+    },
+    {
+        "id": 656,
+        "no": 130508,
+        "AInfo": {
+            "name": "146-KB",
+            "kedu": 0,
+            "hero": [
+                34,
+                3,
+                12,
+                16
+            ]
+        },
+        "BInfo": {
+            "name": "144-九霄环佩",
+            "kedu": 0,
+            "hero": [
+                4,
+                7,
+                41,
+                5
+            ]
+        },
+        "shengfuList": [
+            2,
+            2,
+            4,
+            1,
+            1,
+            2,
+            4
+        ]
+    },
+    {
+        "id": 657,
         "no": 130601,
         "AInfo": {
             "name": "166-阿白",
@@ -20965,7 +21300,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 638,
+        "id": 658,
         "no": 130602,
         "AInfo": {
             "name": "165-龟龟强啊",
@@ -20996,7 +21331,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 639,
+        "id": 659,
         "no": 130603,
         "AInfo": {
             "name": "184-吾魂因土",
@@ -21027,7 +21362,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 640,
+        "id": 660,
         "no": 130604,
         "AInfo": {
             "name": "166-顾圆",
@@ -21058,7 +21393,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 691,
+        "id": 661,
         "no": 130605,
         "AInfo": {
             "name": "166-阿白",
@@ -21089,7 +21424,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 692,
+        "id": 662,
         "no": 130606,
         "AInfo": {
             "name": "184-吾魂因土",
@@ -21120,7 +21455,69 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 641,
+        "id": 663,
+        "no": 130607,
+        "AInfo": {
+            "name": "166-阿白",
+            "kedu": 0,
+            "hero": [
+                36,
+                9,
+                10,
+                2
+            ]
+        },
+        "BInfo": {
+            "name": "184-吾魂因土",
+            "kedu": 0,
+            "hero": [
+                38,
+                29,
+                36,
+                34
+            ]
+        },
+        "shengfuList": [
+            3,
+            3,
+            3,
+            3,
+            3
+        ]
+    },
+    {
+        "id": 664,
+        "no": 130608,
+        "AInfo": {
+            "name": "167-QQ",
+            "kedu": 0,
+            "hero": [
+                11,
+                17,
+                38,
+                4
+            ]
+        },
+        "BInfo": {
+            "name": "167-无与伦比的白",
+            "kedu": 0,
+            "hero": [
+                36,
+                9,
+                29,
+                34
+            ]
+        },
+        "shengfuList": [
+            4,
+            4,
+            4,
+            4,
+            4
+        ]
+    },
+    {
+        "id": 665,
         "no": 130701,
         "AInfo": {
             "name": "203-开摆",
@@ -21153,7 +21550,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 642,
+        "id": 666,
         "no": 130702,
         "AInfo": {
             "name": "194-Dang",
@@ -21188,7 +21585,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 643,
+        "id": 667,
         "no": 130703,
         "AInfo": {
             "name": "193-泡泡跑得快",
@@ -21220,7 +21617,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 644,
+        "id": 668,
         "no": 130704,
         "AInfo": {
             "name": "200-黑曜",
@@ -21252,7 +21649,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 693,
+        "id": 669,
         "no": 130705,
         "AInfo": {
             "name": "201-断罪之燚",
@@ -21283,7 +21680,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 694,
+        "id": 670,
         "no": 130706,
         "AInfo": {
             "name": "208-杀破猪",
@@ -21314,7 +21711,74 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 645,
+        "id": 671,
+        "no": 130707,
+        "AInfo": {
+            "name": "201-断罪之燚",
+            "kedu": 0,
+            "hero": [
+                22,
+                2,
+                30,
+                39
+            ]
+        },
+        "BInfo": {
+            "name": "200-黑曜",
+            "kedu": 0,
+            "hero": [
+                32,
+                37,
+                22,
+                6
+            ]
+        },
+        "shengfuList": [
+            2,
+            2,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2
+        ]
+    },
+    {
+        "id": 672,
+        "no": 130708,
+        "AInfo": {
+            "name": "206-电量不足",
+            "kedu": 0,
+            "hero": [
+                5,
+                3,
+                11,
+                41
+            ]
+        },
+        "BInfo": {
+            "name": "208-杀破猪",
+            "kedu": 0,
+            "hero": [
+                30,
+                2,
+                22,
+                37
+            ]
+        },
+        "shengfuList": [
+            1,
+            1,
+            2,
+            2,
+            2,
+            4,
+            4
+        ]
+    },
+    {
+        "id": 673,
         "no": 130801,
         "AInfo": {
             "name": "232-三火",
@@ -21348,7 +21812,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 646,
+        "id": 674,
         "no": 130802,
         "AInfo": {
             "name": "242-Prul",
@@ -21382,7 +21846,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 647,
+        "id": 675,
         "no": 130803,
         "AInfo": {
             "name": "248-混酱猪肠粉",
@@ -21413,7 +21877,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 648,
+        "id": 676,
         "no": 130804,
         "AInfo": {
             "name": "238-夜风",
@@ -21444,7 +21908,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 695,
+        "id": 677,
         "no": 130805,
         "AInfo": {
             "name": "232-三火",
@@ -21475,7 +21939,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 696,
+        "id": 678,
         "no": 130806,
         "AInfo": {
             "name": "234-律师",
@@ -21506,7 +21970,69 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 649,
+        "id": 679,
+        "no": 130807,
+        "AInfo": {
+            "name": "242-Prul",
+            "kedu": 0,
+            "hero": [
+                4,
+                35,
+                33,
+                7
+            ]
+        },
+        "BInfo": {
+            "name": "238-夜风",
+            "kedu": 0,
+            "hero": [
+                37,
+                2,
+                3,
+                22
+            ]
+        },
+        "shengfuList": [
+            4,
+            4,
+            4,
+            4,
+            4
+        ]
+    },
+    {
+        "id": 680,
+        "no": 130808,
+        "AInfo": {
+            "name": "232-三火",
+            "kedu": 0,
+            "hero": [
+                22,
+                2,
+                30,
+                37
+            ]
+        },
+        "BInfo": {
+            "name": "234-律师",
+            "kedu": 0,
+            "hero": [
+                5,
+                41,
+                4,
+                11
+            ]
+        },
+        "shengfuList": [
+            4,
+            4,
+            4,
+            4,
+            4
+        ]
+    },
+    {
+        "id": 681,
         "no": 130901,
         "AInfo": {
             "name": "262-陈炜鹏",
@@ -21537,7 +22063,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 650,
+        "id": 682,
         "no": 130902,
         "AInfo": {
             "name": "266-柴腾凯",
@@ -21572,7 +22098,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 651,
+        "id": 683,
         "no": 130903,
         "AInfo": {
             "name": "264-石头",
@@ -21607,7 +22133,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 652,
+        "id": 684,
         "no": 130904,
         "AInfo": {
             "name": "286-*非",
@@ -21638,7 +22164,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 697,
+        "id": 685,
         "no": 130905,
         "AInfo": {
             "name": "262-陈炜鹏",
@@ -21671,7 +22197,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 698,
+        "id": 686,
         "no": 130906,
         "AInfo": {
             "name": "264-石头",
@@ -21702,7 +22228,72 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 653,
+        "id": 687,
+        "no": 130907,
+        "AInfo": {
+            "name": "265-勤",
+            "kedu": 0,
+            "hero": [
+                22,
+                2,
+                37,
+                30
+            ]
+        },
+        "BInfo": {
+            "name": "264-石头",
+            "kedu": 0,
+            "hero": [
+                22,
+                2,
+                37,
+                30
+            ]
+        },
+        "shengfuList": [
+            2,
+            1,
+            1,
+            2,
+            1,
+            1,
+            1
+        ]
+    },
+    {
+        "id": 688,
+        "no": 130908,
+        "AInfo": {
+            "name": "262-陈炜鹏",
+            "kedu": 0,
+            "hero": [
+                3,
+                34,
+                29,
+                36
+            ]
+        },
+        "BInfo": {
+            "name": "281-太阳出来了",
+            "kedu": 0,
+            "hero": [
+                1,
+                41,
+                5,
+                3
+            ]
+        },
+        "shengfuList": [
+            1,
+            1,
+            2,
+            1,
+            1,
+            1
+        ]
+    },
+    {
+        "id": 689,
         "no": 131001,
         "AInfo": {
             "name": "292-舒适圈",
@@ -21733,7 +22324,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 654,
+        "id": 690,
         "no": 131002,
         "AInfo": {
             "name": "319-十九",
@@ -21765,7 +22356,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 655,
+        "id": 691,
         "no": 131003,
         "AInfo": {
             "name": "311-大黑鱼",
@@ -21798,7 +22389,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 656,
+        "id": 692,
         "no": 131004,
         "AInfo": {
             "name": "296-听故事的人",
@@ -21830,7 +22421,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 699,
+        "id": 693,
         "no": 131005,
         "AInfo": {
             "name": "292-舒适圈",
@@ -21861,7 +22452,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 700,
+        "id": 694,
         "no": 131006,
         "AInfo": {
             "name": "298-守誓",
@@ -21894,7 +22485,72 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 657,
+        "id": 695,
+        "no": 131007,
+        "AInfo": {
+            "name": "319-十九",
+            "kedu": 0,
+            "hero": [
+                11,
+                5,
+                4,
+                41
+            ]
+        },
+        "BInfo": {
+            "name": "296-听故事的人",
+            "kedu": 0,
+            "hero": [
+                22,
+                3,
+                34,
+                32
+            ]
+        },
+        "shengfuList": [
+            2,
+            1,
+            2,
+            2,
+            1,
+            2,
+            2
+        ]
+    },
+    {
+        "id": 696,
+        "no": 131008,
+        "AInfo": {
+            "name": "292-舒适圈",
+            "kedu": 0,
+            "hero": [
+                4,
+                33,
+                7,
+                35
+            ]
+        },
+        "BInfo": {
+            "name": "298-守誓",
+            "kedu": 0,
+            "hero": [
+                6,
+                13,
+                22,
+                39
+            ]
+        },
+        "shengfuList": [
+            2,
+            2,
+            2,
+            1,
+            2,
+            2
+        ]
+    },
+    {
+        "id": 697,
         "no": 131101,
         "AInfo": {
             "name": "340-暗影",
@@ -21927,7 +22583,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 658,
+        "id": 698,
         "no": 131102,
         "AInfo": {
             "name": "337-入眼",
@@ -21958,7 +22614,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 659,
+        "id": 699,
         "no": 131103,
         "AInfo": {
             "name": "337-入眼",
@@ -21993,7 +22649,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 660,
+        "id": 700,
         "no": 131104,
         "AInfo": {
             "name": "321-奇异果",
@@ -22090,7 +22746,72 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 661,
+        "id": 703,
+        "no": 131107,
+        "AInfo": {
+            "name": "333-Tong",
+            "kedu": 0,
+            "hero": [
+                2,
+                22,
+                30,
+                39
+            ]
+        },
+        "BInfo": {
+            "name": "340-三四",
+            "kedu": 0,
+            "hero": [
+                1,
+                13,
+                41,
+                5
+            ]
+        },
+        "shengfuList": [
+            3,
+            2,
+            1,
+            2,
+            3,
+            1,
+            1
+        ]
+    },
+    {
+        "id": 704,
+        "no": 131108,
+        "AInfo": {
+            "name": "337-入眼",
+            "kedu": 0,
+            "hero": [
+                5,
+                4,
+                11,
+                41
+            ]
+        },
+        "BInfo": {
+            "name": "330-小凯",
+            "kedu": 0,
+            "hero": [
+                3,
+                40,
+                29,
+                34
+            ]
+        },
+        "shengfuList": [
+            2,
+            3,
+            1,
+            1,
+            1,
+            3
+        ]
+    },
+    {
+        "id": 705,
         "no": 131201,
         "AInfo": {
             "name": "354-柴腾凯",
@@ -22121,7 +22842,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 662,
+        "id": 706,
         "no": 131202,
         "AInfo": {
             "name": "369-云山",
@@ -22152,7 +22873,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 663,
+        "id": 707,
         "no": 131203,
         "AInfo": {
             "name": "354-洎信",
@@ -22184,7 +22905,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 664,
+        "id": 708,
         "no": 131204,
         "AInfo": {
             "name": "354-Sky",
@@ -22215,7 +22936,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 703,
+        "id": 709,
         "no": 131205,
         "AInfo": {
             "name": "354-柴腾凯",
@@ -22250,7 +22971,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 704,
+        "id": 710,
         "no": 131206,
         "AInfo": {
             "name": "363-带给人们幸福",
@@ -22281,7 +23002,76 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 665,
+        "id": 711,
+        "no": 131207,
+        "AInfo": {
+            "name": "354-柴腾凯",
+            "kedu": 0,
+            "hero": [
+                5,
+                1,
+                41,
+                11
+            ]
+        },
+        "BInfo": {
+            "name": "363-带给人们幸福",
+            "kedu": 0,
+            "hero": [
+                5,
+                41,
+                2,
+                22
+            ]
+        },
+        "shengfuList": [
+            2,
+            2,
+            3,
+            3,
+            1,
+            2,
+            3,
+            3
+        ]
+    },
+    {
+        "id": 712,
+        "no": 131208,
+        "AInfo": {
+            "name": "354-无语到没话说",
+            "kedu": 0,
+            "hero": [
+                41,
+                4,
+                5,
+                11
+            ]
+        },
+        "BInfo": {
+            "name": "354-Sky",
+            "kedu": 0,
+            "hero": [
+                5,
+                41,
+                1,
+                11
+            ]
+        },
+        "shengfuList": [
+            2,
+            2,
+            1,
+            1,
+            1,
+            2,
+            1,
+            2,
+            2
+        ]
+    },
+    {
+        "id": 713,
         "no": 131301,
         "AInfo": {
             "name": "385-巴斯光年",
@@ -22312,7 +23102,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 666,
+        "id": 714,
         "no": 131302,
         "AInfo": {
             "name": "395-豹米花",
@@ -22343,7 +23133,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 667,
+        "id": 715,
         "no": 131303,
         "AInfo": {
             "name": "400-西满亲蛋",
@@ -22375,7 +23165,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 668,
+        "id": 716,
         "no": 131304,
         "AInfo": {
             "name": "401-明记海鲜餐厅",
@@ -22465,6 +23255,71 @@ export const shijiesaiData = [
             4,
             4,
             4
+        ]
+    },
+    {
+        "id": 725,
+        "no": 131307,
+        "AInfo": {
+            "name": "395-豹米花",
+            "kedu": 0,
+            "hero": [
+                5,
+                11,
+                41,
+                4
+            ]
+        },
+        "BInfo": {
+            "name": "398-一只奶黄包",
+            "kedu": 0,
+            "hero": [
+                3,
+                37,
+                32,
+                17
+            ]
+        },
+        "shengfuList": [
+            3,
+            3,
+            3,
+            3,
+            3
+        ]
+    },
+    {
+        "id": 741,
+        "no": 131308,
+        "AInfo": {
+            "name": "393-一轮明月",
+            "kedu": 0,
+            "hero": [
+                4,
+                34,
+                17,
+                3
+            ]
+        },
+        "BInfo": {
+            "name": "413-猕魂桃",
+            "kedu": 0,
+            "hero": [
+                5,
+                41,
+                4,
+                11
+            ]
+        },
+        "shengfuList": [
+            1,
+            1,
+            1,
+            3,
+            2,
+            2,
+            2,
+            3
         ]
     },
     {
@@ -22665,6 +23520,70 @@ export const shijiesaiData = [
         ]
     },
     {
+        "id": 726,
+        "no": 131407,
+        "AInfo": {
+            "name": "433-海与日落",
+            "kedu": 0,
+            "hero": [
+                6,
+                22,
+                2,
+                30
+            ]
+        },
+        "BInfo": {
+            "name": "433-听风就是雨",
+            "kedu": 0,
+            "hero": [
+                15,
+                41,
+                5,
+                1
+            ]
+        },
+        "shengfuList": [
+            4,
+            4,
+            4,
+            4,
+            4
+        ]
+    },
+    {
+        "id": 742,
+        "no": 131408,
+        "AInfo": {
+            "name": "441-邱阳",
+            "kedu": 0,
+            "hero": [
+                41,
+                5,
+                4,
+                11
+            ]
+        },
+        "BInfo": {
+            "name": "439-林某某",
+            "kedu": 0,
+            "hero": [
+                4,
+                5,
+                41,
+                11
+            ]
+        },
+        "shengfuList": [
+            3,
+            2,
+            2,
+            2,
+            3,
+            2,
+            2
+        ]
+    },
+    {
         "id": 673,
         "no": 131501,
         "AInfo": {
@@ -22858,6 +23777,72 @@ export const shijiesaiData = [
         ]
     },
     {
+        "id": 727,
+        "no": 131507,
+        "AInfo": {
+            "name": "449-974577",
+            "kedu": 0,
+            "hero": [
+                9,
+                29,
+                36,
+                34
+            ]
+        },
+        "BInfo": {
+            "name": "467-寂风",
+            "kedu": 0,
+            "hero": [
+                4,
+                5,
+                41,
+                38
+            ]
+        },
+        "shengfuList": [
+            3,
+            1,
+            1,
+            1,
+            3
+        ]
+    },
+    {
+        "id": 743,
+        "no": 131508,
+        "AInfo": {
+            "name": "458-换个发牌员吧",
+            "kedu": 0,
+            "hero": [
+                34,
+                33,
+                3,
+                17
+            ]
+        },
+        "BInfo": {
+            "name": "458-换个发牌员吧",
+            "kedu": 0,
+            "hero": [
+                34,
+                33,
+                3,
+                17
+            ]
+        },
+        "shengfuList": [
+            2,
+            1,
+            1,
+            3,
+            2,
+            2,
+            2,
+            3,
+            1
+        ]
+    },
+    {
         "id": 677,
         "no": 131601,
         "AInfo": {
@@ -23044,6 +24029,76 @@ export const shijiesaiData = [
             2,
             2,
             2,
+            2,
+            2
+        ]
+    },
+    {
+        "id": 728,
+        "no": 131607,
+        "AInfo": {
+            "name": "481-星辰",
+            "kedu": 0,
+            "hero": [
+                3,
+                4,
+                35,
+                7
+            ]
+        },
+        "BInfo": {
+            "name": "481-有事语音",
+            "kedu": 0,
+            "hero": [
+                4,
+                41,
+                35,
+                11
+            ]
+        },
+        "shengfuList": [
+            4,
+            3,
+            1,
+            1,
+            4,
+            3,
+            2,
+            2,
+            4
+        ]
+    },
+    {
+        "id": 744,
+        "no": 131608,
+        "AInfo": {
+            "name": "489-总被女人骗",
+            "kedu": 0,
+            "hero": [
+                5,
+                41,
+                1,
+                13
+            ]
+        },
+        "BInfo": {
+            "name": "481-王某某",
+            "kedu": 0,
+            "hero": [
+                5,
+                4,
+                41,
+                11
+            ]
+        },
+        "shengfuList": [
+            2,
+            3,
+            4,
+            1,
+            1,
+            3,
+            4,
             2,
             2
         ]

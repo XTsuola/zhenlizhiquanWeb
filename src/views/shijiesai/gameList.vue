@@ -14,6 +14,7 @@
                 :dataSource="data"
                 :rowClass="true"
                 :loading="tableLoading"
+                :scrollX="false"
                 :pagination="{ pageSize, currentPage, total }"
                 @detail="showModal"
                 @edit="showModal"
@@ -37,7 +38,7 @@ import { isSuperAdmin } from "@/utils/admin";
 const isAdmin = isSuperAdmin();
 const tableLoading = ref(false);
 const currentPage = ref(1);
-const pageSize = ref(200);
+const pageSize = ref(100);
 const total = ref(0);
 const data = ref<any[]>([]);
 
@@ -49,32 +50,33 @@ const columns = [
         key: "action",
         list: isAdmin ? ["detail", "edit", "delete"] : ["detail"],
         width: isAdmin ? 160 : 72,
-        fixed: "right",
         align: "center"
     }
 ];
 
+function mapMatch(e: any, gt: number) {
+    const zhanquNo = Math.floor(e.no / 100) * 100 - (gt - 7) * 10000;
+    const changciNo = e.no % 100;
+    return {
+        ...e,
+        zhanqu: zhanquList.find((v) => v.value == zhanquNo)?.label,
+        changci: changciList.find((v) => v.value == changciNo)?.label
+    };
+}
+
 async function getList() {
     tableLoading.value = true;
     try {
+        const gt = parseInt(gameType as string);
         const params: ShijiesaiInfoListType = {
             pageSize: pageSize.value,
             pageNo: currentPage.value,
-            gameType: parseInt(gameType as string)
+            gameType: gt
         };
         const res = await shijiesaiInfoList(params);
         if (res.status == 200) {
-            total.value = res.data.total;
-            const gt = parseInt(gameType as string);
-            data.value = res.data.data.map((e: any) => {
-                const zhanquNo = Math.floor(e.no / 100) * 100 - (gt - 7) * 10000;
-                const changciNo = e.no % 100;
-                return {
-                    ...e,
-                    zhanqu: zhanquList.find((v) => v.value == zhanquNo)?.label,
-                    changci: changciList.find((v) => v.value == changciNo)?.label
-                };
-            });
+            total.value = res.data.total ?? 0;
+            data.value = (res.data.data || []).map((e: any) => mapMatch(e, gt));
         }
     } finally {
         tableLoading.value = false;
@@ -105,7 +107,6 @@ async function deleteOk(id: number) {
     const res = await shijiesaiDelete(id);
     if (res.data.code == 200) message.success("删除成功");
     else message.error("删除失败");
-    if (data.value.length == 1 && currentPage.value > 1) currentPage.value--;
     getList();
 }
 
@@ -158,18 +159,6 @@ onMounted(() => {
     width: 100%;
     max-width: 100%;
     min-width: 0;
-    overflow: hidden;
-
-    :deep(.myTable) {
-        max-width: 100%;
-        min-width: 0;
-    }
-
-    :deep(.ant-table-content),
-    :deep(.ant-table-body) {
-        overflow-x: auto !important;
-        -webkit-overflow-scrolling: touch;
-    }
 }
 
 @media (min-width: 768px) {
