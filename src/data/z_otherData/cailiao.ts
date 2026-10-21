@@ -1,3 +1,12 @@
+/**
+ * blueObj代表蓝色品质对象、purpleObj代表紫色品质对象、goldObj代表橙色品质对象
+ * level：代表当前卡牌等级：1-24个等级
+ * zhanli：代表当前卡牌等级战力
+ * zuanshi：代表当前卡牌消耗钻石
+ * cailiao：[0,0,0,0]四个值代表：黄石头、红石头、黑石头、白石头消耗
+ * count：代表升级到这个等级需要的卡牌累计数量
+ */
+
 export const blueObj = [{
     level: 1,
     zhanli: 10,
