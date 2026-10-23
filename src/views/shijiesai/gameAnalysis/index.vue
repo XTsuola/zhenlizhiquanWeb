@@ -31,6 +31,7 @@ const menuItems = computed(() => {
         { label: "选手与击杀", index: 1 },
         { label: "种族选取表", index: 3 },
         { label: "种族胜率表", index: 5 },
+        { label: "各族剩余", index: 6 },
         { label: "选手详情", index: 7 }
     ];
     if (parseInt(gameType as string) - 7 > 0) {
@@ -54,6 +55,8 @@ function goIndex(index: number) {
         router.push("/gameAnalysis/zhongzuList");
     } else if (index == 5) {
         router.push("/gameAnalysis/zhongzuWR");
+    } else if (index == 6) {
+        router.push("/gameAnalysis/zhongzuLeft");
     } else if (index == 7) {
         router.push("/gameAnalysis/playerDetail");
     }

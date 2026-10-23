@@ -43,7 +43,7 @@
                         <div v-if="detailRate8Pct" class="advance-pct">{{ detailRate8Pct }}</div>
                     </div>
                     <ul class="modal-list">
-                        <li v-for="name in nowPlayerList" :key="'p8-' + name">
+                        <li v-for="(name, idx) in nowPlayerList" :key="'p8-' + idx + '-' + name">
                             <span>{{ name }}</span>
                             <span
                                 v-if="nowPlayerList2.length != 0 && nowPlayerList2.findIndex((e: any) => e == name) != -1"
@@ -61,7 +61,7 @@
                         <div v-if="detailRate4Pct" class="advance-pct">{{ detailRate4Pct }}</div>
                     </div>
                     <ul class="modal-list">
-                        <li v-for="name in nowPlayerList2" :key="'p4-' + name">
+                        <li v-for="(name, idx) in nowPlayerList2" :key="'p4-' + idx + '-' + name">
                             <span>{{ name }}</span>
                             <span
                                 v-if="nowPlayerList3.length != 0 && nowPlayerList3.findIndex((e: any) => e == name) != -1"

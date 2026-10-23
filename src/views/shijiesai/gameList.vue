@@ -38,7 +38,7 @@ import { isSuperAdmin } from "@/utils/admin";
 const isAdmin = isSuperAdmin();
 const tableLoading = ref(false);
 const currentPage = ref(1);
-const pageSize = ref(100);
+const pageSize = ref(999);
 const total = ref(0);
 const data = ref<any[]>([]);
 

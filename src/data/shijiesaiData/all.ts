@@ -22717,13 +22717,13 @@ export const shijiesaiData = [
         "id": 702,
         "no": 131106,
         "AInfo": {
-            "name": "337-入眼",
+            "name": "330-小凯",
             "kedu": 0,
             "hero": [
-                38,
+                3,
+                40,
                 29,
-                4,
-                41
+                34
             ]
         },
         "BInfo": {
@@ -23196,7 +23196,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 705,
+        "id": 717,
         "no": 131305,
         "AInfo": {
             "name": "393-一轮明月",
@@ -23227,7 +23227,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 706,
+        "id": 718,
         "no": 131306,
         "AInfo": {
             "name": "398-一只奶黄包",
@@ -23258,7 +23258,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 725,
+        "id": 719,
         "no": 131307,
         "AInfo": {
             "name": "395-豹米花",
@@ -23289,7 +23289,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 741,
+        "id": 720,
         "no": 131308,
         "AInfo": {
             "name": "393-一轮明月",
@@ -23323,7 +23323,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 669,
+        "id": 721,
         "no": 131401,
         "AInfo": {
             "name": "417-建峰",
@@ -23356,7 +23356,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 670,
+        "id": 722,
         "no": 131402,
         "AInfo": {
             "name": "433-海与日落",
@@ -23390,7 +23390,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 671,
+        "id": 723,
         "no": 131403,
         "AInfo": {
             "name": "433-听风就是雨",
@@ -23421,7 +23421,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 672,
+        "id": 724,
         "no": 131404,
         "AInfo": {
             "name": "436-苏幕",
@@ -23455,7 +23455,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 707,
+        "id": 725,
         "no": 131405,
         "AInfo": {
             "name": "441-邱阳",
@@ -23486,7 +23486,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 708,
+        "id": 726,
         "no": 131406,
         "AInfo": {
             "name": "433-听风就是雨",
@@ -23520,7 +23520,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 726,
+        "id": 727,
         "no": 131407,
         "AInfo": {
             "name": "433-海与日落",
@@ -23551,7 +23551,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 742,
+        "id": 728,
         "no": 131408,
         "AInfo": {
             "name": "441-邱阳",
@@ -23584,7 +23584,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 673,
+        "id": 729,
         "no": 131501,
         "AInfo": {
             "name": "449-974577",
@@ -23618,7 +23618,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 674,
+        "id": 730,
         "no": 131502,
         "AInfo": {
             "name": "468-9527",
@@ -23650,7 +23650,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 675,
+        "id": 731,
         "no": 131503,
         "AInfo": {
             "name": "467-小助手",
@@ -23681,7 +23681,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 676,
+        "id": 732,
         "no": 131504,
         "AInfo": {
             "name": "467-寂风",
@@ -23714,7 +23714,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 709,
+        "id": 733,
         "no": 131505,
         "AInfo": {
             "name": "449-974577",
@@ -23746,7 +23746,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 710,
+        "id": 734,
         "no": 131506,
         "AInfo": {
             "name": "458-换个发牌员吧",
@@ -23777,7 +23777,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 727,
+        "id": 735,
         "no": 131507,
         "AInfo": {
             "name": "449-974577",
@@ -23808,7 +23808,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 743,
+        "id": 736,
         "no": 131508,
         "AInfo": {
             "name": "458-换个发牌员吧",
@@ -23843,7 +23843,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 677,
+        "id": 737,
         "no": 131601,
         "AInfo": {
             "name": "481-张三",
@@ -23874,7 +23874,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 678,
+        "id": 738,
         "no": 131602,
         "AInfo": {
             "name": "481-星辰",
@@ -23908,7 +23908,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 679,
+        "id": 739,
         "no": 131603,
         "AInfo": {
             "name": "497-以父之名",
@@ -23939,7 +23939,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 680,
+        "id": 740,
         "no": 131604,
         "AInfo": {
             "name": "481-王某某",
@@ -23970,7 +23970,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 711,
+        "id": 741,
         "no": 131605,
         "AInfo": {
             "name": "489-总被女人骗",
@@ -24003,7 +24003,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 712,
+        "id": 742,
         "no": 131606,
         "AInfo": {
             "name": "481-有事语音",
@@ -24034,7 +24034,7 @@ export const shijiesaiData = [
         ]
     },
     {
-        "id": 728,
+        "id": 743,
         "no": 131607,
         "AInfo": {
             "name": "481-星辰",
